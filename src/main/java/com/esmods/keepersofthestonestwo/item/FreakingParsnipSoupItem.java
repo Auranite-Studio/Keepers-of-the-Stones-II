@@ -9,19 +9,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.InteractionHand;
 
 public class FreakingParsnipSoupItem extends Item {
 	public FreakingParsnipSoupItem() {
 		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(10).saturationModifier(0.8f).build()));
-	}
-
-	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		entity.startUsingItem(hand);
-		return ar;
 	}
 
 	@Override

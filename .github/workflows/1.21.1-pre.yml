@@ -10,8 +10,8 @@ on:
 env:                                              
   MINECRAFT_VERSION: 1.21.1                      
   JAVA_VERSION: 21      
-  VERSION: 1.0.0-pre2
-  RELEASE_NAME: Keepers of the Stones II 1.0.0 Pre-Release 2
+  VERSION: 1.0.0-pre3
+  RELEASE_NAME: Keepers of the Stones II 1.0.0 Pre-Release 3
 
 jobs:
   build:

@@ -7,17 +7,11 @@ import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.player.AbstractClientPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import javax.annotation.Nullable;
-
-import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
-import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
-import dev.kosmx.playerAnim.core.data.KeyframeAnimation;
-import dev.kosmx.playerAnim.api.layered.ModifierLayer;
-import dev.kosmx.playerAnim.api.layered.KeyframeAnimationPlayer;
-import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
@@ -36,12 +30,11 @@ public class DetransformAnimationStartProcedure {
 		if (entity == null)
 			return;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).detransform_anim_trigger) {
-			if (world.isClientSide()) {
-				if (entity instanceof AbstractClientPlayer player) {
-					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(ResourceLocation.fromNamespaceAndPath("power", "player_animation"));
-					if (animation != null) {
-						animation.setAnimation(new KeyframeAnimationPlayer((KeyframeAnimation) PlayerAnimationRegistry.getAnimation(ResourceLocation.fromNamespaceAndPath("power", "animation.player.detransformation"))));
-					}
+			{
+				Entity _ent = entity;
+				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "playPlayerAnimation @s " + "power:" + "animation.player.detransformation" + " 0" + " 1" + " 0" + " true");
 				}
 			}
 			{

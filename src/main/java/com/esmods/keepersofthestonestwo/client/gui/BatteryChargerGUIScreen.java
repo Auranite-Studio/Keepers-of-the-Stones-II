@@ -48,7 +48,7 @@ public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChar
 
 		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/battery_charger_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blitSprite(ResourceLocation.parse("power:screens/battery_charger_progress"), 100, 808, 0, Mth.clamp((int) BatteryChargerProgressv2Procedure.execute(world, x, y, z) * 8, 0, 800), this.leftPos + 38, this.topPos + 15, 100, 8);
+		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/battery_charger_progress.png"), this.leftPos + 38, this.topPos + 15, 0, Mth.clamp((int) BatteryChargerProgressv2Procedure.execute(world, x, y, z) * 8, 0, 800), 100, 8, 100, 808);
 
 		RenderSystem.disableBlend();
 	}

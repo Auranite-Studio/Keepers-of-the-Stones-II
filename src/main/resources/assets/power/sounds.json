@@ -170,5 +170,13 @@
         "stream": false
       }
     ]
+  },
+  "music.mystery_of_the_cursed_forest": {
+    "sounds": [
+      {
+        "name": "power:music.mystery_of_the_cursed_forest",
+        "stream": true
+      }
+    ]
   }
 }
