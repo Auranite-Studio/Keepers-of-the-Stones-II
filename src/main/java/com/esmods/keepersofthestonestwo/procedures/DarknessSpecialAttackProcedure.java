@@ -137,7 +137,7 @@ public class DarknessSpecialAttackProcedure {
 					final Vec3 _center = new Vec3(x, y, z);
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (!(entityiterator == entity) && entityiterator instanceof Player && !entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).transfered_power) {
+						if (!(entityiterator == entity) && entityiterator instanceof Player && !entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).transfered_power && entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers < 3) {
 							RandomPower = Mth.nextInt(RandomSource.create(), 1, 4);
 							if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem()) {
 								if (RandomPower == 1) {
