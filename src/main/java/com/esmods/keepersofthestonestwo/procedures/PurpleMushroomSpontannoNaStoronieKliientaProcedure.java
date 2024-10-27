@@ -39,7 +39,7 @@ public class PurpleMushroomSpontannoNaStoronieKliientaProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (!((entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("mushrooms") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("mushrooms")
 						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mushrooms") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mushrooms")
-						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mushrooms") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mushrooms"))) {
+						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mushrooms") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mushrooms"))) {
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 4));
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())

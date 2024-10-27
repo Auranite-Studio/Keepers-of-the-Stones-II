@@ -36,7 +36,7 @@ public class FirePassiveProtectionProcedure {
 		double particleAmount = 0;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("fire")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("fire")
-				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("fire")) {
+				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("fire")) {
 			if (entity.isInLava() || entity.isOnFire()) {
 				particleAmount = 8;
 				particleRadius = 2;

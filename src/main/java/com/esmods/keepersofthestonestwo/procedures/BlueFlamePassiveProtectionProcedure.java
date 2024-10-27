@@ -36,7 +36,7 @@ public class BlueFlamePassiveProtectionProcedure {
 		double particleAmount = 0;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("blue_flame") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("blue_flame")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("blue_flame") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("blue_flame")
-				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("blue_flame") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("blue_flame")) {
+				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("blue_flame") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("blue_flame")) {
 			if (entity.isInLava() || entity.isOnFire()) {
 				particleAmount = 8;
 				particleRadius = 2;
