@@ -1,5 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.neoforged.neoforge.common.EffectCures;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
@@ -174,25 +176,7 @@ public class PoisonSpecialAttackProcedure {
 					}
 				}
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.BAD_OMEN);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.BLINDNESS);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.HUNGER);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.CONFUSION);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.WEAKNESS);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.WITHER);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.UNLUCK);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.DIG_SLOWDOWN);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.WHIRLWIND);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.LETHALITY);
+					_entity.removeEffectsCuredBy(EffectCures.PROTECTED_BY_TOTEM);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 70;
