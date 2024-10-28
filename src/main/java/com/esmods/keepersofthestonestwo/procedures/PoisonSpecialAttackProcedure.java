@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.common.EffectCures;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
@@ -14,6 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
@@ -175,8 +174,15 @@ public class PoisonSpecialAttackProcedure {
 									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 					}
 				}
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffectsCuredBy(EffectCures.PROTECTED_BY_TOTEM);
+				for (int index3 = 0; index3 < 20; index3++) {
+					if (entity instanceof LivingEntity _entity)
+						for (MobEffectInstance effectInstance : _entity.getActiveEffects()) {
+							if (effectInstance.getEffect().value().getCategory() == MobEffectCategory.HARMFUL) {
+								_entity.removeEffect(effectInstance.getEffect());
+								break;
+							}
+						}
+				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 70;
