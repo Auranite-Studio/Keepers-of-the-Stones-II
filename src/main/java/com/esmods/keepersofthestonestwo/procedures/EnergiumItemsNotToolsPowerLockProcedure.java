@@ -31,7 +31,7 @@ public class EnergiumItemsNotToolsPowerLockProcedure {
 		if (entity == null)
 			return;
 		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.POWER_LOCK))
-				|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(ItemTags.create(ResourceLocation.parse("power:power_lock_items_not_tools"))) : false)) {
+				&& (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(ItemTags.create(ResourceLocation.parse("power:power_lock_items_not_tools"))) : false)) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK, 200, 0));
 		}
