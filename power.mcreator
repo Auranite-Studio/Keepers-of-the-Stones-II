@@ -36591,7 +36591,8 @@
       "CUSTOM:SpiritBattery",
       "CUSTOM:FormBattery",
       "CUSTOM:MindBattery",
-      "CUSTOM:GoldenDustBattery"
+      "CUSTOM:GoldenDustBattery",
+      "CUSTOM:DarknessBattery"
     ],
     "ITEMS:power:power_lock_items_not_tools": [
       "CUSTOM:EnergiumIngot",
