@@ -3,8 +3,8 @@ plugins {
     id 'net.neoforged.moddev' version '1.0.20'
 }
 
-version = '1.0'
-base.archivesName = "modid"
+version = '1.0.0-rc1'
+base.archivesName = "Keepers-of-the-Stones-II"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
