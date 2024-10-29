@@ -9,6 +9,7 @@
     "power:energium_ore",
     "power:energium_dust",
     "power:raw_energium_block",
-    "power:deepslate_energium_ore"
+    "power:deepslate_energium_ore",
+    "power:energium_key"
   ]
 }

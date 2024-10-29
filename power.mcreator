@@ -36602,7 +36602,8 @@
       "CUSTOM:EnergiumOre",
       "CUSTOM:EnergiumDust",
       "CUSTOM:RawEnergiumBlock",
-      "CUSTOM:DeepslateEnergiumOre"
+      "CUSTOM:DeepslateEnergiumOre",
+      "CUSTOM:EnergiumKey"
     ],
     "ITEMS:minecraft:shovels": [
       "~CUSTOM:CreationShovel",
