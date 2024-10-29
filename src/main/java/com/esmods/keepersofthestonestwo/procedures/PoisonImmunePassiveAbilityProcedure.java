@@ -37,7 +37,7 @@ public class PoisonImmunePassiveAbilityProcedure {
 		double particleAmount = 0;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("poison") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("poison")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("poison") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("poison")
-				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("poison") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("poison")) {
+				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("poison") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("poison")) {
 			if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(MobEffects.POISON)) {
 				particleAmount = 8;
 				particleRadius = 2;

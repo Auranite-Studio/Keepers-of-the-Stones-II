@@ -35549,6 +35549,25 @@
       "path": "~/Modules/ColorfulPowersModule/Debug"
     },
     {
+      "name": "PoisonPitImmuneAllAttacks",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_pit_immune_all_attacks",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonPitImmuneAllAttacksProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
       "name": "LevelXPDebug",
       "type": "procedure",
       "compiles": true,
@@ -39298,6 +39317,10 @@
           {
             "name": "CopyPowersModule",
             "children": []
+          },
+          {
+            "name": "MixinsModule",
+            "children": []
           }
         ]
       },
@@ -39871,5 +39894,5 @@
     "credits": "Created by Environment Studios",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202400341323
+  "mcreatorVersion": 202400343422
 }

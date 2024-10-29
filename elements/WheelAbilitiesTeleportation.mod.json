@@ -227,6 +227,9 @@
           "onClick": {
             "name": "Attack113"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36,
           "locked": false
