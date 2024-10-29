@@ -18,9 +18,9 @@
         "stateMap": [
           {
             "property": {
-              "min": 0.0,
-              "max": 1.0,
-              "name": "cooldown",
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:recharge",
               "type": "number"
             },
             "value": 0.01
