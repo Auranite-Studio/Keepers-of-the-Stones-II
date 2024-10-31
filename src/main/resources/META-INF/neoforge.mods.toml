@@ -68,6 +68,12 @@ versionRange="[0,)"
 ordering="NONE"
 side="BOTH"
 [[dependencies.power]]
+modId="patchouli"
+type="optional"
+versionRange="[0,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.power]]
 modId="geckolib"
 type="optional"
 versionRange="[0,)"
