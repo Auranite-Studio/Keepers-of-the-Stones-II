@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "power:energium_ingot",
+    "power:energium_block",
+    "power:energium_core",
+    "power:energium_controller",
+    "power:raw_energium",
+    "power:energium_ore",
+    "power:energium_dust",
+    "power:raw_energium_block",
+    "power:deepslate_energium_ore",
+    "power:energium_key"
+  ]
+}

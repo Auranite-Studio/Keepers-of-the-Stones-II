@@ -95,7 +95,7 @@ public class SandSpecialAttackProcedure {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity) && !(entity instanceof ItemEntity)) {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())

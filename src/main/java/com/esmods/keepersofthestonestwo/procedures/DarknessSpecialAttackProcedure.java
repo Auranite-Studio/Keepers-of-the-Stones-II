@@ -135,9 +135,10 @@ public class DarknessSpecialAttackProcedure {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (!(entityiterator == entity) && entityiterator instanceof Player && !entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).transfered_power && entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers < 3) {
+						if (!(entityiterator == entity) && entityiterator instanceof Player && !entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).transfered_power && entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers < 3
+								&& !entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
 							RandomPower = Mth.nextInt(RandomSource.create(), 1, 4);
 							if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem()) {
 								if (RandomPower == 1) {
@@ -153,6 +154,13 @@ public class DarknessSpecialAttackProcedure {
 										_vars.transfered_power = true;
 										_vars.syncPlayerVariables(entityiterator);
 									}
+									if (world instanceof Level _level) {
+										if (!_level.isClientSide()) {
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
+										} else {
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+										}
+									}
 								} else if (RandomPower == 2) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.CHAOS_DARK_MASTER, 12000, 1, false, false));
@@ -165,6 +173,13 @@ public class DarknessSpecialAttackProcedure {
 										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.transfered_power = true;
 										_vars.syncPlayerVariables(entityiterator);
+									}
+									if (world instanceof Level _level) {
+										if (!_level.isClientSide()) {
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
+										} else {
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+										}
 									}
 								} else if (RandomPower == 3) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -179,6 +194,13 @@ public class DarknessSpecialAttackProcedure {
 										_vars.transfered_power = true;
 										_vars.syncPlayerVariables(entityiterator);
 									}
+									if (world instanceof Level _level) {
+										if (!_level.isClientSide()) {
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
+										} else {
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+										}
+									}
 								} else if (RandomPower == 4) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.FILTH_DARK_MASTER, 12000, 1, false, false));
@@ -192,16 +214,16 @@ public class DarknessSpecialAttackProcedure {
 										_vars.transfered_power = true;
 										_vars.syncPlayerVariables(entityiterator);
 									}
+									if (world instanceof Level _level) {
+										if (!_level.isClientSide()) {
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
+										} else {
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+										}
+									}
 								}
 							}
 						}
-					}
-				}
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				{
