@@ -149,6 +149,7 @@ import com.esmods.keepersofthestonestwo.item.LavaStoneItem;
 import com.esmods.keepersofthestonestwo.item.LavaHammerItem;
 import com.esmods.keepersofthestonestwo.item.LavaBatteryItem;
 import com.esmods.keepersofthestonestwo.item.LavaArmorItem;
+import com.esmods.keepersofthestonestwo.item.KeepersBookItem;
 import com.esmods.keepersofthestonestwo.item.IceStoneItem;
 import com.esmods.keepersofthestonestwo.item.IceSpearItem;
 import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
@@ -699,6 +700,7 @@ public class PowerModItems {
 	public static final DeferredItem<Item> FILTH_ARMOR_CHESTPLATE = REGISTRY.register("filth_armor_chestplate", FilthArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> FILTH_ARMOR_LEGGINGS = REGISTRY.register("filth_armor_leggings", FilthArmorItem.Leggings::new);
 	public static final DeferredItem<Item> FILTH_ARMOR_BOOTS = REGISTRY.register("filth_armor_boots", FilthArmorItem.Boots::new);
+	public static final DeferredItem<Item> KEEPERS_BOOK = REGISTRY.register("keepers_book", KeepersBookItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

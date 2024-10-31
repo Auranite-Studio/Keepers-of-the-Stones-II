@@ -6,13 +6,22 @@
     "pages": [
         {
             "type": "patchouli:text",
-            "text": "Fire stone is one of the first to be melted from meteorite crystal. As a basic element, the masters of this element had a great connection to the keepers themselves."
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Triple Fireball - the fire master fires three projectiles every second.",
+                "$(li)",
+                "Flamethrower - allows the fire master to set a target on fire (if the battle is underwater, it can do serious damage to the enemy).",
+                "$(li)",
+                "Jet Flight - allows the firebender to temporarily fly into the air."
+            ]
         },
         {
-            "type": "patchouli:text",
-            "title": "Abilities",
+            "type": "patchouli:entity",
+            "name": "Master of Fire",
             "border": true,
-            "text": "Flamethrower - allows the fire master to set a target on fire (if the battle is underwater, it can do serious damage to the enemy)$(br)Triple Fireball - the fire master fires three projectiles every second.$(br)Jet Flight - allows the firebender to temporarily fly into the air.$(br)$(br)Weapon: Fire Sword$(br)Passive ability: Invulnerable to fire, lava, etc."
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:fire_sword\",count:1}],ArmorItems:[{id:\"power:fire_armor_boots\",count:1},{id:\"power:fire_armor_leggings\",count:1},{id:\"power:fire_armor_chestplate\",count:1},{id:\"power:fire_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
         }
     ]
 }

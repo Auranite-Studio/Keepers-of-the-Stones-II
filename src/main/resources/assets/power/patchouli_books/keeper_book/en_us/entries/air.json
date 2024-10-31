@@ -6,13 +6,22 @@
     "pages": [
         {
             "type": "patchouli:text",
-            "text": "The stone of air as well as the stone of fire was smelted one of the first. Air masters have great mobility in combat, which gives them an advantage."
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Air Flow - deals damage to the enemy while pushing them back by about 1 block.",
+                "$(li)",
+                "Gust of Wind - damages all enemies within 5 blocks (provided they are close to you).",
+                "$(li)",
+                "Air Flight - allows the master to fly temporarily into the air."
+            ]
         },
         {
-            "type": "patchouli:text",
-            "title": "Abilities",
+            "type": "patchouli:entity",
+            "name": "Master of the Air",
             "border": true,
-            "text": "Air Flow - deals damage to the enemy while pushing them back by about 1 block.$(br)Gust of Wind - damages all enemies within 5 blocks (provided they are close to you).$(br)Air Flight - allows the master to fly temporarily into the air.$(br)$(br)$(br)$(br)Weapon: Air Rapier$(br)Passive ability: None"
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:air_rapier\",count:1}],ArmorItems:[{id:\"power:air_armor_boots\",count:1},{id:\"power:air_armor_leggings\",count:1},{id:\"power:air_armor_chestplate\",count:1},{id:\"power:air_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
         }
     ]
 }
