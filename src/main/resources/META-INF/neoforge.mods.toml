@@ -87,8 +87,5 @@ versionRange="[0,)"
 ordering="NONE"
 side="BOTH"
 
-[[mixins]]
-    config="mixins.power.json"
-
 # Start of user code block dependencies configuration
 # End of user code block dependencies configuration
