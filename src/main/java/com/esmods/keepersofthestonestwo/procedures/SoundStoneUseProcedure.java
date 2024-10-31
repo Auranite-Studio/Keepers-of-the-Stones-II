@@ -64,6 +64,7 @@ public class SoundStoneUseProcedure {
 								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "playPlayerAnimation @s " + "power:" + "animation.player.transformation" + " 0" + " 10" + " 0" + " true");
 					}
 				}
+				SendClientPackageActivationStoneVFXProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}
