@@ -1,0 +1,25 @@
+{
+  "_fv": 69,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Miniaturization",
+    "icon": "miniaturization",
+    "color": {
+      "value": -26113,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "NEUTRAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": true,
+    "isProtectedByTotem": true,
+    "isCuredbyHoney": false,
+    "onStarted": {
+      "name": "MiniaturizationPriNalozhieniiEffiekta"
+    },
+    "onExpired": {
+      "name": "MiniaturizationPriIstiechieniiEffiekta"
+    }
+  }
+}

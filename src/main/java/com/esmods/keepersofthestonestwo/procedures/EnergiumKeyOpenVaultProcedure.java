@@ -65,16 +65,16 @@ public class EnergiumKeyOpenVaultProcedure {
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.insert")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.insert_item")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.insert")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.insert_item")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 				if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 					itemstack.shrink(1);
 				}
 				new Object() {
-					void timedLoop(int current, int total, int ticks) {
+					void timedLoop(int timedloopiterator, int timedlooptotal, int ticks) {
 						if (!world.isClientSide() && world.getServer() != null) {
 							BlockPos _bpLootTblWorld = BlockPos.containing(x, y, z);
 							for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse("power:chests/energium_temple_vaults"))).getRandomItems(
@@ -90,15 +90,15 @@ public class EnergiumKeyOpenVaultProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x + 0.5, y + 1, z + 0.5), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x + 0.5, y + 1, z + 0.5), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.eject_item")), SoundSource.BLOCKS, 1, 1);
 							} else {
-								_level.playLocalSound((x + 0.5), (y + 1), (z + 0.5), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1, false);
+								_level.playLocalSound((x + 0.5), (y + 1), (z + 0.5), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.eject_item")), SoundSource.BLOCKS, 1, 1, false);
 							}
 						}
 						final int tick2 = ticks;
 						PowerMod.queueServerWork(tick2, () -> {
-							if (total > current + 1) {
-								timedLoop(current + 1, total, tick2);
+							if (timedlooptotal > timedloopiterator + 1) {
+								timedLoop(timedloopiterator + 1, timedlooptotal, tick2);
 							}
 						});
 					}
@@ -106,9 +106,9 @@ public class EnergiumKeyOpenVaultProcedure {
 			} else {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.insert_fail")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.insert_item_fail")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.insert_fail")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.insert_item_fail")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 			}

@@ -5,7 +5,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -74,22 +73,12 @@ public class SmokeMusketItem extends Item {
 						stack.shrink(1);
 					}
 				}
-				SmokeMusketPriVystrielieSnariadomIzPriedmietaProcedure.execute(world, entity);
+				SmokeMusketPriVystrielieSnariadomIzPriedmietaProcedure.execute(entity);
 			}
 		}
 	}
 
 	private ItemStack findAmmo(Player player) {
-		ItemStack stack = ProjectileWeaponItem.getHeldProjectile(player, e -> e.getItem() == SmokeMusketProjectileEntity.PROJECTILE_ITEM.getItem());
-		if (stack == ItemStack.EMPTY) {
-			for (int i = 0; i < player.getInventory().items.size(); i++) {
-				ItemStack teststack = player.getInventory().items.get(i);
-				if (teststack != null && teststack.getItem() == SmokeMusketProjectileEntity.PROJECTILE_ITEM.getItem()) {
-					stack = teststack;
-					break;
-				}
-			}
-		}
-		return stack;
+		return new ItemStack(SmokeMusketProjectileEntity.PROJECTILE_ITEM.getItem());
 	}
 }

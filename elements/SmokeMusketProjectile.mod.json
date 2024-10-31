@@ -7,13 +7,15 @@
     },
     "showParticles": false,
     "actionSound": {
-      "value": "item.crossbow.shoot"
+      "value": "CUSTOM:musket"
     },
     "igniteFire": false,
     "power": 5.0,
-    "damage": 22.0,
+    "damage": 2.4,
     "knockback": 0,
     "entityModel": "Modelturret_projectile",
-    "customModelTexture": "smoke_musket_projectile.png"
+    "customModelTexture": "smoke_musket_projectile.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5
   }
 }

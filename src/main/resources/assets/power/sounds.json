@@ -35,154 +35,6 @@
       }
     ]
   },
-  "backport.block.vault.step": {
-    "sounds": [
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_step8",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_step7",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_step6",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_step5",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_step4",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_step3",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_step2",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_step1",
-        "stream": false
-      }
-    ]
-  },
-  "backport.block.vault.place": {
-    "sounds": [
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_place4",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_place3",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_place2",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_place1",
-        "stream": false
-      }
-    ]
-  },
-  "backport.block.vault.ambient": {
-    "sounds": [
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_ambient3",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_ambient2",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_ambient1",
-        "stream": false
-      }
-    ]
-  },
-  "backport.block.vault.break": {
-    "sounds": [
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_break1",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_break2",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_break3",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_break4",
-        "stream": false
-      }
-    ]
-  },
-  "backport.block.vault.eject": {
-    "sounds": [
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_eject1",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_eject2",
-        "stream": false
-      },
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_eject3",
-        "stream": false
-      }
-    ]
-  },
-  "backport.block.vault.activate": {
-    "sounds": [
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_activate",
-        "stream": false
-      }
-    ]
-  },
-  "backport.block.vault.deactivate": {
-    "sounds": [
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_deactivate",
-        "stream": false
-      }
-    ]
-  },
-  "backport.block.vault.insert": {
-    "sounds": [
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_insert",
-        "stream": false
-      }
-    ]
-  },
-  "backport.block.vault.insert_fail": {
-    "sounds": [
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_insert_fail",
-        "stream": false
-      }
-    ]
-  },
-  "backport.block.vault.open_shutter": {
-    "sounds": [
-      {
-        "name": "power:assets_minecraft_sounds_block_vault_open_shutter",
-        "stream": false
-      }
-    ]
-  },
   "magnetic_waves": {
     "subtitle": "subtitles.magnetic_waves",
     "sounds": [
@@ -224,6 +76,106 @@
       {
         "name": "power:musket",
         "stream": false
+      }
+    ]
+  },
+  "cursed_knight.attack": {
+    "sounds": [
+      {
+        "name": "power:cursed_knight.attack",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_knight.death": {
+    "sounds": [
+      {
+        "name": "power:cursed_knight.death",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_knight.hurt": {
+    "sounds": [
+      {
+        "name": "power:cursed_knight.hurt",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_knight.walk": {
+    "sounds": [
+      {
+        "name": "power:cursed_knight.step_1",
+        "stream": false
+      },
+      {
+        "name": "power:cursed_knight.step_2",
+        "stream": false
+      },
+      {
+        "name": "power:cursed_knight.step_3",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_squire.death": {
+    "sounds": [
+      {
+        "name": "power:cursed_squire.death",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_squire.hurt": {
+    "sounds": [
+      {
+        "name": "power:cursed_squire.hurt",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_squire.attack": {
+    "sounds": [
+      {
+        "name": "power:cursed_squire.attack",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_squire.walk": {
+    "sounds": [
+      {
+        "name": "power:cursed_squire.step_1",
+        "stream": false
+      },
+      {
+        "name": "power:cursed_squire.step_2",
+        "stream": false
+      },
+      {
+        "name": "power:cursed_squire.step_3",
+        "stream": false
+      }
+    ]
+  },
+  "ambient.biome.cursed_forest": {
+    "sounds": [
+      {
+        "name": "power:cursed_forest_ambient_1",
+        "stream": false
+      },
+      {
+        "name": "power:cursed_forest_ambient_2",
+        "stream": false
+      }
+    ]
+  },
+  "music.mystery_of_the_cursed_forest": {
+    "sounds": [
+      {
+        "name": "power:music.mystery_of_the_cursed_forest",
+        "stream": true
       }
     ]
   }

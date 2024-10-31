@@ -15,6 +15,8 @@
     "knockback": 5,
     "entityModel": "Modelatomic_rocket",
     "customModelTexture": "atomic_rocket.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
     "onHitsBlock": {
       "name": "AtomicRocketExplosion"
     },

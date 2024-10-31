@@ -34,7 +34,7 @@ public class ExplosionPassiveProtectionProcedure {
 		double particleAmount = 0;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("explosion") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("explosion")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("explosion") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("explosion")
-				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("explosion") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("explosion")) {
+				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("explosion") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("explosion")) {
 			if (damagesource.is(DamageTypes.EXPLOSION) || damagesource.is(DamageTypes.PLAYER_EXPLOSION)) {
 				if (event instanceof ICancellableEvent _cancellable) {
 					_cancellable.setCanceled(true);

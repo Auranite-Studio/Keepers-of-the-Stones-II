@@ -12,6 +12,9 @@
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "isCuredByMilk": true,
+    "isProtectedByTotem": true,
+    "isCuredbyHoney": false,
     "onStarted": {
       "name": "TimeStoppedPriNalozhieniiEffiekta"
     },

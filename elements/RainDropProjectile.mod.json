@@ -14,6 +14,8 @@
     "damage": 12.0,
     "knockback": 1,
     "entityModel": "Modelrain_drop",
-    "customModelTexture": "rain_drop.png"
+    "customModelTexture": "rain_drop.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5
   }
 }

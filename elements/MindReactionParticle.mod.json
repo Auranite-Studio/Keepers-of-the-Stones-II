@@ -1,0 +1,23 @@
+{
+  "_fv": 69,
+  "_type": "particle",
+  "definition": {
+    "texture": "mind_reaction",
+    "animate": true,
+    "frameDuration": 2,
+    "width": 3.0,
+    "height": 3.0,
+    "scale": {
+      "fixedValue": 3.0
+    },
+    "speedFactor": 0.0,
+    "gravity": 0.2,
+    "maxAge": 9,
+    "maxAgeDiff": 32,
+    "angularVelocity": 0.0,
+    "angularAcceleration": 0.0,
+    "canCollide": false,
+    "alwaysShow": false,
+    "renderType": "LIT"
+  }
+}

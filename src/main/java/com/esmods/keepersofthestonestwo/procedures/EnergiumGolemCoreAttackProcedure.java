@@ -86,14 +86,14 @@ public class EnergiumGolemCoreAttackProcedure {
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
 								if (!(entityiterator instanceof ItemEntity)) {
-									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:energium_golem_ds")))), 26);
+									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:energium_golem_ds")))), 24);
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK, 200, 0));
 								}
 							}
 						}
 					}
-					if (!(world.getBlockState(BlockPos.containing(XPar, YPar, ZPar))).is(BlockTags.create(ResourceLocation.parse("forge:monster_motion_stop"))) && world.getLevelData().getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING) == true) {
+					if (!(world.getBlockState(BlockPos.containing(XPar, YPar, ZPar))).is(BlockTags.create(ResourceLocation.parse("c:unbreakable"))) && world.getLevelData().getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING) == true) {
 						world.destroyBlock(BlockPos.containing(XPar, YPar, ZPar), false);
 					}
 					loop = loop + 1;

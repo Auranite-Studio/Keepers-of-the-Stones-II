@@ -32,7 +32,7 @@ public class OceanPassiveConduitProcedure {
 		double particleAmount = 0;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("ocean") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("ocean")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("ocean") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("ocean")
-				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("ocean") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("ocean")) {
+				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("ocean") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("ocean")) {
 			if (entity.isInWater()) {
 				particleAmount = 8;
 				particleRadius = 2;

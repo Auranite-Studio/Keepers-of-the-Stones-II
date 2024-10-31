@@ -57,12 +57,12 @@ public class WheelAbilitiesMetalScreen extends AbstractContainerScreen<WheelAbil
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30"), mouseX, mouseY);
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15"), mouseX, mouseY);
+		if (mouseX > leftPos + 84 && mouseX < leftPos + 108 && mouseY > topPos + 144 && mouseY < topPos + 168)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_metal.tooltip_iron_skin_uses_80"), mouseX, mouseY);
 	}
 
 	@Override

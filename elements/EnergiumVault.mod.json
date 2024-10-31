@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Energium Vault",
     "specialInformation": {
       "fixedValue": []
@@ -58,7 +59,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "IRON"
+      "value": "NONE"
     },
     "tickRate": 1,
     "tickRandomly": false,
@@ -86,19 +87,19 @@
       "value": "NETHERITE"
     },
     "breakSound": {
-      "value": "CUSTOM:backport.block.vault.break"
+      "value": "block.vault.break"
     },
     "fallSound": {
-      "value": "block.netherite_block.fall"
+      "value": "block.vault.fall"
     },
     "hitSound": {
-      "value": "block.netherite_block.hit"
+      "value": "block.vault.hit"
     },
     "placeSound": {
-      "value": "CUSTOM:backport.block.vault.place"
+      "value": "block.vault.place"
     },
     "stepSound": {
-      "value": "CUSTOM:backport.block.vault.step"
+      "value": "block.vault.step"
     },
     "luminance": 6,
     "unbreakable": false,

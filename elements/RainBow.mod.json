@@ -42,9 +42,7 @@
     "projectile": {
       "value": "CUSTOM:RainDropProjectile"
     },
-    "onRangedItemUsed": {
-      "name": "RainBowPoslieIspolzovaniiaSnariada"
-    },
+    "projectileDisableAmmoCheck": true,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

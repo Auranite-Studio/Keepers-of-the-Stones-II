@@ -43,6 +43,7 @@
     "projectile": {
       "value": "CUSTOM:MagicFireballProjectile"
     },
+    "projectileDisableAmmoCheck": false,
     "isFood": true,
     "nutritionalValue": 10,
     "saturation": 0.8,

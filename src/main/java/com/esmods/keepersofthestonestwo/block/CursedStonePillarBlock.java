@@ -36,13 +36,14 @@ public class CursedStonePillarBlock extends Block implements SimpleWaterloggedBl
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+		super.createBlockStateDefinition(builder);
 		builder.add(AXIS, WATERLOGGED);
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
 		boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
-		return this.defaultBlockState().setValue(AXIS, context.getClickedFace().getAxis()).setValue(WATERLOGGED, flag);
+		return super.getStateForPlacement(context).setValue(AXIS, context.getClickedFace().getAxis()).setValue(WATERLOGGED, flag);
 	}
 
 	@Override

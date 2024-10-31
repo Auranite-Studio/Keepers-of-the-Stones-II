@@ -1,6 +1,15 @@
 {
   "replace": false,
   "values": [
+    "power:filth_armor_helmet",
+    "power:horror_armor_helmet",
+    "power:chaos_armor_helmet",
+    "power:thirst_armor_helmet",
+    "power:darkness_armor_helmet",
+    "power:golden_dust_armor_helmet",
+    "power:mind_armor_helmet",
+    "power:form_armor_helmet",
+    "power:spirit_armor_helmet",
     "power:smoke_armor_helmet",
     "power:gravity_armor_helmet",
     "power:blue_flame_armor_helmet",

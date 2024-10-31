@@ -143,13 +143,15 @@ public class MetalMasterStartProcedure {
 				_player.getInventory().setChanged();
 		}
 		(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.VANISHING_CURSE), 1);
-		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.LEFT_METAL_GAUNTLET.get()).copy();
-			_setstack.setCount(1);
-			_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
-			if (_entity instanceof Player _player)
-				_player.getInventory().setChanged();
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem()) {
+			if (entity instanceof LivingEntity _entity) {
+				ItemStack _setstack = new ItemStack(PowerModItems.LEFT_METAL_GAUNTLET.get()).copy();
+				_setstack.setCount(1);
+				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
+				if (_entity instanceof Player _player)
+					_player.getInventory().setChanged();
+			}
+			(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.VANISHING_CURSE), 1);
 		}
-		(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.VANISHING_CURSE), 1);
 	}
 }

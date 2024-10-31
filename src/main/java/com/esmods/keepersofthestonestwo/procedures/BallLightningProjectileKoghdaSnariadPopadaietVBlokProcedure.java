@@ -16,6 +16,6 @@ public class BallLightningProjectileKoghdaSnariadPopadaietVBlokProcedure {
 			_level.addFreshEntity(entityToSpawn);
 		}
 		if (world instanceof Level _level && !_level.isClientSide())
-			_level.explode(null, x, y, z, 9, Level.ExplosionInteraction.MOB);
+			_level.explode(null, x, y, z, 8, Level.ExplosionInteraction.MOB);
 	}
 }

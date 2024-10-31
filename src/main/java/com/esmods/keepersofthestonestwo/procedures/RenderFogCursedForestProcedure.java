@@ -61,12 +61,10 @@ public class RenderFogCursedForestProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (world
-				.getBiome(BlockPos.containing(Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().x(), Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().y(),
-						Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().z()))
-				.is(ResourceLocation.parse("power:cursed_forest")) && !entity.isUnderWater() && !(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PowerModMobEffects.MIST))) {
+		if (world.getBiome(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ())).is(ResourceLocation.parse("power:cursed_forest")) && !entity.isUnderWater()
+				&& !(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PowerModMobEffects.MIST))) {
 			setDistance(15, 45);
-			setShape(FogShape.SPHERE);
+			setShape(FogShape.CYLINDER);
 		}
 	}
 }

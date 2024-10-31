@@ -31,6 +31,8 @@ public class PowerModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> CURSED_VAULT = register("cursed_vault", PowerModBlocks.CURSED_VAULT, CursedVaultBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> ENERGIUM_VAULT = register("energium_vault", PowerModBlocks.ENERGIUM_VAULT, EnergiumVaultBlockEntity::new);
 
+	// Start of user code block custom block entities
+	// End of user code block custom block entities
 	private static DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> register(String registryname, DeferredHolder<Block, Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
 	}

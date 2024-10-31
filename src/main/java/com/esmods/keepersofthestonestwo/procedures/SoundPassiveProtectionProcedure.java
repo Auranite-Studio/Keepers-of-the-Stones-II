@@ -31,7 +31,7 @@ public class SoundPassiveProtectionProcedure {
 		double particleAmount = 0;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("sound") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("sound")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("sound") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sound")
-				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sound") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sound")) {
+				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("sound") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("sound")) {
 			if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.STUN)) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.STUN);

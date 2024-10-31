@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+    "power:dark_sword",
+    "power:golden_dust_staff",
+    "power:mind_epee",
+    "power:form_sai",
+    "power:spirit_sickle",
     "power:gravity_mace",
     "power:blue_flame_sword",
     "power:plague_walking_stick",

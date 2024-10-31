@@ -20,6 +20,8 @@ import javax.annotation.Nullable;
 
 import io.netty.buffer.Unpooled;
 
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbiltiesGoldenDustMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilityDarknessMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesWaterMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesVacuumMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTornadoMenu;
@@ -27,6 +29,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTimeMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTeleportationMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTechnologyMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSunMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpiritMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpeedMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpaceMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
@@ -40,6 +43,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesOceanMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMusicMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMushroomsMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMoonMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMindMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMetalMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMercuryMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMagnetMenu;
@@ -48,6 +52,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLavaMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesIceMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesGravityMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFormMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesExplosionMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEtherMenu;
@@ -78,7 +83,7 @@ public class SecondFakeWheelOpenTickProcedure {
 		if (entity == null)
 			return;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).second_fake_wheel_open_var) {
-			if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("fire")) {
+			if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("thirst")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					_ent.openMenu(new MenuProvider() {
@@ -98,7 +103,7 @@ public class SecondFakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("air")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("chaos")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					_ent.openMenu(new MenuProvider() {
@@ -118,7 +123,7 @@ public class SecondFakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("earth")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("horror")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					_ent.openMenu(new MenuProvider() {
@@ -138,7 +143,7 @@ public class SecondFakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("water")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("filth")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					_ent.openMenu(new MenuProvider() {
@@ -915,6 +920,106 @@ public class SecondFakeWheelOpenTickProcedure {
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesSmokeMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("spirit")) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("WheelAbilitiesSpirit");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new WheelAbilitiesSpiritMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("form")) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("WheelAbilitiesForm");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new WheelAbilitiesFormMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mind")) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("WheelAbilitiesMind");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new WheelAbilitiesMindMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("golden_dust")) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("WheelAbiltiesGoldenDust");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new WheelAbiltiesGoldenDustMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("darkness")) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("WheelAbilityDarkness");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new WheelAbilityDarknessMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

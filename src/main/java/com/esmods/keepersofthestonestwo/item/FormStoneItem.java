@@ -20,8 +20,8 @@ import net.minecraft.client.Minecraft;
 import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LavaStoneUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.FormStoneUseProcedure;
 
 public class FormStoneItem extends Item {
 	public FormStoneItem() {
@@ -44,7 +44,7 @@ public class FormStoneItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		LavaStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		FormStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
 	}
 

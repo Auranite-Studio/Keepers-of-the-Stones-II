@@ -28,6 +28,7 @@ import com.esmods.keepersofthestonestwo.client.particle.PlagueParticleFourPartic
 import com.esmods.keepersofthestonestwo.client.particle.MushroomSporesParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MoonParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MistParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.MindReactionParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MercuryParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.LightSparkleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.InsectsParticle;
@@ -72,5 +73,6 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.PLAGUE_PARTICLE_THREE.get(), PlagueParticleThreeParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.PLAGUE_PARTICLE_FOUR.get(), PlagueParticleFourParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.FEATHER_PARTICLE.get(), FeatherParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.MIND_REACTION_PARTICLE.get(), MindReactionParticleParticle::provider);
 	}
 }

@@ -21,7 +21,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 31,
-          "y": 35
+          "y": 35,
+          "locked": false
         }
       },
       {
@@ -34,7 +35,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 2,
-          "y": 28
+          "y": 28,
+          "locked": false
         }
       }
     ],

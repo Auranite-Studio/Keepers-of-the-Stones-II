@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Block of Raw Energium",
     "specialInformation": {
       "fixedValue": []
@@ -124,7 +125,7 @@
     "onTickUpdate": {
       "name": "EnergiumBlockPowerLock"
     },
-    "generateFeature": true,
+    "generateFeature": false,
     "restrictionBiomes": [
       {
         "value": "#is_mountain"

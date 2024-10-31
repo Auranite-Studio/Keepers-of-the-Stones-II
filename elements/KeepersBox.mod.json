@@ -222,6 +222,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Keeper's Box",
     "specialInformation": {
       "fixedValue": []

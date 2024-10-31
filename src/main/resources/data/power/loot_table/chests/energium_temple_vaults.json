@@ -62,20 +62,6 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:apple",
-          "weight": 3,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 1
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "name": "minecraft:emerald",
           "weight": 3,
           "functions": [
@@ -90,35 +76,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:string",
-          "weight": 4,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 1
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:potato",
-          "weight": 4,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 1
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:sweet_berries",
+          "name": "minecraft:ender_pearl",
           "weight": 4,
           "functions": [
             {
@@ -169,20 +127,6 @@
           "type": "minecraft:item",
           "name": "power:energium_ingot",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 1
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:poisonous_potato",
-          "weight": 2,
           "functions": [
             {
               "function": "minecraft:set_count",

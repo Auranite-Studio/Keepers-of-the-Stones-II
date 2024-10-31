@@ -237,14 +237,9 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 	String prevAnim = "empty";
 
 	private PlayState procedurePredicate(AnimationState event) {
-		if (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty")) {
-			prevAnim = this.animationprocedure;
-			event.getController().forceAnimationReset();
-			event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
-			return PlayState.CONTINUE;
-		}
-		if (!animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-			prevAnim = this.animationprocedure;
+		if (!animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED || (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty"))) {
+			if (!this.animationprocedure.equals(prevAnim))
+				event.getController().forceAnimationReset();
 			event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
 			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
 				this.animationprocedure = "empty";
@@ -254,6 +249,7 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 			prevAnim = "empty";
 			return PlayState.STOP;
 		}
+		prevAnim = this.animationprocedure;
 		return PlayState.CONTINUE;
 	}
 
@@ -262,7 +258,7 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 		++this.deathTime;
 		if (this.deathTime == 20) {
 			this.remove(BlackHoleEntity.RemovalReason.KILLED);
-			this.dropExperience(null);
+			this.dropExperience(this);
 		}
 	}
 

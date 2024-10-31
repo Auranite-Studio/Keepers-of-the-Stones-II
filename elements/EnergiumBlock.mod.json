@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Block of Energium",
     "specialInformation": {
       "fixedValue": []

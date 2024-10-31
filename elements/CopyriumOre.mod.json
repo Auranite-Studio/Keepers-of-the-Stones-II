@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Copyrium Ore",
     "specialInformation": {
       "fixedValue": []
@@ -145,9 +146,9 @@
       }
     ],
     "generationShape": "UNIFORM",
-    "frequencyPerChunks": 11,
-    "frequencyOnChunk": 7,
-    "minGenerateHeight": 1,
-    "maxGenerateHeight": 63
+    "frequencyPerChunks": 6,
+    "frequencyOnChunk": 8,
+    "minGenerateHeight": 8,
+    "maxGenerateHeight": 64
   }
 }

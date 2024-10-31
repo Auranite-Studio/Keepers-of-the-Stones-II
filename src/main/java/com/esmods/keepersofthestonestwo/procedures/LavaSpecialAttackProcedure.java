@@ -13,6 +13,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -174,7 +175,8 @@ public class LavaSpecialAttackProcedure {
 									double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
 											+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
 									if (distanceSq <= 1.0) {
-										if (world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi)).canOcclude()) {
+										if (world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi)).canOcclude()
+												&& !(world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi))).is(BlockTags.create(ResourceLocation.parse("c:unbreakable")))) {
 											world.setBlock(BlockPos.containing(x + xi, y + i - 1, z + zi), Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
 											world.levelEvent(2001, BlockPos.containing(x + xi, y + i - 1, z + zi), Block.getId((world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi)))));
 											if (!(entityiterator == entity)) {

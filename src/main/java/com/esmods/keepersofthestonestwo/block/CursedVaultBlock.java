@@ -42,9 +42,9 @@ public class CursedVaultBlock extends Block implements EntityBlock {
 
 	public CursedVaultBlock() {
 		super(BlockBehaviour.Properties.of()
-				.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.break")),
-						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.step")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.place")),
-						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.netherite_block.hit")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.netherite_block.fall"))))
+				.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.break")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.step")),
+						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.place")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.hit")),
+						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.fall"))))
 				.strength(50f).lightLevel(s -> (new Object() {
 					public int getLightLevel() {
 						if (s.getValue(BLOCKSTATE) == 1)
@@ -84,12 +84,13 @@ public class CursedVaultBlock extends Block implements EntityBlock {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+		super.createBlockStateDefinition(builder);
 		builder.add(FACING, BLOCKSTATE);
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+		return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite());
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {

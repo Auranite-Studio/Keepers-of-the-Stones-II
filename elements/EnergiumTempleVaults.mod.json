@@ -70,20 +70,6 @@
           {
             "type": "item",
             "item": {
-              "value": "Items.APPLE"
-            },
-            "weight": 3,
-            "minCount": 1,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
               "value": "Items.EMERALD"
             },
             "weight": 3,
@@ -98,35 +84,7 @@
           {
             "type": "item",
             "item": {
-              "value": "Items.STRING"
-            },
-            "weight": 4,
-            "minCount": 1,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "Items.POTATO"
-            },
-            "weight": 4,
-            "minCount": 1,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "Items.SWEET_BERRIES"
+              "value": "Items.ENDER_PEARL"
             },
             "weight": 4,
             "minCount": 1,
@@ -171,20 +129,6 @@
               "value": "CUSTOM:EnergiumIngot"
             },
             "weight": 1,
-            "minCount": 1,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "Items.POISONOUS_POTATO"
-            },
-            "weight": 2,
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 0,

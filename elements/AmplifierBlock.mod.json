@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Amplifier Block",
     "specialInformation": {
       "fixedValue": []

@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": " Master of Poison",
-    "icon": "poison_master.png",
+    "icon": "poison_master",
     "color": {
       "value": -6684877,
       "falpha": 0.0
@@ -12,11 +12,11 @@
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
     "onStarted": {
       "name": "PoisonMasterStart"
-    },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
     },
     "onExpired": {
       "name": "PoisonMasterEnd"

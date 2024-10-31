@@ -36,6 +36,8 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 public class PowerModVariables {
 	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, PowerMod.MODID);
 	public static final Supplier<AttachmentType<PlayerVariables>> PLAYER_VARIABLES = ATTACHMENT_TYPES.register("player_variables", () -> AttachmentType.serializable(() -> new PlayerVariables()).build());
+	public static double recharge_timer = 300.0;
+	public static double master_effect_duration = 600.0;
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -67,49 +69,50 @@ public class PowerModVariables {
 		public static void clonePlayer(PlayerEvent.Clone event) {
 			PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
 			PlayerVariables clone = new PlayerVariables();
-			clone.selected = original.selected;
 			clone.ability = original.ability;
-			clone.active_battery = original.active_battery;
 			clone.element_name_first = original.element_name_first;
 			clone.element_name_second = original.element_name_second;
 			clone.element_name_third = original.element_name_third;
-			clone.unlock_keepers_box = original.unlock_keepers_box;
-			clone.max_power = original.max_power;
 			clone.fake_element_name_first = original.fake_element_name_first;
 			clone.fake_element_name_second = original.fake_element_name_second;
 			clone.fake_element_name_third = original.fake_element_name_third;
+			clone.first_booster_slot = original.first_booster_slot;
+			clone.second_booster_slot = original.second_booster_slot;
+			clone.third_booster_slot = original.third_booster_slot;
+			clone.max_power = original.max_power;
+			clone.selected = original.selected;
+			clone.active_battery = original.active_battery;
+			clone.debug = original.debug;
 			clone.helmet = original.helmet;
 			clone.chestplate = original.chestplate;
 			clone.leggings = original.leggings;
 			clone.boots = original.boots;
-			clone.debug = original.debug;
-			clone.first_booster_slot = original.first_booster_slot;
-			clone.second_booster_slot = original.second_booster_slot;
-			clone.third_booster_slot = original.third_booster_slot;
+			clone.unlock_keepers_box = original.unlock_keepers_box;
+			clone.hypnotized = original.hypnotized;
 			if (!event.isWasDeath()) {
-				clone.active_power = original.active_power;
+				clone.teleporting_effect = original.teleporting_effect;
+				clone.abilities_timer = original.abilities_timer;
+				clone.fake_element_name_first_timer = original.fake_element_name_first_timer;
+				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
+				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
 				clone.power = original.power;
 				clone.powerTimer = original.powerTimer;
 				clone.mergers = original.mergers;
+				clone.power_recovery_multiplier = original.power_recovery_multiplier;
+				clone.active_power = original.active_power;
 				clone.ability_block = original.ability_block;
 				clone.use_ability_key_var = original.use_ability_key_var;
 				clone.detransf_key_var = original.detransf_key_var;
 				clone.wheel_open_key_var = original.wheel_open_key_var;
-				clone.power_recovery_multiplier = original.power_recovery_multiplier;
-				clone.teleporting_effect = original.teleporting_effect;
 				clone.second_wheel_open_var = original.second_wheel_open_var;
 				clone.third_wheel_open_var = original.third_wheel_open_var;
 				clone.first_fake_wheel_open_var = original.first_fake_wheel_open_var;
 				clone.second_fake_wheel_open_var = original.second_fake_wheel_open_var;
 				clone.third_fake_wheel_open_var = original.third_fake_wheel_open_var;
-				clone.abilities_timer = original.abilities_timer;
 				clone.ability_using = original.ability_using;
 				clone.power_recorded = original.power_recorded;
-				clone.fake_element_name_first_timer = original.fake_element_name_first_timer;
-				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
-				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
-				clone.send_client_package = original.send_client_package;
 				clone.detransform_anim_trigger = original.detransform_anim_trigger;
+				clone.transfered_power = original.transfered_power;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -138,6 +141,7 @@ public class PowerModVariables {
 
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "power_worldvars";
+		public double entity_rotation = 0;
 
 		public static WorldVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			WorldVariables data = new WorldVariables();
@@ -146,10 +150,12 @@ public class PowerModVariables {
 		}
 
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+			entity_rotation = nbt.getDouble("entity_rotation");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+			nbt.putDouble("entity_rotation", entity_rotation);
 			return nbt;
 		}
 
@@ -172,6 +178,12 @@ public class PowerModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "power_mapvars";
+		public double opX = 0;
+		public double opY = 0;
+		public double opZ = 0;
+		public double bpX = 0;
+		public double bpY = 0;
+		public double bpZ = 0;
 		public boolean fire_stone = false;
 		public boolean air_stone = false;
 		public boolean earth_stone = false;
@@ -222,15 +234,7 @@ public class PowerModVariables {
 		public boolean darkness_stone = false;
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
-		public double opX = 0;
-		public double opY = 0;
-		public double opZ = 0;
-		public double bpX = 0;
-		public double bpY = 0;
-		public double bpZ = 0;
 		public boolean get_limit_of_stones = true;
-		public double master_effect_duration = 600.0;
-		public double recharge_timer = 300.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -239,6 +243,12 @@ public class PowerModVariables {
 		}
 
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+			opX = nbt.getDouble("opX");
+			opY = nbt.getDouble("opY");
+			opZ = nbt.getDouble("opZ");
+			bpX = nbt.getDouble("bpX");
+			bpY = nbt.getDouble("bpY");
+			bpZ = nbt.getDouble("bpZ");
 			fire_stone = nbt.getBoolean("fire_stone");
 			air_stone = nbt.getBoolean("air_stone");
 			earth_stone = nbt.getBoolean("earth_stone");
@@ -289,19 +299,17 @@ public class PowerModVariables {
 			darkness_stone = nbt.getBoolean("darkness_stone");
 			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
 			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
-			opX = nbt.getDouble("opX");
-			opY = nbt.getDouble("opY");
-			opZ = nbt.getDouble("opZ");
-			bpX = nbt.getDouble("bpX");
-			bpY = nbt.getDouble("bpY");
-			bpZ = nbt.getDouble("bpZ");
 			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
-			master_effect_duration = nbt.getDouble("master_effect_duration");
-			recharge_timer = nbt.getDouble("recharge_timer");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+			nbt.putDouble("opX", opX);
+			nbt.putDouble("opY", opY);
+			nbt.putDouble("opZ", opZ);
+			nbt.putDouble("bpX", bpX);
+			nbt.putDouble("bpY", bpY);
+			nbt.putDouble("bpZ", bpZ);
 			nbt.putBoolean("fire_stone", fire_stone);
 			nbt.putBoolean("air_stone", air_stone);
 			nbt.putBoolean("earth_stone", earth_stone);
@@ -352,15 +360,7 @@ public class PowerModVariables {
 			nbt.putBoolean("darkness_stone", darkness_stone);
 			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
 			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
-			nbt.putDouble("opX", opX);
-			nbt.putDouble("opY", opY);
-			nbt.putDouble("opZ", opZ);
-			nbt.putDouble("bpX", bpX);
-			nbt.putDouble("bpY", bpY);
-			nbt.putDouble("bpZ", bpZ);
 			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
-			nbt.putDouble("master_effect_duration", master_effect_duration);
-			nbt.putDouble("recharge_timer", recharge_timer);
 			return nbt;
 		}
 
@@ -422,141 +422,144 @@ public class PowerModVariables {
 	}
 
 	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
-		public boolean active_power = false;
-		public boolean selected = false;
-		public double power = 0.0;
-		public double powerTimer = 0.0;
 		public String ability = "0";
-		public double mergers = 0.0;
-		public boolean active_battery = false;
-		public boolean ability_block = false;
 		public String element_name_first = "0";
 		public String element_name_second = "0";
 		public String element_name_third = "0";
-		public boolean unlock_keepers_box = true;
-		public boolean use_ability_key_var = false;
-		public boolean detransf_key_var = false;
-		public boolean wheel_open_key_var = false;
-		public double max_power = 100.0;
-		public double power_recovery_multiplier = 1.0;
 		public double teleporting_effect = 0;
-		public boolean second_wheel_open_var = false;
-		public boolean third_wheel_open_var = false;
 		public String fake_element_name_first = "0";
 		public String fake_element_name_second = "0";
 		public String fake_element_name_third = "0";
+		public double abilities_timer = 0;
+		public double fake_element_name_first_timer = 0;
+		public double fake_element_name_second_timer = 0;
+		public double fake_element_name_third_timer = 0;
+		public String first_booster_slot = "0";
+		public String second_booster_slot = "0";
+		public String third_booster_slot = "0";
+		public double power = 0.0;
+		public double powerTimer = 0.0;
+		public double mergers = 0.0;
+		public double power_recovery_multiplier = 1.0;
+		public double max_power = 100.0;
+		public boolean active_power = false;
+		public boolean selected = false;
+		public boolean active_battery = false;
+		public boolean ability_block = false;
+		public boolean use_ability_key_var = false;
+		public boolean detransf_key_var = false;
+		public boolean wheel_open_key_var = false;
+		public boolean second_wheel_open_var = false;
+		public boolean third_wheel_open_var = false;
 		public boolean first_fake_wheel_open_var = false;
 		public boolean second_fake_wheel_open_var = false;
 		public boolean third_fake_wheel_open_var = false;
+		public boolean ability_using = false;
+		public boolean power_recorded = false;
+		public boolean debug = false;
+		public boolean detransform_anim_trigger = false;
 		public ItemStack helmet = ItemStack.EMPTY;
 		public ItemStack chestplate = ItemStack.EMPTY;
 		public ItemStack leggings = ItemStack.EMPTY;
 		public ItemStack boots = ItemStack.EMPTY;
-		public double abilities_timer = 0;
-		public boolean ability_using = false;
-		public boolean power_recorded = false;
-		public double fake_element_name_first_timer = 0;
-		public double fake_element_name_second_timer = 0;
-		public double fake_element_name_third_timer = 0;
-		public boolean debug = false;
-		public boolean send_client_package = false;
-		public String first_booster_slot = "0";
-		public String second_booster_slot = "0";
-		public String third_booster_slot = "0";
-		public boolean detransform_anim_trigger = false;
+		public boolean unlock_keepers_box = false;
+		public boolean transfered_power = false;
+		public boolean hypnotized = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putBoolean("active_power", active_power);
-			nbt.putBoolean("selected", selected);
-			nbt.putDouble("power", power);
-			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putString("ability", ability);
-			nbt.putDouble("mergers", mergers);
-			nbt.putBoolean("active_battery", active_battery);
-			nbt.putBoolean("ability_block", ability_block);
 			nbt.putString("element_name_first", element_name_first);
 			nbt.putString("element_name_second", element_name_second);
 			nbt.putString("element_name_third", element_name_third);
-			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
-			nbt.putBoolean("use_ability_key_var", use_ability_key_var);
-			nbt.putBoolean("detransf_key_var", detransf_key_var);
-			nbt.putBoolean("wheel_open_key_var", wheel_open_key_var);
-			nbt.putDouble("max_power", max_power);
-			nbt.putDouble("power_recovery_multiplier", power_recovery_multiplier);
 			nbt.putDouble("teleporting_effect", teleporting_effect);
-			nbt.putBoolean("second_wheel_open_var", second_wheel_open_var);
-			nbt.putBoolean("third_wheel_open_var", third_wheel_open_var);
 			nbt.putString("fake_element_name_first", fake_element_name_first);
 			nbt.putString("fake_element_name_second", fake_element_name_second);
 			nbt.putString("fake_element_name_third", fake_element_name_third);
+			nbt.putDouble("abilities_timer", abilities_timer);
+			nbt.putDouble("fake_element_name_first_timer", fake_element_name_first_timer);
+			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
+			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
+			nbt.putString("first_booster_slot", first_booster_slot);
+			nbt.putString("second_booster_slot", second_booster_slot);
+			nbt.putString("third_booster_slot", third_booster_slot);
+			nbt.putDouble("power", power);
+			nbt.putDouble("powerTimer", powerTimer);
+			nbt.putDouble("mergers", mergers);
+			nbt.putDouble("power_recovery_multiplier", power_recovery_multiplier);
+			nbt.putDouble("max_power", max_power);
+			nbt.putBoolean("active_power", active_power);
+			nbt.putBoolean("selected", selected);
+			nbt.putBoolean("active_battery", active_battery);
+			nbt.putBoolean("ability_block", ability_block);
+			nbt.putBoolean("use_ability_key_var", use_ability_key_var);
+			nbt.putBoolean("detransf_key_var", detransf_key_var);
+			nbt.putBoolean("wheel_open_key_var", wheel_open_key_var);
+			nbt.putBoolean("second_wheel_open_var", second_wheel_open_var);
+			nbt.putBoolean("third_wheel_open_var", third_wheel_open_var);
 			nbt.putBoolean("first_fake_wheel_open_var", first_fake_wheel_open_var);
 			nbt.putBoolean("second_fake_wheel_open_var", second_fake_wheel_open_var);
 			nbt.putBoolean("third_fake_wheel_open_var", third_fake_wheel_open_var);
+			nbt.putBoolean("ability_using", ability_using);
+			nbt.putBoolean("power_recorded", power_recorded);
+			nbt.putBoolean("debug", debug);
+			nbt.putBoolean("detransform_anim_trigger", detransform_anim_trigger);
 			nbt.put("helmet", helmet.saveOptional(lookupProvider));
 			nbt.put("chestplate", chestplate.saveOptional(lookupProvider));
 			nbt.put("leggings", leggings.saveOptional(lookupProvider));
 			nbt.put("boots", boots.saveOptional(lookupProvider));
-			nbt.putDouble("abilities_timer", abilities_timer);
-			nbt.putBoolean("ability_using", ability_using);
-			nbt.putBoolean("power_recorded", power_recorded);
-			nbt.putDouble("fake_element_name_first_timer", fake_element_name_first_timer);
-			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
-			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
-			nbt.putBoolean("debug", debug);
-			nbt.putBoolean("send_client_package", send_client_package);
-			nbt.putString("first_booster_slot", first_booster_slot);
-			nbt.putString("second_booster_slot", second_booster_slot);
-			nbt.putString("third_booster_slot", third_booster_slot);
-			nbt.putBoolean("detransform_anim_trigger", detransform_anim_trigger);
+			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
+			nbt.putBoolean("transfered_power", transfered_power);
+			nbt.putBoolean("hypnotized", hypnotized);
 			return nbt;
 		}
 
 		@Override
 		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
-			active_power = nbt.getBoolean("active_power");
-			selected = nbt.getBoolean("selected");
-			power = nbt.getDouble("power");
-			powerTimer = nbt.getDouble("powerTimer");
 			ability = nbt.getString("ability");
-			mergers = nbt.getDouble("mergers");
-			active_battery = nbt.getBoolean("active_battery");
-			ability_block = nbt.getBoolean("ability_block");
 			element_name_first = nbt.getString("element_name_first");
 			element_name_second = nbt.getString("element_name_second");
 			element_name_third = nbt.getString("element_name_third");
-			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
-			use_ability_key_var = nbt.getBoolean("use_ability_key_var");
-			detransf_key_var = nbt.getBoolean("detransf_key_var");
-			wheel_open_key_var = nbt.getBoolean("wheel_open_key_var");
-			max_power = nbt.getDouble("max_power");
-			power_recovery_multiplier = nbt.getDouble("power_recovery_multiplier");
 			teleporting_effect = nbt.getDouble("teleporting_effect");
-			second_wheel_open_var = nbt.getBoolean("second_wheel_open_var");
-			third_wheel_open_var = nbt.getBoolean("third_wheel_open_var");
 			fake_element_name_first = nbt.getString("fake_element_name_first");
 			fake_element_name_second = nbt.getString("fake_element_name_second");
 			fake_element_name_third = nbt.getString("fake_element_name_third");
+			abilities_timer = nbt.getDouble("abilities_timer");
+			fake_element_name_first_timer = nbt.getDouble("fake_element_name_first_timer");
+			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
+			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
+			first_booster_slot = nbt.getString("first_booster_slot");
+			second_booster_slot = nbt.getString("second_booster_slot");
+			third_booster_slot = nbt.getString("third_booster_slot");
+			power = nbt.getDouble("power");
+			powerTimer = nbt.getDouble("powerTimer");
+			mergers = nbt.getDouble("mergers");
+			power_recovery_multiplier = nbt.getDouble("power_recovery_multiplier");
+			max_power = nbt.getDouble("max_power");
+			active_power = nbt.getBoolean("active_power");
+			selected = nbt.getBoolean("selected");
+			active_battery = nbt.getBoolean("active_battery");
+			ability_block = nbt.getBoolean("ability_block");
+			use_ability_key_var = nbt.getBoolean("use_ability_key_var");
+			detransf_key_var = nbt.getBoolean("detransf_key_var");
+			wheel_open_key_var = nbt.getBoolean("wheel_open_key_var");
+			second_wheel_open_var = nbt.getBoolean("second_wheel_open_var");
+			third_wheel_open_var = nbt.getBoolean("third_wheel_open_var");
 			first_fake_wheel_open_var = nbt.getBoolean("first_fake_wheel_open_var");
 			second_fake_wheel_open_var = nbt.getBoolean("second_fake_wheel_open_var");
 			third_fake_wheel_open_var = nbt.getBoolean("third_fake_wheel_open_var");
+			ability_using = nbt.getBoolean("ability_using");
+			power_recorded = nbt.getBoolean("power_recorded");
+			debug = nbt.getBoolean("debug");
+			detransform_anim_trigger = nbt.getBoolean("detransform_anim_trigger");
 			helmet = ItemStack.parseOptional(lookupProvider, nbt.getCompound("helmet"));
 			chestplate = ItemStack.parseOptional(lookupProvider, nbt.getCompound("chestplate"));
 			leggings = ItemStack.parseOptional(lookupProvider, nbt.getCompound("leggings"));
 			boots = ItemStack.parseOptional(lookupProvider, nbt.getCompound("boots"));
-			abilities_timer = nbt.getDouble("abilities_timer");
-			ability_using = nbt.getBoolean("ability_using");
-			power_recorded = nbt.getBoolean("power_recorded");
-			fake_element_name_first_timer = nbt.getDouble("fake_element_name_first_timer");
-			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
-			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
-			debug = nbt.getBoolean("debug");
-			send_client_package = nbt.getBoolean("send_client_package");
-			first_booster_slot = nbt.getString("first_booster_slot");
-			second_booster_slot = nbt.getString("second_booster_slot");
-			third_booster_slot = nbt.getString("third_booster_slot");
-			detransform_anim_trigger = nbt.getBoolean("detransform_anim_trigger");
+			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
+			transfered_power = nbt.getBoolean("transfered_power");
+			hypnotized = nbt.getBoolean("hypnotized");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

@@ -14,17 +14,17 @@ import com.esmods.keepersofthestonestwo.entity.TurretEntity;
 public class TurretModel extends GeoModel<TurretEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(TurretEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "animations/turret.animation.json");
+		return ResourceLocation.parse("power:animations/turret.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(TurretEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "geo/turret.geo.json");
+		return ResourceLocation.parse("power:geo/turret.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(TurretEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("power:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 	@Override

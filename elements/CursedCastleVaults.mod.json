@@ -98,48 +98,6 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:CursedStone"
-            },
-            "weight": 4,
-            "minCount": 1,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "Blocks.WHEAT"
-            },
-            "weight": 4,
-            "minCount": 1,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "Items.FISH#0"
-            },
-            "weight": 4,
-            "minCount": 1,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
               "value": "Items.TOTEM_OF_UNDYING"
             },
             "weight": 1,
@@ -168,7 +126,7 @@
           {
             "type": "item",
             "item": {
-              "value": "Items.SPECTRAL_ARROW"
+              "value": "Items.ENDER_PEARL"
             },
             "weight": 2,
             "minCount": 1,
@@ -182,9 +140,9 @@
           {
             "type": "item",
             "item": {
-              "value": "Items.NAME_TAG"
+              "value": "Items.GOLD_INGOT"
             },
-            "weight": 2,
+            "weight": 3,
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 0,
@@ -199,6 +157,20 @@
               "value": "CUSTOM:MusicDiscAncientMood"
             },
             "weight": 1,
+            "minCount": 1,
+            "maxCount": 1,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "Items.HONEY_BOTTLE"
+            },
+            "weight": 3,
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 0,

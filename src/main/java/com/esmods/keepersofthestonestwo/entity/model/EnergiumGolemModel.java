@@ -14,17 +14,17 @@ import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 public class EnergiumGolemModel extends GeoModel<EnergiumGolemEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(EnergiumGolemEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "animations/energium_golem.animation.json");
+		return ResourceLocation.parse("power:animations/energium_golem.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(EnergiumGolemEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "geo/energium_golem.geo.json");
+		return ResourceLocation.parse("power:geo/energium_golem.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(EnergiumGolemEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("power:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 	@Override

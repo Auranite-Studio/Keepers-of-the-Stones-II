@@ -1,6 +1,15 @@
 {
   "replace": false,
   "values": [
+    "power:filth_armor_leggings",
+    "power:horror_armor_leggings",
+    "power:chaos_armor_leggings",
+    "power:thirst_armor_leggings",
+    "power:darkness_armor_leggings",
+    "power:golden_dust_armor_leggings",
+    "power:mind_armor_leggings",
+    "power:form_armor_leggings",
+    "power:spirit_armor_leggings",
     "power:smoke_armor_leggings",
     "power:gravity_armor_leggings",
     "power:blue_flame_armor_leggings",

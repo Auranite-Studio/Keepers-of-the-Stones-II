@@ -48,22 +48,34 @@ public class AbilityKeyPressedTickProcedure {
 					_entity.swing(InteractionHand.MAIN_HAND, true);
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("fire")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("fire")
-						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("fire")) {
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("fire")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("thirst") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("thirst")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("thirst") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("thirst")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("thirst") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("thirst")) {
 					FireSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("air")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("air")
-						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("air")) {
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("air")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("chaos") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("chaos")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("chaos") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("chaos")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("chaos") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("chaos")) {
 					AirSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("earth")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("earth")
-						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("earth")) {
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("earth")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("horror") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("horror")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("horror") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("horror")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("horror") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("horror")) {
 					EarthSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("water")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("water")
-						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("water")) {
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("water")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("filth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("filth")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("filth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("filth")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("filth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("filth")) {
 					WaterSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("ether") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("ether")
@@ -260,6 +272,31 @@ public class AbilityKeyPressedTickProcedure {
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("smoke") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("smoke")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("smoke") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("smoke")) {
 					SmokeSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("spirit") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("spirit")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("spirit") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("spirit")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("spirit") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("spirit")) {
+					SpiritSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("form") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("form")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("form") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("form")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("form") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("form")) {
+					FormSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("mind") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("mind")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mind") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mind")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mind") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mind")) {
+					MindSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("golden_dust") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("golden_dust")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("golden_dust") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("golden_dust")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("golden_dust") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("golden_dust")) {
+					GoldenDustSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("darkness") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("darkness")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("darkness") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("darkness")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("darkness") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("darkness")) {
+					DarknessSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 			}
 			{

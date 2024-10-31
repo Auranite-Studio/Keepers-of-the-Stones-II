@@ -31,7 +31,7 @@ public class CursedKnightBiteProcedure {
 		double YPar = 0;
 		double Range = 0;
 		double ZPar = 0;
-		Range = 1;
+		Range = 0.25;
 		if (entity.getPersistentData().getDouble("IA") == 0) {
 			if (entity instanceof CursedKnightEntity) {
 				((CursedKnightEntity) entity).setAnimation("cursed_knight.animation.attack");
@@ -52,16 +52,17 @@ public class CursedKnightBiteProcedure {
 				_entity.yHeadRotO = _entity.getYRot();
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") < 10) {
-			for (int index0 = 0; index0 < 4; index0++) {
-				XPar = x + entity.getLookAngle().x * Range;
-				YPar = y + 1.75;
-				ZPar = z + entity.getLookAngle().z * Range;
-				Range = Range + 1;
+		if (entity.getPersistentData().getDouble("IA") == 9) {
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:cursed_knight.attack")), SoundSource.HOSTILE, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:cursed_knight.attack")), SoundSource.HOSTILE, 1, 1, false);
+				}
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") > 15 && entity.getPersistentData().getDouble("IA") < 17) {
-			for (int index1 = 0; index1 < 4; index1++) {
+		if (entity.getPersistentData().getDouble("IA") > 13 && entity.getPersistentData().getDouble("IA") < 23) {
+			for (int index0 = 0; index0 < 4; index0++) {
 				XPar = x + entity.getLookAngle().x * Range;
 				YPar = y + 1.75;
 				ZPar = z + entity.getLookAngle().z * Range;
@@ -70,7 +71,7 @@ public class CursedKnightBiteProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity) && !(entityiterator instanceof ItemEntity)) {
-							if (!(entityiterator instanceof LivingEntity _livEnt17 && _livEnt17.isBlocking())) {
+							if (!(entityiterator instanceof LivingEntity _livEnt16 && _livEnt16.isBlocking())) {
 								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:cursed_knight_ds")))), 14);
 								entityiterator.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.5), 0.25, (entity.getLookAngle().z * 0.5)));
 							} else {
@@ -103,10 +104,10 @@ public class CursedKnightBiteProcedure {
 						}
 					}
 				}
-				Range = Range + 1;
+				Range = Range + 0.75;
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") == 36) {
+		if (entity.getPersistentData().getDouble("IA") == 31) {
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putString("State", "Idle");
 		}

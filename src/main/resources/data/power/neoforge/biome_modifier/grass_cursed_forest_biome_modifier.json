@@ -1,6 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": "power:cursed_forest",
-  "features": "power:grass_cursed_forest",
-  "step": "surface_structures"
-}

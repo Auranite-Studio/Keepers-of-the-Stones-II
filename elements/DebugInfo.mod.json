@@ -18,7 +18,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -35,7 +36,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 107
+          "y": 107,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 170
+          "y": 170,
+          "locked": false
         }
       },
       {
@@ -69,7 +72,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 179
+          "y": 179,
+          "locked": false
         }
       },
       {
@@ -86,7 +90,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 161
+          "y": 161,
+          "locked": false
         }
       },
       {
@@ -103,7 +108,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 152
+          "y": 152,
+          "locked": false
         }
       },
       {
@@ -120,7 +126,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 116
+          "y": 116,
+          "locked": false
         }
       },
       {
@@ -137,7 +144,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 125
+          "y": 125,
+          "locked": false
         }
       },
       {
@@ -154,7 +162,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 143
+          "y": 143,
+          "locked": false
         }
       },
       {
@@ -171,7 +180,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -187,7 +197,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -204,7 +215,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -221,7 +233,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 134
+          "y": 134,
+          "locked": false
         }
       },
       {
@@ -238,7 +251,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -255,7 +269,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 89
+          "y": 89,
+          "locked": false
         }
       },
       {
@@ -272,7 +287,8 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 188
+          "y": 188,
+          "locked": false
         }
       }
     ],

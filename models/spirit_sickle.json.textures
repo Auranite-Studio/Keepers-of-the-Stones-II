@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "spirit_sickle"
+      },
+      "name": "default"
+    }
+  }
+}

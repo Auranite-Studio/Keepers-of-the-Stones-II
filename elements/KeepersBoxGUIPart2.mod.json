@@ -16,7 +16,8 @@
           "image": "keepers_box_gui_part_2.png",
           "use1Xscale": false,
           "x": 85,
-          "y": -8
+          "y": -8,
+          "locked": false
         }
       },
       {
@@ -29,7 +30,8 @@
             "name": "KBtoPart1"
           },
           "x": 289,
-          "y": 96
+          "y": 96,
+          "locked": false
         }
       },
       {
@@ -42,7 +44,8 @@
             "name": "KBtoPart3"
           },
           "x": 289,
-          "y": 129
+          "y": 129,
+          "locked": false
         }
       },
       {
@@ -58,7 +61,8 @@
             "name": "CreationStoneCheck"
           },
           "x": 129,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -74,7 +78,8 @@
           "width": 24,
           "height": 24,
           "x": 124,
-          "y": 90
+          "y": 90,
+          "locked": false
         }
       },
       {
@@ -90,7 +95,8 @@
             "name": "TimeStoneCheck"
           },
           "x": 175,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -106,7 +112,8 @@
           "width": 24,
           "height": 24,
           "x": 171,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -122,7 +129,8 @@
             "name": "SoundStoneCheck"
           },
           "x": 218,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -138,7 +146,8 @@
           "width": 24,
           "height": 24,
           "x": 214,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -154,7 +163,8 @@
             "name": "AirStoneCheck"
           },
           "x": 264,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -170,7 +180,8 @@
           "width": 24,
           "height": 24,
           "x": 262,
-          "y": 90
+          "y": 90,
+          "locked": false
         }
       },
       {
@@ -186,7 +197,8 @@
             "name": "TornadoStoneCheck"
           },
           "x": 264,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -202,7 +214,8 @@
           "width": 24,
           "height": 24,
           "x": 261,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -218,7 +231,8 @@
             "name": "DestructionStoneCheck"
           },
           "x": 129,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -234,7 +248,8 @@
           "width": 24,
           "height": 24,
           "x": 123,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -250,7 +265,8 @@
             "name": "TechnologyStoneCheck"
           },
           "x": 151,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -266,7 +282,8 @@
           "width": 24,
           "height": 24,
           "x": 148,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -282,7 +299,8 @@
             "name": "TeleportationStoneCheck"
           },
           "x": 151,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -298,7 +316,8 @@
           "width": 24,
           "height": 24,
           "x": 147,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       },
       {
@@ -314,7 +333,8 @@
             "name": "MistStoneCheck"
           },
           "x": 242,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -330,7 +350,8 @@
           "width": 24,
           "height": 24,
           "x": 238,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -346,7 +367,8 @@
             "name": "SpeedStoneCheck"
           },
           "x": 175,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -362,7 +384,8 @@
           "width": 24,
           "height": 24,
           "x": 171,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       },
       {
@@ -378,7 +401,8 @@
             "name": "MusicStoneCheck"
           },
           "x": 218,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -394,7 +418,8 @@
           "width": 24,
           "height": 24,
           "x": 214,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       },
       {
@@ -410,7 +435,8 @@
             "name": "SmokeStoneCheck"
           },
           "x": 242,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -426,7 +452,8 @@
           "width": 24,
           "height": 24,
           "x": 238,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       }
     ],

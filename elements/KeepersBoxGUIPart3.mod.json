@@ -16,7 +16,8 @@
           "image": "keepers_box_gui_part_3.png",
           "use1Xscale": false,
           "x": 85,
-          "y": -8
+          "y": -8,
+          "locked": false
         }
       },
       {
@@ -29,7 +30,8 @@
             "name": "KBtoPart2"
           },
           "x": 289,
-          "y": 96
+          "y": 96,
+          "locked": false
         }
       },
       {
@@ -42,7 +44,8 @@
             "name": "KBtoPart4"
           },
           "x": 289,
-          "y": 129
+          "y": 129,
+          "locked": false
         }
       },
       {
@@ -58,7 +61,8 @@
             "name": "LightStoneCheck"
           },
           "x": 175,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -74,7 +78,8 @@
           "width": 24,
           "height": 24,
           "x": 171,
-          "y": 90
+          "y": 90,
+          "locked": false
         }
       },
       {
@@ -90,7 +95,8 @@
             "name": "ShadowStoneCheck"
           },
           "x": 218,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -106,7 +112,8 @@
           "width": 24,
           "height": 24,
           "x": 214,
-          "y": 90
+          "y": 90,
+          "locked": false
         }
       },
       {
@@ -122,7 +129,8 @@
             "name": "SunStoneCheck"
           },
           "x": 242,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -138,7 +146,8 @@
           "width": 24,
           "height": 24,
           "x": 238,
-          "y": 90
+          "y": 90,
+          "locked": false
         }
       },
       {
@@ -154,7 +163,8 @@
             "name": "SpaceStoneCheck"
           },
           "x": 264,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -170,7 +180,8 @@
           "width": 24,
           "height": 24,
           "x": 262,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -186,7 +197,8 @@
             "name": "MoonStoneCheck"
           },
           "x": 242,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -202,7 +214,8 @@
           "width": 24,
           "height": 24,
           "x": 238,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       },
       {
@@ -218,7 +231,8 @@
             "name": "VacuumStoneCheck"
           },
           "x": 264,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -234,7 +248,8 @@
           "width": 24,
           "height": 24,
           "x": 262,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       },
       {
@@ -250,7 +265,8 @@
             "name": "BloodStoneCheck"
           },
           "x": 129,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -260,10 +276,184 @@
           "text": {
             "fixedValue": "Blood"
           },
+          "displayCondition": {
+            "name": "BloodStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 125,
-          "y": 91
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_spirit_element",
+          "image": "spirit_element.png",
+          "hoveredImage": "spirit_element_highlighted.png",
+          "onClick": {
+            "name": "SpiritElementGet"
+          },
+          "displayCondition": {
+            "name": "SpiritStoneCheck"
+          },
+          "x": 218,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_spirit",
+          "text": {
+            "fixedValue": "Spirit"
+          },
+          "displayCondition": {
+            "name": "SpiritStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 214,
+          "y": 128,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_form_element",
+          "image": "form_element.png",
+          "hoveredImage": "form_element_highlighted.png",
+          "onClick": {
+            "name": "FormElementGet"
+          },
+          "displayCondition": {
+            "name": "FormStoneCheck"
+          },
+          "x": 151,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_form",
+          "text": {
+            "fixedValue": "Form"
+          },
+          "displayCondition": {
+            "name": "FormStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 148,
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_mind_element",
+          "image": "mind_element.png",
+          "hoveredImage": "mind_element_highlighted.png",
+          "onClick": {
+            "name": "MindElementGet"
+          },
+          "displayCondition": {
+            "name": "MindStoneCheck"
+          },
+          "x": 129,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mind",
+          "text": {
+            "fixedValue": "Mind"
+          },
+          "displayCondition": {
+            "name": "MindStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 125,
+          "y": 128,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_golden_dust_element",
+          "image": "golden_dust_element.png",
+          "hoveredImage": "golden_dust_element_highlighted.png",
+          "onClick": {
+            "name": "GoldenDustElementGet"
+          },
+          "displayCondition": {
+            "name": "GoldenDustStoneCheck"
+          },
+          "x": 151,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_golden_dust",
+          "text": {
+            "fixedValue": "Golden Dust"
+          },
+          "displayCondition": {
+            "name": "GoldenDustStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 149,
+          "y": 128,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_darkness_element",
+          "image": "darkness_element.png",
+          "hoveredImage": "darkness_element_highlighted.png",
+          "onClick": {
+            "name": "DarknessElementGet"
+          },
+          "displayCondition": {
+            "name": "DarknessStoneCheck"
+          },
+          "x": 175,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_darkness",
+          "text": {
+            "fixedValue": "Darkness"
+          },
+          "displayCondition": {
+            "name": "DarknessStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 172,
+          "y": 128,
+          "locked": false
         }
       }
     ],

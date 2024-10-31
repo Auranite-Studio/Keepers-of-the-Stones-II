@@ -10,6 +10,7 @@ import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.fml.util.thread.SidedThreadGroups;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.IEventBus;
 
@@ -34,6 +35,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModMenus;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.PowerModConfigs;
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
 
@@ -42,7 +44,7 @@ public class PowerMod {
 	public static final Logger LOGGER = LogManager.getLogger(PowerMod.class);
 	public static final String MODID = "power";
 
-	public PowerMod(IEventBus modEventBus) {
+	public PowerMod(IEventBus modEventBus, ModContainer modContainer) {
 		// Start of user code block mod constructor
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
@@ -60,6 +62,7 @@ public class PowerMod {
 		PowerModMenus.REGISTRY.register(modEventBus);
 		PowerModParticleTypes.REGISTRY.register(modEventBus);
 
+		PowerModConfigs.register(modEventBus, modContainer);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

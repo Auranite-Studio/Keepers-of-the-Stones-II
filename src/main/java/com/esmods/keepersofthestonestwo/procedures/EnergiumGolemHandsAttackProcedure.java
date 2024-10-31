@@ -79,8 +79,8 @@ public class EnergiumGolemHandsAttackProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity)) {
 							if (!(entityiterator instanceof ItemEntity)) {
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:energium_golem_ds")))), 12);
-								entityiterator.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.5), 1.25, (entity.getLookAngle().z * 0.5)));
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:energium_golem_ds")))), 9);
+								entityiterator.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.5), 1.1, (entity.getLookAngle().z * 0.5)));
 							}
 						}
 					}

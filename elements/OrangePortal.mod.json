@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Orange Portal",
     "specialInformation": {
       "fixedValue": []

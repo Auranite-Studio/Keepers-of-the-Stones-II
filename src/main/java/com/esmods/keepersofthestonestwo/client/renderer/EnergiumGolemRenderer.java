@@ -27,11 +27,11 @@ public class EnergiumGolemRenderer extends GeoEntityRenderer<EnergiumGolemEntity
 	}
 
 	@Override
-	public void preRender(PoseStack poseStack, EnergiumGolemEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
+	public void preRender(PoseStack poseStack, EnergiumGolemEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int color) {
 		float scale = 1f;
 		this.scaleHeight = scale;
 		this.scaleWidth = scale;
-		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, 0);
+		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);
 	}
 
 	@Override

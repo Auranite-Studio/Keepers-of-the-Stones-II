@@ -25,8 +25,10 @@ import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack115Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack114Procedure;
+import com.esmods.keepersofthestonestwo.procedures.CreatePortalOrangeProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CreatePortalBlueProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CheckpointTPProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CheckpointCreateProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack113Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -93,15 +95,23 @@ public record WheelAbilitiesTeleportationButtonMessage(int buttonID, int x, int 
 		}
 		if (buttonID == 6) {
 
-			Attack113Procedure.execute(entity);
+			CreatePortalBlueProcedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			Attack114Procedure.execute(entity);
+			CreatePortalOrangeProcedure.execute(entity);
 		}
 		if (buttonID == 8) {
 
-			Attack115Procedure.execute(entity);
+			CheckpointCreateProcedure.execute(entity);
+		}
+		if (buttonID == 9) {
+
+			CheckpointTPProcedure.execute(entity);
+		}
+		if (buttonID == 10) {
+
+			Attack113Procedure.execute(entity);
 		}
 	}
 

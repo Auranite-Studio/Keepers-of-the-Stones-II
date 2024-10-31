@@ -37,7 +37,7 @@ public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (!((entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("space")
 						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space")
-						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space"))) {
+						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("space"))) {
 					if (!(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false) && (entityiterator instanceof Mob || entityiterator instanceof Player)) {
 						itemPosX = entityiterator.getX();
 						itemPosY = entityiterator.getY();

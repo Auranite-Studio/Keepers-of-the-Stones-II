@@ -9,17 +9,17 @@ import com.esmods.keepersofthestonestwo.entity.BlackHoleEntity;
 public class BlackHoleModel extends GeoModel<BlackHoleEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(BlackHoleEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "animations/black_hole.animation.json");
+		return ResourceLocation.parse("power:animations/black_hole.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(BlackHoleEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "geo/black_hole.geo.json");
+		return ResourceLocation.parse("power:geo/black_hole.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(BlackHoleEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("power:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

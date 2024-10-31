@@ -21,12 +21,17 @@ import java.util.HashMap;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart3Menu;
 import com.esmods.keepersofthestonestwo.procedures.VacuumElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpiritElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ShadowElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MindElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart4Procedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart2Procedure;
+import com.esmods.keepersofthestonestwo.procedures.GoldenDustElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.FormElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.DarknessElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -102,6 +107,26 @@ public record KeepersBoxGUIPart3ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 8) {
 
 			BloodElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 9) {
+
+			SpiritElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 10) {
+
+			FormElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 11) {
+
+			MindElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 12) {
+
+			GoldenDustElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 13) {
+
+			DarknessElementGetProcedure.execute(world, entity);
 		}
 	}
 

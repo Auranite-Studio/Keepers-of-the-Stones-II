@@ -5,7 +5,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BowItem;
@@ -18,7 +17,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 
-import com.esmods.keepersofthestonestwo.procedures.PoisonBowPriVystrielieSnariadomIzPriedmietaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PoisonBowKazhdyiTikVInvientarieProcedure;
 import com.esmods.keepersofthestonestwo.entity.PoisonDropProjectileEntity;
 
@@ -78,22 +76,11 @@ public class PoisonBowItem extends Item {
 						stack.shrink(1);
 					}
 				}
-				PoisonBowPriVystrielieSnariadomIzPriedmietaProcedure.execute(world, entity);
 			}
 		}
 	}
 
 	private ItemStack findAmmo(Player player) {
-		ItemStack stack = ProjectileWeaponItem.getHeldProjectile(player, e -> e.getItem() == PoisonDropProjectileEntity.PROJECTILE_ITEM.getItem());
-		if (stack == ItemStack.EMPTY) {
-			for (int i = 0; i < player.getInventory().items.size(); i++) {
-				ItemStack teststack = player.getInventory().items.get(i);
-				if (teststack != null && teststack.getItem() == PoisonDropProjectileEntity.PROJECTILE_ITEM.getItem()) {
-					stack = teststack;
-					break;
-				}
-			}
-		}
-		return stack;
+		return new ItemStack(PoisonDropProjectileEntity.PROJECTILE_ITEM.getItem());
 	}
 }

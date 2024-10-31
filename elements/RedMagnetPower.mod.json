@@ -12,6 +12,9 @@
     "mobEffectCategory": "NEUTRAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "isCuredByMilk": true,
+    "isProtectedByTotem": true,
+    "isCuredbyHoney": false,
     "onActiveTick": {
       "name": "RedMagnetPowerTick"
     }

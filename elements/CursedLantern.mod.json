@@ -51,6 +51,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Cursed Lantern",
     "specialInformation": {
       "fixedValue": []

@@ -1,6 +1,8 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
@@ -100,6 +102,24 @@ public class DetransformationKeyUseProcedure {
 					_entity.removeEffect(PowerModMobEffects.GRAVITY_MASTER);
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.SMOKE_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.SPIRIT_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.FORM_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.MIND_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.GOLDEN_DUST_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.DARKNESS_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.THIRST_DARK_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.CHAOS_DARK_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.HORROR_DARK_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.FILTH_DARK_MASTER);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.active_power = false;
@@ -113,6 +133,11 @@ public class DetransformationKeyUseProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.detransform_anim_trigger = true;
+					_vars.syncPlayerVariables(entity);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.transfered_power = false;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
@@ -155,6 +180,11 @@ public class DetransformationKeyUseProcedure {
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.ability = "0";
 				_vars.syncPlayerVariables(entity);
+			}
+			if (world instanceof Level _level) {
+				PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
+				if (_pt != null)
+					_level.getScoreboard().removePlayerTeam(_pt);
 			}
 		});
 	}

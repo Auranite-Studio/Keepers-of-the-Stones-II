@@ -38,7 +38,7 @@ public class LavaPassiveProtectionProcedure {
 		double particleAmount = 0;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("lava") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("lava")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("lava") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("lava")
-				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("lava") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("lava")) {
+				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("lava") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("lava")) {
 			if (entity.isInLava() || entity.isOnFire() || (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.MAGMA_BLOCK) {
 				particleAmount = 8;
 				particleRadius = 2;

@@ -27,9 +27,11 @@
       "value": -8337805,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Mobs"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Mobs"
+      }
+    ],
     "isBoss": true,
     "bossBarColor": "YELLOW",
     "bossBarType": "NOTCHED_10",
@@ -148,6 +150,7 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "height": 1.0,
+    "attackRate": 7.0,
     "raidSpawnsCount": [
       4,
       3,

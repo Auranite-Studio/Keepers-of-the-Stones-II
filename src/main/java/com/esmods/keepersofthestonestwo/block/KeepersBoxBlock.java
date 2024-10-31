@@ -72,13 +72,14 @@ public class KeepersBoxBlock extends Block implements SimpleWaterloggedBlock, En
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+		super.createBlockStateDefinition(builder);
 		builder.add(WATERLOGGED);
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
 		boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
-		return this.defaultBlockState().setValue(WATERLOGGED, flag);
+		return super.getStateForPlacement(context).setValue(WATERLOGGED, flag);
 	}
 
 	@Override

@@ -19,7 +19,7 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 public class MercuryBallProjectileKoghdaSnariadPopadaietVBlokProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		new Object() {
-			void timedLoop(int current, int total, int ticks) {
+			void timedLoop(int timedloopiterator, int timedlooptotal, int ticks) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -34,8 +34,8 @@ public class MercuryBallProjectileKoghdaSnariadPopadaietVBlokProcedure {
 					_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.MERCURY_PARTICLE.get()), x, y, z, 9, 3, 3, 3, 1);
 				final int tick2 = ticks;
 				PowerMod.queueServerWork(tick2, () -> {
-					if (total > current + 1) {
-						timedLoop(current + 1, total, tick2);
+					if (timedlooptotal > timedloopiterator + 1) {
+						timedLoop(timedloopiterator + 1, timedlooptotal, tick2);
 					}
 				});
 			}

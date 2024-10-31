@@ -2,7 +2,7 @@
   "_fv": 69,
   "_type": "achievement",
   "definition": {
-    "achievementName": "The End of Tyranny",
+    "achievementName": "The end of tyranny",
     "achievementDescription": "Defeat the energium golem",
     "achievementIcon": {
       "value": "CUSTOM:EnergiumCore"
@@ -12,9 +12,7 @@
     "showPopup": true,
     "announceToChat": true,
     "hideIfNotCompleted": false,
-    "rewardLoot": [
-      "EnergiumKeyReward"
-    ],
+    "rewardLoot": [],
     "rewardRecipes": [],
     "rewardFunction": "No function",
     "rewardXP": 0,

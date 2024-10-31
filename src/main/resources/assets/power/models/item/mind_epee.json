@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/mind_epee",
+  "textures": {
+    "0": "power:block/mind_epee",
+    "particle": "power:item/mind_epee"
+  }
+}

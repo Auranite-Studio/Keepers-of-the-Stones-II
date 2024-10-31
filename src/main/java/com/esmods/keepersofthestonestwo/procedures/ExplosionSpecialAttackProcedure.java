@@ -92,7 +92,7 @@ public class ExplosionSpecialAttackProcedure {
 					final Vec3 _center = new Vec3(x, y, z);
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (!(entityiterator == entity)) {
+						if (!(entityiterator == entity) && entityiterator instanceof LivingEntity) {
 							entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), 0);
 							if (world instanceof Level _level && !_level.isClientSide())
 								_level.explode(null, x, y, z, 5, true, Level.ExplosionInteraction.MOB);

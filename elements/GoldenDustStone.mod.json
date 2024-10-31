@@ -30,7 +30,11 @@
     ],
     "name": "Golden Dust Stone",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Stones"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -56,7 +60,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "LavaStoneUse"
+      "name": "GoldenDustStoneUse"
     },
     "onItemInInventoryTick": {
       "name": "RechargeStoneTickEvent"
@@ -67,6 +71,7 @@
     "projectile": {
       "value": "CUSTOM:MagicFireballProjectile"
     },
+    "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

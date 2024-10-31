@@ -44,6 +44,11 @@
     "power:plague_battery",
     "power:blue_flame_battery",
     "power:gravity_battery",
-    "power:smoke_battery"
+    "power:smoke_battery",
+    "power:spirit_battery",
+    "power:form_battery",
+    "power:mind_battery",
+    "power:golden_dust_battery",
+    "power:darkness_battery"
   ]
 }

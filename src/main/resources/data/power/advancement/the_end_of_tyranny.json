@@ -19,11 +19,5 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "rewards": {
-    "experience": 0,
-    "loot": [
-      "power:deleted_mod_element"
-    ]
-  },
   "parent": "power:what_is_this_metal"
 }

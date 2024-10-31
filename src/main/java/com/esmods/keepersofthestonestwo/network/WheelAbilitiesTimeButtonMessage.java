@@ -93,15 +93,15 @@ public record WheelAbilitiesTimeButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 6) {
 
-			Attack93Procedure.execute(entity);
+			Attack95Procedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			Attack94Procedure.execute(entity);
+			Attack93Procedure.execute(entity);
 		}
 		if (buttonID == 8) {
 
-			Attack95Procedure.execute(entity);
+			Attack94Procedure.execute(entity);
 		}
 	}
 

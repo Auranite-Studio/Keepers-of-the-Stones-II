@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.25,
+    "scaling": "always",
+    "effects": "hurt",
+    "normalDeathMessage": "%1$s was killed by an Cursed Squire",
+    "itemDeathMessage": "%1$s was killed by an Cursed Squire",
+    "playerDeathMessage": "%1$s was killed by an Cursed Squire"
+  }
+}

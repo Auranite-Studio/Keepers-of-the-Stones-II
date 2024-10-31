@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Elemental Power Generator",
     "specialInformation": {
       "fixedValue": []

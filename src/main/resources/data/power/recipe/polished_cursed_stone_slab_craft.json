@@ -1,10 +1,10 @@
 {
   "type": "minecraft:stonecutting",
-  "count": 1,
   "ingredient": {
     "item": "power:polished_cursed_stone"
   },
   "result": {
-    "id": "power:polished_cursed_stone_slab"
+    "id": "power:polished_cursed_stone_slab",
+    "count": 1
   }
 }

@@ -16,7 +16,8 @@
           "image": "keepers_box_gui_part_1.png",
           "use1Xscale": false,
           "x": 85,
-          "y": -8
+          "y": -8,
+          "locked": false
         }
       },
       {
@@ -29,7 +30,8 @@
             "name": "KBtoPart2"
           },
           "x": 289,
-          "y": 129
+          "y": 129,
+          "locked": false
         }
       },
       {
@@ -39,7 +41,8 @@
           "image": "keepers_box_button_up_locked.png",
           "hoveredImage": "",
           "x": 289,
-          "y": 96
+          "y": 96,
+          "locked": false
         }
       },
       {
@@ -55,7 +58,8 @@
             "name": "FireStoneCheck"
           },
           "x": 129,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -71,7 +75,8 @@
           "width": 24,
           "height": 24,
           "x": 125,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -87,7 +92,8 @@
             "name": "LavaStoneCheck"
           },
           "x": 175,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -103,7 +109,8 @@
           "width": 24,
           "height": 24,
           "x": 172,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -119,7 +126,8 @@
             "name": "EnergyStoneCheck"
           },
           "x": 242,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -135,7 +143,8 @@
           "width": 24,
           "height": 24,
           "x": 238,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -151,7 +160,8 @@
             "name": "RainStoneCheck"
           },
           "x": 218,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -167,7 +177,8 @@
           "width": 24,
           "height": 24,
           "x": 214,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       },
       {
@@ -183,7 +194,8 @@
             "name": "LightningStoneCheck"
           },
           "x": 242,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -199,7 +211,8 @@
           "width": 24,
           "height": 24,
           "x": 239,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       },
       {
@@ -215,7 +228,8 @@
             "name": "WaterStoneCheck"
           },
           "x": 129,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -231,7 +245,8 @@
           "width": 24,
           "height": 24,
           "x": 124,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -247,7 +262,8 @@
             "name": "OceanStoneCheck"
           },
           "x": 151,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -263,7 +279,8 @@
           "width": 24,
           "height": 24,
           "x": 148,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       },
       {
@@ -279,7 +296,8 @@
             "name": "IceStoneCheck"
           },
           "x": 175,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -295,7 +313,8 @@
           "width": 24,
           "height": 24,
           "x": 172,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       },
       {
@@ -311,7 +330,8 @@
             "name": "ExplosionStoneCheck"
           },
           "x": 218,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -327,7 +347,8 @@
           "width": 24,
           "height": 24,
           "x": 214,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -343,7 +364,8 @@
             "name": "MagnetStoneCheck"
           },
           "x": 264,
-          "y": 132
+          "y": 132,
+          "locked": false
         }
       },
       {
@@ -359,7 +381,8 @@
           "width": 24,
           "height": 24,
           "x": 263,
-          "y": 129
+          "y": 129,
+          "locked": false
         }
       },
       {
@@ -375,7 +398,8 @@
             "name": "BlueFlameStoneCheck"
           },
           "x": 151,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -391,7 +415,8 @@
           "width": 24,
           "height": 24,
           "x": 148,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -407,7 +432,8 @@
             "name": "GravityStoneCheck"
           },
           "x": 264,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -423,7 +449,8 @@
           "width": 24,
           "height": 24,
           "x": 262,
-          "y": 90
+          "y": 90,
+          "locked": false
         }
       }
     ],

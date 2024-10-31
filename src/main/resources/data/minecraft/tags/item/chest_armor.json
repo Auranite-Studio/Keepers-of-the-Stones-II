@@ -1,6 +1,15 @@
 {
   "replace": false,
   "values": [
+    "power:filth_armor_chestplate",
+    "power:horror_armor_chestplate",
+    "power:chaos_armor_chestplate",
+    "power:thirst_armor_chestplate",
+    "power:darkness_armor_chestplate",
+    "power:golden_dust_armor_chestplate",
+    "power:mind_armor_chestplate",
+    "power:form_armor_chestplate",
+    "power:spirit_armor_chestplate",
     "power:smoke_armor_chestplate",
     "power:gravity_armor_chestplate",
     "power:blue_flame_armor_chestplate",

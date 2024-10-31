@@ -1,19 +1,30 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
+import java.util.List;
+import java.util.Comparator;
+
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 
 public class TeleportationSpecialAttackProcedure {
@@ -29,7 +40,58 @@ public class TeleportationSpecialAttackProcedure {
 		double particleRadius = 0;
 		double particleAmount = 0;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("teleportation_ability_1")) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 25) {
+				for (int index0 = 0; index0 < 30; index0++) {
+					if (!world.getBlockState(new BlockPos(
+							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
+							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY(),
+							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()))
+							.canOcclude()) {
+						Scaling = Scaling + 1;
+					} else {
+						break;
+					}
+					if (world instanceof ServerLevel _level)
+						_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.TELEPORTATION_PARTICLE.get()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
+								25, 1, 1, 1, 0.25);
+					{
+						final Vec3 _center = new Vec3(
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
+								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+										.getZ()));
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
+							if (!(entity == entityiterator)) {
+								{
+									Entity _ent = entityiterator;
+									_ent.teleportTo((entity.getX()), (entity.getY()), (entity.getZ()));
+									if (_ent instanceof ServerPlayer _serverPlayer)
+										_serverPlayer.connection.teleport((entity.getX()), (entity.getY()), (entity.getZ()), _ent.getYRot(), _ent.getXRot());
+								}
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 16.9);
+							}
+						}
+					}
+				}
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1, false);
+					}
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 25;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("checkpoint_create")) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 20) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.teleporting_effect = 40;
@@ -51,12 +113,12 @@ public class TeleportationSpecialAttackProcedure {
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("teleportation_ability_2")) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("checkpoint_tp")) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 20) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.teleporting_effect = 40;
@@ -96,11 +158,11 @@ public class TeleportationSpecialAttackProcedure {
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("teleportation_ability_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("create_portal_blue")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 20) {
 				if (!PowerModVariables.MapVariables.get(world).blue_portal_placed) {
 					world.setBlock(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), PowerModBlocks.BLUE_PORTAL.get().defaultBlockState(), 3);
@@ -119,7 +181,27 @@ public class TeleportationSpecialAttackProcedure {
 							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
-				} else if (PowerModVariables.MapVariables.get(world).blue_portal_placed && !PowerModVariables.MapVariables.get(world).orange_portal_placed) {
+				} else {
+					world.setBlock(BlockPos.containing(PowerModVariables.MapVariables.get(world).bpX, PowerModVariables.MapVariables.get(world).bpY, PowerModVariables.MapVariables.get(world).bpZ), Blocks.AIR.defaultBlockState(), 3);
+					PowerModVariables.MapVariables.get(world).blue_portal_placed = false;
+					PowerModVariables.MapVariables.get(world).syncData(world);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1, false);
+						}
+					}
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("create_portal_orange")) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 20) {
+				if (!PowerModVariables.MapVariables.get(world).orange_portal_placed) {
 					world.setBlock(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), PowerModBlocks.ORANGE_PORTAL.get().defaultBlockState(), 3);
 					PowerModVariables.MapVariables.get(world).orange_portal_placed = true;
 					PowerModVariables.MapVariables.get(world).syncData(world);
@@ -136,11 +218,8 @@ public class TeleportationSpecialAttackProcedure {
 							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
-				} else if (PowerModVariables.MapVariables.get(world).blue_portal_placed && PowerModVariables.MapVariables.get(world).orange_portal_placed) {
-					world.setBlock(BlockPos.containing(PowerModVariables.MapVariables.get(world).bpX, PowerModVariables.MapVariables.get(world).bpY, PowerModVariables.MapVariables.get(world).bpZ), Blocks.AIR.defaultBlockState(), 3);
+				} else {
 					world.setBlock(BlockPos.containing(PowerModVariables.MapVariables.get(world).opX, PowerModVariables.MapVariables.get(world).opY, PowerModVariables.MapVariables.get(world).opZ), Blocks.AIR.defaultBlockState(), 3);
-					PowerModVariables.MapVariables.get(world).blue_portal_placed = false;
-					PowerModVariables.MapVariables.get(world).syncData(world);
 					PowerModVariables.MapVariables.get(world).orange_portal_placed = false;
 					PowerModVariables.MapVariables.get(world).syncData(world);
 					if (world instanceof Level _level) {
