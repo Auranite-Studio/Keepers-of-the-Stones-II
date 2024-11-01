@@ -13,7 +13,7 @@
                 "$(li)",
                 "Sound bomb fires a projectile that explodes, but without destroying blocks.",
                 "$(li)",
-                "Sound boom deals damage to entities in a radius with a stun effect"
+                "Sound boom deals damage to entities in a radius with a stun effect."
             ]
         },
         {

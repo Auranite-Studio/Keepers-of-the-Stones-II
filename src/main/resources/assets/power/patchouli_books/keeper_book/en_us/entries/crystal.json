@@ -1,0 +1,27 @@
+{
+    "name": "Crystal",
+    "icon": "power:textures/mob_effect/crystal_master.png",
+    "category": "power:stones",
+    "sortnum": 9,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Crystal block attacks with an amethyst block without spending any blocks.",
+                "$(li)",
+                "Crystal piercing pierces the player with amethyst shards.",
+                "$(li)",
+                "Crystal volley attacks with projectiles in different directions (except up and down)."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Crystal",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:crystal_knife\",count:1}],ArmorItems:[{id:\"power:crystal_armor_boots\",count:1},{id:\"power:crystal_armor_leggings\",count:1},{id:\"power:crystal_armor_chestplate\",count:1},{id:\"power:crystal_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
