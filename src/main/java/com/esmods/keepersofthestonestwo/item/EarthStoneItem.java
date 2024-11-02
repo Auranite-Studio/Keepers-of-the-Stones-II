@@ -4,7 +4,6 @@ package com.esmods.keepersofthestonestwo.item;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
@@ -26,11 +25,6 @@ import com.esmods.keepersofthestonestwo.procedures.EarthStoneUseProcedure;
 public class EarthStoneItem extends Item {
 	public EarthStoneItem() {
 		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));
-	}
-
-	@Override
-	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
-		return 0f;
 	}
 
 	@Override
