@@ -18,7 +18,7 @@ import com.esmods.keepersofthestonestwo.procedures.EmptyBatteryDescProcedure;
 
 public class EmptyBatteryItem extends Item {
 	public EmptyBatteryItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON));
 	}
 
 	@Override
