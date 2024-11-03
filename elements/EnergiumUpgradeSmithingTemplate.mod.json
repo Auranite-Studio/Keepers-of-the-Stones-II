@@ -30,12 +30,12 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "item.power.energium_upgrade_smithing_template.upgrade",
+        "§7Energium Upgrade",
         "",
-        "item.power.smithing_template.applies_to",
-        "item.power.energium_upgrade_smithing_template.applies_to",
-        "item.power.smithing_template.ingredients",
-        "item.power.energium_upgrade_smithing_template.ingredients"
+        "§7Applies to:",
+        "§9Depleted Energium",
+        "§7Ingredients:",
+        "§9Redstone"
       ]
     },
     "glowCondition": {

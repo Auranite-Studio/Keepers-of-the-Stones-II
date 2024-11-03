@@ -12,7 +12,7 @@ import com.esmods.keepersofthestonestwo.entity.PoisonPitEntity;
 
 public class PoisonPitRenderer extends HumanoidMobRenderer<PoisonPitEntity, HumanoidModel<PoisonPitEntity>> {
 	public PoisonPitRenderer(EntityRendererProvider.Context context) {
-		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0f);
+		super(context, new HumanoidModel<PoisonPitEntity>(context.bakeLayer(ModelLayers.PLAYER)), 0f);
 		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
 	}
 
