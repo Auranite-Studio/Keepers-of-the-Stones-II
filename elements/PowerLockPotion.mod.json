@@ -12,7 +12,6 @@
           "value": "CUSTOM:PowerLock"
         },
         "duration": 3600,
-        "infinite": false,
         "amplifier": 0,
         "ambient": false,
         "showParticles": true

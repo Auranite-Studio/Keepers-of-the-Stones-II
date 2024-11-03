@@ -31,12 +31,7 @@ public class AirBatteryItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
 		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
-		String hoverText = AirBatteryDescProcedure.execute();
-		if (hoverText != null) {
-			for (String line : hoverText.split("\n")) {
-				list.add(Component.literal(line));
-			}
-		}
+		list.add(Component.literal(AirBatteryDescProcedure.execute()));
 	}
 
 	@Override

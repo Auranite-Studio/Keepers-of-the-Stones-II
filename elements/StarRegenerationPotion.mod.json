@@ -12,7 +12,6 @@
           "value": "CUSTOM:StarRegeneration"
         },
         "duration": 900,
-        "infinite": false,
         "amplifier": 0,
         "ambient": false,
         "showParticles": true
