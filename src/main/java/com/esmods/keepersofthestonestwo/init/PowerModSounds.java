@@ -37,4 +37,6 @@ public class PowerModSounds {
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "ambient.biome.cursed_forest")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> MUSIC_MYSTERY_OF_THE_CURSED_FOREST = REGISTRY.register("music.mystery_of_the_cursed_forest",
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "music.mystery_of_the_cursed_forest")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> RECORD_THE_LOST_POWERS_RECORD = REGISTRY.register("record.the_lost_powers_record",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "record.the_lost_powers_record")));
 }
