@@ -36500,12 +36500,12 @@
       "~CUSTOM:DepletedEnergiumBlock",
       "~CUSTOM:DepletedEnergiumOre"
     ],
-    "BIOMES:minecraft:is_overworld": [
-      "CUSTOM:CursedForest"
-    ],
     "ENCHANTMENTS:minecraft:non_treasure": [
       "~CUSTOM:Isolation",
       "~CUSTOM:Revenge"
+    ],
+    "BIOMES:minecraft:is_overworld": [
+      "CUSTOM:CursedForest"
     ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",

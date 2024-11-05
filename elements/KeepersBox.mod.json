@@ -227,8 +227,8 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 2.5,
-    "resistance": 5000.0,
+    "hardness": 0.0,
+    "resistance": 1000000.0,
     "hasGravity": false,
     "isWaterloggable": true,
     "creativeTabs": [
@@ -291,7 +291,7 @@
       "value": ""
     },
     "luminance": 0,
-    "unbreakable": false,
+    "unbreakable": true,
     "vanillaToolTier": "NONE",
     "placingCondition": {
       "name": "KeepersBoxUsloviieRazmieshchieniiaBloka"
