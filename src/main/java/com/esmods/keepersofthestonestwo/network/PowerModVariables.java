@@ -88,6 +88,9 @@ public class PowerModVariables {
 			clone.leggings = original.leggings;
 			clone.boots = original.boots;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
+			clone.level = original.level;
+			clone.level_xp = original.level_xp;
+			clone.base_damage_by_lvl = original.base_damage_by_lvl;
 			clone.hypnotized = original.hypnotized;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
@@ -464,6 +467,9 @@ public class PowerModVariables {
 		public ItemStack boots = ItemStack.EMPTY;
 		public boolean unlock_keepers_box = false;
 		public boolean transfered_power = false;
+		public double level = 1.0;
+		public double level_xp = 0;
+		public double base_damage_by_lvl = 0;
 		public boolean hypnotized = false;
 
 		@Override
@@ -511,6 +517,9 @@ public class PowerModVariables {
 			nbt.put("boots", boots.saveOptional(lookupProvider));
 			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
 			nbt.putBoolean("transfered_power", transfered_power);
+			nbt.putDouble("level", level);
+			nbt.putDouble("level_xp", level_xp);
+			nbt.putDouble("base_damage_by_lvl", base_damage_by_lvl);
 			nbt.putBoolean("hypnotized", hypnotized);
 			return nbt;
 		}
@@ -559,6 +568,9 @@ public class PowerModVariables {
 			boots = ItemStack.parseOptional(lookupProvider, nbt.getCompound("boots"));
 			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
 			transfered_power = nbt.getBoolean("transfered_power");
+			level = nbt.getDouble("level");
+			level_xp = nbt.getDouble("level_xp");
+			base_damage_by_lvl = nbt.getDouble("base_damage_by_lvl");
 			hypnotized = nbt.getBoolean("hypnotized");
 		}
 

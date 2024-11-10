@@ -290,6 +290,42 @@
           "y": 188,
           "locked": false
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_level_debug",
+          "text": {
+            "fixedValue": "",
+            "name": "LevelDebug"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 197,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_level_xp_debug",
+          "text": {
+            "fixedValue": "",
+            "name": "LevelXPDebug"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 206,
+          "locked": false
+        }
       }
     ],
     "baseTexture": "",

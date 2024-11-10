@@ -63,6 +63,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.ELEMENTAL_POWER_GENERATOR.get().asItem());
 				tabData.accept(PowerModItems.RAW_COPYRIUM.get());
 				tabData.accept(PowerModItems.COPYRIUM_INGOT.get());
+				tabData.accept(PowerModItems.MUSIC_DISC_THE_LOST_POWERS.get());
 				tabData.accept(PowerModBlocks.CURSED_STONE.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS.get().asItem());

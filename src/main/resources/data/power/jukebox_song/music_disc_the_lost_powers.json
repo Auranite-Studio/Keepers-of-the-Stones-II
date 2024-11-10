@@ -1,0 +1,8 @@
+{
+  "comparator_output": 3,
+  "description": {
+    "translate": "item.power.music_disc_the_lost_powers.desc"
+  },
+  "length_in_seconds": 237,
+  "sound_event": "power:record.the_lost_powers_record"
+}

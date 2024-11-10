@@ -1,0 +1,27 @@
+{
+    "name": "Earth",
+    "icon": "power:textures/mob_effect/earth_master.png",
+    "category": "power:stones",
+    "sortnum": 3,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Earth Block Attack - allows you to use earth blocks to attack (if you have blocks of stone and deep slate in your inventory, can be throw it. The damage is higher when doing so).",
+                "$(li)",
+                "Stalagmite Piercing - pierces the nearest target with a stalagmite, dealing critical damage to the enemy.",
+                "$(li)",
+                "Earthquakes - deals damage to enemies within a radius, causing a shaking effect on attack targets."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Earth",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:earth_hammer\",count:1}],ArmorItems:[{id:\"power:earth_armor_boots\",count:1},{id:\"power:earth_armor_leggings\",count:1},{id:\"power:earth_armor_chestplate\",count:1},{id:\"power:earth_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
