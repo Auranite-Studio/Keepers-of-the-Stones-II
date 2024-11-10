@@ -1,9 +1,4 @@
-What's new in Keepers of the Stones II version 1.0.0?<br />
-**Changes regarding the first part of the Keepers of the Stones mod**
-<br />- All the stones have been reworked
-<br />- Added the ability to combine up to 3 stones
-<br />- Abilities are no longer in the inventory, but in the ability wheel
-<br />- Added two bosses - energium golem and cursed keeper
-<br />- Fully reworked ores
-<br />- Weapons are now in 3D format
-<br />- Many other interesting innovations and changes
+What's new in Keepers of the Stones II version 1.0.1?<br />
+<br />- Empty batteries can now be stacked up to 16
+<br />- [Bugfix] Fixed a bug that caused a black hole to attract players in Spectator mode
+<br />- [Bugfix] Fixed a bug where some items from the mod could not be destroyed by blocks 
