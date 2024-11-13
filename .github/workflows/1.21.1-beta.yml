@@ -10,8 +10,8 @@ on:
 env:                                              
   MINECRAFT_VERSION: 1.21.1                      
   JAVA_VERSION: 21      
-  VERSION: 1.0.0.47
-  RELEASE_NAME: Keepers of the Stones II 1.0.0.47 Beta
+  VERSION: 1.0.2.1
+  RELEASE_NAME: Keepers of the Stones II 1.0.2.1 Beta
 
 jobs:
   build:
@@ -67,6 +67,7 @@ jobs:
             playeranimator(required){modrinth:gedNE4y2}{curseforge:658587}#(ignore:github)
             pehkui(required){modrinth:t5W7Jfwy}{curseforge:319596}#(ignore:github)
             better-combat(recommended){modrinth:8BmcQJ2H}{curseforge:639842}#(ignore:github)
+            patchouli(recommended){modrinth:nU0bVIaL}{curseforge:306770}#(ignore:github)
             epic-fight(incompatible){modrinth:vu3NZ5Ma}{curseforge:405076}#(ignore:github)
           modrinth-featured: false
           fail-mode: warn

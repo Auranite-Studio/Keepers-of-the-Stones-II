@@ -1,0 +1,27 @@
+{
+    "name": "Lava",
+    "icon": "power:textures/mob_effect/lava_master.png",
+    "category": "power:stones",
+    "sortnum": 10,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Lava outburst attacks with a beam attack on entities and sets them on fire.",
+                "$(li)",
+                "Lava attack attacks with lava blocks, creates a block of water when it hits a block.",
+                "$(li)",
+                "Surface melting creates 4 by 4 blocks of magma under the entities."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Lava",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:lava_hammer\",count:1}],ArmorItems:[{id:\"power:lava_armor_boots\",count:1},{id:\"power:lava_armor_leggings\",count:1},{id:\"power:lava_armor_chestplate\",count:1},{id:\"power:lava_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

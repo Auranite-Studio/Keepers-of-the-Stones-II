@@ -432,8 +432,7 @@
             "type": "entity"
           }
         ]
-      },
-      "path": "~/Modules/PowerScaleModule "
+      }
     },
     {
       "name": "GetPowerScale",
@@ -452,8 +451,7 @@
             "type": "entity"
           }
         ]
-      },
-      "path": "~/Modules/PowerScaleModule "
+      }
     },
     {
       "name": "GetActive",
@@ -472,8 +470,7 @@
             "type": "entity"
           }
         ]
-      },
-      "path": "~/Modules/PowerScaleModule "
+      }
     },
     {
       "name": "AirArmor",
@@ -12537,8 +12534,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPotionInfinityDopolnitielnaiaInformatsiiaProcedure.java"
         ],
         "dependencies": []
-      },
-      "path": "~/Modules/PowerScaleModule "
+      }
     },
     {
       "name": "SpaceMaster",
@@ -26604,7 +26600,7 @@
           "src/main/resources/assets/power/models/item/music_disc_call_of_the_past.json"
         ]
       },
-      "path": "~/ItemsAndBlocks/Energium"
+      "path": "~/ItemsAndBlocks/Records"
     },
     {
       "name": "CursedCastle",
@@ -26887,7 +26883,7 @@
           "src/main/resources/data/power/jukebox_song/music_disc_ancient_mood.json"
         ]
       },
-      "path": "~/ItemsAndBlocks/CursedBlocks"
+      "path": "~/ItemsAndBlocks/Records"
     },
     {
       "name": "LimitedNumberOfStones",
@@ -30378,7 +30374,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule"
+      "path": "~/Modules/VFXEngineModule"
     },
     {
       "name": "GravityMace",
@@ -35533,6 +35529,26 @@
       "path": "~/Commands"
     },
     {
+      "name": "LevelDebug",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LevelDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule/Debug"
+    },
+    {
       "name": "PoisonPitImmuneAllAttacks",
       "type": "procedure",
       "compiles": true,
@@ -35552,6 +35568,26 @@
       "path": "~/Elements/Poison"
     },
     {
+      "name": "LevelXPDebug",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_xp_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LevelXPDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule/Debug"
+    },
+    {
       "name": "EnergiumItemsNotToolsPowerLock",
       "type": "procedure",
       "compiles": true,
@@ -35569,6 +35605,69 @@
         ]
       },
       "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "VariablesConvertsV1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "variables_converts_v_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/VariablesConvertsV1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule"
+    },
+    {
+      "name": "ExampleMaster",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "example_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/ExampleMasterRenderer.java",
+          "src/main/resources/data/power/neoforge/biome_modifier/example_master_biome_modifier.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/ExampleMasterEntity.java"
+        ]
+      },
+      "path": "~/Mobs/PatchouliExampleMob"
+    },
+    {
+      "name": "KeepersBook",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keepers_book",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/keepers_book.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/KeepersBookItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeeperBook"
+    },
+    {
+      "name": "MusicDiscTheLostPowers",
+      "type": "musicdisc",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_disc_the_lost_powers",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/jukebox_song/music_disc_the_lost_powers.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicDiscTheLostPowersItem.java",
+          "src/main/resources/assets/power/models/item/music_disc_the_lost_powers.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Records"
     }
   ],
   "variable_elements": [
@@ -36185,6 +36284,24 @@
       "value": "false"
     },
     {
+      "name": "level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "level_xp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "base_damage_by_lvl",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
       "name": "hypnotized",
       "type": "logic",
       "scope": "player_persistent",
@@ -36348,6 +36465,14 @@
       ],
       "category": "music",
       "subtitle": ""
+    },
+    {
+      "name": "record.the_lost_powers_record",
+      "files": [
+        "the_lost_powers_record"
+      ],
+      "category": "record",
+      "subtitle": ""
     }
   ],
   "tag_elements": {
@@ -36424,6 +36549,7 @@
       "CUSTOM:CreationShovel"
     ],
     "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:MusicDiscTheLostPowers",
       "~CUSTOM:MusicDiscAncientMood",
       "~CUSTOM:MusicDiscCallOfThePast"
     ],
@@ -37186,6 +37312,7 @@
       "ElementalPowerGenerator",
       "RawCopyrium",
       "CopyriumIngot",
+      "MusicDiscTheLostPowers",
       "CursedStone",
       "CursedStoneBricks",
       "CursedStoneCrackedBricks",
@@ -37268,11 +37395,11 @@
     "ru_ru": {
       "item.power.ether_battery": "Батарея",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
-      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Передача тёмной силы, расходует 80",
       "item.power.ether_stone": "Камень эфира",
+      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Передача тёмной силы, расходует 80",
       "item.power.moon_battery": "Батарея",
-      "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
       "item.power.spirit_spawn_egg": "Spirit Spawn Egg",
+      "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "item.power.energium_shovel": "Энергиумная лопата",
       "effect.power.gigantization": "Gigantization",
@@ -37286,8 +37413,8 @@
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Поток астральной энергии, расходует 10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 20",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
-      "advancements.grant_your_power.title": "Даруй свою силу",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
+      "advancements.grant_your_power.title": "Даруй свою силу",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.cursed_keeper_spawn_egg": "Яйцо призыва проклятого хранителя",
       "item.power.plants_stone": "Камень зелени",
@@ -37299,16 +37426,17 @@
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Солнечный взрыв, расходует 45",
       "battery.desc.mercury": "Ртуть",
       "item.power.filth_armor_chestplate": "Нагрудник тёмного мастера скверны",
+      "entity.power.example_master": "Example Master",
       "battery.desc.sun": "Солнце",
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.time_armor_leggings": "Поножи мастера времени",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55": "Ртутное состояние, расходует 55",
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
-      "item.power.gravity_mace": "Гравитационная булава",
       "block.power.amplifier_block": "Блок амплифера",
+      "item.power.gravity_mace": "Гравитационная булава",
       "battery.desc.plants": "Зелень",
-      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "item.power.music_armor_leggings": "Поножи мастера музыки",
+      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Туманная невидимость, расходует 70",
       "item.power.music_battery": "Батарея",
       "item.power.darkness_battery": "Батарея",
@@ -37326,11 +37454,10 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
       "item.power.animals_stone": "Камень животных",
       "item.power.light_battery": "Батарея",
-      "item.minecraft.lingering_potion.effect.power_lock_potion": "Туманное зелье блокировки силы",
       "item.power.oceanic_trident": "Океанический трезубец",
+      "item.minecraft.lingering_potion.effect.power_lock_potion": "Туманное зелье блокировки силы",
       "effect.power.tornado_master": "Мастер торнадо",
       "effect.power.warp": "Warp",
-      "item.keeper_book.name": "Книга хранителя",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "item.power.amplifier_ring": "Амплиферовое кольцо",
@@ -37360,9 +37487,9 @@
       "item.power.music_guitar": "Музыкальная гитара",
       "advancements.the_end_of_tyranny.descr": "Победите энергиумного голема",
       "item.power.ocean_battery": "Батарея",
-      "item.power.smoke_armor_chestplate": "Нагрудник мастера дыма",
-      "item.power.mist_battery": "Батарея",
       "effect.power.star_regeneration": "Звёздная регенерация",
+      "item.power.mist_battery": "Батарея",
+      "item.power.smoke_armor_chestplate": "Нагрудник мастера дыма",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "item.power.cursed_knight_spawn_egg": "Яйцо призыва проклятого рыцаря",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
@@ -37406,8 +37533,8 @@
       "block.power.raw_energium_block": "Блок рудного энергиума",
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "item.power.smoke_stone": "Камень дыма",
-      "item.power.blue_flame_sword": "Меч синего пламени",
       "effect.power.air_master": "Мастер воздуха",
+      "item.power.blue_flame_sword": "Меч синего пламени",
       "effect.power.miniaturization": "Miniaturization",
       "item.power.raw_depleted_energium": "Рудный обеднённый энергиум",
       "item.minecraft.potion.effect.power_lock_potion": "Зелье блокировки силы",
@@ -37446,8 +37573,8 @@
       "item.power.horror_armor_leggings": "Поножи тёмного мастера хоррора",
       "battery.desc.light": "Свет",
       "item.power.horror_armor_helmet": "Шлем тёмного мастера хоррора",
-      "item.power.spirit_armor_chestplate": "Нагрудник мастера духа",
       "block.power.amber_block": "Amber Block",
+      "item.power.spirit_armor_chestplate": "Нагрудник мастера духа",
       "effect.power.chaos_dark_master": "Т. Мастер Хаоса",
       "entity.power.cursed_knight": "Проклятый рыцарь",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Солнце",
@@ -37457,6 +37584,7 @@
       "block.power.cursed_stone_bricks_slab": "Плита из проклятых каменных кирпичей",
       "gui.power.wheel_abilities_gravity.tooltip_gravity_denial_uses_5": "Отрицание гравитации, расходует 5",
       "item.power.time_armor_boots": "Ботинки мастера времени",
+      "item.power.keepers_book": "Книга хранителя",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Аура эфира, расходует 80",
       "item.power.air_stone": "Камень воздуха",
       "item.power.sound_stone": "Камень звука",
@@ -37467,14 +37595,14 @@
       "gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30": "Положительный заряд, расходует 30",
       "effect.power.sound_master": "Мастер звука",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Телепортация",
-      "item.power.raw_copyrium": "Рудный копириум",
       "item.power.moon_armor_chestplate": "Нагрудник мастера луны",
+      "item.power.raw_copyrium": "Рудный копириум",
       "item.power.creation_armor_chestplate": "Нагрудник мастера созидания",
       "effect.power.ocean_master": "Мастер океана",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "battery.desc.fire": "Огонь",
-      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "advancements.the_great_win.descr": "Победите проклятого хранителя и освободите его от проклятия",
+      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "effect.power.vacuum_master": "Мастер пустоты",
       "item.power.mercury_armor_chestplate": "Нагрудник мастера ртути",
       "item.power.freaking_parsnip": "Чёртов пастернак",
@@ -37494,17 +37622,17 @@
       "advancements.full_power_of_energium.descr": "Оденьте полный сет энергиумной брони",
       "item.power.spirit_stone": "Камень духа",
       "item.power.music_disc_ancient_mood.desc": "bxkqq - Ancient Mood",
-      "battery.desc.lightning": "Молния",
       "gui.power.wheel_abilities_form.tooltip_warp_wave_uses_15": "Волна искажения, расходует 15",
+      "battery.desc.lightning": "Молния",
       "item.power.raw_amplifier": "Рудный амплифер",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Ядовитый шип, расходует 35",
       "effect.power.blood_master": "Мастер крови",
       "advancements.lets_bail_this_place_isdead.descr": "Найдите биом - проклятый лес",
       "block.power.cursed_stone_stairs": "Ступеньки из проклятого камня",
-      "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
       "effect.power.stun": "Оглушение",
-      "item.power.explosion_battery": "Батарея",
+      "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
       "item.power.chaos_armor_chestplate": "Нагрудник тёмного мастера хаоса",
+      "item.power.explosion_battery": "Батарея",
       "gui.power.keepers_box_gui_part_2.tooltip_smoke": "Дым",
       "item.power.water_battery": "Батарея",
       "battery.desc.vacuum": "Пустота",
@@ -37512,8 +37640,8 @@
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Энергетический заряженный шар, расходует 35",
       "item.power.thirst_armor_helmet": "Шлем тёмного мастера жажды",
       "block.power.raw_depleted_energium_block": "Блок рудного обеднённого энергиума",
-      "gui.power.keepers_box_gui_part_1.tooltip_lava": "Лава",
       "item.power.energy_battery": "Батарея",
+      "gui.power.keepers_box_gui_part_1.tooltip_lava": "Лава",
       "effect.power.time_master": "Мастер времени",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
       "advancements.what_is_this_metal.title": "Это что за металл?",
@@ -37522,11 +37650,12 @@
       "item.power.shadow_battery": "Батарея",
       "gui.power.wheel_abilities_explosion.tooltip_atomic_bomb_uses_100": "Ядерная бомба, расходует 100",
       "item.power.thirst_armor_chestplate": "Нагрудник тёмного мастера жажды",
+      "item.power.music_disc_the_lost_powers": "Пластинка",
       "item.power.lava_battery": "Батарея",
       "item.power.vacuum_stone": "Камень пустоты",
       "item.power.energium_armor_boots": "Энергиумные ботинки",
-      "item.power.poison_stone": "Камень яда",
       "effect.power.destruction_master": "Мастер разрушения",
+      "item.power.poison_stone": "Камень яда",
       "item.power.poison_armor_boots": "Ботинки мастера яда",
       "effect.power.immortality": "Бессмертие",
       "gui.power.wheel_abilities_speed.tooltip_dash_uses_20": "Рывок, расходует 20",
@@ -37539,14 +37668,15 @@
       "effect.power.plague_master": "Мастер чумы",
       "gui.power.wheel_abilities_spirit.tooltip_summon_spirit_uses_75": "Призыв духа, расходует 75",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
-      "item.power.amber_stone": "Камень янтаря",
       "battery.desc.destruction": "Разрушение",
+      "item.power.amber_stone": "Камень янтаря",
       "battery.desc.magnet": "Магнит",
       "effect.power.ether_master": "Мастер эфира",
       "item.power.time_armor_chestplate": "Нагрудник мастера времени",
       "item.power.time_battery": "Батарея",
       "gamerule.choiceStoneWhenEnterTheWorld.description": "Позволяет игрокам выбирать камень при входе в мир",
       "effect.power.gravity_master": "Мастер гравитации",
+      "subtitles.record.the_lost_powers_record": "",
       "block.power.cursed_stone_cracked_bricks_slab": "Плита из проклятых потрескавшихся каменных кирпичей",
       "item.power.blood_battery": "Батарея",
       "effect.power.sun_master": "Мастер солнца",
@@ -37756,8 +37886,8 @@
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Кристалл",
       "item.power.depleted_energium_ingot": "Слиток обеднённого энергиума",
       "item.power.water_armor_boots": "Ботинки мастера воды",
+      "item.power.music_disc_the_lost_powers.desc": "bxkqq feat. AI - The Lost Powers",
       "entity.power.black_hole": "Black Hole",
-      "item.keeper_book.desc": "Книга для овладения силой стихий",
       "gui.power.wheel_abilties_golden_dust.tooltip_golden_dust_attack_uses_15": "Атака золотой пыли, расходует 15",
       "battery.desc.mushrooms": "Грибы",
       "item.power.teleportation_armor_leggings": "Поножи мастера телепортации",
@@ -37798,6 +37928,7 @@
       "item.power.cursed_key": "Проклятый ключ",
       "gui.power.wheel_abilities_spirit.tooltip_spiritual_flight_uses_5": "Спиритический полёт, расходует 5",
       "block.power.moon_block": "Лунный блок",
+      "item.keepers_book.desc": "Книга для овладения силой стихий",
       "power.modinfo.recharge_stone": "Перезарядка: ",
       "block.power.freaking_parsnip_block": "Блок дикого пастернака",
       "gui.power.keepers_box_gui_part_4.tooltip_sand": "Песок",
@@ -38144,11 +38275,11 @@
     "en_us": {
       "item.power.ether_battery": "Battery",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
-      "item.power.ether_stone": "Ether Stone",
       "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Dark power transfer, uses 80",
+      "item.power.ether_stone": "Ether Stone",
       "item.power.moon_battery": "Battery",
-      "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.power.spirit_spawn_egg": "Spirit Spawn Egg",
+      "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.energium_shovel": "Energium Shovel",
       "effect.power.gigantization": "Gigantization",
@@ -38162,8 +38293,8 @@
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 20",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
-      "advancements.grant_your_power.title": "Grant your power",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
+      "advancements.grant_your_power.title": "Grant your power",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
       "item.power.plants_stone": "Plants Stone",
@@ -38175,16 +38306,17 @@
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Sun explosion, uses 45",
       "battery.desc.mercury": "Mercury",
       "item.power.filth_armor_chestplate": "Filth Chestplate",
+      "entity.power.example_master": "Example Master",
       "battery.desc.sun": "Sun",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.time_armor_leggings": "Time Leggings",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55": "Mercury condition, uses 55",
       "item.power.teleportation_armor_chestplate": "Teleportation Chestplate",
-      "block.power.amplifier_block": "Amplifier Block",
       "item.power.gravity_mace": "Gravity Mace",
+      "block.power.amplifier_block": "Amplifier Block",
       "battery.desc.plants": "Plants",
-      "item.power.music_armor_leggings": "Music Leggings",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
+      "item.power.music_armor_leggings": "Music Leggings",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
       "item.power.music_battery": "Battery",
       "item.power.darkness_battery": "Battery",
@@ -38202,8 +38334,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
       "item.power.animals_stone": "Animals Stone",
       "item.power.light_battery": "Battery",
-      "item.power.oceanic_trident": "Oceanic Trident",
       "item.minecraft.lingering_potion.effect.power_lock_potion": "Lingering Potion of Power Lock",
+      "item.power.oceanic_trident": "Oceanic Trident",
       "effect.power.tornado_master": "Master of Tornado",
       "effect.power.warp": "Warp",
       "item.keeper_book.name": "The Keeper\u0027s Book",
@@ -38236,9 +38368,9 @@
       "item.power.music_guitar": "Music Guitar",
       "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
       "item.power.ocean_battery": "Battery",
-      "effect.power.star_regeneration": "Star regeneration",
-      "item.power.mist_battery": "Battery",
       "item.power.smoke_armor_chestplate": "Smoke Chestplate",
+      "item.power.mist_battery": "Battery",
+      "effect.power.star_regeneration": "Star regeneration",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "item.power.cursed_knight_spawn_egg": "Cursed Knight Spawn Egg",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
@@ -38282,8 +38414,8 @@
       "block.power.raw_energium_block": "Block of Raw Energium",
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.smoke_stone": "Smoke Stone",
-      "effect.power.air_master": "Master of the Air",
       "item.power.blue_flame_sword": "Blue Flame Sword",
+      "effect.power.air_master": "Master of the Air",
       "effect.power.miniaturization": "Miniaturization",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
@@ -38322,8 +38454,8 @@
       "item.power.horror_armor_leggings": "Horror Leggings",
       "battery.desc.light": "Light",
       "item.power.horror_armor_helmet": "Horror Helmet",
-      "item.power.spirit_armor_chestplate": "Spirit Chestplate",
       "block.power.amber_block": "Amber Block",
+      "item.power.spirit_armor_chestplate": "Spirit Chestplate",
       "effect.power.chaos_dark_master": "Dark Master of Chaos",
       "entity.power.cursed_knight": "Cursed Knight",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Sun",
@@ -38333,6 +38465,7 @@
       "block.power.cursed_stone_bricks_slab": "Cursed Stone Bricks Slab",
       "gui.power.wheel_abilities_gravity.tooltip_gravity_denial_uses_5": "Gravity denial, uses 5",
       "item.power.time_armor_boots": "Time Boots",
+      "item.power.keepers_book": "Keeper\u0027s Book",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80",
       "item.power.air_stone": "Air Stone",
       "item.power.sound_stone": "Sound Stone",
@@ -38343,14 +38476,14 @@
       "gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30": "Positive charge, uses 30",
       "effect.power.sound_master": "Master of Sound",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
-      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "item.power.raw_copyrium": "Raw Copyrium",
+      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "item.power.creation_armor_chestplate": "Creation Chestplate",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "effect.power.ocean_master": "Master of the Ocean",
       "battery.desc.fire": "Fire",
-      "item.power.crystal_armor_boots": "Crystal Boots",
       "advancements.the_great_win.descr": "Defeat the cursed keeper and free him from the curse",
+      "item.power.crystal_armor_boots": "Crystal Boots",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.mercury_armor_chestplate": "Mercury Chestplate",
       "item.power.freaking_parsnip": "Freaking Parsnip",
@@ -38370,17 +38503,17 @@
       "advancements.full_power_of_energium.descr": "Wear a full set of energium armor",
       "item.power.spirit_stone": "Spirit Stone",
       "item.power.music_disc_ancient_mood.desc": "bxkqq - Ancient Mood",
-      "battery.desc.lightning": "Lightning",
       "gui.power.wheel_abilities_form.tooltip_warp_wave_uses_15": "Warp wave, uses 15",
+      "battery.desc.lightning": "Lightning",
       "item.power.raw_amplifier": "Raw Amplifier",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Poisonous thorn, uses 35",
       "effect.power.blood_master": "Master of Blood",
       "advancements.lets_bail_this_place_isdead.descr": "Find the biome - the cursed forest",
       "block.power.cursed_stone_stairs": " Cursed Stone Stairs",
-      "effect.power.stun": "Stun",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
-      "item.power.chaos_armor_chestplate": "Chaos Chestplate",
+      "effect.power.stun": "Stun",
       "item.power.explosion_battery": "Battery",
+      "item.power.chaos_armor_chestplate": "Chaos Chestplate",
       "gui.power.keepers_box_gui_part_2.tooltip_smoke": "Smoke",
       "item.power.water_battery": "Battery",
       "battery.desc.vacuum": "Vacuum",
@@ -38388,8 +38521,8 @@
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Energy charged ball, uses 35",
       "item.power.thirst_armor_helmet": "Thirst Helmet",
       "block.power.raw_depleted_energium_block": "Block of Raw Depleted Energium",
-      "item.power.energy_battery": "Battery",
       "gui.power.keepers_box_gui_part_1.tooltip_lava": "Lava",
+      "item.power.energy_battery": "Battery",
       "effect.power.time_master": "Master of Time",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
       "advancements.what_is_this_metal.title": "What is this metal?",
@@ -38398,11 +38531,12 @@
       "item.power.shadow_battery": "Battery",
       "gui.power.wheel_abilities_explosion.tooltip_atomic_bomb_uses_100": "Atomic bomb, uses 100",
       "item.power.thirst_armor_chestplate": "Thirst Chestplate",
+      "item.power.music_disc_the_lost_powers": "Music Disc",
       "item.power.lava_battery": "Battery",
       "item.power.vacuum_stone": "Vacuum Stone",
       "item.power.energium_armor_boots": "Energium Boots",
-      "effect.power.destruction_master": "Master of Destruction",
       "item.power.poison_stone": "Poison Stone",
+      "effect.power.destruction_master": "Master of Destruction",
       "item.power.poison_armor_boots": "Poison Boots",
       "effect.power.immortality": "Immortality",
       "gui.power.wheel_abilities_speed.tooltip_dash_uses_20": "Dash, uses 20",
@@ -38415,14 +38549,15 @@
       "effect.power.plague_master": "Master of the Plague",
       "gui.power.wheel_abilities_spirit.tooltip_summon_spirit_uses_75": "Summon spirit, uses 75",
       "item.power.ice_armor_boots": "Ice Boots",
-      "battery.desc.destruction": "Destruction",
       "item.power.amber_stone": "Amber Stone",
+      "battery.desc.destruction": "Destruction",
       "battery.desc.magnet": "Magnet",
       "effect.power.ether_master": "Master of the Ether",
       "item.power.time_armor_chestplate": "Time Chestplate",
       "item.power.time_battery": "Battery",
       "gamerule.choiceStoneWhenEnterTheWorld.description": "Allows players to select a stone when entering the world",
       "effect.power.gravity_master": "Master of Gravity",
+      "subtitles.record.the_lost_powers_record": "",
       "block.power.cursed_stone_cracked_bricks_slab": "Cursed Stone Cracked Bricks Slab",
       "item.power.blood_battery": "Battery",
       "effect.power.sun_master": "Master of the Sun",
@@ -38632,6 +38767,7 @@
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
       "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "item.power.water_armor_boots": "Water Boots",
+      "item.power.music_disc_the_lost_powers.desc": "bxkqq feat. AI - The Lost Powers",
       "entity.power.black_hole": "Black Hole",
       "item.keeper_book.desc": "A book for mastering the power of the elements",
       "gui.power.wheel_abilties_golden_dust.tooltip_golden_dust_attack_uses_15": "Golden dust attack, uses 15",
@@ -39266,7 +39402,11 @@
             "children": []
           },
           {
-            "name": "PowerScaleModule ",
+            "name": "LevelingSystemModule",
+            "children": []
+          },
+          {
+            "name": "PowerScaleModule",
             "children": []
           },
           {
@@ -39770,6 +39910,14 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "KeeperBook",
+            "children": []
+          },
+          {
+            "name": "Records",
+            "children": []
           }
         ]
       },
@@ -39790,6 +39938,10 @@
           },
           {
             "name": "CursedKeeper",
+            "children": []
+          },
+          {
+            "name": "PatchouliExampleMob",
             "children": []
           }
         ]
@@ -39820,7 +39972,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0",
+    "version": "1.0.2.1",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -39835,7 +39987,8 @@
       "playeranimator"
     ],
     "dependencies": [
-      "bettercombat"
+      "bettercombat",
+      "patchouli"
     ],
     "dependants": [
       "cpapi"

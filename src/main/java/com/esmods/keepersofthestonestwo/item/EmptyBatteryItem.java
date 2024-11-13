@@ -4,7 +4,6 @@ package com.esmods.keepersofthestonestwo.item;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
@@ -19,12 +18,7 @@ import com.esmods.keepersofthestonestwo.procedures.EmptyBatteryDescProcedure;
 
 public class EmptyBatteryItem extends Item {
 	public EmptyBatteryItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
-	}
-
-	@Override
-	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
-		return 0f;
+		super(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON));
 	}
 
 	@Override

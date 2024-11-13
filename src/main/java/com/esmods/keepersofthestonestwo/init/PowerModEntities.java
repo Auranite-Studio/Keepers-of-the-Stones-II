@@ -46,6 +46,7 @@ import com.esmods.keepersofthestonestwo.entity.IceAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.GrenadeEntity;
 import com.esmods.keepersofthestonestwo.entity.GrassBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.GoldAttackProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.ExampleMasterEntity;
 import com.esmods.keepersofthestonestwo.entity.EtherAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.EnergyChargeEntity;
 import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
@@ -164,6 +165,10 @@ public class PowerModEntities {
 			EntityType.Builder.<SpiritEntity>of(SpiritEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3)
 
 					.sized(1f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ExampleMasterEntity>> EXAMPLE_MASTER = register("example_master",
+			EntityType.Builder.<ExampleMasterEntity>of(ExampleMasterEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -182,6 +187,7 @@ public class PowerModEntities {
 		CursedKnightEntity.init(event);
 		CursedSquireEntity.init(event);
 		SpiritEntity.init(event);
+		ExampleMasterEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -195,5 +201,6 @@ public class PowerModEntities {
 		event.put(CURSED_KNIGHT.get(), CursedKnightEntity.createAttributes().build());
 		event.put(CURSED_SQUIRE.get(), CursedSquireEntity.createAttributes().build());
 		event.put(SPIRIT.get(), SpiritEntity.createAttributes().build());
+		event.put(EXAMPLE_MASTER.get(), ExampleMasterEntity.createAttributes().build());
 	}
 }
