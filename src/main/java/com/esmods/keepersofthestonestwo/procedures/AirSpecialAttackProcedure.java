@@ -63,27 +63,27 @@ public class AirSpecialAttackProcedure {
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity) && !(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 13.5);
-								if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
+								if ((entity.getDirection()) == Direction.UP) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, 1.5, 0));
 									}
-								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
+								} else if ((entity.getDirection()) == Direction.DOWN) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y - 3), z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, (-1.5), 0));
 									}
-								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
+								} else if ((entity.getDirection()) == Direction.NORTH) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, (z - 3)), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, 0, (-1.5)));
 									}
-								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
+								} else if ((entity.getDirection()) == Direction.SOUTH) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, (z + 3)), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, 0, 1.5));
 									}
-								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
+								} else if ((entity.getDirection()) == Direction.WEST) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3((x - 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3((-1.5), 0, 0));
 									}
-								} else if ((entity.getDirection()).getAxis() == Direction.Axis.X) {
+								} else if ((entity.getDirection()) == Direction.EAST) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3((x + 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(1.5, 0, 0));
 									}
