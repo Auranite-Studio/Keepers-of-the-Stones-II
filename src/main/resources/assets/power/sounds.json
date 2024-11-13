@@ -178,13 +178,5 @@
         "stream": true
       }
     ]
-  },
-  "record.the_lost_powers_record": {
-    "sounds": [
-      {
-        "name": "power:the_lost_powers_record",
-        "stream": true
-      }
-    ]
   }
 }
