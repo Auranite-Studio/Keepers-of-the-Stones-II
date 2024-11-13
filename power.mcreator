@@ -35653,6 +35653,41 @@
         ]
       },
       "path": "~/ItemsAndBlocks/KeeperBook"
+    },
+    {
+      "name": "StoneReturnInKeeperBox",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_return_in_keeper_box",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StoneReturnInKeeperBoxProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [
@@ -36540,6 +36575,9 @@
       "~CUSTOM:CursedStoneBricksStairs",
       "~CUSTOM:CursedStoneStairs"
     ],
+    "BLOCKS:power:keepers_boxes": [
+      "CUSTOM:KeepersBox"
+    ],
     "BIOMES:minecraft:is_forest": [
       "CUSTOM:CursedForest"
     ],
@@ -37203,9 +37241,6 @@
       "Blocks.END_PORTAL_FRAME",
       "Blocks.PORTAL",
       "Blocks.BEDROCK"
-    ],
-    "BLOCKS:mod:keepers_boxes": [
-      "CUSTOM:KeepersBox"
     ],
     "ITEMS:minecraft:hoes": [
       "~CUSTOM:CreationHoe",
