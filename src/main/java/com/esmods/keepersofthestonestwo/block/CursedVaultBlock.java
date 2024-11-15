@@ -42,9 +42,9 @@ public class CursedVaultBlock extends Block implements EntityBlock {
 
 	public CursedVaultBlock() {
 		super(BlockBehaviour.Properties.of()
-				.sound(new ForgeSoundType(1.0f, 1.0f, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("intentionally_empty")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("intentionally_empty")),
-						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("intentionally_empty")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("intentionally_empty")),
-						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("intentionally_empty"))))
+				.sound(new ForgeSoundType(1.0f, 1.0f, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.break")),
+						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.step")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.place")),
+						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.netherite_block.hit")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.netherite_block.fall"))))
 				.strength(50f).lightLevel(s -> (new Object() {
 					public int getLightLevel() {
 						if (s.getValue(BLOCKSTATE) == 1)
