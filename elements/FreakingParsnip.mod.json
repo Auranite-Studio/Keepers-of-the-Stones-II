@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -43,6 +43,7 @@
     "projectile": {
       "value": "CUSTOM:MagicFireballProjectile"
     },
+    "projectileDisableAmmoCheck": false,
     "isFood": true,
     "nutritionalValue": 2,
     "saturation": 0.15,

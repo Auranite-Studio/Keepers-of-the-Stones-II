@@ -1,0 +1,25 @@
+{
+  "_fv": 69,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of the Golden Dust",
+    "icon": "gold_dust_master",
+    "color": {
+      "value": -13210,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
+    "onStarted": {
+      "name": "GoldenDustMasterStart"
+    },
+    "onExpired": {
+      "name": "GoldenDustMasterEnd"
+    }
+  }
+}

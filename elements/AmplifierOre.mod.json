@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "block",
   "definition": {
     "texture": "amplifier_ore",
@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Amplifier Ore",
     "specialInformation": {
       "fixedValue": []
@@ -133,9 +134,9 @@
       }
     ],
     "generationShape": "UNIFORM",
-    "frequencyPerChunks": 11,
+    "frequencyPerChunks": 6,
     "frequencyOnChunk": 7,
-    "minGenerateHeight": 32,
-    "maxGenerateHeight": 128
+    "minGenerateHeight": 16,
+    "maxGenerateHeight": 80
   }
 }

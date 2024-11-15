@@ -1,0 +1,31 @@
+{
+  "description": {
+    "translate": "enchantment.power.isolation"
+  },
+  "supported_items": [
+    "power:energium_pickaxe",
+    "power:energium_axe",
+    "power:energium_sword",
+    "power:energium_shovel",
+    "power:energium_hoe",
+    "power:energium_armor_helmet",
+    "power:energium_armor_chestplate",
+    "power:energium_armor_leggings",
+    "power:energium_armor_boots"
+  ],
+  "weight": 5,
+  "max_level": 1,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 2,
+  "slots": [
+    "mainhand"
+  ],
+  "exclusive_set": "power:revenge"
+}

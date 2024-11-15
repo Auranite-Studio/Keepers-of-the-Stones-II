@@ -19,7 +19,7 @@ public class AmplifierRingItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		AmplifierRingUseProcedure.execute(entity, ar.getObject());
+		AmplifierRingUseProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 }

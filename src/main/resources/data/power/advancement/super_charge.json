@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "power:empty_battery"
+    },
+    "title": {
+      "translate": "advancements.super_charge.title"
+    },
+    "description": {
+      "translate": "advancements.super_charge.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "super_charge_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "power:become_a_master"
+}

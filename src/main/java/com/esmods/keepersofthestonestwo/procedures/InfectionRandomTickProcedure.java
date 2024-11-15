@@ -41,7 +41,7 @@ public class InfectionRandomTickProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(entity == entityiterator)) {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(PowerModMobEffects.PLAGUE.get(), 3600, 0, false, true));
+								_entity.addEffect(new MobEffectInstance(PowerModMobEffects.PLAGUE, 3600, 0, false, true));
 						}
 					}
 				}

@@ -1,9 +1,9 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of the Rain",
-    "icon": "rain_master.png",
+    "icon": "rain_master",
     "color": {
       "value": -16751002,
       "falpha": 0.0
@@ -12,11 +12,11 @@
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
     "onStarted": {
       "name": "RainMasterStart"
-    },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
     },
     "onExpired": {
       "name": "RainMasterEnd"

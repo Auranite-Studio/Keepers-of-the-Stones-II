@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "power:cursed_forest",
-  "features": "power:basic_cursed_trees",
-  "step": "surface_structures"
-}

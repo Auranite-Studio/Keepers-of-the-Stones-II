@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 0.575,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "power:amplifier_ore"
+  },
+  "result": {
+    "id": "power:amplifier_drop"
+  }
+}

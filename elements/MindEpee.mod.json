@@ -1,0 +1,34 @@
+{
+  "_fv": 69,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "mind_epee",
+    "customModelName": "mind_epee:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Mind Epee",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [],
+    "efficiency": 12.0,
+    "attackSpeed": 2.0,
+    "enchantability": 0,
+    "damageVsEntity": 6.75,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": true
+    },
+    "repairItems": [],
+    "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "MindEpeeKazhdyiTikVInvientarie"
+    }
+  }
+}

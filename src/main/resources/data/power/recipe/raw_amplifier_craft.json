@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "power:raw_amplifier_block"
+    }
+  ],
+  "result": {
+    "id": "power:raw_amplifier",
+    "count": 9
+  }
+}

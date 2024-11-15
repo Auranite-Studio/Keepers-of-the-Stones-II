@@ -3,8 +3,8 @@
   "biomes": "power:cursed_forest",
   "spawners": {
     "type": "power:cursed_knight",
-    "weight": 20,
+    "weight": 4,
     "minCount": 1,
-    "maxCount": 3
+    "maxCount": 1
   }
 }

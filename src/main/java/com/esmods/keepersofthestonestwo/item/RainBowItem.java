@@ -1,11 +1,9 @@
 
 package com.esmods.keepersofthestonestwo.item;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BowItem;
@@ -16,8 +14,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 
-import com.esmods.keepersofthestonestwo.procedures.RainBowPoslieIspolzovaniiaSnariadaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RainBowKazhdyiTikVInvientarieProcedure;
 import com.esmods.keepersofthestonestwo.entity.RainDropProjectileEntity;
 
@@ -32,13 +30,8 @@ public class RainBowItem extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
+	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
 		return 72000;
-	}
-
-	@Override
-	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-		return 0f;
 	}
 
 	@Override
@@ -60,7 +53,7 @@ public class RainBowItem extends Item {
 	@Override
 	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
 		if (!world.isClientSide() && entity instanceof ServerPlayer player) {
-			float pullingPower = BowItem.getPowerForTime(this.getUseDuration(itemstack) - time);
+			float pullingPower = BowItem.getPowerForTime(this.getUseDuration(itemstack, player) - time);
 			if (pullingPower < 0.1)
 				return;
 			ItemStack stack = findAmmo(player);
@@ -70,34 +63,18 @@ public class RainBowItem extends Item {
 					projectile.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 				} else {
 					if (stack.isDamageableItem()) {
-						if (stack.hurt(1, world.getRandom(), player)) {
-							stack.shrink(1);
-							stack.setDamageValue(0);
-							if (stack.isEmpty())
-								player.getInventory().removeItem(stack);
-						}
+						if (world instanceof ServerLevel serverLevel)
+							stack.hurtAndBreak(1, serverLevel, player, _stkprov -> {
+							});
 					} else {
 						stack.shrink(1);
-						if (stack.isEmpty())
-							player.getInventory().removeItem(stack);
 					}
 				}
-				RainBowPoslieIspolzovaniiaSnariadaProcedure.execute(entity);
 			}
 		}
 	}
 
 	private ItemStack findAmmo(Player player) {
-		ItemStack stack = ProjectileWeaponItem.getHeldProjectile(player, e -> e.getItem() == RainDropProjectileEntity.PROJECTILE_ITEM.getItem());
-		if (stack == ItemStack.EMPTY) {
-			for (int i = 0; i < player.getInventory().items.size(); i++) {
-				ItemStack teststack = player.getInventory().items.get(i);
-				if (teststack != null && teststack.getItem() == RainDropProjectileEntity.PROJECTILE_ITEM.getItem()) {
-					stack = teststack;
-					break;
-				}
-			}
-		}
-		return stack;
+		return new ItemStack(RainDropProjectileEntity.PROJECTILE_ITEM.getItem());
 	}
 }

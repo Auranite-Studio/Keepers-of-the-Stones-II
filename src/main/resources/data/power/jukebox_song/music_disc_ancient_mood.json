@@ -1,0 +1,8 @@
+{
+  "comparator_output": 9,
+  "description": {
+    "translate": "item.power.music_disc_ancient_mood.desc"
+  },
+  "length_in_seconds": 203,
+  "sound_event": "power:record.ancient_mood"
+}

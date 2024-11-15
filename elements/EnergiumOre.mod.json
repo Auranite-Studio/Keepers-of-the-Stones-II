@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "block",
   "definition": {
     "texture": "energium_ore",
@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Energium Ore",
     "specialInformation": {
       "fixedValue": []
@@ -139,9 +140,9 @@
       }
     ],
     "generationShape": "TRIANGLE",
-    "frequencyPerChunks": 1,
+    "frequencyPerChunks": 2,
     "frequencyOnChunk": 4,
-    "minGenerateHeight": 24,
-    "maxGenerateHeight": 32
+    "minGenerateHeight": 16,
+    "maxGenerateHeight": 48
   }
 }

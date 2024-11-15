@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.PoisonousThornEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelpoisonous_thorn;
 
 public class PoisonousThornRenderer extends EntityRenderer<PoisonousThornEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/poisonous_thorn.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/poisonous_thorn.png");
 	private final Modelpoisonous_thorn model;
 
 	public PoisonousThornRenderer(EntityRendererProvider.Context context) {
@@ -30,7 +30,7 @@ public class PoisonousThornRenderer extends EntityRenderer<PoisonousThornEntity>
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
 		poseStack.mulPose(Axis.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
-		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY);
 		poseStack.popPose();
 		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
 	}

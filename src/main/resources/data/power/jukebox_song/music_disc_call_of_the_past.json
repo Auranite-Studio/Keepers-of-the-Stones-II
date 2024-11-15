@@ -1,0 +1,8 @@
+{
+  "comparator_output": 8,
+  "description": {
+    "translate": "item.power.music_disc_call_of_the_past.desc"
+  },
+  "length_in_seconds": 148,
+  "sound_event": "power:record.call_of_the_past"
+}

@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.TurretProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelturret_projectile;
 
 public class TurretProjectileRenderer extends EntityRenderer<TurretProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/turret_projectile.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/turret_projectile.png");
 	private final Modelturret_projectile model;
 
 	public TurretProjectileRenderer(EntityRendererProvider.Context context) {
@@ -30,7 +30,7 @@ public class TurretProjectileRenderer extends EntityRenderer<TurretProjectileEnt
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
 		poseStack.mulPose(Axis.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
-		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY);
 		poseStack.popPose();
 		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
 	}

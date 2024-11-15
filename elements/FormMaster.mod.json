@@ -1,0 +1,25 @@
+{
+  "_fv": 69,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Form ",
+    "icon": "form_master",
+    "color": {
+      "value": -39271,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
+    "onStarted": {
+      "name": "FormMasterStart"
+    },
+    "onExpired": {
+      "name": "FormMasterEnd"
+    }
+  }
+}

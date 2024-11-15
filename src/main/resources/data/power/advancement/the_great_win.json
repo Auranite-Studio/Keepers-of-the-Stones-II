@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "power:luck_coin"
+    },
+    "title": {
+      "translate": "advancements.the_great_win.title"
+    },
+    "description": {
+      "translate": "advancements.the_great_win.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "the_great_win_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "power:lets_bail_this_place_isdead"
+}

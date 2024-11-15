@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "power:energium_block"
+    },
+    {
+      "item": "power:energium_core"
+    }
+  ],
+  "result": {
+    "id": "power:energium_controller",
+    "count": 1
+  }
+}

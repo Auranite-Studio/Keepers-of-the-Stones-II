@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity
 import com.esmods.keepersofthestonestwo.client.model.Modelblock_attack;
 
 public class CobblestoneAttackProjectileRenderer extends EntityRenderer<CobblestoneAttackProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/cobblestone_attack.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/cobblestone_attack.png");
 	private final Modelblock_attack model;
 
 	public CobblestoneAttackProjectileRenderer(EntityRendererProvider.Context context) {
@@ -30,7 +30,7 @@ public class CobblestoneAttackProjectileRenderer extends EntityRenderer<Cobblest
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
 		poseStack.mulPose(Axis.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
-		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY);
 		poseStack.popPose();
 		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
 	}

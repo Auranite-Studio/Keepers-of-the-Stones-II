@@ -1,0 +1,261 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 192,
+    "height": 192,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_1",
+          "image": "wheel_button_1.png",
+          "hoveredImage": "wheel_button_1_highlight.png",
+          "onClick": {
+            "name": "OpenWheelOne"
+          },
+          "displayCondition": {
+            "name": "GetWheelTwoOrFirstFake"
+          },
+          "x": 258,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_2",
+          "image": "wheel_button_2.png",
+          "hoveredImage": "wheel_button_2_highlight.png",
+          "onClick": {
+            "name": "OpenWheelTwo"
+          },
+          "displayCondition": {
+            "name": "GetWheelTwo"
+          },
+          "x": 270,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_3",
+          "image": "wheel_button_3.png",
+          "hoveredImage": "wheel_button_3_highlight.png",
+          "onClick": {
+            "name": "OpenWheelThree"
+          },
+          "displayCondition": {
+            "name": "GetWheelThree"
+          },
+          "x": 282,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_1",
+          "image": "fake_wheel_button_1.png",
+          "hoveredImage": "fake_wheel_button_1_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelOne"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelOne"
+          },
+          "x": 258,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_2",
+          "image": "fake_wheel_button_2.png",
+          "hoveredImage": "fake_wheel_button_2_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelSecond"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelTwo"
+          },
+          "x": 270,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_3",
+          "image": "fake_wheel_button_3.png",
+          "hoveredImage": "fake_wheel_button_3_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelThird"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelThird"
+          },
+          "x": 282,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wheel_of_abilities.png",
+          "use1Xscale": false,
+          "x": 117,
+          "y": 24,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_psychowaves",
+          "image": "psychowaves.png",
+          "hoveredImage": "psychowaves_highlight.png",
+          "onClick": {
+            "name": "Attack181"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 190,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_hypnosis",
+          "image": "hypnosis.png",
+          "hoveredImage": "hypnosis_highlight.png",
+          "onClick": {
+            "name": "Attack182"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 251,
+          "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_remote_control_show_coords",
+          "image": "remote_control_show_coords.png",
+          "hoveredImage": "remote_control_show_coords_highlight.png",
+          "onClick": {
+            "name": "RemoteControl1"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 190,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_remote_controll_kill",
+          "image": "remote_controll_kill.png",
+          "hoveredImage": "remote_controll_kill_highlight.png",
+          "onClick": {
+            "name": "RemoteControl2"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 213,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_remote_controll_release",
+          "image": "remote_controll_release.png",
+          "hoveredImage": "remote_controll_release_highlight.png",
+          "onClick": {
+            "name": "RemoteControl3"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 190,
+          "y": 181,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_psychowaves_uses_15",
+          "text": {
+            "fixedValue": "Psychowaves, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 198,
+          "y": 46,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_hypnosis_uses_80",
+          "text": {
+            "fixedValue": "Hypnosis, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_remote_control_uses_25",
+          "text": {
+            "fixedValue": "Remote control, uses 25"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 167,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 4,
+      "sy": 4,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -18,7 +18,7 @@ public class PoisonPitRenderer extends HumanoidMobRenderer<PoisonPitEntity, Huma
 
 	@Override
 	public ResourceLocation getTextureLocation(PoisonPitEntity entity) {
-		return new ResourceLocation("power:textures/entities/empty_texture.png");
+		return ResourceLocation.parse("power:textures/entities/empty_texture.png");
 	}
 
 	@Override

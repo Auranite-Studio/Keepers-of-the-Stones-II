@@ -36,7 +36,7 @@ public class PlagueBombDetonateProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.PLAGUE.get(), 3600, 0));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.PLAGUE, 3600, 0));
 			}
 		}
 	}

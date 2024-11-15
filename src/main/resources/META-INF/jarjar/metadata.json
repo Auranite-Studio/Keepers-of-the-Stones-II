@@ -7,9 +7,21 @@
       },
       "version": {
         "range": "[0,)",
-        "artifactVersion": "16"
+        "artifactVersion": "18"
       },
-      "path": "META-INF/jarjar/cpapi-v16.jar",
+      "path": "META-INF/jarjar/cpapi-v18.jar",
+      "isObfuscated": true
+    },
+    {
+      "identifier": {
+        "group": "com.zigythebird.playeranimatorapi",
+        "artifact": "playeranimatorapi"
+      },
+      "version": {
+        "range": "[0,)",
+        "artifactVersion": "2.2.0"
+      },
+      "path": "META-INF/jarjar/playeranimatorapi-neoforge-1.21-2.2.0.jar",
       "isObfuscated": true
     }
   ]

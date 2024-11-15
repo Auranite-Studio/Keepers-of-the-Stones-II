@@ -1,9 +1,9 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of Mushrooms",
-    "icon": "mushrooms_master.png",
+    "icon": "mushrooms_master",
     "color": {
       "value": -6750055,
       "falpha": 0.0
@@ -12,11 +12,11 @@
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
     "onStarted": {
       "name": "MushroomsMasterStart"
-    },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
     },
     "onExpired": {
       "name": "MushroomsMasterEnd"

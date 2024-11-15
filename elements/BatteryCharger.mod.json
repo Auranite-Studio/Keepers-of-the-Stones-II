@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "block",
   "definition": {
     "texture": "battery_charger_bottom",
@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Battery Charger",
     "specialInformation": {
       "fixedValue": []
@@ -58,7 +59,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "IRON"
+      "value": "NONE"
     },
     "tickRate": 1,
     "tickRandomly": false,

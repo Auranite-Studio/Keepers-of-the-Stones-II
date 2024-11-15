@@ -1,0 +1,25 @@
+{
+  "_fv": 69,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of the Mind",
+    "icon": "mind_master",
+    "color": {
+      "value": -26215,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
+    "onStarted": {
+      "name": "MindMasterStart"
+    },
+    "onExpired": {
+      "name": "MindMasterEnd"
+    }
+  }
+}

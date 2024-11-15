@@ -1,0 +1,8 @@
+
+{
+ 	"sources": [
+  	{
+  		"type": "single",
+  		"resource": "power:screens/battery_charger_progress"
+  	} 	]
+}

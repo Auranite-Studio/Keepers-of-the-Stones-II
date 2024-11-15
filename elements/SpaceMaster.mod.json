@@ -1,9 +1,9 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of Space",
-    "icon": "space_master.png",
+    "icon": "space_master",
     "color": {
       "value": -13434727,
       "falpha": 0.0
@@ -12,11 +12,11 @@
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
     "onStarted": {
       "name": "SpaceMasterStart"
-    },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
     },
     "onExpired": {
       "name": "SpaceMasterEnd"

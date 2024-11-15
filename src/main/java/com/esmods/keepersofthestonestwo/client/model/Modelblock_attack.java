@@ -21,7 +21,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class Modelblock_attack<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("power", "modelblock_attack"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("power", "modelblock_attack"), "main");
 	public final ModelPart block;
 
 	public Modelblock_attack(ModelPart root) {
@@ -40,7 +40,7 @@ public class Modelblock_attack<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		block.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
+		block.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 	}
 }

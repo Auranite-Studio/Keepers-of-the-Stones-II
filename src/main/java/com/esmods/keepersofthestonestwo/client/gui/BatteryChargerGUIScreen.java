@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo.client.gui;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -13,11 +14,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
-import com.esmods.keepersofthestonestwo.procedures.BatteryChargerProgress5Procedure;
-import com.esmods.keepersofthestonestwo.procedures.BatteryChargerProgress4Procedure;
-import com.esmods.keepersofthestonestwo.procedures.BatteryChargerProgress3Procedure;
-import com.esmods.keepersofthestonestwo.procedures.BatteryChargerProgress2Procedure;
-import com.esmods.keepersofthestonestwo.procedures.BatteryChargerProgress1Procedure;
+import com.esmods.keepersofthestonestwo.procedures.BatteryChargerProgressv2Procedure;
 
 public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChargerGUIMenu> {
 	private final static HashMap<String, Object> guistate = BatteryChargerGUIMenu.guistate;
@@ -49,23 +46,10 @@ public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChar
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/battery_charger_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
-		if (BatteryChargerProgress1Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_1.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
-		}
-		if (BatteryChargerProgress2Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_2.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
-		}
-		if (BatteryChargerProgress3Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_3.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
-		}
-		if (BatteryChargerProgress4Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_4.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
-		}
-		if (BatteryChargerProgress5Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_5.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
-		}
+		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/battery_charger_progress.png"), this.leftPos + 38, this.topPos + 15, 0, Mth.clamp((int) BatteryChargerProgressv2Procedure.execute(world, x, y, z) * 8, 0, 800), 100, 8, 100, 808);
+
 		RenderSystem.disableBlend();
 	}
 

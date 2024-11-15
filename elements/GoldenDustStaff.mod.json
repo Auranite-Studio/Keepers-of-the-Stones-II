@@ -1,0 +1,34 @@
+{
+  "_fv": 69,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "golden_dust_staff",
+    "customModelName": "golden_dust_staff:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Golden Dust Staff",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [],
+    "efficiency": 12.0,
+    "attackSpeed": 1.36,
+    "enchantability": 0,
+    "damageVsEntity": 10.35,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": true
+    },
+    "repairItems": [],
+    "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "GoldenDustStaffKazhdyiTikVInvientarie"
+    }
+  }
+}

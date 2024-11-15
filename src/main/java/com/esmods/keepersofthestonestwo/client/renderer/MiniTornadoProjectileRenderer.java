@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.MiniTornadoProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelmini_tornado;
 
 public class MiniTornadoProjectileRenderer extends EntityRenderer<MiniTornadoProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/minitornado.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/minitornado.png");
 	private final Modelmini_tornado model;
 
 	public MiniTornadoProjectileRenderer(EntityRendererProvider.Context context) {
@@ -30,7 +30,7 @@ public class MiniTornadoProjectileRenderer extends EntityRenderer<MiniTornadoPro
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
 		poseStack.mulPose(Axis.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
-		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY);
 		poseStack.popPose();
 		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
 	}

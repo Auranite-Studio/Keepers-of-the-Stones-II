@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 public class CursedLanternAfterAddedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world.getBlockState(BlockPos.containing(x, y + 1, z)).isFaceSturdy(world, BlockPos.containing(x, y + 1, z), Direction.DOWN)
-				^ (world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("minecraft:fences")))) {
+				^ (world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:fences")))) {
 			{
 				int _value = 0;
 				BlockPos _pos = BlockPos.containing(x, y, z);
@@ -20,7 +20,7 @@ public class CursedLanternAfterAddedProcedure {
 					world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 			}
 		} else if (world.getBlockState(BlockPos.containing(x, y - 1, z)).isFaceSturdy(world, BlockPos.containing(x, y - 1, z), Direction.UP)
-				^ (world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(new ResourceLocation("minecraft:fences")))) {
+				^ (world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:fences")))) {
 			{
 				int _value = 1;
 				BlockPos _pos = BlockPos.containing(x, y, z);

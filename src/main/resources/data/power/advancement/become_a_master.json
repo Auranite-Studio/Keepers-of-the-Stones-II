@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "power:fire_armor_chestplate"
+    },
+    "title": {
+      "translate": "advancements.become_a_master.title"
+    },
+    "description": {
+      "translate": "advancements.become_a_master.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "become_a_master_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "power:the_great_win"
+}

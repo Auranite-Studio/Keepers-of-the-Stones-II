@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "power:textures/screens/ach_theme.png",
+    "icon": {
+      "id": "power:keepers_box"
+    },
+    "title": {
+      "translate": "advancements.keepers_of_the_stones_2.title"
+    },
+    "description": {
+      "translate": "advancements.keepers_of_the_stones_2.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "keepers_of_the_stones_2_0": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

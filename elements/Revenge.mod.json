@@ -1,27 +1,25 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Revenge",
-    "type": "WEAPON",
-    "rarity": "UNCOMMON",
+    "supportedSlots": "mainhand",
+    "weight": 5,
+    "anvilCost": 2,
     "maxLevel": 3,
     "damageModifier": 0,
-    "compatibleEnchantments": [
+    "incompatibleEnchantments": [
       {
         "value": "CUSTOM:Isolation"
       }
     ],
-    "excludeEnchantments": true,
-    "compatibleItems": [
+    "supportedItems": [
       {
         "value": "TAG:minecraft:tools"
       }
     ],
-    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

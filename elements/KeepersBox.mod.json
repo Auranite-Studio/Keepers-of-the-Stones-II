@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "block",
   "definition": {
     "texture": "keepers_box",
@@ -222,6 +222,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Keeper's Box",
     "specialInformation": {
       "fixedValue": []

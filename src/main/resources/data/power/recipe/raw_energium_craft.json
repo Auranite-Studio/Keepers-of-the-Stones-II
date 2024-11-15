@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "power:raw_energium_block"
+    }
+  ],
+  "result": {
+    "id": "power:raw_energium",
+    "count": 9
+  }
+}

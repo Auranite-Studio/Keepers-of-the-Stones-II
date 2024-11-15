@@ -1,7 +1,7 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "procedure",
   "definition": {
-    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"entity_execute_command\"><value name=\"command\"><block type=\"text\"><field name=\"TEXT\">particle minecraft:dust 0.5 0.5 0.5 5.0 ~ ~10 ~ 2 10 2 10 100 force</field></block></value><value name=\"entity\"><block type=\"entity_from_deps\"/></value></block></next></block></xml>"
+    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"entity_execute_command\"><value name=\"command\"><block type=\"text\"><field name=\"TEXT\">particle dust{color:[0.502,0.502,0.502],scale:4} ~ ~10 ~ 2 10 2 10 100 force</field></block></value><value name=\"entity\"><block type=\"entity_from_deps\"/></value></block></next></block></xml>"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/golden_dust_staff",
+  "textures": {
+    "0": "power:block/golden_dust_staff",
+    "particle": "power:item/golden_dust_staff"
+  }
+}

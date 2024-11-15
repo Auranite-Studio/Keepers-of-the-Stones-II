@@ -1,11 +1,9 @@
 
 package com.esmods.keepersofthestonestwo.item;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -15,6 +13,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 
 import com.esmods.keepersofthestonestwo.procedures.SmokeMusketPriVystrielieSnariadomIzPriedmietaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SmokeMusketKazhdyiTikVInvientarieProcedure;
@@ -31,13 +30,8 @@ public class SmokeMusketItem extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
+	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
 		return 72000;
-	}
-
-	@Override
-	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-		return 0f;
 	}
 
 	@Override
@@ -66,16 +60,11 @@ public class SmokeMusketItem extends Item {
 					projectile.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 				} else {
 					if (stack.isDamageableItem()) {
-						if (stack.hurt(1, world.getRandom(), player)) {
-							stack.shrink(1);
-							stack.setDamageValue(0);
-							if (stack.isEmpty())
-								player.getInventory().removeItem(stack);
-						}
+						if (world instanceof ServerLevel serverLevel)
+							stack.hurtAndBreak(1, serverLevel, player, _stkprov -> {
+							});
 					} else {
 						stack.shrink(1);
-						if (stack.isEmpty())
-							player.getInventory().removeItem(stack);
 					}
 				}
 				SmokeMusketPriVystrielieSnariadomIzPriedmietaProcedure.execute(entity);
@@ -84,16 +73,6 @@ public class SmokeMusketItem extends Item {
 	}
 
 	private ItemStack findAmmo(Player player) {
-		ItemStack stack = ProjectileWeaponItem.getHeldProjectile(player, e -> e.getItem() == SmokeMusketProjectileEntity.PROJECTILE_ITEM.getItem());
-		if (stack == ItemStack.EMPTY) {
-			for (int i = 0; i < player.getInventory().items.size(); i++) {
-				ItemStack teststack = player.getInventory().items.get(i);
-				if (teststack != null && teststack.getItem() == SmokeMusketProjectileEntity.PROJECTILE_ITEM.getItem()) {
-					stack = teststack;
-					break;
-				}
-			}
-		}
-		return stack;
+		return new ItemStack(SmokeMusketProjectileEntity.PROJECTILE_ITEM.getItem());
 	}
 }

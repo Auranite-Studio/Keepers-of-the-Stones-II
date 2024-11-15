@@ -11,6 +11,6 @@ public class EnergiumOreClickProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 100, 0));
+			_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK, 100, 0));
 	}
 }

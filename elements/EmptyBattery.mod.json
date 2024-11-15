@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -14,10 +14,10 @@
         "value": "CUSTOM:Batteries"
       }
     ],
-    "stackSize": 1,
+    "stackSize": 16,
     "enchantability": 0,
     "useDuration": 0,
-    "toolType": 0.0,
+    "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
       "value": ""
@@ -44,6 +44,7 @@
     "projectile": {
       "value": "CUSTOM:MagicFireballProjectile"
     },
+    "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

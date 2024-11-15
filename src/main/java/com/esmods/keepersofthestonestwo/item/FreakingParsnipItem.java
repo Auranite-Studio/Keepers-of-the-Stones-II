@@ -7,6 +7,6 @@ import net.minecraft.world.food.FoodProperties;
 
 public class FreakingParsnipItem extends Item {
 	public FreakingParsnipItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.15f).build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(2).saturationModifier(0.15f).build()));
 	}
 }

@@ -31,7 +31,7 @@ public class NoteBombProjectileKoghdaSnariadPopadaietVBlokProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.STUN.get(), 300, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.STUN, 300, 0, false, false));
 			}
 		}
 	}

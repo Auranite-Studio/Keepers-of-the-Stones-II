@@ -11,6 +11,6 @@ public class SoundBombProjectileKoghdaSnariadPopadaietVSushchnostProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(PowerModMobEffects.STUN.get(), 300, 0, false, false));
+			_entity.addEffect(new MobEffectInstance(PowerModMobEffects.STUN, 300, 0, false, false));
 	}
 }

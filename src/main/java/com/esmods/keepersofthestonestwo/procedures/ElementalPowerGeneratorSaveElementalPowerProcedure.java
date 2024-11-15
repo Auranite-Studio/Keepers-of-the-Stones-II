@@ -7,9 +7,12 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.AdvancementHolder;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -34,9 +37,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 					});
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.activate")), SoundSource.BLOCKS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.activate")), SoundSource.BLOCKS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.activate")), SoundSource.BLOCKS, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.activate")), SoundSource.BLOCKS, 1, 1, false);
 						}
 					}
 					{
@@ -45,6 +48,16 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 						BlockState _bs = world.getBlockState(_pos);
 						if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
 							world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+					}
+					if (entity instanceof ServerPlayer _player) {
+						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("power:grant_your_power"));
+						if (_adv != null) {
+							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+							if (!_ap.isDone()) {
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
+							}
+						}
 					}
 				} else {
 					PowerMod.queueServerWork(1, () -> {
@@ -60,9 +73,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 					});
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.deactivate")), SoundSource.BLOCKS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.deactivate")), SoundSource.BLOCKS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.deactivate")), SoundSource.BLOCKS, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.deactivate")), SoundSource.BLOCKS, 1, 1, false);
 						}
 					}
 					{
@@ -113,9 +126,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
 									}
 								}
 								{
@@ -166,9 +179,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
 									}
 								}
 								{
@@ -220,9 +233,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
 									}
 								}
 								{

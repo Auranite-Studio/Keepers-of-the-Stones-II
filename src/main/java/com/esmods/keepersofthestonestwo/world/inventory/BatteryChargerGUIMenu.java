@@ -93,7 +93,7 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return stack.is(ItemTags.create(new ResourceLocation("power:elemental_stones")));
+				return stack.is(ItemTags.create(ResourceLocation.parse("power:elemental_stones")));
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 80, 35) {
@@ -174,25 +174,25 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 				}
 				Slot slot = this.slots.get(i);
 				ItemStack itemstack = slot.getItem();
-				if (slot.mayPlace(itemstack) && !itemstack.isEmpty() && ItemStack.isSameItemSameTags(p_38904_, itemstack)) {
+				if (slot.mayPlace(itemstack) && !itemstack.isEmpty() && ItemStack.isSameItemSameComponents(p_38904_, itemstack)) {
 					int j = itemstack.getCount() + p_38904_.getCount();
-					int maxSize = Math.min(slot.getMaxStackSize(), p_38904_.getMaxStackSize());
-					if (j <= maxSize) {
+					int k = slot.getMaxStackSize(itemstack);
+					if (j <= k) {
 						p_38904_.setCount(0);
 						itemstack.setCount(j);
 						slot.set(itemstack);
 						flag = true;
-					} else if (itemstack.getCount() < maxSize) {
-						p_38904_.shrink(maxSize - itemstack.getCount());
-						itemstack.setCount(maxSize);
+					} else if (itemstack.getCount() < k) {
+						p_38904_.shrink(k - itemstack.getCount());
+						itemstack.setCount(k);
 						slot.set(itemstack);
 						flag = true;
 					}
 				}
 				if (p_38907_) {
-					--i;
+					i--;
 				} else {
-					++i;
+					i++;
 				}
 			}
 		}
@@ -213,19 +213,16 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 				Slot slot1 = this.slots.get(i);
 				ItemStack itemstack1 = slot1.getItem();
 				if (itemstack1.isEmpty() && slot1.mayPlace(p_38904_)) {
-					if (p_38904_.getCount() > slot1.getMaxStackSize()) {
-						slot1.setByPlayer(p_38904_.split(slot1.getMaxStackSize()));
-					} else {
-						slot1.setByPlayer(p_38904_.split(p_38904_.getCount()));
-					}
+					int l = slot1.getMaxStackSize(p_38904_);
+					slot1.setByPlayer(p_38904_.split(Math.min(p_38904_.getCount(), l)));
 					slot1.setChanged();
 					flag = true;
 					break;
 				}
 				if (p_38907_) {
-					--i;
+					i--;
 				} else {
-					++i;
+					i++;
 				}
 			}
 		}

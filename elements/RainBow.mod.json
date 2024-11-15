@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "item",
   "definition": {
     "renderType": 1,
@@ -13,7 +13,7 @@
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 72000,
-    "toolType": 0.0,
+    "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
       "value": ""
@@ -42,9 +42,7 @@
     "projectile": {
       "value": "CUSTOM:RainDropProjectile"
     },
-    "onRangedItemUsed": {
-      "name": "RainBowPoslieIspolzovaniiaSnariada"
-    },
+    "projectileDisableAmmoCheck": true,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

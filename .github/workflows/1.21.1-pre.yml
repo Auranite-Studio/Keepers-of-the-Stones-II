@@ -1,0 +1,98 @@
+# Automatically builds and publishes the mod when a new release is created on GitHub.
+# It uploads the mod to GitHub, CurseForge and Modrinth.
+
+name: Pre-Release & Release Candidate
+
+on:
+  push:
+    branches:
+      - "1.21.1-pre"
+env:                                              
+  MINECRAFT_VERSION: 1.21.1                      
+  JAVA_VERSION: 21      
+  VERSION: 1.0.0-rc1
+  RELEASE_NAME: Keepers of the Stones II 1.0.0 Release Candidate 1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest                        
+    steps:                                        
+      - name: Check Environment Variables
+        run: env
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: "temurin"
+          java-version: 21
+
+      - name: Make Gradle Wrapper Executable
+        if: ${{ runner.os != 'Windows' }}
+        run: chmod +x ./gradlew
+
+      - name: Build
+        run: ./gradlew build
+
+      - name: Publish mod to CurseForge and Modrinth
+        id: publish
+        uses: Kir-Antipov/mc-publish@v3.3.0
+        with:
+          curseforge-id: 906406
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          modrinth-id: hKbKT6ME
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          
+          name: "${{env.RELEASE_NAME}}"                             
+          version: "${{env.VERSION}}"
+          version-type: beta
+          changelog-file: BETA_CHANGELOG.md                                      
+
+          loaders: |
+            neoforge
+          game-versions: "${{env.MINECRAFT_VERSION}}"
+          java: "${{env.JAVA_VERSION}}"
+          dependencies: |
+            required-dependency
+            optional-dependency@0.1.0(optional)
+            recommended-dependency@0.2.0(recommended)
+            embedded-dependency@0.3.0(embedded)
+            conflicting-dependency(conflicting)
+            incompatible-dependency(incompatible)
+            geckolib(required){modrinth:8BmcQJ2H}{curseforge:388172}#(ignore:github)
+            playeranimator(required){modrinth:gedNE4y2}{curseforge:658587}#(ignore:github)
+            pehkui(required){modrinth:t5W7Jfwy}{curseforge:319596}#(ignore:github)
+            better-combat(recommended){modrinth:8BmcQJ2H}{curseforge:639842}#(ignore:github)
+            epic-fight(incompatible){modrinth:vu3NZ5Ma}{curseforge:405076}#(ignore:github)
+          modrinth-featured: false
+          fail-mode: warn
+      - name: Send Discord webhook
+        uses: Ilshidur/action-discord@0.3.2
+        with:
+          args: "<@&1195647504730050670>"
+        env:
+          DISCORD_WEBHOOK: "${{secrets.DISCORD_WEBHOOK}}"
+          DISCORD_EMBEDS: |
+            [{
+              "title": "${{env.RELEASE_NAME}} for Minecraft ${{env.MINECRAFT_VERSION}} Released",
+              "color": 285786,
+              "thumbnail": {
+                "url": "https://sun9-46.userapi.com/impg/KjoKaipv7nUE92Gv31ayUUMYaf5fzo9DDdHAZA/Aeg7SVdK8Tc.jpg?size=1920x1080&quality=95&sign=f64a55015b32b9b16e0166ac1945c004&type=album"
+              },
+              "url": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones-ii",
+              "fields": [
+                  {
+                    "name": "Download now:",
+                    "value": "[<:curseforge:805066577871110196> CurseForge](https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones-ii)\n[<:modrinth:805066578215043092> Modrinth](https://modrinth.com/mod/keepers-of-the-stones-2)\n[<:github:805066578164580392> GitHub](https://github.com/Environment-Studios-Official/Keepers-of-the-Stones-2)",
+                    "inline": true
+                  }
+              ],
+              "footer": {
+                "text": "Created by the Environment Studios team!",
+                "icon_url": "https://sun9-2.userapi.com/impg/uV8n02lvJ-IPojMugzVzla-mS1XNSYxP7kK37w/dFRlvkG06Pg.jpg?size=2268x2268&quality=95&sign=d1bc84ea1e0be3a5ad198ce9f1227b11&type=album"
+              }
+            }]

@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "procedure",
   "definition": {
     "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><variables><variable id=\"XPar\" type=\"Number\">XPar</variable><variable id=\"YPar\" type=\"Number\">YPar</variable><variable id=\"loop\" type=\"Number\">loop</variable><variable id=\"Range\" type=\"Number\">Range</variable><variable id=\"particles\" type=\"Number\">particles</variable><variable id=\"ZPar\" type=\"Number\">ZPar</variable></variables><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">entity_attacked</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_entity_compare\"><field name=\"entity\">CUSTOM:EnergiumGolem</field><value name=\"compareTo\"><block type=\"source_entity_from_deps\"/></value></block></value><statement name=\"DO0\"><block type=\"cancel_event\"/></statement></block></next></block></xml>"

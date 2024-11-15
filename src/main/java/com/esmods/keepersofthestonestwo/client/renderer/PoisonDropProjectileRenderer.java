@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.PoisonDropProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelrain_drop;
 
 public class PoisonDropProjectileRenderer extends EntityRenderer<PoisonDropProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/poison_drop.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/poison_drop.png");
 	private final Modelrain_drop model;
 
 	public PoisonDropProjectileRenderer(EntityRendererProvider.Context context) {
@@ -30,7 +30,7 @@ public class PoisonDropProjectileRenderer extends EntityRenderer<PoisonDropProje
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
 		poseStack.mulPose(Axis.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
-		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY);
 		poseStack.popPose();
 		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
 	}

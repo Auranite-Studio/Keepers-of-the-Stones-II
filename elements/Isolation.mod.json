@@ -1,19 +1,19 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "enchantment",
   "definition": {
     "name": "Isolation",
-    "type": "WEAPON",
-    "rarity": "UNCOMMON",
+    "supportedSlots": "mainhand",
+    "weight": 5,
+    "anvilCost": 2,
     "maxLevel": 1,
     "damageModifier": 0,
-    "compatibleEnchantments": [
+    "incompatibleEnchantments": [
       {
         "value": "CUSTOM:Revenge"
       }
     ],
-    "excludeEnchantments": true,
-    "compatibleItems": [
+    "supportedItems": [
       {
         "value": "CUSTOM:EnergiumPickaxe"
       },
@@ -42,10 +42,8 @@
         "value": "CUSTOM:EnergiumArmor.boots"
       }
     ],
-    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

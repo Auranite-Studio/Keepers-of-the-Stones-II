@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "a a",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "power:energium_ingot"
+    }
+  },
+  "result": {
+    "id": "power:energium_armor_leggings",
+    "count": 1
+  }
+}

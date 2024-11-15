@@ -1,0 +1,227 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 192,
+    "height": 192,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_1",
+          "image": "wheel_button_1.png",
+          "hoveredImage": "wheel_button_1_highlight.png",
+          "onClick": {
+            "name": "OpenWheelOne"
+          },
+          "displayCondition": {
+            "name": "GetWheelTwoOrFirstFake"
+          },
+          "x": 258,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_2",
+          "image": "wheel_button_2.png",
+          "hoveredImage": "wheel_button_2_highlight.png",
+          "onClick": {
+            "name": "OpenWheelTwo"
+          },
+          "displayCondition": {
+            "name": "GetWheelTwo"
+          },
+          "x": 270,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_3",
+          "image": "wheel_button_3.png",
+          "hoveredImage": "wheel_button_3_highlight.png",
+          "onClick": {
+            "name": "OpenWheelThree"
+          },
+          "displayCondition": {
+            "name": "GetWheelThree"
+          },
+          "x": 282,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_1",
+          "image": "fake_wheel_button_1.png",
+          "hoveredImage": "fake_wheel_button_1_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelOne"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelOne"
+          },
+          "x": 258,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_2",
+          "image": "fake_wheel_button_2.png",
+          "hoveredImage": "fake_wheel_button_2_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelSecond"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelTwo"
+          },
+          "x": 270,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_3",
+          "image": "fake_wheel_button_3.png",
+          "hoveredImage": "fake_wheel_button_3_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelThird"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelThird"
+          },
+          "x": 282,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wheel_of_abilities.png",
+          "use1Xscale": false,
+          "x": 117,
+          "y": 24,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_golden_dust_attack",
+          "image": "golden_dust_attack.png",
+          "hoveredImage": "golden_dust_attack_highlight.png",
+          "onClick": {
+            "name": "Attack185"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 190,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_random_power",
+          "image": "random_power.png",
+          "hoveredImage": "random_power_highlight.png",
+          "onClick": {
+            "name": "Attack186"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 251,
+          "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_golden_dust_regeneration",
+          "image": "golden_dust_regeneration.png",
+          "hoveredImage": "golden_dust_regeneration_highlight.png",
+          "onClick": {
+            "name": "Attack187"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 190,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_golden_dust_attack_uses_15",
+          "text": {
+            "fixedValue": "Golden dust attack, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 48,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_random_power_uses_80",
+          "text": {
+            "fixedValue": "Random power, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_golden_dust_regeneration_uses",
+          "text": {
+            "fixedValue": "Golden dust regeneration, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 170,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 4,
+      "sy": 4,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

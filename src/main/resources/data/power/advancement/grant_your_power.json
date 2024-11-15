@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "power:elemental_power_generator"
+    },
+    "title": {
+      "translate": "advancements.grant_your_power.title"
+    },
+    "description": {
+      "translate": "advancements.grant_your_power.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "grant_your_power_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "power:become_a_master"
+}
