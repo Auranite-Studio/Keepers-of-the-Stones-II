@@ -1,0 +1,9 @@
+{
+  "asset_name": "copyrium_material",
+  "description": {
+    "color": "#43C786",
+    "translate": "trim_material.power.copyrium_material"
+  },
+  "ingredient": "power:copyrium_ingot",
+  "item_model_index": 0.0
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "amplifier_material",
+  "description": {
+    "color": "#5491D3",
+    "translate": "trim_material.power.amplifier_material"
+  },
+  "ingredient": "power:amplifier_drop",
+  "item_model_index": 0.0
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "power:polished_cursed_stone"
+  },
+  "result": "power:polished_cursed_stone_wall"
+}

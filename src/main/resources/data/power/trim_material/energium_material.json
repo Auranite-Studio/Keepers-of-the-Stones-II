@@ -1,0 +1,9 @@
+{
+  "asset_name": "energium_material",
+  "description": {
+    "color": "#C29939",
+    "translate": "trim_material.power.energium_material"
+  },
+  "ingredient": "power:energium_ingot",
+  "item_model_index": 0.0
+}

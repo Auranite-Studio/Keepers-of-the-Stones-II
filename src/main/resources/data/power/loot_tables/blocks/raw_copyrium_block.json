@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "power:blocks/raw_copyrium_block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "power:raw_copyrium_block"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "power:energium_pickaxe",
+    "power:energium_axe",
+    "power:energium_sword",
+    "power:energium_shovel",
+    "power:energium_hoe",
+    "power:creation_sword",
+    "power:creation_pickaxe",
+    "power:creation_axe",
+    "power:creation_hoe",
+    "power:creation_shovel"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "depleted_energium_material",
+  "description": {
+    "color": "#7B2318",
+    "translate": "trim_material.power.depleted_energium_material"
+  },
+  "ingredient": "power:depleted_energium_ingot",
+  "item_model_index": 0.0
+}

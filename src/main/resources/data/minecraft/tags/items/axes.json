@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "power:mercury_battle_axe",
+    "power:creation_axe",
+    "power:energium_axe",
+    "power:tornado_axe"
+  ]
+}

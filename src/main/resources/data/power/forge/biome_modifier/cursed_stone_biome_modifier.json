@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "power:cursed_forest",
+  "features": "power:cursed_stone",
+  "step": "underground_ores"
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "power:energium_core"
+    },
+    "title": {
+      "translate": "advancements.the_end_of_tyranny.title"
+    },
+    "description": {
+      "translate": "advancements.the_end_of_tyranny.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "the_end_of_tyranny_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "power:what_is_this_metal"
+}

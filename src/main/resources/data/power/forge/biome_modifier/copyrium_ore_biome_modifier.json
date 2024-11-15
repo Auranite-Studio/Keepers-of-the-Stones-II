@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "ice_spikes",
+    "snowy_slopes",
+    "snowy_beach",
+    "snowy_plains",
+    "snowy_taiga"
+  ],
+  "features": "power:copyrium_ore",
+  "step": "underground_ores"
+}

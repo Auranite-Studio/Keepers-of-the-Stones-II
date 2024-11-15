@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "power:copyrium_block"
+    }
+  ],
+  "result": {
+    "item": "power:copyrium_ingot",
+    "count": 9
+  }
+}
