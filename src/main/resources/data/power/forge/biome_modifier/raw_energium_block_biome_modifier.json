@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#is_mountain",
-  "features": "power:raw_energium_block",
-  "step": "underground_ores"
-}
