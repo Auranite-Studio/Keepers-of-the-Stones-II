@@ -39589,7 +39589,6 @@
     "modPicture": "logo",
     "requiredMods": [
       "pehkui",
-      "playeranimatorapi",
       "geckolib",
       "playeranimator"
     ],
