@@ -5,6 +5,7 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 public class PowerConfigConfiguration {
 	public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 	public static final ModConfigSpec SPEC;
+
 	public static final ModConfigSpec.ConfigValue<Double> MASTER_EFFECT_DURATION;
 	public static final ModConfigSpec.ConfigValue<Double> RECHARGE_TIMER;
 	static {
