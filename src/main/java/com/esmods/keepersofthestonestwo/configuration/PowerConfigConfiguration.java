@@ -5,6 +5,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
 public class PowerConfigConfiguration {
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	public static final ForgeConfigSpec SPEC;
+
 	public static final ForgeConfigSpec.ConfigValue<Double> MASTER_EFFECT_DURATION;
 	public static final ForgeConfigSpec.ConfigValue<Double> RECHARGE_TIMER;
 	static {
