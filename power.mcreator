@@ -39830,7 +39830,6 @@
     "modPicture": "logo",
     "requiredMods": [
       "pehkui",
-      "playeranimatorapi",
       "geckolib",
       "playeranimator"
     ],
@@ -39845,7 +39844,7 @@
       "geckolib",
       "playeranimator"
     ],
-    "currentGenerator": "neoforge-1.21.1",
+    "currentGenerator": "forge-1.20.1",
     "credits": "Created by Environment Studios",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
