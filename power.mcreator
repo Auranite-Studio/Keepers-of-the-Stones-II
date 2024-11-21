@@ -35569,6 +35569,25 @@
         ]
       },
       "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "ItemRotationWorldTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "item_rotation_world_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ItemRotationWorldTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Vaults"
     }
   ],
   "variable_elements": [
