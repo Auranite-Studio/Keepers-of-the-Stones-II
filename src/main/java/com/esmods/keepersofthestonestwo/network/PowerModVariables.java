@@ -76,9 +76,6 @@ public class PowerModVariables {
 			clone.fake_element_name_first = original.fake_element_name_first;
 			clone.fake_element_name_second = original.fake_element_name_second;
 			clone.fake_element_name_third = original.fake_element_name_third;
-			clone.first_booster_slot = original.first_booster_slot;
-			clone.second_booster_slot = original.second_booster_slot;
-			clone.third_booster_slot = original.third_booster_slot;
 			clone.max_power = original.max_power;
 			clone.selected = original.selected;
 			clone.active_battery = original.active_battery;
@@ -434,9 +431,6 @@ public class PowerModVariables {
 		public double fake_element_name_first_timer = 0;
 		public double fake_element_name_second_timer = 0;
 		public double fake_element_name_third_timer = 0;
-		public String first_booster_slot = "0";
-		public String second_booster_slot = "0";
-		public String third_booster_slot = "0";
 		public double power = 0.0;
 		public double powerTimer = 0.0;
 		public double mergers = 0.0;
@@ -481,9 +475,6 @@ public class PowerModVariables {
 			nbt.putDouble("fake_element_name_first_timer", fake_element_name_first_timer);
 			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
 			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
-			nbt.putString("first_booster_slot", first_booster_slot);
-			nbt.putString("second_booster_slot", second_booster_slot);
-			nbt.putString("third_booster_slot", third_booster_slot);
 			nbt.putDouble("power", power);
 			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putDouble("mergers", mergers);
@@ -529,9 +520,6 @@ public class PowerModVariables {
 			fake_element_name_first_timer = nbt.getDouble("fake_element_name_first_timer");
 			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
 			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
-			first_booster_slot = nbt.getString("first_booster_slot");
-			second_booster_slot = nbt.getString("second_booster_slot");
-			third_booster_slot = nbt.getString("third_booster_slot");
 			power = nbt.getDouble("power");
 			powerTimer = nbt.getDouble("powerTimer");
 			mergers = nbt.getDouble("mergers");

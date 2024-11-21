@@ -35700,24 +35700,6 @@
       "value": "0"
     },
     {
-      "name": "first_booster_slot",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "second_booster_slot",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "third_booster_slot",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "entity_rotation",
       "type": "number",
       "scope": "world",
