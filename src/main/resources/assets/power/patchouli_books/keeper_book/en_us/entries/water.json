@@ -1,0 +1,27 @@
+{
+    "name": "Water",
+    "icon": "power:textures/mob_effect/water_master.png",
+    "category": "power:stones",
+    "sortnum": 4,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Water Stream - deals damage to the target with a powerful stream of water.",
+                "$(li)",
+                "Water Shock - strikes an opponent with a block of water (when it hits the block, the water spills over).",
+                "$(li)",
+                "Healing Water - heals the master when he is in the water."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Water",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:water_katana\",count:1}],ArmorItems:[{id:\"power:water_armor_boots\",count:1},{id:\"power:water_armor_leggings\",count:1},{id:\"power:water_armor_chestplate\",count:1},{id:\"power:water_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

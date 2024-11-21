@@ -1,0 +1,27 @@
+{
+    "name": "Air",
+    "icon": "power:textures/mob_effect/air_master.png",
+    "category": "power:stones",
+    "sortnum": 2,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Air Flow - deals damage to the enemy while pushing them back by about 1 block.",
+                "$(li)",
+                "Gust of Wind - damages all enemies within 5 blocks (provided they are close to you).",
+                "$(li)",
+                "Air Flight - allows the master to fly temporarily into the air."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Air",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:air_rapier\",count:1}],ArmorItems:[{id:\"power:air_armor_boots\",count:1},{id:\"power:air_armor_leggings\",count:1},{id:\"power:air_armor_chestplate\",count:1},{id:\"power:air_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
