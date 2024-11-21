@@ -41,7 +41,7 @@ public class BlueFlameBatteryUseProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.BLUE_FLAME_MASTER, (int) ((PowerModVariables.master_effect_duration / 2) * 20), 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.BLUE_FLAME_MASTER, (int) ((entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration / 2) * 20), 0, false, false));
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;

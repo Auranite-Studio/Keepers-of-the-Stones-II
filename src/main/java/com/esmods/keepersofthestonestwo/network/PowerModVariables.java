@@ -36,8 +36,6 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 public class PowerModVariables {
 	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, PowerMod.MODID);
 	public static final Supplier<AttachmentType<PlayerVariables>> PLAYER_VARIABLES = ATTACHMENT_TYPES.register("player_variables", () -> AttachmentType.serializable(() -> new PlayerVariables()).build());
-	public static double recharge_timer = 300.0;
-	public static double master_effect_duration = 600.0;
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -77,6 +75,8 @@ public class PowerModVariables {
 			clone.fake_element_name_second = original.fake_element_name_second;
 			clone.fake_element_name_third = original.fake_element_name_third;
 			clone.max_power = original.max_power;
+			clone.recharge_timer = original.recharge_timer;
+			clone.master_effect_duration = original.master_effect_duration;
 			clone.selected = original.selected;
 			clone.active_battery = original.active_battery;
 			clone.debug = original.debug;
@@ -436,6 +436,8 @@ public class PowerModVariables {
 		public double mergers = 0.0;
 		public double power_recovery_multiplier = 1.0;
 		public double max_power = 100.0;
+		public double recharge_timer = 300.0;
+		public double master_effect_duration = 600.0;
 		public boolean active_power = false;
 		public boolean selected = false;
 		public boolean active_battery = false;
@@ -480,6 +482,8 @@ public class PowerModVariables {
 			nbt.putDouble("mergers", mergers);
 			nbt.putDouble("power_recovery_multiplier", power_recovery_multiplier);
 			nbt.putDouble("max_power", max_power);
+			nbt.putDouble("recharge_timer", recharge_timer);
+			nbt.putDouble("master_effect_duration", master_effect_duration);
 			nbt.putBoolean("active_power", active_power);
 			nbt.putBoolean("selected", selected);
 			nbt.putBoolean("active_battery", active_battery);
@@ -525,6 +529,8 @@ public class PowerModVariables {
 			mergers = nbt.getDouble("mergers");
 			power_recovery_multiplier = nbt.getDouble("power_recovery_multiplier");
 			max_power = nbt.getDouble("max_power");
+			recharge_timer = nbt.getDouble("recharge_timer");
+			master_effect_duration = nbt.getDouble("master_effect_duration");
 			active_power = nbt.getBoolean("active_power");
 			selected = nbt.getBoolean("selected");
 			active_battery = nbt.getBoolean("active_battery");

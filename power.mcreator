@@ -31033,7 +31033,12 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/ConfigVariablesToMapVariablesProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Modules/ColorfulPowersModule"
     },
@@ -35738,13 +35743,13 @@
     {
       "name": "recharge_timer",
       "type": "number",
-      "scope": "global",
+      "scope": "player_persistent",
       "value": "300.0"
     },
     {
       "name": "master_effect_duration",
       "type": "number",
-      "scope": "global",
+      "scope": "player_persistent",
       "value": "600.0"
     },
     {
