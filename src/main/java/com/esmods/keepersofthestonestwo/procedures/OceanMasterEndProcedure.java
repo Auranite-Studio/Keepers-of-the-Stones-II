@@ -29,11 +29,6 @@ public class OceanMasterEndProcedure {
 			}
 		}
 		DetransformationKeyUseProcedure.execute(entity);
-		{
-			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers - 1;
-			_vars.syncPlayerVariables(entity);
-		}
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("ocean")) {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
