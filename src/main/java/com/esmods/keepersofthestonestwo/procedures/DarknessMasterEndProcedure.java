@@ -28,7 +28,7 @@ public class DarknessMasterEndProcedure {
 				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:stone_deactivation")), SoundSource.PLAYERS, 1, 1, false);
 			}
 		}
-		DetransformationKeyUseProcedure.execute(world, entity);
+		DetransformationKeyUseProcedure.execute(entity);
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("darkness")) {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
@@ -52,7 +52,8 @@ public class DarknessMasterEndProcedure {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PowerModItems.DARKNESS_STONE.get());
 				_setstack.setCount(1);
-				CustomData.update(DataComponents.CUSTOM_DATA, _setstack, tag -> tag.putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? PowerModVariables.recharge_timer * 20 : 0)));
+				CustomData.update(DataComponents.CUSTOM_DATA, _setstack,
+						tag -> tag.putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer * 20 : 0)));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else {

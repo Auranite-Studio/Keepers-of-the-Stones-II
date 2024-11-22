@@ -1,0 +1,27 @@
+{
+    "name": "Sound",
+    "icon": "power:textures/mob_effect/sound_master.png",
+    "category": "power:stones",
+    "sortnum": 8,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Sound wave deals damage to the entities.",
+                "$(li)",
+                "Sound bomb fires a projectile that explodes, but without destroying blocks.",
+                "$(li)",
+                "Sound boom deals damage to entities in a radius with a stun effect."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Sound",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:sound_dagger\",count:1}],ArmorItems:[{id:\"power:sound_armor_boots\",count:1},{id:\"power:sound_armor_leggings\",count:1},{id:\"power:sound_armor_chestplate\",count:1},{id:\"power:sound_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

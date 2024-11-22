@@ -93,7 +93,7 @@ public class EnergiumGolemCoreAttackProcedure {
 							}
 						}
 					}
-					if (!(world.getBlockState(BlockPos.containing(XPar, YPar, ZPar))).is(BlockTags.create(ResourceLocation.parse("c:unbreakble"))) && world.getLevelData().getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING) == true) {
+					if (!(world.getBlockState(BlockPos.containing(XPar, YPar, ZPar))).is(BlockTags.create(ResourceLocation.parse("c:unbreakable"))) && world.getLevelData().getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING) == true) {
 						world.destroyBlock(BlockPos.containing(XPar, YPar, ZPar), false);
 					}
 					loop = loop + 1;

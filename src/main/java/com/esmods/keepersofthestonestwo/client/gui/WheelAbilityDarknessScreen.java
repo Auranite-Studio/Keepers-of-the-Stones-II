@@ -57,6 +57,12 @@ public class WheelAbilityDarknessScreen extends AbstractContainerScreen<WheelAbi
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 21 && mouseY < topPos + 45)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_ability_darkness.tooltip_darkness_ray_uses_15"), mouseX, mouseY);
+		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 84 && mouseY < topPos + 108)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_ability_darkness.tooltip_darkness_absorption_uses_80"), mouseX, mouseY);
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 144 && mouseY < topPos + 168)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80"), mouseX, mouseY);
 	}
 
 	@Override

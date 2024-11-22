@@ -36,15 +36,15 @@
       "value": ""
     },
     "additionsSound": {
-      "value": "CUSTOM:ambient.biome.cursed_forest"
+      "value": ""
     },
     "music": {
-      "value": ""
+      "value": "CUSTOM:music.mystery_of_the_cursed_forest"
     },
     "moodSound": {
-      "value": ""
+      "value": "CUSTOM:ambient.biome.cursed_forest"
     },
-    "moodSoundDelay": 6000,
+    "moodSoundDelay": 1200,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "FALLING_OBSIDIAN_TEAR"

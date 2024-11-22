@@ -3,9 +3,17 @@
   "temperature": 2,
   "downfall": 0,
   "effects": {
-    "additions_sound": {
+    "mood_sound": {
       "sound": "power:ambient.biome.cursed_forest",
-      "tick_chance": 0.0111
+      "tick_delay": 1200,
+      "offset": 8,
+      "block_search_extent": 2
+    },
+    "music": {
+      "sound": "power:music.mystery_of_the_cursed_forest",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": true
     },
     "foliage_color": -8951420,
     "grass_color": -8951420,

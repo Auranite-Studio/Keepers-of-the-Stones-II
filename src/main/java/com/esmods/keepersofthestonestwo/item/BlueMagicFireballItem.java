@@ -1,7 +1,6 @@
 
 package com.esmods.keepersofthestonestwo.item;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
@@ -31,11 +30,6 @@ public class BlueMagicFireballItem extends Item {
 	@Override
 	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
 		return 72000;
-	}
-
-	@Override
-	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
-		return 0f;
 	}
 
 	@Override

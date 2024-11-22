@@ -36,8 +36,6 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 public class PowerModVariables {
 	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, PowerMod.MODID);
 	public static final Supplier<AttachmentType<PlayerVariables>> PLAYER_VARIABLES = ATTACHMENT_TYPES.register("player_variables", () -> AttachmentType.serializable(() -> new PlayerVariables()).build());
-	public static double recharge_timer = 300.0;
-	public static double master_effect_duration = 600.0;
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -76,10 +74,9 @@ public class PowerModVariables {
 			clone.fake_element_name_first = original.fake_element_name_first;
 			clone.fake_element_name_second = original.fake_element_name_second;
 			clone.fake_element_name_third = original.fake_element_name_third;
-			clone.first_booster_slot = original.first_booster_slot;
-			clone.second_booster_slot = original.second_booster_slot;
-			clone.third_booster_slot = original.third_booster_slot;
 			clone.max_power = original.max_power;
+			clone.recharge_timer = original.recharge_timer;
+			clone.master_effect_duration = original.master_effect_duration;
 			clone.selected = original.selected;
 			clone.active_battery = original.active_battery;
 			clone.debug = original.debug;
@@ -88,6 +85,7 @@ public class PowerModVariables {
 			clone.leggings = original.leggings;
 			clone.boots = original.boots;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
+			clone.hypnotized = original.hypnotized;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -234,6 +232,7 @@ public class PowerModVariables {
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
 		public boolean get_limit_of_stones = true;
+		public double fv = 1.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -299,6 +298,7 @@ public class PowerModVariables {
 			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
 			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
 			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
+			fv = nbt.getDouble("fv");
 		}
 
 		@Override
@@ -360,6 +360,7 @@ public class PowerModVariables {
 			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
 			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
 			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
+			nbt.putDouble("fv", fv);
 			return nbt;
 		}
 
@@ -433,14 +434,13 @@ public class PowerModVariables {
 		public double fake_element_name_first_timer = 0;
 		public double fake_element_name_second_timer = 0;
 		public double fake_element_name_third_timer = 0;
-		public String first_booster_slot = "0";
-		public String second_booster_slot = "0";
-		public String third_booster_slot = "0";
 		public double power = 0.0;
 		public double powerTimer = 0.0;
 		public double mergers = 0.0;
 		public double power_recovery_multiplier = 1.0;
 		public double max_power = 100.0;
+		public double recharge_timer = 300.0;
+		public double master_effect_duration = 600.0;
 		public boolean active_power = false;
 		public boolean selected = false;
 		public boolean active_battery = false;
@@ -463,6 +463,7 @@ public class PowerModVariables {
 		public ItemStack boots = ItemStack.EMPTY;
 		public boolean unlock_keepers_box = false;
 		public boolean transfered_power = false;
+		public boolean hypnotized = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -479,14 +480,13 @@ public class PowerModVariables {
 			nbt.putDouble("fake_element_name_first_timer", fake_element_name_first_timer);
 			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
 			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
-			nbt.putString("first_booster_slot", first_booster_slot);
-			nbt.putString("second_booster_slot", second_booster_slot);
-			nbt.putString("third_booster_slot", third_booster_slot);
 			nbt.putDouble("power", power);
 			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putDouble("mergers", mergers);
 			nbt.putDouble("power_recovery_multiplier", power_recovery_multiplier);
 			nbt.putDouble("max_power", max_power);
+			nbt.putDouble("recharge_timer", recharge_timer);
+			nbt.putDouble("master_effect_duration", master_effect_duration);
 			nbt.putBoolean("active_power", active_power);
 			nbt.putBoolean("selected", selected);
 			nbt.putBoolean("active_battery", active_battery);
@@ -509,6 +509,7 @@ public class PowerModVariables {
 			nbt.put("boots", boots.saveOptional(lookupProvider));
 			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
 			nbt.putBoolean("transfered_power", transfered_power);
+			nbt.putBoolean("hypnotized", hypnotized);
 			return nbt;
 		}
 
@@ -526,14 +527,13 @@ public class PowerModVariables {
 			fake_element_name_first_timer = nbt.getDouble("fake_element_name_first_timer");
 			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
 			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
-			first_booster_slot = nbt.getString("first_booster_slot");
-			second_booster_slot = nbt.getString("second_booster_slot");
-			third_booster_slot = nbt.getString("third_booster_slot");
 			power = nbt.getDouble("power");
 			powerTimer = nbt.getDouble("powerTimer");
 			mergers = nbt.getDouble("mergers");
 			power_recovery_multiplier = nbt.getDouble("power_recovery_multiplier");
 			max_power = nbt.getDouble("max_power");
+			recharge_timer = nbt.getDouble("recharge_timer");
+			master_effect_duration = nbt.getDouble("master_effect_duration");
 			active_power = nbt.getBoolean("active_power");
 			selected = nbt.getBoolean("selected");
 			active_battery = nbt.getBoolean("active_battery");
@@ -556,6 +556,7 @@ public class PowerModVariables {
 			boots = ItemStack.parseOptional(lookupProvider, nbt.getCompound("boots"));
 			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
 			transfered_power = nbt.getBoolean("transfered_power");
+			hypnotized = nbt.getBoolean("hypnotized");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

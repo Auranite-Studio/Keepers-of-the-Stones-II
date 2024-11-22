@@ -12,6 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
@@ -173,26 +174,15 @@ public class PoisonSpecialAttackProcedure {
 									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 					}
 				}
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.BAD_OMEN);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.BLINDNESS);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.HUNGER);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.CONFUSION);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.WEAKNESS);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.WITHER);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.UNLUCK);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.DIG_SLOWDOWN);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.WHIRLWIND);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.LETHALITY);
+				for (int index3 = 0; index3 < 20; index3++) {
+					if (entity instanceof LivingEntity _entity)
+						for (MobEffectInstance effectInstance : _entity.getActiveEffects()) {
+							if (effectInstance.getEffect().value().getCategory() == MobEffectCategory.HARMFUL) {
+								_entity.removeEffect(effectInstance.getEffect());
+								break;
+							}
+						}
+				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 70;

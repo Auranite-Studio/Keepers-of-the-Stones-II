@@ -18,6 +18,8 @@ import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
+import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+
 @EventBusSubscriber
 public class FrozenDestructionArmorProcedure {
 	@SubscribeEvent
@@ -47,6 +49,11 @@ public class FrozenDestructionArmorProcedure {
 				} else {
 					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.break")), SoundSource.PLAYERS, 1, 1, false);
 				}
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.ability_block = false;
+				_vars.syncPlayerVariables(entity);
 			}
 			entity.getPersistentData().putBoolean("iceLayer", false);
 		}

@@ -1,12 +1,6 @@
-What's new in Keepers of the Stones II version 1.0.0.47?<br/>
-<br />- Added new elements - golden dust and darkness
-<br />- Added new gamerule - choiceStoneWhenEnterTheWorld
-<br />- Teleportation stone abilities have been reworked
-<br />- The power lock effect now blocks the buff effects of stones
-<br />- The explosion of the third lightning and explosion abilities has been slightly reduced
-<br />- Added missing crafting recipes
-<br />- [Bugfix] Fixed a bug where the core of an energium golem could break unbreakble blocks
-<br />- [Bugfix] Fixed a bug that could cause bosses and knights to get into boats and minecarts
-<br />- [Bugfix] Fixed a bug that caused the abilities of the time stone to be mixed up
-<br />- [Bugfix] Fixed a bug that could cause a atomic bomb to be used for grifering, even if a defense was installed
-<br />- [Bugfix] Fixed bugs related to the air stone
+What's new in Keepers of the Stones II version 1.0.3.1?<br/>
+<br />- Some add-ons designed for earlier versions of the mod (1.0.0-1.0.2) may not work on this version
+<br />- [API] Colorful Powers API has been updated to version 19
+<br />- [Bugfix] Fixed a bug where when the stone next to the keeper's box was activated, the game would freeze
+<br />- [Bugfix] Fixed a bug where items in vaults could rotate quickly when placing the same blocks next to each other
+<br />- [Bugfix] Fixed a bug that caused the ocean stone to fail to merge with other stones when deactivating

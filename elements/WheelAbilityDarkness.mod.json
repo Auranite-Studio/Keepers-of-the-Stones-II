@@ -172,6 +172,48 @@
           "y": 158,
           "locked": false
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_darkness_ray_uses_15",
+          "text": {
+            "fixedValue": "Darkness ray, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 45,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_darkness_absorption_uses_80",
+          "text": {
+            "fixedValue": "Darkness absorption, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 263,
+          "y": 108,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_dark_power_transfer_uses_80",
+          "text": {
+            "fixedValue": "Dark power transfer, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 168,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

@@ -176,20 +176,6 @@
       {
         "type": "tooltip",
         "data": {
-          "name": "tooltip_metal_skin_uses_80",
-          "text": {
-            "fixedValue": "Metal skin, uses 80"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 200,
-          "y": 168,
-          "locked": false
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
           "name": "tooltip_metal_knives_uses_30",
           "text": {
             "fixedValue": "Metal knives, uses 30"
@@ -212,6 +198,20 @@
           "height": 24,
           "x": 200,
           "y": 46,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_iron_skin_uses_80",
+          "text": {
+            "fixedValue": "Iron skin, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 202,
+          "y": 168,
           "locked": false
         }
       }
