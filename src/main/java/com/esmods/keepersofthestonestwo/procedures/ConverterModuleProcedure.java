@@ -20,6 +20,8 @@ public class ConverterModuleProcedure {
 				_vars.recharge_timer = 300;
 				_vars.syncPlayerVariables(entity);
 			}
+			PowerModVariables.MapVariables.get(world).fv = 1;
+			PowerModVariables.MapVariables.get(world).syncData(world);
 		}
 	}
 }
