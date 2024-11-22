@@ -271,10 +271,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -15742,25 +15738,6 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
-    },
-    {
-      "name": "DetransformKeyPressed",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "detransform_key_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DetransformKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/KeyBindsModule/DetransformationKey"
     },
     {
       "name": "DetransformKeyPressedTick",

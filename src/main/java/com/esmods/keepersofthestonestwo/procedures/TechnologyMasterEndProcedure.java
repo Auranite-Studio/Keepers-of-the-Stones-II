@@ -28,7 +28,7 @@ public class TechnologyMasterEndProcedure {
 				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:stone_deactivation")), SoundSource.PLAYERS, 1, 1, false);
 			}
 		}
-		DetransformationKeyUseProcedure.execute(world, entity);
+		DetransformationKeyUseProcedure.execute(entity);
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("technology")) {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

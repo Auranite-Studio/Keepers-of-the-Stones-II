@@ -15,7 +15,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 
-import com.esmods.keepersofthestonestwo.procedures.DetransformKeyPressedProcedure;
+import com.esmods.keepersofthestonestwo.procedures.DetransformationKeyUseProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -52,7 +52,7 @@ public record DetransformationKeyMessage(int eventType, int pressedms) implement
 			return;
 		if (type == 0) {
 
-			DetransformKeyPressedProcedure.execute(entity);
+			DetransformationKeyUseProcedure.execute(entity);
 		}
 	}
 
