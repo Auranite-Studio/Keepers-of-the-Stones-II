@@ -35570,6 +35570,29 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Vaults"
+    },
+    {
+      "name": "ConverterModule",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "converter_module",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ConverterModuleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule"
     }
   ],
   "variable_elements": [
@@ -36172,6 +36195,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "fv",
+      "type": "number",
+      "scope": "map",
+      "value": "1.0"
     }
   ],
   "sound_elements": [
