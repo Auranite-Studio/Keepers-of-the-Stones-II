@@ -45,4 +45,5 @@ public class PowerModParticleTypes {
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> PLAGUE_PARTICLE_FOUR = REGISTRY.register("plague_particle_four", () -> new SimpleParticleType(false));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> FEATHER_PARTICLE = REGISTRY.register("feather_particle", () -> new SimpleParticleType(false));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> MIND_REACTION_PARTICLE = REGISTRY.register("mind_reaction_particle", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> LIGHTNING_PARTICLE = REGISTRY.register("lightning_particle", () -> new SimpleParticleType(false));
 }
