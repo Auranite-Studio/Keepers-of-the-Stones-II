@@ -35603,6 +35603,75 @@
         ]
       },
       "path": "~/Biomes/CursedForest"
+    },
+    {
+      "name": "MasterEffectDurationSet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_effect_duration_set",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MasterEffectDurationSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "RechargeStoneTimeSet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_stone_time_set",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RechargeStoneTimeSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "PwReset",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pw_reset",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PwResetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
