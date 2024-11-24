@@ -10,6 +10,8 @@ import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
+import java.util.ArrayList;
+
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
@@ -17,31 +19,31 @@ import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 public class ConverterModuleProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-		execute(event, event.getEntity().level(), event.getEntity());
+		execute(event, event.getEntity().level());
 	}
 
-	public static void execute(LevelAccessor world, Entity entity) {
-		execute(null, world, entity);
+	public static void execute(LevelAccessor world) {
+		execute(null, world);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
-		if (entity == null)
-			return;
-		if (PowerModVariables.MapVariables.get(world).fv < 1) {
+	private static void execute(@Nullable Event event, LevelAccessor world) {
+		if (PowerModVariables.MapVariables.get(world).cpapi_ver < 20) {
 			if (!PowerConfigConfiguration.MASTER_EFFECTS_CONTROL_BY_CONFIG.get()) {
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.master_effect_duration = 600;
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.recharge_timer = 300;
-					_vars.syncPlayerVariables(entity);
+				for (Entity entityiterator : new ArrayList<>(world.players())) {
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.master_effect_duration = 600;
+						_vars.syncPlayerVariables(entityiterator);
+					}
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.recharge_timer = 300;
+						_vars.syncPlayerVariables(entityiterator);
+					}
 				}
 			}
-			PowerModVariables.MapVariables.get(world).fv = 1;
-			PowerModVariables.MapVariables.get(world).syncData(world);
 		}
+		PowerModVariables.MapVariables.get(world).cpapi_ver = 20;
+		PowerModVariables.MapVariables.get(world).syncData(world);
 	}
 }

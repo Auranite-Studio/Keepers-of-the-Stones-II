@@ -232,7 +232,7 @@ public class PowerModVariables {
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
 		public boolean get_limit_of_stones = true;
-		public double fv = 1.0;
+		public double cpapi_ver = 20.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -298,7 +298,7 @@ public class PowerModVariables {
 			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
 			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
 			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
-			fv = nbt.getDouble("fv");
+			cpapi_ver = nbt.getDouble("cpapi_ver");
 		}
 
 		@Override
@@ -360,7 +360,7 @@ public class PowerModVariables {
 			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
 			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
 			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
-			nbt.putDouble("fv", fv);
+			nbt.putDouble("cpapi_ver", cpapi_ver);
 			return nbt;
 		}
 
