@@ -63,7 +63,7 @@ public class PwCommand {
 
 					MaxPowerScaleSetProcedure.execute(arguments, entity);
 					return 0;
-				}))))).then(Commands.literal("multiplier").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 10)).executes(arguments -> {
+				}))))).then(Commands.literal("multiplier").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("multiplier", DoubleArgumentType.doubleArg(0, 10)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -77,8 +77,7 @@ public class PwCommand {
 
 					PowerRecoveryMultiplierSetProcedure.execute(arguments, entity);
 					return 0;
-				})))))
-				.then(Commands.literal("master_effect_duration").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 10)).executes(arguments -> {
+				}))))).then(Commands.literal("master_effect_duration").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("seconds", DoubleArgumentType.doubleArg(1)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -92,7 +91,7 @@ public class PwCommand {
 
 					MasterEffectDurationSetProcedure.execute(arguments, entity);
 					return 0;
-				}))))).then(Commands.literal("recharge_time").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 10)).executes(arguments -> {
+				}))))).then(Commands.literal("recharge_time").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("seconds", DoubleArgumentType.doubleArg(1)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

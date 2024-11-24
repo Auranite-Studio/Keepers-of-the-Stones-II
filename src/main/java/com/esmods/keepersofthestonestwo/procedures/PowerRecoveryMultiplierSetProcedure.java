@@ -20,11 +20,12 @@ public class PowerRecoveryMultiplierSetProcedure {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
 				{
 					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power_recovery_multiplier = DoubleArgumentType.getDouble(arguments, "count");
+					_vars.power_recovery_multiplier = DoubleArgumentType.getDouble(arguments, "multiplier");
 					_vars.syncPlayerVariables(entityiterator);
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("The star points recovery multiplier is set to " + Math.round(DoubleArgumentType.getDouble(arguments, "count")) + " for " + entityiterator.getDisplayName().getString())), false);
+					_player.displayClientMessage(Component.literal(("The star points recovery multiplier is set to " + Math.round(DoubleArgumentType.getDouble(arguments, "multiplier")) + " for " + entityiterator.getDisplayName().getString())),
+							false);
 			}
 		} catch (CommandSyntaxException e) {
 			e.printStackTrace();

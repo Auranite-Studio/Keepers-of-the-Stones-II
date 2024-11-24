@@ -20,11 +20,11 @@ public class RechargeStoneTimeSetProcedure {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
 				{
 					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.recharge_timer = DoubleArgumentType.getDouble(arguments, "count");
+					_vars.recharge_timer = DoubleArgumentType.getDouble(arguments, "seconds");
 					_vars.syncPlayerVariables(entityiterator);
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("The recharge time of the stone is set to " + Math.round(DoubleArgumentType.getDouble(arguments, "count")) + " for " + entityiterator.getDisplayName().getString())), false);
+					_player.displayClientMessage(Component.literal(("The recharge time of the stone is set to " + Math.round(DoubleArgumentType.getDouble(arguments, "seconds")) + " for " + entityiterator.getDisplayName().getString())), false);
 			}
 		} catch (CommandSyntaxException e) {
 			e.printStackTrace();
