@@ -110,6 +110,8 @@ public class PowerModVariables {
 				clone.power_recorded = original.power_recorded;
 				clone.detransform_anim_trigger = original.detransform_anim_trigger;
 				clone.transfered_power = original.transfered_power;
+				clone.master_effect_end = original.master_effect_end;
+				clone.master_effect_start = original.master_effect_start;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -464,6 +466,8 @@ public class PowerModVariables {
 		public boolean unlock_keepers_box = false;
 		public boolean transfered_power = false;
 		public boolean hypnotized = false;
+		public boolean master_effect_end = false;
+		public boolean master_effect_start = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -510,6 +514,8 @@ public class PowerModVariables {
 			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
 			nbt.putBoolean("transfered_power", transfered_power);
 			nbt.putBoolean("hypnotized", hypnotized);
+			nbt.putBoolean("master_effect_end", master_effect_end);
+			nbt.putBoolean("master_effect_start", master_effect_start);
 			return nbt;
 		}
 
@@ -557,6 +563,8 @@ public class PowerModVariables {
 			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
 			transfered_power = nbt.getBoolean("transfered_power");
 			hypnotized = nbt.getBoolean("hypnotized");
+			master_effect_end = nbt.getBoolean("master_effect_end");
+			master_effect_start = nbt.getBoolean("master_effect_start");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
