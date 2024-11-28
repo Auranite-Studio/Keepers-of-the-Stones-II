@@ -2,7 +2,7 @@
   "_fv": 69,
   "_type": "overlay",
   "definition": {
-    "priority": "HIGHEST",
+    "priority": "NORMAL",
     "components": [
       {
         "type": "label",

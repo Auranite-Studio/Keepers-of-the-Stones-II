@@ -25912,29 +25912,6 @@
       "path": "~/Biomes/CursedForest"
     },
     {
-      "name": "RenderFogCursedForest",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_fog_cursed_forest",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderFogCursedForestProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
       "name": "LetsBailThisPlaceIsdead",
       "type": "achievement",
       "compiles": true,
@@ -35583,6 +35560,177 @@
         ],
         "dependencies": [
           {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule"
+    },
+    {
+      "name": "LightningParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/particles/lightning_particle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/LightningParticleParticle.java"
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "RenderSpecialFogInCursedBiomes",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_special_fog_in_cursed_biomes",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderSpecialFogInCursedBiomesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Biomes/CursedForest"
+    },
+    {
+      "name": "MasterEffectDurationSet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_effect_duration_set",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MasterEffectDurationSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "RechargeStoneTimeSet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_stone_time_set",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RechargeStoneTimeSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "PwReset",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pw_reset",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PwResetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "NullVarFix",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "null_var_fix",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/NullVarFixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule"
+    },
+    {
+      "name": "MasterEffectStartControl",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_effect_start_control",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MasterEffectStartControlProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule"
+    },
+    {
+      "name": "MasterEffectEndControl",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_effect_end_control",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MasterEffectEndControlProcedure.java"
+        ],
+        "dependencies": [
+          {
             "name": "entity",
             "type": "entity"
           },
@@ -36197,10 +36345,22 @@
       "value": "false"
     },
     {
-      "name": "fv",
+      "name": "cpapi_ver",
       "type": "number",
       "scope": "map",
-      "value": "1.0"
+      "value": "20.0"
+    },
+    {
+      "name": "master_effect_end",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "master_effect_start",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -36360,6 +36520,14 @@
       ],
       "category": "music",
       "subtitle": ""
+    },
+    {
+      "name": "electricity",
+      "files": [
+        "electricity"
+      ],
+      "category": "neutral",
+      "subtitle": "Electricity discharge"
     }
   ],
   "tag_elements": {
@@ -36416,12 +36584,12 @@
       "~CUSTOM:DepletedEnergiumBlock",
       "~CUSTOM:DepletedEnergiumOre"
     ],
+    "BIOMES:minecraft:is_overworld": [
+      "CUSTOM:CursedForest"
+    ],
     "ENCHANTMENTS:minecraft:non_treasure": [
       "~CUSTOM:Isolation",
       "~CUSTOM:Revenge"
-    ],
-    "BIOMES:minecraft:is_overworld": [
-      "CUSTOM:CursedForest"
     ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",
@@ -36457,6 +36625,9 @@
       "~CUSTOM:TechnoPickaxe",
       "~CUSTOM:CreationPickaxe",
       "~CUSTOM:EnergiumPickaxe"
+    ],
+    "BIOMES:mod:cursed_biomes": [
+      "CUSTOM:CursedForest"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:DarkSword",
@@ -36616,7 +36787,8 @@
       "CUSTOM:EnergiumDust",
       "CUSTOM:RawEnergiumBlock",
       "CUSTOM:DeepslateEnergiumOre",
-      "CUSTOM:EnergiumKey"
+      "CUSTOM:EnergiumKey",
+      "CUSTOM:MusicDiscCallOfThePast"
     ],
     "ITEMS:minecraft:shovels": [
       "~CUSTOM:CreationShovel",
@@ -37569,9 +37741,9 @@
       "block.power.deepslate_depleted_energium_ore": "Обеднённый энергиумоносный глубинный сланец",
       "item.power.water_stone": "Камень воды",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Вишнёвый ветер, расходует 10",
-      "subtitles.cursed_knight.hurt": "",
-      "effect.power.energy_master": "Мастер энергии",
       "item.power.fire_armor_leggings": "Поножи мастера огня",
+      "effect.power.energy_master": "Мастер энергии",
+      "subtitles.cursed_knight.hurt": "",
       "gui.power.wheel_abilities_blue_flame.tooltip_sixshot_fireballs_uses_55": "Шестерной файрбол, расходует 55",
       "item.power.earth_armor_boots": "Ботинки мастера земли",
       "item.power.shadow_stone": "Камень тени",
@@ -37692,6 +37864,7 @@
       "gui.power.wheel_abilities_mist.tooltip_stream_of_mist_uses_10": "Поток тумана, расходует 10",
       "item.power.energy_armor_boots": "Ботинки мастера энергии",
       "gui.power.keepers_box_gui_part_3.tooltip_light": "Свет",
+      "subtitles.electricity": "Electricity discharge",
       "item.power.metal_armor_chestplate": "Нагрудник мастера металла",
       "battery.desc.teleportation": "Телепортациия",
       "gui.power.keepers_box_gui_part_2.tooltip_air": "Воздух",
@@ -38568,6 +38741,7 @@
       "gui.power.wheel_abilities_mist.tooltip_stream_of_mist_uses_10": "Stream of mist, uses 10",
       "item.power.energy_armor_boots": "Energy Boots",
       "gui.power.keepers_box_gui_part_3.tooltip_light": "Light",
+      "subtitles.electricity": "Electricity discharge",
       "item.power.metal_armor_chestplate": "Metal Chestplate",
       "battery.desc.teleportation": "Teleportation",
       "gui.power.keepers_box_gui_part_2.tooltip_air": "Air",
@@ -39828,7 +40002,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.3.1",
+    "version": "1.0.3.2",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
