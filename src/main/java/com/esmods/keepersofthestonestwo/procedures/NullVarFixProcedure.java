@@ -29,18 +29,20 @@ public class NullVarFixProcedure {
 		if (entity == null)
 			return;
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer == 0) {
-				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.recharge_timer = 300;
-					_vars.syncPlayerVariables(entityiterator);
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).is_set_configurable_zero == false) {
+				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer == 0) {
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.recharge_timer = 300;
+						_vars.syncPlayerVariables(entityiterator);
+					}
 				}
-			}
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration == 0) {
-				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.master_effect_duration = 600;
-					_vars.syncPlayerVariables(entityiterator);
+				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration == 0) {
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.master_effect_duration = 600;
+						_vars.syncPlayerVariables(entityiterator);
+					}
 				}
 			}
 		}

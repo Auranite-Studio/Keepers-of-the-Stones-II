@@ -91,7 +91,7 @@ public class PwCommand {
 
 					MasterEffectDurationSetProcedure.execute(arguments, entity);
 					return 0;
-				}))))).then(Commands.literal("recharge_time").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("seconds", DoubleArgumentType.doubleArg(1)).executes(arguments -> {
+				}))))).then(Commands.literal("recharge_time").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("seconds", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
