@@ -25146,7 +25146,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/screens/DebugInfoOverlay.java"
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "DebugCheck",
@@ -25166,7 +25166,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "DebugControl",
@@ -25209,7 +25209,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "MaxStarPointsDebug",
@@ -25229,7 +25229,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "PowerRecordedDubug",
@@ -25249,7 +25249,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "FakeElementsTimerDebug",
@@ -25269,7 +25269,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "PlayerTimingFistFakeElement",
@@ -25346,7 +25346,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "ElementsActiveDebug",
@@ -25366,7 +25366,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "ActivePowerDebug",
@@ -25386,7 +25386,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "ActiveBatteryDebug",
@@ -25406,7 +25406,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "MergersNumberDebug",
@@ -25426,7 +25426,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "ModVersionDebug",
@@ -25441,7 +25441,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "StarPointsDebug",
@@ -25461,7 +25461,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "SelectedAttackDebug",
@@ -25481,7 +25481,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "CPAPIVersionDebug",
@@ -25496,7 +25496,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "TeleportationBlade",
@@ -25740,7 +25740,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "AbilityBlockedDebug",
@@ -25760,7 +25760,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule/Debug"
+      "path": "~/Modules/DebugModule"
     },
     {
       "name": "RedMagnetParticle",
@@ -27794,7 +27794,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/configuration/PowerConfigConfiguration.java"
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule"
+      "path": "~/Configs"
     },
     {
       "name": "MusicMaster",
@@ -30332,7 +30332,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule"
+      "path": "~/Modules/CPAPIExecuterModule"
     },
     {
       "name": "GravityMace",
@@ -30998,7 +30998,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule"
+      "path": "~/Configs"
     },
     {
       "name": "ExplosionPassiveProtection",
@@ -35569,7 +35569,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule"
+      "path": "~/Modules/ConvertersModule"
     },
     {
       "name": "LightningParticle",
@@ -35698,7 +35698,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule"
+      "path": "~/Modules/ConvertersModule"
     },
     {
       "name": "MasterEffectStartControl",
@@ -35721,7 +35721,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule"
+      "path": "~/Modules/CPAPIExecuterModule"
     },
     {
       "name": "MasterEffectEndControl",
@@ -35744,7 +35744,7 @@
           }
         ]
       },
-      "path": "~/Modules/ColorfulPowersModule"
+      "path": "~/Modules/CPAPIExecuterModule"
     }
   ],
   "variable_elements": [
@@ -39449,13 +39449,8 @@
             "children": []
           },
           {
-            "name": "ColorfulPowersModule",
-            "children": [
-              {
-                "name": "Debug",
-                "children": []
-              }
-            ]
+            "name": "ConvertersModule",
+            "children": []
           },
           {
             "name": "VFXEngineModule",
@@ -39467,6 +39462,14 @@
           },
           {
             "name": "CopyPowersModule",
+            "children": []
+          },
+          {
+            "name": "CPAPIExecuterModule",
+            "children": []
+          },
+          {
+            "name": "DebugModule",
             "children": []
           }
         ]
@@ -40005,6 +40008,10 @@
       },
       {
         "name": "TrimsMaterials",
+        "children": []
+      },
+      {
+        "name": "Configs",
         "children": []
       }
     ]
