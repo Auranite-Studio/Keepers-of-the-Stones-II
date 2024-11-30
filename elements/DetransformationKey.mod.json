@@ -6,7 +6,7 @@
     "keyBindingName": "Detransformation key",
     "keyBindingCategoryKey": "power2",
     "onKeyPressed": {
-      "name": "DetransformKeyPressed"
+      "name": "DetransformationKeyUse"
     }
   }
 }

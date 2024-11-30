@@ -2,48 +2,9 @@
   "_fv": 69,
   "_type": "config",
   "definition": {
-    "pools": [
-      {
-        "category": "basic_settings",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 600.0,
-            "textDefault": "",
-            "comment": "Sets the base duration value for the master effect",
-            "vardisplay": "master_effect_duration",
-            "varname": "master_effect_duration",
-            "enablecomment": true,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 300.0,
-            "textDefault": "",
-            "comment": "Sets the recharge time of the stone",
-            "vardisplay": "recharge_timer",
-            "varname": "recharge_timer",
-            "enablecomment": true,
-            "stringlist": []
-          }
-        ]
-      }
-    ],
     "file": "power_config",
-    "configType": 0
+    "configType": 0,
+    "config": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"config_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"config_variable\"><field name=\"name\">master_effects_control_by_config</field><field name=\"comment\"></field><value name=\"value\"><block type=\"config_logic_variable\"><field name=\"name\">master_effects_control_by_config</field><field name=\"value\">false</field></block></value><next><block type=\"config_category\"><field name=\"name\">stones_settings</field><statement name=\"write\"><block type=\"config_variable\"><field name=\"name\">master_effect_duration</field><field name=\"comment\">Sets the base duration value for the master effect</field><value name=\"value\"><block type=\"config_number_variable\"><field name=\"name\">master_effect_duration</field><field name=\"value\">600</field></block></value><next><block type=\"config_variable\"><field name=\"name\">recharge_timer</field><field name=\"comment\">Sets the recharge time of the stone</field><value name=\"value\"><block type=\"config_number_variable\"><field name=\"name\">recharge_timer</field><field name=\"value\">300</field></block></value></block></next></block></statement></block></next></block></next></block></xml>",
+    "defining": true
   }
 }

@@ -1,7 +1,3 @@
-What's new in Keepers of the Stones II version 1.0.0 Release Candidate 1?<br/>
-<br />- [Bugfix] Fixed a bug that caused incorrect animations when using two-handed weapons with the Better Combat mod
-<br />- [Bugfix] Fixed a bug with recharging the darkness stone
-<br />- [Bugfix] Fixed a bug that caused the eternal power lock effect
-<br />- [Bugfix] Fixed the range of melee abilities
-<br />- [Bugfix] Fixed a bug where power transfer spent star points on active elemental masters
-<br />- [Bugfix] Fixed a bug where mushrooms were not placed freely by mushroom masters
+What's new in Keepers of the Stones II version 1.0.3 Release Candidate 1?<br/>
+<br />- [Bugfix] The pw command with master_effect_duration and recharge_time arguments is no longer executed with config enabled
+<br />- [Bugfix] Fixed a bug where zero values in the config could be reset when re-entering the world
