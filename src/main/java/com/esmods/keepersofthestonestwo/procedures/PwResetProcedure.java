@@ -10,6 +10,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
 public class PwResetProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
@@ -32,15 +33,17 @@ public class PwResetProcedure {
 					_vars.power_recovery_multiplier = 1;
 					_vars.syncPlayerVariables(entityiterator);
 				}
-				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.master_effect_duration = 600;
-					_vars.syncPlayerVariables(entityiterator);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.recharge_timer = 300;
-					_vars.syncPlayerVariables(entityiterator);
+				if (PowerConfigConfiguration.MASTER_EFFECTS_CONTROL_BY_CONFIG.get() == false) {
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.master_effect_duration = 600;
+						_vars.syncPlayerVariables(entityiterator);
+					}
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.recharge_timer = 300;
+						_vars.syncPlayerVariables(entityiterator);
+					}
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal(("All values are reset for " + entityiterator.getDisplayName().getString())), false);
