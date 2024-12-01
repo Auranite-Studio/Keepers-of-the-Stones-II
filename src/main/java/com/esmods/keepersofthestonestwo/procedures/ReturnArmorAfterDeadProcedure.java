@@ -41,7 +41,7 @@ public class ReturnArmorAfterDeadProcedure {
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.helmet = ItemStack.EMPTY;
+				_vars.helmet = ItemStack.EMPTY.copy();
 				_vars.syncPlayerVariables(entity);
 			}
 		}
@@ -57,7 +57,7 @@ public class ReturnArmorAfterDeadProcedure {
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.chestplate = ItemStack.EMPTY;
+				_vars.chestplate = ItemStack.EMPTY.copy();
 				_vars.syncPlayerVariables(entity);
 			}
 		}
@@ -73,7 +73,7 @@ public class ReturnArmorAfterDeadProcedure {
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.leggings = ItemStack.EMPTY;
+				_vars.leggings = ItemStack.EMPTY.copy();
 				_vars.syncPlayerVariables(entity);
 			}
 		}
@@ -89,7 +89,7 @@ public class ReturnArmorAfterDeadProcedure {
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.boots = ItemStack.EMPTY;
+				_vars.boots = ItemStack.EMPTY.copy();
 				_vars.syncPlayerVariables(entity);
 			}
 		}

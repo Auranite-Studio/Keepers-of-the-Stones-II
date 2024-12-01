@@ -178,5 +178,14 @@
         "stream": true
       }
     ]
+  },
+  "electricity": {
+    "subtitle": "subtitles.electricity",
+    "sounds": [
+      {
+        "name": "power:electricity",
+        "stream": false
+      }
+    ]
   }
 }

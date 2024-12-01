@@ -10,7 +10,9 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.TagKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.FogRenderer;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -23,7 +25,7 @@ import com.mojang.blaze3d.shaders.FogShape;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
 @EventBusSubscriber(value = Dist.CLIENT)
-public class RenderFogCursedForestProcedure {
+public class RenderSpecialFogInCursedBiomesProcedure {
 	public static ViewportEvent.RenderFog provider = null;
 
 	public static void setDistance(float start, float end) {
@@ -61,7 +63,7 @@ public class RenderFogCursedForestProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (world.getBiome(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ())).is(ResourceLocation.parse("power:cursed_forest")) && !entity.isUnderWater()
+		if (world.getBiome(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ())).is(TagKey.create(Registries.BIOME, ResourceLocation.parse("power:cursed_biomes"))) && !entity.isUnderWater()
 				&& !(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PowerModMobEffects.MIST))) {
 			setDistance(15, 45);
 			setShape(FogShape.CYLINDER);

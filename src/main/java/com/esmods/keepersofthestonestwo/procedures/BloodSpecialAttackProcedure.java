@@ -102,11 +102,10 @@ public class BloodSpecialAttackProcedure {
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
 								if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-									if (entityiterator instanceof LivingEntity _entity)
-										_entity.setHealth((float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) - (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 0.15));
 									if (entity instanceof LivingEntity _entity)
 										_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 0.15));
-									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), 0);
+									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
+											(float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 0.15));
 								}
 							}
 						}
@@ -155,9 +154,8 @@ public class BloodSpecialAttackProcedure {
 								if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 									if (entityiterator instanceof LivingEntity _entity)
 										_entity.setHealth((float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 0.15));
-									if (entity instanceof LivingEntity _entity)
-										_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) - (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 0.15));
-									entity.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entityiterator), 0);
+									entity.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entityiterator),
+											(float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 0.15));
 								}
 							}
 						}
