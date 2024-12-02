@@ -113,6 +113,7 @@ public class PowerModVariables {
 				clone.transfered_power = original.transfered_power;
 				clone.master_effect_end = original.master_effect_end;
 				clone.master_effect_start = original.master_effect_start;
+				clone.active_artifact = original.active_artifact;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -470,6 +471,7 @@ public class PowerModVariables {
 		public boolean master_effect_end = false;
 		public boolean master_effect_start = false;
 		public boolean is_set_configurable_zero = false;
+		public boolean active_artifact = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -519,6 +521,7 @@ public class PowerModVariables {
 			nbt.putBoolean("master_effect_end", master_effect_end);
 			nbt.putBoolean("master_effect_start", master_effect_start);
 			nbt.putBoolean("is_set_configurable_zero", is_set_configurable_zero);
+			nbt.putBoolean("active_artifact", active_artifact);
 			return nbt;
 		}
 
@@ -569,6 +572,7 @@ public class PowerModVariables {
 			master_effect_end = nbt.getBoolean("master_effect_end");
 			master_effect_start = nbt.getBoolean("master_effect_start");
 			is_set_configurable_zero = nbt.getBoolean("is_set_configurable_zero");
+			active_artifact = nbt.getBoolean("active_artifact");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
