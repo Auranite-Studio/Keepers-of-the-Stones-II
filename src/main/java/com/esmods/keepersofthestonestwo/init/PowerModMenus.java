@@ -63,6 +63,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart3Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart2Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
+import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class PowerModMenus {
