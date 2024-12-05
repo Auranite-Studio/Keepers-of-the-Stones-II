@@ -5,11 +5,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
 import com.esmods.keepersofthestonestwo.entity.TurretEntity;
-import com.esmods.keepersofthestonestwo.entity.SpiritEntity;
-import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 import com.esmods.keepersofthestonestwo.entity.CursedSquireEntity;
 import com.esmods.keepersofthestonestwo.entity.CursedKnightEntity;
-import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
 import com.esmods.keepersofthestonestwo.entity.BlackHoleEntity;
 
 @Mod.EventBusSubscriber
