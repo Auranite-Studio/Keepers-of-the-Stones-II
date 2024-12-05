@@ -1,0 +1,27 @@
+{
+    "name": "Lightning",
+    "icon": "power:textures/mob_effect/lightning_master.png",
+    "category": "power:stones",
+    "sortnum": 7,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Electrical discharge attacks with a beam of electricity on the entities.",
+                "$(li)",
+                "Lightning strike strikes an entity with a lightning bolt.",
+                "$(li)",
+                "Ball lightning launches a projectile that explodes with a lightning strike (destroys blocks)."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Lightning",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:lightning_falchion\",count:1}],ArmorItems:[{id:\"power:lightning_armor_boots\",count:1},{id:\"power:lightning_armor_leggings\",count:1},{id:\"power:lightning_armor_chestplate\",count:1},{id:\"power:lightning_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

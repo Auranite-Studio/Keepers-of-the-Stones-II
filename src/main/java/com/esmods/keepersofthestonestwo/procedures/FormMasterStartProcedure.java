@@ -160,5 +160,6 @@ public class FormMasterStartProcedure {
 			}
 			(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
 		}
+		MasterEffectStartControlProcedure.execute(world, entity);
 	}
 }
