@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/earth_hammer",
-  "textures": {
-    "0": "power:block/lava_hammer",
-    "particle": "power:item/lava_hammer"
-  }
-}

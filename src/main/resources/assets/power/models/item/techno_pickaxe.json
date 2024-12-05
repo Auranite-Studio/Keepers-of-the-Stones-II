@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/techno_pickaxe",
-  "textures": {
-    "0": "power:block/techno_pickaxe",
-    "particle": "power:item/techno_pickaxe"
-  }
-}

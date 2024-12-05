@@ -12,7 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import java.util.function.Supplier;
 
-import com.esmods.keepersofthestonestwo.procedures.DetransformationKeyUseProcedure;
+import com.esmods.keepersofthestonestwo.procedures.DetransformKeyPressedProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -52,7 +52,7 @@ public class DetransformationKeyMessage {
 			return;
 		if (type == 0) {
 
-			DetransformationKeyUseProcedure.execute(entity);
+			DetransformKeyPressedProcedure.execute(entity);
 		}
 	}
 

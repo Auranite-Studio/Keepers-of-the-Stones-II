@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/ice_spear",
-  "textures": {
-    "0": "power:block/ice_spear",
-    "particle": "power:item/ice_spear"
-  }
-}

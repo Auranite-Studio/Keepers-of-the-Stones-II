@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/light_sword",
-  "textures": {
-    "0": "power:block/light_sword",
-    "particle": "power:item/light_sword"
-  }
-}

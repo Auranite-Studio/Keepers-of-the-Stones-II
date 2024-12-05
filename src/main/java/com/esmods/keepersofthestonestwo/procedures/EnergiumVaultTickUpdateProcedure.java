@@ -24,6 +24,8 @@ import net.minecraft.client.Minecraft;
 
 import java.util.Comparator;
 
+import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+
 public class EnergiumVaultTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {
 		if (new Object() {
@@ -133,5 +135,7 @@ public class EnergiumVaultTickUpdateProcedure {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.SMALL_FLAME, (x + Mth.nextDouble(RandomSource.create(), 0, 1)), (y + Mth.nextDouble(RandomSource.create(), 0, 1)), (z + Mth.nextDouble(RandomSource.create(), 0, 1)), (int) 0.1, 0.1, 0.1, 0.1, 0.05);
 		}
+		PowerModVariables.WorldVariables.get(world).entity_rotation = PowerModVariables.WorldVariables.get(world).entity_rotation < 360 ? PowerModVariables.WorldVariables.get(world).entity_rotation + 8 : 0;
+		PowerModVariables.WorldVariables.get(world).syncData(world);
 	}
 }

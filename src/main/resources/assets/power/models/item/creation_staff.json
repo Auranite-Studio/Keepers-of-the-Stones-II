@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/creation_staff",
-  "textures": {
-    "3": "power:block/creation_staff",
-    "particle": "power:item/creation_staff"
-  }
-}
