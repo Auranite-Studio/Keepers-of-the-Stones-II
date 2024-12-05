@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.EarthMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EarthMasterEndProcedure;
-
 public class EarthMasterMobEffect extends MobEffect {
 	public EarthMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -10079488);

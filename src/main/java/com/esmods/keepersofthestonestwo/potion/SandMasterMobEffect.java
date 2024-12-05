@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.SandMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SandMasterEndProcedure;
-
 public class SandMasterMobEffect extends MobEffect {
 	public SandMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -26266);

@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.TimeMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TimeMasterEndProcedure;
-
 public class TimeMasterMobEffect extends MobEffect {
 	public TimeMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -10092544);

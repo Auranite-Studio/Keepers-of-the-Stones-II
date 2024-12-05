@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.MagnetMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MagnetMasterEndProcedure;
-
 public class MagnetMasterMobEffect extends MobEffect {
 	public MagnetMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -39169);

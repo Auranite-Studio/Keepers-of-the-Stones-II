@@ -10,7 +10,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
-import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class CursedKeeperSummonProcedure {

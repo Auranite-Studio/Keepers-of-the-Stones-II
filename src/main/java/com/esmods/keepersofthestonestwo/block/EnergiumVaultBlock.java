@@ -33,7 +33,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.EnergiumVaultTickUpdateProcedure;
 import com.esmods.keepersofthestonestwo.block.entity.EnergiumVaultBlockEntity;
 
 public class EnergiumVaultBlock extends Block implements EntityBlock {

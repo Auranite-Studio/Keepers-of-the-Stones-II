@@ -135,7 +135,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 									}
 								}
 								{
-									double _setval = (PowerModVariables.master_effect_duration / 4) * 20;
+									double _setval = ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).master_effect_duration / 4) * 20;
 									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.fake_element_name_first_timer = _setval;
 										capability.syncPlayerVariables(entity);
@@ -199,7 +199,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 									}
 								}
 								{
-									double _setval = (PowerModVariables.master_effect_duration / 4) * 20;
+									double _setval = ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).master_effect_duration / 4) * 20;
 									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.fake_element_name_second_timer = _setval;
 										capability.syncPlayerVariables(entity);
@@ -264,7 +264,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 									}
 								}
 								{
-									double _setval = (PowerModVariables.master_effect_duration / 4) * 20;
+									double _setval = ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).master_effect_duration / 4) * 20;
 									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.fake_element_name_third_timer = _setval;
 										capability.syncPlayerVariables(entity);

@@ -23,7 +23,7 @@ import com.esmods.keepersofthestonestwo.procedures.GetActiveProcedure;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class PowerOverlayOverlay {
-	@SubscribeEvent(priority = EventPriority.HIGHEST)
+	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
 		int w = event.getWindow().getGuiScaledWidth();
 		int h = event.getWindow().getGuiScaledHeight();

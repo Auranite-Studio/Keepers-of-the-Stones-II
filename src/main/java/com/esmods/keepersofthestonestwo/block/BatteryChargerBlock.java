@@ -38,8 +38,6 @@ import net.minecraft.client.Minecraft;
 
 import io.netty.buffer.Unpooled;
 
-import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
-import com.esmods.keepersofthestonestwo.procedures.BatteryChargerTickProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BatteryChargerClientTickProcedure;
 import com.esmods.keepersofthestonestwo.block.entity.BatteryChargerBlockEntity;
 

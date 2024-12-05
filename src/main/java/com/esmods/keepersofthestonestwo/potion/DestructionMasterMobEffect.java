@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.DestructionMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.DestructionMasterEndProcedure;
-
 public class DestructionMasterMobEffect extends MobEffect {
 	public DestructionMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13421773);

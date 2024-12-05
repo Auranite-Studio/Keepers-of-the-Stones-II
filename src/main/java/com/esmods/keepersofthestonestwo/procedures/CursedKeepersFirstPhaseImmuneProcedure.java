@@ -11,8 +11,6 @@ import net.minecraft.server.level.ServerPlayer;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
-
 @Mod.EventBusSubscriber
 public class CursedKeepersFirstPhaseImmuneProcedure {
 	@SubscribeEvent

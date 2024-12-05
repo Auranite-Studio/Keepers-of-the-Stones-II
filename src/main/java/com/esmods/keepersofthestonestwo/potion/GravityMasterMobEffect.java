@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.GravityMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GravityMasterEndProcedure;
-
 public class GravityMasterMobEffect extends MobEffect {
 	public GravityMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -26215);

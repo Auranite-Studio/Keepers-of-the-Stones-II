@@ -14,10 +14,6 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.FireStoneUseProcedure;
-
 public class FireStoneItem extends Item {
 	public FireStoneItem() {
 		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));
@@ -27,7 +23,12 @@ public class FireStoneItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
 		Entity entity = itemstack.getEntityRepresentation();
-		list.add(Component.literal(GetRechargeInfoProcedure.execute(itemstack)));
+		String hoverText = GetRechargeInfoProcedure.execute(itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

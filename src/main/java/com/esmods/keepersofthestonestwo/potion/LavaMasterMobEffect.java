@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.LavaMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LavaMasterEndProcedure;
-
 public class LavaMasterMobEffect extends MobEffect {
 	public LavaMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -39424);

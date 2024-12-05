@@ -10,7 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.FilthDarkMasterStartProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FilthDarkMasterEndProcedure;
 
 public class FilthDarkMasterMobEffect extends MobEffect {

@@ -14,7 +14,6 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-import com.esmods.keepersofthestonestwo.procedures.SunBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunBatteryDescProcedure;
 
 public class SunBatteryItem extends Item {
@@ -26,7 +25,12 @@ public class SunBatteryItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
 		Entity entity = itemstack.getEntityRepresentation();
-		list.add(Component.literal(SunBatteryDescProcedure.execute()));
+		String hoverText = SunBatteryDescProcedure.execute();
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

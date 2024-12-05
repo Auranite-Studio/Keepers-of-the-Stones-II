@@ -26,7 +26,6 @@ import java.util.Collection;
 import java.util.ArrayList;
 import java.util.AbstractMap;
 
-import com.esmods.keepersofthestonestwo.init.PowerModTabs;
 import com.esmods.keepersofthestonestwo.init.PowerModSounds;
 import com.esmods.keepersofthestonestwo.init.PowerModPotions;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;

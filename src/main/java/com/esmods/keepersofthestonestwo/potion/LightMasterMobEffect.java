@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.LightMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LightMasterEndProcedure;
-
 public class LightMasterMobEffect extends MobEffect {
 	public LightMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13261);

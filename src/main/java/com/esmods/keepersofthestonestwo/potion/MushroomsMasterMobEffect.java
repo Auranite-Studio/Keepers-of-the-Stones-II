@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterEndProcedure;
-
 public class MushroomsMasterMobEffect extends MobEffect {
 	public MushroomsMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -6750055);

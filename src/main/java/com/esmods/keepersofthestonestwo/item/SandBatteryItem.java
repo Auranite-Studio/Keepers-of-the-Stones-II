@@ -14,7 +14,6 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-import com.esmods.keepersofthestonestwo.procedures.SandBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SandBatteryDescProcedure;
 
 public class SandBatteryItem extends Item {
@@ -26,7 +25,12 @@ public class SandBatteryItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
 		Entity entity = itemstack.getEntityRepresentation();
-		list.add(Component.literal(SandBatteryDescProcedure.execute()));
+		String hoverText = SandBatteryDescProcedure.execute();
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

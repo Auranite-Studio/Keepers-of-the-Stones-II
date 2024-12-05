@@ -7,7 +7,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.core.BlockPos;
 
@@ -23,7 +22,7 @@ public class EnergiumControllerObnovlieniieTikaProcedure {
 				final Vec3 _center = new Vec3(x, y, z);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(48 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
-					if (!(entityiterator instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(MobEffects.MOVEMENT_SPEED))) {
+					if (!(entityiterator instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(PowerModMobEffects.POWER_LOCK.get()))) {
 						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 200, 0));
 					}

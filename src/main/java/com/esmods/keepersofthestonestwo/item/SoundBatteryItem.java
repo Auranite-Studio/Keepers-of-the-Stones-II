@@ -14,7 +14,6 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-import com.esmods.keepersofthestonestwo.procedures.SoundBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundBatteryDescProcedure;
 
 public class SoundBatteryItem extends Item {
@@ -26,7 +25,12 @@ public class SoundBatteryItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
 		Entity entity = itemstack.getEntityRepresentation();
-		list.add(Component.literal(SoundBatteryDescProcedure.execute()));
+		String hoverText = SoundBatteryDescProcedure.execute();
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

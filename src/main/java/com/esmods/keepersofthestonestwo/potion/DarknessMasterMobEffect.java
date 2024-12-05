@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.DarknessMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.DarknessMasterEndProcedure;
-
 public class DarknessMasterMobEffect extends MobEffect {
 	public DarknessMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13434829);

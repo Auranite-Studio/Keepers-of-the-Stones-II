@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.TeleportationMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TeleportationMasterEndProcedure;
-
 public class TeleportationMasterMobEffect extends MobEffect {
 	public TeleportationMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -16777012);

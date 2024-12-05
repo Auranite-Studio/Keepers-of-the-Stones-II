@@ -27,7 +27,6 @@ import java.util.Comparator;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
-import com.esmods.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
 
 public class VacuumSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -59,9 +58,9 @@ public class VacuumSpecialAttackProcedure {
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sculk.spread")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sculk.spread")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				{

@@ -14,7 +14,6 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-import com.esmods.keepersofthestonestwo.procedures.PlagueBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlagueBatteryDescProcedure;
 
 public class PlagueBatteryItem extends Item {
@@ -26,7 +25,12 @@ public class PlagueBatteryItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
 		Entity entity = itemstack.getEntityRepresentation();
-		list.add(Component.literal(PlagueBatteryDescProcedure.execute()));
+		String hoverText = PlagueBatteryDescProcedure.execute();
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

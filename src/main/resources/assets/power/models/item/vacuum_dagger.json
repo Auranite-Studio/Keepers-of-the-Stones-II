@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/vacuum_dagger",
-  "textures": {
-    "0": "power:block/vacuum_dagger",
-    "particle": "power:item/vacuum_dagger"
-  }
-}

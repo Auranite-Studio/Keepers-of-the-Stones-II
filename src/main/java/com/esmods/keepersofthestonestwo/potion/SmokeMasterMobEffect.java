@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.SmokeMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SmokeMasterEndProcedure;
-
 public class SmokeMasterMobEffect extends MobEffect {
 	public SmokeMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -6710887);

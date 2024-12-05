@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.BlueFlameMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.BlueFlameMasterEndProcedure;
-
 public class BlueFlameMasterMobEffect extends MobEffect {
 	public BlueFlameMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -16737793);

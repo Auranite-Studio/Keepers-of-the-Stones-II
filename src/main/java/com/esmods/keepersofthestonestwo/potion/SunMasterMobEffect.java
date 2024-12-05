@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.SunMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SunMasterEndProcedure;
-
 public class SunMasterMobEffect extends MobEffect {
 	public SunMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13261);

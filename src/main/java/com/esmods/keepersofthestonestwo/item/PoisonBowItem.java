@@ -15,9 +15,6 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
-import com.esmods.keepersofthestonestwo.procedures.PoisonBowKazhdyiTikVInvientarieProcedure;
-import com.esmods.keepersofthestonestwo.entity.PoisonDropProjectileEntity;
-
 public class PoisonBowItem extends Item {
 	public PoisonBowItem() {
 		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));

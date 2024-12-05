@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.BloodMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.BloodMasterEndProcedure;
-
 public class BloodMasterMobEffect extends MobEffect {
 	public BloodMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -65536);

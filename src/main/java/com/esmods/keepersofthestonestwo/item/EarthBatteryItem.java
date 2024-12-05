@@ -14,7 +14,6 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-import com.esmods.keepersofthestonestwo.procedures.EarthBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EarthBatteryDescProcedure;
 
 public class EarthBatteryItem extends Item {
@@ -26,7 +25,12 @@ public class EarthBatteryItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
 		Entity entity = itemstack.getEntityRepresentation();
-		list.add(Component.literal(EarthBatteryDescProcedure.execute()));
+		String hoverText = EarthBatteryDescProcedure.execute();
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

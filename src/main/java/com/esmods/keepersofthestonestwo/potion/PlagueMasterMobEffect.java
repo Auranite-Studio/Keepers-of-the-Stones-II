@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.PlagueMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PlagueMasterEndProcedure;
-
 public class PlagueMasterMobEffect extends MobEffect {
 	public PlagueMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13434829);

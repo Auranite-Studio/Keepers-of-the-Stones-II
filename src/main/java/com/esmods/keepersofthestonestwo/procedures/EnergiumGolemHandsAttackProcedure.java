@@ -19,8 +19,6 @@ import net.minecraft.core.BlockPos;
 import java.util.List;
 import java.util.Comparator;
 
-import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
-
 public class EnergiumGolemHandsAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)

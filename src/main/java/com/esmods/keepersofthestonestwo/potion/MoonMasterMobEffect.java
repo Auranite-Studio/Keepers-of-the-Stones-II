@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.MoonMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MoonMasterEndProcedure;
-
 public class MoonMasterMobEffect extends MobEffect {
 	public MoonMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13369396);

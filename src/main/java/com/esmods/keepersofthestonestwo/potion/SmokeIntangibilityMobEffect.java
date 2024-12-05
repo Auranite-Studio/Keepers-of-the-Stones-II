@@ -6,9 +6,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
-import com.esmods.keepersofthestonestwo.procedures.SmokeIntangibilityStartProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SmokeIntangibilitySmokeEffectProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SmokeIntangibilityEndProcedure;
 
 public class SmokeIntangibilityMobEffect extends MobEffect {
 	public SmokeIntangibilityMobEffect() {

@@ -25,7 +25,6 @@ import java.util.Comparator;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
-import com.esmods.keepersofthestonestwo.entity.TurretProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.TurretEntity;
 
 public class TechnologySpecialAttackProcedure {

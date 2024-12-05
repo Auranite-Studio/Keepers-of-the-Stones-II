@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.EtherMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EtherMasterEndProcedure;
-
 public class EtherMasterMobEffect extends MobEffect {
 	public EtherMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -6710785);

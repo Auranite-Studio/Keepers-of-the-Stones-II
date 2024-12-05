@@ -10,9 +10,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.esmods.keepersofthestonestwo.procedures.MistMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MistMasterEndProcedure;
-
 public class MistMasterMobEffect extends MobEffect {
 	public MistMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13434727);

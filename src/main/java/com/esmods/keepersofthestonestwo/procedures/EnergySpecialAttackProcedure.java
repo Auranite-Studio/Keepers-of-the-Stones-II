@@ -31,7 +31,6 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
-import com.esmods.keepersofthestonestwo.entity.EnergyChargeEntity;
 
 public class EnergySpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

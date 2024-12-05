@@ -5,8 +5,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 
-import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
-
 public class CursedKeeperAirProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
