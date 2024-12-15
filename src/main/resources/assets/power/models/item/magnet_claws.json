@@ -1,0 +1,8 @@
+{
+  "parent": "power:custom/magnet_claws",
+  "textures": {
+    "0": "power:block/magnet_claws",
+    "missing": "power:block/magnet_claws",
+    "particle": "power:item/magnet_claws"
+  }
+}

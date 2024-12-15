@@ -10,6 +10,7 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.ThirstDarkMasterStartProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ThirstDarkMasterEndProcedure;
 
 public class ThirstDarkMasterMobEffect extends MobEffect {

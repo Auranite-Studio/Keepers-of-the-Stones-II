@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.SoundBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundBatteryDescProcedure;
 
 public class SoundBatteryItem extends Item {

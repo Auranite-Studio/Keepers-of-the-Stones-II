@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.EtherBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherBatteryDescProcedure;
 
 public class EtherBatteryItem extends Item {

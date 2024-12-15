@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.TimeBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeBatteryDescProcedure;
 
 public class TimeBatteryItem extends Item {

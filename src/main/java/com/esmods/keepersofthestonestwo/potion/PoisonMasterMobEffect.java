@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.PoisonMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PoisonMasterEndProcedure;
+
 public class PoisonMasterMobEffect extends MobEffect {
 	public PoisonMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -6684877);

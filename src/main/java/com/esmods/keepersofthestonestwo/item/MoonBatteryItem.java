@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.MoonBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonBatteryDescProcedure;
 
 public class MoonBatteryItem extends Item {

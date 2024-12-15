@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.ExplosionBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ExplosionBatteryDescProcedure;
 
 public class ExplosionBatteryItem extends Item {

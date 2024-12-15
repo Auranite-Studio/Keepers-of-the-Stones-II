@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.SoundMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SoundMasterEndProcedure;
+
 public class SoundMasterMobEffect extends MobEffect {
 	public SoundMasterMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -6750055);

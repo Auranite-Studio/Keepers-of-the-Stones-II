@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.CrystalMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CrystalMasterEndProcedure;
+
 public class CrystalMasterMobEffect extends MobEffect {
 	public CrystalMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -6749953);

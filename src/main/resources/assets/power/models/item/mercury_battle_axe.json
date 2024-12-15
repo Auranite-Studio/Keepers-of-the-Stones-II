@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/mercury_battle_axe",
+  "textures": {
+    "0": "power:block/mercury_battle_axe",
+    "particle": "power:item/mercury_battle_axe"
+  }
+}

@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.VacuumBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.VacuumBatteryDescProcedure;
 
 public class VacuumBatteryItem extends Item {

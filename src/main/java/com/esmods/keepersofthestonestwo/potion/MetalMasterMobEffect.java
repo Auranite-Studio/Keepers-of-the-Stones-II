@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.MetalMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MetalMasterEndProcedure;
+
 public class MetalMasterMobEffect extends MobEffect {
 	public MetalMasterMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -6710887);

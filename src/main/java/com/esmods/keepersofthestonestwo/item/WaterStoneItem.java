@@ -14,6 +14,10 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.WaterStoneUseProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
+
 public class WaterStoneItem extends Item {
 	public WaterStoneItem() {
 		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));

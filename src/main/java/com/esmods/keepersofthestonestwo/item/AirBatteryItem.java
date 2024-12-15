@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.AirBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AirBatteryDescProcedure;
 
 public class AirBatteryItem extends Item {

@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.TornadoMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.TornadoMasterEndProcedure;
+
 public class TornadoMasterMobEffect extends MobEffect {
 	public TornadoMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -6724096);

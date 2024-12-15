@@ -14,6 +14,10 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MetalStoneUseProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
+
 public class MetalStoneItem extends Item {
 	public MetalStoneItem() {
 		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));

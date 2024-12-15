@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/music_guitar",
+  "textures": {
+    "0": "power:block/music_guitar",
+    "particle": "power:item/music_guitar"
+  }
+}

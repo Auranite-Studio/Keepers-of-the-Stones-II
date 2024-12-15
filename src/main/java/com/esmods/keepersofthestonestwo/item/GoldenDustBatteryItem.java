@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.GoldenDustBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GoldenDustBatteryDescProcedure;
 
 public class GoldenDustBatteryItem extends Item {

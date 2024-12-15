@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.IceMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.IceMasterEndProcedure;
+
 public class IceMasterMobEffect extends MobEffect {
 	public IceMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -16737844);

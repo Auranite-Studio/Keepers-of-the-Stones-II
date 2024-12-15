@@ -27,6 +27,7 @@ import java.util.stream.IntStream;
 
 import io.netty.buffer.Unpooled;
 
+import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
 import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
 
 public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {

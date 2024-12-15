@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "power:energium_armor_helmet",
+    "power:energium_armor_chestplate",
+    "power:energium_armor_leggings",
+    "power:energium_armor_boots"
+  ]
+}

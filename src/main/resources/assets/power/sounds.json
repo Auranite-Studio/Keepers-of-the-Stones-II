@@ -17,6 +17,33 @@
       }
     ]
   },
+  "electric_spark": {
+    "subtitle": "subtitles.electric_spark",
+    "sounds": [
+      {
+        "name": "power:electric_spark",
+        "stream": false
+      }
+    ]
+  },
+  "ear_ringing": {
+    "subtitle": "subtitles.ear_ringing",
+    "sounds": [
+      {
+        "name": "power:ear_ringing",
+        "stream": false
+      }
+    ]
+  },
+  "magnetic_waves": {
+    "subtitle": "subtitles.magnetic_waves",
+    "sounds": [
+      {
+        "name": "power:magnetic_waves",
+        "stream": false
+      }
+    ]
+  },
   "backport.block.vault.step": {
     "sounds": [
       {
@@ -161,33 +188,6 @@
     "sounds": [
       {
         "name": "power:assets_minecraft_sounds_block_vault_open_shutter",
-        "stream": false
-      }
-    ]
-  },
-  "electric_spark": {
-    "subtitle": "subtitles.electric_spark",
-    "sounds": [
-      {
-        "name": "power:electric_spark",
-        "stream": false
-      }
-    ]
-  },
-  "ear_ringing": {
-    "subtitle": "subtitles.ear_ringing",
-    "sounds": [
-      {
-        "name": "power:ear_ringing",
-        "stream": false
-      }
-    ]
-  },
-  "magnetic_waves": {
-    "subtitle": "subtitles.magnetic_waves",
-    "sounds": [
-      {
-        "name": "power:magnetic_waves",
         "stream": false
       }
     ]

@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.EarthBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EarthBatteryDescProcedure;
 
 public class EarthBatteryItem extends Item {

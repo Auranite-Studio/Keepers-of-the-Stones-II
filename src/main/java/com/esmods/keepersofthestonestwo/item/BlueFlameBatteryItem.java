@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.BlueFlameBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BlueFlameBatteryDescProcedure;
 
 public class BlueFlameBatteryItem extends Item {

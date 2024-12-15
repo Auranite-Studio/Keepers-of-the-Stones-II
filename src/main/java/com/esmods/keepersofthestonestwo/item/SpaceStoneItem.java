@@ -14,6 +14,10 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.SpaceStoneUseProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
+
 public class SpaceStoneItem extends Item {
 	public SpaceStoneItem() {
 		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));

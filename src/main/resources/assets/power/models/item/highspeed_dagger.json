@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/high-speed_dagger",
+  "textures": {
+    "0": "power:block/high-speed_dagger",
+    "particle": "power:item/high-speed_dagger"
+  }
+}

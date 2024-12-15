@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.WaterMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.WaterMasterEndProcedure;
+
 public class WaterMasterMobEffect extends MobEffect {
 	public WaterMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -16750900);

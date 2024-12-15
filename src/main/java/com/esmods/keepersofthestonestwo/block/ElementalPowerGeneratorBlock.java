@@ -28,6 +28,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.procedures.ElementalPowerGeneratorSaveElementalPowerProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ElementalPowerGeneratorRegenerationStarsTickProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ElementalPowerGeneratorRedstoneSignalProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ElementalPowerGeneratorBuildProcedure;
 import com.esmods.keepersofthestonestwo.block.entity.ElementalPowerGeneratorBlockEntity;
 

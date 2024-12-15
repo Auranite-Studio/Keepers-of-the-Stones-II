@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.FormBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FormBatteryDescProcedure;
 
 public class FormBatteryItem extends Item {

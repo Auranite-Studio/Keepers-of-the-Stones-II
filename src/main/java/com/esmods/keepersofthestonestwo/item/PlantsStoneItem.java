@@ -14,6 +14,10 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PlantsStoneUseProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
+
 public class PlantsStoneItem extends Item {
 	public PlantsStoneItem() {
 		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));

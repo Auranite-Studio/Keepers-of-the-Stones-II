@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.SpeedMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpeedMasterEndProcedure;
+
 public class SpeedMasterMobEffect extends MobEffect {
 	public SpeedMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13382401);

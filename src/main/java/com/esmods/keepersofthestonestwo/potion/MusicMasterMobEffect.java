@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.MusicMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MusicMasterEndProcedure;
+
 public class MusicMasterMobEffect extends MobEffect {
 	public MusicMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -10066177);

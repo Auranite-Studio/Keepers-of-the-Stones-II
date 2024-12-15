@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.MercuryBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MercuryBatteryDescProcedure;
 
 public class MercuryBatteryItem extends Item {

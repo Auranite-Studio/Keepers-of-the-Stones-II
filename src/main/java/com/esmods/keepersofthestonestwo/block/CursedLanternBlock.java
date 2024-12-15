@@ -26,6 +26,9 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import com.esmods.keepersofthestonestwo.procedures.CursedLanternTopProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedLanternAfterAddedProcedure;
+
 public class CursedLanternBlock extends Block implements SimpleWaterloggedBlock {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;

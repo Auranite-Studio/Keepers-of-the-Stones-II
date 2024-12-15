@@ -14,6 +14,10 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
+import com.esmods.keepersofthestonestwo.procedures.SmokeMusketPriVystrielieSnariadomIzPriedmietaProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SmokeMusketKazhdyiTikVInvientarieProcedure;
+import com.esmods.keepersofthestonestwo.entity.SmokeMusketProjectileEntity;
+
 public class SmokeMusketItem extends Item {
 	public SmokeMusketItem() {
 		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));

@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/ether_glaive",
+  "textures": {
+    "0": "power:block/ether_glaive",
+    "particle": "power:item/ether_glaive"
+  }
+}

@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.EnergyMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.EnergyMasterEndProcedure;
+
 public class EnergyMasterMobEffect extends MobEffect {
 	public EnergyMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13312);

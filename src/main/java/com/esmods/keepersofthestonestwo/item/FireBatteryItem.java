@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.FireBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireBatteryDescProcedure;
 
 public class FireBatteryItem extends Item {

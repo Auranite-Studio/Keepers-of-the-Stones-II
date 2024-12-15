@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.AnimalsMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AnimalsMasterEndProcedure;
+
 public class AnimalsMasterMobEffect extends MobEffect {
 	public AnimalsMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -6737152);

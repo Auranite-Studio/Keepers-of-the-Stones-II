@@ -1,0 +1,8 @@
+{
+  "parent": "power:custom/tornado_axe",
+  "textures": {
+    "0": "power:block/tornado_axe",
+    "missing": "power:block/tornado_axe",
+    "particle": "power:item/tornado_axe"
+  }
+}

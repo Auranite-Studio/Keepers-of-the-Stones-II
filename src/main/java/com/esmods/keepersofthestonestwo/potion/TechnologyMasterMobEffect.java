@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.TechnologyMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.TechnologyMasterEndProcedure;
+
 public class TechnologyMasterMobEffect extends MobEffect {
 	public TechnologyMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -16724788);

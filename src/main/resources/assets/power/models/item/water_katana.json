@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/water_katana",
+  "textures": {
+    "0": "power:block/water_katana",
+    "particle": "power:item/water_katana"
+  }
+}

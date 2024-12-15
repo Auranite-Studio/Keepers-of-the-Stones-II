@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.MercuryMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MercuryMasterEndProcedure;
+
 public class MercuryMasterMobEffect extends MobEffect {
 	public MercuryMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -3355444);

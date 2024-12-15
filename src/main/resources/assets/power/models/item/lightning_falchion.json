@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/lightning_falchion",
+  "textures": {
+    "0": "power:block/lightning_falchion",
+    "particle": "power:item/lightning_falchion"
+  }
+}

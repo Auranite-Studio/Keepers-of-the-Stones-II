@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/animals_halberd",
+  "textures": {
+    "0": "power:block/animals_halberd",
+    "particle": "power:item/animals_halberd"
+  }
+}

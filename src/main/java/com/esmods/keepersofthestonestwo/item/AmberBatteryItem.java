@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.AmberBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AmberBatteryDescProcedure;
 
 public class AmberBatteryItem extends Item {

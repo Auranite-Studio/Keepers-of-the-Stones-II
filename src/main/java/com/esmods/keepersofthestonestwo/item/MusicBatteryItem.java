@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.MusicBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MusicBatteryDescProcedure;
 
 public class MusicBatteryItem extends Item {

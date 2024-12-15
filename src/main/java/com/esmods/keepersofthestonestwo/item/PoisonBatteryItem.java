@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.PoisonBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PoisonBatteryDescProcedure;
 
 public class PoisonBatteryItem extends Item {

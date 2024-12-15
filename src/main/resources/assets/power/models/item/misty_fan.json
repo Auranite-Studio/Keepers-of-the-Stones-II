@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/misty_fan",
+  "textures": {
+    "1": "power:block/misty_fan",
+    "particle": "power:item/misty_fan"
+  }
+}

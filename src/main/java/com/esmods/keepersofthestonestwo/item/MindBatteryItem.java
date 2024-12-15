@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.MindBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MindBatteryDescProcedure;
 
 public class MindBatteryItem extends Item {

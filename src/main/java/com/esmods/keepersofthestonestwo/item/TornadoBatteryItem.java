@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.TornadoBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TornadoBatteryDescProcedure;
 
 public class TornadoBatteryItem extends Item {

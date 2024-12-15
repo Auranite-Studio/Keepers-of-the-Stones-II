@@ -15,8 +15,20 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart2Menu;
+import com.esmods.keepersofthestonestwo.procedures.TornadoElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.TimeElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.TeleportationElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.TechnologyElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpeedElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SoundElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SmokeElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MusicElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MistElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart1Procedure;
+import com.esmods.keepersofthestonestwo.procedures.DestructionElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CreationElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AirElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)

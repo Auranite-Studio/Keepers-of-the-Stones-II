@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/fire_sword",
+  "textures": {
+    "0": "power:block/blue_flame_sword",
+    "particle": "power:item/blue_flame_sword"
+  }
+}

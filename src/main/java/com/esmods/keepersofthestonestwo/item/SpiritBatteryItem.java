@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.SpiritBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpiritBatteryDescProcedure;
 
 public class SpiritBatteryItem extends Item {

@@ -33,6 +33,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import com.esmods.keepersofthestonestwo.procedures.CursedVaultTickUpdateProcedure;
 import com.esmods.keepersofthestonestwo.block.entity.CursedVaultBlockEntity;
 
 public class CursedVaultBlock extends Block implements EntityBlock {

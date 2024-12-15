@@ -18,6 +18,8 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Comparator;
 
+import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
+
 @Mod.EventBusSubscriber
 public class CursedKeeperShieldTickProcedure {
 	@SubscribeEvent

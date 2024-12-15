@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.SmokeBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SmokeBatteryDescProcedure;
 
 public class SmokeBatteryItem extends Item {

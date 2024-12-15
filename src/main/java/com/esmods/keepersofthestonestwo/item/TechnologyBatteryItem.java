@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.TechnologyBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TechnologyBatteryDescProcedure;
 
 public class TechnologyBatteryItem extends Item {

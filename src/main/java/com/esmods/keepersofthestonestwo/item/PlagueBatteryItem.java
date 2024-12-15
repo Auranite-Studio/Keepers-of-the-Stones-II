@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.PlagueBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlagueBatteryDescProcedure;
 
 public class PlagueBatteryItem extends Item {

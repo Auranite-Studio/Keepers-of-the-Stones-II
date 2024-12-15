@@ -21,6 +21,7 @@ import com.mojang.brigadier.arguments.BoolArgumentType;
 
 import com.esmods.keepersofthestonestwo.procedures.UnlockKeepersBoxProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTimeSetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.QuakePowerProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PwResetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerScaleSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerRecoveryMultiplierSetProcedure;

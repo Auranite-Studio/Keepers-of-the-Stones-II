@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/shadow_scythe",
+  "textures": {
+    "0": "power:block/shadow_scythe",
+    "particle": "power:item/shadow_scythe"
+  }
+}

@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.SunBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunBatteryDescProcedure;
 
 public class SunBatteryItem extends Item {

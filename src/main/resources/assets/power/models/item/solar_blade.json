@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/solar_blade",
+  "textures": {
+    "0": "power:block/solar_blade",
+    "particle": "power:item/solar_blade"
+  }
+}

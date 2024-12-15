@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.IceBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IceBatteryDescProcedure;
 
 public class IceBatteryItem extends Item {

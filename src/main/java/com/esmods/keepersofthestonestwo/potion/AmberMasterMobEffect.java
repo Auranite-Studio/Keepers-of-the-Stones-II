@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.AmberMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AmberMasterEndProcedure;
+
 public class AmberMasterMobEffect extends MobEffect {
 	public AmberMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -26266);

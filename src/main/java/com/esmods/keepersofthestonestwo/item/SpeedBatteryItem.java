@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.SpeedBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpeedBatteryDescProcedure;
 
 public class SpeedBatteryItem extends Item {

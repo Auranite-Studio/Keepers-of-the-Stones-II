@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.EnergyBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergyBatteryDescProcedure;
 
 public class EnergyBatteryItem extends Item {

@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.OceanBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OceanBatteryDescProcedure;
 
 public class OceanBatteryItem extends Item {

@@ -25,6 +25,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import com.esmods.keepersofthestonestwo.procedures.PurpleMushroomUsloviieRazmieshchieniiaBlokaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PurpleMushroomSpontannoNaStoronieKliientaProcedure;
 
 public class PurpleMushroomBlock extends Block implements SimpleWaterloggedBlock {

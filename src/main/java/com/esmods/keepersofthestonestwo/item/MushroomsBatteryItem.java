@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.MushroomsBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushroomsBatteryDescProcedure;
 
 public class MushroomsBatteryItem extends Item {

@@ -9,6 +9,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
+import com.esmods.keepersofthestonestwo.procedures.AmplifierRingUseProcedure;
+
 public class AmplifierRingItem extends Item {
 	public AmplifierRingItem() {
 		super(new Item.Properties().durability(3).rarity(Rarity.COMMON));

@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.CrystalBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CrystalBatteryDescProcedure;
 
 public class CrystalBatteryItem extends Item {

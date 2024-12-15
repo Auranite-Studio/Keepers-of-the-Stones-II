@@ -34,6 +34,7 @@ import net.minecraft.world.Containers;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import com.esmods.keepersofthestonestwo.procedures.KeepersBoxUsloviieRazmieshchieniiaBlokaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KeepersBoxPriShchielchkiePKMPoBlokuProcedure;
 import com.esmods.keepersofthestonestwo.block.entity.KeepersBoxBlockEntity;
 

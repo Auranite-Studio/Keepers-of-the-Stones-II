@@ -14,6 +14,8 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
+import com.esmods.keepersofthestonestwo.entity.MagicFireballProjectileEntity;
+
 public class MagicFireballItem extends Item {
 	public MagicFireballItem() {
 		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));

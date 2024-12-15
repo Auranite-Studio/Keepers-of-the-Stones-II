@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.PlantsBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsBatteryDescProcedure;
 
 public class PlantsBatteryItem extends Item {

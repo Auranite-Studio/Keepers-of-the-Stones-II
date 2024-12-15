@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/plague_walking_stick",
+  "textures": {
+    "0": "power:block/plague_walking_stick",
+    "particle": "power:item/plague_walking_stick"
+  }
+}

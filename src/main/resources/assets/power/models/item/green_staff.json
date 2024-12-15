@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/green_staff",
+  "textures": {
+    "0": "power:block/green_staff",
+    "particle": "power:item/green_staff"
+  }
+}

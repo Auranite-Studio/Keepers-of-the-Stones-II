@@ -15,7 +15,19 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
+import com.esmods.keepersofthestonestwo.procedures.SandElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PoisonElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PlantsElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PlagueElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MushrooomsElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MetalElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MercuryElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
+import com.esmods.keepersofthestonestwo.procedures.EtherElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.EarthElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CrystalElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AnimalsElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AmberElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)

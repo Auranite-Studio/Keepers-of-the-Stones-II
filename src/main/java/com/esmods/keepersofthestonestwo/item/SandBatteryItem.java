@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.SandBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SandBatteryDescProcedure;
 
 public class SandBatteryItem extends Item {

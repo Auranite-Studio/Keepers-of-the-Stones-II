@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.DarknessBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DarknessBatteryDescProcedure;
 
 public class DarknessBatteryItem extends Item {

@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/dark_sword",
+  "textures": {
+    "3": "power:block/dark_sword",
+    "particle": "power:item/dark_sword"
+  }
+}

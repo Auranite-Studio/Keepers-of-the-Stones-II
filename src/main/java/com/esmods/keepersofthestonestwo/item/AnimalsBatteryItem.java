@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.AnimalsBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AnimalsBatteryDescProcedure;
 
 public class AnimalsBatteryItem extends Item {

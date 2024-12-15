@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.BloodBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodBatteryDescProcedure;
 
 public class BloodBatteryItem extends Item {

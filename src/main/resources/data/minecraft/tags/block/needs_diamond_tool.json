@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "power:deepslate_energium_ore",
+    "power:deepslate_depleted_energium_ore",
+    "power:raw_energium_block",
+    "power:energium_ore",
+    "power:energium_vault",
+    "power:cursed_vault",
+    "power:raw_depleted_energium_block",
+    "power:energium_controller",
+    "power:energium_block",
+    "power:depleted_energium_block",
+    "power:depleted_energium_ore"
+  ]
+}

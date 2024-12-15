@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.VacuumMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.VacuumMasterEndProcedure;
+
 public class VacuumMasterMobEffect extends MobEffect {
 	public VacuumMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -16764109);

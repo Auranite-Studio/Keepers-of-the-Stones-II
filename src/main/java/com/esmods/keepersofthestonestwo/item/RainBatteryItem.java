@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.RainBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RainBatteryDescProcedure;
 
 public class RainBatteryItem extends Item {

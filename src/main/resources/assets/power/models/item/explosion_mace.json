@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/explosion_mace",
+  "textures": {
+    "0": "power:block/explosion_mace",
+    "particle": "power:item/explosion_mace"
+  }
+}

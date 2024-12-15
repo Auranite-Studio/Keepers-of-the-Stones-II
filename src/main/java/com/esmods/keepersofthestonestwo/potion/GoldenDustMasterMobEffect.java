@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.GoldenDustMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GoldenDustMasterEndProcedure;
+
 public class GoldenDustMasterMobEffect extends MobEffect {
 	public GoldenDustMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13210);

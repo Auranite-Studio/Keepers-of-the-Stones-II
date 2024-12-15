@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.LightningBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightningBatteryDescProcedure;
 
 public class LightningBatteryItem extends Item {

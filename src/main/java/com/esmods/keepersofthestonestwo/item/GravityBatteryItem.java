@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.GravityBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GravityBatteryDescProcedure;
 
 public class GravityBatteryItem extends Item {

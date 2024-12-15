@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/form_sai",
+  "textures": {
+    "0": "power:block/form_sai",
+    "particle": "power:item/form_sai"
+  }
+}

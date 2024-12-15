@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/sand_saber",
+  "textures": {
+    "0": "power:block/sand_saber",
+    "particle": "power:item/sand_saber"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/amber_staff",
+  "textures": {
+    "1": "power:block/amber_staff",
+    "particle": "power:item/amber_staff"
+  }
+}

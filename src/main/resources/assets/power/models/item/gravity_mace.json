@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/gravity_mace",
+  "textures": {
+    "0": "power:block/gravity_mace",
+    "particle": "power:item/gravity_mace"
+  }
+}

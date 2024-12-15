@@ -10,6 +10,7 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.ChaosDarkMasterStartProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ChaosDarkMasterEndProcedure;
 
 public class ChaosDarkMasterMobEffect extends MobEffect {

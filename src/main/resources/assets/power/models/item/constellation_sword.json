@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/constellation_sword",
+  "textures": {
+    "0": "power:block/constellation_sword",
+    "particle": "power:item/constellation_sword"
+  }
+}

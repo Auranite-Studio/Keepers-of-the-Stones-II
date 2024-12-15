@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.MistBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MistBatteryDescProcedure;
 
 public class MistBatteryItem extends Item {

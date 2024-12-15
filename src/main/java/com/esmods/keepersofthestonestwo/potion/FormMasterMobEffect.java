@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.FormMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.FormMasterEndProcedure;
+
 public class FormMasterMobEffect extends MobEffect {
 	public FormMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -39271);

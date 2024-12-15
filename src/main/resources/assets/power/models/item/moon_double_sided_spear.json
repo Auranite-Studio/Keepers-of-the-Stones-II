@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/moon_double_sided_spear",
+  "textures": {
+    "0": "power:block/moon_double_sided_spear",
+    "particle": "power:item/moon_double_sided_spear"
+  }
+}

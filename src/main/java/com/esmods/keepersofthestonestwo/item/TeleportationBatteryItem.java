@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.TeleportationBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TeleportationBatteryDescProcedure;
 
 public class TeleportationBatteryItem extends Item {

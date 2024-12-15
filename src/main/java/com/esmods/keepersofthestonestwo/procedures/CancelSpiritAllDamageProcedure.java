@@ -9,6 +9,8 @@ import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
+import com.esmods.keepersofthestonestwo.entity.SpiritEntity;
+
 @Mod.EventBusSubscriber
 public class CancelSpiritAllDamageProcedure {
 	@SubscribeEvent

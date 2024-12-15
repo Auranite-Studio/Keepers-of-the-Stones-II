@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/destruction_broadsword",
+  "textures": {
+    "1": "power:block/destruction_broadsword",
+    "particle": "power:item/destruction_broadsword"
+  }
+}

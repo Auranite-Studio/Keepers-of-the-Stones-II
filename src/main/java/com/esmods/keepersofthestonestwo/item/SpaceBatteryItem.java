@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.SpaceBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceBatteryDescProcedure;
 
 public class SpaceBatteryItem extends Item {

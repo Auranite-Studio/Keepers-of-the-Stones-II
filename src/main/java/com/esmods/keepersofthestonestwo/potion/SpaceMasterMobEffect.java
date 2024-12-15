@@ -10,6 +10,9 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.esmods.keepersofthestonestwo.procedures.SpaceMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpaceMasterEndProcedure;
+
 public class SpaceMasterMobEffect extends MobEffect {
 	public SpaceMasterMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13434727);

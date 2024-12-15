@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/spirit_sickle",
+  "textures": {
+    "1": "power:block/spirit_sickle",
+    "particle": "power:item/spirit_sickle"
+  }
+}
