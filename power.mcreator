@@ -35562,16 +35562,7 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/ConverterModuleProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Modules/ConvertersModule"
     },
@@ -36380,7 +36371,7 @@
       "name": "level",
       "type": "number",
       "scope": "player_persistent",
-      "value": "1.0"
+      "value": "0.0"
     },
     {
       "name": "level_exp",
@@ -36392,7 +36383,7 @@
       "name": "base_damage_by_lvl",
       "type": "number",
       "scope": "player_persistent",
-      "value": "8.0"
+      "value": "13.5"
     }
   ],
   "sound_elements": [

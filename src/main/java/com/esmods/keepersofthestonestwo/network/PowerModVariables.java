@@ -473,9 +473,9 @@ public class PowerModVariables {
 		public boolean master_effect_end = false;
 		public boolean master_effect_start = false;
 		public boolean is_set_configurable_zero = false;
-		public double level = 1.0;
+		public double level = 0.0;
 		public double level_exp = 0;
-		public double base_damage_by_lvl = 8.0;
+		public double base_damage_by_lvl = 13.5;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
