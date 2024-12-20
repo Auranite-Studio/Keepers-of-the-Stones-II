@@ -63,7 +63,7 @@ public class MetalSpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 21, 8, (byte) 0);
+							}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2), 8, (byte) 0);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -116,7 +116,7 @@ public class MetalSpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 15, 6, (byte) 0);
+							}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.5), 6, (byte) 0);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -169,7 +169,7 @@ public class MetalSpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, (float) 13.5, 4, (byte) 0);
+							}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 4, (byte) 0);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -229,7 +229,7 @@ public class MetalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 4, (byte) 10);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 4, (byte) 10);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot((-1), 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -259,7 +259,7 @@ public class MetalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 4, (byte) 10);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 4, (byte) 10);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(1, 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -289,7 +289,7 @@ public class MetalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 4, (byte) 10);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 4, (byte) 10);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot((-1), 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -319,7 +319,7 @@ public class MetalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 4, (byte) 10);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 4, (byte) 10);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(1, 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -349,7 +349,7 @@ public class MetalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 4, (byte) 10);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 4, (byte) 10);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(0, 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -379,7 +379,7 @@ public class MetalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 4, (byte) 10);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 4, (byte) 10);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(0, 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -409,7 +409,7 @@ public class MetalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 4, (byte) 10);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 4, (byte) 10);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot((-1), 0, 0, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -439,7 +439,7 @@ public class MetalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 4, (byte) 10);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 4, (byte) 10);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(1, 0, 0, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);

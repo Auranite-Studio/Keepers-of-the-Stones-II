@@ -64,7 +64,8 @@ public class TimeSpecialAttackProcedure {
 							if (!(entityiterator == entity)) {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TIME_SLOWING, 200, 0, false, false));
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 10.25);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
+										(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
 							}
 						}
 					}

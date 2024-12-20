@@ -81,7 +81,8 @@ public class MercurySpecialAttackProcedure {
 									_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 120, 3, false, false));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 60, 2, false, false));
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 10.13);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
+										(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
 							}
 						}
 					}
@@ -129,7 +130,7 @@ public class MercurySpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 13.5, 2, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 2, (byte) 0);
 						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -183,7 +184,7 @@ public class MercurySpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 24.3, 0, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.8), 0, (byte) 0);
 						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 						_entityToSpawn.shoot((-1), 0, (-1), (float) 1.5, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -213,7 +214,7 @@ public class MercurySpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 24.3, 0, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.8), 0, (byte) 0);
 						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 						_entityToSpawn.shoot(1, 0, 1, (float) 1.5, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -243,7 +244,7 @@ public class MercurySpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 24.3, 0, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.8), 0, (byte) 0);
 						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 						_entityToSpawn.shoot((-1), 0, 1, (float) 1.5, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -273,7 +274,7 @@ public class MercurySpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 24.3, 0, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.8), 0, (byte) 0);
 						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 						_entityToSpawn.shoot(1, 0, (-1), (float) 1.5, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -303,7 +304,7 @@ public class MercurySpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 24.3, 0, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.8), 0, (byte) 0);
 						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 						_entityToSpawn.shoot(0, 0, (-1), (float) 1.5, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -333,7 +334,7 @@ public class MercurySpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 24.3, 0, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.8), 0, (byte) 0);
 						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 						_entityToSpawn.shoot(0, 0, 1, (float) 1.5, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -363,7 +364,7 @@ public class MercurySpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 24.3, 0, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.8), 0, (byte) 0);
 						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 						_entityToSpawn.shoot((-1), 0, 0, (float) 1.5, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -393,7 +394,7 @@ public class MercurySpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 24.3, 0, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.8), 0, (byte) 0);
 						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 						_entityToSpawn.shoot(1, 0, 0, (float) 1.5, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -417,7 +418,8 @@ public class MercurySpecialAttackProcedure {
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 24.3);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
+										(float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.8));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 400, 4, false, false));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())

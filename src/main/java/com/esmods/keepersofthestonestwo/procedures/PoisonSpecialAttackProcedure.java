@@ -75,7 +75,8 @@ public class PoisonSpecialAttackProcedure {
 							if (!(entityiterator == entity)) {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 120, 1, false, false));
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 10.13);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
+										(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
 								if (entityiterator instanceof LivingEntity _entity)
 									_entity.removeEffect(PowerModMobEffects.IRON_SKIN);
 								if (entityiterator instanceof LivingEntity _entity)
@@ -136,7 +137,7 @@ public class PoisonSpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, 27, 4, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2), 4, (byte) 0);
 						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);

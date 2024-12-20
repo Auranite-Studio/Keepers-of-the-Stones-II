@@ -79,7 +79,8 @@ public class MusicSpecialAttackProcedure {
 							if (!(entityiterator == entity)) {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.STUN, 300, 0, false, false));
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 10.25);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
+										(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
 							}
 						}
 					}
@@ -131,7 +132,7 @@ public class MusicSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0, (byte) 0);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 0, (byte) 0);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot((-1), 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -161,7 +162,7 @@ public class MusicSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0, (byte) 0);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 0, (byte) 0);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(1, 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -191,7 +192,7 @@ public class MusicSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0, (byte) 0);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 0, (byte) 0);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot((-1), 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -221,7 +222,7 @@ public class MusicSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0, (byte) 0);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 0, (byte) 0);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(1, 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -251,7 +252,7 @@ public class MusicSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0, (byte) 0);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 0, (byte) 0);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(0, 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -281,7 +282,7 @@ public class MusicSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0, (byte) 0);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 0, (byte) 0);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(0, 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -311,7 +312,7 @@ public class MusicSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0, (byte) 0);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 0, (byte) 0);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot((-1), 0, 0, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -341,7 +342,7 @@ public class MusicSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0, (byte) 0);
+					}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 0, (byte) 0);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(1, 0, 0, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);

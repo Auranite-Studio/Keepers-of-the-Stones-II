@@ -90,6 +90,7 @@ public class PowerModVariables {
 			clone.level = original.level;
 			clone.level_exp = original.level_exp;
 			clone.base_damage_by_lvl = original.base_damage_by_lvl;
+			clone.max_level_exp = original.max_level_exp;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -473,9 +474,10 @@ public class PowerModVariables {
 		public boolean master_effect_end = false;
 		public boolean master_effect_start = false;
 		public boolean is_set_configurable_zero = false;
-		public double level = 0.0;
-		public double level_exp = 0;
-		public double base_damage_by_lvl = 13.5;
+		public double level = 1.0;
+		public double level_exp = 0.0;
+		public double base_damage_by_lvl = 6.0;
+		public double max_level_exp = 100.0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -528,6 +530,7 @@ public class PowerModVariables {
 			nbt.putDouble("level", level);
 			nbt.putDouble("level_exp", level_exp);
 			nbt.putDouble("base_damage_by_lvl", base_damage_by_lvl);
+			nbt.putDouble("max_level_exp", max_level_exp);
 			return nbt;
 		}
 
@@ -581,6 +584,7 @@ public class PowerModVariables {
 			level = nbt.getDouble("level");
 			level_exp = nbt.getDouble("level_exp");
 			base_damage_by_lvl = nbt.getDouble("base_damage_by_lvl");
+			max_level_exp = nbt.getDouble("max_level_exp");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
