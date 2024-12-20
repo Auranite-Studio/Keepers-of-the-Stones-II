@@ -53,20 +53,26 @@ public class ConverterModuleProcedure {
 				return val;
 			}
 		}.getValue("cpapi"))) {
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.level = 1;
-				_vars.syncPlayerVariables(entity);
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.level = 1;
+					_vars.syncPlayerVariables(entity);
+				}
 			}
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.base_damage_by_lvl = 6;
-				_vars.syncPlayerVariables(entity);
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl == 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.base_damage_by_lvl = 6;
+					_vars.syncPlayerVariables(entity);
+				}
 			}
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.max_level_exp = 100;
-				_vars.syncPlayerVariables(entity);
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp == 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.max_level_exp = 100;
+					_vars.syncPlayerVariables(entity);
+				}
 			}
 			PowerModVariables.MapVariables.get(world).cpapi_ver = new Object() {
 				double convert(String s) {

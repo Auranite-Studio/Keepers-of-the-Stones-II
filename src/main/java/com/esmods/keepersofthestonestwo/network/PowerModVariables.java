@@ -239,7 +239,7 @@ public class PowerModVariables {
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
 		public boolean get_limit_of_stones = true;
-		public double cpapi_ver = 20.0;
+		public double cpapi_ver = 21.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();

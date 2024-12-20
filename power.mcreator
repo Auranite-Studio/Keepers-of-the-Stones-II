@@ -36356,7 +36356,7 @@
       "name": "cpapi_ver",
       "type": "number",
       "scope": "map",
-      "value": "20.0"
+      "value": "21.0"
     },
     {
       "name": "master_effect_end",
