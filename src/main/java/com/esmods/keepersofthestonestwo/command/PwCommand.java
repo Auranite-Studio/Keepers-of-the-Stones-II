@@ -27,6 +27,7 @@ import com.esmods.keepersofthestonestwo.procedures.PowerScaleSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerRecoveryMultiplierSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MaxPowerScaleSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MasterEffectDurationSetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.LevelUpSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FakeElementSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DebugControlProcedure;
 
@@ -135,7 +136,21 @@ public class PwCommand {
 
 					UnlockKeepersBoxProcedure.execute(arguments, entity);
 					return 0;
-				})))).then(Commands.literal("reset").then(Commands.argument("players", EntityArgument.players()).executes(arguments -> {
+				})))).then(Commands.literal("levelup").then(Commands.argument("players", EntityArgument.players()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					LevelUpSetProcedure.execute(arguments, entity);
+					return 0;
+				}))).then(Commands.literal("reset").then(Commands.argument("players", EntityArgument.players()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

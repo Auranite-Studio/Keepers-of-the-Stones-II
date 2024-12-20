@@ -35749,6 +35749,88 @@
         ]
       },
       "path": "~/Modules/CPAPIExecuterModule"
+    },
+    {
+      "name": "LevelCalculating",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_calculating",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LevelCalculatingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/LevelSystemModule"
+    },
+    {
+      "name": "LevelDebug",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LevelDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "LevelExpAndMaxDebug",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_exp_and_max_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LevelExpAndMaxDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "LevelUpSet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_up_set",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LevelUpSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -36399,6 +36481,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "100.0"
+    },
+    {
+      "name": "level_up_status",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -37782,8 +37870,8 @@
       "effect.power.energy_master": "Мастер энергии",
       "item.power.fire_armor_leggings": "Поножи мастера огня",
       "gui.power.wheel_abilities_blue_flame.tooltip_sixshot_fireballs_uses_55": "Шестерной файрбол, расходует 55",
-      "item.power.shadow_stone": "Камень тени",
       "item.power.earth_armor_boots": "Ботинки мастера земли",
+      "item.power.shadow_stone": "Камень тени",
       "gui.power.keepers_box_gui_part_1.tooltip_water": "Вода",
       "effect.power.magnet_master": "Мастер магнита",
       "item.power.spirit_sickle": "Серп духа",
@@ -38195,6 +38283,7 @@
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Ослепляющая вспышка, расходует 75",
       "effect.power.explosion_master": "Мастер взрыва",
       "gui.power.keepers_box_gui_part_1.tooltip_blue_flame": "Синее пламя",
+      "title.level_up.message": "§5Вы достигли уровня ",
       "gui.power.wheel_abilities_magnet.tooltip_negative_charge_uses_30": "Отрицательный заряд, расходует 30",
       "item.power.gravity_armor_boots": "Ботинки мастера гравитации",
       "effect.power.amber_master": "Мастер янтаря",
@@ -39074,6 +39163,7 @@
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Blinding flash, uses 75",
       "effect.power.explosion_master": "Master of Explosion",
       "gui.power.keepers_box_gui_part_1.tooltip_blue_flame": "Blue Flame",
+      "title.level_up.message": "§5You\u0027ve reached level ",
       "gui.power.wheel_abilities_magnet.tooltip_negative_charge_uses_30": "Negative charge, uses 30",
       "item.power.gravity_armor_boots": "Gravity Boots",
       "effect.power.amber_master": "Master of Amber",
