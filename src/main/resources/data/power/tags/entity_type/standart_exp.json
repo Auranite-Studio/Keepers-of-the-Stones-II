@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:skeletons",
+    "#minecraft:raiders",
+    "zombie",
+    "zombie_horse",
+    "zombie_villager",
+    "zombified_piglin",
+    "husk",
+    "drowned",
+    "bogged",
+    "creeper",
+    "enderman",
+    "endermite",
+    "vex"
+  ]
+}

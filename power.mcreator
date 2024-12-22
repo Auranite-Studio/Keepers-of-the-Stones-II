@@ -35851,6 +35851,29 @@
         ]
       },
       "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "LevelExpGet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_exp_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LevelExpGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/LevelSystemModule"
     }
   ],
   "variable_elements": [
@@ -36935,6 +36958,9 @@
       "CUSTOM:GoldenDustBattery",
       "CUSTOM:DarknessBattery"
     ],
+    "ENTITIES:mod:boss_exp": [
+      "#minecraft:bosses"
+    ],
     "ITEMS:power:power_lock_items_not_tools": [
       "CUSTOM:EnergiumIngot",
       "CUSTOM:EnergiumBlock",
@@ -37029,6 +37055,13 @@
       "~CUSTOM:EarthArmor.body",
       "~CUSTOM:AirArmor.body",
       "~CUSTOM:FireArmor.body"
+    ],
+    "ENTITIES:mod:golden_rank_exp": [
+      "CUSTOM:CursedKnight",
+      "CUSTOM:CursedSquire",
+      "EntityGhast",
+      "EntityBreeze",
+      "EntityBlaze"
     ],
     "BLOCKS:minecraft:walls": [
       "~CUSTOM:CursedStoneCrackedBricksWall",
@@ -37459,6 +37492,21 @@
       "~CUSTOM:PolishedCursedStoneSlab",
       "~CUSTOM:CursedStoneBricksSlab",
       "~CUSTOM:CursedStoneSlab"
+    ],
+    "ENTITIES:mod:standart_exp": [
+      "#minecraft:skeletons",
+      "#minecraft:raiders",
+      "EntityZombie",
+      "EntityZombieHorse",
+      "EntityZombieVillager",
+      "EntityPigZombie",
+      "EntityHusk",
+      "EntityDrowned",
+      "EntityBogged",
+      "EntityCreeper",
+      "EntityEnderman",
+      "EntityEndermite",
+      "EntityVex"
     ],
     "ENCHANTMENTS:minecraft:tradeable": [
       "~CUSTOM:Isolation",
