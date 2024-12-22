@@ -29,12 +29,46 @@ public class EnhancedAbilitiesNewProcedure {
 		if (entity == null)
 			return;
 		if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).ability_block && entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, (int) (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 3 ? 2 : 1), false, false));
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, (int) (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 5 ? 2 : 3), false, false));
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 60, 2, false, false));
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 1 && entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 4) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 60, 1, false, false));
+			} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 5) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 60, 2, false, false));
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 1 && entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 2) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 0, false, false));
+			} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 3 && entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 9) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 1, false, false));
+			} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 10 && entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 19) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 2, false, false));
+			} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 20) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 3, false, false));
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 1 && entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 2) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, 1, false, false));
+			} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 3 && entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 4) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, 2, false, false));
+			} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 5) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, 3, false, false));
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 10 && entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 14) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 60, 0, false, false));
+			} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 15 && entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 19) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 60, 1, false, false));
+			} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 20) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 60, 2, false, false));
+			}
 		}
 	}
 }
