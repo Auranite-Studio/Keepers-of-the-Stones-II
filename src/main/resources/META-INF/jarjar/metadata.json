@@ -19,9 +19,9 @@
       },
       "version": {
         "range": "[0,)",
-        "artifactVersion": "2.2.0"
+        "artifactVersion": "2.2.1"
       },
-      "path": "META-INF/jarjar/playeranimatorapi-neoforge-1.21-2.2.0.jar",
+      "path": "META-INF/jarjar/playeranimatorapi-neoforge-1.21-2.2.1.jar",
       "isObfuscated": true
     }
   ]
