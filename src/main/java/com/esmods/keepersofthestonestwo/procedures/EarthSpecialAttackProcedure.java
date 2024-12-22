@@ -10,7 +10,6 @@ import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.LivingEntity;
@@ -44,7 +43,8 @@ public class EarthSpecialAttackProcedure {
 		boolean success = false;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("earth_ability_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.STONE.asItem()) {
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.STONE.asItem()
+						|| (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == Blocks.STONE.asItem()) {
 					{
 						Entity _shootFrom = entity;
 						Level projectileLevel = _shootFrom.level();
@@ -79,12 +79,6 @@ public class EarthSpecialAttackProcedure {
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
-					if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-						if (entity instanceof Player _player) {
-							ItemStack _stktoremove = new ItemStack(Blocks.STONE);
-							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-						}
-					}
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
@@ -97,7 +91,8 @@ public class EarthSpecialAttackProcedure {
 							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.break")), SoundSource.PLAYERS, 1, 1, false);
 						}
 					}
-				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.DIRT.asItem()) {
+				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.DIRT.asItem()
+						|| (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == Blocks.DIRT.asItem()) {
 					{
 						Entity _shootFrom = entity;
 						Level projectileLevel = _shootFrom.level();
@@ -132,12 +127,6 @@ public class EarthSpecialAttackProcedure {
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
-					if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-						if (entity instanceof Player _player) {
-							ItemStack _stktoremove = new ItemStack(Blocks.DIRT);
-							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-						}
-					}
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
@@ -150,7 +139,8 @@ public class EarthSpecialAttackProcedure {
 							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.gravel.break")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
-				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.COBBLESTONE.asItem()) {
+				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.COBBLESTONE.asItem()
+						|| (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == Blocks.COBBLESTONE.asItem()) {
 					{
 						Entity _shootFrom = entity;
 						Level projectileLevel = _shootFrom.level();
@@ -185,12 +175,6 @@ public class EarthSpecialAttackProcedure {
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
-					if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-						if (entity instanceof Player _player) {
-							ItemStack _stktoremove = new ItemStack(Blocks.COBBLESTONE);
-							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-						}
-					}
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
@@ -203,7 +187,8 @@ public class EarthSpecialAttackProcedure {
 							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.break")), SoundSource.PLAYERS, 1, 1, false);
 						}
 					}
-				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.COBBLED_DEEPSLATE.asItem()) {
+				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.COBBLED_DEEPSLATE.asItem()
+						|| (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == Blocks.COBBLED_DEEPSLATE.asItem()) {
 					{
 						Entity _shootFrom = entity;
 						Level projectileLevel = _shootFrom.level();
@@ -236,12 +221,6 @@ public class EarthSpecialAttackProcedure {
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-					if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-						if (entity instanceof Player _player) {
-							ItemStack _stktoremove = new ItemStack(Blocks.COBBLED_DEEPSLATE);
-							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 						}
 					}
 					{
@@ -289,12 +268,6 @@ public class EarthSpecialAttackProcedure {
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-					if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-						if (entity instanceof Player _player) {
-							ItemStack _stktoremove = new ItemStack(Blocks.GRASS_BLOCK);
-							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 						}
 					}
 					{
