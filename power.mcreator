@@ -35831,6 +35831,26 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "BaseDamageDebug",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "base_damage_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BaseDamageDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
     }
   ],
   "variable_elements": [
@@ -36490,6 +36510,12 @@
     },
     {
       "name": "is_not_stone",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "attribute_is_ready",
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
