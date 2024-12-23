@@ -8,6 +8,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -21,6 +23,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
 import com.esmods.keepersofthestonestwo.procedures.StoneGetRechargeStateProcedure;
+import com.esmods.keepersofthestonestwo.item.inventory.CharacteristicsCardInventoryCapability;
 import com.esmods.keepersofthestonestwo.item.WaterStoneItem;
 import com.esmods.keepersofthestonestwo.item.WaterKatanaItem;
 import com.esmods.keepersofthestonestwo.item.WaterBatteryItem;
@@ -198,6 +201,7 @@ import com.esmods.keepersofthestonestwo.item.EnergiumDustItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumCoreItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumAxeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumArmorItem;
+import com.esmods.keepersofthestonestwo.item.EmptyCharacteristicsCardItem;
 import com.esmods.keepersofthestonestwo.item.EmptyBatteryItem;
 import com.esmods.keepersofthestonestwo.item.EarthStoneItem;
 import com.esmods.keepersofthestonestwo.item.EarthHammerItem;
@@ -228,6 +232,7 @@ import com.esmods.keepersofthestonestwo.item.CreationAxeItem;
 import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.CopyriumIngotItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
+import com.esmods.keepersofthestonestwo.item.CharacteristicsCardItem;
 import com.esmods.keepersofthestonestwo.item.ChaosArmorItem;
 import com.esmods.keepersofthestonestwo.item.BlueMagicFireballItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameSwordItem;
@@ -254,6 +259,7 @@ import com.esmods.keepersofthestonestwo.item.AirBatteryItem;
 import com.esmods.keepersofthestonestwo.item.AirArmorItem;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PowerModItems {
 	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(PowerMod.MODID);
 	public static final DeferredItem<Item> FIRE_STONE = REGISTRY.register("fire_stone", FireStoneItem::new);
@@ -699,9 +705,16 @@ public class PowerModItems {
 	public static final DeferredItem<Item> FILTH_ARMOR_CHESTPLATE = REGISTRY.register("filth_armor_chestplate", FilthArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> FILTH_ARMOR_LEGGINGS = REGISTRY.register("filth_armor_leggings", FilthArmorItem.Leggings::new);
 	public static final DeferredItem<Item> FILTH_ARMOR_BOOTS = REGISTRY.register("filth_armor_boots", FilthArmorItem.Boots::new);
+	public static final DeferredItem<Item> EMPTY_CHARACTERISTICS_CARD = REGISTRY.register("empty_characteristics_card", EmptyCharacteristicsCardItem::new);
+	public static final DeferredItem<Item> CHARACTERISTICS_CARD = REGISTRY.register("characteristics_card", CharacteristicsCardItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
+	@SubscribeEvent
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new CharacteristicsCardInventoryCapability(stack), CHARACTERISTICS_CARD.get());
+	}
+
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
 	}

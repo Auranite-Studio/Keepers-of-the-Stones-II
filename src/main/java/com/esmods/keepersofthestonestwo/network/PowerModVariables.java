@@ -91,6 +91,10 @@ public class PowerModVariables {
 			clone.level_exp = original.level_exp;
 			clone.base_damage_by_lvl = original.base_damage_by_lvl;
 			clone.max_level_exp = original.max_level_exp;
+			clone.resistance_char = original.resistance_char;
+			clone.speed_char = original.speed_char;
+			clone.haste_char = original.haste_char;
+			clone.jump_char = original.jump_char;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -484,6 +488,10 @@ public class PowerModVariables {
 		public boolean level_up_status = false;
 		public boolean is_not_stone = false;
 		public boolean attribute_is_ready = false;
+		public double resistance_char = 0.0;
+		public double speed_char = 1.0;
+		public double haste_char = 0.0;
+		public double jump_char = 1.0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -540,6 +548,10 @@ public class PowerModVariables {
 			nbt.putBoolean("level_up_status", level_up_status);
 			nbt.putBoolean("is_not_stone", is_not_stone);
 			nbt.putBoolean("attribute_is_ready", attribute_is_ready);
+			nbt.putDouble("resistance_char", resistance_char);
+			nbt.putDouble("speed_char", speed_char);
+			nbt.putDouble("haste_char", haste_char);
+			nbt.putDouble("jump_char", jump_char);
 			return nbt;
 		}
 
@@ -597,6 +609,10 @@ public class PowerModVariables {
 			level_up_status = nbt.getBoolean("level_up_status");
 			is_not_stone = nbt.getBoolean("is_not_stone");
 			attribute_is_ready = nbt.getBoolean("attribute_is_ready");
+			resistance_char = nbt.getDouble("resistance_char");
+			speed_char = nbt.getDouble("speed_char");
+			haste_char = nbt.getDouble("haste_char");
+			jump_char = nbt.getDouble("jump_char");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

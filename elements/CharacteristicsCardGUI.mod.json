@@ -1,0 +1,49 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 320,
+    "height": 176,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "characteristics_card_gui.png",
+          "use1Xscale": false,
+          "x": 54,
+          "y": 32,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_name_info",
+          "text": {
+            "fixedValue": "",
+            "name": "NameInfo"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 119,
+          "y": 62,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
