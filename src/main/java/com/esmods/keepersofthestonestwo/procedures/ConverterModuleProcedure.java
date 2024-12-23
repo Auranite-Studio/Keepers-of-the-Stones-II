@@ -10,6 +10,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
@@ -21,14 +22,16 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 public class ConverterModuleProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-		execute(event, event.getEntity().level());
+		execute(event, event.getEntity().level(), event.getEntity());
 	}
 
-	public static void execute(LevelAccessor world) {
-		execute(null, world);
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
+		if (entity == null)
+			return;
 		if (PowerModVariables.MapVariables.get(world).cpapi_ver < new Object() {
 			double convert(String s) {
 				try {
@@ -87,27 +90,6 @@ public class ConverterModuleProcedure {
 					_vars.master_effect_duration = 600;
 					_vars.syncPlayerVariables(entity);
 				}
-			}
-		}
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 0) {
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.level = 1;
-				_vars.syncPlayerVariables(entity);
-			}
-		}
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl == 0) {
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.base_damage_by_lvl = 6;
-				_vars.syncPlayerVariables(entity);
-			}
-		}
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp == 0) {
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.max_level_exp = 100;
-				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}
