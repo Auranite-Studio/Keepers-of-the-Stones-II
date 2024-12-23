@@ -35682,29 +35682,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "NullVarFix",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "null_var_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/NullVarFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/ConvertersModule"
-    },
-    {
       "name": "MasterEffectStartControl",
       "type": "procedure",
       "compiles": true,
@@ -40387,7 +40364,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.1.0.1",
+    "version": "1.1.0.1.1",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
