@@ -76,19 +76,23 @@ public class ConverterModuleProcedure {
 			}.getValue("cpapi"));
 			PowerModVariables.MapVariables.get(world).syncData(world);
 		}
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).is_set_configurable_zero == false) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer == 0) {
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).is_set_configurable_zero == false) {
+			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).recharge_timer == 0) {
 				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.recharge_timer = 300;
-					_vars.syncPlayerVariables(entity);
+					double _setval = 300;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.recharge_timer = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration == 0) {
+			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).master_effect_duration == 0) {
 				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.master_effect_duration = 600;
-					_vars.syncPlayerVariables(entity);
+					double _setval = 600;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.master_effect_duration = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
 		}
