@@ -13,13 +13,13 @@
       {
         "type": "sprite",
         "data": {
-          "sprite": "characteristics_card_gui_progess.png",
-          "spritesCount": 100,
+          "sprite": "experience_bar_progress.png",
+          "spritesCount": 13,
           "spriteIndex": {
-            "fixedValue": 0.0,
+            "fixedValue": 1.0,
             "name": "LevelExpGetProgress"
           },
-          "x": 83,
+          "x": 82,
           "y": 89,
           "locked": false
         }

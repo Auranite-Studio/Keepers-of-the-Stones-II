@@ -50,7 +50,7 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 
 		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/characteristics_card_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/characteristics_card_gui_progess.png"), this.leftPos + 29, this.topPos + 57, Mth.clamp((int) LevelExpGetProgressProcedure.execute(world) * 1, 0, 118), 0, 1, 39, 119, 39);
+		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress.png"), this.leftPos + 28, this.topPos + 57, Mth.clamp((int) LevelExpGetProgressProcedure.execute(world) * 9, 0, 111), 0, 9, 3, 120, 3);
 
 		RenderSystem.disableBlend();
 	}
