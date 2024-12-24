@@ -595,13 +595,11 @@ public class PowerModItems {
 	public static final DeferredItem<Item> MUSHROOMS_BATTERY = REGISTRY.register("mushrooms_battery", MushroomsBatteryItem::new);
 	public static final DeferredItem<Item> MUSHROOMS_HAMMER = REGISTRY.register("mushrooms_hammer", MushroomsHammerItem::new);
 	public static final DeferredItem<Item> PURPLE_MUSHROOM = block(PowerModBlocks.PURPLE_MUSHROOM);
-	public static final DeferredItem<Item> MUSIC_DISC_CALL_OF_THE_PAST = REGISTRY.register("music_disc_call_of_the_past", MusicDiscCallOfThePastItem::new);
 	public static final DeferredItem<Item> MERCURY_ARMOR_HELMET = REGISTRY.register("mercury_armor_helmet", MercuryArmorItem.Helmet::new);
 	public static final DeferredItem<Item> MERCURY_ARMOR_CHESTPLATE = REGISTRY.register("mercury_armor_chestplate", MercuryArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> MERCURY_ARMOR_LEGGINGS = REGISTRY.register("mercury_armor_leggings", MercuryArmorItem.Leggings::new);
 	public static final DeferredItem<Item> MERCURY_ARMOR_BOOTS = REGISTRY.register("mercury_armor_boots", MercuryArmorItem.Boots::new);
 	public static final DeferredItem<Item> LUCK_COIN = REGISTRY.register("luck_coin", LuckCoinItem::new);
-	public static final DeferredItem<Item> MUSIC_DISC_ANCIENT_MOOD = REGISTRY.register("music_disc_ancient_mood", MusicDiscAncientMoodItem::new);
 	public static final DeferredItem<Item> RAW_ENERGIUM = REGISTRY.register("raw_energium", RawEnergiumItem::new);
 	public static final DeferredItem<Item> ENERGIUM_ORE = block(PowerModBlocks.ENERGIUM_ORE);
 	public static final DeferredItem<Item> ENERGIUM_DUST = REGISTRY.register("energium_dust", EnergiumDustItem::new);
@@ -703,6 +701,8 @@ public class PowerModItems {
 	public static final DeferredItem<Item> FILTH_ARMOR_BOOTS = REGISTRY.register("filth_armor_boots", FilthArmorItem.Boots::new);
 	public static final DeferredItem<Item> EMPTY_CHARACTERISTICS_CARD = REGISTRY.register("empty_characteristics_card", EmptyCharacteristicsCardItem::new);
 	public static final DeferredItem<Item> CHARACTERISTICS_CARD = REGISTRY.register("characteristics_card", CharacteristicsCardItem::new);
+	public static final DeferredItem<Item> MUSIC_DISC_CALL_OF_THE_PAST = REGISTRY.register("music_disc_call_of_the_past", MusicDiscCallOfThePastItem::new);
+	public static final DeferredItem<Item> MUSIC_DISC_ANCIENT_MOOD = REGISTRY.register("music_disc_ancient_mood", MusicDiscAncientMoodItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
