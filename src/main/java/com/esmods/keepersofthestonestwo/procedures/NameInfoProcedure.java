@@ -12,7 +12,7 @@ public class NameInfoProcedure {
 	public static String execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return "";
-		return "\u00A77" + Minecraft.getInstance().level.getPlayerByUUID(java.util.UUID.fromString(((!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem())
+		return Minecraft.getInstance().level.getPlayerByUUID(java.util.UUID.fromString(((!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem())
 				? (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 				: (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("owner")))).getName().getString();
 	}

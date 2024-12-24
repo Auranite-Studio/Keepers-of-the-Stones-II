@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo.client.gui;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -14,6 +15,8 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.CharacteristicsCardGUIMenu;
 import com.esmods.keepersofthestonestwo.procedures.NameInfoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.LevelInfoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.LevelExpGetProgressProcedure;
 
 public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<CharacteristicsCardGUIMenu> {
 	private final static HashMap<String, Object> guistate = CharacteristicsCardGUIMenu.guistate;
@@ -47,6 +50,8 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 
 		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/characteristics_card_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 
+		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/characteristics_card_gui_progess.png"), this.leftPos + 29, this.topPos + 57, Mth.clamp((int) LevelExpGetProgressProcedure.execute(world) * 1, 0, 118), 0, 1, 39, 119, 39);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -63,7 +68,10 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				NameInfoProcedure.execute(world, entity), 65, 30, -12829636, false);
+				NameInfoProcedure.execute(world, entity), 80, 34, -5927048, false);
+		guiGraphics.drawString(this.font,
+
+				LevelInfoProcedure.execute(world, entity), 82, 61, -5927048, false);
 	}
 
 	@Override

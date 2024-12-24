@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "minecraft:book",
+    "texture": "characteristic_card",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
@@ -31,9 +31,12 @@
     "glowCondition": {
       "fixedValue": false
     },
-    "guiBoundTo": "CharacteristicsCardGUI",
+    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "CharacteristicsCardPriShchielchkiePKM"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

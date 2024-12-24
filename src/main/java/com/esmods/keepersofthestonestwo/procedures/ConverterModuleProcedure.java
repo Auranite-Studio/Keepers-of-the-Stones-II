@@ -115,6 +115,35 @@ public class ConverterModuleProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
+		} else {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl != 13.5) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.base_damage_by_lvl = 13.5;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level != 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.level = 0;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp != 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.level_exp = 0;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp != 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.max_level_exp = 0;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
 		}
 	}
 }

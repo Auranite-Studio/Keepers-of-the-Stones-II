@@ -37,6 +37,7 @@ public class WriteInfoInCharacteristicCardProcedure {
 				CustomData.update(DataComponents.CUSTOM_DATA, _setstack, tag -> tag.putString("owner", (entity.getStringUUID())));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
+			entity.getPersistentData().putString("ownerCard", (entity.getStringUUID()));
 		});
 	}
 }

@@ -8,8 +8,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -23,7 +21,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
 import com.esmods.keepersofthestonestwo.procedures.StoneGetRechargeStateProcedure;
-import com.esmods.keepersofthestonestwo.item.inventory.CharacteristicsCardInventoryCapability;
 import com.esmods.keepersofthestonestwo.item.WaterStoneItem;
 import com.esmods.keepersofthestonestwo.item.WaterKatanaItem;
 import com.esmods.keepersofthestonestwo.item.WaterBatteryItem;
@@ -259,7 +256,6 @@ import com.esmods.keepersofthestonestwo.item.AirBatteryItem;
 import com.esmods.keepersofthestonestwo.item.AirArmorItem;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PowerModItems {
 	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(PowerMod.MODID);
 	public static final DeferredItem<Item> FIRE_STONE = REGISTRY.register("fire_stone", FireStoneItem::new);
@@ -710,11 +706,6 @@ public class PowerModItems {
 
 	// Start of user code block custom items
 	// End of user code block custom items
-	@SubscribeEvent
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new CharacteristicsCardInventoryCapability(stack), CHARACTERISTICS_CARD.get());
-	}
-
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
 	}
