@@ -17,6 +17,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
 @EventBusSubscriber
 public class ConverterModuleProcedure {
@@ -92,25 +93,27 @@ public class ConverterModuleProcedure {
 				}
 			}
 		}
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 0) {
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.level = 1;
-				_vars.syncPlayerVariables(entity);
+		if (PowerConfigConfiguration.ENABLE_LEVELS.get() == true) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.level = 1;
+					_vars.syncPlayerVariables(entity);
+				}
 			}
-		}
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl == 0) {
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.base_damage_by_lvl = 6;
-				_vars.syncPlayerVariables(entity);
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl == 0 || entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl == 13.5) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.base_damage_by_lvl = 6;
+					_vars.syncPlayerVariables(entity);
+				}
 			}
-		}
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp == 0) {
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.max_level_exp = 100;
-				_vars.syncPlayerVariables(entity);
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp == 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.max_level_exp = 100;
+					_vars.syncPlayerVariables(entity);
+				}
 			}
 		}
 	}

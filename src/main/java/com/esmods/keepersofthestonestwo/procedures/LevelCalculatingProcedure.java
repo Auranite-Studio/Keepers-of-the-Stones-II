@@ -10,6 +10,7 @@ import net.minecraft.world.entity.Entity;
 import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
 @EventBusSubscriber
 public class LevelCalculatingProcedure {
@@ -25,33 +26,64 @@ public class LevelCalculatingProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp >= entity.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp) {
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.level_up_status = true;
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.level_exp = entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp - 100 * entity.getData(PowerModVariables.PLAYER_VARIABLES).level;
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.level = entity.getData(PowerModVariables.PLAYER_VARIABLES).level + 1;
-				_vars.syncPlayerVariables(entity);
-			}
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 10) {
+		if (PowerConfigConfiguration.ENABLE_LEVELS.get() == true) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp >= entity.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.base_damage_by_lvl = entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl + 1;
+					_vars.level_up_status = true;
+					_vars.syncPlayerVariables(entity);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.level_exp = entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp - 100 * entity.getData(PowerModVariables.PLAYER_VARIABLES).level;
+					_vars.syncPlayerVariables(entity);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.level = entity.getData(PowerModVariables.PLAYER_VARIABLES).level + 1;
+					_vars.syncPlayerVariables(entity);
+				}
+				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 10) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.base_damage_by_lvl = entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl + 1;
+						_vars.syncPlayerVariables(entity);
+					}
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.max_level_exp = 100 * entity.getData(PowerModVariables.PLAYER_VARIABLES).level;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.max_level_exp = 100 * entity.getData(PowerModVariables.PLAYER_VARIABLES).level;
-				_vars.syncPlayerVariables(entity);
+		} else {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl != 13.5) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.base_damage_by_lvl = 13.5;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level != 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.level = 0;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp != 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.level_exp = 0;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp != 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.max_level_exp = 0;
+					_vars.syncPlayerVariables(entity);
+				}
 			}
 		}
 	}

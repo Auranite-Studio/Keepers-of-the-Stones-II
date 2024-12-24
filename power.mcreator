@@ -35977,6 +35977,25 @@
         ]
       },
       "path": "~/ItemsAndBlocks/CharacteristicsCard"
+    },
+    {
+      "name": "EnhancedAbilitiesLegacy",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enhanced_abilities_legacy",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnhancedAbilitiesLegacyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [
@@ -37728,8 +37747,7 @@
       "CursedKey",
       "MusicDiscAncientMood",
       "FreakingParsnip",
-      "FreakingParsnipSoup",
-      "EmptyCharacteristicsCard"
+      "FreakingParsnipSoup"
     ],
     "CUSTOM:Stones": [
       "FireStone",
