@@ -3,7 +3,6 @@ package com.esmods.keepersofthestonestwo.client.gui;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -14,9 +13,24 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.CharacteristicsCardGUIMenu;
+import com.esmods.keepersofthestonestwo.procedures.SpeedInfoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ResistanceInfoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.NameInfoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LevelInfoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LevelExpGetProgressProcedure;
+import com.esmods.keepersofthestonestwo.procedures.HasteInfoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ExpBar4Procedure;
+import com.esmods.keepersofthestonestwo.procedures.ExpBar3Procedure;
+import com.esmods.keepersofthestonestwo.procedures.ExpBar2Procedure;
+import com.esmods.keepersofthestonestwo.procedures.ExpBar1Procedure;
+import com.esmods.keepersofthestonestwo.procedures.DamageInfoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BarExp7Procedure;
+import com.esmods.keepersofthestonestwo.procedures.BarExp6Procedure;
+import com.esmods.keepersofthestonestwo.procedures.BarExp5Procedure;
+import com.esmods.keepersofthestonestwo.procedures.Bar9Procedure;
+import com.esmods.keepersofthestonestwo.procedures.Bar8Procedure;
+import com.esmods.keepersofthestonestwo.procedures.Bar12Procedure;
+import com.esmods.keepersofthestonestwo.procedures.Bar11Procedure;
+import com.esmods.keepersofthestonestwo.procedures.Bar10Procedure;
 
 public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<CharacteristicsCardGUIMenu> {
 	private final static HashMap<String, Object> guistate = CharacteristicsCardGUIMenu.guistate;
@@ -50,8 +64,42 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 
 		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/characteristics_card_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress.png"), this.leftPos + 28, this.topPos + 57, Mth.clamp((int) LevelExpGetProgressProcedure.execute(world) * 9, 0, 111), 0, 9, 3, 120, 3);
-
+		if (ExpBar1Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_1.png"), this.leftPos + 29, this.topPos + 56, 0, 0, 9, 5, 9, 5);
+		}
+		if (ExpBar2Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 38, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+		}
+		if (ExpBar3Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 48, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+		}
+		if (ExpBar4Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 58, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+		}
+		if (BarExp5Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 68, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+		}
+		if (BarExp6Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 78, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+		}
+		if (BarExp7Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 88, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+		}
+		if (Bar8Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 98, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+		}
+		if (Bar9Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 108, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+		}
+		if (Bar10Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 118, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+		}
+		if (Bar11Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 128, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+		}
+		if (Bar12Procedure.execute(world)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_end.png"), this.leftPos + 139, this.topPos + 56, 0, 0, 10, 5, 10, 5);
+		}
 		RenderSystem.disableBlend();
 	}
 
@@ -72,6 +120,18 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 		guiGraphics.drawString(this.font,
 
 				LevelInfoProcedure.execute(world, entity), 82, 61, -5927048, false);
+		guiGraphics.drawString(this.font,
+
+				DamageInfoProcedure.execute(world), 66, 77, -5927048, false);
+		guiGraphics.drawString(this.font,
+
+				SpeedInfoProcedure.execute(world), 66, 99, -5927048, false);
+		guiGraphics.drawString(this.font,
+
+				ResistanceInfoProcedure.execute(world), 66, 121, -5927048, false);
+		guiGraphics.drawString(this.font,
+
+				HasteInfoProcedure.execute(world), 66, 143, -5927048, false);
 	}
 
 	@Override

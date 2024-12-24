@@ -1,0 +1,14 @@
+package com.esmods.keepersofthestonestwo.procedures;
+
+import net.minecraft.world.level.LevelAccessor;
+
+import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+
+public class BarExp6Procedure {
+	public static boolean execute(LevelAccessor world) {
+		if (EntityReturnByCardIDProcedure.execute(world).getData(PowerModVariables.PLAYER_VARIABLES).level_exp / EntityReturnByCardIDProcedure.execute(world).getData(PowerModVariables.PLAYER_VARIABLES).level >= 48) {
+			return true;
+		}
+		return false;
+	}
+}

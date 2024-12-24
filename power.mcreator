@@ -36046,26 +36046,6 @@
       "path": "~/ItemsAndBlocks/CharacteristicsCard"
     },
     {
-      "name": "LevelExpGetProgress",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "level_exp_get_progress",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LevelExpGetProgressProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/CharacteristicsCard"
-    },
-    {
       "name": "MusicDiscCallOfThePast",
       "type": "item",
       "compiles": true,
@@ -36094,6 +36074,326 @@
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "ExpBar1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp_bar_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExpBar1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "ExpBar2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp_bar_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExpBar2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "ExpBar3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp_bar_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExpBar3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "ExpBar4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp_bar_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExpBar4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "BarExp5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bar_exp_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BarExp5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "BarExp6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bar_exp_6",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BarExp6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "BarExp7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bar_exp_7",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BarExp7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "Bar8",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bar_8",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Bar8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "Bar9",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bar_9",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Bar9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "Bar10",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bar_10",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Bar10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "Bar11",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bar_11",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Bar11Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "Bar12",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bar_12",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Bar12Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard/ProgressBar"
+    },
+    {
+      "name": "SpeedInfo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_info",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpeedInfoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard"
+    },
+    {
+      "name": "ResistanceInfo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resistance_info",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ResistanceInfoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard"
+    },
+    {
+      "name": "DamageInfo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damage_info",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DamageInfoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard"
+    },
+    {
+      "name": "HasteInfo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "haste_info",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HasteInfoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard"
     }
   ],
   "variable_elements": [
@@ -38155,6 +38455,9 @@
       "gui.power.wheel_abilities_lightning.tooltip_electrical_discharges_uses_10": "Электрические разряды, расходует 10",
       "battery.desc.earth": "Земля",
       "item.power.shadow_battery": "Батарея",
+      "gui.power.characteristics_card_gui.label_13": "1",
+      "gui.power.characteristics_card_gui.label_12": "1",
+      "gui.power.characteristics_card_gui.label_11": "1",
       "gui.power.wheel_abilities_explosion.tooltip_atomic_bomb_uses_100": "Ядерная бомба, расходует 100",
       "gui.power.characteristics_card_gui.label_10": "10",
       "item.power.thirst_armor_chestplate": "Нагрудник тёмного мастера жажды",
@@ -38217,6 +38520,7 @@
       "item.power.poison_armor_leggings": "Поножи мастера яда",
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r Этот мод устарел! (последняя версия: v",
       "item.power.sand_armor_helmet": "Шлем мастера песка",
+      "gui.power.characteristics_card_gui.label_1": "1",
       "battery.desc.blue_flame": "Синее пламя",
       "effect.power.smoke_intangibility": "Дымовая неосязаемость",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Атака насекомых, расходует 10",
@@ -39040,6 +39344,9 @@
       "gui.power.wheel_abilities_lightning.tooltip_electrical_discharges_uses_10": "Electrical discharges, uses 10",
       "battery.desc.earth": "Earth",
       "item.power.shadow_battery": "Battery",
+      "gui.power.characteristics_card_gui.label_13": "1",
+      "gui.power.characteristics_card_gui.label_12": "1",
+      "gui.power.characteristics_card_gui.label_11": "1",
       "gui.power.wheel_abilities_explosion.tooltip_atomic_bomb_uses_100": "Atomic bomb, uses 100",
       "gui.power.characteristics_card_gui.label_10": "10",
       "item.power.thirst_armor_chestplate": "Thirst Chestplate",
@@ -39102,6 +39409,7 @@
       "item.power.poison_armor_leggings": "Poison Leggings",
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r This mod is out of date! (latest version: v",
       "item.power.sand_armor_helmet": "Sand Helmet",
+      "gui.power.characteristics_card_gui.label_1": "1",
       "battery.desc.blue_flame": "Blue Flame",
       "effect.power.smoke_intangibility": "Smoke Intangibility",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Insect attack, uses 10",
@@ -40425,7 +40733,12 @@
           },
           {
             "name": "CharacteristicsCard",
-            "children": []
+            "children": [
+              {
+                "name": "ProgressBar",
+                "children": []
+              }
+            ]
           }
         ]
       },
