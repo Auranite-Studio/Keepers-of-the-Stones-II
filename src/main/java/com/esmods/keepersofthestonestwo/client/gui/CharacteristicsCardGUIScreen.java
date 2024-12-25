@@ -64,40 +64,40 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 
 		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/characteristics_card_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 
-		if (ExpBar1Procedure.execute(world)) {
+		if (ExpBar1Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_1.png"), this.leftPos + 29, this.topPos + 56, 0, 0, 9, 5, 9, 5);
 		}
-		if (ExpBar2Procedure.execute(world)) {
+		if (ExpBar2Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 38, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
-		if (ExpBar3Procedure.execute(world)) {
+		if (ExpBar3Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 48, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
-		if (ExpBar4Procedure.execute(world)) {
+		if (ExpBar4Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 58, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
-		if (BarExp5Procedure.execute(world)) {
+		if (BarExp5Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 68, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
-		if (BarExp6Procedure.execute(world)) {
+		if (BarExp6Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 78, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
-		if (BarExp7Procedure.execute(world)) {
+		if (BarExp7Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 88, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
-		if (Bar8Procedure.execute(world)) {
+		if (Bar8Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 98, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
-		if (Bar9Procedure.execute(world)) {
+		if (Bar9Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 108, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
-		if (Bar10Procedure.execute(world)) {
+		if (Bar10Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 118, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
-		if (Bar11Procedure.execute(world)) {
+		if (Bar11Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 128, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
-		if (Bar12Procedure.execute(world)) {
+		if (Bar12Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_end.png"), this.leftPos + 139, this.topPos + 56, 0, 0, 10, 5, 10, 5);
 		}
 		RenderSystem.disableBlend();
@@ -116,22 +116,22 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				NameInfoProcedure.execute(world, entity), 80, 34, -5927048, false);
+				NameInfoProcedure.execute(entity), 35, 36, -5927048, false);
 		guiGraphics.drawString(this.font,
 
-				LevelInfoProcedure.execute(world, entity), 82, 61, -5927048, false);
+				LevelInfoProcedure.execute(entity), 82, 61, -5927048, false);
 		guiGraphics.drawString(this.font,
 
-				DamageInfoProcedure.execute(world), 66, 77, -5927048, false);
+				DamageInfoProcedure.execute(entity), 66, 77, -5927048, false);
 		guiGraphics.drawString(this.font,
 
-				SpeedInfoProcedure.execute(world), 66, 99, -5927048, false);
+				SpeedInfoProcedure.execute(entity), 66, 99, -5927048, false);
 		guiGraphics.drawString(this.font,
 
-				ResistanceInfoProcedure.execute(world), 66, 121, -5927048, false);
+				ResistanceInfoProcedure.execute(entity), 66, 121, -5927048, false);
 		guiGraphics.drawString(this.font,
 
-				HasteInfoProcedure.execute(world), 66, 143, -5927048, false);
+				HasteInfoProcedure.execute(entity), 66, 143, -5927048, false);
 	}
 
 	@Override

@@ -18,6 +18,7 @@ import net.minecraft.client.Minecraft;
 
 import java.util.List;
 
+import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardWritingCharsProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardPriShchielchkiePKMProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardDopolnitielnaiaInformatsiiaProcedure;
 
@@ -31,7 +32,7 @@ public class CharacteristicsCardItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
 		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
-		String hoverText = CharacteristicsCardDopolnitielnaiaInformatsiiaProcedure.execute(entity.level(), itemstack);
+		String hoverText = CharacteristicsCardDopolnitielnaiaInformatsiiaProcedure.execute(itemstack);
 		if (hoverText != null) {
 			for (String line : hoverText.split("\n")) {
 				list.add(Component.literal(line));
@@ -44,5 +45,11 @@ public class CharacteristicsCardItem extends Item {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		CharacteristicsCardPriShchielchkiePKMProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		CharacteristicsCardWritingCharsProcedure.execute(world, entity, itemstack);
 	}
 }

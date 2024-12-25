@@ -1,11 +1,17 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import net.minecraft.world.item.component.CustomData;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.core.component.DataComponents;
 
 public class HasteInfoProcedure {
-	public static String execute(LevelAccessor world) {
-		return "" + Math.round(EntityReturnByCardIDProcedure.execute(world).getData(PowerModVariables.PLAYER_VARIABLES).haste_char + 1);
+	public static String execute(Entity entity) {
+		if (entity == null)
+			return "";
+		return "" + Math.round((!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem())
+				? (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+				: (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("haste") + 1);
 	}
 }
