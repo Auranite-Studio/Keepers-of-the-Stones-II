@@ -490,7 +490,7 @@ public class PowerModVariables {
 		public boolean attribute_is_ready = false;
 		public double resistance_char = 0.0;
 		public double speed_char = 1.0;
-		public double haste_char = 0.0;
+		public double haste_char = -1.0;
 		public double jump_char = 1.0;
 
 		@Override

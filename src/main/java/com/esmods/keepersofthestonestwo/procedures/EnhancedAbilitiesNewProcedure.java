@@ -130,6 +130,12 @@ public class EnhancedAbilitiesNewProcedure {
 						_vars.haste_char = 2;
 						_vars.syncPlayerVariables(entity);
 					}
+				} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 9) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.haste_char = -1;
+						_vars.syncPlayerVariables(entity);
+					}
 				}
 			}
 		}
