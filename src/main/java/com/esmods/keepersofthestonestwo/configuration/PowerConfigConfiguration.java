@@ -16,7 +16,7 @@ public class PowerConfigConfiguration {
 		RECHARGE_TIMER = BUILDER.comment("Sets the recharge time of the stone").define("recharge_timer", (double) 300);
 		BUILDER.pop();
 		BUILDER.push("levels_settings");
-		ENABLE_LEVELS = BUILDER.comment("Enables and disables the level system").define("enable_levels", false);
+		ENABLE_LEVELS = BUILDER.comment("Enables and disables the level system").define("enable_levels", true);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

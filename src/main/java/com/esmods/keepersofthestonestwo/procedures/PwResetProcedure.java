@@ -18,25 +18,27 @@ public class PwResetProcedure {
 			return;
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
-				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.level = 1;
-					_vars.syncPlayerVariables(entityiterator);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.base_damage_by_lvl = 6;
-					_vars.syncPlayerVariables(entityiterator);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.level_exp = 0;
-					_vars.syncPlayerVariables(entityiterator);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.max_level_exp = 100;
-					_vars.syncPlayerVariables(entityiterator);
+				if (PowerConfigConfiguration.ENABLE_LEVELS.get() == true) {
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.level = 1;
+						_vars.syncPlayerVariables(entityiterator);
+					}
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.base_damage_by_lvl = 6;
+						_vars.syncPlayerVariables(entityiterator);
+					}
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.level_exp = 0;
+						_vars.syncPlayerVariables(entityiterator);
+					}
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.max_level_exp = 100;
+						_vars.syncPlayerVariables(entityiterator);
+					}
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
