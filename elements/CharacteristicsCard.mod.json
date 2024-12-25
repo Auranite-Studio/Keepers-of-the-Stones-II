@@ -9,11 +9,7 @@
     "states": [],
     "name": "Characteristics Card",
     "rarity": "COMMON",
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Items"
-      }
-    ],
+    "creativeTabs": [],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,

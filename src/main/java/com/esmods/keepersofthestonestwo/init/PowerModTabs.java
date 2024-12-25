@@ -89,7 +89,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP.get());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP_SOUP.get());
-				tabData.accept(PowerModItems.CHARACTERISTICS_CARD.get());
+				tabData.accept(PowerModItems.EMPTY_CHARACTERISTICS_CARD.get());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> STONES = REGISTRY.register("stones",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.stones")).icon(() -> new ItemStack(PowerModItems.FIRE_STONE.get())).displayItems((parameters, tabData) -> {

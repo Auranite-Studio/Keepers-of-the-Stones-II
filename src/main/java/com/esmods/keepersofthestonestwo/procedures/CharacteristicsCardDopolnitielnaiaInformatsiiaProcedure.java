@@ -8,6 +8,8 @@ import net.minecraft.client.Minecraft;
 
 public class CharacteristicsCardDopolnitielnaiaInformatsiiaProcedure {
 	public static String execute(LevelAccessor world, ItemStack itemstack) {
-		return "\u00A77" + Minecraft.getInstance().level.getPlayerByUUID(java.util.UUID.fromString((itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("owner")))).getName().getString();
+		return !(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("owner")).equals("")
+				? "\u00A77" + Minecraft.getInstance().level.getPlayerByUUID(java.util.UUID.fromString((itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("owner")))).getName().getString()
+				: "\u00A77Null";
 	}
 }
