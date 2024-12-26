@@ -31,11 +31,6 @@ public class LevelCalculatingProcedure {
 				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp >= entity.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp) {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.level_up_status = true;
-						_vars.syncPlayerVariables(entity);
-					}
-					{
-						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.level_exp = entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp - 100 * entity.getData(PowerModVariables.PLAYER_VARIABLES).level;
 						_vars.syncPlayerVariables(entity);
 					}
@@ -44,29 +39,11 @@ public class LevelCalculatingProcedure {
 						_vars.level = entity.getData(PowerModVariables.PLAYER_VARIABLES).level + 1;
 						_vars.syncPlayerVariables(entity);
 					}
-					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level <= 10) {
-						{
-							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-							_vars.base_damage_by_lvl = entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl + 1;
-							_vars.syncPlayerVariables(entity);
-						}
-					}
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.max_level_exp = 100 * entity.getData(PowerModVariables.PLAYER_VARIABLES).level;
+						_vars.level_up_status = true;
 						_vars.syncPlayerVariables(entity);
 					}
-				}
-			} else {
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.max_level_exp = 0;
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.level_exp = 0;
-					_vars.syncPlayerVariables(entity);
 				}
 			}
 		}

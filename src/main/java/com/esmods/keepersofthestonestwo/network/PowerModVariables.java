@@ -121,9 +121,9 @@ public class PowerModVariables {
 				clone.transfered_power = original.transfered_power;
 				clone.master_effect_end = original.master_effect_end;
 				clone.master_effect_start = original.master_effect_start;
-				clone.level_up_status = original.level_up_status;
 				clone.is_not_stone = original.is_not_stone;
 				clone.attribute_is_ready = original.attribute_is_ready;
+				clone.level_up_status = original.level_up_status;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -485,13 +485,13 @@ public class PowerModVariables {
 		public double level_exp = 0.0;
 		public double base_damage_by_lvl = 6.0;
 		public double max_level_exp = 100.0;
-		public boolean level_up_status = false;
 		public boolean is_not_stone = false;
 		public boolean attribute_is_ready = false;
 		public double resistance_char = 0.0;
 		public double speed_char = 1.0;
 		public double haste_char = -1.0;
 		public double jump_char = 1.0;
+		public boolean level_up_status = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -545,13 +545,13 @@ public class PowerModVariables {
 			nbt.putDouble("level_exp", level_exp);
 			nbt.putDouble("base_damage_by_lvl", base_damage_by_lvl);
 			nbt.putDouble("max_level_exp", max_level_exp);
-			nbt.putBoolean("level_up_status", level_up_status);
 			nbt.putBoolean("is_not_stone", is_not_stone);
 			nbt.putBoolean("attribute_is_ready", attribute_is_ready);
 			nbt.putDouble("resistance_char", resistance_char);
 			nbt.putDouble("speed_char", speed_char);
 			nbt.putDouble("haste_char", haste_char);
 			nbt.putDouble("jump_char", jump_char);
+			nbt.putBoolean("level_up_status", level_up_status);
 			return nbt;
 		}
 
@@ -606,13 +606,13 @@ public class PowerModVariables {
 			level_exp = nbt.getDouble("level_exp");
 			base_damage_by_lvl = nbt.getDouble("base_damage_by_lvl");
 			max_level_exp = nbt.getDouble("max_level_exp");
-			level_up_status = nbt.getBoolean("level_up_status");
 			is_not_stone = nbt.getBoolean("is_not_stone");
 			attribute_is_ready = nbt.getBoolean("attribute_is_ready");
 			resistance_char = nbt.getDouble("resistance_char");
 			speed_char = nbt.getDouble("speed_char");
 			haste_char = nbt.getDouble("haste_char");
 			jump_char = nbt.getDouble("jump_char");
+			level_up_status = nbt.getBoolean("level_up_status");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

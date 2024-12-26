@@ -100,6 +100,26 @@ public class ConverterModuleProcedure {
 					_vars.level = 1;
 					_vars.syncPlayerVariables(entity);
 				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.resistance_char = 0;
+					_vars.syncPlayerVariables(entity);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.jump_char = 1;
+					_vars.syncPlayerVariables(entity);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.speed_char = 1;
+					_vars.syncPlayerVariables(entity);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.haste_char = -1;
+					_vars.syncPlayerVariables(entity);
+				}
 			}
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl == 0 || entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl == 13.5) {
 				{

@@ -39,6 +39,26 @@ public class PwResetProcedure {
 						_vars.max_level_exp = 100;
 						_vars.syncPlayerVariables(entityiterator);
 					}
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.resistance_char = 0;
+						_vars.syncPlayerVariables(entityiterator);
+					}
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.jump_char = 1;
+						_vars.syncPlayerVariables(entityiterator);
+					}
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.speed_char = 1;
+						_vars.syncPlayerVariables(entityiterator);
+					}
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.haste_char = -1;
+						_vars.syncPlayerVariables(entityiterator);
+					}
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
