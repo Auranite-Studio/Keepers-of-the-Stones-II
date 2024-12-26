@@ -24,7 +24,7 @@
           },
           "x": 89,
           "y": 68,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -36,11 +36,11 @@
             "name": "LevelInfo"
           },
           "color": {
-            "value": -5927048,
+            "value": -10713797,
             "falpha": 0.0
           },
           "x": 136,
-          "y": 93,
+          "y": 94,
           "locked": true
         }
       },
@@ -64,7 +64,7 @@
           },
           "x": 83,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -77,7 +77,7 @@
           },
           "x": 92,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -90,7 +90,7 @@
           },
           "x": 102,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -103,7 +103,7 @@
           },
           "x": 112,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -116,7 +116,7 @@
           },
           "x": 122,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -129,7 +129,7 @@
           },
           "x": 132,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -142,7 +142,7 @@
           },
           "x": 142,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -155,7 +155,7 @@
           },
           "x": 152,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -168,7 +168,7 @@
           },
           "x": 162,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -181,7 +181,7 @@
           },
           "x": 172,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -194,7 +194,7 @@
           },
           "x": 182,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -207,7 +207,7 @@
           },
           "x": 193,
           "y": 88,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -224,7 +224,7 @@
           },
           "x": 120,
           "y": 109,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -241,7 +241,7 @@
           },
           "x": 120,
           "y": 131,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -258,7 +258,7 @@
           },
           "x": 120,
           "y": 153,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -275,7 +275,7 @@
           },
           "x": 120,
           "y": 175,
-          "locked": false
+          "locked": true
         }
       }
     ],

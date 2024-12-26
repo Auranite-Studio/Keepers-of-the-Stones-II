@@ -41,50 +41,52 @@ public class LevelExpGetProcedure {
 			return;
 		if (PowerConfigConfiguration.ENABLE_LEVELS.get() == true) {
 			if (sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
-				if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/1")))) {
-					{
-						PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 1;
-						_vars.syncPlayerVariables(sourceentity);
-					}
-				} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/2")))) {
-					{
-						PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 2;
-						_vars.syncPlayerVariables(sourceentity);
-					}
-				} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/3")))) {
-					{
-						PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 3;
-						_vars.syncPlayerVariables(sourceentity);
-					}
-				} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/5")))) {
-					{
-						PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 5;
-						_vars.syncPlayerVariables(sourceentity);
-					}
-				} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/50")))) {
-					{
-						final Vec3 _center = new Vec3(x, y, z);
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(64 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-						for (Entity entityiterator : _entfound) {
-							if (entityiterator instanceof Player || entityiterator instanceof ServerPlayer) {
-								{
-									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.level_exp = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 50;
-									_vars.syncPlayerVariables(entityiterator);
+				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level < 20) {
+					if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/1")))) {
+						{
+							PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 1;
+							_vars.syncPlayerVariables(sourceentity);
+						}
+					} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/2")))) {
+						{
+							PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 2;
+							_vars.syncPlayerVariables(sourceentity);
+						}
+					} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/3")))) {
+						{
+							PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 3;
+							_vars.syncPlayerVariables(sourceentity);
+						}
+					} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/5")))) {
+						{
+							PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 5;
+							_vars.syncPlayerVariables(sourceentity);
+						}
+					} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/50")))) {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(64 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (entityiterator instanceof Player || entityiterator instanceof ServerPlayer) {
+									{
+										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.level_exp = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 50;
+										_vars.syncPlayerVariables(entityiterator);
+									}
 								}
 							}
 						}
-					}
-				} else if (entity instanceof Player || entity instanceof ServerPlayer) {
-					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
-						{
-							PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
-							_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + Math.round(sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp * 0.25);
-							_vars.syncPlayerVariables(sourceentity);
+					} else if (entity instanceof Player || entity instanceof ServerPlayer) {
+						if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
+							{
+								PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + Math.round(sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp * 0.25);
+								_vars.syncPlayerVariables(sourceentity);
+							}
 						}
 					}
 				}

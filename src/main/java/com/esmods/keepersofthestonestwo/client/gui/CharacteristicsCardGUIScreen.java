@@ -119,7 +119,7 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 				NameInfoProcedure.execute(entity), 35, 36, -5927048, false);
 		guiGraphics.drawString(this.font,
 
-				LevelInfoProcedure.execute(entity), 82, 61, -5927048, false);
+				LevelInfoProcedure.execute(entity), 82, 62, -10713797, false);
 		guiGraphics.drawString(this.font,
 
 				DamageInfoProcedure.execute(entity), 66, 77, -5927048, false);
