@@ -40,7 +40,7 @@ public class LevelUpProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 3) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 5) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.resistance_char = 1;
@@ -61,29 +61,17 @@ public class LevelUpProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 3) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 5) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.speed_char = 2;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 5) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 10) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.speed_char = 3;
-					_vars.syncPlayerVariables(entity);
-				}
-			}
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level > 20) {
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.max_level_exp = 0;
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.level_exp = 0;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
@@ -105,6 +93,18 @@ public class LevelUpProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.haste_char = 2;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level > 20) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.max_level_exp = 0;
+					_vars.syncPlayerVariables(entity);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.level_exp = 0;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
