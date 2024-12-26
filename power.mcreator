@@ -35817,6 +35817,22 @@
           {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -37360,7 +37376,8 @@
     "ENTITIES:mod:xp/2": [
       "EntityCreeper",
       "EntityEnderman",
-      "EntityCaveSpider"
+      "EntityCaveSpider",
+      "EntityWitherSkeleton"
     ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",
@@ -37382,13 +37399,15 @@
       "EntityZombie",
       "EntityZombieVillager",
       "EntityPigZombie",
-      "#minecraft:skeletons",
       "EntityDrowned",
       "EntityHusk",
       "EntityVex",
       "EntitySlime",
       "EntityEndermite",
-      "EntitySpider"
+      "EntitySpider",
+      "EntitySkeleton",
+      "EntityBogged",
+      "EntityStray"
     ],
     "ENTITIES:mod:cursed_mobs": [
       "CUSTOM:CursedKeeper",
@@ -38124,8 +38143,8 @@
     "ENTITIES:mod:xp/50": [
       "CUSTOM:CursedKeeper",
       "CUSTOM:EnergiumGolem",
-      "EntityDragon",
-      "EntityWither"
+      "EntityWither",
+      "EntityDragon"
     ],
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:PurpleMushroom"
