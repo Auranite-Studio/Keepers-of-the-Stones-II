@@ -37341,6 +37341,27 @@
       "~CUSTOM:Isolation",
       "~CUSTOM:Revenge"
     ],
+    "ENTITIES:mod:xp/3": [
+      "EntityGuardian",
+      "EntityGhast",
+      "EntityPiglin",
+      "EntityZoglin",
+      "EntityHoglin",
+      "EntityPillager",
+      "EntityEvoker",
+      "EntityVindicator",
+      "EntityIllusionIllager",
+      "EntityWitch",
+      "EntityMagmaCube",
+      "EntityPhantom",
+      "EntityBreeze",
+      "EntityBlaze"
+    ],
+    "ENTITIES:mod:xp/2": [
+      "EntityCreeper",
+      "EntityEnderman",
+      "EntityCaveSpider"
+    ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",
       "CUSTOM:EnergiumAxe",
@@ -37356,6 +37377,18 @@
     "ITEMS:minecraft:music_discs": [
       "~CUSTOM:MusicDiscAncientMood",
       "~CUSTOM:MusicDiscCallOfThePast"
+    ],
+    "ENTITIES:mod:xp/1": [
+      "EntityZombie",
+      "EntityZombieVillager",
+      "EntityPigZombie",
+      "#minecraft:skeletons",
+      "EntityDrowned",
+      "EntityHusk",
+      "EntityVex",
+      "EntitySlime",
+      "EntityEndermite",
+      "EntitySpider"
     ],
     "ENTITIES:mod:cursed_mobs": [
       "CUSTOM:CursedKeeper",
@@ -37526,9 +37559,6 @@
       "CUSTOM:MindBattery",
       "CUSTOM:GoldenDustBattery",
       "CUSTOM:DarknessBattery"
-    ],
-    "ENTITIES:mod:boss_exp": [
-      "#minecraft:bosses"
     ],
     "ITEMS:power:power_lock_items_not_tools": [
       "CUSTOM:EnergiumIngot",
@@ -38056,21 +38086,6 @@
     "ITEMS:minecraft:enchantable/durability": [
       "~CUSTOM:AmplifierRing"
     ],
-    "ENTITIES:mod:standart_exp": [
-      "#minecraft:skeletons",
-      "#minecraft:raiders",
-      "EntityZombie",
-      "EntityZombieHorse",
-      "EntityZombieVillager",
-      "EntityPigZombie",
-      "EntityHusk",
-      "EntityDrowned",
-      "EntityBogged",
-      "EntityCreeper",
-      "EntityEnderman",
-      "EntityEndermite",
-      "EntityVex"
-    ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:CursedStoneCrackedBricksSlab",
       "~CUSTOM:PolishedCursedStoneSlab",
@@ -38096,6 +38111,21 @@
       "CUSTOM:EnergiumIngot",
       "CUSTOM:AmplifierDrop",
       "CUSTOM:CopyriumIngot"
+    ],
+    "ENTITIES:mod:xp/5": [
+      "EntityElderGuardian",
+      "EntityShulker",
+      "CUSTOM:Shadow",
+      "CUSTOM:CursedKnight",
+      "CUSTOM:CursedSquire",
+      "EntityRavager",
+      "EntityPiglinBrute"
+    ],
+    "ENTITIES:mod:xp/50": [
+      "CUSTOM:CursedKeeper",
+      "CUSTOM:EnergiumGolem",
+      "EntityDragon",
+      "EntityWither"
     ],
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:PurpleMushroom"

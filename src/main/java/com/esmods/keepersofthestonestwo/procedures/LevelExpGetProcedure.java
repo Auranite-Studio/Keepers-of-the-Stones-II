@@ -35,19 +35,31 @@ public class LevelExpGetProcedure {
 			return;
 		if (PowerConfigConfiguration.ENABLE_LEVELS.get() == true) {
 			if (sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
-				if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:standart_exp")))) {
+				if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/1")))) {
 					{
 						PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 1;
 						_vars.syncPlayerVariables(sourceentity);
 					}
-				} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:golden_rank_exp")))) {
+				} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/2")))) {
+					{
+						PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 2;
+						_vars.syncPlayerVariables(sourceentity);
+					}
+				} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/3")))) {
 					{
 						PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 3;
 						_vars.syncPlayerVariables(sourceentity);
 					}
-				} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:boss_exp")))) {
+				} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/5")))) {
+					{
+						PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 5;
+						_vars.syncPlayerVariables(sourceentity);
+					}
+				} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/50")))) {
 					{
 						PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 50;
