@@ -593,13 +593,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSHROOMS_BATTERY = REGISTRY.register("mushrooms_battery", () -> new MushroomsBatteryItem());
 	public static final RegistryObject<Item> MUSHROOMS_HAMMER = REGISTRY.register("mushrooms_hammer", () -> new MushroomsHammerItem());
 	public static final RegistryObject<Item> PURPLE_MUSHROOM = block(PowerModBlocks.PURPLE_MUSHROOM);
-	public static final RegistryObject<Item> MUSIC_DISC_CALL_OF_THE_PAST = REGISTRY.register("music_disc_call_of_the_past", () -> new MusicDiscCallOfThePastItem());
 	public static final RegistryObject<Item> MERCURY_ARMOR_HELMET = REGISTRY.register("mercury_armor_helmet", () -> new MercuryArmorItem.Helmet());
 	public static final RegistryObject<Item> MERCURY_ARMOR_CHESTPLATE = REGISTRY.register("mercury_armor_chestplate", () -> new MercuryArmorItem.Chestplate());
 	public static final RegistryObject<Item> MERCURY_ARMOR_LEGGINGS = REGISTRY.register("mercury_armor_leggings", () -> new MercuryArmorItem.Leggings());
 	public static final RegistryObject<Item> MERCURY_ARMOR_BOOTS = REGISTRY.register("mercury_armor_boots", () -> new MercuryArmorItem.Boots());
 	public static final RegistryObject<Item> LUCK_COIN = REGISTRY.register("luck_coin", () -> new LuckCoinItem());
-	public static final RegistryObject<Item> MUSIC_DISC_ANCIENT_MOOD = REGISTRY.register("music_disc_ancient_mood", () -> new MusicDiscAncientMoodItem());
 	public static final RegistryObject<Item> RAW_ENERGIUM = REGISTRY.register("raw_energium", () -> new RawEnergiumItem());
 	public static final RegistryObject<Item> ENERGIUM_ORE = block(PowerModBlocks.ENERGIUM_ORE);
 	public static final RegistryObject<Item> ENERGIUM_DUST = REGISTRY.register("energium_dust", () -> new EnergiumDustItem());
@@ -699,6 +697,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> FILTH_ARMOR_CHESTPLATE = REGISTRY.register("filth_armor_chestplate", () -> new FilthArmorItem.Chestplate());
 	public static final RegistryObject<Item> FILTH_ARMOR_LEGGINGS = REGISTRY.register("filth_armor_leggings", () -> new FilthArmorItem.Leggings());
 	public static final RegistryObject<Item> FILTH_ARMOR_BOOTS = REGISTRY.register("filth_armor_boots", () -> new FilthArmorItem.Boots());
+	public static final RegistryObject<Item> MUSIC_DISC_CALL_OF_THE_PAST = REGISTRY.register("music_disc_call_of_the_past", () -> new MusicDiscCallOfThePastItem());
+	public static final RegistryObject<Item> MUSIC_DISC_ANCIENT_MOOD = REGISTRY.register("music_disc_ancient_mood", () -> new MusicDiscAncientMoodItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

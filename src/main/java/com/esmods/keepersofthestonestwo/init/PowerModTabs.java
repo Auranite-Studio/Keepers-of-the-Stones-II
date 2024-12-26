@@ -89,9 +89,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP.get());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP_SOUP.get());
-			})
-
-					.build());
+			}).build());
 	public static final RegistryObject<CreativeModeTab> STONES = REGISTRY.register("stones",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.stones")).icon(() -> new ItemStack(PowerModItems.FIRE_STONE.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PowerModItems.FIRE_STONE.get());
@@ -142,18 +140,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MIND_STONE.get());
 				tabData.accept(PowerModItems.GOLDEN_DUST_STONE.get());
 				tabData.accept(PowerModItems.DARKNESS_STONE.get());
-			})
-
-					.build());
-	public static final RegistryObject<CreativeModeTab> MOBS = REGISTRY.register("mobs",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get());
-				tabData.accept(PowerModItems.CURSED_KEEPER_SPAWN_EGG.get());
-				tabData.accept(PowerModItems.CURSED_KNIGHT_SPAWN_EGG.get());
-				tabData.accept(PowerModItems.CURSED_SQUIRE_SPAWN_EGG.get());
-			})
-
-					.build());
+			}).withTabsBefore(ITEMS.getId()).build());
 	public static final RegistryObject<CreativeModeTab> BATTERIES = REGISTRY.register("batteries",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.batteries")).icon(() -> new ItemStack(PowerModItems.EMPTY_BATTERY.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
@@ -205,7 +192,12 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MIND_BATTERY.get());
 				tabData.accept(PowerModItems.GOLDEN_DUST_BATTERY.get());
 				tabData.accept(PowerModItems.DARKNESS_BATTERY.get());
-			})
-
-					.build());
+			}).withTabsBefore(STONES.getId()).build());
+	public static final RegistryObject<CreativeModeTab> MOBS = REGISTRY.register("mobs",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get());
+				tabData.accept(PowerModItems.CURSED_KEEPER_SPAWN_EGG.get());
+				tabData.accept(PowerModItems.CURSED_KNIGHT_SPAWN_EGG.get());
+				tabData.accept(PowerModItems.CURSED_SQUIRE_SPAWN_EGG.get());
+			}).withTabsBefore(BATTERIES.getId()).build());
 }

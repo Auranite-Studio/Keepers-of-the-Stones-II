@@ -16,6 +16,7 @@ public class PowerLockMobEffect extends MobEffect {
 
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		super.addAttributeModifiers(entity, attributeMap, amplifier);
 		PowerLockStartProcedure.execute(entity);
 	}
 

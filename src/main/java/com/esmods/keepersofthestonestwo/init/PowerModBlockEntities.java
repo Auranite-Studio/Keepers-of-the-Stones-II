@@ -26,6 +26,8 @@ public class PowerModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> CURSED_VAULT = register("cursed_vault", PowerModBlocks.CURSED_VAULT, CursedVaultBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> ENERGIUM_VAULT = register("energium_vault", PowerModBlocks.ENERGIUM_VAULT, EnergiumVaultBlockEntity::new);
 
+	// Start of user code block custom block entities
+	// End of user code block custom block entities
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
 	}
