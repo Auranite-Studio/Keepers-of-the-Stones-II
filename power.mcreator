@@ -38134,7 +38134,6 @@
     "ENTITIES:mod:xp/5": [
       "EntityElderGuardian",
       "EntityShulker",
-      "CUSTOM:Shadow",
       "CUSTOM:CursedKnight",
       "CUSTOM:CursedSquire",
       "EntityRavager",
