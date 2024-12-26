@@ -169,6 +169,13 @@ public class ConverterModuleProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
+			if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).rank).equals("0")) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.rank = "0";
+					_vars.syncPlayerVariables(entity);
+				}
+			}
 		}
 	}
 }
