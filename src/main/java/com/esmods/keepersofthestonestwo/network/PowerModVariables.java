@@ -95,6 +95,7 @@ public class PowerModVariables {
 			clone.speed_char = original.speed_char;
 			clone.haste_char = original.haste_char;
 			clone.jump_char = original.jump_char;
+			clone.rank = original.rank;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -492,6 +493,7 @@ public class PowerModVariables {
 		public double haste_char = -1.0;
 		public double jump_char = 1.0;
 		public boolean level_up_status = false;
+		public String rank = "D";
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -552,6 +554,7 @@ public class PowerModVariables {
 			nbt.putDouble("haste_char", haste_char);
 			nbt.putDouble("jump_char", jump_char);
 			nbt.putBoolean("level_up_status", level_up_status);
+			nbt.putString("rank", rank);
 			return nbt;
 		}
 
@@ -613,6 +616,7 @@ public class PowerModVariables {
 			haste_char = nbt.getDouble("haste_char");
 			jump_char = nbt.getDouble("jump_char");
 			level_up_status = nbt.getBoolean("level_up_status");
+			rank = nbt.getString("rank");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

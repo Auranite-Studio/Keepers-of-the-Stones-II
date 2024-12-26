@@ -108,6 +108,34 @@ public class LevelUpProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 5) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.rank = "C";
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 10) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.rank = "B";
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 15) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.rank = "A";
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 20) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.rank = "S";
+					_vars.syncPlayerVariables(entity);
+				}
+			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.max_level_exp = 100 * entity.getData(PowerModVariables.PLAYER_VARIABLES).level;

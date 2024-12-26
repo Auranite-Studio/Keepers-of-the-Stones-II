@@ -37146,6 +37146,12 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "rank",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "D"
     }
   ],
   "sound_elements": [
