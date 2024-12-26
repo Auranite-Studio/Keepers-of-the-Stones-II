@@ -37615,7 +37615,8 @@
       "CUSTOM:RawEnergiumBlock",
       "CUSTOM:DeepslateEnergiumOre",
       "CUSTOM:EnergiumKey",
-      "CUSTOM:MusicDiscCallOfThePast"
+      "CUSTOM:MusicDiscCallOfThePast",
+      "CUSTOM:EnergiumUpgradeSmithingTemplate"
     ],
     "ITEMS:minecraft:shovels": [
       "~CUSTOM:CreationShovel",
@@ -38244,7 +38245,8 @@
       "MusicDiscAncientMood",
       "FreakingParsnip",
       "FreakingParsnipSoup",
-      "EmptyCharacteristicsCard"
+      "EmptyCharacteristicsCard",
+      "CharacteristicsCard"
     ],
     "CUSTOM:Stones": [
       "FireStone",
