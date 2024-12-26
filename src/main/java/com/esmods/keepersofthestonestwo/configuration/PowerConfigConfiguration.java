@@ -15,7 +15,7 @@ public class PowerConfigConfiguration {
 		MASTER_EFFECT_DURATION = BUILDER.comment("Sets the base duration value for the master effect").define("master_effect_duration", (double) 600);
 		RECHARGE_TIMER = BUILDER.comment("Sets the recharge time of the stone").define("recharge_timer", (double) 300);
 		BUILDER.pop();
-		BUILDER.push("levels_settings");
+		BUILDER.push("additional_features");
 		ENABLE_LEVELS = BUILDER.comment("Enables and disables the level system").define("enable_levels", true);
 		BUILDER.pop();
 
