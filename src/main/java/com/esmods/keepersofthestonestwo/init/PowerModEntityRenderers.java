@@ -102,10 +102,10 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), NoteBombProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.PLAGUE_BOMB.get(), PlagueBombRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.CURSED_KNIGHT.get(), CursedKnightRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SMOKE_MUSKET_PROJECTILE.get(), SmokeMusketProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SMOKE_BOMB_PROJECTILE.get(), SmokeBombProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_SQUIRE.get(), CursedSquireRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SPIRIT.get(), SpiritRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.CURSED_KNIGHT.get(), CursedKnightRenderer::new);
 	}
 }

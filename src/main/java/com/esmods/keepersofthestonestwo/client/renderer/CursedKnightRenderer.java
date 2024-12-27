@@ -1,36 +1,53 @@
 
 package com.esmods.keepersofthestonestwo.client.renderer;
 
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
-
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.HierarchicalModel;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
-import com.esmods.keepersofthestonestwo.entity.model.CursedKnightModel;
 import com.esmods.keepersofthestonestwo.entity.CursedKnightEntity;
+import com.esmods.keepersofthestonestwo.client.model.animations.cursed_knightAnimation;
+import com.esmods.keepersofthestonestwo.client.model.Modelcursed_knight;
 
-public class CursedKnightRenderer extends GeoEntityRenderer<CursedKnightEntity> {
-	public CursedKnightRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new CursedKnightModel());
-		this.shadowRadius = 0.75f;
+public class CursedKnightRenderer extends MobRenderer<CursedKnightEntity, Modelcursed_knight<CursedKnightEntity>> {
+	public CursedKnightRenderer(EntityRendererProvider.Context context) {
+		super(context, new AnimatedModel(context.bakeLayer(Modelcursed_knight.LAYER_LOCATION)), 0.75f);
 	}
 
 	@Override
-	public RenderType getRenderType(CursedKnightEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
-		return RenderType.entityTranslucent(getTextureLocation(animatable));
+	public ResourceLocation getTextureLocation(CursedKnightEntity entity) {
+		return ResourceLocation.parse("power:textures/entities/cursed_knight.png");
 	}
 
-	@Override
-	public void preRender(PoseStack poseStack, CursedKnightEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int color) {
-		float scale = 1f;
-		this.scaleHeight = scale;
-		this.scaleWidth = scale;
-		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);
+	private static final class AnimatedModel extends Modelcursed_knight<CursedKnightEntity> {
+		private final ModelPart root;
+		private final HierarchicalModel animator = new HierarchicalModel<CursedKnightEntity>() {
+			@Override
+			public ModelPart root() {
+				return root;
+			}
+
+			@Override
+			public void setupAnim(CursedKnightEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+				this.root().getAllParts().forEach(ModelPart::resetPose);
+				this.animateWalk(cursed_knightAnimation.walk, limbSwing, limbSwingAmount, 1f, 20f);
+				this.animate(entity.animationState1, cursed_knightAnimation.idle, ageInTicks, 1f);
+				this.animate(entity.animationState2, cursed_knightAnimation.sprint, ageInTicks, 1f);
+				this.animate(entity.animationState3, cursed_knightAnimation.attack, ageInTicks, 1f);
+			}
+		};
+
+		public AnimatedModel(ModelPart root) {
+			super(root);
+			this.root = root;
+		}
+
+		@Override
+		public void setupAnim(CursedKnightEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+			animator.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+			super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+		}
 	}
 }

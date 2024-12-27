@@ -650,7 +650,6 @@ public class PowerModItems {
 	public static final DeferredItem<Item> SMOKE_ARMOR_LEGGINGS = REGISTRY.register("smoke_armor_leggings", SmokeArmorItem.Leggings::new);
 	public static final DeferredItem<Item> SMOKE_ARMOR_BOOTS = REGISTRY.register("smoke_armor_boots", SmokeArmorItem.Boots::new);
 	public static final DeferredItem<Item> SMOKE_BATTERY = REGISTRY.register("smoke_battery", SmokeBatteryItem::new);
-	public static final DeferredItem<Item> CURSED_KNIGHT_SPAWN_EGG = REGISTRY.register("cursed_knight_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KNIGHT, -11447452, -9817013, new Item.Properties()));
 	public static final DeferredItem<Item> SMOKE_MUSKET = REGISTRY.register("smoke_musket", SmokeMusketItem::new);
 	public static final DeferredItem<Item> SPIRIT_ARMOR_HELMET = REGISTRY.register("spirit_armor_helmet", SpiritArmorItem.Helmet::new);
 	public static final DeferredItem<Item> SPIRIT_ARMOR_CHESTPLATE = REGISTRY.register("spirit_armor_chestplate", SpiritArmorItem.Chestplate::new);
@@ -703,6 +702,7 @@ public class PowerModItems {
 	public static final DeferredItem<Item> CHARACTERISTICS_CARD = REGISTRY.register("characteristics_card", CharacteristicsCardItem::new);
 	public static final DeferredItem<Item> MUSIC_DISC_CALL_OF_THE_PAST = REGISTRY.register("music_disc_call_of_the_past", MusicDiscCallOfThePastItem::new);
 	public static final DeferredItem<Item> MUSIC_DISC_ANCIENT_MOOD = REGISTRY.register("music_disc_ancient_mood", MusicDiscAncientMoodItem::new);
+	public static final DeferredItem<Item> CURSED_KNIGHT_SPAWN_EGG = REGISTRY.register("cursed_knight_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KNIGHT, -11447452, -9817013, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
