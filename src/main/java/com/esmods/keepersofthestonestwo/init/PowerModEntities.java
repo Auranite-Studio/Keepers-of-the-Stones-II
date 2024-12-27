@@ -120,8 +120,6 @@ public class PowerModEntities {
 			EntityType.Builder.<SphereNothingProjectileEntity>of(SphereNothingProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EnergyChargeEntity>> ENERGY_CHARGE = register("energy_charge",
 			EntityType.Builder.<EnergyChargeEntity>of(EnergyChargeEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final DeferredHolder<EntityType<?>, EntityType<BlackHoleEntity>> BLACK_HOLE = register("black_hole",
-			EntityType.Builder.<BlackHoleEntity>of(BlackHoleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.2f, 0.2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MeteoriteProjectileEntity>> METEORITE_PROJECTILE = register("meteorite_projectile",
 			EntityType.Builder.<MeteoriteProjectileEntity>of(MeteoriteProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<DestructionBallProjectileEntity>> DESTRUCTION_BALL_PROJECTILE = register("destruction_ball_projectile",
@@ -164,6 +162,8 @@ public class PowerModEntities {
 					.sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedKnightEntity>> CURSED_KNIGHT = register("cursed_knight",
 			EntityType.Builder.<CursedKnightEntity>of(CursedKnightEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<BlackHoleEntity>> BLACK_HOLE = register("black_hole",
+			EntityType.Builder.<BlackHoleEntity>of(BlackHoleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.2f, 0.2f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -174,7 +174,6 @@ public class PowerModEntities {
 	@SubscribeEvent
 	public static void init(RegisterSpawnPlacementsEvent event) {
 		ShadowEntity.init(event);
-		BlackHoleEntity.init(event);
 		EnergiumGolemEntity.init(event);
 		TurretEntity.init(event);
 		PoisonPitEntity.init(event);
@@ -182,12 +181,12 @@ public class PowerModEntities {
 		CursedSquireEntity.init(event);
 		SpiritEntity.init(event);
 		CursedKnightEntity.init(event);
+		BlackHoleEntity.init(event);
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
-		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
 		event.put(ENERGIUM_GOLEM.get(), EnergiumGolemEntity.createAttributes().build());
 		event.put(TURRET.get(), TurretEntity.createAttributes().build());
 		event.put(POISON_PIT.get(), PoisonPitEntity.createAttributes().build());
@@ -195,5 +194,6 @@ public class PowerModEntities {
 		event.put(CURSED_SQUIRE.get(), CursedSquireEntity.createAttributes().build());
 		event.put(SPIRIT.get(), SpiritEntity.createAttributes().build());
 		event.put(CURSED_KNIGHT.get(), CursedKnightEntity.createAttributes().build());
+		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
 	}
 }

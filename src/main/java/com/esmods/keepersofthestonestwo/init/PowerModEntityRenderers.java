@@ -86,7 +86,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.SHADOW_SPHERE.get(), ShadowSphereRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SPHERE_NOTHING_PROJECTILE.get(), SphereNothingProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ENERGY_CHARGE.get(), EnergyChargeRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.METEORITE_PROJECTILE.get(), MeteoriteProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.DESTRUCTION_BALL_PROJECTILE.get(), DestructionBallProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ENERGIUM_GOLEM.get(), EnergiumGolemRenderer::new);
@@ -107,5 +106,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.CURSED_SQUIRE.get(), CursedSquireRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SPIRIT.get(), SpiritRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_KNIGHT.get(), CursedKnightRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
 	}
 }
