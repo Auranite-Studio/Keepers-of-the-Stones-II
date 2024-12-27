@@ -41018,7 +41018,6 @@
     "requiredMods": [
       "pehkui",
       "playeranimatorapi",
-      "geckolib",
       "playeranimator"
     ],
     "dependencies": [
