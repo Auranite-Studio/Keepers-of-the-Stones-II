@@ -7,6 +7,5 @@ What's new in Keepers of the Stones II version 1.1.0.1?<br/>
 <br />- Shooting blocks of earth and metal now also determines the block in the second hand
 <br />- All mobs now have the format of vanilla java models
 <br />- The GeckoLib mod is no longer needed
-<br />- Improved AI of the spirit
 <br />- [API] Colorful Powers API has been updated to version 21
 <br />- [Bugfix] 
