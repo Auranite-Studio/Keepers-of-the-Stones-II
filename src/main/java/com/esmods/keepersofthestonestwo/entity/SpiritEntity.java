@@ -27,11 +27,8 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
@@ -137,7 +134,7 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 			public void start() {
 				LivingEntity livingentity = SpiritEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				SpiritEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.2);
+				SpiritEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 4.8);
 			}
 
 			@Override
@@ -147,15 +144,15 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 					SpiritEntity.this.doHurtTarget(livingentity);
 				} else {
 					double d0 = SpiritEntity.this.distanceToSqr(livingentity);
-					if (d0 < 4) {
+					if (d0 < 8) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						SpiritEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.2);
+						SpiritEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 4.8);
 					}
 				}
 			}
 		});
-		this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1, (float) 4, (float) 10));
-		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 1, 20) {
+		this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 2.4, (float) 4, (float) 10));
+		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 2.4, 20) {
 			@Override
 			protected Vec3 getPosition() {
 				RandomSource random = SpiritEntity.this.getRandom();
@@ -165,15 +162,7 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.2, false) {
-			@Override
-			protected boolean canPerformAttack(LivingEntity entity) {
-				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
-			}
-		});
-		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.targetSelector.addGoal(9, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 	}
 
 	@Override
@@ -319,14 +308,14 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 1);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 1000);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 14);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 8);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 10);
-		builder = builder.add(Attributes.FLYING_SPEED, 1);
+		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}
 
