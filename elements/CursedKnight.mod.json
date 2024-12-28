@@ -27,7 +27,7 @@
         "animation": {
           "value": "CUSTOM:cursed_knightAnimation.walk"
         },
-        "speed": 1.0,
+        "speed": 5.0,
         "walking": true,
         "amplitude": 20.0
       },
