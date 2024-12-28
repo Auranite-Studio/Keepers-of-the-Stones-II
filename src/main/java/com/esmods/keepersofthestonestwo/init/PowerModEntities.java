@@ -156,14 +156,14 @@ public class PowerModEntities {
 			EntityType.Builder.<SmokeBombProjectileEntity>of(SmokeBombProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedSquireEntity>> CURSED_SQUIRE = register("cursed_squire",
 			EntityType.Builder.<CursedSquireEntity>of(CursedSquireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune().sized(1f, 1f));
-	public static final DeferredHolder<EntityType<?>, EntityType<SpiritEntity>> SPIRIT = register("spirit",
-			EntityType.Builder.<SpiritEntity>of(SpiritEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3)
-
-					.sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedKnightEntity>> CURSED_KNIGHT = register("cursed_knight",
 			EntityType.Builder.<CursedKnightEntity>of(CursedKnightEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BlackHoleEntity>> BLACK_HOLE = register("black_hole",
 			EntityType.Builder.<BlackHoleEntity>of(BlackHoleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.2f, 0.2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SpiritEntity>> SPIRIT = register("spirit",
+			EntityType.Builder.<SpiritEntity>of(SpiritEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3)
+
+					.sized(1f, 1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -179,9 +179,9 @@ public class PowerModEntities {
 		PoisonPitEntity.init(event);
 		CursedKeeperEntity.init(event);
 		CursedSquireEntity.init(event);
-		SpiritEntity.init(event);
 		CursedKnightEntity.init(event);
 		BlackHoleEntity.init(event);
+		SpiritEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -192,8 +192,8 @@ public class PowerModEntities {
 		event.put(POISON_PIT.get(), PoisonPitEntity.createAttributes().build());
 		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
 		event.put(CURSED_SQUIRE.get(), CursedSquireEntity.createAttributes().build());
-		event.put(SPIRIT.get(), SpiritEntity.createAttributes().build());
 		event.put(CURSED_KNIGHT.get(), CursedKnightEntity.createAttributes().build());
 		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
+		event.put(SPIRIT.get(), SpiritEntity.createAttributes().build());
 	}
 }

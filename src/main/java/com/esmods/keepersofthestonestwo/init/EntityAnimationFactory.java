@@ -5,7 +5,6 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import com.esmods.keepersofthestonestwo.entity.TurretEntity;
-import com.esmods.keepersofthestonestwo.entity.SpiritEntity;
 import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 import com.esmods.keepersofthestonestwo.entity.CursedSquireEntity;
 import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
@@ -37,13 +36,6 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof CursedSquireEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof SpiritEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
