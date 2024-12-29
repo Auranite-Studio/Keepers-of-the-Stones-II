@@ -33,6 +33,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
+import com.esmods.keepersofthestonestwo.procedures.CursedKnightUsloviieProighryvaniiaWalkProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CursedKnightUsloviieProighryvaniiaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CursedKnightUsloviieProighryvaniiaAttackProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CursedKnightPriObnovlieniiTikaSushchnostiProcedure;
@@ -41,6 +42,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 public class CursedKnightEntity extends Monster {
 	public static final EntityDataAccessor<Boolean> DATA_is_attack = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.BOOLEAN);
+	public final AnimationState animationState0 = new AnimationState();
 	public final AnimationState animationState1 = new AnimationState();
 	public final AnimationState animationState2 = new AnimationState();
 	public final AnimationState animationState3 = new AnimationState();
@@ -126,6 +128,7 @@ public class CursedKnightEntity extends Monster {
 	public void tick() {
 		super.tick();
 		if (this.level().isClientSide()) {
+			this.animationState0.animateWhen(CursedKnightUsloviieProighryvaniiaWalkProcedure.execute(this), this.tickCount);
 			this.animationState1.animateWhen(CursedKnightNotWalkProcedure.execute(this), this.tickCount);
 			this.animationState2.animateWhen(CursedKnightUsloviieProighryvaniiaProcedure.execute(this), this.tickCount);
 			this.animationState3.animateWhen(CursedKnightUsloviieProighryvaniiaAttackProcedure.execute(this), this.tickCount);

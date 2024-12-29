@@ -32,7 +32,7 @@ public class CursedKnightRenderer extends MobRenderer<CursedKnightEntity, Modelc
 			@Override
 			public void setupAnim(CursedKnightEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 				this.root().getAllParts().forEach(ModelPart::resetPose);
-				this.animateWalk(cursed_knightAnimation.walk, limbSwing, limbSwingAmount, 5f, 20f);
+				this.animate(entity.animationState0, cursed_knightAnimation.walk, ageInTicks, 1f);
 				this.animate(entity.animationState1, cursed_knightAnimation.idle, ageInTicks, 1f);
 				this.animate(entity.animationState2, cursed_knightAnimation.sprint, ageInTicks, 1f);
 				this.animate(entity.animationState3, cursed_knightAnimation.attack, ageInTicks, 1f);

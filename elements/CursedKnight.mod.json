@@ -27,9 +27,12 @@
         "animation": {
           "value": "CUSTOM:cursed_knightAnimation.walk"
         },
-        "speed": 5.0,
-        "walking": true,
-        "amplitude": 20.0
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKnightUsloviieProighryvaniiaWalk"
+        },
+        "walking": false,
+        "amplitude": 1.0
       },
       {
         "animation": {
