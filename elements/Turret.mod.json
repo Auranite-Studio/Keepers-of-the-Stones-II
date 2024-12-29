@@ -41,17 +41,6 @@
         },
         "walking": false,
         "amplitude": 1.0
-      },
-      {
-        "animation": {
-          "value": "CUSTOM:turretAnimation.shoot"
-        },
-        "speed": 1.0,
-        "condition": {
-          "name": "TurretUsloviieProighryvaniia"
-        },
-        "walking": false,
-        "amplitude": 1.0
       }
     ],
     "modelWidth": 0.6,
@@ -168,7 +157,7 @@
       "value": ""
     },
     "rangedItemType": "TurretProjectile",
-    "rangedAttackInterval": 40,
+    "rangedAttackInterval": 23,
     "rangedAttackRadius": 32.0,
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,

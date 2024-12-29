@@ -45,14 +45,12 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.TurretUsloviieProighryvaniiaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CursedKnightNotWalkProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 public class TurretEntity extends TamableAnimal implements RangedAttackMob {
 	public static final EntityDataAccessor<Boolean> DATA_is_attack = SynchedEntityData.defineId(TurretEntity.class, EntityDataSerializers.BOOLEAN);
 	public final AnimationState animationState1 = new AnimationState();
-	public final AnimationState animationState2 = new AnimationState();
 
 	public TurretEntity(EntityType<TurretEntity> type, Level world) {
 		super(type, world);
@@ -77,7 +75,7 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob {
 		this.targetSelector.addGoal(5, new OwnerHurtTargetGoal(this));
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(7, new FloatGoal(this));
-		this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 40, 32f) {
+		this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 23, 32f) {
 			@Override
 			public boolean canContinueToUse() {
 				return this.canUse();
@@ -189,7 +187,6 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob {
 		super.tick();
 		if (this.level().isClientSide()) {
 			this.animationState1.animateWhen(CursedKnightNotWalkProcedure.execute(this), this.tickCount);
-			this.animationState2.animateWhen(TurretUsloviieProighryvaniiaProcedure.execute(this), this.tickCount);
 		}
 	}
 

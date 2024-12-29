@@ -34,7 +34,6 @@ public class TurretRenderer extends MobRenderer<TurretEntity, Modelturret<Turret
 				this.root().getAllParts().forEach(ModelPart::resetPose);
 				this.animateWalk(turretAnimation.walk, limbSwing, limbSwingAmount, 1f, 1f);
 				this.animate(entity.animationState1, turretAnimation.idle, ageInTicks, 1f);
-				this.animate(entity.animationState2, turretAnimation.shoot, ageInTicks, 1f);
 			}
 		};
 

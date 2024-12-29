@@ -36512,49 +36512,6 @@
       "path": "~/Elements/Technology"
     },
     {
-      "name": "TurretAttackHandler",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turret_attack_handler",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TurretAttackHandlerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Technology"
-    },
-    {
-      "name": "TurretUsloviieProighryvaniia",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turret_usloviie_proighryvaniia",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TurretUsloviieProighryvaniiaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Technology"
-    },
-    {
       "name": "CursedKnightUsloviieProighryvaniiaWalk",
       "type": "procedure",
       "compiles": true,
