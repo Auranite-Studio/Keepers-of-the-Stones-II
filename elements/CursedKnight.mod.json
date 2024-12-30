@@ -29,7 +29,7 @@
         },
         "speed": 1.0,
         "condition": {
-          "name": "CursedKnightUsloviieProighryvaniiaWalk"
+          "name": "WalkingAnimationSync"
         },
         "walking": false,
         "amplitude": 1.0
@@ -40,7 +40,7 @@
         },
         "speed": 1.0,
         "condition": {
-          "name": "CursedKnightNotWalk"
+          "name": "IdleAnimationSync"
         },
         "walking": false,
         "amplitude": 1.0
@@ -51,7 +51,7 @@
         },
         "speed": 1.0,
         "condition": {
-          "name": "CursedKnightUsloviieProighryvaniia"
+          "name": "SpintingAnimationSync"
         },
         "walking": false,
         "amplitude": 1.0
@@ -62,7 +62,7 @@
         },
         "speed": 1.0,
         "condition": {
-          "name": "CursedKnightUsloviieProighryvaniiaAttack"
+          "name": "CursedKnightAttackSync"
         },
         "walking": false,
         "amplitude": 1.0
@@ -166,9 +166,11 @@
     },
     "entityDataEntries": [
       {
-        "name": "is_attack",
-        "type": "logic",
-        "value": false
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "attack_anim_sync",
+        "type": "integer",
+        "value": 0
       }
     ],
     "onMobTickUpdate": {

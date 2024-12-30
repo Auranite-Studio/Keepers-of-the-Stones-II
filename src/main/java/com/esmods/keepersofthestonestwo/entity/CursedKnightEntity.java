@@ -33,15 +33,15 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.CursedKnightUsloviieProighryvaniiaWalkProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKnightUsloviieProighryvaniiaProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKnightUsloviieProighryvaniiaAttackProcedure;
+import com.esmods.keepersofthestonestwo.procedures.WalkingAnimationSyncProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpintingAnimationSyncProcedure;
+import com.esmods.keepersofthestonestwo.procedures.IdleAnimationSyncProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CursedKnightPriObnovlieniiTikaSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKnightNotWalkProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKnightAttackSyncProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 public class CursedKnightEntity extends Monster {
-	public static final EntityDataAccessor<Boolean> DATA_is_attack = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Integer> DATA_attack_anim_sync = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.INT);
 	public final AnimationState animationState0 = new AnimationState();
 	public final AnimationState animationState1 = new AnimationState();
 	public final AnimationState animationState2 = new AnimationState();
@@ -57,7 +57,7 @@ public class CursedKnightEntity extends Monster {
 	@Override
 	protected void defineSynchedData(SynchedEntityData.Builder builder) {
 		super.defineSynchedData(builder);
-		builder.define(DATA_is_attack, false);
+		builder.define(DATA_attack_anim_sync, 0);
 	}
 
 	@Override
@@ -114,24 +114,24 @@ public class CursedKnightEntity extends Monster {
 	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
-		compound.putBoolean("Datais_attack", this.entityData.get(DATA_is_attack));
+		compound.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
 	}
 
 	@Override
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
-		if (compound.contains("Datais_attack"))
-			this.entityData.set(DATA_is_attack, compound.getBoolean("Datais_attack"));
+		if (compound.contains("Dataattack_anim_sync"))
+			this.entityData.set(DATA_attack_anim_sync, compound.getInt("Dataattack_anim_sync"));
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
 		if (this.level().isClientSide()) {
-			this.animationState0.animateWhen(CursedKnightUsloviieProighryvaniiaWalkProcedure.execute(this), this.tickCount);
-			this.animationState1.animateWhen(CursedKnightNotWalkProcedure.execute(this), this.tickCount);
-			this.animationState2.animateWhen(CursedKnightUsloviieProighryvaniiaProcedure.execute(this), this.tickCount);
-			this.animationState3.animateWhen(CursedKnightUsloviieProighryvaniiaAttackProcedure.execute(this), this.tickCount);
+			this.animationState0.animateWhen(WalkingAnimationSyncProcedure.execute(this), this.tickCount);
+			this.animationState1.animateWhen(IdleAnimationSyncProcedure.execute(this), this.tickCount);
+			this.animationState2.animateWhen(SpintingAnimationSyncProcedure.execute(this), this.tickCount);
+			this.animationState3.animateWhen(CursedKnightAttackSyncProcedure.execute(this), this.tickCount);
 		}
 	}
 

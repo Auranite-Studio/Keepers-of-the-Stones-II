@@ -52,6 +52,7 @@ import java.util.EnumSet;
 
 import com.esmods.keepersofthestonestwo.procedures.SpiritPriObnovlieniiTikaSushchnostiProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpiritPriNachalnomPrizyvieSushchnostiProcedure;
+import com.esmods.keepersofthestonestwo.procedures.IdleAnimationSyncProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 public class SpiritEntity extends TamableAnimal {
@@ -204,7 +205,7 @@ public class SpiritEntity extends TamableAnimal {
 	public void tick() {
 		super.tick();
 		if (this.level().isClientSide()) {
-			this.animationState0.animateWhen(true, this.tickCount);
+			this.animationState0.animateWhen(IdleAnimationSyncProcedure.execute(this), this.tickCount);
 		}
 	}
 

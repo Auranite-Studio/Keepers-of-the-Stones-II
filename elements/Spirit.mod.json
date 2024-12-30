@@ -28,6 +28,9 @@
           "value": "CUSTOM:spiritAnimation.idle"
         },
         "speed": 1.0,
+        "condition": {
+          "name": "IdleAnimationSync"
+        },
         "walking": false,
         "amplitude": 1.0
       }

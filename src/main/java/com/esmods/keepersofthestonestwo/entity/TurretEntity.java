@@ -45,11 +45,13 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.CursedKnightNotWalkProcedure;
+import com.esmods.keepersofthestonestwo.procedures.WalkingAnimationSyncProcedure;
+import com.esmods.keepersofthestonestwo.procedures.IdleAnimationSyncProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 public class TurretEntity extends TamableAnimal implements RangedAttackMob {
 	public static final EntityDataAccessor<Boolean> DATA_is_attack = SynchedEntityData.defineId(TurretEntity.class, EntityDataSerializers.BOOLEAN);
+	public final AnimationState animationState0 = new AnimationState();
 	public final AnimationState animationState1 = new AnimationState();
 
 	public TurretEntity(EntityType<TurretEntity> type, Level world) {
@@ -186,7 +188,8 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob {
 	public void tick() {
 		super.tick();
 		if (this.level().isClientSide()) {
-			this.animationState1.animateWhen(CursedKnightNotWalkProcedure.execute(this), this.tickCount);
+			this.animationState0.animateWhen(WalkingAnimationSyncProcedure.execute(this), this.tickCount);
+			this.animationState1.animateWhen(IdleAnimationSyncProcedure.execute(this), this.tickCount);
 		}
 	}
 

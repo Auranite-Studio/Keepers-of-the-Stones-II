@@ -32,7 +32,7 @@ public class TurretRenderer extends MobRenderer<TurretEntity, Modelturret<Turret
 			@Override
 			public void setupAnim(TurretEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 				this.root().getAllParts().forEach(ModelPart::resetPose);
-				this.animateWalk(turretAnimation.walk, limbSwing, limbSwingAmount, 1f, 1f);
+				this.animate(entity.animationState0, turretAnimation.walk, ageInTicks, 1f);
 				this.animate(entity.animationState1, turretAnimation.idle, ageInTicks, 1f);
 			}
 		};
