@@ -1,8 +1,6 @@
 {
   "type": "neoforge:add_spawns",
-  "biomes": {
-    "type": "neoforge:any"
-  },
+  "biomes": "power:cursed_forest",
   "spawners": {
     "type": "power:cursed_knight",
     "weight": 4,
