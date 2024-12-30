@@ -495,7 +495,6 @@ public class PowerModItems {
 	public static final DeferredItem<Item> DESTRUCTION_BATTERY = REGISTRY.register("destruction_battery", DestructionBatteryItem::new);
 	public static final DeferredItem<Item> DESTRUCTION_BROADSWORD = REGISTRY.register("destruction_broadsword", DestructionBroadswordItem::new);
 	public static final DeferredItem<Item> AMPLIFIER_BLOCK = block(PowerModBlocks.AMPLIFIER_BLOCK);
-	public static final DeferredItem<Item> ENERGIUM_GOLEM_SPAWN_EGG = REGISTRY.register("energium_golem_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.ENERGIUM_GOLEM, -2242726, -8337805, new Item.Properties()));
 	public static final DeferredItem<Item> BLOOD_ARMOR_HELMET = REGISTRY.register("blood_armor_helmet", BloodArmorItem.Helmet::new);
 	public static final DeferredItem<Item> BLOOD_ARMOR_CHESTPLATE = REGISTRY.register("blood_armor_chestplate", BloodArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> BLOOD_ARMOR_LEGGINGS = REGISTRY.register("blood_armor_leggings", BloodArmorItem.Leggings::new);
@@ -703,6 +702,7 @@ public class PowerModItems {
 	public static final DeferredItem<Item> MUSIC_DISC_CALL_OF_THE_PAST = REGISTRY.register("music_disc_call_of_the_past", MusicDiscCallOfThePastItem::new);
 	public static final DeferredItem<Item> MUSIC_DISC_ANCIENT_MOOD = REGISTRY.register("music_disc_ancient_mood", MusicDiscAncientMoodItem::new);
 	public static final DeferredItem<Item> CURSED_KNIGHT_SPAWN_EGG = REGISTRY.register("cursed_knight_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KNIGHT, -11447452, -9817013, new Item.Properties()));
+	public static final DeferredItem<Item> ENERGIUM_GOLEM_SPAWN_EGG = REGISTRY.register("energium_golem_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.ENERGIUM_GOLEM, -2242726, -8337805, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

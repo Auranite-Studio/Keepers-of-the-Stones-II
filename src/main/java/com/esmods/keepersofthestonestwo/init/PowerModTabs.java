@@ -197,9 +197,9 @@ public class PowerModTabs {
 			}).withTabsBefore(BATTERIES.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOBS = REGISTRY.register("mobs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get());
 				tabData.accept(PowerModItems.CURSED_KEEPER_SPAWN_EGG.get());
 				tabData.accept(PowerModItems.CURSED_KNIGHT_SPAWN_EGG.get());
 				tabData.accept(PowerModItems.CURSED_SQUIRE_SPAWN_EGG.get());
+				tabData.accept(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get());
 			}).withTabsBefore(ITEMS.getId()).build());
 }

@@ -40,9 +40,8 @@ public class EnergiumGolemCoreAttackProcedure {
 		Range = 3;
 		particles = 5;
 		if (entity.getPersistentData().getDouble("IA") == 0) {
-			if (entity instanceof EnergiumGolemEntity) {
-				((EnergiumGolemEntity) entity).setAnimation("energium_golem.animation.shoot");
-			}
+			if (entity instanceof EnergiumGolemEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(EnergiumGolemEntity.DATA_attack_anim_sync, 2);
 			entity.getPersistentData().putDouble("Look", (entity.getYRot()));
 		}
 		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
@@ -107,6 +106,8 @@ public class EnergiumGolemCoreAttackProcedure {
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putDouble("BreathRange", 0);
 			entity.getPersistentData().putString("State", "Idle");
+			if (entity instanceof EnergiumGolemEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(EnergiumGolemEntity.DATA_attack_anim_sync, 0);
 		}
 	}
 }
