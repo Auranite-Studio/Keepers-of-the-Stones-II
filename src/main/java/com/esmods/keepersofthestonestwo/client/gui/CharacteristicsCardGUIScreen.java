@@ -15,6 +15,9 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.esmods.keepersofthestonestwo.world.inventory.CharacteristicsCardGUIMenu;
 import com.esmods.keepersofthestonestwo.procedures.SpeedInfoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ResistanceInfoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RankDCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RankCCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RankBCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.NameInfoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LevelInfoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.HasteInfoProcedure;
@@ -99,6 +102,15 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 		}
 		if (Bar12Procedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_end.png"), this.leftPos + 139, this.topPos + 56, 0, 0, 10, 5, 10, 5);
+		}
+		if (RankDCheckProcedure.execute(entity)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_d_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
+		}
+		if (RankCCheckProcedure.execute(entity)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_c_print.png"), this.leftPos + 0, this.topPos + 1, 0, 0, 320, 176, 320, 176);
+		}
+		if (RankBCheckProcedure.execute(entity)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_b_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 		}
 		RenderSystem.disableBlend();
 	}

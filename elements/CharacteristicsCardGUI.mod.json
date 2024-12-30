@@ -277,6 +277,45 @@
           "y": 175,
           "locked": true
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rank_d_print.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RankDCheck"
+          },
+          "x": 54,
+          "y": 32,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rank_c_print.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RankCCheck"
+          },
+          "x": 54,
+          "y": 33,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rank_b_print.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RankBCheck"
+          },
+          "x": 54,
+          "y": 32,
+          "locked": true
+        }
       }
     ],
     "gridSettings": {

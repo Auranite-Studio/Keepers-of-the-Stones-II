@@ -75,6 +75,11 @@ public class PwResetProcedure {
 					_vars.power_recovery_multiplier = 1;
 					_vars.syncPlayerVariables(entityiterator);
 				}
+				{
+					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.rank = "D";
+					_vars.syncPlayerVariables(entityiterator);
+				}
 				if (PowerConfigConfiguration.MASTER_EFFECTS_CONTROL_BY_CONFIG.get() == false) {
 					{
 						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
