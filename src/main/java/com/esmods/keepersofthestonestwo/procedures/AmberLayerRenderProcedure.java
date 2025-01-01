@@ -7,9 +7,11 @@ import net.neoforged.bus.api.Event;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
@@ -56,12 +58,22 @@ public class AmberLayerRenderProcedure {
 			emptyRenderer.render((AbstractClientPlayer) _evtEntity, _evtEntity.getYRot(), _evt.getPartialTick(), poseStack, _evt.getMultiBufferSource(), _evt.getPackedLight());
 		}
 		if ((entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(PowerModAttributes.AMBER_LAYER) ? _livingEntity1.getAttribute(PowerModAttributes.AMBER_LAYER).getBaseValue() : 0) == 1) {
-			if (!(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer) && _evt.getEntity() instanceof Mob) {
-				if (_evt instanceof RenderLivingEvent.Pre _pre) {
-					// _pre.setCanceled(true);
+			if (entity instanceof Player || entity instanceof ServerPlayer) {
+				if (_evt.getRenderer() instanceof PlayerRenderer) {
+					if (_evt instanceof RenderLivingEvent.Pre _pre) {
+						_pre.setCanceled(true);
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerRenderer(context, ResourceLocation.parse("power:textures/entities/amber_trap.png"), new Modeliceberg(context.bakeLayer(Modeliceberg.LAYER_LOCATION)))
+							.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
-				new com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer(context, ResourceLocation.parse("power:textures/entities/amber_trap.png"), new Modeliceberg(context.bakeLayer(Modeliceberg.LAYER_LOCATION))).render((Mob) _evt.getEntity(),
-						_evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
+			} else {
+				if (!(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer) && _evt.getEntity() instanceof Mob) {
+					if (_evt instanceof RenderLivingEvent.Pre _pre) {
+						_pre.setCanceled(true);
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer(context, ResourceLocation.parse("power:textures/entities/amber_trap.png"), new Modeliceberg(context.bakeLayer(Modeliceberg.LAYER_LOCATION)))
+							.render((Mob) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
 			}
 		}
 	}
