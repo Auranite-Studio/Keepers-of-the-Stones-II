@@ -9,6 +9,7 @@ import net.neoforged.bus.api.Event;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
@@ -19,6 +20,7 @@ import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
+import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 
 @EventBusSubscriber
 public class AmberDestructionArmorProcedure {
@@ -36,7 +38,7 @@ public class AmberDestructionArmorProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getPersistentData().getBoolean("amberLayer")) {
+		if ((entity instanceof LivingEntity _livingEntity0 && _livingEntity0.getAttributes().hasAttribute(PowerModAttributes.AMBER_LAYER) ? _livingEntity0.getAttribute(PowerModAttributes.AMBER_LAYER).getBaseValue() : 0) == 1) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
 			}
@@ -47,7 +49,8 @@ public class AmberDestructionArmorProcedure {
 				_vars.ability_block = false;
 				_vars.syncPlayerVariables(entity);
 			}
-			entity.getPersistentData().putBoolean("amberLayer", false);
+			if (entity instanceof LivingEntity _livingEntity3 && _livingEntity3.getAttributes().hasAttribute(PowerModAttributes.AMBER_LAYER))
+				_livingEntity3.getAttribute(PowerModAttributes.AMBER_LAYER).setBaseValue(0);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.break")), SoundSource.PLAYERS, 1, 1);

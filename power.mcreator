@@ -36907,6 +36907,66 @@
         ]
       },
       "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "IceLayer",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_layer",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceLayerRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_layer_render",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/IceLayerRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "AmberLayer",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_layer",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Elements/Amber"
+    },
+    {
+      "name": "AmberLayerRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_layer_render",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AmberLayerRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Amber"
     }
   ],
   "variable_elements": [
@@ -38899,6 +38959,7 @@
       "item.power.mist_battery": "Батарея",
       "effect.power.star_regeneration": "Звёздная регенерация",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
+      "attribute.power.ice_layer": "Ice Layer",
       "item.power.cursed_knight_spawn_egg": "Яйцо призыва проклятого рыцаря",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
       "item.power.mist_armor_boots": "Ботинки мастера тумана",
@@ -39437,6 +39498,7 @@
       "effect.power.thirst_dark_master": "Т. Мастер Жажды",
       "item.power.gravity_armor_helmet": "Шлем мастера гравитации",
       "item.power.vacuum_dagger": "Пустотный кинжал",
+      "attribute.power.amber_layer": "Ice Layer",
       "item.power.air_battery": "Батарея",
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Солнечный луч, расходует 15",
       "item.power.energy_armor_helmet": "Шлем мастера энергии",
@@ -39787,6 +39849,7 @@
       "item.power.mist_battery": "Battery",
       "effect.power.star_regeneration": "Star regeneration",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
+      "attribute.power.ice_layer": "Ice Layer",
       "item.power.cursed_knight_spawn_egg": "Cursed Knight Spawn Egg",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
       "item.power.mist_armor_boots": "Mist Boots",
@@ -40324,6 +40387,7 @@
       "effect.power.thirst_dark_master": "Dark Master of Thirst",
       "item.power.gravity_armor_helmet": "Gravity Helmet",
       "item.power.vacuum_dagger": "Vacuum Dagger",
+      "attribute.power.amber_layer": "Amber Layer",
       "item.power.air_battery": "Battery",
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Sun ray, uses 15",
       "item.power.energy_armor_helmet": "Energy Helmet",

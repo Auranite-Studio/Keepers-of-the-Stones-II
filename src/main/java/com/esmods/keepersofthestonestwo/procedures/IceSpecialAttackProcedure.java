@@ -27,6 +27,7 @@ import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 import com.esmods.keepersofthestonestwo.entity.IceAttackProjectileEntity;
 
 public class IceSpecialAttackProcedure {
@@ -193,13 +194,14 @@ public class IceSpecialAttackProcedure {
 							(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()));
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (!(entityiterator == entity) && !(entity instanceof ThrowableProjectile)) {
+						if (!(entityiterator == entity) && !(entityiterator instanceof ThrowableProjectile)) {
 							{
 								PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 								_vars.ability_block = true;
 								_vars.syncPlayerVariables(entityiterator);
 							}
-							entityiterator.getPersistentData().putBoolean("iceLayer", true);
+							if (entityiterator instanceof LivingEntity _livingEntity57 && _livingEntity57.getAttributes().hasAttribute(PowerModAttributes.ICE_LAYER))
+								_livingEntity57.getAttribute(PowerModAttributes.ICE_LAYER).setBaseValue(1);
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.player.hurt_freeze")), SoundSource.NEUTRAL, 1, 1);

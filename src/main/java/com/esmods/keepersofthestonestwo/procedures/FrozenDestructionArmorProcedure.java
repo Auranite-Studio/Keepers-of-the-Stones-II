@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
@@ -19,6 +20,7 @@ import net.minecraft.core.BlockPos;
 import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 
 @EventBusSubscriber
 public class FrozenDestructionArmorProcedure {
@@ -37,7 +39,7 @@ public class FrozenDestructionArmorProcedure {
 		if (entity == null)
 			return;
 		double Scaling = 0;
-		if (entity.getPersistentData().getBoolean("iceLayer")) {
+		if ((entity instanceof LivingEntity _livingEntity0 && _livingEntity0.getAttributes().hasAttribute(PowerModAttributes.ICE_LAYER) ? _livingEntity0.getAttribute(PowerModAttributes.ICE_LAYER).getBaseValue() : 0) == 1) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
 			}
@@ -55,7 +57,8 @@ public class FrozenDestructionArmorProcedure {
 				_vars.ability_block = false;
 				_vars.syncPlayerVariables(entity);
 			}
-			entity.getPersistentData().putBoolean("iceLayer", false);
+			if (entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(PowerModAttributes.ICE_LAYER))
+				_livingEntity4.getAttribute(PowerModAttributes.ICE_LAYER).setBaseValue(0);
 		}
 	}
 }

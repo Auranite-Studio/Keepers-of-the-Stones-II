@@ -27,6 +27,7 @@ import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
+import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 
 public class AmberSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -219,13 +220,14 @@ public class AmberSpecialAttackProcedure {
 							(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()));
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (!(entityiterator == entity) && !(entity instanceof ThrowableProjectile)) {
+						if (!(entityiterator == entity) && !(entityiterator instanceof ThrowableProjectile)) {
 							{
 								PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 								_vars.ability_block = true;
 								_vars.syncPlayerVariables(entityiterator);
 							}
-							entityiterator.getPersistentData().putBoolean("amberLayer", true);
+							if (entityiterator instanceof LivingEntity _livingEntity36 && _livingEntity36.getAttributes().hasAttribute(PowerModAttributes.AMBER_LAYER))
+								_livingEntity36.getAttribute(PowerModAttributes.AMBER_LAYER).setBaseValue(1);
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")), SoundSource.NEUTRAL, 1, 1);

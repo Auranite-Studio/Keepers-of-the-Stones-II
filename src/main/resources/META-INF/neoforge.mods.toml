@@ -43,12 +43,24 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
+    modId="kleiders_custom_renderer"
+    type="required"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
     modId="playeranimator"
     type="required"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
+[[dependencies.power]]
+    modId="kleidersplayerrenderer"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 [[dependencies.power]]
     modId="pehkui"
     type="optional"

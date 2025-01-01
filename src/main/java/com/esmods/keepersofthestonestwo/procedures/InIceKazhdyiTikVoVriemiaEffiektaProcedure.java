@@ -12,6 +12,8 @@ import net.minecraft.world.effect.MobEffectInstance;
 
 import javax.annotation.Nullable;
 
+import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
+
 @EventBusSubscriber
 public class InIceKazhdyiTikVoVriemiaEffiektaProcedure {
 	@SubscribeEvent
@@ -27,7 +29,7 @@ public class InIceKazhdyiTikVoVriemiaEffiektaProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity) {
-			if (entity.getPersistentData().getBoolean("iceLayer")) {
+			if ((entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(PowerModAttributes.ICE_LAYER) ? _livingEntity1.getAttribute(PowerModAttributes.ICE_LAYER).getBaseValue() : 0) == 1) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 200, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

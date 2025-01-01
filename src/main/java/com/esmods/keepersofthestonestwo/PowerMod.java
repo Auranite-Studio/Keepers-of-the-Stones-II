@@ -36,6 +36,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
+import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 
 @Mod("power")
 public class PowerMod {
@@ -60,6 +61,7 @@ public class PowerMod {
 		PowerModMenus.REGISTRY.register(modEventBus);
 		PowerModParticleTypes.REGISTRY.register(modEventBus);
 
+		PowerModAttributes.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}
