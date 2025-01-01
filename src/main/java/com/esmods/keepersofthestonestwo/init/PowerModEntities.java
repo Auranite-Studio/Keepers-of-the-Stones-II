@@ -136,8 +136,6 @@ public class PowerModEntities {
 			EntityType.Builder.<PoisonBombEntity>of(PoisonBombEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PoisonPitEntity>> POISON_PIT = register("poison_pit",
 			EntityType.Builder.<PoisonPitEntity>of(PoisonPitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(4f, 0.2f));
-	public static final DeferredHolder<EntityType<?>, EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper",
-			EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(256).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MercuryBallProjectileEntity>> MERCURY_BALL_PROJECTILE = register("mercury_ball_projectile",
 			EntityType.Builder.<MercuryBallProjectileEntity>of(MercuryBallProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<NoteBombProjectileEntity>> NOTE_BOMB_PROJECTILE = register("note_bomb_projectile",
@@ -164,6 +162,8 @@ public class PowerModEntities {
 			EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(2.25f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedSquireEntity>> CURSED_SQUIRE = register("cursed_squire",
 			EntityType.Builder.<CursedSquireEntity>of(CursedSquireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper",
+			EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(256).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -175,25 +175,25 @@ public class PowerModEntities {
 	public static void init(RegisterSpawnPlacementsEvent event) {
 		ShadowEntity.init(event);
 		PoisonPitEntity.init(event);
-		CursedKeeperEntity.init(event);
 		CursedKnightEntity.init(event);
 		BlackHoleEntity.init(event);
 		SpiritEntity.init(event);
 		TurretEntity.init(event);
 		EnergiumGolemEntity.init(event);
 		CursedSquireEntity.init(event);
+		CursedKeeperEntity.init(event);
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
 		event.put(POISON_PIT.get(), PoisonPitEntity.createAttributes().build());
-		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
 		event.put(CURSED_KNIGHT.get(), CursedKnightEntity.createAttributes().build());
 		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
 		event.put(SPIRIT.get(), SpiritEntity.createAttributes().build());
 		event.put(TURRET.get(), TurretEntity.createAttributes().build());
 		event.put(ENERGIUM_GOLEM.get(), EnergiumGolemEntity.createAttributes().build());
 		event.put(CURSED_SQUIRE.get(), CursedSquireEntity.createAttributes().build());
+		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
 	}
 }
