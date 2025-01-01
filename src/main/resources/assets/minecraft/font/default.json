@@ -6,7 +6,29 @@
 			"ascent": 12,
 			"height": 16,
 			"chars": ["\uE991"]
+		},
+                {
+			"type": "bitmap",
+			"file": "minecraft:font/rank_d.png",
+			"ascent": 25,
+			"height": 30,
+			"chars": ["\uE992"]
+		},
+                {
+			"type": "bitmap",
+			"file": "minecraft:font/rank_c.png",
+			"ascent": 25,
+			"height": 30,
+			"chars": ["\uE993"]
+		},
+                {
+			"type": "bitmap",
+			"file": "minecraft:font/rank_b.png",
+			"ascent": 25,
+			"height": 30,
+			"chars": ["\uE994"]
 		}
+
 	
 	]
 }
