@@ -36952,19 +36952,14 @@
     {
       "name": "AmberLayerRender",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amber_layer_render",
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/AmberLayerRenderProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Elements/Amber"
     }
@@ -37665,6 +37660,12 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "D"
+    },
+    {
+      "name": "ice_layer",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [

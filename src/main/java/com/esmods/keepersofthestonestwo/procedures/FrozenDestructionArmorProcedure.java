@@ -39,7 +39,8 @@ public class FrozenDestructionArmorProcedure {
 		if (entity == null)
 			return;
 		double Scaling = 0;
-		if ((entity instanceof LivingEntity _livingEntity0 && _livingEntity0.getAttributes().hasAttribute(PowerModAttributes.ICE_LAYER) ? _livingEntity0.getAttribute(PowerModAttributes.ICE_LAYER).getBaseValue() : 0) == 1) {
+		if ((entity instanceof LivingEntity _livingEntity0 && _livingEntity0.getAttributes().hasAttribute(PowerModAttributes.ICE_LAYER) ? _livingEntity0.getAttribute(PowerModAttributes.ICE_LAYER).getBaseValue() : 0) == 1
+				|| entity.getData(PowerModVariables.PLAYER_VARIABLES).ice_layer == true) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
 			}
@@ -59,6 +60,11 @@ public class FrozenDestructionArmorProcedure {
 			}
 			if (entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(PowerModAttributes.ICE_LAYER))
 				_livingEntity4.getAttribute(PowerModAttributes.ICE_LAYER).setBaseValue(0);
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.ice_layer = false;
+				_vars.syncPlayerVariables(entity);
+			}
 		}
 	}
 }

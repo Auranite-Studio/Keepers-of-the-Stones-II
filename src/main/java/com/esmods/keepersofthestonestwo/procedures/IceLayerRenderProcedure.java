@@ -24,7 +24,9 @@ import javax.annotation.Nullable;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
+import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
+import com.esmods.keepersofthestonestwo.client.model.Modelplayer_layer;
 import com.esmods.keepersofthestonestwo.client.model.Modeliceberg;
 
 @EventBusSubscriber(value = {Dist.CLIENT})
@@ -57,16 +59,29 @@ public class IceLayerRenderProcedure {
 			emptyRenderer.clearLayers();
 			emptyRenderer.render((AbstractClientPlayer) _evtEntity, _evtEntity.getYRot(), _evt.getPartialTick(), poseStack, _evt.getMultiBufferSource(), _evt.getPackedLight());
 		}
-		if ((entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(PowerModAttributes.ICE_LAYER) ? _livingEntity1.getAttribute(PowerModAttributes.ICE_LAYER).getBaseValue() : 0) == 1) {
-			if (entity instanceof Player || entity instanceof ServerPlayer) {
-				if (_evt.getRenderer() instanceof PlayerRenderer) {
-					if (_evt instanceof RenderLivingEvent.Pre _pre) {
-						// _pre.setCanceled(true);
+		if (entity instanceof Player || entity instanceof ServerPlayer) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).ice_layer == true) {
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = ResourceLocation.parse("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse("power:textures/entities/iceberg_player.png") != null) {
+						_texture = ResourceLocation.parse("power:textures/entities/iceberg_player.png");
 					}
-					new com.kleiders.kleidersplayerrenderer.KleidersPlayerRenderer(context, ResourceLocation.parse("power:textures/entities/iceberg.png"), new Modeliceberg(context.bakeLayer(Modeliceberg.LAYER_LOCATION)))
-							.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
+					Modelplayer_layer newModel = new Modelplayer_layer(context.bakeLayer(Modelplayer_layer.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+					poseStack.popPose();
 				}
-			} else {
+			}
+		} else {
+			if ((entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(PowerModAttributes.ICE_LAYER) ? _livingEntity4.getAttribute(PowerModAttributes.ICE_LAYER).getBaseValue() : 0) == 1) {
 				if (!(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer) && _evt.getEntity() instanceof Mob) {
 					if (_evt instanceof RenderLivingEvent.Pre _pre) {
 						// _pre.setCanceled(true);

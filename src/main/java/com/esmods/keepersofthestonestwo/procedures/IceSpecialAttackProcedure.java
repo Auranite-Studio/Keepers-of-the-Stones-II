@@ -202,6 +202,11 @@ public class IceSpecialAttackProcedure {
 							}
 							if (entityiterator instanceof LivingEntity _livingEntity57 && _livingEntity57.getAttributes().hasAttribute(PowerModAttributes.ICE_LAYER))
 								_livingEntity57.getAttribute(PowerModAttributes.ICE_LAYER).setBaseValue(1);
+							{
+								PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.ice_layer = true;
+								_vars.syncPlayerVariables(entityiterator);
+							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.player.hurt_freeze")), SoundSource.NEUTRAL, 1, 1);
@@ -215,6 +220,11 @@ public class IceSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+					_vars.syncPlayerVariables(entity);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.ice_layer = true;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
