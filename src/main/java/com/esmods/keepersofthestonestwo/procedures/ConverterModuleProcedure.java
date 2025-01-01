@@ -176,6 +176,20 @@ public class ConverterModuleProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).start_fog != 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.start_fog = 100;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).end_fog != 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.end_fog = 150;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
 		}
 	}
 }

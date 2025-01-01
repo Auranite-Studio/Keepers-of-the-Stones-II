@@ -35560,29 +35560,6 @@
       "path": "~/Elements/Lightning"
     },
     {
-      "name": "RenderSpecialFogInCursedBiomes",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_special_fog_in_cursed_biomes",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderSpecialFogInCursedBiomesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
       "name": "MasterEffectDurationSet",
       "type": "procedure",
       "compiles": true,
@@ -36514,287 +36491,59 @@
         ]
       },
       "path": "~/ItemsAndBlocks/CharacteristicsCard"
+    },
+    {
+      "name": "CalculatingSpecialCursedFog",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "calculating_special_cursed_fog",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CalculatingSpecialCursedFogProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Biomes/CursedForest"
+    },
+    {
+      "name": "RenderSpecialCursedFog",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_special_cursed_fog",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderSpecialCursedFogProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Biomes/CursedForest"
     }
   ],
   "variable_elements": [
     {
-      "name": "ability",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "element_name_first",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "element_name_second",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "element_name_third",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "teleporting_effect",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
-      "name": "opX",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "opY",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "opZ",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "bpX",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "bpY",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "bpZ",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "fake_element_name_first",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "fake_element_name_second",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "fake_element_name_third",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "abilities_timer",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
-      "name": "fake_element_name_first_timer",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
-      "name": "fake_element_name_second_timer",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
-      "name": "fake_element_name_third_timer",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
-      "name": "entity_rotation",
-      "type": "number",
-      "scope": "world",
-      "value": "0"
-    },
-    {
-      "name": "power",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0.0"
-    },
-    {
-      "name": "powerTimer",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0.0"
-    },
-    {
-      "name": "mergers",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0.0"
-    },
-    {
-      "name": "power_recovery_multiplier",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "1.0"
-    },
-    {
-      "name": "max_power",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "100.0"
-    },
-    {
-      "name": "recharge_timer",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "300.0"
-    },
-    {
-      "name": "master_effect_duration",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "600.0"
-    },
-    {
-      "name": "active_power",
+      "name": "wheel_open_key_var",
       "type": "logic",
       "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "fire_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "air_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "earth_stone",
-      "type": "logic",
-      "scope": "map",
       "value": "false"
     },
     {
       "name": "water_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "ether_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "selected",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "active_battery",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "ice_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "lightning_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "sound_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "crystal_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "lava_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "rain_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "tornado_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "ocean_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "plants_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "animals_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "metal_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "light_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "shadow_stone",
       "type": "logic",
       "scope": "map",
       "value": "false"
@@ -36806,25 +36555,25 @@
       "value": "false"
     },
     {
-      "name": "energy_stone",
+      "name": "use_ability_key_var",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_lifetime",
       "value": "false"
     },
     {
-      "name": "sun_stone",
+      "name": "unlock_keepers_box",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "false"
     },
     {
-      "name": "moon_stone",
+      "name": "transfered_power",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_lifetime",
       "value": "false"
     },
     {
-      "name": "space_stone",
+      "name": "tornado_stone",
       "type": "logic",
       "scope": "map",
       "value": "false"
@@ -36836,205 +36585,7 @@
       "value": "false"
     },
     {
-      "name": "blood_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "technology_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "teleportation_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "explosion_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "amber_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "creation_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "destruction_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "mist_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "sand_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "speed_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "poison_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "magnet_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "mushrooms_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "mercury_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "music_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "plague_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "blue_flame_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "gravity_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "smoke_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "spirit_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "form_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "mind_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "golden_dust_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "darkness_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "ability_block",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "use_ability_key_var",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "detransf_key_var",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "wheel_open_key_var",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "blue_portal_placed",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "orange_portal_placed",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "second_wheel_open_var",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
       "name": "third_wheel_open_var",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "first_fake_wheel_open_var",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "second_fake_wheel_open_var",
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
@@ -37046,135 +36597,99 @@
       "value": "false"
     },
     {
-      "name": "ability_using",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "power_recorded",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "debug",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "detransform_anim_trigger",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "helmet",
-      "type": "itemstack",
-      "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "chestplate",
-      "type": "itemstack",
-      "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "leggings",
-      "type": "itemstack",
-      "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "boots",
-      "type": "itemstack",
-      "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "unlock_keepers_box",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "get_limit_of_stones",
-      "type": "logic",
-      "scope": "map",
-      "value": "true"
-    },
-    {
-      "name": "transfered_power",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "hypnotized",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "cpapi_ver",
+      "name": "teleporting_effect",
       "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "teleportation_stone",
+      "type": "logic",
       "scope": "map",
-      "value": "21.0"
+      "value": "false"
     },
     {
-      "name": "master_effect_end",
+      "name": "technology_stone",
       "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "sun_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "start_fog",
+      "type": "number",
       "scope": "player_lifetime",
-      "value": "false"
+      "value": "100.0"
     },
     {
-      "name": "master_effect_start",
+      "name": "spirit_stone",
       "type": "logic",
-      "scope": "player_lifetime",
+      "scope": "map",
       "value": "false"
     },
     {
-      "name": "is_set_configurable_zero",
+      "name": "speed_stone",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
-      "name": "level",
+      "name": "speed_char",
       "type": "number",
       "scope": "player_persistent",
       "value": "1.0"
     },
     {
-      "name": "level_exp",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0.0"
+      "name": "space_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     },
     {
-      "name": "base_damage_by_lvl",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "6.0"
+      "name": "sound_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     },
     {
-      "name": "max_level_exp",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "100.0"
+      "name": "smoke_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     },
     {
-      "name": "is_not_stone",
+      "name": "shadow_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "selected",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "second_wheel_open_var",
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
     },
     {
-      "name": "attribute_is_ready",
+      "name": "second_fake_wheel_open_var",
       "type": "logic",
       "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "sand_stone",
+      "type": "logic",
+      "scope": "map",
       "value": "false"
     },
     {
@@ -37184,22 +36699,190 @@
       "value": "0.0"
     },
     {
-      "name": "speed_char",
+      "name": "recharge_timer",
       "type": "number",
       "scope": "player_persistent",
+      "value": "300.0"
+    },
+    {
+      "name": "rank",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "D"
+    },
+    {
+      "name": "rain_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "powerTimer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "power_recovery_multiplier",
+      "type": "number",
+      "scope": "player_lifetime",
       "value": "1.0"
     },
     {
-      "name": "haste_char",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "-1.0"
+      "name": "power_recorded",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     },
     {
-      "name": "jump_char",
+      "name": "power",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "poison_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "plants_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "plague_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "orange_portal_placed",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "opZ",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "opY",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "opX",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "ocean_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "music_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "mushrooms_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "moon_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "mist_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "mind_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "metal_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "mergers",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "mercury_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "max_power",
       "type": "number",
       "scope": "player_persistent",
-      "value": "1.0"
+      "value": "100.0"
+    },
+    {
+      "name": "max_level_exp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "100.0"
+    },
+    {
+      "name": "master_effect_start",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "master_effect_end",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "master_effect_duration",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "600.0"
+    },
+    {
+      "name": "magnet_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "lightning_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "light_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     },
     {
       "name": "level_up_status",
@@ -37208,10 +36891,364 @@
       "value": "false"
     },
     {
-      "name": "rank",
+      "name": "level_exp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "leggings",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "lava_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "jump_char",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "is_set_configurable_zero",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "is_render_fog",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "is_not_stone",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "ice_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "hypnotized",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "helmet",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "haste_char",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "-1.0"
+    },
+    {
+      "name": "gravity_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "golden_dust_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "get_limit_of_stones",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "form_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "first_fake_wheel_open_var",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "fire_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "fake_element_name_third_timer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "fake_element_name_third",
       "type": "string",
       "scope": "player_persistent",
-      "value": "D"
+      "value": "0"
+    },
+    {
+      "name": "fake_element_name_second_timer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "fake_element_name_second",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "fake_element_name_first_timer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "fake_element_name_first",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "explosion_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "ether_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "entity_rotation",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "energy_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "end_fog",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "150.0"
+    },
+    {
+      "name": "element_name_third",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "element_name_second",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "element_name_first",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "earth_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "detransform_anim_trigger",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "detransf_key_var",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "destruction_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "debug",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "darkness_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "crystal_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "creation_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "cpapi_ver",
+      "type": "number",
+      "scope": "map",
+      "value": "21.0"
+    },
+    {
+      "name": "chestplate",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "bpZ",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "bpY",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "bpX",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "boots",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "blue_portal_placed",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "blue_flame_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "blood_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "base_damage_by_lvl",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "6.0"
+    },
+    {
+      "name": "attribute_is_ready",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "animals_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "amber_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "air_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "active_power",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "active_battery",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "ability_using",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "ability_block",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "ability",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "abilities_timer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [
