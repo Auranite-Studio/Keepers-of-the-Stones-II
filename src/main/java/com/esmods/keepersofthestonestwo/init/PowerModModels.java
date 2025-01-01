@@ -27,7 +27,6 @@ import com.esmods.keepersofthestonestwo.client.model.Modelether_bullet;
 import com.esmods.keepersofthestonestwo.client.model.Modelenergium_golem;
 import com.esmods.keepersofthestonestwo.client.model.Modelcursed_squire;
 import com.esmods.keepersofthestonestwo.client.model.Modelcursed_knight;
-import com.esmods.keepersofthestonestwo.client.model.Modelcursed_keeper_without_chains;
 import com.esmods.keepersofthestonestwo.client.model.Modelcursed_keeper;
 import com.esmods.keepersofthestonestwo.client.model.Modelblock_attack;
 import com.esmods.keepersofthestonestwo.client.model.Modelblack_hole;
@@ -44,7 +43,6 @@ public class PowerModModels {
 		event.registerLayerDefinition(Modelether_bullet.LAYER_LOCATION, Modelether_bullet::createBodyLayer);
 		event.registerLayerDefinition(Modelgrenade.LAYER_LOCATION, Modelgrenade::createBodyLayer);
 		event.registerLayerDefinition(Modelblack_hole.LAYER_LOCATION, Modelblack_hole::createBodyLayer);
-		event.registerLayerDefinition(Modelcursed_keeper_without_chains.LAYER_LOCATION, Modelcursed_keeper_without_chains::createBodyLayer);
 		event.registerLayerDefinition(ModelCrossed.LAYER_LOCATION, ModelCrossed::createBodyLayer);
 		event.registerLayerDefinition(Modelrain_drop.LAYER_LOCATION, Modelrain_drop::createBodyLayer);
 		event.registerLayerDefinition(Modelsmoke_bomb.LAYER_LOCATION, Modelsmoke_bomb::createBodyLayer);
