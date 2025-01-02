@@ -1,0 +1,329 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 320,
+    "height": 176,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_name_info",
+          "text": {
+            "fixedValue": "Steve",
+            "name": "NameInfo"
+          },
+          "color": {
+            "value": -5927048,
+            "falpha": 0.0
+          },
+          "x": 89,
+          "y": 68,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_10",
+          "text": {
+            "fixedValue": "10",
+            "name": "LevelInfo"
+          },
+          "color": {
+            "value": -10713797,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 94,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "characteristics_card_gui.png",
+          "use1Xscale": false,
+          "x": 54,
+          "y": 32,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ExpBar1"
+          },
+          "x": 83,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_mid.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ExpBar2"
+          },
+          "x": 92,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_mid.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ExpBar3"
+          },
+          "x": 102,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_mid.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ExpBar4"
+          },
+          "x": 112,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_mid.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BarExp5"
+          },
+          "x": 122,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_mid.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BarExp6"
+          },
+          "x": 132,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_mid.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BarExp7"
+          },
+          "x": 142,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_mid.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Bar8"
+          },
+          "x": 152,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_mid.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Bar9"
+          },
+          "x": 162,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_mid.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Bar10"
+          },
+          "x": 172,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_mid.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Bar11"
+          },
+          "x": 182,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bar_progress_end.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Bar12"
+          },
+          "x": 193,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1",
+          "text": {
+            "fixedValue": "1",
+            "name": "DamageInfo"
+          },
+          "color": {
+            "value": -5927048,
+            "falpha": 0.0
+          },
+          "x": 120,
+          "y": 109,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_11",
+          "text": {
+            "fixedValue": "1",
+            "name": "SpeedInfo"
+          },
+          "color": {
+            "value": -5927048,
+            "falpha": 0.0
+          },
+          "x": 120,
+          "y": 131,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_12",
+          "text": {
+            "fixedValue": "1",
+            "name": "ResistanceInfo"
+          },
+          "color": {
+            "value": -5927048,
+            "falpha": 0.0
+          },
+          "x": 120,
+          "y": 153,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_13",
+          "text": {
+            "fixedValue": "1",
+            "name": "HasteInfo"
+          },
+          "color": {
+            "value": -5927048,
+            "falpha": 0.0
+          },
+          "x": 120,
+          "y": 175,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rank_d_print.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RankDCheck"
+          },
+          "x": 54,
+          "y": 32,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rank_c_print.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RankCCheck"
+          },
+          "x": 54,
+          "y": 33,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rank_b_print.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RankBCheck"
+          },
+          "x": 54,
+          "y": 32,
+          "locked": true
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 12,
+      "sy": 12,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

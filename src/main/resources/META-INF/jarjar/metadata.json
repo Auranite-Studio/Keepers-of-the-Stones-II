@@ -7,9 +7,9 @@
       },
       "version": {
         "range": "[0,)",
-        "artifactVersion": "20"
+        "artifactVersion": "21"
       },
-      "path": "META-INF/jarjar/cpapi-v20.jar",
+      "path": "META-INF/jarjar/cpapi-v21.jar",
       "isObfuscated": true
     }
   ]
