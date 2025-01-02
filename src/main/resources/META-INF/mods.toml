@@ -4,13 +4,13 @@ license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.0.4"
+version="1.1.0.1"
 displayName="Keepers of the Stones II"
 updateJSONURL="https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_update_checker_fg.json"
 displayURL="https://modrinth.com/mod/keepers-of-the-stones-2"
 logoFile="logo.png"
 credits="Created by Environment Studios"
-authors="MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others"
+authors="MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others"
 description="Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers."
 
 # Start of user code block mod configuration
@@ -30,12 +30,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
-    modId="geckolib"
-    mandatory=true
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
     modId="playeranimator"
     mandatory=true
     versionRange="[0,)"
@@ -50,12 +44,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     side="BOTH"
 [[dependencies.power]]
     modId="bettercombat"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
-    modId="geckolib"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

@@ -1,0 +1,16 @@
+package com.esmods.keepersofthestonestwo.procedures;
+
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+
+import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
+
+public class EnergiumOreClickProcedure {
+	public static void execute(Entity entity) {
+		if (entity == null)
+			return;
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 100, 0));
+	}
+}
