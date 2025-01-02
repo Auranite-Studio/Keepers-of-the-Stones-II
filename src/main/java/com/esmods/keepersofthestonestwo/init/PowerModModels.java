@@ -10,6 +10,8 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import com.esmods.keepersofthestonestwo.client.model.Modelturret_projectile;
+import com.esmods.keepersofthestonestwo.client.model.Modelturret;
+import com.esmods.keepersofthestonestwo.client.model.Modelspirit;
 import com.esmods.keepersofthestonestwo.client.model.Modelsolar_salvo;
 import com.esmods.keepersofthestonestwo.client.model.Modelsmoke_bomb;
 import com.esmods.keepersofthestonestwo.client.model.Modelrain_drop;
@@ -22,7 +24,12 @@ import com.esmods.keepersofthestonestwo.client.model.Modelknife;
 import com.esmods.keepersofthestonestwo.client.model.Modeliceberg;
 import com.esmods.keepersofthestonestwo.client.model.Modelgrenade;
 import com.esmods.keepersofthestonestwo.client.model.Modelether_bullet;
+import com.esmods.keepersofthestonestwo.client.model.Modelenergium_golem;
+import com.esmods.keepersofthestonestwo.client.model.Modelcursed_squire;
+import com.esmods.keepersofthestonestwo.client.model.Modelcursed_knight;
+import com.esmods.keepersofthestonestwo.client.model.Modelcursed_keeper;
 import com.esmods.keepersofthestonestwo.client.model.Modelblock_attack;
+import com.esmods.keepersofthestonestwo.client.model.Modelblack_hole;
 import com.esmods.keepersofthestonestwo.client.model.Modelatomic_rocket;
 import com.esmods.keepersofthestonestwo.client.model.ModelCrossed;
 
