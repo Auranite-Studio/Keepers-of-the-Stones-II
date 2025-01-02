@@ -2,21 +2,18 @@
 package com.esmods.keepersofthestonestwo.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
-import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.geom.ModelLayers;
-import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.HierarchicalModel;
 
 import com.esmods.keepersofthestonestwo.entity.SpiritEntity;
 import com.esmods.keepersofthestonestwo.client.model.animations.spiritAnimation;
+import com.esmods.keepersofthestonestwo.client.model.Modelspirit;
 
-public class SpiritRenderer extends HumanoidMobRenderer<SpiritEntity, HumanoidModel<SpiritEntity>> {
+public class SpiritRenderer extends MobRenderer<SpiritEntity, Modelspirit<SpiritEntity>> {
 	public SpiritRenderer(EntityRendererProvider.Context context) {
-		super(context, new AnimatedModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
-		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
+		super(context, new AnimatedModel(context.bakeLayer(Modelspirit.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
@@ -24,7 +21,7 @@ public class SpiritRenderer extends HumanoidMobRenderer<SpiritEntity, HumanoidMo
 		return new ResourceLocation("power:textures/entities/spirit.png");
 	}
 
-	private static final class AnimatedModel extends HumanoidModel<SpiritEntity> {
+	private static final class AnimatedModel extends Modelspirit<SpiritEntity> {
 		private final ModelPart root;
 		private final HierarchicalModel animator = new HierarchicalModel<SpiritEntity>() {
 			@Override

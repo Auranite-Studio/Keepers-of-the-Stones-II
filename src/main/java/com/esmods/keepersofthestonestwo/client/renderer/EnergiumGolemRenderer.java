@@ -2,21 +2,18 @@
 package com.esmods.keepersofthestonestwo.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
-import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.geom.ModelLayers;
-import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.HierarchicalModel;
 
 import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 import com.esmods.keepersofthestonestwo.client.model.animations.energium_golemAnimation;
+import com.esmods.keepersofthestonestwo.client.model.Modelenergium_golem;
 
-public class EnergiumGolemRenderer extends HumanoidMobRenderer<EnergiumGolemEntity, HumanoidModel<EnergiumGolemEntity>> {
+public class EnergiumGolemRenderer extends MobRenderer<EnergiumGolemEntity, Modelenergium_golem<EnergiumGolemEntity>> {
 	public EnergiumGolemRenderer(EntityRendererProvider.Context context) {
-		super(context, new AnimatedModel(context.bakeLayer(ModelLayers.PLAYER)), 1.125f);
-		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
+		super(context, new AnimatedModel(context.bakeLayer(Modelenergium_golem.LAYER_LOCATION)), 1.125f);
 	}
 
 	@Override
@@ -24,7 +21,7 @@ public class EnergiumGolemRenderer extends HumanoidMobRenderer<EnergiumGolemEnti
 		return new ResourceLocation("power:textures/entities/energium_golem.png");
 	}
 
-	private static final class AnimatedModel extends HumanoidModel<EnergiumGolemEntity> {
+	private static final class AnimatedModel extends Modelenergium_golem<EnergiumGolemEntity> {
 		private final ModelPart root;
 		private final HierarchicalModel animator = new HierarchicalModel<EnergiumGolemEntity>() {
 			@Override

@@ -2,21 +2,18 @@
 package com.esmods.keepersofthestonestwo.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
-import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.geom.ModelLayers;
-import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.HierarchicalModel;
 
 import com.esmods.keepersofthestonestwo.entity.CursedSquireEntity;
 import com.esmods.keepersofthestonestwo.client.model.animations.cursed_squireAnimation;
+import com.esmods.keepersofthestonestwo.client.model.Modelcursed_squire;
 
-public class CursedSquireRenderer extends HumanoidMobRenderer<CursedSquireEntity, HumanoidModel<CursedSquireEntity>> {
+public class CursedSquireRenderer extends MobRenderer<CursedSquireEntity, Modelcursed_squire<CursedSquireEntity>> {
 	public CursedSquireRenderer(EntityRendererProvider.Context context) {
-		super(context, new AnimatedModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
-		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
+		super(context, new AnimatedModel(context.bakeLayer(Modelcursed_squire.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
@@ -24,7 +21,7 @@ public class CursedSquireRenderer extends HumanoidMobRenderer<CursedSquireEntity
 		return new ResourceLocation("power:textures/entities/cursed_squire.png");
 	}
 
-	private static final class AnimatedModel extends HumanoidModel<CursedSquireEntity> {
+	private static final class AnimatedModel extends Modelcursed_squire<CursedSquireEntity> {
 		private final ModelPart root;
 		private final HierarchicalModel animator = new HierarchicalModel<CursedSquireEntity>() {
 			@Override
