@@ -35,16 +35,23 @@ public class PowerModModels {
 		event.registerLayerDefinition(Modelpoison_bomb.LAYER_LOCATION, Modelpoison_bomb::createBodyLayer);
 		event.registerLayerDefinition(Modelether_bullet.LAYER_LOCATION, Modelether_bullet::createBodyLayer);
 		event.registerLayerDefinition(Modelgrenade.LAYER_LOCATION, Modelgrenade::createBodyLayer);
+		event.registerLayerDefinition(Modelblack_hole.LAYER_LOCATION, Modelblack_hole::createBodyLayer);
 		event.registerLayerDefinition(ModelCrossed.LAYER_LOCATION, ModelCrossed::createBodyLayer);
 		event.registerLayerDefinition(Modelrain_drop.LAYER_LOCATION, Modelrain_drop::createBodyLayer);
 		event.registerLayerDefinition(Modelsmoke_bomb.LAYER_LOCATION, Modelsmoke_bomb::createBodyLayer);
+		event.registerLayerDefinition(Modelspirit.LAYER_LOCATION, Modelspirit::createBodyLayer);
 		event.registerLayerDefinition(Modellightball.LAYER_LOCATION, Modellightball::createBodyLayer);
 		event.registerLayerDefinition(Modelpoisonous_thorn.LAYER_LOCATION, Modelpoisonous_thorn::createBodyLayer);
 		event.registerLayerDefinition(Modelmini_tornado.LAYER_LOCATION, Modelmini_tornado::createBodyLayer);
+		event.registerLayerDefinition(Modelcursed_keeper.LAYER_LOCATION, Modelcursed_keeper::createBodyLayer);
 		event.registerLayerDefinition(Modelatomic_rocket.LAYER_LOCATION, Modelatomic_rocket::createBodyLayer);
+		event.registerLayerDefinition(Modelcursed_knight.LAYER_LOCATION, Modelcursed_knight::createBodyLayer);
+		event.registerLayerDefinition(Modelcursed_squire.LAYER_LOCATION, Modelcursed_squire::createBodyLayer);
 		event.registerLayerDefinition(Modelturret_projectile.LAYER_LOCATION, Modelturret_projectile::createBodyLayer);
 		event.registerLayerDefinition(Modelsolar_salvo.LAYER_LOCATION, Modelsolar_salvo::createBodyLayer);
 		event.registerLayerDefinition(Modeliceberg.LAYER_LOCATION, Modeliceberg::createBodyLayer);
+		event.registerLayerDefinition(Modelenergium_golem.LAYER_LOCATION, Modelenergium_golem::createBodyLayer);
 		event.registerLayerDefinition(Modelknife.LAYER_LOCATION, Modelknife::createBodyLayer);
+		event.registerLayerDefinition(Modelturret.LAYER_LOCATION, Modelturret::createBodyLayer);
 	}
 }
