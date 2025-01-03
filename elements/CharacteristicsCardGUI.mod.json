@@ -335,6 +335,9 @@
         "data": {
           "image": "rank_s_print.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "RankSCheck"
+          },
           "x": 54,
           "y": 32,
           "locked": true

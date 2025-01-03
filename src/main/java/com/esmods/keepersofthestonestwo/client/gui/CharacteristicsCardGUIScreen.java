@@ -15,6 +15,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.esmods.keepersofthestonestwo.world.inventory.CharacteristicsCardGUIMenu;
 import com.esmods.keepersofthestonestwo.procedures.SpeedInfoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ResistanceInfoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RankSCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RankDCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RankCCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RankBCheckProcedure;
@@ -116,9 +117,9 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 		if (RankACheckProcedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_a_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 		}
-
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_s_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
-
+		if (RankSCheckProcedure.execute(entity)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_s_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
+		}
 		RenderSystem.disableBlend();
 	}
 
