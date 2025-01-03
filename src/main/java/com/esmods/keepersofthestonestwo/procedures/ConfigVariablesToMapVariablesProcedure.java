@@ -19,14 +19,16 @@ import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 public class ConfigVariablesToMapVariablesProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-		execute(event, event.getEntity().level());
+		execute(event, event.getEntity().level(), event.getEntity());
 	}
 
-	public static void execute(LevelAccessor world) {
-		execute(null, world);
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
+		if (entity == null)
+			return;
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
 			if (PowerConfigConfiguration.MASTER_EFFECTS_CONTROL_BY_CONFIG.get()) {
 				{
@@ -38,6 +40,19 @@ public class ConfigVariablesToMapVariablesProcedure {
 					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.recharge_timer = (double) PowerConfigConfiguration.RECHARGE_TIMER.get();
 					_vars.syncPlayerVariables(entityiterator);
+				}
+				if ((double) PowerConfigConfiguration.MASTER_EFFECT_DURATION.get() == 0 || (double) PowerConfigConfiguration.RECHARGE_TIMER.get() == 0) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.is_set_configurable_zero = true;
+						_vars.syncPlayerVariables(entity);
+					}
+				}
+			} else {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.is_set_configurable_zero = false;
+					_vars.syncPlayerVariables(entity);
 				}
 			}
 		}

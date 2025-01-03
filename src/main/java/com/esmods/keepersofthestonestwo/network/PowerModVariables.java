@@ -29,6 +29,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.HolderLookup;
 
 import java.util.function.Supplier;
+import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -86,6 +87,16 @@ public class PowerModVariables {
 			clone.boots = original.boots;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
 			clone.hypnotized = original.hypnotized;
+			clone.is_set_configurable_zero = original.is_set_configurable_zero;
+			clone.level = original.level;
+			clone.level_exp = original.level_exp;
+			clone.base_damage_by_lvl = original.base_damage_by_lvl;
+			clone.max_level_exp = original.max_level_exp;
+			clone.resistance_char = original.resistance_char;
+			clone.speed_char = original.speed_char;
+			clone.haste_char = original.haste_char;
+			clone.jump_char = original.jump_char;
+			clone.rank = original.rank;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -112,6 +123,9 @@ public class PowerModVariables {
 				clone.transfered_power = original.transfered_power;
 				clone.master_effect_end = original.master_effect_end;
 				clone.master_effect_start = original.master_effect_start;
+				clone.is_not_stone = original.is_not_stone;
+				clone.attribute_is_ready = original.attribute_is_ready;
+				clone.level_up_status = original.level_up_status;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -234,7 +248,7 @@ public class PowerModVariables {
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
 		public boolean get_limit_of_stones = true;
-		public double cpapi_ver = 20.0;
+		public double cpapi_ver = 21.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -468,6 +482,19 @@ public class PowerModVariables {
 		public boolean hypnotized = false;
 		public boolean master_effect_end = false;
 		public boolean master_effect_start = false;
+		public boolean is_set_configurable_zero = false;
+		public double level = 1.0;
+		public double level_exp = 0.0;
+		public double base_damage_by_lvl = 6.0;
+		public double max_level_exp = 100.0;
+		public boolean is_not_stone = false;
+		public boolean attribute_is_ready = false;
+		public double resistance_char = 0.0;
+		public double speed_char = 1.0;
+		public double haste_char = -1.0;
+		public double jump_char = 1.0;
+		public boolean level_up_status = false;
+		public String rank = "D";
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -516,6 +543,19 @@ public class PowerModVariables {
 			nbt.putBoolean("hypnotized", hypnotized);
 			nbt.putBoolean("master_effect_end", master_effect_end);
 			nbt.putBoolean("master_effect_start", master_effect_start);
+			nbt.putBoolean("is_set_configurable_zero", is_set_configurable_zero);
+			nbt.putDouble("level", level);
+			nbt.putDouble("level_exp", level_exp);
+			nbt.putDouble("base_damage_by_lvl", base_damage_by_lvl);
+			nbt.putDouble("max_level_exp", max_level_exp);
+			nbt.putBoolean("is_not_stone", is_not_stone);
+			nbt.putBoolean("attribute_is_ready", attribute_is_ready);
+			nbt.putDouble("resistance_char", resistance_char);
+			nbt.putDouble("speed_char", speed_char);
+			nbt.putDouble("haste_char", haste_char);
+			nbt.putDouble("jump_char", jump_char);
+			nbt.putBoolean("level_up_status", level_up_status);
+			nbt.putString("rank", rank);
 			return nbt;
 		}
 
@@ -565,22 +605,42 @@ public class PowerModVariables {
 			hypnotized = nbt.getBoolean("hypnotized");
 			master_effect_end = nbt.getBoolean("master_effect_end");
 			master_effect_start = nbt.getBoolean("master_effect_start");
+			is_set_configurable_zero = nbt.getBoolean("is_set_configurable_zero");
+			level = nbt.getDouble("level");
+			level_exp = nbt.getDouble("level_exp");
+			base_damage_by_lvl = nbt.getDouble("base_damage_by_lvl");
+			max_level_exp = nbt.getDouble("max_level_exp");
+			is_not_stone = nbt.getBoolean("is_not_stone");
+			attribute_is_ready = nbt.getBoolean("attribute_is_ready");
+			resistance_char = nbt.getDouble("resistance_char");
+			speed_char = nbt.getDouble("speed_char");
+			haste_char = nbt.getDouble("haste_char");
+			jump_char = nbt.getDouble("jump_char");
+			level_up_status = nbt.getBoolean("level_up_status");
+			rank = nbt.getString("rank");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
-			if (entity instanceof ServerPlayer serverPlayer)
-				PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this));
+			if (!entity.level().isClientSide()) {
+				for (Entity entityiterator : new ArrayList<>(entity.level().players())) {
+					if (entityiterator instanceof ServerPlayer serverPlayer)
+						PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this, entity.getId()));
+				}
+			}
 		}
 	}
 
-	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
+	public record PlayerVariablesSyncMessage(PlayerVariables data, int target) implements CustomPacketPayload {
 		public static final Type<PlayerVariablesSyncMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "player_variables_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec
-				.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess())), (RegistryFriendlyByteBuf buffer) -> {
-					PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables());
-					message.data.deserializeNBT(buffer.registryAccess(), buffer.readNbt());
-					return message;
-				});
+		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> {
+			buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess()));
+			buffer.writeInt(message.target()); // Write the entity ID to the buffer
+		}, (RegistryFriendlyByteBuf buffer) -> {
+			var nbt = buffer.readNbt();
+			PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables(), buffer.readInt());
+			message.data.deserializeNBT(buffer.registryAccess(), nbt);
+			return message;
+		});
 
 		@Override
 		public Type<PlayerVariablesSyncMessage> type() {
@@ -589,10 +649,11 @@ public class PowerModVariables {
 
 		public static void handleData(final PlayerVariablesSyncMessage message, final IPayloadContext context) {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
-				context.enqueueWork(() -> context.player().getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess()))).exceptionally(e -> {
-					context.connection().disconnect(Component.literal(e.getMessage()));
-					return null;
-				});
+				context.enqueueWork(() -> context.player().level().getEntity(message.target()).getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess())))
+						.exceptionally(e -> {
+							context.connection().disconnect(Component.literal(e.getMessage()));
+							return null;
+						});
 			}
 		}
 	}

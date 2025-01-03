@@ -67,7 +67,7 @@ public class ExplosionSpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 13.5, 0, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 0, (byte) 0);
 						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 3);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -135,7 +135,7 @@ public class ExplosionSpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, 42, 10, (byte) 10);
+						}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 3.1), 10, (byte) 10);
 						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 7);
 						projectileLevel.addFreshEntity(_entityToSpawn);

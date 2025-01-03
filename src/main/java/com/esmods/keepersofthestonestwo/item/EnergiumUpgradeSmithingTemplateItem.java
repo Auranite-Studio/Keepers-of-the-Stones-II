@@ -21,11 +21,11 @@ public class EnergiumUpgradeSmithingTemplateItem extends Item {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.upgrade"));
-		list.add(Component.literal(""));
-		list.add(Component.translatable("item.power.smithing_template.applies_to"));
-		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.applies_to"));
-		list.add(Component.translatable("item.power.smithing_template.ingredients"));
-		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.ingredients"));
+		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.description_0"));
+		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.description_1"));
+		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.description_2"));
+		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.description_3"));
+		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.description_4"));
+		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.description_5"));
 	}
 }

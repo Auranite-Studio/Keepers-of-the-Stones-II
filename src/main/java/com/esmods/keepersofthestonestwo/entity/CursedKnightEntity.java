@@ -1,15 +1,6 @@
 
 package com.esmods.keepersofthestonestwo.entity;
 
-import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.animation.RawAnimation;
-import software.bernie.geckolib.animation.PlayState;
-import software.bernie.geckolib.animation.AnimationState;
-import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.AnimatableManager;
-import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animatable.GeoEntity;
-
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -26,11 +17,10 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacementTypes;
-import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
@@ -43,18 +33,19 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
+import com.esmods.keepersofthestonestwo.procedures.WalkingAnimationSyncProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpintingAnimationSyncProcedure;
+import com.esmods.keepersofthestonestwo.procedures.IdleAnimationSyncProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CursedKnightPriObnovlieniiTikaSushchnostiProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKnightAttackSyncProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-public class CursedKnightEntity extends Monster implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.STRING);
-	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-	private boolean swinging;
-	private boolean lastloop;
-	private long lastSwing;
-	public String animationprocedure = "empty";
+public class CursedKnightEntity extends Monster {
+	public static final EntityDataAccessor<Integer> DATA_attack_anim_sync = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.INT);
+	public final AnimationState animationState0 = new AnimationState();
+	public final AnimationState animationState1 = new AnimationState();
+	public final AnimationState animationState2 = new AnimationState();
+	public final AnimationState animationState3 = new AnimationState();
 
 	public CursedKnightEntity(EntityType<CursedKnightEntity> type, Level world) {
 		super(type, world);
@@ -66,17 +57,7 @@ public class CursedKnightEntity extends Monster implements GeoEntity {
 	@Override
 	protected void defineSynchedData(SynchedEntityData.Builder builder) {
 		super.defineSynchedData(builder);
-		builder.define(SHOOT, false);
-		builder.define(ANIMATION, "undefined");
-		builder.define(TEXTURE, "cursed_knight");
-	}
-
-	public void setTexture(String texture) {
-		this.entityData.set(TEXTURE, texture);
-	}
-
-	public String getTexture() {
-		return this.entityData.get(TEXTURE);
+		builder.define(DATA_attack_anim_sync, 0);
 	}
 
 	@Override
@@ -115,16 +96,14 @@ public class CursedKnightEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.is(DamageTypes.IN_FIRE))
+	public boolean hurt(DamageSource damagesource, float amount) {
+		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
-		if (source.getDirectEntity() instanceof AbstractArrow)
+		if (damagesource.getDirectEntity() instanceof AbstractArrow)
 			return false;
-		if (source.is(DamageTypes.FALL))
+		if (damagesource.is(DamageTypes.FALL))
 			return false;
-		if (source.is(DamageTypes.DRAGON_BREATH))
-			return false;
-		return super.hurt(source, amount);
+		return super.hurt(damagesource, amount);
 	}
 
 	@Override
@@ -135,26 +114,31 @@ public class CursedKnightEntity extends Monster implements GeoEntity {
 	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
-		compound.putString("Texture", this.getTexture());
+		compound.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
 	}
 
 	@Override
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
-		if (compound.contains("Texture"))
-			this.setTexture(compound.getString("Texture"));
+		if (compound.contains("Dataattack_anim_sync"))
+			this.entityData.set(DATA_attack_anim_sync, compound.getInt("Dataattack_anim_sync"));
+	}
+
+	@Override
+	public void tick() {
+		super.tick();
+		if (this.level().isClientSide()) {
+			this.animationState0.animateWhen(WalkingAnimationSyncProcedure.execute(this), this.tickCount);
+			this.animationState1.animateWhen(IdleAnimationSyncProcedure.execute(this), this.tickCount);
+			this.animationState2.animateWhen(SpintingAnimationSyncProcedure.execute(this), this.tickCount);
+			this.animationState3.animateWhen(CursedKnightAttackSyncProcedure.execute(this), this.tickCount);
+		}
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
 		CursedKnightPriObnovlieniiTikaSushchnostiProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
-		this.refreshDimensions();
-	}
-
-	@Override
-	public EntityDimensions getDefaultDimensions(Pose pose) {
-		return super.getDefaultDimensions(pose).scale(1f);
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
@@ -173,67 +157,5 @@ public class CursedKnightEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
 		return builder;
-	}
-
-	private PlayState movementPredicate(AnimationState event) {
-		if (this.animationprocedure.equals("empty")) {
-			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
-
-					&& !this.isSprinting()) {
-				return event.setAndContinue(RawAnimation.begin().thenLoop("cursed_knight.animation.walk"));
-			}
-			if (this.isSprinting()) {
-				return event.setAndContinue(RawAnimation.begin().thenLoop("cursed_knight.animation.sprint"));
-			}
-			return event.setAndContinue(RawAnimation.begin().thenLoop("cursed_knight.animation.idle"));
-		}
-		return PlayState.STOP;
-	}
-
-	String prevAnim = "empty";
-
-	private PlayState procedurePredicate(AnimationState event) {
-		if (!animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED || (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty"))) {
-			if (!this.animationprocedure.equals(prevAnim))
-				event.getController().forceAnimationReset();
-			event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
-			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-				this.animationprocedure = "empty";
-				event.getController().forceAnimationReset();
-			}
-		} else if (animationprocedure.equals("empty")) {
-			prevAnim = "empty";
-			return PlayState.STOP;
-		}
-		prevAnim = this.animationprocedure;
-		return PlayState.CONTINUE;
-	}
-
-	@Override
-	protected void tickDeath() {
-		++this.deathTime;
-		if (this.deathTime == 20) {
-			this.remove(CursedKnightEntity.RemovalReason.KILLED);
-			this.dropExperience(this);
-		}
-	}
-
-	public String getSyncedAnimation() {
-		return this.entityData.get(ANIMATION);
-	}
-
-	public void setAnimation(String animation) {
-		this.entityData.set(ANIMATION, animation);
-	}
-
-	@Override
-	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-		data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-		data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
-	}
-
-	@Override
-	public AnimatableInstanceCache getAnimatableInstanceCache() {
-		return this.cache;
 	}
 }

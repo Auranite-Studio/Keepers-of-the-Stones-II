@@ -33,9 +33,8 @@ public class CursedSquireBiteProcedure {
 		double ZPar = 0;
 		Range = 0.25;
 		if (entity.getPersistentData().getDouble("IA") == 0) {
-			if (entity instanceof CursedSquireEntity) {
-				((CursedSquireEntity) entity).setAnimation("cursed_squire.animation.attack");
-			}
+			if (entity instanceof CursedSquireEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedSquireEntity.DATA_attack_anim_sync, 1);
 			entity.getPersistentData().putDouble("Look", (entity.getYRot()));
 		}
 		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
@@ -110,6 +109,8 @@ public class CursedSquireBiteProcedure {
 		if (entity.getPersistentData().getDouble("IA") == 12) {
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putString("State", "Idle");
+			if (entity instanceof CursedSquireEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedSquireEntity.DATA_attack_anim_sync, 0);
 		}
 	}
 }

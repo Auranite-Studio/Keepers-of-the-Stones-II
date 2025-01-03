@@ -1,4 +1,4 @@
-What's new in Colorful Powers API v20?<br />
-<br />- Added variables `master_effect_start" and `master_effect_end` to control the start and end of the effects of the wizard
-<br />- Added arguments for the pw command - reset, master_effect_duration and recharge_time
-<br />- Added ``cursed_biomes`` tag
+What's new in Colorful Powers API v21?<br />
+<br />- Added variables ``level``, ``level_exp`` and ``max_level_exp`` for control levels
+<br />- Added variable ``base_damage_by_lvl`` for dynamic change magical abilities damage
+<br />- Added a new field to the config file - ``enable_levels``

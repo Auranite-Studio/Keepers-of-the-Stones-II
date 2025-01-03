@@ -60,7 +60,8 @@ public class MoonSpecialAttackProcedure {
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), 9);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
+										(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 3));
 								if (!(world instanceof Level _lvl11 && _lvl11.isDay())) {
@@ -119,7 +120,8 @@ public class MoonSpecialAttackProcedure {
 								if (world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
 									world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), PowerModBlocks.MOON_BLOCK.get().defaultBlockState(), 3);
 									world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(PowerModBlocks.MOON_BLOCK.get().defaultBlockState()));
-									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 31.5);
+									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
+											(float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2.3));
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
 											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1);

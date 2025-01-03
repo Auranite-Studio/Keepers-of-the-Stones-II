@@ -61,6 +61,7 @@ import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart4Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart3Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart2Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart1Screen;
+import com.esmods.keepersofthestonestwo.client.gui.CharacteristicsCardGUIScreen;
 import com.esmods.keepersofthestonestwo.client.gui.BatteryChargerGUIScreen;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -120,5 +121,6 @@ public class PowerModScreens {
 		event.register(PowerModMenus.BATTERY_CHARGER_GUI.get(), BatteryChargerGUIScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILTIES_GOLDEN_DUST.get(), WheelAbiltiesGoldenDustScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITY_DARKNESS.get(), WheelAbilityDarknessScreen::new);
+		event.register(PowerModMenus.CHARACTERISTICS_CARD_GUI.get(), CharacteristicsCardGUIScreen::new);
 	}
 }

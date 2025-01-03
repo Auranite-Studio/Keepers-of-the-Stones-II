@@ -65,7 +65,7 @@ public class CrystalSpecialAttackProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 13.5, 2, (byte) 0);
+						}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 2, (byte) 0);
 						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -108,7 +108,8 @@ public class CrystalSpecialAttackProcedure {
 								if (world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
 									world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Blocks.AMETHYST_CLUSTER.defaultBlockState(), 3);
 									world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.AMETHYST_CLUSTER.defaultBlockState()));
-									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 31.5);
+									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
+											(float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2.3));
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
 											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1);
@@ -165,7 +166,7 @@ public class CrystalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
+					}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.67), 0, (byte) 3);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot((-1), 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -195,7 +196,7 @@ public class CrystalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
+					}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.67), 0, (byte) 3);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(1, 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -225,7 +226,7 @@ public class CrystalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
+					}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.67), 0, (byte) 3);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot((-1), 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -255,7 +256,7 @@ public class CrystalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
+					}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.67), 0, (byte) 3);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(1, 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -285,7 +286,7 @@ public class CrystalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
+					}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.67), 0, (byte) 3);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(0, 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -315,7 +316,7 @@ public class CrystalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
+					}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.67), 0, (byte) 3);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(0, 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -345,7 +346,7 @@ public class CrystalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
+					}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.67), 0, (byte) 3);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot((-1), 0, 0, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -375,7 +376,7 @@ public class CrystalSpecialAttackProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
+					}.getArrow(projectileLevel, entity, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.67), 0, (byte) 3);
 					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
 					_entityToSpawn.shoot(1, 0, 0, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);

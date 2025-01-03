@@ -64,7 +64,8 @@ public class BlueFlameSpecialAttackProcedure {
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
 								if (entity.isInWater()) {
-									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 20.25);
+									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
+											(float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.5));
 								} else {
 									entityiterator.igniteForSeconds(14);
 									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), 0);
@@ -147,7 +148,7 @@ public class BlueFlameSpecialAttackProcedure {
 									entityToSpawn.igniteForSeconds(100);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
+							}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 1, (byte) 0);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -190,7 +191,7 @@ public class BlueFlameSpecialAttackProcedure {
 										entityToSpawn.igniteForSeconds(100);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
+								}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 1, (byte) 0);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -233,7 +234,7 @@ public class BlueFlameSpecialAttackProcedure {
 											entityToSpawn.igniteForSeconds(100);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
+									}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 1, (byte) 0);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -276,7 +277,7 @@ public class BlueFlameSpecialAttackProcedure {
 												entityToSpawn.igniteForSeconds(100);
 												return entityToSpawn;
 											}
-										}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
+										}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 1, (byte) 0);
 										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 										projectileLevel.addFreshEntity(_entityToSpawn);
@@ -319,7 +320,7 @@ public class BlueFlameSpecialAttackProcedure {
 													entityToSpawn.igniteForSeconds(100);
 													return entityToSpawn;
 												}
-											}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
+											}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 1, (byte) 0);
 											_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 											_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 											projectileLevel.addFreshEntity(_entityToSpawn);
@@ -362,7 +363,7 @@ public class BlueFlameSpecialAttackProcedure {
 														entityToSpawn.igniteForSeconds(100);
 														return entityToSpawn;
 													}
-												}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
+												}.getArrow(projectileLevel, entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 1, (byte) 0);
 												_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 												_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 												projectileLevel.addFreshEntity(_entityToSpawn);

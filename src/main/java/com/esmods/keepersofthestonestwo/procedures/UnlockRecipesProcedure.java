@@ -125,6 +125,8 @@ public class UnlockRecipesProcedure {
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:copyrium_ore_block_recipe")));
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:elemental_power_generator_craft")));
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:characteristics_card_craft")));
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.COPYRIUM_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
