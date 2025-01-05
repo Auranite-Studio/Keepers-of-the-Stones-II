@@ -2,10 +2,12 @@
 package com.esmods.keepersofthestonestwo.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import net.neoforged.neoforge.common.NeoForgeMod;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
@@ -20,6 +22,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
@@ -131,6 +134,8 @@ public class CursedKeeperEntity extends Monster {
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
 			return false;
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
+			return false;
 		if (damagesource.is(DamageTypes.FALL))
 			return false;
 		if (damagesource.is(DamageTypes.CACTUS))
@@ -144,6 +149,8 @@ public class CursedKeeperEntity extends Monster {
 		if (damagesource.is(DamageTypes.FALLING_ANVIL))
 			return false;
 		if (damagesource.is(DamageTypes.DRAGON_BREATH))
+			return false;
+		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
 			return false;
 		return super.hurt(damagesource, amount);
 	}

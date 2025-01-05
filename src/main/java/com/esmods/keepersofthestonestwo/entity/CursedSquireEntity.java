@@ -107,6 +107,8 @@ public class CursedSquireEntity extends Monster {
 			return false;
 		if (damagesource.is(DamageTypes.DRAGON_BREATH))
 			return false;
+		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
+			return false;
 		return super.hurt(damagesource, amount);
 	}
 
