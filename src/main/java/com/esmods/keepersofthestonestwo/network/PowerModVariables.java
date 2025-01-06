@@ -126,6 +126,8 @@ public class PowerModVariables {
 				clone.is_not_stone = original.is_not_stone;
 				clone.attribute_is_ready = original.attribute_is_ready;
 				clone.level_up_status = original.level_up_status;
+				clone.cursed_fog = original.cursed_fog;
+				clone.fog_distance = original.fog_distance;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -495,6 +497,8 @@ public class PowerModVariables {
 		public double jump_char = 1.0;
 		public boolean level_up_status = false;
 		public String rank = "D";
+		public boolean cursed_fog = false;
+		public double fog_distance = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -556,6 +560,8 @@ public class PowerModVariables {
 			nbt.putDouble("jump_char", jump_char);
 			nbt.putBoolean("level_up_status", level_up_status);
 			nbt.putString("rank", rank);
+			nbt.putBoolean("cursed_fog", cursed_fog);
+			nbt.putDouble("fog_distance", fog_distance);
 			return nbt;
 		}
 
@@ -618,6 +624,8 @@ public class PowerModVariables {
 			jump_char = nbt.getDouble("jump_char");
 			level_up_status = nbt.getBoolean("level_up_status");
 			rank = nbt.getString("rank");
+			cursed_fog = nbt.getBoolean("cursed_fog");
+			fog_distance = nbt.getDouble("fog_distance");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
