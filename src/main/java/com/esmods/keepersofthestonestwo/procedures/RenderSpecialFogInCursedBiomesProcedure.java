@@ -81,8 +81,8 @@ public class RenderSpecialFogInCursedBiomesProcedure {
 						_vars.fog_distance = entity.getData(PowerModVariables.PLAYER_VARIABLES).fog_distance + 0.2;
 						_vars.syncPlayerVariables(entity);
 					}
+					setDistance((float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).fog_distance * 1.6), (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).fog_distance * 6.4));
 				}
-				setDistance((float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).fog_distance * 1.6), (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).fog_distance * 6.4));
 			}
 		}
 	}
