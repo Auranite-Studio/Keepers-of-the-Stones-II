@@ -88,6 +88,7 @@ public class PowerModVariables {
 			clone.unlock_keepers_box = original.unlock_keepers_box;
 			clone.hypnotized = original.hypnotized;
 			clone.is_set_configurable_zero = original.is_set_configurable_zero;
+			clone.base_damage_by_lvl = original.base_damage_by_lvl;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -471,6 +472,7 @@ public class PowerModVariables {
 		public boolean master_effect_end = false;
 		public boolean master_effect_start = false;
 		public boolean is_set_configurable_zero = false;
+		public double base_damage_by_lvl = 13.5;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -520,6 +522,7 @@ public class PowerModVariables {
 			nbt.putBoolean("master_effect_end", master_effect_end);
 			nbt.putBoolean("master_effect_start", master_effect_start);
 			nbt.putBoolean("is_set_configurable_zero", is_set_configurable_zero);
+			nbt.putDouble("base_damage_by_lvl", base_damage_by_lvl);
 			return nbt;
 		}
 
@@ -570,6 +573,7 @@ public class PowerModVariables {
 			master_effect_end = nbt.getBoolean("master_effect_end");
 			master_effect_start = nbt.getBoolean("master_effect_start");
 			is_set_configurable_zero = nbt.getBoolean("is_set_configurable_zero");
+			base_damage_by_lvl = nbt.getDouble("base_damage_by_lvl");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
