@@ -16,9 +16,6 @@
             "value": -1,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "GetActive"
-          },
           "anchorPoint": "TOP_LEFT",
           "x": 31,
           "y": 35,
@@ -30,9 +27,6 @@
         "data": {
           "image": "star_points_overlay.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "GetActive"
-          },
           "anchorPoint": "TOP_LEFT",
           "x": 2,
           "y": 28,
@@ -42,6 +36,9 @@
     ],
     "baseTexture": "",
     "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "GetActive"
+    },
     "gridSettings": {
       "sx": 16,
       "sy": 16,
