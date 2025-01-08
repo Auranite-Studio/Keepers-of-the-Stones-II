@@ -335,5 +335,13 @@
         "stream": false
       }
     ]
+  },
+  "power.level_up": {
+    "sounds": [
+      {
+        "name": "power:level_up",
+        "stream": false
+      }
+    ]
   }
 }
