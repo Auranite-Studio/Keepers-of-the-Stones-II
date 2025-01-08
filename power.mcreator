@@ -469,7 +469,7 @@
           }
         ]
       },
-      "path": "~/Modules/PowerScaleModule "
+      "path": "~/Modules/BasicModule"
     },
     {
       "name": "AirArmor",
@@ -12934,21 +12934,6 @@
       "path": "~/Elements/Space"
     },
     {
-      "name": "BlackHole",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "black_hole",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/BlackHoleModel.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/BlackHoleEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/BlackHoleRenderer.java"
-        ]
-      },
-      "path": "~/Elements/Space"
-    },
-    {
       "name": "BlackHolePriNachalnomPrizyvieSushchnosti",
       "type": "procedure",
       "compiles": true,
@@ -16527,22 +16512,6 @@
       "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
-      "name": "EnergiumGolem",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_golem",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/energium_golem_spawn_egg.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/EnergiumGolemEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/EnergiumGolemModel.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/EnergiumGolemRenderer.java"
-        ]
-      },
-      "path": "~/Mobs/EnergiumGolem"
-    },
-    {
       "name": "EnergiumGolemAttackDetection",
       "type": "procedure",
       "compiles": true,
@@ -18763,21 +18732,6 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/TechnologyBattery"
-    },
-    {
-      "name": "Turret",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turret",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/TurretEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/TurretModel.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/TurretRenderer.java"
-        ]
-      },
-      "path": "~/Elements/Technology"
     },
     {
       "name": "ActiveModeBarrier",
@@ -27343,22 +27297,6 @@
       "path": "~/Elements/Mercury"
     },
     {
-      "name": "CursedKeeper",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_keeper",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKeeperRenderer.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKeeperEntity.java",
-          "src/main/resources/assets/power/models/item/cursed_keeper_spawn_egg.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/CursedKeeperModel.java"
-        ]
-      },
-      "path": "~/Mobs/CursedKeeper"
-    },
-    {
       "name": "DeepslateDepletedEnergiumOre",
       "type": "block",
       "compiles": true,
@@ -30994,23 +30932,6 @@
       "path": "~/Elements/Explosion"
     },
     {
-      "name": "CursedKnight",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_knight",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKnightEntity.java",
-          "src/main/resources/data/power/neoforge/biome_modifier/cursed_knight_biome_modifier.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKnightRenderer.java",
-          "src/main/resources/assets/power/models/item/cursed_knight_spawn_egg.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/CursedKnightModel.java"
-        ]
-      },
-      "path": "~/Mobs/CursedKnight"
-    },
-    {
       "name": "CursedKnightAttackDetection",
       "type": "procedure",
       "compiles": true,
@@ -31517,23 +31438,6 @@
       "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
-      "name": "CursedSquire",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_squire",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/cursed_squire_spawn_egg.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedSquireRenderer.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/CursedSquireModel.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedSquireEntity.java",
-          "src/main/resources/data/power/neoforge/biome_modifier/cursed_squire_biome_modifier.json"
-        ]
-      },
-      "path": "~/Mobs/CursedSquire"
-    },
-    {
       "name": "CursedSquireCancelAttack",
       "type": "procedure",
       "compiles": true,
@@ -31966,21 +31870,6 @@
         ]
       },
       "path": "~/ItemsAndBlocks/BatteryCharger"
-    },
-    {
-      "name": "Spirit",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spirit",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/SpiritEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/SpiritModel.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/SpiritRenderer.java"
-        ]
-      },
-      "path": "~/Elements/Spirit"
     },
     {
       "name": "SpiritPriNachalnomPrizyvieSushchnosti",
@@ -34202,6 +34091,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -36456,6 +36349,64 @@
       "path": "~/Modules/LevelSystemModule"
     },
     {
+      "name": "CursedKnight",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_knight",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKnightEntity.java",
+          "src/main/resources/data/power/neoforge/biome_modifier/cursed_knight_biome_modifier.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKnightRenderer.java",
+          "src/main/resources/assets/power/models/item/cursed_knight_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs/CursedKnight"
+    },
+    {
+      "name": "BlackHole",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_hole",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/BlackHoleEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/BlackHoleRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Space"
+    },
+    {
+      "name": "Spirit",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/SpiritEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/SpiritRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "Turret",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turret",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/TurretEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/TurretRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
       "name": "RankDCheck",
       "type": "procedure",
       "compiles": true,
@@ -36505,6 +36456,492 @@
         "return_type": "logic",
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/RankBCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard"
+    },
+    {
+      "name": "SpintingAnimationSync",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spinting_animation_sync",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpintingAnimationSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/JavaAnimationsSyncModule"
+    },
+    {
+      "name": "IdleAnimationSync",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "idle_animation_sync",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/IdleAnimationSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/JavaAnimationsSyncModule"
+    },
+    {
+      "name": "WalkingAnimationSync",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "walking_animation_sync",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WalkingAnimationSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/JavaAnimationsSyncModule"
+    },
+    {
+      "name": "CursedKnightAttackSync",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_knight_attack_sync",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKnightAttackSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKnight"
+    },
+    {
+      "name": "EnergiumGolem",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/energium_golem_spawn_egg.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/EnergiumGolemEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/EnergiumGolemRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/EnergiumGolem"
+    },
+    {
+      "name": "DeathAnimationSync",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death_animation_sync",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DeathAnimationSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/JavaAnimationsSyncModule"
+    },
+    {
+      "name": "EnergiumGolemShootAnimSync",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem_shoot_anim_sync",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemShootAnimSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/EnergiumGolem"
+    },
+    {
+      "name": "EnergiumGolemAttackAnimSync",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem_attack_anim_sync",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemAttackAnimSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/EnergiumGolem"
+    },
+    {
+      "name": "CursedSquire",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_squire",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/cursed_squire_spawn_egg.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedSquireRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedSquireEntity.java",
+          "src/main/resources/data/power/neoforge/biome_modifier/cursed_squire_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs/CursedSquire"
+    },
+    {
+      "name": "CursedSquireAttackSync",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_squire_attack_sync",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedSquireAttackSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedSquire"
+    },
+    {
+      "name": "CursedKeeper",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKeeperRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKeeperEntity.java",
+          "src/main/resources/assets/power/models/item/cursed_keeper_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperIdle0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_idle_0",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperIdle0Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperIdle1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_idle_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperIdle1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperIdle2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_idle_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperIdle2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperAttack1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_attack_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperAttack1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperAttack2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_attack_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperAttack2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperAttack3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_attack_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperAttack3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperAttack4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_attack_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperAttack4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperAttack5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_attack_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperAttack5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperAggro",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_aggro",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperAggroProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperFall",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_fall",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperFallProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperSprinting",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_sprinting",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperSprintingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperWalk",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_walk",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperWalkProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/CursedKeeper"
+    },
+    {
+      "name": "RankACheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rank_a_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RankACheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CharacteristicsCard"
+    },
+    {
+      "name": "RankSCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rank_s_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RankSCheckProcedure.java"
         ],
         "dependencies": [
           {
@@ -37212,6 +37649,30 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "D"
+    },
+    {
+      "name": "cursed_fog",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "fog_distance",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "golden_dust_extended_powers",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "allow_custom_element_powers_for_stones",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -37438,10 +37899,6 @@
     "BIOMES:minecraft:is_overworld": [
       "CUSTOM:CursedForest"
     ],
-    "ENCHANTMENTS:minecraft:non_treasure": [
-      "~CUSTOM:Isolation",
-      "~CUSTOM:Revenge"
-    ],
     "ENTITIES:mod:xp/3": [
       "EntityGuardian",
       "EntityGhast",
@@ -37457,6 +37914,10 @@
       "EntityPhantom",
       "EntityBreeze",
       "EntityBlaze"
+    ],
+    "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:Isolation",
+      "~CUSTOM:Revenge"
     ],
     "ENTITIES:mod:xp/2": [
       "EntityCreeper",
@@ -37476,10 +37937,6 @@
       "CUSTOM:CreationHoe",
       "CUSTOM:CreationShovel"
     ],
-    "ITEMS:minecraft:music_discs": [
-      "~CUSTOM:MusicDiscAncientMood",
-      "~CUSTOM:MusicDiscCallOfThePast"
-    ],
     "ENTITIES:mod:xp/1": [
       "EntityZombie",
       "EntityZombieVillager",
@@ -37492,7 +37949,12 @@
       "EntitySpider",
       "EntitySkeleton",
       "EntityBogged",
-      "EntityStray"
+      "EntityStray",
+      "EntitySilverfish"
+    ],
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:MusicDiscAncientMood",
+      "~CUSTOM:MusicDiscCallOfThePast"
     ],
     "ENTITIES:mod:cursed_mobs": [
       "CUSTOM:CursedKeeper",
@@ -37702,7 +38164,6 @@
       "CUSTOM:EnergiumArmor.boots"
     ],
     "ENTITIES:minecraft:undead": [
-      "~CUSTOM:Spirit",
       "~CUSTOM:Shadow"
     ],
     "ITEMS:minecraft:chest_armor": [
@@ -38222,13 +38683,115 @@
       "CUSTOM:CursedKeeper",
       "CUSTOM:EnergiumGolem",
       "EntityWither",
-      "EntityDragon"
+      "EntityDragon",
+      "EntityWarden"
     ],
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:PurpleMushroom"
     ]
   },
   "tab_element_order": {
+    "CUSTOM:Stones": [
+      "FireStone",
+      "AirStone",
+      "EarthStone",
+      "WaterStone",
+      "EtherStone",
+      "IceStone",
+      "LightningStone",
+      "SoundStone",
+      "CrystalStone",
+      "LavaStone",
+      "RainStone",
+      "TornadoStone",
+      "OceanStone",
+      "PlantsStone",
+      "AnimalsStone",
+      "MetalStone",
+      "LightStone",
+      "ShadowStone",
+      "VacuumStone",
+      "EnergyStone",
+      "SunStone",
+      "MoonStone",
+      "SpaceStone",
+      "TimeStone",
+      "CreationStone",
+      "DestructionStone",
+      "BloodStone",
+      "TechnologyStone",
+      "TeleportationStone",
+      "ExplosionStone",
+      "AmberStone",
+      "MistStone",
+      "SandStone",
+      "SpeedStone",
+      "PoisonStone",
+      "MagnetStone",
+      "MushroomsStone",
+      "MercuryStone",
+      "MusicStone",
+      "PlagueStone",
+      "BlueFlameStone",
+      "GravityStone",
+      "SmokeStone",
+      "SpiritStone",
+      "FormStone",
+      "MindStone",
+      "GoldenDustStone",
+      "DarknessStone"
+    ],
+    "CUSTOM:Batteries": [
+      "EmptyBattery",
+      "FireBattery",
+      "AirBattery",
+      "EarthBattery",
+      "WaterBattery",
+      "EtherBattery",
+      "IceBattery",
+      "LightningBattery",
+      "SoundBattery",
+      "CrystalBattery",
+      "LavaBattery",
+      "RainBattery",
+      "TornadoBattery",
+      "OceanBattery",
+      "PlantsBattery",
+      "AnimalsBattery",
+      "MetalBattery",
+      "LightBattery",
+      "ShadowBattery",
+      "VacuumBattery",
+      "EnergyBattery",
+      "SunBattery",
+      "MoonBattery",
+      "SpaceBattery",
+      "TimeBattery",
+      "CreationBattery",
+      "DestructionBattery",
+      "BloodBattery",
+      "TechnologyBattery",
+      "TeleportationBattery",
+      "ExplosionBattery",
+      "AmberBattery",
+      "MistBattery",
+      "SandBattery",
+      "SpeedBattery",
+      "PoisonBattery",
+      "MagnetBattery",
+      "MushroomsBattery",
+      "MercuryBattery",
+      "MusicBattery",
+      "PlagueBattery",
+      "BlueFlameBattery",
+      "GravityBattery",
+      "SmokeBattery",
+      "SpiritBattery",
+      "FormBattery",
+      "MindBattery",
+      "GoldenDustBattery",
+      "DarknessBattery"
+    ],
     "CUSTOM:Items": [
       "LuckCoin",
       "AmplifierOre",
@@ -38301,66 +38864,21 @@
       "EmptyCharacteristicsCard",
       "CharacteristicsCard"
     ],
-    "CUSTOM:Stones": [
-      "FireStone",
-      "AirStone",
-      "EarthStone",
-      "WaterStone",
-      "EtherStone",
-      "IceStone",
-      "LightningStone",
-      "SoundStone",
-      "CrystalStone",
-      "LavaStone",
-      "RainStone",
-      "TornadoStone",
-      "OceanStone",
-      "PlantsStone",
-      "AnimalsStone",
-      "MetalStone",
-      "LightStone",
-      "ShadowStone",
-      "VacuumStone",
-      "EnergyStone",
-      "SunStone",
-      "MoonStone",
-      "SpaceStone",
-      "TimeStone",
-      "CreationStone",
-      "DestructionStone",
-      "BloodStone",
-      "TechnologyStone",
-      "TeleportationStone",
-      "ExplosionStone",
-      "AmberStone",
-      "MistStone",
-      "SandStone",
-      "SpeedStone",
-      "PoisonStone",
-      "MagnetStone",
-      "MushroomsStone",
-      "MercuryStone",
-      "MusicStone",
-      "PlagueStone",
-      "BlueFlameStone",
-      "GravityStone",
-      "SmokeStone",
-      "SpiritStone",
-      "FormStone",
-      "MindStone",
-      "GoldenDustStone",
-      "DarknessStone"
+    "CUSTOM:Mobs": [
+      "EnergiumGolem",
+      "CursedKnight",
+      "CursedSquire",
+      "CursedKeeper"
     ]
   },
   "language_map": {
     "ru_ru": {
       "item.power.ether_battery": "Батарея",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
-      "item.power.ether_stone": "Камень эфира",
       "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Передача тёмной силы, расходует 80",
+      "item.power.ether_stone": "Камень эфира",
       "item.power.moon_battery": "Батарея",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
-      "item.power.spirit_spawn_egg": "Spirit Spawn Egg",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "item.power.energium_shovel": "Энергиумная лопата",
       "effect.power.gigantization": "Гигантизация",
@@ -38368,14 +38886,14 @@
       "battery.desc.ice": "Лёд",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.speed_armor_helmet": "Шлем мастера скорости",
-      "gui.power.keepers_box_gui_part_3.tooltip_form": "Форма",
       "item.power.blue_flame_armor_boots": "Ботинки мастера синего пламени",
+      "gui.power.keepers_box_gui_part_3.tooltip_form": "Форма",
       "item.power.mushrooms_armor_leggings": "Поножи мастера грибов",
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Поток астральной энергии, расходует 10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 20",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
-      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "advancements.grant_your_power.title": "Даруй свою силу",
+      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.cursed_keeper_spawn_egg": "Яйцо призыва проклятого хранителя",
       "item.power.plants_stone": "Камень зелени",
@@ -38392,11 +38910,11 @@
       "item.power.time_armor_leggings": "Поножи мастера времени",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55": "Ртутное состояние, расходует 55",
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
-      "block.power.amplifier_block": "Блок амплифера",
       "item.power.gravity_mace": "Гравитационная булава",
+      "block.power.amplifier_block": "Блок амплифера",
       "battery.desc.plants": "Зелень",
-      "item.power.music_armor_leggings": "Поножи мастера музыки",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
+      "item.power.music_armor_leggings": "Поножи мастера музыки",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Туманная невидимость, расходует 70",
       "item.power.music_battery": "Батарея",
       "item.power.darkness_battery": "Батарея",
@@ -38414,8 +38932,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
       "item.power.animals_stone": "Камень животных",
       "item.power.light_battery": "Батарея",
-      "item.power.oceanic_trident": "Океанический трезубец",
       "item.minecraft.lingering_potion.effect.power_lock_potion": "Туманное зелье блокировки силы",
+      "item.power.oceanic_trident": "Океанический трезубец",
       "effect.power.tornado_master": "Мастер торнадо",
       "effect.power.warp": "Искажение",
       "item.keeper_book.name": "Книга хранителя",
@@ -38423,7 +38941,6 @@
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "item.power.amplifier_ring": "Амплиферовое кольцо",
       "subtitles.cursed_knight.attack": "",
-      "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.spirit_battery": "Батарея",
       "item.power.energium_axe": "Энергиумный топор",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "Дымовая шашка, расходует 35",
@@ -38448,9 +38965,9 @@
       "item.power.music_guitar": "Музыкальная гитара",
       "advancements.the_end_of_tyranny.descr": "Победите энергиумного голема",
       "item.power.ocean_battery": "Батарея",
-      "effect.power.star_regeneration": "Звёздная регенерация",
-      "item.power.mist_battery": "Батарея",
       "item.power.smoke_armor_chestplate": "Нагрудник мастера дыма",
+      "item.power.mist_battery": "Батарея",
+      "effect.power.star_regeneration": "Звёздная регенерация",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "item.power.cursed_knight_spawn_egg": "Яйцо призыва проклятого рыцаря",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
@@ -38495,8 +39012,8 @@
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "item.power.empty_characteristics_card.description_0": "§7Пустая",
       "item.power.smoke_stone": "Камень дыма",
-      "effect.power.air_master": "Мастер воздуха",
       "item.power.blue_flame_sword": "Меч синего пламени",
+      "effect.power.air_master": "Мастер воздуха",
       "effect.power.miniaturization": "Миниатюризация",
       "item.power.raw_depleted_energium": "Рудный обеднённый энергиум",
       "item.minecraft.potion.effect.power_lock_potion": "Зелье блокировки силы",
@@ -38521,7 +39038,7 @@
       "block.power.purple_mushroom": "Фиолетовый гриб",
       "item.power.mushrooms_armor_helmet": "Шлем мастера грибов",
       "item.power.light_armor_helmet": "Шлем мастера света",
-      "advancements.become_like_an_adventurer.title": "Стать искателем приключений",
+      "advancements.become_like_an_adventurer.title": "Стань искателем приключений",
       "gui.power.keepers_box_gui_part_4.tooltip_plants": "Зелень",
       "item.power.magnet_claws": "Магнитные когти",
       "entity.power.cursed_keeper": "Проклятый хранитель",
@@ -38537,8 +39054,8 @@
       "item.power.horror_armor_leggings": "Поножи тёмного мастера хоррора",
       "battery.desc.light": "Свет",
       "item.power.horror_armor_helmet": "Шлем тёмного мастера хоррора",
-      "block.power.amber_block": "Блок янтаря",
       "item.power.spirit_armor_chestplate": "Нагрудник мастера духа",
+      "block.power.amber_block": "Блок янтаря",
       "effect.power.chaos_dark_master": "Т. Мастер Хаоса",
       "entity.power.cursed_knight": "Проклятый рыцарь",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Солнце",
@@ -38557,14 +39074,14 @@
       "gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30": "Положительный заряд, расходует 30",
       "effect.power.sound_master": "Мастер звука",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Телепортация",
-      "item.power.moon_armor_chestplate": "Нагрудник мастера луны",
       "item.power.raw_copyrium": "Рудный копириум",
+      "item.power.moon_armor_chestplate": "Нагрудник мастера луны",
       "item.power.creation_armor_chestplate": "Нагрудник мастера созидания",
       "effect.power.ocean_master": "Мастер океана",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "battery.desc.fire": "Огонь",
-      "advancements.the_great_win.descr": "Победите проклятого хранителя и освободите его от проклятия",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "advancements.the_great_win.descr": "Победите проклятого хранителя и освободите его от проклятия",
       "effect.power.vacuum_master": "Мастер пустоты",
       "item.power.mercury_armor_chestplate": "Нагрудник мастера ртути",
       "item.power.freaking_parsnip": "Чёртов пастернак",
@@ -38584,17 +39101,17 @@
       "advancements.full_power_of_energium.descr": "Оденьте полный сет энергиумной брони",
       "item.power.spirit_stone": "Камень духа",
       "item.power.music_disc_ancient_mood.desc": "bxkqq - Ancient Mood",
-      "gui.power.wheel_abilities_form.tooltip_warp_wave_uses_15": "Волна искажения, расходует 15",
       "battery.desc.lightning": "Молния",
+      "gui.power.wheel_abilities_form.tooltip_warp_wave_uses_15": "Волна искажения, расходует 15",
       "item.power.raw_amplifier": "Рудный амплифер",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Ядовитый шип, расходует 35",
       "effect.power.blood_master": "Мастер крови",
       "advancements.lets_bail_this_place_isdead.descr": "Найдите биом - проклятый лес",
       "block.power.cursed_stone_stairs": "Ступеньки из проклятого камня",
-      "effect.power.stun": "Оглушение",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
-      "item.power.chaos_armor_chestplate": "Нагрудник тёмного мастера хаоса",
+      "effect.power.stun": "Оглушение",
       "item.power.explosion_battery": "Батарея",
+      "item.power.chaos_armor_chestplate": "Нагрудник тёмного мастера хаоса",
       "gui.power.keepers_box_gui_part_2.tooltip_smoke": "Дым",
       "item.power.water_battery": "Батарея",
       "battery.desc.vacuum": "Пустота",
@@ -38602,8 +39119,8 @@
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Энергетический заряженный шар, расходует 35",
       "item.power.thirst_armor_helmet": "Шлем тёмного мастера жажды",
       "block.power.raw_depleted_energium_block": "Блок рудного обеднённого энергиума",
-      "item.power.energy_battery": "Батарея",
       "gui.power.keepers_box_gui_part_1.tooltip_lava": "Лава",
+      "item.power.energy_battery": "Батарея",
       "effect.power.time_master": "Мастер времени",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
       "advancements.what_is_this_metal.title": "Это что за металл?",
@@ -38619,8 +39136,8 @@
       "item.power.lava_battery": "Батарея",
       "item.power.vacuum_stone": "Камень пустоты",
       "item.power.energium_armor_boots": "Энергиумные ботинки",
-      "effect.power.destruction_master": "Мастер разрушения",
       "item.power.poison_stone": "Камень яда",
+      "effect.power.destruction_master": "Мастер разрушения",
       "item.power.poison_armor_boots": "Ботинки мастера яда",
       "effect.power.immortality": "Бессмертие",
       "gui.power.wheel_abilities_speed.tooltip_dash_uses_20": "Рывок, расходует 20",
@@ -38633,8 +39150,8 @@
       "effect.power.plague_master": "Мастер чумы",
       "gui.power.wheel_abilities_spirit.tooltip_summon_spirit_uses_75": "Призыв духа, расходует 75",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
-      "battery.desc.destruction": "Разрушение",
       "item.power.amber_stone": "Камень янтаря",
+      "battery.desc.destruction": "Разрушение",
       "battery.desc.magnet": "Магнит",
       "effect.power.ether_master": "Мастер эфира",
       "item.power.time_armor_chestplate": "Нагрудник мастера времени",
@@ -39006,11 +39523,10 @@
       "item.power.right_metal_gauntlet": "Правая металлическая перчатка",
       "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r Вы используете неофициальную версию мода!",
       "item.power.filth_armor_boots": "Ботинки тёмного мастера скверны",
-      "entity.power.turret": "Турель",
       "item.power.golden_dust_armor_leggings": "Поножи мастера золотой пыли",
+      "entity.power.turret": "Турель",
       "effect.power.fire_master": "Мастер огня",
       "effect.power.technobarrier": "Технобарьер",
-      "item.power.turret_spawn_egg": "Turret Spawn Egg",
       "item.power.ocean_stone": "Камень океана",
       "effect.power.animals_master": "Мастер животных",
       "battery.desc.empty": "Пустая",
@@ -39039,6 +39555,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Время",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_ball_uses_35": "Ртутный шарик, расходует 35",
       "item.power.water_katana": "Водная катана",
+      "advancements.energized_gold.title": "Energized gold",
       "item.power.darkness_armor_helmet": "Шлем мастера тьмы",
       "effect.power.time_slowing": "Замедление времени",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 70",
@@ -39246,11 +39763,10 @@
     "en_us": {
       "item.power.ether_battery": "Battery",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
-      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Dark power transfer, uses 80",
       "item.power.ether_stone": "Ether Stone",
+      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Dark power transfer, uses 80",
       "item.power.moon_battery": "Battery",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
-      "item.power.spirit_spawn_egg": "Spirit Spawn Egg",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.energium_shovel": "Energium Shovel",
       "effect.power.gigantization": "Gigantization",
@@ -39264,8 +39780,8 @@
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 20",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
-      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "advancements.grant_your_power.title": "Grant your power",
+      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
       "item.power.plants_stone": "Plants Stone",
@@ -39282,11 +39798,11 @@
       "item.power.time_armor_leggings": "Time Leggings",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55": "Mercury condition, uses 55",
       "item.power.teleportation_armor_chestplate": "Teleportation Chestplate",
-      "item.power.gravity_mace": "Gravity Mace",
       "block.power.amplifier_block": "Amplifier Block",
+      "item.power.gravity_mace": "Gravity Mace",
       "battery.desc.plants": "Plants",
-      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "item.power.music_armor_leggings": "Music Leggings",
+      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
       "item.power.music_battery": "Battery",
       "item.power.darkness_battery": "Battery",
@@ -39304,8 +39820,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
       "item.power.animals_stone": "Animals Stone",
       "item.power.light_battery": "Battery",
-      "item.minecraft.lingering_potion.effect.power_lock_potion": "Lingering Potion of Power Lock",
       "item.power.oceanic_trident": "Oceanic Trident",
+      "item.minecraft.lingering_potion.effect.power_lock_potion": "Lingering Potion of Power Lock",
       "effect.power.tornado_master": "Master of Tornado",
       "effect.power.warp": "Warp",
       "item.keeper_book.name": "The Keeper\u0027s Book",
@@ -39313,7 +39829,6 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
       "item.power.amplifier_ring": "Amplifier Ring",
       "subtitles.cursed_knight.attack": "",
-      "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.spirit_battery": "Battery",
       "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "Smoke bomb, uses 35",
@@ -39338,9 +39853,9 @@
       "item.power.music_guitar": "Music Guitar",
       "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
       "item.power.ocean_battery": "Battery",
-      "item.power.smoke_armor_chestplate": "Smoke Chestplate",
-      "item.power.mist_battery": "Battery",
       "effect.power.star_regeneration": "Star regeneration",
+      "item.power.mist_battery": "Battery",
+      "item.power.smoke_armor_chestplate": "Smoke Chestplate",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "item.power.cursed_knight_spawn_egg": "Cursed Knight Spawn Egg",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
@@ -39385,8 +39900,8 @@
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.empty_characteristics_card.description_0": "§7Empty",
       "item.power.smoke_stone": "Smoke Stone",
-      "item.power.blue_flame_sword": "Blue Flame Sword",
       "effect.power.air_master": "Master of the Air",
+      "item.power.blue_flame_sword": "Blue Flame Sword",
       "effect.power.miniaturization": "Miniaturization",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
@@ -39427,8 +39942,8 @@
       "item.power.horror_armor_leggings": "Horror Leggings",
       "battery.desc.light": "Light",
       "item.power.horror_armor_helmet": "Horror Helmet",
-      "block.power.amber_block": "Amber Block",
       "item.power.spirit_armor_chestplate": "Spirit Chestplate",
+      "block.power.amber_block": "Amber Block",
       "effect.power.chaos_dark_master": "Dark Master of Chaos",
       "entity.power.cursed_knight": "Cursed Knight",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Sun",
@@ -39447,14 +39962,14 @@
       "gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30": "Positive charge, uses 30",
       "effect.power.sound_master": "Master of Sound",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
-      "item.power.raw_copyrium": "Raw Copyrium",
       "item.power.moon_armor_chestplate": "Moon Chestplate",
+      "item.power.raw_copyrium": "Raw Copyrium",
       "item.power.creation_armor_chestplate": "Creation Chestplate",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "effect.power.ocean_master": "Master of the Ocean",
       "battery.desc.fire": "Fire",
-      "advancements.the_great_win.descr": "Defeat the cursed keeper and free him from the curse",
       "item.power.crystal_armor_boots": "Crystal Boots",
+      "advancements.the_great_win.descr": "Defeat the cursed keeper and free him from the curse",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.mercury_armor_chestplate": "Mercury Chestplate",
       "item.power.freaking_parsnip": "Freaking Parsnip",
@@ -39474,17 +39989,17 @@
       "advancements.full_power_of_energium.descr": "Wear a full set of energium armor",
       "item.power.spirit_stone": "Spirit Stone",
       "item.power.music_disc_ancient_mood.desc": "bxkqq - Ancient Mood",
-      "gui.power.wheel_abilities_form.tooltip_warp_wave_uses_15": "Warp wave, uses 15",
       "battery.desc.lightning": "Lightning",
+      "gui.power.wheel_abilities_form.tooltip_warp_wave_uses_15": "Warp wave, uses 15",
       "item.power.raw_amplifier": "Raw Amplifier",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Poisonous thorn, uses 35",
       "effect.power.blood_master": "Master of Blood",
       "advancements.lets_bail_this_place_isdead.descr": "Find the biome - the cursed forest",
       "block.power.cursed_stone_stairs": " Cursed Stone Stairs",
-      "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
       "effect.power.stun": "Stun",
-      "item.power.explosion_battery": "Battery",
+      "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
       "item.power.chaos_armor_chestplate": "Chaos Chestplate",
+      "item.power.explosion_battery": "Battery",
       "gui.power.keepers_box_gui_part_2.tooltip_smoke": "Smoke",
       "item.power.water_battery": "Battery",
       "battery.desc.vacuum": "Vacuum",
@@ -39492,8 +40007,8 @@
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Energy charged ball, uses 35",
       "item.power.thirst_armor_helmet": "Thirst Helmet",
       "block.power.raw_depleted_energium_block": "Block of Raw Depleted Energium",
-      "gui.power.keepers_box_gui_part_1.tooltip_lava": "Lava",
       "item.power.energy_battery": "Battery",
+      "gui.power.keepers_box_gui_part_1.tooltip_lava": "Lava",
       "effect.power.time_master": "Master of Time",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
       "advancements.what_is_this_metal.title": "What is this metal?",
@@ -39509,8 +40024,8 @@
       "item.power.lava_battery": "Battery",
       "item.power.vacuum_stone": "Vacuum Stone",
       "item.power.energium_armor_boots": "Energium Boots",
-      "item.power.poison_stone": "Poison Stone",
       "effect.power.destruction_master": "Master of Destruction",
+      "item.power.poison_stone": "Poison Stone",
       "item.power.poison_armor_boots": "Poison Boots",
       "effect.power.immortality": "Immortality",
       "gui.power.wheel_abilities_speed.tooltip_dash_uses_20": "Dash, uses 20",
@@ -39523,8 +40038,8 @@
       "effect.power.plague_master": "Master of the Plague",
       "gui.power.wheel_abilities_spirit.tooltip_summon_spirit_uses_75": "Summon spirit, uses 75",
       "item.power.ice_armor_boots": "Ice Boots",
-      "item.power.amber_stone": "Amber Stone",
       "battery.desc.destruction": "Destruction",
+      "item.power.amber_stone": "Amber Stone",
       "battery.desc.magnet": "Magnet",
       "effect.power.ether_master": "Master of the Ether",
       "item.power.time_armor_chestplate": "Time Chestplate",
@@ -39895,11 +40410,10 @@
       "item.power.right_metal_gauntlet": "Right Metal Gauntlet",
       "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r You are using an unofficial version of the mod!",
       "item.power.filth_armor_boots": "Filth Boots",
-      "entity.power.turret": "Turret",
       "item.power.golden_dust_armor_leggings": "Golden Dust Leggings",
+      "entity.power.turret": "Turret",
       "effect.power.fire_master": "Master of Fire",
       "effect.power.technobarrier": "Technobarrier",
-      "item.power.turret_spawn_egg": "Turret Spawn Egg",
       "item.power.ocean_stone": "Ocean Stone",
       "effect.power.animals_master": "Master of Animals",
       "battery.desc.empty": "Empty",
@@ -40395,6 +40909,10 @@
           },
           {
             "name": "LevelSystemModule",
+            "children": []
+          },
+          {
+            "name": "JavaAnimationsSyncModule",
             "children": []
           }
         ]
@@ -40953,7 +41471,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.1.0.1",
+    "version": "1.1.0.2",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -40964,7 +41482,6 @@
     "requiredMods": [
       "pehkui",
       "playeranimatorapi",
-      "geckolib",
       "playeranimator"
     ],
     "dependencies": [
@@ -40975,7 +41492,6 @@
     ],
     "mcreatorDependencies": [
       "pehkui",
-      "geckolib",
       "playeranimator"
     ],
     "currentGenerator": "neoforge-1.21.1",

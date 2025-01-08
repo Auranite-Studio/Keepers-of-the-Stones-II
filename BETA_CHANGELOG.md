@@ -1,9 +1,8 @@
-What's new in Keepers of the Stones II version 1.1.0.1?<br/>
-<br />- Added level system
-<br />- Added characteristic card
-<br />- Added new achievement - Become like an adventurer
-<br />- Information about levels can still be found only in the debug screen of the mod
-<br />- The abilities of the master of earth and metal no longer consume resources
-<br />- Shooting blocks of earth and metal now also determines the block in the second hand
-<br />- [API] Colorful Powers API has been updated to version 21
-<br />- [Bugfix] Fixed a bug where the spirit couldn't attack and moved very fast on the ground
+What's new in Keepers of the Stones II version 1.1.0.2?<br/>
+<br />- Increased the Cursed Keeper's health to 700
+<br />- Cursed mobs are now invulnerable to the wither
+<br />- [API] Colorful Powers API has been updated to version 22
+<br />- [Bugfix] Fixed a bug that made the cursed keeper vulnerable to potion effects
+<br />- [Bugfix] Fixed a bug where killing some mobs did not give points for the level
+<br />- [Bugfix] Fixed hitbox of block-shooting elements abilities
+<br />- [Bugfix] Fixed the display of overlays in the mod

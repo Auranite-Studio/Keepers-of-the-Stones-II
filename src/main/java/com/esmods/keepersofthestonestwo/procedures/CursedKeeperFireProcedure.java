@@ -41,9 +41,10 @@ public class CursedKeeperFireProcedure {
 		particles = 3;
 		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
 		if (entity.getPersistentData().getDouble("IA") == 15) {
-			if (entity instanceof CursedKeeperEntity) {
-				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.firethrowing");
-			}
+			if (entity instanceof CursedKeeperEntity _datEntSetL)
+				_datEntSetL.getEntityData().set(CursedKeeperEntity.DATA_stage_two_anim_sync, false);
+			if (entity instanceof CursedKeeperEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 2);
 		}
 		if (entity.getPersistentData().getDouble("IA") > 19 && entity.getPersistentData().getDouble("IA") < 30) {
 			entity.getPersistentData().putDouble("BreathRange", (entity.getPersistentData().getDouble("BreathRange") + 1));
@@ -71,7 +72,7 @@ public class CursedKeeperFireProcedure {
 								.toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
-								if (!(entityiterator instanceof LivingEntity _livEnt18 && _livEnt18.isBlocking())) {
+								if (!(entityiterator instanceof LivingEntity _livEnt19 && _livEnt19.isBlocking())) {
 									if (!(entityiterator instanceof ItemEntity)) {
 										entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 9);
 										entityiterator.igniteForSeconds(10);
@@ -117,6 +118,10 @@ public class CursedKeeperFireProcedure {
 			entity.getPersistentData().putDouble("BreathRange", 0);
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putString("State", "Idle");
+			if (entity instanceof CursedKeeperEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 0);
+			if (entity instanceof CursedKeeperEntity _datEntSetL)
+				_datEntSetL.getEntityData().set(CursedKeeperEntity.DATA_stage_two_anim_sync, true);
 		}
 	}
 }

@@ -1,23 +1,77 @@
 {
   "_fv": 73,
-  "_type": "animatedentity",
+  "_type": "livingentity",
   "definition": {
     "mobName": "Cursed Knight",
     "mobLabel": "",
+    "mobModelName": "Modelcursed_knight",
     "mobModelTexture": "cursed_knight.png",
-    "mobModelGlowTexture": "",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
     "visualScale": {
       "fixedValue": 1.0
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "entityDataEntries": [],
+    "modelLayers": [],
+    "animations": [
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_knightAnimation.walk"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "WalkingAnimationSync"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_knightAnimation.idle"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "IdleAnimationSync"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_knightAnimation.sprint"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "SpintingAnimationSync"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_knightAnimation.attack"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKnightAttackSync"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      }
+    ],
     "modelWidth": 1.0,
     "modelHeight": 2.0,
     "modelShadowSize": 0.75,
     "mountedYOffset": 0.0,
-    "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
       "value": -11447452,
@@ -59,18 +113,22 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 1.0,
     "movementSpeed": 0.15,
+    "stepHeight": 0.6,
     "armorBaseValue": 20.0,
     "trackingRange": 64,
     "followRange": 32,
     "health": 100,
     "xpAmount": 50,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "deathTime": 20,
-    "lerp": 4,
     "disableCollisions": false,
     "ridable": false,
     "canControlForward": false,
@@ -86,8 +144,8 @@
     "immuneToExplosion": false,
     "immuneToTrident": false,
     "immuneToAnvil": false,
-    "immuneToWither": false,
-    "immuneToDragonBreath": true,
+    "immuneToWither": true,
+    "immuneToDragonBreath": false,
     "mobDrop": {
       "value": ""
     },
@@ -106,38 +164,23 @@
     "raidCelebrationSound": {
       "value": ""
     },
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "attack_anim_sync",
+        "type": "integer",
+        "value": 0
+      }
+    ],
     "onMobTickUpdate": {
       "name": "CursedKnightPriObnovlieniiTikaSushchnosti"
     },
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "cursed_knight.geo.json",
-    "groupName": "head",
-    "animation1": "cursed_knight.animation.idle",
-    "animation2": "cursed_knight.animation.walk",
-    "animation3": "",
-    "animation4": "",
-    "animation5": "",
-    "animation6": "",
-    "animation7": "cursed_knight.animation.sprint",
-    "animation8": "",
-    "animation9": "",
-    "animation10": "",
-    "enable2": true,
-    "enable3": false,
-    "enable4": false,
-    "enable5": false,
-    "enable6": false,
-    "enable7": true,
-    "enable8": false,
-    "enable9": false,
-    "enable10": false,
     "breedable": false,
     "tameable": false,
-    "disableDeathRotation": false,
-    "headMovement": true,
-    "eyeHeight": false,
     "breedTriggerItems": [],
     "ranged": false,
     "rangedAttackItem": {
@@ -146,17 +189,6 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "height": 1.0,
-    "attackRate": 7.0,
-    "raidSpawnsCount": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
     "spawnThisMob": true,
     "doesDespawnWhenIdle": false,
     "spawningProbability": 4,
@@ -168,6 +200,15 @@
         "value": "CUSTOM:CursedForest"
       }
     ],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

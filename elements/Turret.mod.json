@@ -1,23 +1,55 @@
 {
   "_fv": 73,
-  "_type": "animatedentity",
+  "_type": "livingentity",
   "definition": {
     "mobName": "Turret",
     "mobLabel": "",
+    "mobModelName": "Modelturret",
     "mobModelTexture": "turret.png",
-    "mobModelGlowTexture": "",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
     "visualScale": {
       "fixedValue": 1.0
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "entityDataEntries": [],
+    "modelLayers": [],
+    "animations": [
+      {
+        "animation": {
+          "value": "CUSTOM:turretAnimation.walk"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "WalkingAnimationSync"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:turretAnimation.idle"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "IdleAnimationSync"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      }
+    ],
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "stepHeight": 0.6,
     "hasSpawnEgg": false,
     "spawnEggBaseColor": {
       "value": -1,
@@ -27,10 +59,11 @@
       "value": -1,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "MISC"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "MISC"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -58,18 +91,22 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.15,
     "movementSpeed": 0.25,
+    "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 48,
     "followRange": 16,
     "health": 40,
     "xpAmount": 20,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "deathTime": 20,
-    "lerp": 4,
     "disableCollisions": false,
     "ridable": false,
     "canControlForward": false,
@@ -102,45 +139,37 @@
     "stepSound": {
       "value": "block.copper.step"
     },
+    "raidCelebrationSound": {
+      "value": ""
+    },
+    "entityDataEntries": [
+      {
+        "name": "is_attack",
+        "type": "logic",
+        "value": false
+      }
+    ],
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"follow_owner\"><field name=\"speed\">1</field><field name=\"min_distance\">32</field><field name=\"max_distance\">16</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"protect_owner\"><field name=\"condition\">null,null</field><next><block type=\"fight_as_owner\"><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "turret.geo.json",
-    "groupName": "bone",
-    "animation1": "animation.turret.idle",
-    "animation2": "animation.turret.walk",
-    "animation3": "",
-    "animation4": "animation.turret.shoot",
-    "animation5": "",
-    "animation6": "",
-    "animation7": "",
-    "animation8": "",
-    "animation9": "",
-    "animation10": "",
-    "enable2": true,
-    "enable3": false,
-    "enable4": true,
-    "enable5": false,
-    "enable6": false,
-    "enable7": false,
-    "enable8": false,
-    "enable9": false,
-    "enable10": false,
     "breedable": true,
     "tameable": true,
-    "disableDeathRotation": false,
-    "headMovement": true,
-    "eyeHeight": false,
     "breedTriggerItems": [],
     "ranged": true,
     "rangedAttackItem": {
       "value": ""
     },
     "rangedItemType": "TurretProjectile",
-    "rangedAttackInterval": 40,
+    "rangedAttackInterval": 23,
     "rangedAttackRadius": 32.0,
-    "height": 1.0,
-    "attackRate": 7.0,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 20,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false,
     "raidSpawnsCount": [
       4,
       3,
@@ -149,14 +178,6 @@
       4,
       4,
       2
-    ],
-    "spawnThisMob": false,
-    "doesDespawnWhenIdle": false,
-    "spawningProbability": 20,
-    "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 4,
-    "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [],
-    "spawnInDungeons": false
+    ]
   }
 }

@@ -1,24 +1,16 @@
 
 package com.esmods.keepersofthestonestwo.entity;
 
-import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.animation.RawAnimation;
-import software.bernie.geckolib.animation.PlayState;
-import software.bernie.geckolib.animation.AnimationState;
-import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.AnimatableManager;
-import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animatable.GeoEntity;
-
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.EventHooks;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.SpawnEggItem;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
@@ -36,13 +28,12 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.SpawnGroupData;
-import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
@@ -52,31 +43,20 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
-import java.util.List;
 import java.util.EnumSet;
 
 import com.esmods.keepersofthestonestwo.procedures.SpiritPriObnovlieniiTikaSushchnostiProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpiritPriNachalnomPrizyvieSushchnostiProcedure;
+import com.esmods.keepersofthestonestwo.procedures.IdleAnimationSyncProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-public class SpiritEntity extends TamableAnimal implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(SpiritEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(SpiritEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(SpiritEntity.class, EntityDataSerializers.STRING);
-	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-	private boolean swinging;
-	private boolean lastloop;
-	private long lastSwing;
-	public String animationprocedure = "empty";
+public class SpiritEntity extends TamableAnimal {
+	public final AnimationState animationState0 = new AnimationState();
 
 	public SpiritEntity(EntityType<SpiritEntity> type, Level world) {
 		super(type, world);
@@ -84,22 +64,6 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 		setNoAi(false);
 		setPersistenceRequired();
 		this.moveControl = new FlyingMoveControl(this, 10, true);
-	}
-
-	@Override
-	protected void defineSynchedData(SynchedEntityData.Builder builder) {
-		super.defineSynchedData(builder);
-		builder.define(SHOOT, false);
-		builder.define(ANIMATION, "undefined");
-		builder.define(TEXTURE, "spirit");
-	}
-
-	public void setTexture(String texture) {
-		this.entityData.set(TEXTURE, texture);
-	}
-
-	public String getTexture() {
-		return this.entityData.get(TEXTURE);
 	}
 
 	@Override
@@ -193,19 +157,6 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 	}
 
 	@Override
-	public void addAdditionalSaveData(CompoundTag compound) {
-		super.addAdditionalSaveData(compound);
-		compound.putString("Texture", this.getTexture());
-	}
-
-	@Override
-	public void readAdditionalSaveData(CompoundTag compound) {
-		super.readAdditionalSaveData(compound);
-		if (compound.contains("Texture"))
-			this.setTexture(compound.getString("Texture"));
-	}
-
-	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
@@ -251,15 +202,17 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 	}
 
 	@Override
-	public void baseTick() {
-		super.baseTick();
-		SpiritPriObnovlieniiTikaSushchnostiProcedure.execute(this);
-		this.refreshDimensions();
+	public void tick() {
+		super.tick();
+		if (this.level().isClientSide()) {
+			this.animationState0.animateWhen(IdleAnimationSyncProcedure.execute(this), this.tickCount);
+		}
 	}
 
 	@Override
-	public EntityDimensions getDefaultDimensions(Pose pose) {
-		return super.getDefaultDimensions(pose).scale(1f);
+	public void baseTick() {
+		super.baseTick();
+		SpiritPriObnovlieniiTikaSushchnostiProcedure.execute(this);
 	}
 
 	@Override
@@ -271,7 +224,7 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return List.of(Blocks.VOID_AIR.asItem()).contains(stack.getItem());
+		return Ingredient.of(new ItemStack(Items.WATER_BUCKET)).test(stack);
 	}
 
 	@Override
@@ -296,10 +249,8 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 		super.setNoGravity(true);
 	}
 
-	@Override
 	public void aiStep() {
 		super.aiStep();
-		this.updateSwingTime();
 		this.setNoGravity(true);
 	}
 
@@ -317,59 +268,5 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 10);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
-	}
-
-	private PlayState movementPredicate(AnimationState event) {
-		if (this.animationprocedure.equals("empty")) {
-			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.spirit.idle"));
-		}
-		return PlayState.STOP;
-	}
-
-	String prevAnim = "empty";
-
-	private PlayState procedurePredicate(AnimationState event) {
-		if (!animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED || (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty"))) {
-			if (!this.animationprocedure.equals(prevAnim))
-				event.getController().forceAnimationReset();
-			event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
-			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-				this.animationprocedure = "empty";
-				event.getController().forceAnimationReset();
-			}
-		} else if (animationprocedure.equals("empty")) {
-			prevAnim = "empty";
-			return PlayState.STOP;
-		}
-		prevAnim = this.animationprocedure;
-		return PlayState.CONTINUE;
-	}
-
-	@Override
-	protected void tickDeath() {
-		++this.deathTime;
-		if (this.deathTime == 20) {
-			this.remove(SpiritEntity.RemovalReason.KILLED);
-			this.dropExperience(this);
-		}
-	}
-
-	public String getSyncedAnimation() {
-		return this.entityData.get(ANIMATION);
-	}
-
-	public void setAnimation(String animation) {
-		this.entityData.set(ANIMATION, animation);
-	}
-
-	@Override
-	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-		data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-		data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
-	}
-
-	@Override
-	public AnimatableInstanceCache getAnimatableInstanceCache() {
-		return this.cache;
 	}
 }

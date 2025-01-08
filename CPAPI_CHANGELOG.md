@@ -1,4 +1,3 @@
 What's new in Colorful Powers API v21?<br />
-<br />- Added variables ``level``, ``level_exp`` and ``max_level_exp`` for control levels
-<br />- Added variable ``base_damage_by_lvl`` for dynamic change magical abilities damage
-<br />- Added a new field to the config file - ``enable_levels``
+<br />- Added variable ``golden_dust_extended_powers`` - allows custom elemental powers to be used in golden dust abilities
+<br />- Added variable ``allow_custom_element_powers_for_stones`` - checks the availability of custom elemental powers for their use in the abilities of the built-in elemental powers.

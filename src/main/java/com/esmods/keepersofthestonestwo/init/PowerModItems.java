@@ -495,7 +495,6 @@ public class PowerModItems {
 	public static final DeferredItem<Item> DESTRUCTION_BATTERY = REGISTRY.register("destruction_battery", DestructionBatteryItem::new);
 	public static final DeferredItem<Item> DESTRUCTION_BROADSWORD = REGISTRY.register("destruction_broadsword", DestructionBroadswordItem::new);
 	public static final DeferredItem<Item> AMPLIFIER_BLOCK = block(PowerModBlocks.AMPLIFIER_BLOCK);
-	public static final DeferredItem<Item> ENERGIUM_GOLEM_SPAWN_EGG = REGISTRY.register("energium_golem_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.ENERGIUM_GOLEM, -2242726, -8337805, new Item.Properties()));
 	public static final DeferredItem<Item> BLOOD_ARMOR_HELMET = REGISTRY.register("blood_armor_helmet", BloodArmorItem.Helmet::new);
 	public static final DeferredItem<Item> BLOOD_ARMOR_CHESTPLATE = REGISTRY.register("blood_armor_chestplate", BloodArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> BLOOD_ARMOR_LEGGINGS = REGISTRY.register("blood_armor_leggings", BloodArmorItem.Leggings::new);
@@ -606,7 +605,6 @@ public class PowerModItems {
 	public static final DeferredItem<Item> RAW_ENERGIUM_BLOCK = block(PowerModBlocks.RAW_ENERGIUM_BLOCK);
 	public static final DeferredItem<Item> MERCURY_BATTERY = REGISTRY.register("mercury_battery", MercuryBatteryItem::new);
 	public static final DeferredItem<Item> MERCURY_BATTLE_AXE = REGISTRY.register("mercury_battle_axe", MercuryBattleAxeItem::new);
-	public static final DeferredItem<Item> CURSED_KEEPER_SPAWN_EGG = REGISTRY.register("cursed_keeper_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KEEPER, -9216650, -7256744, new Item.Properties()));
 	public static final DeferredItem<Item> DEEPSLATE_DEPLETED_ENERGIUM_ORE = block(PowerModBlocks.DEEPSLATE_DEPLETED_ENERGIUM_ORE);
 	public static final DeferredItem<Item> DEEPSLATE_ENERGIUM_ORE = block(PowerModBlocks.DEEPSLATE_ENERGIUM_ORE);
 	public static final DeferredItem<Item> DEEPSLATE_AMPLIFIER_ORE = block(PowerModBlocks.DEEPSLATE_AMPLIFIER_ORE);
@@ -650,13 +648,11 @@ public class PowerModItems {
 	public static final DeferredItem<Item> SMOKE_ARMOR_LEGGINGS = REGISTRY.register("smoke_armor_leggings", SmokeArmorItem.Leggings::new);
 	public static final DeferredItem<Item> SMOKE_ARMOR_BOOTS = REGISTRY.register("smoke_armor_boots", SmokeArmorItem.Boots::new);
 	public static final DeferredItem<Item> SMOKE_BATTERY = REGISTRY.register("smoke_battery", SmokeBatteryItem::new);
-	public static final DeferredItem<Item> CURSED_KNIGHT_SPAWN_EGG = REGISTRY.register("cursed_knight_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KNIGHT, -11447452, -9817013, new Item.Properties()));
 	public static final DeferredItem<Item> SMOKE_MUSKET = REGISTRY.register("smoke_musket", SmokeMusketItem::new);
 	public static final DeferredItem<Item> SPIRIT_ARMOR_HELMET = REGISTRY.register("spirit_armor_helmet", SpiritArmorItem.Helmet::new);
 	public static final DeferredItem<Item> SPIRIT_ARMOR_CHESTPLATE = REGISTRY.register("spirit_armor_chestplate", SpiritArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> SPIRIT_ARMOR_LEGGINGS = REGISTRY.register("spirit_armor_leggings", SpiritArmorItem.Leggings::new);
 	public static final DeferredItem<Item> SPIRIT_ARMOR_BOOTS = REGISTRY.register("spirit_armor_boots", SpiritArmorItem.Boots::new);
-	public static final DeferredItem<Item> CURSED_SQUIRE_SPAWN_EGG = REGISTRY.register("cursed_squire_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_SQUIRE, -11447452, -9817013, new Item.Properties()));
 	public static final DeferredItem<Item> SPIRIT_BATTERY = REGISTRY.register("spirit_battery", SpiritBatteryItem::new);
 	public static final DeferredItem<Item> SPIRIT_SICKLE = REGISTRY.register("spirit_sickle", SpiritSickleItem::new);
 	public static final DeferredItem<Item> FORM_ARMOR_HELMET = REGISTRY.register("form_armor_helmet", FormArmorItem.Helmet::new);
@@ -703,6 +699,10 @@ public class PowerModItems {
 	public static final DeferredItem<Item> CHARACTERISTICS_CARD = REGISTRY.register("characteristics_card", CharacteristicsCardItem::new);
 	public static final DeferredItem<Item> MUSIC_DISC_CALL_OF_THE_PAST = REGISTRY.register("music_disc_call_of_the_past", MusicDiscCallOfThePastItem::new);
 	public static final DeferredItem<Item> MUSIC_DISC_ANCIENT_MOOD = REGISTRY.register("music_disc_ancient_mood", MusicDiscAncientMoodItem::new);
+	public static final DeferredItem<Item> CURSED_KNIGHT_SPAWN_EGG = REGISTRY.register("cursed_knight_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KNIGHT, -11447452, -9817013, new Item.Properties()));
+	public static final DeferredItem<Item> ENERGIUM_GOLEM_SPAWN_EGG = REGISTRY.register("energium_golem_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.ENERGIUM_GOLEM, -2242726, -8337805, new Item.Properties()));
+	public static final DeferredItem<Item> CURSED_SQUIRE_SPAWN_EGG = REGISTRY.register("cursed_squire_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_SQUIRE, -11447452, -9817013, new Item.Properties()));
+	public static final DeferredItem<Item> CURSED_KEEPER_SPAWN_EGG = REGISTRY.register("cursed_keeper_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KEEPER, -9216650, -7256744, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
