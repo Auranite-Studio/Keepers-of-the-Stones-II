@@ -1,7 +1,6 @@
 What's new in Keepers of the Stones II version 1.1.0.2?<br/>
 <br />- Increased the Cursed Keeper's health to 700
 <br />- Cursed mobs are now invulnerable to the wither
-<br />- The fog in the cursed forest now appears smoothly
 <br />- [API] Colorful Powers API has been updated to version 22
 <br />- [Bugfix] Fixed a bug that made the cursed keeper vulnerable to potion effects
 <br />- [Bugfix] Fixed a bug where killing some mobs did not give points for the level
