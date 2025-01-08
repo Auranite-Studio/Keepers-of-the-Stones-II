@@ -149,6 +149,7 @@ import com.esmods.keepersofthestonestwo.item.LavaStoneItem;
 import com.esmods.keepersofthestonestwo.item.LavaHammerItem;
 import com.esmods.keepersofthestonestwo.item.LavaBatteryItem;
 import com.esmods.keepersofthestonestwo.item.LavaArmorItem;
+import com.esmods.keepersofthestonestwo.item.KeepersBookItem;
 import com.esmods.keepersofthestonestwo.item.IceStoneItem;
 import com.esmods.keepersofthestonestwo.item.IceSpearItem;
 import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
@@ -703,6 +704,7 @@ public class PowerModItems {
 	public static final DeferredItem<Item> ENERGIUM_GOLEM_SPAWN_EGG = REGISTRY.register("energium_golem_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.ENERGIUM_GOLEM, -2242726, -8337805, new Item.Properties()));
 	public static final DeferredItem<Item> CURSED_SQUIRE_SPAWN_EGG = REGISTRY.register("cursed_squire_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_SQUIRE, -11447452, -9817013, new Item.Properties()));
 	public static final DeferredItem<Item> CURSED_KEEPER_SPAWN_EGG = REGISTRY.register("cursed_keeper_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KEEPER, -9216650, -7256744, new Item.Properties()));
+	public static final DeferredItem<Item> KEEPERS_BOOK = REGISTRY.register("keepers_book", KeepersBookItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
