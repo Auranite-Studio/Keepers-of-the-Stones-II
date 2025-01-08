@@ -15,8 +15,8 @@
     "knockback": 5,
     "entityModel": "Modelblock_attack",
     "customModelTexture": "ice_block_attack.png",
-    "modelWidth": 0.5,
-    "modelHeight": 0.5,
+    "modelWidth": 1.0,
+    "modelHeight": 1.0,
     "onHitsBlock": {
       "name": "IceAttackProjectileProjectileHitsBlock"
     },

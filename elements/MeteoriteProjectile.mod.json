@@ -15,8 +15,8 @@
     "knockback": 4,
     "entityModel": "Modelmeteorite",
     "customModelTexture": "meteorite.png",
-    "modelWidth": 0.5,
-    "modelHeight": 0.5,
+    "modelWidth": 1.0,
+    "modelHeight": 1.0,
     "onHitsBlock": {
       "name": "MeteoriteProjectileKoghdaSnariadPopadaietVBlok"
     },
