@@ -484,6 +484,7 @@
   "effect.power.ice_master": "Master of the Ice",
   "item.power.ether_armor_leggings": "Ether Leggings",
   "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
+  "subtitles.power.level_up": "Level up!",
   "effect.power.time_stopped": "Time Stopped",
   "item.power.spirit_armor_boots": "Spirit Boots",
   "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
