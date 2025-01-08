@@ -115,10 +115,10 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 			guiGraphics.blit(new ResourceLocation("power:textures/screens/rank_b_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 		}
 		if (RankACheckProcedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_a_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
+			guiGraphics.blit(new ResourceLocation("power:textures/screens/rank_a_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 		}
 		if (RankSCheckProcedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_s_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
+			guiGraphics.blit(new ResourceLocation("power:textures/screens/rank_s_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 		}
 		RenderSystem.disableBlend();
 	}

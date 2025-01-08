@@ -17,16 +17,21 @@ public class LevelUpSetProcedure {
 			return;
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
-				{
-					double _setval = (entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).max_level_exp;
-					entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.level_exp = _setval;
-						capability.syncPlayerVariables(entityiterator);
-					});
+				if ((entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).level < 20) {
+					{
+						double _setval = (entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).max_level_exp;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.level_exp = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
+					}
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal(("Level for " + entityiterator.getDisplayName().getString() + " has been raised to "
+								+ Math.round((entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).level + 1))), false);
+				} else {
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal(("\u00A7cLevel for " + entityiterator.getDisplayName().getString() + " cannot be raised as it already has the maximum level!")), false);
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("Level for " + entityiterator.getDisplayName().getString() + " has been raised to "
-							+ Math.round((entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).level + 1))), false);
 			}
 		} catch (CommandSyntaxException e) {
 			e.printStackTrace();

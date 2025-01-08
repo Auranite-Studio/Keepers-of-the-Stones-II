@@ -1810,9 +1810,11 @@ public class RandomPowerGetProcedure {
 			}
 		} else if (RandomPower == 47) {
 			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.golden_dust_extended_powers = true;
-				_vars.syncPlayerVariables(entity);
+				boolean _setval = true;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.golden_dust_extended_powers = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 	}

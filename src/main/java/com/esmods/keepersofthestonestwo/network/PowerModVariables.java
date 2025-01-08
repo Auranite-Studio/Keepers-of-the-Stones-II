@@ -777,6 +777,9 @@ public class PowerModVariables {
 					variables.jump_char = message.data.jump_char;
 					variables.level_up_status = message.data.level_up_status;
 					variables.rank = message.data.rank;
+					variables.cursed_fog = message.data.cursed_fog;
+					variables.fog_distance = message.data.fog_distance;
+					variables.golden_dust_extended_powers = message.data.golden_dust_extended_powers;
 				}
 			});
 			context.setPacketHandled(true);

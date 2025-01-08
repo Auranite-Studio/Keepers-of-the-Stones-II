@@ -7,8 +7,10 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -16,11 +18,14 @@ import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
+
+import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.procedures.AmethystAttackProjectileKoghdaSnariadPopadaietVBlokProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
@@ -65,6 +70,27 @@ public class AmethystAttackProjectileEntity extends AbstractArrow implements Ite
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
+	}
+
+	@Nullable
+	@Override
+	protected EntityHitResult findHitEntity(Vec3 projectilePosition, Vec3 deltaPosition) {
+		double d0 = Double.MAX_VALUE;
+		Entity entity = null;
+		AABB lookupBox = this.getBoundingBox().expandTowards(deltaPosition).inflate(1.0D);
+		for (Entity entity1 : this.level().getEntities(this, lookupBox, this::canHitEntity)) {
+			if (entity1 == this.getOwner())
+				continue;
+			AABB aabb = entity1.getBoundingBox();
+			if (aabb.intersects(lookupBox)) {
+				double d1 = projectilePosition.distanceToSqr(projectilePosition);
+				if (d1 < d0) {
+					entity = entity1;
+					d0 = d1;
+				}
+			}
+		}
+		return entity == null ? null : new EntityHitResult(entity);
 	}
 
 	@Override

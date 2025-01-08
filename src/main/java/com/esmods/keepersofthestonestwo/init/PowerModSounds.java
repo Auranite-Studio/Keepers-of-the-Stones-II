@@ -47,4 +47,5 @@ public class PowerModSounds {
 	public static final RegistryObject<SoundEvent> MUSIC_MYSTERY_OF_THE_CURSED_FOREST = REGISTRY.register("music.mystery_of_the_cursed_forest",
 			() -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "music.mystery_of_the_cursed_forest")));
 	public static final RegistryObject<SoundEvent> ELECTRICITY = REGISTRY.register("electricity", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "electricity")));
+	public static final RegistryObject<SoundEvent> POWER_LEVEL_UP = REGISTRY.register("power.level_up", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "power.level_up")));
 }
