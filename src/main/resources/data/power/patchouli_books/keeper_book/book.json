@@ -1,7 +1,7 @@
 {
     "name": "item.power.keepers_book",
     "landing_text": "item.keepers_book.desc",
-    "version": "buildNumber",
+    "version": 1,
     "creative_tab": "power:items",
     "dont_generate_book": false,
     "show_progress": false,
