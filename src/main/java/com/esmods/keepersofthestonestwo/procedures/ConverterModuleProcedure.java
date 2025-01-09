@@ -169,6 +169,34 @@ public class ConverterModuleProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).resistance_char != 2) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.resistance_char = 2;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).speed_char != 2) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.speed_char = 2;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).jump_char != 2) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.jump_char = 2;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).haste_char != -1) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.haste_char = -1;
+					_vars.syncPlayerVariables(entity);
+				}
+			}
 			if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).rank).equals("0")) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
