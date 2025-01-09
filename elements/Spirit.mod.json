@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 73,
   "_type": "animatedentity",
   "definition": {
     "mobName": "Spirit",
@@ -54,7 +54,7 @@
     "attackStrength": 14,
     "attackKnockback": 0.0,
     "knockbackResistance": 10.0,
-    "movementSpeed": 1.0,
+    "movementSpeed": 0.30000000000000004,
     "armorBaseValue": 0.0,
     "trackingRange": 32,
     "followRange": 8,
@@ -110,7 +110,7 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"protect_owner\"><field name=\"condition\">null,null</field><next><block type=\"fight_as_owner\"><field name=\"condition\">null,null</field><next><block type=\"attack_fly\"><field name=\"radius\">4</field><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"follow_owner\"><field name=\"speed\">1</field><field name=\"min_distance\">4</field><field name=\"max_distance\">10</field><field name=\"condition\">null,null</field><next><block type=\"fly\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"protect_owner\"><field name=\"condition\">null,null</field><next><block type=\"fight_as_owner\"><field name=\"condition\">null,null</field><next><block type=\"attack_fly\"><field name=\"radius\">8</field><field name=\"speed\">4.8</field><field name=\"condition\">null,null</field><next><block type=\"follow_owner\"><field name=\"speed\">2.4</field><field name=\"min_distance\">4</field><field name=\"max_distance\">10</field><field name=\"condition\">null,null</field><next><block type=\"fly\"><field name=\"speed\">2.4</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "model": "spirit.geo.json",
     "groupName": "",
     "animation1": "animation.spirit.idle",

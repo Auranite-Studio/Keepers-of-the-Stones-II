@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 73,
   "_type": "projectile",
   "definition": {
     "projectileItem": {
@@ -15,8 +15,8 @@
     "knockback": 4,
     "entityModel": "Modelblock_attack",
     "customModelTexture": "gold_attack.png",
-    "modelWidth": 0.5,
-    "modelHeight": 0.5,
+    "modelWidth": 1.0,
+    "modelHeight": 1.0,
     "onHitsBlock": {
       "name": "GoldAttackProjectileKoghdaSnariadPopadaietVBlok"
     },

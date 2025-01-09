@@ -92,5 +92,12 @@ public class ConverterModuleProcedure {
 				}
 			}
 		}
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl == 0) {
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.base_damage_by_lvl = 13.5;
+				_vars.syncPlayerVariables(entity);
+			}
+		}
 	}
 }

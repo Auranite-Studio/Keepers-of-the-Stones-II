@@ -1,3 +1,5 @@
-What's new in Keepers of the Stones II version 1.0.4?<br />
-<br />- [Bugfix] Fixed the bug of missing sound effects when using mist element abilities
-<br />- [Bugfix] Fixed some bugs related conversion world from version 1.0.2
+What's new in Keepers of the Stones II version 1.0.5?<br />
+<br />- [Bugfix] Fixed a bug where the spirit couldn't attack and moved very fast on the ground
+<br />- [Bugfix] Fixed hitbox of block-shooting elements abilities
+<br />- [Bugfix] Fixed a bug where the second rain master ability was wasting star points when it was used when there were no entities nearby
+<br />- [Bugfix] Fixed the display of overlays in the mod

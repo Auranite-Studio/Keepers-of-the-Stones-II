@@ -86,18 +86,24 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 56, 59) {
+			private final int slot = 0;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return PowerModItems.EMPTY_BATTERY.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 104, 59) {
+			private final int slot = 1;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return stack.is(ItemTags.create(ResourceLocation.parse("power:elemental_stones")));
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 80, 35) {
+			private final int slot = 2;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return false;

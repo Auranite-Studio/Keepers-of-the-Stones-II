@@ -469,7 +469,7 @@
           }
         ]
       },
-      "path": "~/Modules/PowerScaleModule "
+      "path": "~/Modules/BasicModule"
     },
     {
       "name": "AirArmor",
@@ -26546,21 +26546,6 @@
       "path": "~/Biomes/CursedForest"
     },
     {
-      "name": "MusicDiscCallOfThePast",
-      "type": "musicdisc",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "music_disc_call_of_the_past",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/jukebox_song/music_disc_call_of_the_past.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicDiscCallOfThePastItem.java",
-          "src/main/resources/assets/power/models/item/music_disc_call_of_the_past.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Energium"
-    },
-    {
       "name": "CursedCastle",
       "type": "structure",
       "compiles": true,
@@ -26827,21 +26812,6 @@
         ]
       },
       "path": "~/ItemsAndBlocks/OtherItems"
-    },
-    {
-      "name": "MusicDiscAncientMood",
-      "type": "musicdisc",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "music_disc_ancient_mood",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicDiscAncientMoodItem.java",
-          "src/main/resources/assets/power/models/item/music_disc_ancient_mood.json",
-          "src/main/resources/data/power/jukebox_song/music_disc_ancient_mood.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/CursedBlocks"
     },
     {
       "name": "LimitedNumberOfStones",
@@ -35726,6 +35696,36 @@
         ]
       },
       "path": "~/Modules/CPAPIExecuterModule"
+    },
+    {
+      "name": "MusicDiscCallOfThePast",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_disc_call_of_the_past",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/jukebox_song/music_disc_call_of_the_past.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicDiscCallOfThePastItem.java",
+          "src/main/resources/assets/power/models/item/music_disc_call_of_the_past.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "MusicDiscAncientMood",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_disc_ancient_mood",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicDiscAncientMoodItem.java",
+          "src/main/resources/assets/power/models/item/music_disc_ancient_mood.json",
+          "src/main/resources/data/power/jukebox_song/music_disc_ancient_mood.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
     }
   ],
   "variable_elements": [
@@ -36352,6 +36352,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "base_damage_by_lvl",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "13.5"
     }
   ],
   "sound_elements": [
@@ -40000,7 +40006,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -40029,5 +40035,5 @@
     "credits": "Created by Environment Studios",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202400349221
+  "mcreatorVersion": 202400452223
 }
