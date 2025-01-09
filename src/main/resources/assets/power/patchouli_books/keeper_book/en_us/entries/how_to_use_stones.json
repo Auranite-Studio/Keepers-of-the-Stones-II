@@ -10,7 +10,7 @@
         },
         {
             "type": "patchouli:text",
-            "text": "Also you have a limited time to use the stone (10 minutes), if the time runs out or you deactivate the stone in survival mode it will go into recharge mode for 5 minutes."
+            "text": "Also you have a limited time to use the stone (10 minutes), if the time runs out or you deactivate the stone in survival mode it will go into recharge mode for 5 minutes. Also, stones can be combined up to 3 pieces at a time."
         }
 
     ]
