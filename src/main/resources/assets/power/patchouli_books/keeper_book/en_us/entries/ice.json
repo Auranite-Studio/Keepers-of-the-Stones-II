@@ -20,6 +20,7 @@
             "type": "patchouli:entity",
             "name": "Master of the Ice",
             "border": true,
+            "rotate": false,
             "scale": 0.75,
             "entity": "power:example_master{HandItems:[{id:\"power:ice_spear\",count:1}],ArmorItems:[{id:\"power:ice_armor_boots\",count:1},{id:\"power:ice_armor_leggings\",count:1},{id:\"power:ice_armor_chestplate\",count:1},{id:\"power:ice_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
         }

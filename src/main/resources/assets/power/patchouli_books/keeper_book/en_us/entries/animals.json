@@ -1,0 +1,27 @@
+{
+    "name": "Animals",
+    "icon": "power:textures/mob_effect/animals_master.png",
+    "category": "power:stones",
+    "sortnum": 14,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Insect attack - attacks with insects as a beam attack.",
+                "$(li)",
+                "Scorpion Sting - poisons the closest entity to the player.",
+                "$(li)",
+                "Wolf Pack - summons three tame wolves."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Animals",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:animals_halberd\",count:1}],ArmorItems:[{id:\"power:animals_armor_boots\",count:1},{id:\"power:animals_armor_leggings\",count:1},{id:\"power:animals_armor_chestplate\",count:1},{id:\"power:animals_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
