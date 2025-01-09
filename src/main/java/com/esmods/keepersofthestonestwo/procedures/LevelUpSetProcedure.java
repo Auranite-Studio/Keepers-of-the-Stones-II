@@ -17,13 +17,18 @@ public class LevelUpSetProcedure {
 			return;
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
-				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.level_exp = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp;
-					_vars.syncPlayerVariables(entityiterator);
+				if (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).level < 20) {
+					{
+						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.level_exp = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp;
+						_vars.syncPlayerVariables(entityiterator);
+					}
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal(("Level for " + entityiterator.getDisplayName().getString() + " has been raised to " + Math.round(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).level + 1))), false);
+				} else {
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal(("\u00A7cLevel for " + entityiterator.getDisplayName().getString() + " cannot be raised as it already has the maximum level!")), false);
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("Level for " + entityiterator.getDisplayName().getString() + " has been raised to " + Math.round(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).level + 1))), false);
 			}
 		} catch (CommandSyntaxException e) {
 			e.printStackTrace();
