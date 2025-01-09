@@ -58,12 +58,15 @@ public class WheelAbilitiesMercuryScreen extends AbstractContainerScreen<WheelAb
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 84 && mouseX < leftPos + 108 && mouseY > topPos + 24 && mouseY < topPos + 48)
+		if (mouseX > leftPos + 84 && mouseX < leftPos + 108 && mouseY > topPos + 24 && mouseY < topPos + 48) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mercury.tooltip_liquid_mercury_uses_15"), mouseX, mouseY);
-		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 85 && mouseY < topPos + 109)
+		}
+		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 85 && mouseY < topPos + 109) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mercury.tooltip_mercury_ball_uses_35"), mouseX, mouseY);
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 145 && mouseY < topPos + 169)
+		}
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 145 && mouseY < topPos + 169) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55"), mouseX, mouseY);
+		}
 	}
 
 	@Override

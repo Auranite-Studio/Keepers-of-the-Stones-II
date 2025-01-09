@@ -18,7 +18,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import java.util.List;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.entity.CursedKnightEntity;
@@ -67,8 +66,7 @@ public class CursedKnightBiteProcedure {
 				ZPar = z + entity.getLookAngle().z * Range;
 				{
 					final Vec3 _center = new Vec3(XPar, YPar, ZPar);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-					for (Entity entityiterator : _entfound) {
+					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 						if (!(entityiterator == entity) && !(entityiterator instanceof ItemEntity)) {
 							if (!(entityiterator instanceof LivingEntity _livEnt16 && _livEnt16.isBlocking())) {
 								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:cursed_knight_ds")))), 14);
