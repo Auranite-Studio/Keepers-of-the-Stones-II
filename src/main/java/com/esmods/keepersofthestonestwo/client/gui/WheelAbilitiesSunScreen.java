@@ -57,12 +57,15 @@ public class WheelAbilitiesSunScreen extends AbstractContainerScreen<WheelAbilit
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15"), mouseX, mouseY);
-		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 82 && mouseY < topPos + 106)
+		}
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 82 && mouseY < topPos + 106) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170)
+		}
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sun.tooltip_sun_healing_uses_80"), mouseX, mouseY);
+		}
 	}
 
 	@Override

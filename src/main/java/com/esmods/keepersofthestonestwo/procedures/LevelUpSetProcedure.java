@@ -10,6 +10,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
 public class LevelUpSetProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
@@ -17,7 +18,7 @@ public class LevelUpSetProcedure {
 			return;
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
-				if (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).level < 20) {
+				if (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).level < 20 && PowerConfigConfiguration.ENABLE_LEVELS.get() == true) {
 					{
 						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.level_exp = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp;

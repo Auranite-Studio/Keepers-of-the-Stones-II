@@ -57,12 +57,15 @@ public class WheelAbilitiesTimeScreen extends AbstractContainerScreen<WheelAbili
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 81 && mouseX < leftPos + 105 && mouseY > topPos + 143 && mouseY < topPos + 167)
+		if (mouseX > leftPos + 81 && mouseX < leftPos + 105 && mouseY > topPos + 143 && mouseY < topPos + 167) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_time.tooltip_stopping_time_uses_30"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47)
+		}
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30"), mouseX, mouseY);
-		if (mouseX > leftPos + 142 && mouseX < leftPos + 166 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		}
+		if (mouseX > leftPos + 142 && mouseX < leftPos + 166 && mouseY > topPos + 84 && mouseY < topPos + 108) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_time.tooltip_acceleration_of_time_uses_30"), mouseX, mouseY);
+		}
 	}
 
 	@Override

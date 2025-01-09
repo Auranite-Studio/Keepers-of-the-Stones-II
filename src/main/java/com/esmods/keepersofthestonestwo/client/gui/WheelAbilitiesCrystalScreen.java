@@ -57,12 +57,15 @@ public class WheelAbilitiesCrystalScreen extends AbstractContainerScreen<WheelAb
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10"), mouseX, mouseY);
-		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 83 && mouseY < topPos + 107)
+		}
+		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 83 && mouseY < topPos + 107) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168)
+		}
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65"), mouseX, mouseY);
+		}
 	}
 
 	@Override
