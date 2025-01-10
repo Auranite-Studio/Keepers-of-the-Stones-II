@@ -14,6 +14,6 @@ public class WarpMobEffect extends MobEffect {
 
 	@Override
 	public void onEffectStarted(LivingEntity entity, int amplifier) {
-		WarpPriNalozhieniiEffiektaProcedure.execute(entity);
+		WarpPriNalozhieniiEffiektaProcedure.execute();
 	}
 }
