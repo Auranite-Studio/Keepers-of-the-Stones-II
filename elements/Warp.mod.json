@@ -15,12 +15,14 @@
     "isCuredByMilk": true,
     "isProtectedByTotem": true,
     "isCuredbyHoney": false,
-    "modifiers": [],
-    "onStarted": {
-      "name": "WarpPriNalozhieniiEffiekta"
-    },
-    "onExpired": {
-      "name": "WarpPriIstiechieniiEffiekta"
-    }
+    "modifiers": [
+      {
+        "attribute": {
+          "value": "SCALE"
+        },
+        "amount": -0.5,
+        "operation": "ADD_VALUE"
+      }
+    ]
   }
 }

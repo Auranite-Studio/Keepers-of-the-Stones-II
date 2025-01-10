@@ -13842,25 +13842,6 @@
       "path": "~/Elements/Time"
     },
     {
-      "name": "TimeStoppedKazhdyiTikVoVriemiaEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "time_stopped_kazhdyi_tik_vo_vriemia_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TimeStoppedKazhdyiTikVoVriemiaEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Time"
-    },
-    {
       "name": "WheelAbilitiesCreation",
       "type": "gui",
       "compiles": true,
@@ -32747,44 +32728,6 @@
       "path": "~/Elements/Form"
     },
     {
-      "name": "WarpPriNalozhieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "warp_pri_nalozhienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WarpPriNalozhieniiEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "WarpPriIstiechieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "warp_pri_istiechienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WarpPriIstiechieniiEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
       "name": "Miniaturization",
       "type": "potioneffect",
       "compiles": true,
@@ -32798,44 +32741,6 @@
       "path": "~/Elements/Form"
     },
     {
-      "name": "MiniaturizationPriNalozhieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "miniaturization_pri_nalozhienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MiniaturizationPriNalozhieniiEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "MiniaturizationPriIstiechieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "miniaturization_pri_istiechienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MiniaturizationPriIstiechieniiEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
       "name": "Gigantization",
       "type": "potioneffect",
       "compiles": true,
@@ -32844,44 +32749,6 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/potion/GigantizationMobEffect.java"
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "GigantizationPriNalozhieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gigantization_pri_nalozhienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GigantizationPriNalozhieniiEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "GigantizationPriIstiechieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gigantization_pri_istiechienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GigantizationPriIstiechieniiEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/Elements/Form"
@@ -41549,7 +41416,6 @@
     "updateURL": "https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_update_checker_fg.json",
     "modPicture": "logo",
     "requiredMods": [
-      "pehkui",
       "playeranimatorapi",
       "playeranimator"
     ],
@@ -41560,7 +41426,6 @@
       "cpapi"
     ],
     "mcreatorDependencies": [
-      "pehkui",
       "playeranimator"
     ],
     "currentGenerator": "neoforge-1.21.1",
