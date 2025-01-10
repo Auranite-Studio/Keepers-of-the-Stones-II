@@ -32769,44 +32769,6 @@
       "path": "~/Elements/Form"
     },
     {
-      "name": "MiniaturizationPriNalozhieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "miniaturization_pri_nalozhienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MiniaturizationPriNalozhieniiEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "MiniaturizationPriIstiechieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "miniaturization_pri_istiechienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MiniaturizationPriIstiechieniiEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
       "name": "Gigantization",
       "type": "potioneffect",
       "compiles": true,
@@ -32815,44 +32777,6 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/potion/GigantizationMobEffect.java"
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "GigantizationPriNalozhieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gigantization_pri_nalozhienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GigantizationPriNalozhieniiEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "GigantizationPriIstiechieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gigantization_pri_istiechienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GigantizationPriIstiechieniiEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/Elements/Form"

@@ -44,7 +44,6 @@ import com.esmods.keepersofthestonestwo.procedures.MusicMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MistMasterEndProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MiniaturizationPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MindMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MercuryMasterEndProcedure;
@@ -58,7 +57,6 @@ import com.esmods.keepersofthestonestwo.procedures.IceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.HorrorDarkMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GravityMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GoldenDustMasterEndProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GigantizationPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FormMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FilthDarkMasterEndProcedure;
@@ -343,10 +341,6 @@ public class PowerModMobEffects {
 			FormMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(WARP)) {
 			WarpPriIstiechieniiEffiektaProcedure.execute();
-		} else if (effectInstance.getEffect().is(MINIATURIZATION)) {
-			MiniaturizationPriIstiechieniiEffiektaProcedure.execute(entity);
-		} else if (effectInstance.getEffect().is(GIGANTIZATION)) {
-			GigantizationPriIstiechieniiEffiektaProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(MIND_MASTER)) {
 			MindMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(GOLDEN_DUST_MASTER)) {
