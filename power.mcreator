@@ -32728,34 +32728,6 @@
       "path": "~/Elements/Form"
     },
     {
-      "name": "WarpPriNalozhieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "warp_pri_nalozhienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WarpPriNalozhieniiEffiektaProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "WarpPriIstiechieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "warp_pri_istiechienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WarpPriIstiechieniiEffiektaProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Elements/Form"
-    },
-    {
       "name": "Miniaturization",
       "type": "potioneffect",
       "compiles": true,

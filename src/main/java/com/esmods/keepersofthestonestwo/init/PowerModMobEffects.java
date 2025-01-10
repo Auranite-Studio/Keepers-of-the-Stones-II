@@ -16,7 +16,6 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.core.registries.Registries;
 
 import com.esmods.keepersofthestonestwo.procedures.WaterMasterEndProcedure;
-import com.esmods.keepersofthestonestwo.procedures.WarpPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.VacuumMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TornadoMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeMasterEndProcedure;
@@ -339,8 +338,6 @@ public class PowerModMobEffects {
 			SpiritMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(FORM_MASTER)) {
 			FormMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(WARP)) {
-			WarpPriIstiechieniiEffiektaProcedure.execute();
 		} else if (effectInstance.getEffect().is(MIND_MASTER)) {
 			MindMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(GOLDEN_DUST_MASTER)) {
