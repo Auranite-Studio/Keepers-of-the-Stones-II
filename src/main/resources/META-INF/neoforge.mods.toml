@@ -31,12 +31,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     side="BOTH"
 
 [[dependencies.power]]
-    modId="pehkui"
-    type="required"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
     modId="playeranimatorapi"
     type="required"
     versionRange="[0,)"
@@ -49,12 +43,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.power]]
-    modId="pehkui"
-    type="optional"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 [[dependencies.power]]
     modId="bettercombat"
     type="optional"
