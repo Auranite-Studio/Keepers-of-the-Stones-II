@@ -1,0 +1,27 @@
+{
+    "name": "Time",
+    "icon": "power:textures/mob_effect/time_master.png",
+    "category": "power:stones",
+    "sortnum": 23,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Time dilation - shoots a beam that slows down the enemy.",
+                "$(li)",
+                "Acceleration of time - gives a strong speed effect to the player.",
+                "$(li)",
+                "Stopping time - stops the enemy completely for some time."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Time",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:time_khopesh\",count:1}],ArmorItems:[{id:\"power:time_armor_boots\",count:1},{id:\"power:time_armor_leggings\",count:1},{id:\"power:time_armor_chestplate\",count:1},{id:\"power:time_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

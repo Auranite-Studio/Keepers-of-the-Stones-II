@@ -1,0 +1,27 @@
+{
+    "name": "Sun",
+    "icon": "power:textures/mob_effect/sun_master.png",
+    "category": "power:stones",
+    "sortnum": 20,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Sun ray - a ray that shoots from the top to the bottom of the entity.",
+                "$(li)",
+                "Sun explosion - explodes the nearest entity.",
+                "$(li)",
+                "Sun healing - gives regeneration to the player for a certain period of time."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Sun",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:solar_blade\",count:1}],ArmorItems:[{id:\"power:sun_armor_boots\",count:1},{id:\"power:sun_armor_leggings\",count:1},{id:\"power:sun_armor_chestplate\",count:1},{id:\"power:sun_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

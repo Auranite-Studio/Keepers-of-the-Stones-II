@@ -1,0 +1,27 @@
+{
+    "name": "Moon",
+    "icon": "power:textures/mob_effect/moon_master.png",
+    "category": "power:stones",
+    "sortnum": 21,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Moon light - a ray that shoots from the top to the bottom of the entity.",
+                "$(li)",
+                "Moon dripstone - pierces the nearest target with a stalagmite, dealing critical damage to the enemy.",
+                "$(li)",
+                "Moon withering - gives a wither effect to all entities within a 5 block radius."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Moon",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:moon_double_sided_spear\",count:1}],ArmorItems:[{id:\"power:moon_armor_boots\",count:1},{id:\"power:moon_armor_leggings\",count:1},{id:\"power:moon_armor_chestplate\",count:1},{id:\"power:moon_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
