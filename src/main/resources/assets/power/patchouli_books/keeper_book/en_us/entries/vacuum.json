@@ -1,0 +1,27 @@
+{
+    "name": "Vacuum",
+    "icon": "power:textures/mob_effect/vacuum_master.png",
+    "category": "power:stones",
+    "sortnum": 18,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Sphere of nothing - fires a sphere that deals damage to all entities within a 3 block radius as it flies.",
+                "$(li)",
+                "Rifts - deals damage to entities within a 12 block radius.",
+                "$(li)",
+                "Zeroing out - moves player to the save point."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Vacuum",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:vacuum_dagger\",count:1}],ArmorItems:[{id:\"power:vacuum_armor_boots\",count:1},{id:\"power:vacuum_armor_leggings\",count:1},{id:\"power:vacuum_armor_chestplate\",count:1},{id:\"power:vacuum_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

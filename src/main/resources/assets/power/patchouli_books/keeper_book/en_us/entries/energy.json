@@ -1,0 +1,27 @@
+{
+    "name": "Energy",
+    "icon": "power:textures/mob_effect/energy_master.png",
+    "category": "power:stones",
+    "sortnum": 19,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Energy flux - shoots an energy beam that blocks the opponent's abilities for a while.",
+                "$(li)",
+                "Energy charged ball - explodes when it hits an entity or a block.",
+                "$(li)",
+                "Energy charge - gives the player positive reinforcing effects for a certain period of time."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Energy",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:energy_staff\",count:1}],ArmorItems:[{id:\"power:energy_armor_boots\",count:1},{id:\"power:energy_armor_leggings\",count:1},{id:\"power:energy_armor_chestplate\",count:1},{id:\"power:energy_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
