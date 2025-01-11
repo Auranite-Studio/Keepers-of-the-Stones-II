@@ -1,0 +1,27 @@
+{
+    "name": "Creation",
+    "icon": "power:textures/mob_effect/creation_master.png",
+    "category": "power:stones",
+    "sortnum": 24,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Four elements attack - attacks an entity with a beam attack.",
+                "$(li)",
+                "Supertool - gives a random powerful tool to the player.",
+                "$(li)",
+                "Immortality mark - gives an effect similar to that of the totem of undying."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Creation",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:creation_staff\",count:1}],ArmorItems:[{id:\"power:creation_armor_boots\",count:1},{id:\"power:creation_armor_leggings\",count:1},{id:\"power:creation_armor_chestplate\",count:1},{id:\"power:creation_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
