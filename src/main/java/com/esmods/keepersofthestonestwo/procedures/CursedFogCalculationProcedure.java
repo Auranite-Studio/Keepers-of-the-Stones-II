@@ -53,11 +53,10 @@ public class CursedFogCalculationProcedure {
 						_vars.fog_distance = entity.getData(PowerModVariables.PLAYER_VARIABLES).fog_distance + 10;
 						_vars.syncPlayerVariables(entity);
 					}
-				}
-				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).fog_distance >= 999) {
+				} else {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.cursed_fog = true;
+						_vars.cursed_fog = false;
 						_vars.syncPlayerVariables(entity);
 					}
 				}
