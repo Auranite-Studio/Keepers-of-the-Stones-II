@@ -22,6 +22,7 @@ import javax.annotation.Nullable;
 
 import com.mojang.blaze3d.shaders.FogShape;
 
+import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
 @EventBusSubscriber(value = Dist.CLIENT)
@@ -51,22 +52,24 @@ public class RenderSpecialFogInCursedBiomesProcedure {
 			Entity entity = provider.getCamera().getEntity();
 			if (level != null && entity != null) {
 				Vec3 pos = entity.getPosition((float) provider.getPartialTick());
-				execute(provider, level, entity);
+				execute(provider, level, pos.x(), pos.y(), pos.z(), entity, provider.getFarPlaneDistance());
 			}
 		}
 	}
 
-	public static void execute(LevelAccessor world, Entity entity) {
-		execute(null, world, entity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, double end) {
+		execute(null, world, x, y, z, entity, end);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, double end) {
 		if (entity == null)
 			return;
-		if (world.getBiome(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ())).is(TagKey.create(Registries.BIOME, ResourceLocation.parse("power:cursed_biomes"))) && !entity.isUnderWater()
-				&& !(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PowerModMobEffects.MIST))) {
-			setDistance(15, 45);
-			setShape(FogShape.CYLINDER);
+		if (!entity.isUnderWater() && !(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PowerModMobEffects.MIST))) {
+			if (world.getBiome(BlockPos.containing(x, y, z)).is(TagKey.create(Registries.BIOME, ResourceLocation.parse("power:cursed_biomes")))) {
+				setDistance((float) (0.4 * Math.sqrt(entity.getData(PowerModVariables.PLAYER_VARIABLES).fog_distance)), (float) (Math.sqrt(end) * 2 + entity.getData(PowerModVariables.PLAYER_VARIABLES).fog_distance));
+			} else {
+				setDistance((float) (0.4 * Math.sqrt(entity.getData(PowerModVariables.PLAYER_VARIABLES).fog_distance)), (float) (Math.sqrt(end) * 2 + entity.getData(PowerModVariables.PLAYER_VARIABLES).fog_distance));
+			}
 		}
 	}
 }

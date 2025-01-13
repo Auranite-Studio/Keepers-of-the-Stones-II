@@ -97,6 +97,7 @@ public class PowerModVariables {
 			clone.haste_char = original.haste_char;
 			clone.jump_char = original.jump_char;
 			clone.rank = original.rank;
+			clone.fog_distance = original.fog_distance;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -127,7 +128,6 @@ public class PowerModVariables {
 				clone.attribute_is_ready = original.attribute_is_ready;
 				clone.level_up_status = original.level_up_status;
 				clone.cursed_fog = original.cursed_fog;
-				clone.fog_distance = original.fog_distance;
 				clone.golden_dust_extended_powers = original.golden_dust_extended_powers;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
