@@ -57,15 +57,12 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 22 && mouseY < topPos + 46) {
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 22 && mouseY < topPos + 46)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 83 && mouseY < topPos + 107) {
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 83 && mouseY < topPos + 107)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 146 && mouseY < topPos + 170) {
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 146 && mouseY < topPos + 170)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80"), mouseX, mouseY);
-		}
 	}
 
 	@Override

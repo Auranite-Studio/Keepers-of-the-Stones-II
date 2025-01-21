@@ -59,15 +59,12 @@ public class WheelAbilitiesMindScreen extends AbstractContainerScreen<WheelAbili
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 80 && mouseX < leftPos + 104 && mouseY > topPos + 22 && mouseY < topPos + 46) {
+		if (mouseX > leftPos + 80 && mouseX < leftPos + 104 && mouseY > topPos + 22 && mouseY < topPos + 46)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mind.tooltip_psychowaves_uses_15"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 85 && mouseY < topPos + 109) {
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 85 && mouseY < topPos + 109)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 143 && mouseY < topPos + 167) {
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 143 && mouseY < topPos + 167)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mind.tooltip_remote_control_uses_25"), mouseX, mouseY);
-		}
 	}
 
 	@Override

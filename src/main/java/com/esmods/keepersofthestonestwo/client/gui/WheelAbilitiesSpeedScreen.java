@@ -57,15 +57,12 @@ public class WheelAbilitiesSpeedScreen extends AbstractContainerScreen<WheelAbil
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 21 && mouseY < topPos + 45) {
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 21 && mouseY < topPos + 45)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_speed.tooltip_dash_uses_20"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 84 && mouseY < topPos + 108) {
+		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 84 && mouseY < topPos + 108)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_speed.tooltip_acceleration_uses_45"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 145 && mouseY < topPos + 169) {
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 145 && mouseY < topPos + 169)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70"), mouseX, mouseY);
-		}
 	}
 
 	@Override

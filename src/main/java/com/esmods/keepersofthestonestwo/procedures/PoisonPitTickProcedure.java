@@ -12,6 +12,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 
+import java.util.List;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
@@ -32,8 +33,9 @@ public class PoisonPitTickProcedure {
 							0.1, 0.1);
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / 2d), e -> true).stream()
-							.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / 2d), e -> true).stream()
+							.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					for (Entity entityiterator : _entfound) {
 						if (!(entity == entityiterator)) {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 4, false, false));

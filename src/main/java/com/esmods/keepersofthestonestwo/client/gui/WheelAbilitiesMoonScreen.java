@@ -57,15 +57,12 @@ public class WheelAbilitiesMoonScreen extends AbstractContainerScreen<WheelAbili
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47) {
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 85 && mouseY < topPos + 109) {
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 85 && mouseY < topPos + 109)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 143 && mouseY < topPos + 167) {
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 143 && mouseY < topPos + 167)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80"), mouseX, mouseY);
-		}
 	}
 
 	@Override

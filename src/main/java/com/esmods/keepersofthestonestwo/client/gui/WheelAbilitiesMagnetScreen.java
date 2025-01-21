@@ -57,15 +57,12 @@ public class WheelAbilitiesMagnetScreen extends AbstractContainerScreen<WheelAbi
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 21 && mouseY < topPos + 45) {
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 21 && mouseY < topPos + 45)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_magnet.tooltip_magnetic_field_wave_uses_10"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 143 && mouseX < leftPos + 167 && mouseY > topPos + 83 && mouseY < topPos + 107) {
+		if (mouseX > leftPos + 143 && mouseX < leftPos + 167 && mouseY > topPos + 83 && mouseY < topPos + 107)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_magnet.tooltip_negative_charge_uses_30"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 145 && mouseY < topPos + 169) {
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 145 && mouseY < topPos + 169)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30"), mouseX, mouseY);
-		}
 	}
 
 	@Override
