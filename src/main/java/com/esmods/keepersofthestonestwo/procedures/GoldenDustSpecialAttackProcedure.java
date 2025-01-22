@@ -112,7 +112,7 @@ public class GoldenDustSpecialAttackProcedure {
 									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 					}
 				}
-				RandomPowerGetProcedure.execute(entity);
+				RandomPowerGetProcedure.execute(world, entity);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;

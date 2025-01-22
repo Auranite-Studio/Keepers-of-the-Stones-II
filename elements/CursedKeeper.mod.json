@@ -205,7 +205,7 @@
     "armorBaseValue": 10.0,
     "trackingRange": 256,
     "followRange": 128,
-    "health": 350,
+    "health": 700,
     "xpAmount": 1000,
     "waterMob": false,
     "breatheUnderwater": {
@@ -227,12 +227,12 @@
     "immuneToCactus": true,
     "immuneToDrowning": true,
     "immuneToLightning": true,
-    "immuneToPotions": false,
+    "immuneToPotions": true,
     "immuneToPlayer": false,
     "immuneToExplosion": true,
     "immuneToTrident": false,
     "immuneToAnvil": true,
-    "immuneToWither": false,
+    "immuneToWither": true,
     "immuneToDragonBreath": true,
     "mobDrop": {
       "value": "CUSTOM:LuckCoin"

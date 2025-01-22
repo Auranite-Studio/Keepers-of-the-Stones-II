@@ -103,6 +103,8 @@ public class CursedKnightEntity extends Monster {
 			return false;
 		if (damagesource.is(DamageTypes.FALL))
 			return false;
+		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
+			return false;
 		return super.hurt(damagesource, amount);
 	}
 

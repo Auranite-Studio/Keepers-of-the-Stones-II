@@ -3,7 +3,7 @@ plugins {
     id 'net.neoforged.moddev' version '1.0.21'
 }
 
-version = '1.1.0.1'
+version = '1.1.0.2'
 base.archivesName = "Keepers-of-the-Stones-II"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
@@ -14,6 +14,13 @@ neoForge {
     runs {
         client {
             client()
+
+            def mcreatorJvmOptions = System.getenv('MCREATOR_JVM_OPTIONS')
+            if (mcreatorJvmOptions) {
+                mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.each { arg ->
+                    jvmArgument(arg)
+                }
+            }
         }
         server {
             server()
