@@ -1,11 +1,3 @@
-What's new in Keepers of the Stones II version 1.1.0.2?<br/>
-<br />- Added sound and particles when leveling up
-<br />- The player will now be given a strength effect for 90 seconds when leveling up
-<br />- Increased the Cursed Keeper's health to 700
-<br />- Cursed mobs are now invulnerable to the wither
-<br />- The fog in the cursed forest is now appearing smoothly
-<br />- Reworked the warp effect, it now makes the player twice as low
-<br />- The pehkui mod is no longer needed
-<br />- [API] Colorful Powers API has been updated to version 22
-<br />- [Bugfix] Fixed a bug that made the cursed keeper vulnerable to potion effects
-<br />- [Bugfix] Fixed a bug where killing some mobs did not give points for the level
+What's new in Keepers of the Stones II version 1.1.0.3?<br/>
+<br />- 
+<br />- 
