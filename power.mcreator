@@ -33658,7 +33658,7 @@
     {
       "name": "GoldenDustSpecialAttack",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "golden_dust_special_attack",
       "metadata": {
