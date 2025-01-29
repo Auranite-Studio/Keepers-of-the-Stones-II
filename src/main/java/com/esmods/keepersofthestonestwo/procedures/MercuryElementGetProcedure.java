@@ -10,13 +10,14 @@ import net.minecraft.world.entity.Entity;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.init.PowerModGameRules;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class MercuryElementGetProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (!PowerModVariables.MapVariables.get(world).mercury_stone || !world.getLevelData().getGameRules().getBoolean(PowerModGameRules.LIMITED_NUMBER_OF_STONES)) {
+		if (!PowerModVariables.MapVariables.get(world).mercury_stone || !PowerConfigConfiguration.LIMIT_NUMBER_STONES.get()) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.MERCURY_STONE.get()).copy();

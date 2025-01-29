@@ -10,13 +10,14 @@ import net.minecraft.world.entity.Entity;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.init.PowerModGameRules;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class SpiritElementGetProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (!PowerModVariables.MapVariables.get(world).spirit_stone || !world.getLevelData().getGameRules().getBoolean(PowerModGameRules.LIMITED_NUMBER_OF_STONES)) {
+		if (!PowerModVariables.MapVariables.get(world).spirit_stone || !PowerConfigConfiguration.LIMIT_NUMBER_STONES.get()) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.SPIRIT_STONE.get()).copy();

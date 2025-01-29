@@ -24,37 +24,6 @@
       "path": "~/Modules/BasicModule"
     },
     {
-      "name": "GameruleSync",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_stone_after_dead",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GameruleSyncProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "FireStone",
       "type": "item",
       "compiles": true,
@@ -26749,18 +26718,6 @@
       "path": "~/ItemsAndBlocks/OtherItems"
     },
     {
-      "name": "LimitedNumberOfStones",
-      "type": "gamerule",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "limited_number_of_stones",
-      "metadata": {
-        "files": [],
-        "type": "logic"
-      },
-      "path": "~/Gamerules"
-    },
-    {
       "name": "LimitOfStonesForOnePlayer",
       "type": "gamerule",
       "compiles": true,
@@ -30865,29 +30822,6 @@
         ]
       },
       "path": "~/Elements/Smoke"
-    },
-    {
-      "name": "ConfigVariablesToMapVariables",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "config_variables_to_map_variables",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ConfigVariablesToMapVariablesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Configs"
     },
     {
       "name": "ExplosionPassiveProtection",
@@ -35403,7 +35337,7 @@
     {
       "name": "PwReset",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "pw_reset",
       "metadata": {
@@ -37467,12 +37401,6 @@
       "value": "false"
     },
     {
-      "name": "get_limit_of_stones",
-      "type": "logic",
-      "scope": "map",
-      "value": "true"
-    },
-    {
       "name": "transfered_power",
       "type": "logic",
       "scope": "player_lifetime",
@@ -37500,12 +37428,6 @@
       "name": "master_effect_start",
       "type": "logic",
       "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "is_set_configurable_zero",
-      "type": "logic",
-      "scope": "player_persistent",
       "value": "false"
     },
     {
@@ -38985,7 +38907,6 @@
       "effect.power.chaos_dark_master": "Т. Мастер Хаоса",
       "entity.power.cursed_knight": "Проклятый рыцарь",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Солнце",
-      "gamerule.limitedNumberOfStones": "Ограниченное количество камней",
       "block.power.blue_portal": "Синий портал",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "block.power.cursed_stone_bricks_slab": "Плита из проклятых каменных кирпичей",
@@ -39343,7 +39264,6 @@
       "block.power.freaking_parsnip_block": "Блок дикого пастернака",
       "gui.power.keepers_box_gui_part_4.tooltip_sand": "Песок",
       "item.power.poison_armor_chestplate": "Нагрудник мастера яда",
-      "gamerule.limitedNumberOfStones.description": "Ограничивает количество получаемых камней и учитывает их уникальность",
       "item.power.mercury_ball": "Mercury Ball",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
       "gui.power.keepers_box_gui_part_4.tooltip_mercury": "Ртуть",
@@ -39874,7 +39794,6 @@
       "effect.power.chaos_dark_master": "Dark Master of Chaos",
       "entity.power.cursed_knight": "Cursed Knight",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Sun",
-      "gamerule.limitedNumberOfStones": "Limited number of stones",
       "block.power.blue_portal": "Blue Portal",
       "item.power.air_armor_boots": "Air Boots",
       "block.power.cursed_stone_bricks_slab": "Cursed Stone Bricks Slab",
@@ -40231,7 +40150,6 @@
       "block.power.freaking_parsnip_block": "Freaking Parsnip Block",
       "gui.power.keepers_box_gui_part_4.tooltip_sand": "Sand",
       "item.power.poison_armor_chestplate": "Poison Chestplate",
-      "gamerule.limitedNumberOfStones.description": "Limits the number of stones to receive and includes their uniqueness",
       "item.power.mercury_ball": "Mercury Ball",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "gui.power.keepers_box_gui_part_4.tooltip_mercury": "Mercury",

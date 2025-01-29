@@ -87,7 +87,6 @@ public class PowerModVariables {
 			clone.boots = original.boots;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
 			clone.hypnotized = original.hypnotized;
-			clone.is_set_configurable_zero = original.is_set_configurable_zero;
 			clone.level = original.level;
 			clone.level_exp = original.level_exp;
 			clone.base_damage_by_lvl = original.base_damage_by_lvl;
@@ -249,7 +248,6 @@ public class PowerModVariables {
 		public boolean darkness_stone = false;
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
-		public boolean get_limit_of_stones = true;
 		public double cpapi_ver = 21.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
@@ -315,7 +313,6 @@ public class PowerModVariables {
 			darkness_stone = nbt.getBoolean("darkness_stone");
 			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
 			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
-			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
 			cpapi_ver = nbt.getDouble("cpapi_ver");
 		}
 
@@ -377,7 +374,6 @@ public class PowerModVariables {
 			nbt.putBoolean("darkness_stone", darkness_stone);
 			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
 			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
-			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
 			nbt.putDouble("cpapi_ver", cpapi_ver);
 			return nbt;
 		}
@@ -484,7 +480,6 @@ public class PowerModVariables {
 		public boolean hypnotized = false;
 		public boolean master_effect_end = false;
 		public boolean master_effect_start = false;
-		public boolean is_set_configurable_zero = false;
 		public double level = 1.0;
 		public double level_exp = 0.0;
 		public double base_damage_by_lvl = 6.0;
@@ -547,7 +542,6 @@ public class PowerModVariables {
 			nbt.putBoolean("hypnotized", hypnotized);
 			nbt.putBoolean("master_effect_end", master_effect_end);
 			nbt.putBoolean("master_effect_start", master_effect_start);
-			nbt.putBoolean("is_set_configurable_zero", is_set_configurable_zero);
 			nbt.putDouble("level", level);
 			nbt.putDouble("level_exp", level_exp);
 			nbt.putDouble("base_damage_by_lvl", base_damage_by_lvl);
@@ -611,7 +605,6 @@ public class PowerModVariables {
 			hypnotized = nbt.getBoolean("hypnotized");
 			master_effect_end = nbt.getBoolean("master_effect_end");
 			master_effect_start = nbt.getBoolean("master_effect_start");
-			is_set_configurable_zero = nbt.getBoolean("is_set_configurable_zero");
 			level = nbt.getDouble("level");
 			level_exp = nbt.getDouble("level_exp");
 			base_damage_by_lvl = nbt.getDouble("base_damage_by_lvl");
