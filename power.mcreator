@@ -35337,7 +35337,7 @@
     {
       "name": "PwReset",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "pw_reset",
       "metadata": {
