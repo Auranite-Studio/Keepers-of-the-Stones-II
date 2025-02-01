@@ -33275,7 +33275,7 @@
     {
       "name": "OpenChoiceKeeperBoxStoneScreen",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "open_choice_keeper_box_stone_screen",
       "metadata": {
