@@ -12,12 +12,10 @@ import net.minecraft.world.level.GameRules;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PowerModGameRules {
-	public static GameRules.Key<GameRules.BooleanValue> LIMIT_OF_STONES_FOR_ONE_PLAYER;
 	public static GameRules.Key<GameRules.BooleanValue> CHOICE_STONE_WHEN_ENTER_THE_WORLD;
 
 	@SubscribeEvent
 	public static void registerGameRules(FMLCommonSetupEvent event) {
-		LIMIT_OF_STONES_FOR_ONE_PLAYER = GameRules.register("limitOfStonesForOnePlayer", GameRules.Category.DROPS, GameRules.BooleanValue.create(true));
 		CHOICE_STONE_WHEN_ENTER_THE_WORLD = GameRules.register("choiceStoneWhenEnterTheWorld", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
 	}
 }
