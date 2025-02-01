@@ -21044,44 +21044,6 @@
       "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
-      "name": "StarRegenerationStart",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_regeneration_start",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarRegenerationStartProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Amplifier"
-    },
-    {
-      "name": "StarRegenerationEnd",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_regeneration_end",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarRegenerationEndProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Amplifier"
-    },
-    {
       "name": "StarRegenerationPotion",
       "type": "potion",
       "compiles": true,
