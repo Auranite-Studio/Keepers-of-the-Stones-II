@@ -18,11 +18,11 @@ import net.minecraft.client.Minecraft;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
 
-import com.esmods.keepersofthestonestwo.procedures.GetPowerScaleProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetStarPointsProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetActiveProcedure;
 
 @EventBusSubscriber({Dist.CLIENT})
-public class PowerOverlayOverlay {
+public class StarPointsOverlayOverlay {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
 		int w = event.getGuiGraphics().guiWidth();
@@ -49,7 +49,7 @@ public class PowerOverlayOverlay {
 
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					GetPowerScaleProcedure.execute(entity), 31, 35, -1, false);
+					GetStarPointsProcedure.execute(entity), 31, 35, -1, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();

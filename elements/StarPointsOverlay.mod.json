@@ -10,7 +10,7 @@
           "name": "label_proc_get_power_scale",
           "text": {
             "fixedValue": "0",
-            "name": "GetPowerScale"
+            "name": "GetStarPoints"
           },
           "color": {
             "value": -1,

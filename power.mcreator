@@ -382,45 +382,6 @@
       "path": "~/Elements/Fire"
     },
     {
-      "name": "PowerScaleRegen",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "power_scale_regen",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PowerScaleRegenProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/PowerScaleModule "
-    },
-    {
-      "name": "GetPowerScale",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "get_power_scale",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GetPowerScaleProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/PowerScaleModule "
-    },
-    {
       "name": "GetActive",
       "type": "procedure",
       "compiles": true,
@@ -5594,19 +5555,6 @@
         ]
       },
       "path": "~/Elements/Ice"
-    },
-    {
-      "name": "PowerOverlay",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "power_overlay",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/screens/PowerOverlayOverlay.java"
-        ]
-      },
-      "path": "~/Modules/BasicModule"
     },
     {
       "name": "LavaAttackProjectile",
@@ -12489,21 +12437,6 @@
         ]
       },
       "path": "~/Elements/Moon"
-    },
-    {
-      "name": "StarPotionInfinityDopolnitielnaiaInformatsiia",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_infinity_dopolnitielnaia_informatsiia",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPotionInfinityDopolnitielnaiaInformatsiiaProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Modules/PowerScaleModule "
     },
     {
       "name": "SpaceMaster",
@@ -36791,6 +36724,58 @@
         ]
       },
       "path": "~/Biomes/CursedForest"
+    },
+    {
+      "name": "StarPointsRegen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_points_regen",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPointsRegenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/StarPointsModule"
+    },
+    {
+      "name": "GetStarPoints",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_star_points",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GetStarPointsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/StarPointsModule"
+    },
+    {
+      "name": "StarPointsOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_points_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/screens/StarPointsOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Modules/StarPointsModule"
     }
   ],
   "variable_elements": [
@@ -40706,7 +40691,7 @@
             "children": []
           },
           {
-            "name": "PowerScaleModule ",
+            "name": "StarPointsModule",
             "children": []
           },
           {
