@@ -10,9 +10,10 @@ public class StarPointsRecoveryMultiplierDebugProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "global_star_points_recovery_multiplier: " + (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.STAR_REGENERATION)
-				? new java.text.DecimalFormat("##.#").format(entity.getData(PowerModVariables.PLAYER_VARIABLES).power_recovery_multiplier
-						* ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PowerModMobEffects.STAR_REGENERATION) ? _livEnt.getEffect(PowerModMobEffects.STAR_REGENERATION).getAmplifier() : 0) + 1))
-				: new java.text.DecimalFormat("##.#").format(entity.getData(PowerModVariables.PLAYER_VARIABLES).power_recovery_multiplier));
+		return "global_star_points_recovery_multiplier: " + (new java.text.DecimalFormat("##.#").format(entity.getData(PowerModVariables.PLAYER_VARIABLES).power_recovery_multiplier) + " (aem: "
+				+ (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.STAR_REGENERATION)
+						? Math.round((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PowerModMobEffects.STAR_REGENERATION) ? _livEnt.getEffect(PowerModMobEffects.STAR_REGENERATION).getAmplifier() : 0) + 1)
+						: 0)
+				+ ")");
 	}
 }
