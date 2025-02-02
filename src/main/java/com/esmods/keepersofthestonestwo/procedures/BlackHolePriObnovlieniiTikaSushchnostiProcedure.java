@@ -8,9 +8,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
 
-import java.util.List;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
@@ -36,33 +36,12 @@ public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 		}
 		{
 			final Vec3 _center = new Vec3(playerPosX, playerPosY, playerPosZ);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-			for (Entity entityiterator : _entfound) {
+			for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 				if (!((entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("space")
 						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space")
 						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("space"))) {
 					if (entityiterator instanceof Mob || entityiterator instanceof Player) {
-						if (!(new Object() {
-							public boolean checkGamemode(Entity _ent) {
-								if (_ent instanceof ServerPlayer _serverPlayer) {
-									return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-								} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-									return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-											&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
-								}
-								return false;
-							}
-						}.checkGamemode(entityiterator)) && !(new Object() {
-							public boolean checkGamemode(Entity _ent) {
-								if (_ent instanceof ServerPlayer _serverPlayer) {
-									return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
-								} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-									return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-											&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
-								}
-								return false;
-							}
-						}.checkGamemode(entityiterator))) {
+						if (!(getEntityGameType(entityiterator) == GameType.CREATIVE) && !(getEntityGameType(entityiterator) == GameType.SPECTATOR)) {
 							itemPosX = entityiterator.getX();
 							itemPosY = entityiterator.getY();
 							itemPosZ = entityiterator.getZ();
@@ -86,5 +65,16 @@ public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 				}
 			}
 		}
+	}
+
+	private static GameType getEntityGameType(Entity entity) {
+		if (entity instanceof ServerPlayer serverPlayer) {
+			return serverPlayer.gameMode.getGameModeForPlayer();
+		} else if (entity instanceof Player player && player.level().isClientSide()) {
+			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
+			if (playerInfo != null)
+				return playerInfo.getGameMode();
+		}
+		return null;
 	}
 }

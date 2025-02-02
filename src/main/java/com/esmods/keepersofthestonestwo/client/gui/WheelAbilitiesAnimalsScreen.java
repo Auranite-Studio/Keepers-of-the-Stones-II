@@ -57,12 +57,15 @@ public class WheelAbilitiesAnimalsScreen extends AbstractContainerScreen<WheelAb
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10"), mouseX, mouseY);
-		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 85 && mouseY < topPos + 109)
+		}
+		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 85 && mouseY < topPos + 109) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 143 && mouseY < topPos + 167)
+		}
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 143 && mouseY < topPos + 167) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60"), mouseX, mouseY);
+		}
 	}
 
 	@Override
