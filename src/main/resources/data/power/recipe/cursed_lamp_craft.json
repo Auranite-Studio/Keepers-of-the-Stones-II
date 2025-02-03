@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "power:cursed_stone_bricks"
-    },
-    "b": {
-      "item": "minecraft:white_stained_glass_pane"
-    },
-    "c": {
-      "item": "power:amplifier_block"
-    }
+    "a": "power:cursed_stone_bricks",
+    "b": "minecraft:white_stained_glass_pane",
+    "c": "power:amplifier_block"
   },
   "result": {
     "id": "power:cursed_lamp",

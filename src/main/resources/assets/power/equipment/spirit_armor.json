@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:spirit_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:spirit_armor"
+      }
+    ]
+  }
+}

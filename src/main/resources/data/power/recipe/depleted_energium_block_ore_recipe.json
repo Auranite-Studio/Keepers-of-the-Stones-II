@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "power:depleted_energium_block"
-    }
+    "power:depleted_energium_block"
   ],
   "result": {
     "id": "power:depleted_energium_ingot",

@@ -10,21 +10,29 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
+
+import javax.annotation.Nullable;
 
 import java.util.List;
 
+import com.mojang.serialization.MapCodec;
+
+import com.esmods.keepersofthestonestwo.procedures.StoneGetRechargeStateProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GoldenDustStoneUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
 
 public class GoldenDustStoneItem extends Item {
-	public GoldenDustStoneItem() {
-		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));
+	public GoldenDustStoneItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.COMMON).stacksTo(1).fireResistant());
 	}
 
 	@Override
@@ -41,9 +49,9 @@ public class GoldenDustStoneItem extends Item {
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		GoldenDustStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
+		InteractionResult ar = super.use(world, entity, hand);
+		GoldenDustStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, entity.getItemInHand(hand));
 		return ar;
 	}
 
@@ -51,5 +59,19 @@ public class GoldenDustStoneItem extends Item {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		RechargeStoneTickEventProcedure.execute(itemstack);
+	}
+
+	public record RechargeProperty() implements RangeSelectItemModelProperty {
+		public static final MapCodec<RechargeProperty> MAP_CODEC = MapCodec.unit(new RechargeProperty());
+
+		@Override
+		public float get(ItemStack itemStackToRender, @Nullable ClientLevel clientWorld, @Nullable LivingEntity entity, int seed) {
+			return (float) StoneGetRechargeStateProcedure.execute(itemStackToRender);
+		}
+
+		@Override
+		public MapCodec<RechargeProperty> type() {
+			return MAP_CODEC;
+		}
 	}
 }

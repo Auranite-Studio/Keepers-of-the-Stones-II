@@ -13,8 +13,8 @@ import net.minecraft.network.chat.Component;
 import java.util.List;
 
 public class EnergiumUpgradeSmithingTemplateItem extends Item {
-	public EnergiumUpgradeSmithingTemplateItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+	public EnergiumUpgradeSmithingTemplateItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.COMMON).stacksTo(64));
 	}
 
 	@Override

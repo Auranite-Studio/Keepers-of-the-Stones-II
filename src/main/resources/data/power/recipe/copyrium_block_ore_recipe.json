@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "power:copyrium_block"
-    }
+    "power:copyrium_block"
   ],
   "result": {
     "id": "power:copyrium_ingot",

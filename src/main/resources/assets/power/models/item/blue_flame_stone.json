@@ -2,13 +2,5 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "power:item/blue_flame_stone"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "power:blue_flame_stone_recharge": 0.01
-      },
-      "model": "power:item/blue_flame_stone_0"
-    }
-  ]
+  }
 }

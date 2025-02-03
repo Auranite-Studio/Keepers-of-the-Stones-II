@@ -10,8 +10,8 @@ import net.minecraft.world.entity.Entity;
 import com.esmods.keepersofthestonestwo.procedures.LuckCoinInInventoryProcedure;
 
 public class LuckCoinItem extends Item {
-	public LuckCoinItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC));
+	public LuckCoinItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.EPIC).stacksTo(1));
 	}
 
 	@Override

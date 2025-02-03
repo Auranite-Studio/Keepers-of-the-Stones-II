@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:smoke_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:smoke_armor"
+      }
+    ]
+  }
+}

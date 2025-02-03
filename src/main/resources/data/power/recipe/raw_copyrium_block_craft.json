@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "power:raw_copyrium"
-    }
+    "a": "power:raw_copyrium"
   },
   "result": {
     "id": "power:raw_copyrium_block",

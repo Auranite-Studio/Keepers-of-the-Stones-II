@@ -3,9 +3,7 @@
   "category": "misc",
   "experience": 0.7,
   "cookingtime": 200,
-  "ingredient": {
-    "item": "power:copyrium_ore"
-  },
+  "ingredient": "power:copyrium_ore",
   "result": {
     "id": "power:copyrium_ingot"
   }

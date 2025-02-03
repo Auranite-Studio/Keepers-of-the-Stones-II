@@ -7,15 +7,9 @@
     "c"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:redstone"
-    },
-    "b": {
-      "item": "minecraft:glass_pane"
-    },
-    "c": {
-      "item": "power:depleted_energium_ingot"
-    }
+    "a": "minecraft:redstone",
+    "b": "minecraft:glass_pane",
+    "c": "power:depleted_energium_ingot"
   },
   "result": {
     "id": "power:empty_battery",

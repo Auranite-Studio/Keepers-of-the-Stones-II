@@ -22,9 +22,9 @@ public class BatteryChargerClientTickProcedure {
 				world.addParticle((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()), (x + 0.5), (y + 1), (z + 0.5), (-0.5), 0.1, (-0.5));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, y), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:magnetic_waves")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, y), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("power:magnetic_waves")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, y, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:magnetic_waves")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, y, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("power:magnetic_waves")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 			}

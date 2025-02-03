@@ -3,9 +3,7 @@
   "category": "misc",
   "experience": 0.575,
   "cookingtime": 100,
-  "ingredient": {
-    "item": "power:raw_depleted_energium"
-  },
+  "ingredient": "power:raw_depleted_energium",
   "result": {
     "id": "power:depleted_energium_ingot"
   }

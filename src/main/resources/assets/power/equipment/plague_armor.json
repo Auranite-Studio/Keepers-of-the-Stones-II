@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:plague_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:plague_armor"
+      }
+    ]
+  }
+}

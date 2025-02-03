@@ -1,8 +1,8 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -40,7 +40,7 @@ public class CursedKeeperSummonProcedure {
 					_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 1);
 				PowerMod.queueServerWork(38, () -> {
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 						if (entityToSpawn != null) {
 							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 						}
@@ -63,14 +63,14 @@ public class CursedKeeperSummonProcedure {
 					_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 1);
 				PowerMod.queueServerWork(28, () -> {
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 						if (entityToSpawn != null) {
 							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 						}
 					}
 					PowerMod.queueServerWork(48, () -> {
 						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = PowerModEntities.CURSED_SQUIRE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+							Entity entityToSpawn = PowerModEntities.CURSED_SQUIRE.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 							if (entityToSpawn != null) {
 								entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 							}
@@ -94,28 +94,28 @@ public class CursedKeeperSummonProcedure {
 					_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 1);
 				PowerMod.queueServerWork(18, () -> {
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 						if (entityToSpawn != null) {
 							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 						}
 					}
 					PowerMod.queueServerWork(28, () -> {
 						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = PowerModEntities.CURSED_SQUIRE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+							Entity entityToSpawn = PowerModEntities.CURSED_SQUIRE.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 							if (entityToSpawn != null) {
 								entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 							}
 						}
 						PowerMod.queueServerWork(38, () -> {
 							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+								Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 								if (entityToSpawn != null) {
 									entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 								}
 							}
 							PowerMod.queueServerWork(48, () -> {
 								if (world instanceof ServerLevel _level) {
-									Entity entityToSpawn = PowerModEntities.CURSED_SQUIRE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+									Entity entityToSpawn = PowerModEntities.CURSED_SQUIRE.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 									if (entityToSpawn != null) {
 										entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 									}

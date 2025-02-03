@@ -1,5 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
@@ -10,6 +11,6 @@ public class SmokeMusketPriVystrielieSnariadomIzPriedmietaProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown(PowerModItems.SMOKE_MUSKET.get(), 60);
+			_player.getCooldowns().addCooldown(new ItemStack(PowerModItems.SMOKE_MUSKET.get()), 60);
 	}
 }

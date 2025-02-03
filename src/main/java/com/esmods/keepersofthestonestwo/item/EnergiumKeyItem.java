@@ -9,8 +9,8 @@ import net.minecraft.world.InteractionResult;
 import com.esmods.keepersofthestonestwo.procedures.EnergiumKeyOpenVaultProcedure;
 
 public class EnergiumKeyItem extends Item {
-	public EnergiumKeyItem() {
-		super(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON));
+	public EnergiumKeyItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.COMMON).stacksTo(16));
 	}
 
 	@Override

@@ -1,0 +1,25 @@
+{
+  "model": {
+    "type": "power:legacy_overrides",
+    "overrides": [
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "power:ice_stone/recharge"
+            },
+            "value": 0.01
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "power:item/ice_stone_0"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "power:item/ice_stone"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:filth_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:filth_armor"
+      }
+    ]
+  }
+}

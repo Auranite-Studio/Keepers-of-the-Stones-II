@@ -7,15 +7,9 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:diamond"
-    },
-    "b": {
-      "item": "power:energium_upgrade_smithing_template"
-    },
-    "c": {
-      "item": "power:depleted_energium_block"
-    }
+    "a": "minecraft:diamond",
+    "b": "power:energium_upgrade_smithing_template",
+    "c": "power:depleted_energium_block"
   },
   "result": {
     "id": "power:energium_upgrade_smithing_template",

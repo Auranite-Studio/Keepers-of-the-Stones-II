@@ -17,13 +17,13 @@ import net.minecraft.core.BlockPos;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
 public class FreakingParsnipBlockBlock extends FlowerBlock {
-	public FreakingParsnipBlockBlock() {
-		super(PowerModMobEffects.LETHALITY, 100, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS).instabreak().noOcclusion().dynamicShape().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
+	public FreakingParsnipBlockBlock(BlockBehaviour.Properties properties) {
+		super(PowerModMobEffects.LETHALITY, 100, properties.mapColor(MapColor.PLANT).sound(SoundType.GRASS).instabreak().noOcclusion().dynamicShape().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		Vec3 offset = state.getOffset(world, pos);
+		Vec3 offset = state.getOffset(pos);
 		return box(5, 0, 5, 11, 10, 11).move(offset.x, offset.y, offset.z);
 	}
 

@@ -10,7 +10,7 @@ import net.minecraft.core.registries.Registries;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class MusicDiscCallOfThePastItem extends Item {
-	public MusicDiscCallOfThePastItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "music_disc_call_of_the_past"))));
+	public MusicDiscCallOfThePastItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.RARE).stacksTo(1).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "music_disc_call_of_the_past"))));
 	}
 }

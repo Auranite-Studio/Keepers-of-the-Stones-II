@@ -7,9 +7,7 @@
     "a a"
   ],
   "key": {
-    "a": {
-      "item": "power:cursed_stone"
-    }
+    "a": "power:cursed_stone"
   },
   "result": {
     "id": "power:cursed_ladder",

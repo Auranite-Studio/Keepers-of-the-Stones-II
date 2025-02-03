@@ -2,13 +2,5 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "power:item/smoke_stone"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "power:smoke_stone_recharge": 0.01
-      },
-      "model": "power:item/smoke_stone_0"
-    }
-  ]
+  }
 }

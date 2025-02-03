@@ -109,7 +109,7 @@ public class MeteoriteProjectileEntity extends AbstractArrow implements ItemSupp
 	public void tick() {
 		super.tick();
 		MeteoriteProjectileKazhdyiTikPriPoliotieSnariadaProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
-		if (this.inGround)
+		if (this.isInGround())
 			this.discard();
 	}
 
@@ -130,7 +130,7 @@ public class MeteoriteProjectileEntity extends AbstractArrow implements ItemSupp
 		entityarrow.setKnockback(knockback);
 		entityarrow.igniteForSeconds(100);
 		world.addFreshEntity(entityarrow);
-		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.deepslate.break")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.deepslate.break")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
@@ -146,7 +146,7 @@ public class MeteoriteProjectileEntity extends AbstractArrow implements ItemSupp
 		entityarrow.setCritArrow(false);
 		entityarrow.igniteForSeconds(100);
 		entity.level().addFreshEntity(entityarrow);
-		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.deepslate.break")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
+		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.deepslate.break")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

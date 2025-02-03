@@ -1,0 +1,25 @@
+{
+  "model": {
+    "type": "power:legacy_overrides",
+    "overrides": [
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "power:plague_stone/recharge"
+            },
+            "value": 0.01
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "power:item/plague_stone_0"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "power:item/plague_stone"
+    }
+  }
+}

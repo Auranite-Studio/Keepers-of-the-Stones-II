@@ -6,12 +6,8 @@
     "b"
   ],
   "key": {
-    "a": {
-      "item": "power:copyrium_ingot"
-    },
-    "b": {
-      "item": "minecraft:paper"
-    }
+    "a": "minecraft:air",
+    "b": "minecraft:paper"
   },
   "result": {
     "id": "power:empty_characteristics_card",

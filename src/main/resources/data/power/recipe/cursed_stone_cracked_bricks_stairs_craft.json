@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "power:cursed_stone_cracked_bricks"
-  },
+  "ingredient": "power:cursed_stone_cracked_bricks",
   "result": {
     "id": "power:cursed_stone_cracked_bricks_stairs",
     "count": 1

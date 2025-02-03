@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:music_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:music_armor"
+      }
+    ]
+  }
+}

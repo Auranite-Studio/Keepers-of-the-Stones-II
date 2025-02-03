@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:chaos_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:chaos_armor"
+      }
+    ]
+  }
+}

@@ -5,7 +5,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
 
 public class EnergiumDustItem extends Item {
-	public EnergiumDustItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+	public EnergiumDustItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.COMMON).stacksTo(64));
 	}
 }

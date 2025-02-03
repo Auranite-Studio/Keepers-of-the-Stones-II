@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "power:copyrium_ingot"
-    }
+    "a": "power:copyrium_ingot"
   },
   "result": {
     "id": "power:copyrium_block",

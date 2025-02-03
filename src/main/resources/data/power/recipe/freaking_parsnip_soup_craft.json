@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "power:freaking_parsnip"
-    },
-    {
-      "item": "power:freaking_parsnip"
-    },
-    {
-      "item": "minecraft:salmon"
-    },
-    {
-      "item": "minecraft:bowl"
-    }
+    "power:freaking_parsnip",
+    "power:freaking_parsnip",
+    "minecraft:salmon",
+    "minecraft:bowl"
   ],
   "result": {
     "id": "power:freaking_parsnip_soup",

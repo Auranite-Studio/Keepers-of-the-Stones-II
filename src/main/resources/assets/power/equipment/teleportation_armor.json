@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:teleportation_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:teleportation_armor"
+      }
+    ]
+  }
+}
