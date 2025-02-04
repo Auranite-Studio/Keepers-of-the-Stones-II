@@ -11,7 +11,7 @@ env:
   MINECRAFT_VERSION: 1.21.4                      
   JAVA_VERSION: 21      
   VERSION: 1.1.0.3
-  RELEASE_NAME: Keepers of the Stones II 1.1.0.3 Beta
+  RELEASE_NAME: Keepers of the Stones II 1.1.0.3 Alpha
 
 jobs:
   build:
