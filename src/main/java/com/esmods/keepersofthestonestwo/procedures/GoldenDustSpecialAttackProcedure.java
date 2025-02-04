@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import org.joml.Vector3f;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
@@ -15,6 +13,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.util.ARGB;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -59,7 +58,7 @@ public class GoldenDustSpecialAttackProcedure {
 						break;
 					}
 					if (world instanceof ServerLevel)
-						((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(215 / 255.0F, 178 / 255.0F, 105 / 255.0F), 1)),
+						((ServerLevel) world).sendParticles((new DustParticleOptions(ARGB.color(215, 178, 105), 1)),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
@@ -105,7 +104,7 @@ public class GoldenDustSpecialAttackProcedure {
 				for (int index1 = 0; index1 < 60; index1++) {
 					for (int index2 = 0; index2 < (int) particleAmount; index2++) {
 						if (world instanceof ServerLevel)
-							((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(215 / 255.0F, 178 / 255.0F, 105 / 255.0F), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+							((ServerLevel) world).sendParticles((new DustParticleOptions(ARGB.color(215, 178, 105), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 									(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 					}
@@ -133,7 +132,7 @@ public class GoldenDustSpecialAttackProcedure {
 				for (int index3 = 0; index3 < 60; index3++) {
 					for (int index4 = 0; index4 < (int) particleAmount; index4++) {
 						if (world instanceof ServerLevel)
-							((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(215 / 255.0F, 178 / 255.0F, 105 / 255.0F), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+							((ServerLevel) world).sendParticles((new DustParticleOptions(ARGB.color(215, 178, 105), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 									(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 					}

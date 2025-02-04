@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import org.joml.Vector3f;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
@@ -16,6 +14,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.util.ARGB;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -62,7 +61,7 @@ public class DarknessSpecialAttackProcedure {
 						break;
 					}
 					if (world instanceof ServerLevel)
-						((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(18 / 255.0F, 25 / 255.0F, 45 / 255.0F), 1)),
+						((ServerLevel) world).sendParticles((new DustParticleOptions(ARGB.color(18, 25, 45), 1)),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
@@ -102,7 +101,7 @@ public class DarknessSpecialAttackProcedure {
 				particleRadius = 5;
 				for (int index1 = 0; index1 < (int) particleAmount; index1++) {
 					if (world instanceof ServerLevel)
-						((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(18 / 255.0F, 25 / 255.0F, 45 / 255.0F), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+						((ServerLevel) world).sendParticles((new DustParticleOptions(ARGB.color(18, 25, 45), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 								(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 								(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 0.25);
 				}
