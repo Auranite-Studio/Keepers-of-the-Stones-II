@@ -1,14 +1,8 @@
 {
   "type": "minecraft:smithing_transform",
-  "template": {
-    "item": "power:energium_upgrade_smithing_template"
-  },
-  "base": {
-    "item": "power:depleted_energium_ingot"
-  },
-  "addition": {
-    "item": "minecraft:redstone"
-  },
+  "template": "power:energium_upgrade_smithing_template",
+  "base": "power:depleted_energium_ingot",
+  "addition": "minecraft:redstone",
   "result": {
     "id": "power:energium_ingot"
   }

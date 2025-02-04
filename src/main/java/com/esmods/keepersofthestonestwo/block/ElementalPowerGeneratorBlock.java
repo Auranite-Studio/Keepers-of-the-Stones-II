@@ -35,8 +35,8 @@ import com.esmods.keepersofthestonestwo.block.entity.ElementalPowerGeneratorBloc
 public class ElementalPowerGeneratorBlock extends Block implements EntityBlock {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 
-	public ElementalPowerGeneratorBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.METAL).strength(5f).lightLevel(s -> (new Object() {
+	public ElementalPowerGeneratorBlock(BlockBehaviour.Properties properties) {
+		super(properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.METAL).strength(5f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 7;
@@ -46,7 +46,7 @@ public class ElementalPowerGeneratorBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 

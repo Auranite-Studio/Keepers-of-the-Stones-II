@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
@@ -22,8 +22,8 @@ import com.esmods.keepersofthestonestwo.procedures.MoonBatteryUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonBatteryDescProcedure;
 
 public class MoonBatteryItem extends Item {
-	public MoonBatteryItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+	public MoonBatteryItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.COMMON).stacksTo(1));
 	}
 
 	@Override
@@ -40,9 +40,9 @@ public class MoonBatteryItem extends Item {
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		MoonBatteryUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
+		InteractionResult ar = super.use(world, entity, hand);
+		MoonBatteryUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, entity.getItemInHand(hand));
 		return ar;
 	}
 }

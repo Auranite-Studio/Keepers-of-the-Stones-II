@@ -22,7 +22,7 @@ import io.netty.buffer.Unpooled;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModGameRules;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
 @EventBusSubscriber
 public class OpenChoiceKeeperBoxStoneScreenProcedure {
@@ -38,7 +38,7 @@ public class OpenChoiceKeeperBoxStoneScreenProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (world.getLevelData().getGameRules().getBoolean(PowerModGameRules.CHOICE_STONE_WHEN_ENTER_THE_WORLD) == true && entity.getData(PowerModVariables.PLAYER_VARIABLES).selected == false) {
+		if (PowerConfigConfiguration.FIRST_JOIN_STONES_DISTRIBUTION.get() == true && entity.getData(PowerModVariables.PLAYER_VARIABLES).selected == false) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {

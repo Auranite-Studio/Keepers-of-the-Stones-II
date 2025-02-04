@@ -1,8 +1,8 @@
 package com.esmods.keepersofthestonestwo.client.renderer;
 
-import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.RenderType;
@@ -15,7 +15,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.esmods.keepersofthestonestwo.entity.PoisonBombEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelpoison_bomb;
 
-public class PoisonBombRenderer extends EntityRenderer<PoisonBombEntity> {
+public class PoisonBombRenderer extends EntityRenderer<PoisonBombEntity, LivingEntityRenderState> {
 	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/poison_bomb.png");
 	private final Modelpoison_bomb model;
 
@@ -25,18 +25,26 @@ public class PoisonBombRenderer extends EntityRenderer<PoisonBombEntity> {
 	}
 
 	@Override
-	public void render(PoisonBombEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
-		VertexConsumer vb = bufferIn.getBuffer(RenderType.entityCutout(this.getTextureLocation(entityIn)));
+	public void render(LivingEntityRenderState state, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
+		VertexConsumer vb = bufferIn.getBuffer(RenderType.entityCutout(texture));
 		poseStack.pushPose();
-		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
-		poseStack.mulPose(Axis.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
+		poseStack.mulPose(Axis.YP.rotationDegrees(state.yRot - 90));
+		poseStack.mulPose(Axis.ZP.rotationDegrees(90 + state.xRot));
+		model.setupAnim(state);
 		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY);
 		poseStack.popPose();
-		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
+		super.render(state, poseStack, bufferIn, packedLightIn);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(PoisonBombEntity entity) {
-		return texture;
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(PoisonBombEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		state.xRot = entity.getXRot(partialTicks);
+		state.yRot = entity.getYRot(partialTicks);
 	}
 }

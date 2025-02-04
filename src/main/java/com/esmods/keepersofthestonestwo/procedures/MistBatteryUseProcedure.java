@@ -45,7 +45,7 @@ public class MistBatteryUseProcedure {
 					_vars.power = 500;
 					_vars.syncPlayerVariables(entity);
 				}
-				SendClientPackageActivationStoneVFXProcedure.execute(world, x, y, z, entity);
+				SendClientPackageActivationStoneVFXProcedure.execute(world, x, y, z);
 			}
 		}
 	}

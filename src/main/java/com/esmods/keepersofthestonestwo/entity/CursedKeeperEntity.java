@@ -115,21 +115,21 @@ public class CursedKeeperEntity extends Monster {
 
 	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(PowerModItems.LUCK_COIN.get()));
+		this.spawnAtLocation(serverLevel, new ItemStack(PowerModItems.LUCK_COIN.get()));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.generic.death"));
 	}
 
 	@Override
-	public boolean hurt(DamageSource damagesource, float amount) {
+	public boolean hurtServer(ServerLevel level, DamageSource damagesource, float amount) {
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
@@ -152,7 +152,7 @@ public class CursedKeeperEntity extends Monster {
 			return false;
 		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
 			return false;
-		return super.hurt(damagesource, amount);
+		return super.hurtServer(level, damagesource, amount);
 	}
 
 	@Override
@@ -237,8 +237,8 @@ public class CursedKeeperEntity extends Monster {
 	}
 
 	@Override
-	public void customServerAiStep() {
-		super.customServerAiStep();
+	public void customServerAiStep(ServerLevel serverLevel) {
+		super.customServerAiStep(serverLevel);
 		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 

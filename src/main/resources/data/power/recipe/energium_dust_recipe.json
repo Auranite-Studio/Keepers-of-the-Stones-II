@@ -5,9 +5,7 @@
     "a"
   ],
   "key": {
-    "a": {
-      "item": "power:energium_ingot"
-    }
+    "a": "power:energium_ingot"
   },
   "result": {
     "id": "power:energium_dust",

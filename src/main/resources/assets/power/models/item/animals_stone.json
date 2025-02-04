@@ -2,13 +2,5 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "power:item/animals_stone"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "power:animals_stone_recharge": 0.01
-      },
-      "model": "power:item/animals_stone_0"
-    }
-  ]
+  }
 }

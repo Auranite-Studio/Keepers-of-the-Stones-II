@@ -2,13 +2,5 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "power:item/darkness_stone"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "power:darkness_stone_recharge": 0.01
-      },
-      "model": "power:item/darkness_stone_0"
-    }
-  ]
+  }
 }

@@ -30,21 +30,7 @@ public class EnergiumKeyOpenVaultProcedure {
 		double particleRadius = 0;
 		double particleAmount = 0;
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PowerModBlocks.ENERGIUM_VAULT.get()) {
-			if (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), (entity.getStringUUID())) == 0 && new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "Opened") == 0) {
+			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), (entity.getStringUUID())) == 0 && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "Opened") == 0) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -65,9 +51,9 @@ public class EnergiumKeyOpenVaultProcedure {
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.insert_item")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.insert_item")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.insert_item")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.insert_item")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 				if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
@@ -90,9 +76,9 @@ public class EnergiumKeyOpenVaultProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x + 0.5, y + 1, z + 0.5), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.eject_item")), SoundSource.BLOCKS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x + 0.5, y + 1, z + 0.5), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.eject_item")), SoundSource.BLOCKS, 1, 1);
 							} else {
-								_level.playLocalSound((x + 0.5), (y + 1), (z + 0.5), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.eject_item")), SoundSource.BLOCKS, 1, 1, false);
+								_level.playLocalSound((x + 0.5), (y + 1), (z + 0.5), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.eject_item")), SoundSource.BLOCKS, 1, 1, false);
 							}
 						}
 						final int tick2 = ticks;
@@ -106,12 +92,19 @@ public class EnergiumKeyOpenVaultProcedure {
 			} else {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.insert_item_fail")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.insert_item_fail")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.insert_item_fail")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.insert_item_fail")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

@@ -5,7 +5,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
 
 public class RawDepletedEnergiumItem extends Item {
-	public RawDepletedEnergiumItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+	public RawDepletedEnergiumItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.COMMON).stacksTo(64));
 	}
 }

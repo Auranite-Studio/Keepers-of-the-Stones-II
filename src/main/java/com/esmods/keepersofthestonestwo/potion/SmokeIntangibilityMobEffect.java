@@ -4,6 +4,7 @@ package com.esmods.keepersofthestonestwo.potion;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.server.level.ServerLevel;
 
 import com.esmods.keepersofthestonestwo.procedures.SmokeIntangibilityStartProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SmokeIntangibilitySmokeEffectProcedure;
@@ -24,8 +25,8 @@ public class SmokeIntangibilityMobEffect extends MobEffect {
 	}
 
 	@Override
-	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		SmokeIntangibilitySmokeEffectProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ());
-		return super.applyEffectTick(entity, amplifier);
+	public boolean applyEffectTick(ServerLevel level, LivingEntity entity, int amplifier) {
+		SmokeIntangibilitySmokeEffectProcedure.execute(level, entity.getX(), entity.getY(), entity.getZ());
+		return super.applyEffectTick(level, entity, amplifier);
 	}
 }

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:golden_dust_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:golden_dust_armor"
+      }
+    ]
+  }
+}

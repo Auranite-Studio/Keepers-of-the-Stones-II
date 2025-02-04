@@ -5,6 +5,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -67,58 +68,58 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/characteristics_card_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
+		guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/characteristics_card_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 
 		if (ExpBar1Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_1.png"), this.leftPos + 29, this.topPos + 56, 0, 0, 9, 5, 9, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_1.png"), this.leftPos + 29, this.topPos + 56, 0, 0, 9, 5, 9, 5);
 		}
 		if (ExpBar2Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 38, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 38, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
 		if (ExpBar3Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 48, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 48, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
 		if (ExpBar4Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 58, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 58, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
 		if (BarExp5Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 68, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 68, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
 		if (BarExp6Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 78, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 78, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
 		if (BarExp7Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 88, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 88, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
 		if (Bar8Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 98, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 98, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
 		if (Bar9Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 108, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 108, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
 		if (Bar10Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 118, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 118, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
 		if (Bar11Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 128, this.topPos + 56, 0, 0, 11, 5, 11, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_mid.png"), this.leftPos + 128, this.topPos + 56, 0, 0, 11, 5, 11, 5);
 		}
 		if (Bar12Procedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/experience_bar_progress_end.png"), this.leftPos + 139, this.topPos + 56, 0, 0, 10, 5, 10, 5);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/experience_bar_progress_end.png"), this.leftPos + 139, this.topPos + 56, 0, 0, 10, 5, 10, 5);
 		}
 		if (RankDCheckProcedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_d_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/rank_d_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 		}
 		if (RankCCheckProcedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_c_print.png"), this.leftPos + 0, this.topPos + 1, 0, 0, 320, 176, 320, 176);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/rank_c_print.png"), this.leftPos + 0, this.topPos + 1, 0, 0, 320, 176, 320, 176);
 		}
 		if (RankBCheckProcedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_b_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/rank_b_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 		}
 		if (RankACheckProcedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_a_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/rank_a_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 		}
 		if (RankSCheckProcedure.execute(entity)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rank_s_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/rank_s_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 		}
 		RenderSystem.disableBlend();
 	}

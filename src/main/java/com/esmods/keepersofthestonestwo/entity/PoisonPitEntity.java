@@ -28,6 +28,7 @@ import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.Mth;
+import net.minecraft.server.level.ServerLevel;
 
 import com.esmods.keepersofthestonestwo.procedures.PoisonPitTickProcedure;
 import com.esmods.keepersofthestonestwo.procedures.HitboxScaleProcedure;
@@ -89,7 +90,7 @@ public class PoisonPitEntity extends PathfinderMob {
 	}
 
 	@Override
-	public boolean hurt(DamageSource damagesource, float amount) {
+	public boolean hurtServer(ServerLevel level, DamageSource damagesource, float amount) {
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
@@ -116,7 +117,7 @@ public class PoisonPitEntity extends PathfinderMob {
 			return false;
 		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
 			return false;
-		return super.hurt(damagesource, amount);
+		return super.hurtServer(level, damagesource, amount);
 	}
 
 	@Override

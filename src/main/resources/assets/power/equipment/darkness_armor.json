@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:darkness_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:darkness_armor"
+      }
+    ]
+  }
+}

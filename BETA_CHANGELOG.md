@@ -1,11 +1,23 @@
-What's new in Keepers of the Stones II version 1.1.0.2?<br/>
-<br />- Added sound and particles when leveling up
-<br />- The player will now be given a strength effect for 90 seconds when leveling up
-<br />- Increased the Cursed Keeper's health to 700
-<br />- Cursed mobs are now invulnerable to the wither
-<br />- The fog in the cursed forest is now appearing smoothly
-<br />- Reworked the warp effect, it now makes the player twice as low
-<br />- The pehkui mod is no longer needed
-<br />- [API] Colorful Powers API has been updated to version 22
-<br />- [Bugfix] Fixed a bug that made the cursed keeper vulnerable to potion effects
-<br />- [Bugfix] Fixed a bug where killing some mobs did not give points for the level
+### New features:
+*N/A*
+
+### Improvemnts: 
+- Mod ported to NeoForge 1.21.4
+- Star points will now not be restored when the power lock effect is active
+- The mod's game rules have been removed, with all their functionality moved to the config
+
+### API changes:
+- Colorful Powers API has been updated to version 23
+- Removed the lines in the config that control the duration of the stones and their recharge
+- The mod's game rules have been removed, with all their functionality moved to the config
+- Removed variable ``golden_dust_extended_powers``
+- Removed variable ``allow_custom_element_powers_for_stones``
+
+### Bugfixes:
+- [Bugfix] Fixed a bug that caused star regeneration potion to not speed up the recovery of star points
+- [Bugfix] Fixed a bug that caused cursed keeper to appear with 350 hp instead of 700 hp
+
+### Known issues: 
+- The battery charger is not working yet
+- Rendering items on blocks doesn't work yet
+- Animations for activating and deactivating stones are temporarily disabled

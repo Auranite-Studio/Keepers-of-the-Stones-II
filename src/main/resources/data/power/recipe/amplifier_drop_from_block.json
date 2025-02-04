@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "power:amplifier_block"
-    }
+    "power:amplifier_block"
   ],
   "result": {
     "id": "power:amplifier_drop",

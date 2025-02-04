@@ -11,8 +11,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 
 public class FreakingParsnipSoupItem extends Item {
-	public FreakingParsnipSoupItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(10).saturationModifier(0.8f).build()));
+	public FreakingParsnipSoupItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.COMMON).stacksTo(1).food((new FoodProperties.Builder()).nutrition(10).saturationModifier(0.8f).build()));
 	}
 
 	@Override

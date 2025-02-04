@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:mist_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:mist_armor"
+      }
+    ]
+  }
+}

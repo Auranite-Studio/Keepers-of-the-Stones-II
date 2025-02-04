@@ -2,13 +2,5 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "power:item/lava_stone"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "power:lava_stone_recharge": 0.01
-      },
-      "model": "power:item/lava_stone_0"
-    }
-  ]
+  }
 }

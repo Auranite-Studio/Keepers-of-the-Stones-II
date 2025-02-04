@@ -10,7 +10,7 @@ import net.minecraft.core.registries.Registries;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class MusicDiscAncientMoodItem extends Item {
-	public MusicDiscAncientMoodItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "music_disc_ancient_mood"))));
+	public MusicDiscAncientMoodItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.RARE).stacksTo(1).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "music_disc_ancient_mood"))));
 	}
 }

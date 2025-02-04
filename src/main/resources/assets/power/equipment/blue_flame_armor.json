@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:blue_flame_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:blue_flame_armor"
+      }
+    ]
+  }
+}

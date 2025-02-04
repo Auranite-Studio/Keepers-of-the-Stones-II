@@ -7,12 +7,8 @@
     "b"
   ],
   "key": {
-    "a": {
-      "item": "power:energium_ingot"
-    },
-    "b": {
-      "item": "minecraft:stick"
-    }
+    "a": "power:energium_ingot",
+    "b": "minecraft:stick"
   },
   "result": {
     "id": "power:energium_sword",

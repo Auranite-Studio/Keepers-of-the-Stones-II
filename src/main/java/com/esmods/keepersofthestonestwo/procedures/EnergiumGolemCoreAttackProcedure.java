@@ -20,7 +20,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
-import java.util.List;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
@@ -65,9 +64,9 @@ public class EnergiumGolemCoreAttackProcedure {
 			if (entity.getPersistentData().getDouble("IA") > 24 && entity.getPersistentData().getDouble("IA") < 26) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1, false);
 					}
 				}
 			}
@@ -80,9 +79,8 @@ public class EnergiumGolemCoreAttackProcedure {
 						_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.ENERGIUM_GOLEM_CORE_ATTACK_PARTICLE.get()), XPar, YPar, ZPar, 5, (0.075 + Range * 0.05), (0.075 + Range * 0.05), (0.075 + Range * 0.05), 0);
 					{
 						final Vec3 _center = new Vec3(XPar, YPar, ZPar);
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((0.125 + Range * 0.05) / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-								.toList();
-						for (Entity entityiterator : _entfound) {
+						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((0.125 + Range * 0.05) / 2d), e -> true).stream()
+								.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
 								if (!(entityiterator instanceof ItemEntity)) {
 									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:energium_golem_ds")))), 24);
@@ -92,7 +90,8 @@ public class EnergiumGolemCoreAttackProcedure {
 							}
 						}
 					}
-					if (!(world.getBlockState(BlockPos.containing(XPar, YPar, ZPar))).is(BlockTags.create(ResourceLocation.parse("c:unbreakable"))) && world.getLevelData().getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING) == true) {
+					if (!(world.getBlockState(BlockPos.containing(XPar, YPar, ZPar))).is(BlockTags.create(ResourceLocation.parse("c:unbreakable")))
+							&& (world instanceof ServerLevel _serverLevelGR29 && _serverLevelGR29.getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING)) == true) {
 						world.destroyBlock(BlockPos.containing(XPar, YPar, ZPar), false);
 					}
 					loop = loop + 1;

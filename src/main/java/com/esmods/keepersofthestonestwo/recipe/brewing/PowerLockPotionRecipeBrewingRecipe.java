@@ -9,14 +9,10 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.alchemy.PotionContents;
-import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.Holder;
-
-import java.util.Optional;
 
 import com.esmods.keepersofthestonestwo.init.PowerModPotions;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
@@ -31,13 +27,12 @@ public class PowerLockPotionRecipeBrewingRecipe implements IBrewingRecipe {
 	@Override
 	public boolean isInput(ItemStack input) {
 		Item inputItem = input.getItem();
-		Optional<Holder<Potion>> optionalPotion = input.getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY).potion();
-		return (inputItem == Items.POTION || inputItem == Items.SPLASH_POTION || inputItem == Items.LINGERING_POTION) && optionalPotion.isPresent() && optionalPotion.get().is(Potions.AWKWARD);
+		return (inputItem == Items.POTION || inputItem == Items.SPLASH_POTION || inputItem == Items.LINGERING_POTION) && input.getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY).is(Potions.AWKWARD);
 	}
 
 	@Override
 	public boolean isIngredient(ItemStack ingredient) {
-		return Ingredient.of(new ItemStack(PowerModItems.ENERGIUM_DUST.get())).test(ingredient);
+		return Ingredient.of(PowerModItems.ENERGIUM_DUST.get()).test(ingredient);
 	}
 
 	@Override

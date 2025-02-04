@@ -28,10 +28,10 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.SpawnGroupData;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.AgeableMob;
@@ -44,6 +44,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
@@ -105,7 +106,7 @@ public class SpiritEntity extends TamableAnimal {
 			public void tick() {
 				LivingEntity livingentity = SpiritEntity.this.getTarget();
 				if (SpiritEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
-					SpiritEntity.this.doHurtTarget(livingentity);
+					SpiritEntity.this.doHurtTarget(this.getServerLevel(livingentity), livingentity);
 				} else {
 					double d0 = SpiritEntity.this.distanceToSqr(livingentity);
 					if (d0 < 8) {
@@ -136,12 +137,12 @@ public class SpiritEntity extends TamableAnimal {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.generic.death"));
 	}
 
 	@Override
@@ -150,7 +151,7 @@ public class SpiritEntity extends TamableAnimal {
 	}
 
 	@Override
-	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata) {
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, EntitySpawnReason reason, @Nullable SpawnGroupData livingdata) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
 		SpiritPriNachalnomPrizyvieSushchnostiProcedure.execute(this);
 		return retval;
@@ -159,25 +160,25 @@ public class SpiritEntity extends TamableAnimal {
 	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
-		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
+		InteractionResult retval = InteractionResult.SUCCESS;
 		Item item = itemstack.getItem();
 		if (itemstack.getItem() instanceof SpawnEggItem) {
 			retval = super.mobInteract(sourceentity, hand);
 		} else if (this.level().isClientSide()) {
-			retval = (this.isTame() && this.isOwnedBy(sourceentity) || this.isFood(itemstack)) ? InteractionResult.sidedSuccess(this.level().isClientSide()) : InteractionResult.PASS;
+			retval = (this.isTame() && this.isOwnedBy(sourceentity) || this.isFood(itemstack)) ? InteractionResult.SUCCESS : InteractionResult.PASS;
 		} else {
 			if (this.isTame()) {
 				if (this.isOwnedBy(sourceentity)) {
 					if (this.isFood(itemstack) && this.getHealth() < this.getMaxHealth()) {
 						this.usePlayerItem(sourceentity, hand, itemstack);
-						FoodProperties foodproperties = itemstack.getFoodProperties(this);
+						FoodProperties foodproperties = itemstack.get(DataComponents.FOOD);
 						float nutrition = foodproperties != null ? (float) foodproperties.nutrition() : 1;
 						this.heal(nutrition);
-						retval = InteractionResult.sidedSuccess(this.level().isClientSide());
+						retval = InteractionResult.SUCCESS;
 					} else if (this.isFood(itemstack) && this.getHealth() < this.getMaxHealth()) {
 						this.usePlayerItem(sourceentity, hand, itemstack);
 						this.heal(4);
-						retval = InteractionResult.sidedSuccess(this.level().isClientSide());
+						retval = InteractionResult.SUCCESS;
 					} else {
 						retval = super.mobInteract(sourceentity, hand);
 					}
@@ -191,7 +192,7 @@ public class SpiritEntity extends TamableAnimal {
 					this.level().broadcastEntityEvent(this, (byte) 6);
 				}
 				this.setPersistenceRequired();
-				retval = InteractionResult.sidedSuccess(this.level().isClientSide());
+				retval = InteractionResult.SUCCESS;
 			} else {
 				retval = super.mobInteract(sourceentity, hand);
 				if (retval == InteractionResult.SUCCESS || retval == InteractionResult.CONSUME)
@@ -217,14 +218,14 @@ public class SpiritEntity extends TamableAnimal {
 
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-		SpiritEntity retval = PowerModEntities.SPIRIT.get().create(serverWorld);
-		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null);
+		SpiritEntity retval = PowerModEntities.SPIRIT.get().create(serverWorld, EntitySpawnReason.BREEDING);
+		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), EntitySpawnReason.BREEDING, null);
 		return retval;
 	}
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return Ingredient.of(new ItemStack(Items.WATER_BUCKET)).test(stack);
+		return Ingredient.of(Items.WATER_BUCKET).test(stack);
 	}
 
 	@Override

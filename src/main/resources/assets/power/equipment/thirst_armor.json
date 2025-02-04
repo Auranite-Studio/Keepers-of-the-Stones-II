@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "power:thirst_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "power:thirst_armor"
+      }
+    ]
+  }
+}

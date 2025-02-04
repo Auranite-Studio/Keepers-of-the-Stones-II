@@ -37,9 +37,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 					});
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.activate")), SoundSource.BLOCKS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.beacon.activate")), SoundSource.BLOCKS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.activate")), SoundSource.BLOCKS, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.beacon.activate")), SoundSource.BLOCKS, 1, 1, false);
 						}
 					}
 					{
@@ -73,9 +73,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 					});
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.deactivate")), SoundSource.BLOCKS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.beacon.deactivate")), SoundSource.BLOCKS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.deactivate")), SoundSource.BLOCKS, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.beacon.deactivate")), SoundSource.BLOCKS, 1, 1, false);
 						}
 					}
 					{
@@ -87,48 +87,21 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 					}
 				}
 			} else {
-				if (!(new Object() {
-					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getString(tag);
-						return "";
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded")).equals("0")) {
+				if (!(getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded")).equals("0")) {
 					if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0")) {
-						if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals(new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded")) && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals(new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded"))) {
+						if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded"))
+								&& !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded"))) {
 							if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first_timer == 0) {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_first = new Object() {
-										public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getString(tag);
-											return "";
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded");
+									_vars.fake_element_name_first = getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded");
 									_vars.syncPlayerVariables(entity);
 								}
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
 									}
 								}
 								{
@@ -149,39 +122,19 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 							}
 						}
 					} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0") && (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("0")) {
-						if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals(new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded")) && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals(new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded"))) {
+						if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded"))
+								&& !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded"))) {
 							if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second_timer == 0) {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_second = new Object() {
-										public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getString(tag);
-											return "";
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded");
+									_vars.fake_element_name_second = getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded");
 									_vars.syncPlayerVariables(entity);
 								}
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
 									}
 								}
 								{
@@ -203,39 +156,19 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 						}
 					} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0") && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("0")
 							&& (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("0")) {
-						if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals(new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded")) && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals(new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded"))) {
+						if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded"))
+								&& !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded"))) {
 							if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third_timer == 0) {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_third = new Object() {
-										public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getString(tag);
-											return "";
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded");
+									_vars.fake_element_name_third = getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded");
 									_vars.syncPlayerVariables(entity);
 								}
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
 									}
 								}
 								{
@@ -259,5 +192,12 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 				}
 			}
 		}
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
 	}
 }

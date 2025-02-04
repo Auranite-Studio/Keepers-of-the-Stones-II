@@ -7,9 +7,7 @@
     " a "
   ],
   "key": {
-    "a": {
-      "item": "power:amplifier_drop"
-    }
+    "a": "power:amplifier_drop"
   },
   "result": {
     "id": "power:amplifier_ring",

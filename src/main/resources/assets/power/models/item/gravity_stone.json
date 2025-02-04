@@ -2,13 +2,5 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "power:item/gravity_stone"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "power:gravity_stone_recharge": 0.01
-      },
-      "model": "power:item/gravity_stone_0"
-    }
-  ]
+  }
 }

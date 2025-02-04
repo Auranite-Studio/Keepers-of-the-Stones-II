@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "power:raw_energium"
-    }
+    "a": "power:raw_energium"
   },
   "result": {
     "id": "power:raw_energium_block",

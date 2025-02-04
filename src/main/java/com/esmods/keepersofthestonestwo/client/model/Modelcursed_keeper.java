@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.client.model;
 
-import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
@@ -12,13 +12,10 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.EntityModel;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class Modelcursed_keeper<T extends Entity> extends EntityModel<T> {
+public class Modelcursed_keeper extends EntityModel<LivingEntityRenderState> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("power", "modelcursed_keeper"), "main");
@@ -35,6 +32,7 @@ public class Modelcursed_keeper<T extends Entity> extends EntityModel<T> {
 	public final ModelPart monetka;
 
 	public Modelcursed_keeper(ModelPart root) {
+		super(root);
 		this.ku_boss = root.getChild("ku_boss");
 		this.Body = this.ku_boss.getChild("Body");
 		this.Head = this.Body.getChild("Head");
@@ -126,12 +124,13 @@ public class Modelcursed_keeper<T extends Entity> extends EntityModel<T> {
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}
 
-	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(LivingEntityRenderState state) {
+		float limbSwing = state.walkAnimationPos;
+		float limbSwingAmount = state.walkAnimationSpeed;
+		float ageInTicks = state.ageInTicks;
+		float netHeadYaw = state.yRot;
+		float headPitch = state.xRot;
+
 	}
 
-	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
-		ku_boss.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-	}
 }
