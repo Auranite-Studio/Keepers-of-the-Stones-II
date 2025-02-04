@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Star regeneration",
-    "icon": "star_regeneration.png",
+    "icon": "star_regeneration",
     "color": {
       "value": -16763956,
       "falpha": 0.0
@@ -15,12 +15,6 @@
     "isCuredByMilk": true,
     "isProtectedByTotem": true,
     "isCuredbyHoney": false,
-    "modifiers": [],
-    "onStarted": {
-      "name": "StarRegenerationStart"
-    },
-    "onExpired": {
-      "name": "StarRegenerationEnd"
-    }
+    "modifiers": []
   }
 }

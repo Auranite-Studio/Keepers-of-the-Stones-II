@@ -24,7 +24,6 @@ import com.esmods.keepersofthestonestwo.procedures.TeleportationMasterEndProcedu
 import com.esmods.keepersofthestonestwo.procedures.TechnologyMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.StunStopSoundProcedure;
-import com.esmods.keepersofthestonestwo.procedures.StarRegenerationEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpiritMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpeedMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceMasterEndProcedure;
@@ -306,8 +305,6 @@ public class PowerModMobEffects {
 			ExplosionMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(AMBER_MASTER)) {
 			AmberMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(STAR_REGENERATION)) {
-			StarRegenerationEndProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(MIST_MASTER)) {
 			MistMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(SAND_MASTER)) {

@@ -14,7 +14,7 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
 @EventBusSubscriber
-public class PowerScaleRegenProcedure {
+public class StarPointsRegenProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(PlayerTickEvent.Post event) {
 		execute(event, event.getEntity());
@@ -27,7 +27,8 @@ public class PowerScaleRegenProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == true) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == true
+				&& !(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.STAR_REGENERATION)) && !(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PowerModMobEffects.POWER_LOCK))) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer > 0) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
@@ -48,11 +49,13 @@ public class PowerScaleRegenProcedure {
 					}
 				}
 			}
-		} else if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.STAR_REGENERATION)) {
+		}
+		if (entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(PowerModMobEffects.STAR_REGENERATION)) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer > 0) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.powerTimer = entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer - entity.getData(PowerModVariables.PLAYER_VARIABLES).power_recovery_multiplier;
+					_vars.powerTimer = entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer - entity.getData(PowerModVariables.PLAYER_VARIABLES).power_recovery_multiplier
+							* ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PowerModMobEffects.STAR_REGENERATION) ? _livEnt.getEffect(PowerModMobEffects.STAR_REGENERATION).getAmplifier() : 0) + 1);
 					_vars.syncPlayerVariables(entity);
 				}
 			} else {
