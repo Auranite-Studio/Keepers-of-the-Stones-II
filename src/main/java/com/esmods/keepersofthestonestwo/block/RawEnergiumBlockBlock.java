@@ -7,7 +7,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
@@ -15,12 +14,12 @@ import net.minecraft.core.BlockPos;
 import com.esmods.keepersofthestonestwo.procedures.EnergiumBlockPowerLockProcedure;
 
 public class RawEnergiumBlockBlock extends Block {
-	public RawEnergiumBlockBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6.25f, 225f).requiresCorrectToolForDrops());
+	public RawEnergiumBlockBlock(BlockBehaviour.Properties properties) {
+		super(properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6.25f, 225f).requiresCorrectToolForDrops());
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 

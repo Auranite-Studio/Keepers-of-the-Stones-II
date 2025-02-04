@@ -10,6 +10,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -37,14 +38,12 @@ import com.esmods.keepersofthestonestwo.block.entity.EnergiumVaultBlockEntity;
 
 public class EnergiumVaultBlock extends Block implements EntityBlock {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 2);
-	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+	public static final EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
 
-	public EnergiumVaultBlock() {
-		super(BlockBehaviour.Properties.of()
-				.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.break")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.step")),
-						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.place")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.hit")),
-						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.fall"))))
-				.strength(50f).lightLevel(s -> (new Object() {
+	public EnergiumVaultBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.break")), () -> BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.step")),
+				() -> BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.place")), () -> BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.hit")),
+				() -> BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.fall")))).strength(50f).lightLevel(s -> (new Object() {
 					public int getLightLevel() {
 						if (s.getValue(BLOCKSTATE) == 1)
 							return 12;
@@ -57,12 +56,12 @@ public class EnergiumVaultBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+	public boolean propagatesSkylightDown(BlockState state) {
 		return true;
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 0;
 	}
 

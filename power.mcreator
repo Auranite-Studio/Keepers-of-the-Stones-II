@@ -9836,7 +9836,7 @@
     {
       "name": "DepletedEnergiumOre",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "depleted_energium_ore",
       "metadata": {
@@ -9856,7 +9856,7 @@
     {
       "name": "DepletedEnergiumBlock",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "depleted_energium_block",
       "metadata": {
@@ -9956,7 +9956,7 @@
     {
       "name": "EnergiumBlock",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energium_block",
       "metadata": {
@@ -10433,7 +10433,7 @@
     {
       "name": "BatteryCharger",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger",
       "metadata": {
@@ -11560,7 +11560,7 @@
     {
       "name": "KeepersBox",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "keepers_box",
       "metadata": {
@@ -12649,7 +12649,7 @@
     {
       "name": "MoonBlock",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "moon_block",
       "metadata": {
@@ -14151,7 +14151,7 @@
     {
       "name": "EnergiumController",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energium_controller",
       "metadata": {
@@ -15132,7 +15132,7 @@
     {
       "name": "AmplifierOre",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amplifier_ore",
       "metadata": {
@@ -16617,7 +16617,7 @@
     {
       "name": "AmplifierBlock",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amplifier_block",
       "metadata": {
@@ -17288,7 +17288,7 @@
     {
       "name": "RawDepletedEnergiumBlock",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "raw_depleted_energium_block",
       "metadata": {
@@ -17332,7 +17332,7 @@
     {
       "name": "RawAmplifierBlock",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "raw_amplifier_block",
       "metadata": {
@@ -19496,7 +19496,7 @@
     {
       "name": "BluePortal",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blue_portal",
       "metadata": {
@@ -19598,7 +19598,7 @@
     {
       "name": "OrangePortal",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "orange_portal",
       "metadata": {
@@ -21245,7 +21245,7 @@
     {
       "name": "AmberBlock",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amber_block",
       "metadata": {
@@ -21317,7 +21317,7 @@
     {
       "name": "RenderItemOnBatteryCharger",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "render_item_on_battery_charger",
       "metadata": {
@@ -21415,7 +21415,7 @@
     {
       "name": "CursedStone",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_stone",
       "metadata": {
@@ -21436,7 +21436,7 @@
     {
       "name": "CursedStoneBricks",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_stone_bricks",
       "metadata": {
@@ -21738,7 +21738,7 @@
     {
       "name": "PolishedCursedStone",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "polished_cursed_stone",
       "metadata": {
@@ -21869,7 +21869,7 @@
     {
       "name": "CursedStonePillar",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_stone_pillar",
       "metadata": {
@@ -21900,7 +21900,7 @@
     {
       "name": "CursedLantern",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_lantern",
       "metadata": {
@@ -22022,7 +22022,7 @@
     {
       "name": "CopyriumOre",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "copyrium_ore",
       "metadata": {
@@ -22042,7 +22042,7 @@
     {
       "name": "CopyriumBlock",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "copyrium_block",
       "metadata": {
@@ -22114,7 +22114,7 @@
     {
       "name": "RawCopyriumBlock",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "raw_copyrium_block",
       "metadata": {
@@ -22132,7 +22132,7 @@
     {
       "name": "ElementalPowerGenerator",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "elemental_power_generator",
       "metadata": {
@@ -22758,7 +22758,7 @@
     {
       "name": "CursedVault",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_vault",
       "metadata": {
@@ -23235,7 +23235,7 @@
     {
       "name": "SandSpecialAttack",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "sand_special_attack",
       "metadata": {
@@ -25149,7 +25149,7 @@
     {
       "name": "CursedLadder",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_ladder",
       "metadata": {
@@ -25180,7 +25180,7 @@
     {
       "name": "CursedLamp",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_lamp",
       "metadata": {
@@ -25697,7 +25697,7 @@
     {
       "name": "EnergiumVault",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energium_vault",
       "metadata": {
@@ -26597,7 +26597,7 @@
     {
       "name": "PurpleMushroom",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "purple_mushroom",
       "metadata": {
@@ -27050,7 +27050,7 @@
     {
       "name": "EnergiumOre",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energium_ore",
       "metadata": {
@@ -27174,7 +27174,7 @@
     {
       "name": "RawEnergiumBlock",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "raw_energium_block",
       "metadata": {
@@ -27506,7 +27506,7 @@
     {
       "name": "DeepslateDepletedEnergiumOre",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "deepslate_depleted_energium_ore",
       "metadata": {
@@ -27536,7 +27536,7 @@
     {
       "name": "DeepslateEnergiumOre",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "deepslate_energium_ore",
       "metadata": {
@@ -27566,7 +27566,7 @@
     {
       "name": "DeepslateAmplifierOre",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "deepslate_amplifier_ore",
       "metadata": {
@@ -27596,7 +27596,7 @@
     {
       "name": "DeepslateCopyriumOre",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "deepslate_copyrium_ore",
       "metadata": {
@@ -27626,7 +27626,7 @@
     {
       "name": "BatteryChargerTick",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "battery_charger_tick",
       "metadata": {
@@ -27749,7 +27749,7 @@
     {
       "name": "ChiseledCursedStone",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "chiseled_cursed_stone",
       "metadata": {
@@ -27767,7 +27767,7 @@
     {
       "name": "CursedStoneCrackedBricks",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_stone_cracked_bricks",
       "metadata": {
@@ -32044,7 +32044,7 @@
     {
       "name": "RenderItemInEnergiumVaults",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "render_item_in_energium_vaults",
       "metadata": {
@@ -32063,7 +32063,7 @@
     {
       "name": "RenderItemInCursedVault",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "render_item_in_cursed_vault",
       "metadata": {
@@ -33924,7 +33924,7 @@
     {
       "name": "GoldenDustSpecialAttack",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "golden_dust_special_attack",
       "metadata": {
@@ -34530,7 +34530,7 @@
     {
       "name": "DarknessSpecialAttack",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "darkness_special_attack",
       "metadata": {
@@ -38108,6 +38108,10 @@
     }
   ],
   "tag_elements": {
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:MusicDiscAncientMood",
+      "~CUSTOM:MusicDiscCallOfThePast"
+    ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",
       "CUSTOM:EnergiumAxe",
@@ -38120,23 +38124,19 @@
       "CUSTOM:CreationHoe",
       "CUSTOM:CreationShovel"
     ],
-    "ITEMS:minecraft:music_discs": [
-      "~CUSTOM:MusicDiscAncientMood",
-      "~CUSTOM:MusicDiscCallOfThePast"
-    ],
     "BLOCKS:minecraft:stairs": [
       "~CUSTOM:CursedStoneCrackedBricksStairs",
       "~CUSTOM:PolishedCursedStoneStairs",
       "~CUSTOM:CursedStoneBricksStairs",
       "~CUSTOM:CursedStoneStairs"
     ],
-    "BIOMES:mod:cursed_biomes": [
-      "CUSTOM:CursedForest"
-    ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:TechnoPickaxe",
       "~CUSTOM:CreationPickaxe",
       "~CUSTOM:EnergiumPickaxe"
+    ],
+    "BIOMES:mod:cursed_biomes": [
+      "CUSTOM:CursedForest"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:DarkSword",
@@ -41866,5 +41866,5 @@
     "credits": "Created by Environment Studios",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500199999
+  "mcreatorVersion": 202500106214
 }
