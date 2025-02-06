@@ -4,7 +4,7 @@ license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.1.0.3+1.21.4-alpha-test"
+version="1.1.0.4"
 displayName="Keepers of the Stones II"
 displayURL="https://modrinth.com/mod/keepers-of-the-stones-2"
 logoFile="logo.png"
