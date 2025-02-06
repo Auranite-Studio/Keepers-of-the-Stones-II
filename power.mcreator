@@ -35121,45 +35121,6 @@
       "path": "~/Elements/Lightning"
     },
     {
-      "name": "RenderSpecialFogInCursedBiomes",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_special_fog_in_cursed_biomes",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderSpecialFogInCursedBiomesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "end",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
       "name": "MasterEffectDurationSet",
       "type": "procedure",
       "compiles": true,
@@ -36653,41 +36614,6 @@
       "path": "~/ItemsAndBlocks/CharacteristicsCard"
     },
     {
-      "name": "CursedFogCalculation",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_fog_calculation",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedFogCalculationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
       "name": "StarPointsRegen",
       "type": "procedure",
       "compiles": true,
@@ -36738,6 +36664,84 @@
         ]
       },
       "path": "~/Modules/StarPointsModule"
+    },
+    {
+      "name": "Curse",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/CurseMobEffect.java"
+        ]
+      },
+      "path": "~/Biomes/CursedForest"
+    },
+    {
+      "name": "RenderFogByCurse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_fog_by_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderFogByCurseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "end",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Biomes/CursedForest"
+    },
+    {
+      "name": "CurseTickEvent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "curse_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CurseTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Biomes/CursedForest"
+    },
+    {
+      "name": "CalculateFogColorByCurse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "calculate_fog_color_by_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CalculateFogColorByCurseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Biomes/CursedForest"
     }
   ],
   "variable_elements": [
@@ -37434,8 +37438,8 @@
     {
       "name": "fog_distance",
       "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
+      "scope": "player_lifetime",
+      "value": "100.0"
     }
   ],
   "sound_elements": [
@@ -38711,6 +38715,7 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "item.power.amplifier_ring": "Амплиферовое кольцо",
+      "effect.power.curse": "Curse",
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Батарея",
       "item.power.energium_axe": "Энергиумный топор",
@@ -39594,6 +39599,7 @@
       "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
       "item.power.amplifier_ring": "Amplifier Ring",
+      "effect.power.curse": "Curse",
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Battery",
       "item.power.energium_axe": "Energium Axe",
@@ -40706,10 +40712,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Gamerules",
-        "children": []
       },
       {
         "name": "Elements",

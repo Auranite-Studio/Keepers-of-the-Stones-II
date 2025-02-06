@@ -133,6 +133,7 @@ import com.esmods.keepersofthestonestwo.potion.EnergyMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EarthMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DarknessMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.CurseMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ChaosDarkMasterMobEffect;
@@ -217,6 +218,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> CHAOS_DARK_MASTER = REGISTRY.register("chaos_dark_master", () -> new ChaosDarkMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> HORROR_DARK_MASTER = REGISTRY.register("horror_dark_master", () -> new HorrorDarkMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> FILTH_DARK_MASTER = REGISTRY.register("filth_dark_master", () -> new FilthDarkMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> CURSE = REGISTRY.register("curse", () -> new CurseMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
