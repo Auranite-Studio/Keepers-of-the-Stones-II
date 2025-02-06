@@ -45,7 +45,7 @@ public class AnimalsBatteryUseProcedure {
 					_vars.power = 500;
 					_vars.syncPlayerVariables(entity);
 				}
-				SendClientPackageActivationStoneVFXProcedure.execute(world, x, y, z);
+				SendClientPackageActivationStoneVFXProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}

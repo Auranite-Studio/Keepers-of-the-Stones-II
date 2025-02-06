@@ -6,6 +6,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 
 import com.esmods.keepersofthestonestwo.procedures.CurseTickEventProcedure;
@@ -25,8 +26,8 @@ public class CurseMobEffect extends MobEffect {
 	}
 
 	@Override
-	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		CurseTickEventProcedure.execute(entity.level(), entity);
-		return super.applyEffectTick(entity, amplifier);
+	public boolean applyEffectTick(ServerLevel level, LivingEntity entity, int amplifier) {
+		CurseTickEventProcedure.execute(level, entity);
+		return super.applyEffectTick(level, entity, amplifier);
 	}
 }
