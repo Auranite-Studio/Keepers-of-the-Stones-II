@@ -275,221 +275,29 @@ public class RenderItemOnBatteryChargerProcedure {
 							positiony = _blockEntityEntry.getKey().getY();
 							positionz = _blockEntityEntry.getKey().getZ();
 							if ((world.getBlockState(new BlockPos(positionx, positiony, positionz))).getBlock() == PowerModBlocks.BATTERY_CHARGER.get()) {
-								if ((new Object() {
-									public Direction getDirection(BlockPos pos) {
-										BlockState _bs = world.getBlockState(pos);
-										Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-										if (property != null && _bs.getValue(property) instanceof Direction _dir)
-											return _dir;
-										else if (_bs.hasProperty(BlockStateProperties.AXIS))
-											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-										else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-										return Direction.NORTH;
+								if ((getBlockDirection(world, new BlockPos(positionx, positiony, positionz))) == Direction.NORTH) {
+									if (!((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 2).copy()).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 2).copy()), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 0, 90, 0, (float) 0.5, true, false);
+									} else if (!((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 0, 90, 0, (float) 0.5, true, false);
 									}
-								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.NORTH) {
-									if (!((new Object() {
-										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
-										}
-									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 0, 90, 0, (float) 0.5, true, false);
-									} else if (!((new Object() {
-										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
-										}
-									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 0, 90, 0, (float) 0.5, true, false);
+								} else if ((getBlockDirection(world, new BlockPos(positionx, positiony, positionz))) == Direction.SOUTH) {
+									if (!((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 2).copy()).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 2).copy()), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 180, 90, 0, (float) 0.5, true, false);
+									} else if (!((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 180, 90, 0, (float) 0.5, true, false);
 									}
-								} else if ((new Object() {
-									public Direction getDirection(BlockPos pos) {
-										BlockState _bs = world.getBlockState(pos);
-										Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-										if (property != null && _bs.getValue(property) instanceof Direction _dir)
-											return _dir;
-										else if (_bs.hasProperty(BlockStateProperties.AXIS))
-											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-										else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-										return Direction.NORTH;
+								} else if ((getBlockDirection(world, new BlockPos(positionx, positiony, positionz))) == Direction.WEST) {
+									if (!((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 2).copy()).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 2).copy()), (positionx + 0.5), (positiony + 1), (positionz + 0.5), -90, 90, 0, (float) 0.5, true, false);
+									} else if (!((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()), (positionx + 0.5), (positiony + 1), (positionz + 0.5), -90, 90, 0, (float) 0.5, true, false);
 									}
-								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.SOUTH) {
-									if (!((new Object() {
-										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
-										}
-									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 180, 90, 0, (float) 0.5, true, false);
-									} else if (!((new Object() {
-										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
-										}
-									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 180, 90, 0, (float) 0.5, true, false);
-									}
-								} else if ((new Object() {
-									public Direction getDirection(BlockPos pos) {
-										BlockState _bs = world.getBlockState(pos);
-										Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-										if (property != null && _bs.getValue(property) instanceof Direction _dir)
-											return _dir;
-										else if (_bs.hasProperty(BlockStateProperties.AXIS))
-											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-										else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-										return Direction.NORTH;
-									}
-								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.WEST) {
-									if (!((new Object() {
-										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
-										}
-									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), -90, 90, 0, (float) 0.5, true, false);
-									} else if (!((new Object() {
-										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
-										}
-									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), -90, 90, 0, (float) 0.5, true, false);
-									}
-								} else if ((new Object() {
-									public Direction getDirection(BlockPos pos) {
-										BlockState _bs = world.getBlockState(pos);
-										Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-										if (property != null && _bs.getValue(property) instanceof Direction _dir)
-											return _dir;
-										else if (_bs.hasProperty(BlockStateProperties.AXIS))
-											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-										else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-										return Direction.NORTH;
-									}
-								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.EAST) {
-									if (!((new Object() {
-										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
-										}
-									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 90, 90, 0, (float) 0.5, true, false);
-									} else if (!((new Object() {
-										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
-										}
-									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-										renderItem((new Object() {
-											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
-											}
-										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 90, 90, 0, (float) 0.5, true, false);
+								} else if ((getBlockDirection(world, new BlockPos(positionx, positiony, positionz))) == Direction.EAST) {
+									if (!((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 2).copy()).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 2).copy()), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 90, 90, 0, (float) 0.5, true, false);
+									} else if (!((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((itemFromBlockInventory(world, new BlockPos(positionx, positiony, positionz), 0).copy()), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 90, 90, 0, (float) 0.5, true, false);
 									}
 								}
 							}
@@ -498,5 +306,26 @@ public class RenderItemOnBatteryChargerProcedure {
 				}
 			}
 		}
+	}
+
+	private static Direction getBlockDirection(LevelAccessor world, BlockPos pos) {
+		BlockState blockState = world.getBlockState(pos);
+		Property<?> property = blockState.getBlock().getStateDefinition().getProperty("facing");
+		if (property != null && blockState.getValue(property) instanceof Direction direction)
+			return direction;
+		else if (blockState.hasProperty(BlockStateProperties.AXIS))
+			return Direction.fromAxisAndDirection(blockState.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+		else if (blockState.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+			return Direction.fromAxisAndDirection(blockState.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+		return Direction.NORTH;
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
+		if (world instanceof ILevelExtension ext) {
+			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			if (itemHandler != null)
+				return itemHandler.getStackInSlot(slot);
+		}
+		return ItemStack.EMPTY;
 	}
 }
