@@ -24,3 +24,4 @@
 - [Bugfix] Fixed a bug that made the cursed keeper vulnerable to potion effects
 
 ### Known issues: 
+*N/A*
