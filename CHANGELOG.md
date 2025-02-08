@@ -1,9 +1,9 @@
-### New features:
+**New features**
 - Added level system
 - Added characteristic card
 - Added new achievement - Become like an adventurer
 
-### Improvemnts: 
+**Improvemnts:**
 - Increased the Cursed Keeper's health to 700
 - Cursed mobs are now invulnerable to the wither
 - The fog in the cursed forest is now appearing smoothly
@@ -14,14 +14,14 @@
 - The GeckoLib and pehkui mods is no longer needed
 
 
-### API changes:
+**API changes**
 - Colorful Powers API has been updated to version 22
 - Added variables level, level_exp and max_level_exp for control levels
 - Added variable base_damage_by_lvl for dynamic change magical abilities damage
 - Added a new field to the config file - enable_levels
 
-### Bugfixes:
+**Bugfixes**
 - [Bugfix] Fixed a bug that made the cursed keeper vulnerable to potion effects
 
-### Known issues: 
-*N/A*
+**Known issues**
+- *N/A*
