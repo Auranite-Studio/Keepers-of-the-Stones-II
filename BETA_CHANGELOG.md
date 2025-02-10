@@ -18,4 +18,4 @@
 - [Bugfix] Fixed bug related to energium effects giving wrong effect (1.21.4 only)
 
 **Known issues:**
-- Animations for activating and deactivating stones are temporarily disabled
+- Animations of activation and deactivation of stones may not work correctly

@@ -7,75 +7,69 @@
 				"head": {
 					"rotation": {
 						"0.0": {
-							"vector": [0, 0, 0]
+							"vector": [0, 0, 0],
+							"easing": "linear"
 						},
 						"0.5": {
-							"vector": [42.5, 0, 0]
+							"vector": [42.5, 0, 0],
+							"easing": "linear"
 						},
 						"1.5": {
-							"vector": [-20, 0, 0]
+							"vector": [-20, 0, 0],
+							"easing": "linear"
 						},
 						"2.0": {
-							"vector": [0, 0, 0]
-						}
-					}
-				},
-				"torso": {
-					"rotation": {
-						"0.0": {
-							"vector": [0, 0, 0]
-						},
-						"0.5": {
-							"vector": [0, 0, 0]
+							"vector": [0, 0, 0],
+							"easing": "linear"
 						}
 					}
 				},
 				"right_arm": {
 					"rotation": {
 						"0.0": {
-							"vector": [0, 0, 0]
+							"vector": [0, 0, 0],
+							"easing": "linear"
 						},
 						"0.5": {
-							"vector": [-55, 0, 0]
+							"vector": [-55, 0, 0],
+							"easing": "linear"
 						},
 						"0.75": {
-							"vector": [-49.47632, -28.02432, -21.88151]
+							"vector": [-49.47632, -28.02432, -21.88151],
+							"easing": "linear"
 						},
 						"1.0": {
-							"vector": [-10.55935, 54.30595, 77.07286]
+							"vector": [-10.55935, 54.30595, 77.07286],
+							"easing": "linear"
 						},
 						"2.0": {
-							"vector": [0, 0, 0]
+							"vector": [0, 0, 0],
+							"easing": "linear"
 						}
 					}
 				},
 				"left_arm": {
 					"rotation": {
 						"0.0": {
-							"vector": [0, 0, 0]
+							"vector": [0, 0, 0],
+							"easing": "linear"
 						},
 						"0.5": {
-							"vector": [-55, 0, 0]
+							"vector": [-55, 0, 0],
+							"easing": "linear"
 						},
 						"0.75": {
-							"vector": [-49.47632, 28.02432, 21.88151]
+							"vector": [-49.47632, 28.02432, 21.88151],
+							"easing": "linear"
 						},
 						"1.0": {
-							"vector": [-10.55935, -54.30595, -77.07286]
+							"vector": [-10.55935, -54.30595, -77.07286],
+							"easing": "linear"
 						},
 						"2.0": {
-							"vector": [0, 0, 0]
+							"vector": [0, 0, 0],
+							"easing": "linear"
 						}
-					}
-				},
-				"right_leg": {
-					"rotation": {
-						"vector": [0, 0, 0]
-					}
-				},
-				"left_leg": {
-					"rotation": {
-						"vector": [0, 0, 0]
 					}
 				}
 			}
