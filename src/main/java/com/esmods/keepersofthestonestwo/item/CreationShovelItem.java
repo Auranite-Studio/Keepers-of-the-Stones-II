@@ -34,7 +34,7 @@ public class CreationShovelItem extends ShovelItem {
 
 		@Override
 		public int getEnchantmentValue() {
-			return 0;
+			return 1;
 		}
 
 		@Override
