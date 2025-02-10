@@ -8,7 +8,7 @@
 - *N/A*
 
 **Bugfixes**
-- *N/A*
+- [Bugfix] Fixed a bug that caused the isolation enchantment to not work
 
 **Known issues**
 - *N/A*
