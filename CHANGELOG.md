@@ -8,7 +8,7 @@
 - Curse does not affect players with activated stones or batteries
 - The curse effect is given regardless of difficulty
 
-**Improvemnts:**
+**Improvemnts**
 - Increased the Cursed Keeper's health to 700
 - Cursed mobs are now invulnerable to the wither
 - Reworked the warp effect, it now makes the player twice as low
