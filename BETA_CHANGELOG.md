@@ -2,7 +2,7 @@
 - *N/A*
 
 **Improvemnts** 
-- Damage up to level 14 now increases by 1, and from level 15 damage increases by 2 as the level rises
+- Damage at levels 2-14 now increases by 1 for each level, and at levels 15-19 increases by 2 for each level, but when you reach level 20, damage only increases by 1
 
 **API changes**
 - *N/A*
