@@ -42,10 +42,16 @@ public class LevelUpProcedure {
 		double particleRadius = 0;
 		double particleAmount = 0;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level_up_status) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level % 2 == 0) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level < 15) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.base_damage_by_lvl = entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl + 1;
+					_vars.syncPlayerVariables(entity);
+				}
+			} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level >= 15) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.base_damage_by_lvl = entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl + 2;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
