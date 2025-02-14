@@ -10,6 +10,7 @@ public class PowerConfigConfiguration {
 	public static final ModConfigSpec.ConfigValue<Boolean> ONE_PLAYER_LIMIT_STONES;
 	public static final ModConfigSpec.ConfigValue<Boolean> LIMIT_NUMBER_STONES;
 	public static final ModConfigSpec.ConfigValue<Boolean> ENABLE_LEVELS;
+	public static final ModConfigSpec.ConfigValue<Boolean> ENABLE_RUNES;
 	static {
 		BUILDER.push("stone_distribution_settings");
 		FIRST_JOIN_STONES_DISTRIBUTION = BUILDER.comment("Allows players to select a stone when entering the world").define("first_join_stones_distribution", false);
@@ -18,6 +19,9 @@ public class PowerConfigConfiguration {
 		BUILDER.pop();
 		BUILDER.push("additional_features");
 		ENABLE_LEVELS = BUILDER.comment("Enables and disables the level system").define("enable_levels", true);
+		BUILDER.pop();
+		BUILDER.push("experimental_features");
+		ENABLE_RUNES = BUILDER.comment("Enables and disables the runes (1.2)").define("enable_runes", false);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

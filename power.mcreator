@@ -36755,6 +36755,91 @@
         ]
       },
       "path": "~/Achievements"
+    },
+    {
+      "name": "RuneCutter",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/block/rune_cutter.json",
+          "src/main/resources/assets/power/blockstates/rune_cutter.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/RuneCutterBlock.java",
+          "src/main/resources/assets/power/models/item/rune_cutter.json",
+          "src/main/resources/data/power/loot_table/blocks/rune_cutter.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RuneCutterCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipe/rune_cutter_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "ExperimentalTabHandler",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "experimental_tab_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ExperimentalTabHandler.java"
+        ]
+      },
+      "path": "~/Tabs"
+    },
+    {
+      "name": "ExtraStarPointsRune1",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extra_star_points_rune_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ExtraStarPointsRune1Item.java",
+          "src/main/resources/assets/power/models/item/extra_star_points_rune_1.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes"
+    },
+    {
+      "name": "ExtraStarPointsRune2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extra_star_points_rune_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/extra_star_points_rune_2.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ExtraStarPointsRune2Item.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes"
+    },
+    {
+      "name": "ExtraStarPointsRune3",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extra_star_points_rune_3",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ExtraStarPointsRune3Item.java",
+          "src/main/resources/assets/power/models/item/extra_star_points_rune_3.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes"
     }
   ],
   "variable_elements": [
@@ -37636,6 +37721,7 @@
       "CUSTOM:CursedKeeper"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:RuneCutter",
       "~CUSTOM:CursedStoneCrackedBricksWall",
       "~CUSTOM:CursedStoneCrackedBricksStairs",
       "~CUSTOM:CursedStoneCrackedBricksSlab",
@@ -37812,6 +37898,9 @@
       "~CUSTOM:EarthHammer",
       "~CUSTOM:AirRapier",
       "~CUSTOM:FireSword"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:RuneCutter"
     ],
     "ITEMS:mod:elemental_stones": [
       "CUSTOM:FireStone",
@@ -38682,6 +38771,7 @@
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "advancements.grant_your_power.title": "Даруй свою силу",
+      "item.power.extra_star_points_rune_3": "Rune",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.cursed_keeper_spawn_egg": "Яйцо призыва проклятого хранителя",
       "item.power.plants_stone": "Камень зелени",
@@ -38689,6 +38779,8 @@
       "gui.power.wheel_abilities_music.tooltip_explosion_of_notes_uses_40": "Нотный взрыв, расходует 40",
       "item.power.creation_staff": "Посох творения",
       "item.power.golden_dust_armor_boots": "Ботинки мастера золотой пыли",
+      "item.power.extra_star_points_rune_1": "Rune",
+      "item.power.extra_star_points_rune_2": "Rune",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 35",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Солнечный взрыв, расходует 45",
       "battery.desc.mercury": "Ртуть",
@@ -39143,8 +39235,16 @@
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Подъём тумана, расходует 50",
       "battery.desc.gravity": "Гравитация",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
+      "item.power.extra_star_points_rune_2.description_1": "",
+      "item.power.extra_star_points_rune_3.description_3": "§c§oIncompatible with similar runes",
+      "item.power.extra_star_points_rune_2.description_0": "§9Extra Star Points II",
       "item.power.mercury_battle_axe": "Ртутный боевой топор",
+      "item.power.extra_star_points_rune_3.description_2": "§1§o+20 to the max. number of star points",
+      "item.power.extra_star_points_rune_3.description_1": "",
+      "item.power.extra_star_points_rune_3.description_0": "§9Extra Star Points III",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Туманное зелье звёздной регенерации",
+      "item.power.extra_star_points_rune_2.description_3": "§c§oIncompatible with similar runes",
+      "item.power.extra_star_points_rune_2.description_2": "§1§o+15 to the max. number of star points",
       "effect.power.ice_master": "Мастер льда",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
@@ -39210,6 +39310,7 @@
       "gui.power.keepers_box_gui_part_4.tooltip_mercury": "Ртуть",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
       "item.power.form_armor_helmet": "Шлем мастера формы",
+      "block.power.rune_cutter": "Rune Cutter",
       "item.power.mushrooms_armor_chestplate": "Нагрудник мастера грибов",
       "battery.desc.poison": "Яд",
       "item.power.tornado_battery": "Батарея",
@@ -39254,7 +39355,10 @@
       "battery.desc.mist": "Туман",
       "battery.desc.space": "Космос",
       "item.power.smoke_armor_leggings": "Поножи мастера дыма",
+      "item.power.extra_star_points_rune_1.description_0": "§9Extra Star Points I",
       "item.power.creation_hoe": "Мотыга созидания",
+      "item.power.extra_star_points_rune_1.description_1": "",
+      "item.power.extra_star_points_rune_1.description_2": "§1§o+10 to the max. number of star points",
       "effect.power.water_master": "Мастер воды",
       "advancements.become_like_an_adventurer.descr": "Заполните карточку с характеристиками",
       "item_group.power.mobs": "KotS: Мобы",
@@ -39263,6 +39367,7 @@
       "item.power.luck_coin": "Счастливая монета",
       "item.power.rain_battery": "Батарея",
       "item.power.creation_sword": "Меч созидания",
+      "item.power.extra_star_points_rune_1.description_3": "§c§oIncompatible with similar runes",
       "battery.desc.sound": "Звук",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ледяная атака, расходует 30",
       "item.power.crystal_battery": "Батарея",
@@ -39568,6 +39673,7 @@
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "advancements.grant_your_power.title": "Grant your power",
+      "item.power.extra_star_points_rune_3": "Rune",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
       "item.power.plants_stone": "Plants Stone",
@@ -39575,6 +39681,8 @@
       "gui.power.wheel_abilities_music.tooltip_explosion_of_notes_uses_40": "Explosion of notes, uses 40",
       "item.power.creation_staff": "Creation Staff",
       "item.power.golden_dust_armor_boots": "Golden Dust Boots",
+      "item.power.extra_star_points_rune_1": "Rune",
+      "item.power.extra_star_points_rune_2": "Rune",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 35",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Sun explosion, uses 45",
       "battery.desc.mercury": "Mercury",
@@ -40028,8 +40136,16 @@
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Mist lifting, uses 50",
       "battery.desc.gravity": "Gravity",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
+      "item.power.extra_star_points_rune_2.description_1": "",
+      "item.power.extra_star_points_rune_3.description_3": "§c§oIncompatible with similar runes",
+      "item.power.extra_star_points_rune_2.description_0": "§9Extra Star Points II",
       "item.power.mercury_battle_axe": "Mercury Battle Axe",
+      "item.power.extra_star_points_rune_3.description_2": "§1§o+20 to the max. number of star points",
+      "item.power.extra_star_points_rune_3.description_1": "",
+      "item.power.extra_star_points_rune_3.description_0": "§9Extra Star Points III",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
+      "item.power.extra_star_points_rune_2.description_3": "§c§oIncompatible with similar runes",
+      "item.power.extra_star_points_rune_2.description_2": "§1§o+15 to the max. number of star points",
       "effect.power.ice_master": "Master of the Ice",
       "item.power.ether_armor_leggings": "Ether Leggings",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
@@ -40095,6 +40211,7 @@
       "gui.power.keepers_box_gui_part_4.tooltip_mercury": "Mercury",
       "item.power.creation_armor_boots": "Creation Boots",
       "item.power.form_armor_helmet": "Form Helmet",
+      "block.power.rune_cutter": "Rune Cutter",
       "item.power.mushrooms_armor_chestplate": "Mushrooms Chestplate",
       "battery.desc.poison": "Poison",
       "item.power.tornado_battery": "Battery",
@@ -40139,7 +40256,10 @@
       "battery.desc.mist": "Mist",
       "battery.desc.space": "Space",
       "item.power.smoke_armor_leggings": "Smoke Leggings",
+      "item.power.extra_star_points_rune_1.description_0": "§9Extra Star Points I",
       "item.power.creation_hoe": "Creation Hoe",
+      "item.power.extra_star_points_rune_1.description_1": "",
+      "item.power.extra_star_points_rune_1.description_2": "§1§o+10 to the max. number of star points",
       "effect.power.water_master": "Master of Water",
       "advancements.become_like_an_adventurer.descr": "Fill out the characteristics card",
       "item_group.power.mobs": "KotS: Mobs",
@@ -40148,6 +40268,7 @@
       "item.power.luck_coin": "Luck Coin",
       "item.power.rain_battery": "Battery",
       "item.power.creation_sword": "Creation Sword",
+      "item.power.extra_star_points_rune_1.description_3": "§c§oIncompatible with similar runes",
       "battery.desc.sound": "Sound",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ice attack, uses 30",
       "item.power.crystal_battery": "Battery",
@@ -41193,6 +41314,14 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "RuneCutter",
+            "children": []
+          },
+          {
+            "name": "Runes",
+            "children": []
           }
         ]
       },

@@ -16,48 +16,45 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 # End of user code block mod configuration
 
 [[dependencies.power]]
-modId="neoforge"
-type="required"
-versionRange="[21.1.65,)"
-ordering="AFTER"
-side="BOTH"
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.65,)"
+    ordering="AFTER"
+    side="BOTH"
 
 [[dependencies.power]]
-modId="minecraft"
-type="required"
-versionRange="[1.21.1]"
-ordering="AFTER"
-side="BOTH"
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="AFTER"
+    side="BOTH"
 
 [[dependencies.power]]
-modId="playeranimator"
-type="required"
-versionRange="[0,)"
-ordering="NONE"
-side="BOTH"
+    modId="playeranimator"
+    type="required"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 [[dependencies.power]]
-modId="bettercombat"
-type="optional"
-versionRange="[0,)"
-ordering="NONE"
-side="BOTH"
+    modId="bettercombat"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 [[dependencies.power]]
-modId="playeranimator"
-type="optional"
-versionRange="[0,)"
-ordering="NONE"
-side="BOTH"
+    modId="playeranimator"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 [[dependencies.power]]
-modId="cpapi"
-type="optional"
-versionRange="[0,)"
-ordering="NONE"
-side="BOTH"
-
-[[mixins]]
-    config="mixins.power.json"
+    modId="cpapi"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 # Start of user code block dependencies configuration
 # End of user code block dependencies configuration

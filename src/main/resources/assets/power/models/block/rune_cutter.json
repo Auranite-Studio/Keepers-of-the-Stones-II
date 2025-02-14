@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "power:block/rune_cutter_down",
+    "up": "power:block/rune_cutter_top",
+    "north": "power:block/rune_cutter_side",
+    "east": "power:block/rune_cutter_side",
+    "south": "power:block/rune_cutter_side",
+    "west": "power:block/rune_cutter_side",
+    "particle": "power:block/rune_cutter_down"
+  },
+  "render_type": "solid"
+}
