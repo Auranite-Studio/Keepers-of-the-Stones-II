@@ -7,12 +7,8 @@
     "bbb"
   ],
   "key": {
-    "a": {
-      "item": "power:copyrium_ingot"
-    },
-    "b": {
-      "item": "minecraft:cobbled_deepslate"
-    }
+    "a": "power:copyrium_ingot",
+    "b": "minecraft:cobbled_deepslate"
   },
   "result": {
     "id": "power:rune_cutter",

@@ -13,8 +13,8 @@ import net.minecraft.network.chat.Component;
 import java.util.List;
 
 public class ExtraStarPointsRune2Item extends Item {
-	public ExtraStarPointsRune2Item() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+	public ExtraStarPointsRune2Item(Item.Properties properties) {
+		super(properties.rarity(Rarity.COMMON).stacksTo(1));
 	}
 
 	@Override
