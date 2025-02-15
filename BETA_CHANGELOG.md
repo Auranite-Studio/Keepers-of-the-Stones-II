@@ -1,5 +1,6 @@
 **New features**
 - Added a new achievement - Unbreakable Diamond
+- A new music disc has been added - Hope
 - Added a rune cutter and three runes (experimentally when enabled in the config)
 
 **Improvemnts** 
