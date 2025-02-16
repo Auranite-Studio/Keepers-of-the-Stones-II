@@ -19,12 +19,12 @@ public class ExperimentalTabHandler {
 				ResourceLocation.fromNamespaceAndPath("power", "items")
 		);
 		if (event.getTabKey() == targetTab) {
-			RunesExpirementsRegistry(event);
+			runesExpirementsRegistry(event);
 		}
 	}
 
 	@Deprecated(forRemoval = true, since = "1.2")
-	public static void RunesExpirementsRegistry(BuildCreativeModeTabContentsEvent event) {
+	public static void runesExpirementsRegistry(BuildCreativeModeTabContentsEvent event) {
 		if (PowerConfigConfiguration.ENABLE_RUNES.get()) {
 			event.accept(PowerModItems.RUNE_CUTTER.get());
 			event.accept(PowerModItems.EXTRA_STAR_POINTS_RUNE_1.get());
