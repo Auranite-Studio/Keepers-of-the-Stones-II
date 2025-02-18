@@ -2,7 +2,8 @@
 - *N/A*
 
 **Improvemnts** 
-- *N/A*
+- Increased the volume of the music of Hope
+- Mystery of the Cursed Forest music volume decreased
 
 **API changes**
 - *N/A*
