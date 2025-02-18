@@ -1,0 +1,48 @@
+{
+  "_fv": 77,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "PowerModItems.COPYRIUM_INGOT"
+      },
+      {
+        "value": "PowerModItems.COPYRIUM_INGOT"
+      },
+      {
+        "value": "PowerModItems.COPYRIUM_INGOT"
+      },
+      {
+        "value": "PowerModItems.COPYRIUM_INGOT"
+      },
+      {
+        "value": "Blocks.COBBLED_DEEPSLATE"
+      },
+      {
+        "value": "PowerModItems.COPYRIUM_INGOT"
+      },
+      {
+        "value": "Blocks.COBBLED_DEEPSLATE"
+      },
+      {
+        "value": "Blocks.COBBLED_DEEPSLATE"
+      },
+      {
+        "value": "Blocks.COBBLED_DEEPSLATE"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:RuneCutter"
+    },
+    "name": "rune_cutter_craft",
+    "namespace": "mod"
+  }
+}

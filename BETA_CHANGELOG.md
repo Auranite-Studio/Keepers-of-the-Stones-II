@@ -1,23 +1,22 @@
-### New features:
-*N/A*
+**New features**
+- Added a new achievement - Unbreakable Diamond
+- A new music disc has been added - Hope
+- Added a rune cutter and three runes (experimentally when enabled in the config)
 
-### Improvemnts: 
-- Mod ported to NeoForge 1.21.4
-- Star points will now not be restored when the power lock effect is active
-- The mod's game rules have been removed, with all their functionality moved to the config
+**Improvemnts** 
+- Damage at levels 2-14 now increases by 1 for each level, and at levels 15-19 increases by 2 for each level, but when you reach level 20, damage only increases by 1
+- Updated the music of Mystery of the Cursed Forest to the Music Disk version Ver.
+- Removed transformation and detransformation animations and dependency on the playerAnimator mod (1.21.4 only)
 
-### API changes:
-- Colorful Powers API has been updated to version 23
-- Removed the lines in the config that control the duration of the stones and their recharge
-- The mod's game rules have been removed, with all their functionality moved to the config
-- Removed variable ``golden_dust_extended_powers``
-- Removed variable ``allow_custom_element_powers_for_stones``
+**API changes**
+- Added ``enable_runes`` line to config to enable future features from 1.2
 
-### Bugfixes:
-- [Bugfix] Fixed a bug that caused star regeneration potion to not speed up the recovery of star points
-- [Bugfix] Fixed a bug that caused cursed keeper to appear with 350 hp instead of 700 hp
+**Bugfixes**
+- [Bugfix] Fixed a bug that caused the isolation enchantment to not work
+- [Bugfix] Fixed battery charger functionality (1.21.4 only)
+- [Bugfix] Fixed a bug that caused items on blocks not to render (1.21.4 only)
+- [Bugfix] Fixed bug with characteristic card crafting (1.21.4 only)
+- [Bugfix] Fixed bug related to energium effects giving wrong effect (1.21.4 only)
 
-### Known issues: 
-- The battery charger is not working yet
-- Rendering items on blocks doesn't work yet
-- Animations for activating and deactivating stones are temporarily disabled
+**Known issues**
+- *N/A*
