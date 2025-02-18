@@ -20,7 +20,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import java.util.List;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
@@ -42,9 +41,10 @@ public class CursedKeeperEarthProcedure {
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 5, false, false));
 		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
 		if (entity.getPersistentData().getDouble("IA") == 15) {
-			if (entity instanceof CursedKeeperEntity) {
-				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.stalagmite_piercing");
-			}
+			if (entity instanceof CursedKeeperEntity _datEntSetL)
+				_datEntSetL.getEntityData().set(CursedKeeperEntity.DATA_stage_two_anim_sync, false);
+			if (entity instanceof CursedKeeperEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 4);
 		}
 		if (entity.getPersistentData().getDouble("IA") > 59 && entity.getPersistentData().getDouble("IA") < 61) {
 			if (entity.getPersistentData().getDouble("IA") > 59 && entity.getPersistentData().getDouble("IA") < 61) {
@@ -58,8 +58,7 @@ public class CursedKeeperEarthProcedure {
 			}
 			{
 				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-				for (Entity entityiterator : _entfound) {
+				for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 					if (!(entityiterator == entity) && entityiterator instanceof Player) {
 						if (!(entityiterator instanceof ItemEntity)) {
 							if ((world.getBlockState(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()))).getBlock() == Blocks.AIR) {
@@ -83,6 +82,10 @@ public class CursedKeeperEarthProcedure {
 		if (entity.getPersistentData().getDouble("IA") == 80) {
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putString("State", "Idle");
+			if (entity instanceof CursedKeeperEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 0);
+			if (entity instanceof CursedKeeperEntity _datEntSetL)
+				_datEntSetL.getEntityData().set(CursedKeeperEntity.DATA_stage_two_anim_sync, true);
 		}
 	}
 }

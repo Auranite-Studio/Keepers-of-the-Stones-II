@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Warp",
@@ -12,14 +12,15 @@
     "mobEffectCategory": "HARMFUL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "isCuredByMilk": true,
-    "isProtectedByTotem": true,
     "isCuredbyHoney": false,
-    "onStarted": {
-      "name": "WarpPriNalozhieniiEffiekta"
-    },
-    "onExpired": {
-      "name": "WarpPriIstiechieniiEffiekta"
-    }
+    "modifiers": [
+      {
+        "attribute": {
+          "value": "SCALE"
+        },
+        "amount": -0.5,
+        "operation": "ADD_VALUE"
+      }
+    ]
   }
 }

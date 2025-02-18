@@ -15,14 +15,14 @@ import io.netty.buffer.Unpooled;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModGameRules;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
 public class KeepersBoxPriShchielchkiePKMPoBlokuProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).unlock_keepers_box && !entity.getData(PowerModVariables.PLAYER_VARIABLES).selected
-				|| entity.getData(PowerModVariables.PLAYER_VARIABLES).unlock_keepers_box && !world.getLevelData().getGameRules().getBoolean(PowerModGameRules.LIMIT_OF_STONES_FOR_ONE_PLAYER)) {
+				|| entity.getData(PowerModVariables.PLAYER_VARIABLES).unlock_keepers_box && !PowerConfigConfiguration.ONE_PLAYER_LIMIT_STONES.get()) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {

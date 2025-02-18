@@ -22,11 +22,14 @@ import com.esmods.keepersofthestonestwo.procedures.PowerRecordedDubugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ModVersionDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MergersNumberDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MaxStarPointsDebugProcedure;
+import com.esmods.keepersofthestonestwo.procedures.LevelExpAndMaxDebugProcedure;
+import com.esmods.keepersofthestonestwo.procedures.LevelDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FakeElementsTimerDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FakeElementsActiveDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ElementsActiveDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DebugCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CPAPIVersionDebugProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BaseDamageDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ActivePowerDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ActiveBatteryDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AbilityBlockedDebugProcedure;
@@ -95,6 +98,15 @@ public class DebugInfoOverlay {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					AbilityBlockedDebugProcedure.execute(entity), 6, 188, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					LevelDebugProcedure.execute(entity), 6, 197, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					LevelExpAndMaxDebugProcedure.execute(entity), 6, 206, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					BaseDamageDebugProcedure.execute(entity), 6, 215, -1, false);
 		}
 	}
 }

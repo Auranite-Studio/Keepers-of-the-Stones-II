@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "biome",
   "definition": {
     "name": "Cursed Forest",
@@ -13,6 +13,10 @@
       "value": "Blocks.SAND#0"
     },
     "airColor": {
+      "value": -5530695,
+      "falpha": 0.0
+    },
+    "fogColor": {
       "value": -5530695,
       "falpha": 0.0
     },
@@ -64,7 +68,7 @@
       "max": 0.1
     },
     "genContinentalness": {
-      "min": -0.19,
+      "min": -0.11,
       "max": 0.03
     },
     "genErosion": {

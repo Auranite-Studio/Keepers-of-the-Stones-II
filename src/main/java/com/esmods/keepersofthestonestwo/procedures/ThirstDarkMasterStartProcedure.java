@@ -138,5 +138,6 @@ public class ThirstDarkMasterStartProcedure {
 				_player.getInventory().setChanged();
 		}
 		(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.VANISHING_CURSE), 1);
+		MasterEffectStartControlProcedure.execute(world, entity);
 	}
 }

@@ -12,6 +12,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -71,6 +72,13 @@ public class ReturnStoneAfterDeadProcedure {
 				}
 			}
 			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery) {
+				if (entity instanceof Player || entity instanceof ServerPlayer) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.level_exp = entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp - Math.round(entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp * 0.25);
+						_vars.syncPlayerVariables(entity);
+					}
+				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("fire")) {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

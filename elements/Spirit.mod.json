@@ -1,23 +1,44 @@
 {
-  "_fv": 69,
-  "_type": "animatedentity",
+  "_fv": 77,
+  "_type": "livingentity",
   "definition": {
     "mobName": "Spirit",
     "mobLabel": "",
+    "mobModelName": "Modelspirit",
     "mobModelTexture": "spirit.png",
-    "mobModelGlowTexture": "",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
     "visualScale": {
       "fixedValue": 1.0
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "entityDataEntries": [],
+    "modelLayers": [],
+    "animations": [
+      {
+        "animation": {
+          "value": "CUSTOM:spiritAnimation.idle"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "IdleAnimationSync"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      }
+    ],
     "modelWidth": 1.0,
     "modelHeight": 1.0,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "stepHeight": 0.6,
     "hasSpawnEgg": false,
     "spawnEggBaseColor": {
       "value": -1,
@@ -50,23 +71,27 @@
       "value": ""
     },
     "mobBehaviourType": "Mob",
-    "mobCreatureType": "UNDEAD",
+    "mobCreatureType": "UNDEFINED",
     "attackStrength": 14,
     "attackKnockback": 0.0,
     "knockbackResistance": 10.0,
-    "movementSpeed": 1.0,
+    "movementSpeed": 0.30000000000000004,
+    "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 32,
     "followRange": 8,
     "health": 1000,
     "xpAmount": 0,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": true,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "deathTime": 20,
-    "lerp": 4,
     "disableCollisions": true,
     "ridable": false,
     "canControlForward": false,
@@ -102,6 +127,7 @@
     "raidCelebrationSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "onMobTickUpdate": {
       "name": "SpiritPriObnovlieniiTikaSushchnosti"
     },
@@ -110,36 +136,12 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"protect_owner\"><field name=\"condition\">null,null</field><next><block type=\"fight_as_owner\"><field name=\"condition\">null,null</field><next><block type=\"attack_fly\"><field name=\"radius\">4</field><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"follow_owner\"><field name=\"speed\">1</field><field name=\"min_distance\">4</field><field name=\"max_distance\">10</field><field name=\"condition\">null,null</field><next><block type=\"fly\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "spirit.geo.json",
-    "groupName": "",
-    "animation1": "animation.spirit.idle",
-    "animation2": "",
-    "animation3": "",
-    "animation4": "",
-    "animation5": "",
-    "animation6": "",
-    "animation7": "",
-    "animation8": "",
-    "animation9": "",
-    "animation10": "",
-    "enable2": false,
-    "enable3": false,
-    "enable4": false,
-    "enable5": false,
-    "enable6": false,
-    "enable7": false,
-    "enable8": false,
-    "enable9": false,
-    "enable10": false,
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"protect_owner\"><field name=\"condition\">null,null</field><next><block type=\"fight_as_owner\"><field name=\"condition\">null,null</field><next><block type=\"attack_fly\"><field name=\"radius\">8</field><field name=\"speed\">4.8</field><field name=\"condition\">null,null</field><next><block type=\"follow_owner\"><field name=\"speed\">2.4</field><field name=\"min_distance\">4</field><field name=\"max_distance\">10</field><field name=\"condition\">null,null</field><next><block type=\"fly\"><field name=\"speed\">2.4</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": true,
     "tameable": true,
-    "disableDeathRotation": false,
-    "headMovement": false,
-    "eyeHeight": false,
     "breedTriggerItems": [
       {
-        "value": "Blocks.VOID_AIR"
+        "value": "Items.WATER_BUCKET"
       }
     ],
     "ranged": false,
@@ -149,17 +151,6 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "height": 1.0,
-    "attackRate": 7.0,
-    "raidSpawnsCount": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
@@ -167,6 +158,15 @@
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

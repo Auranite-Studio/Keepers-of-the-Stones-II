@@ -52,7 +52,7 @@ public class EnergiumGolemCoreAttackParticleParticle extends TextureSheetParticl
 
 	@Override
 	public ParticleRenderType getRenderType() {
-		return ParticleRenderType.PARTICLE_SHEET_LIT;
+		return ParticleRenderType.PARTICLE_SHEET_OPAQUE;
 	}
 
 	@Override

@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Gigantization",
@@ -12,14 +12,43 @@
     "mobEffectCategory": "NEUTRAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "isCuredByMilk": true,
-    "isProtectedByTotem": true,
     "isCuredbyHoney": false,
-    "onStarted": {
-      "name": "GigantizationPriNalozhieniiEffiekta"
-    },
-    "onExpired": {
-      "name": "GigantizationPriIstiechieniiEffiekta"
-    }
+    "modifiers": [
+      {
+        "attribute": {
+          "value": "SCALE"
+        },
+        "amount": 9.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "MOVEMENT_SPEED"
+        },
+        "amount": 0.7,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "STEP_HEIGHT"
+        },
+        "amount": 1.2,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "ENTITY_REACH"
+        },
+        "amount": 30.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "BLOCK_REACH"
+        },
+        "amount": 45.0,
+        "operation": "ADD_VALUE"
+      }
+    ]
   }
 }

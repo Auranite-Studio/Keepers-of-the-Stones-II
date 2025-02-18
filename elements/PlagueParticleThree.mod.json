@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "particle",
   "definition": {
     "texture": "plague_particle_three",
@@ -18,6 +18,7 @@
     "angularAcceleration": 0.0,
     "canCollide": true,
     "alwaysShow": false,
+    "emissiveRendering": false,
     "renderType": "OPAQUE"
   }
 }
