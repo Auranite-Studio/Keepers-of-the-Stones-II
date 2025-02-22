@@ -37557,6 +37557,103 @@
   ],
   "sound_elements": [
     {
+      "name": "backport.block.vault.step",
+      "files": [
+        "assets_minecraft_sounds_block_vault_step8",
+        "assets_minecraft_sounds_block_vault_step7",
+        "assets_minecraft_sounds_block_vault_step6",
+        "assets_minecraft_sounds_block_vault_step5",
+        "assets_minecraft_sounds_block_vault_step4",
+        "assets_minecraft_sounds_block_vault_step3",
+        "assets_minecraft_sounds_block_vault_step2",
+        "assets_minecraft_sounds_block_vault_step1"
+      ],
+      "category": "block",
+      "subtitle": ""
+    },
+    {
+      "name": "backport.block.vault.place",
+      "files": [
+        "assets_minecraft_sounds_block_vault_place4",
+        "assets_minecraft_sounds_block_vault_place3",
+        "assets_minecraft_sounds_block_vault_place2",
+        "assets_minecraft_sounds_block_vault_place1"
+      ],
+      "category": "block",
+      "subtitle": ""
+    },
+    {
+      "name": "backport.block.vault.ambient",
+      "files": [
+        "assets_minecraft_sounds_block_vault_ambient3",
+        "assets_minecraft_sounds_block_vault_ambient2",
+        "assets_minecraft_sounds_block_vault_ambient1"
+      ],
+      "category": "block",
+      "subtitle": ""
+    },
+    {
+      "name": "backport.block.vault.break",
+      "files": [
+        "assets_minecraft_sounds_block_vault_break1",
+        "assets_minecraft_sounds_block_vault_break2",
+        "assets_minecraft_sounds_block_vault_break3",
+        "assets_minecraft_sounds_block_vault_break4"
+      ],
+      "category": "block",
+      "subtitle": ""
+    },
+    {
+      "name": "backport.block.vault.eject",
+      "files": [
+        "assets_minecraft_sounds_block_vault_eject1",
+        "assets_minecraft_sounds_block_vault_eject2",
+        "assets_minecraft_sounds_block_vault_eject3"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "backport.block.vault.activate",
+      "files": [
+        "assets_minecraft_sounds_block_vault_activate"
+      ],
+      "category": "block",
+      "subtitle": ""
+    },
+    {
+      "name": "backport.block.vault.deactivate",
+      "files": [
+        "assets_minecraft_sounds_block_vault_deactivate"
+      ],
+      "category": "block",
+      "subtitle": ""
+    },
+    {
+      "name": "backport.block.vault.insert",
+      "files": [
+        "assets_minecraft_sounds_block_vault_insert"
+      ],
+      "category": "block",
+      "subtitle": ""
+    },
+    {
+      "name": "backport.block.vault.insert_fail",
+      "files": [
+        "assets_minecraft_sounds_block_vault_insert_fail"
+      ],
+      "category": "block",
+      "subtitle": ""
+    },
+    {
+      "name": "backport.block.vault.open_shutter",
+      "files": [
+        "assets_minecraft_sounds_block_vault_open_shutter"
+      ],
+      "category": "block",
+      "subtitle": ""
+    },
+    {
       "name": "stone_activation",
       "files": [
         "stone_activation"
@@ -41427,7 +41524,7 @@
     "mcreatorDependencies": [
       "playeranimator"
     ],
-    "currentGenerator": "neoforge-1.21.1",
+    "currentGenerator": "forge-1.20.1",
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
