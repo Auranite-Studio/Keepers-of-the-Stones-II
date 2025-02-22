@@ -55,12 +55,15 @@ public class WheelAbilitiesGravityScreen extends AbstractContainerScreen<WheelAb
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 84 && mouseX < leftPos + 108 && mouseY > topPos + 22 && mouseY < topPos + 46)
+		if (mouseX > leftPos + 84 && mouseX < leftPos + 108 && mouseY > topPos + 22 && mouseY < topPos + 46) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_gravity.tooltip_gravity_wave_uses_15"), mouseX, mouseY);
-		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 82 && mouseY < topPos + 106)
+		}
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 82 && mouseY < topPos + 106) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_gravity.tooltip_telekinesis_uses_35"), mouseX, mouseY);
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 144 && mouseY < topPos + 168)
+		}
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 144 && mouseY < topPos + 168) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_gravity.tooltip_gravity_denial_uses_5"), mouseX, mouseY);
+		}
 	}
 
 	@Override

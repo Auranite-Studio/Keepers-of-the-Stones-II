@@ -55,12 +55,15 @@ public class WheelAbilitiesShadowScreen extends AbstractContainerScreen<WheelAbi
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 24 && mouseY < topPos + 48)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 24 && mouseY < topPos + 48) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_shadow.tooltip_shadow_ray_uses_10"), mouseX, mouseY);
-		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		}
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170)
+		}
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75"), mouseX, mouseY);
+		}
 	}
 
 	@Override

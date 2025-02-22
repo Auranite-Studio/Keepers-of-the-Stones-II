@@ -55,12 +55,15 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10"), mouseX, mouseY);
-		if (mouseX > leftPos + 143 && mouseX < leftPos + 167 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		}
+		if (mouseX > leftPos + 143 && mouseX < leftPos + 167 && mouseY > topPos + 84 && mouseY < topPos + 108) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170)
+		}
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60"), mouseX, mouseY);
+		}
 	}
 
 	@Override

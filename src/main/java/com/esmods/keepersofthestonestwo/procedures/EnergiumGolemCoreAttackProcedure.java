@@ -21,7 +21,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
-import java.util.List;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
@@ -81,9 +80,8 @@ public class EnergiumGolemCoreAttackProcedure {
 						_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.ENERGIUM_GOLEM_CORE_ATTACK_PARTICLE.get()), XPar, YPar, ZPar, 5, (0.075 + Range * 0.05), (0.075 + Range * 0.05), (0.075 + Range * 0.05), 0);
 					{
 						final Vec3 _center = new Vec3(XPar, YPar, ZPar);
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((0.125 + Range * 0.05) / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-								.toList();
-						for (Entity entityiterator : _entfound) {
+						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((0.125 + Range * 0.05) / 2d), e -> true).stream()
+								.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
 								if (!(entityiterator instanceof ItemEntity)) {
 									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:energium_golem_ds")))),

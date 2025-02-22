@@ -55,12 +55,15 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 84 && mouseY < topPos + 108) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mushrooms.tooltip_planting_mushrooms_uses_35"), mouseX, mouseY);
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 21 && mouseY < topPos + 45)
+		}
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 21 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mushrooms.tooltip_flying_spores_uses_15"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168)
+		}
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50"), mouseX, mouseY);
+		}
 	}
 
 	@Override

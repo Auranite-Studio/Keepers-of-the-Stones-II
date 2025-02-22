@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:rune_cutter",
     "power:cursed_stone_cracked_bricks_wall",
     "power:cursed_stone_cracked_bricks_stairs",
     "power:cursed_stone_cracked_bricks_slab",

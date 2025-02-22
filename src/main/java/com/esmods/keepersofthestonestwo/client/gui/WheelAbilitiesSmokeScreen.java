@@ -55,12 +55,15 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 22 && mouseY < topPos + 46)
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 22 && mouseY < topPos + 46) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_smoke.tooltip_smoke_attack_uses_10"), mouseX, mouseY);
-		if (mouseX > leftPos + 146 && mouseX < leftPos + 170 && mouseY > topPos + 85 && mouseY < topPos + 109)
+		}
+		if (mouseX > leftPos + 146 && mouseX < leftPos + 170 && mouseY > topPos + 85 && mouseY < topPos + 109) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 145 && mouseY < topPos + 169)
+		}
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 145 && mouseY < topPos + 169) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_smoke.tooltip_smoke_intangibility_uses_80"), mouseX, mouseY);
+		}
 	}
 
 	@Override

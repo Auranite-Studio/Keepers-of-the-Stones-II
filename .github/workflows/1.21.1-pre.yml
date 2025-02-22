@@ -10,7 +10,7 @@ on:
 env:                                              
   MINECRAFT_VERSION: 1.21.1                      
   JAVA_VERSION: 21      
-  VERSION: 1.1.0-pre1
+  VERSION: 1.1.0-pre2
   RELEASE_NAME: Keepers of the Stones II 1.1.0 Pre-release 1
 
 jobs:
@@ -64,7 +64,6 @@ jobs:
             conflicting-dependency(conflicting)
             incompatible-dependency(incompatible)
             playeranimator(required){modrinth:gedNE4y2}{curseforge:658587}#(ignore:github)
-            pehkui(required){modrinth:t5W7Jfwy}{curseforge:319596}#(ignore:github)
             better-combat(recommended){modrinth:8BmcQJ2H}{curseforge:639842}#(ignore:github)
             epic-fight(incompatible){modrinth:vu3NZ5Ma}{curseforge:405076}#(ignore:github)
           modrinth-featured: false

@@ -55,12 +55,15 @@ public class WheelAbilitiesWaterScreen extends AbstractContainerScreen<WheelAbil
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin"), mouseX, mouseY);
-		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		}
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point"), mouseX, mouseY);
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 145 && mouseY < topPos + 169)
+		}
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 145 && mouseY < topPos + 169) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi"), mouseX, mouseY);
+		}
 	}
 
 	@Override

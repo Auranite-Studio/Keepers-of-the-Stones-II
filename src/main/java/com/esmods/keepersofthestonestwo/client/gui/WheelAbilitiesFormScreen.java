@@ -55,12 +55,15 @@ public class WheelAbilitiesFormScreen extends AbstractContainerScreen<WheelAbili
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 81 && mouseX < leftPos + 105 && mouseY > topPos + 24 && mouseY < topPos + 48)
+		if (mouseX > leftPos + 81 && mouseX < leftPos + 105 && mouseY > topPos + 24 && mouseY < topPos + 48) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_form.tooltip_warp_wave_uses_15"), mouseX, mouseY);
-		if (mouseX > leftPos + 143 && mouseX < leftPos + 167 && mouseY > topPos + 85 && mouseY < topPos + 109)
+		}
+		if (mouseX > leftPos + 143 && mouseX < leftPos + 167 && mouseY > topPos + 85 && mouseY < topPos + 109) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_form.tooltip_miniaturization_uses_50"), mouseX, mouseY);
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 146 && mouseY < topPos + 170)
+		}
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 146 && mouseY < topPos + 170) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_form.tooltip_gigantization_uses_50"), mouseX, mouseY);
+		}
 	}
 
 	@Override

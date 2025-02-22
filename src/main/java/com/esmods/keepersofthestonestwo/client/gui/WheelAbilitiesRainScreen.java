@@ -55,12 +55,15 @@ public class WheelAbilitiesRainScreen extends AbstractContainerScreen<WheelAbili
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_rain.tooltip_rain_splash_uses_10"), mouseX, mouseY);
-		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 83 && mouseY < topPos + 107)
+		}
+		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 83 && mouseY < topPos + 107) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168)
+		}
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5"), mouseX, mouseY);
+		}
 	}
 
 	@Override

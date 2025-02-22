@@ -29,21 +29,7 @@ public class CursedKeyOpenVaultProcedure {
 		double particleRadius = 0;
 		double particleAmount = 0;
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PowerModBlocks.CURSED_VAULT.get()) {
-			if (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), (entity.getStringUUID())) == 0 && new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "Opened") == 0) {
+			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), (entity.getStringUUID())) == 0 && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "Opened") == 0) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -112,5 +98,12 @@ public class CursedKeyOpenVaultProcedure {
 				}
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

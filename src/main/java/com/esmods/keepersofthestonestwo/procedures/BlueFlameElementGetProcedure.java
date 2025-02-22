@@ -9,14 +9,14 @@ import net.minecraft.world.entity.Entity;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.init.PowerModGameRules;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class BlueFlameElementGetProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (!PowerModVariables.MapVariables.get(world).blue_flame_stone || !world.getLevelData().getGameRules().getBoolean(PowerModGameRules.LIMITED_NUMBER_OF_STONES)) {
+		if (!PowerModVariables.MapVariables.get(world).blue_flame_stone || !PowerConfigConfiguration.LIMIT_NUMBER_STONES.get()) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.BLUE_FLAME_STONE.get()).copy();
@@ -28,7 +28,7 @@ public class BlueFlameElementGetProcedure {
 				_player.closeContainer();
 			PowerModVariables.MapVariables.get(world).blue_flame_stone = true;
 			PowerModVariables.MapVariables.get(world).syncData(world);
-			if (world.getLevelData().getGameRules().getBoolean(PowerModGameRules.LIMIT_OF_STONES_FOR_ONE_PLAYER)) {
+			if (PowerConfigConfiguration.ONE_PLAYER_LIMIT_STONES.get()) {
 				{
 					boolean _setval = true;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

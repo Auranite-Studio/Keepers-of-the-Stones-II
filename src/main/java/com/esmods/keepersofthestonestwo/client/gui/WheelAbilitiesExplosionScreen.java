@@ -55,12 +55,15 @@ public class WheelAbilitiesExplosionScreen extends AbstractContainerScreen<Wheel
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20"), mouseX, mouseY);
-		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 82 && mouseY < topPos + 106)
+		}
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 82 && mouseY < topPos + 106) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_explosion.tooltip_selfdetonation_uses_50"), mouseX, mouseY);
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 145 && mouseY < topPos + 169)
+		}
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 145 && mouseY < topPos + 169) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_explosion.tooltip_atomic_bomb_uses_100"), mouseX, mouseY);
+		}
 	}
 
 	@Override
