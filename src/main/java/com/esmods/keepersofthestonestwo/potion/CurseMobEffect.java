@@ -6,27 +6,24 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
-import net.minecraft.resources.ResourceLocation;
 
 import com.esmods.keepersofthestonestwo.procedures.CurseTickEventProcedure;
-import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class CurseMobEffect extends MobEffect {
 	public CurseMobEffect() {
 		super(MobEffectCategory.HARMFUL, -10395278);
-		this.addAttributeModifier(Attributes.ATTACK_SPEED, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.curse_0"), -0.7, AttributeModifier.Operation.ADD_VALUE);
-		this.addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.curse_1"), -0.05, AttributeModifier.Operation.ADD_VALUE);
-		this.addAttributeModifier(Attributes.ATTACK_DAMAGE, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.curse_2"), -0.7, AttributeModifier.Operation.ADD_VALUE);
+		this.addAttributeModifier(Attributes.ATTACK_SPEED, "3902ca63-87d5-35de-a32d-06070ae42716", -0.7, AttributeModifier.Operation.ADDITION);
+		this.addAttributeModifier(Attributes.MOVEMENT_SPEED, "06095f25-8a04-3174-b233-06e3469b076c", -0.05, AttributeModifier.Operation.ADDITION);
+		this.addAttributeModifier(Attributes.ATTACK_DAMAGE, "60e82cc1-a763-3b87-88d0-a81c8212edd7", -0.7, AttributeModifier.Operation.ADDITION);
 	}
 
 	@Override
-	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-		return true;
-	}
-
-	@Override
-	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		CurseTickEventProcedure.execute(entity.level(), entity);
-		return super.applyEffectTick(entity, amplifier);
+	}
+
+	@Override
+	public boolean isDurationEffectTick(int duration, int amplifier) {
+		return true;
 	}
 }

@@ -9637,7 +9637,7 @@
       "registry_name": "depleted_energium_ore_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/depleted_energium_ore.json"
+          "src/main/resources/data/power/loot_tables/blocks/depleted_energium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -9669,8 +9669,8 @@
           "src/main/resources/assets/power/blockstates/depleted_energium_ore.json",
           "src/main/resources/assets/power/models/block/depleted_energium_ore.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/DepletedEnergiumOreBlock.java",
-          "src/main/resources/data/power/worldgen/configured_feature/depleted_energium_ore.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/depleted_energium_ore_biome_modifier.json"
+          "src/main/resources/data/power/forge/biome_modifier/depleted_energium_ore_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/configured_feature/depleted_energium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -9684,7 +9684,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/depleted_energium_block.json",
-          "src/main/resources/data/power/loot_table/blocks/depleted_energium_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/depleted_energium_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/DepletedEnergiumBlockBlock.java",
           "src/main/resources/assets/power/blockstates/depleted_energium_block.json",
           "src/main/resources/assets/power/models/block/depleted_energium_block.json"
@@ -9700,7 +9700,7 @@
       "registry_name": "depleted_energium_ore_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/depleted_energium_ore_block_recipe.json"
+          "src/main/resources/data/power/recipes/depleted_energium_ore_block_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -9713,7 +9713,7 @@
       "registry_name": "depleted_energium_block_ore_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/depleted_energium_block_ore_recipe.json"
+          "src/main/resources/data/power/recipes/depleted_energium_block_ore_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -9726,7 +9726,7 @@
       "registry_name": "depleted_energium_ore_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/depleted_energium_ore_smelting.json"
+          "src/main/resources/data/power/recipes/depleted_energium_ore_smelting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -9753,7 +9753,7 @@
       "registry_name": "raw_depleted_energium_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_depleted_energium_recipe.json"
+          "src/main/resources/data/power/recipes/raw_depleted_energium_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -9783,8 +9783,8 @@
           "src/main/resources/assets/power/models/block/energium_block.json",
           "src/main/resources/assets/power/blockstates/energium_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumBlockBlock.java",
-          "src/main/resources/data/power/loot_table/blocks/energium_block.json",
-          "src/main/resources/assets/power/models/item/energium_block.json"
+          "src/main/resources/assets/power/models/item/energium_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/energium_block.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10253,7 +10253,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/block/BatteryChargerBlock.java",
           "src/main/java/com/esmods/keepersofthestonestwo/block/entity/BatteryChargerBlockEntity.java",
           "src/main/resources/assets/power/models/block/battery_charger.json",
-          "src/main/resources/data/power/loot_table/blocks/battery_charger.json",
+          "src/main/resources/data/power/loot_tables/blocks/battery_charger.json",
           "src/main/resources/assets/power/models/item/battery_charger.json"
         ]
       },
@@ -10267,7 +10267,7 @@
       "registry_name": "battery_charger_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/battery_charger_recipe.json"
+          "src/main/resources/data/power/recipes/battery_charger_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/BatteryCharger"
@@ -10280,7 +10280,7 @@
       "registry_name": "empty_battery_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/empty_battery_recipe.json"
+          "src/main/resources/data/power/recipes/empty_battery_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/EmptyBattery"
@@ -10452,7 +10452,7 @@
       "registry_name": "energium_block_ore_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_block_ore_recipe.json"
+          "src/main/resources/data/power/recipes/energium_block_ore_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10465,7 +10465,7 @@
       "registry_name": "energium_ore_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_ore_block_recipe.json"
+          "src/main/resources/data/power/recipes/energium_ore_block_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10478,7 +10478,7 @@
       "registry_name": "depleted_energium_ore_blasting_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/depleted_energium_ore_blasting_recipe.json"
+          "src/main/resources/data/power/recipes/depleted_energium_ore_blasting_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10491,7 +10491,7 @@
       "registry_name": "raw_depleted_energium_blasting_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_depleted_energium_blasting_recipe.json"
+          "src/main/resources/data/power/recipes/raw_depleted_energium_blasting_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10504,7 +10504,7 @@
       "registry_name": "energium_ingot_cleaning_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_ingot_cleaning_recipe.json"
+          "src/main/resources/data/power/recipes/energium_ingot_cleaning_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10592,7 +10592,7 @@
       "registry_name": "duplicate_energium_upgrade_smithing_template",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/duplicate_energium_upgrade_smithing_template.json"
+          "src/main/resources/data/power/recipes/duplicate_energium_upgrade_smithing_template.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10675,7 +10675,7 @@
       "registry_name": "energium_pickaxe_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_pickaxe_recipe.json"
+          "src/main/resources/data/power/recipes/energium_pickaxe_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10688,7 +10688,7 @@
       "registry_name": "energium_axe_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_axe_recipe.json"
+          "src/main/resources/data/power/recipes/energium_axe_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10701,7 +10701,7 @@
       "registry_name": "energium_sword_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_sword_recipe.json"
+          "src/main/resources/data/power/recipes/energium_sword_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10714,7 +10714,7 @@
       "registry_name": "energium_shovel_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_shovel_recipe.json"
+          "src/main/resources/data/power/recipes/energium_shovel_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10727,7 +10727,7 @@
       "registry_name": "energium_hoe_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_hoe_recipe.json"
+          "src/main/resources/data/power/recipes/energium_hoe_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10757,7 +10757,7 @@
       "registry_name": "energium_armor_helmet_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_armor_helmet_recipe.json"
+          "src/main/resources/data/power/recipes/energium_armor_helmet_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10770,7 +10770,7 @@
       "registry_name": "energium_armor_chestplate_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_armor_chestplate_recipe.json"
+          "src/main/resources/data/power/recipes/energium_armor_chestplate_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10783,7 +10783,7 @@
       "registry_name": "energium_armor_leggings_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_armor_leggings_recipe.json"
+          "src/main/resources/data/power/recipes/energium_armor_leggings_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10796,7 +10796,7 @@
       "registry_name": "energium_armor_boots_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_armor_boots_recipe.json"
+          "src/main/resources/data/power/recipes/energium_armor_boots_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10809,7 +10809,7 @@
       "registry_name": "revenge",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/enchantment/revenge.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/enchantment/RevengeEnchantment.java"
         ]
       },
       "path": "~/Enchantments"
@@ -10849,7 +10849,7 @@
       "registry_name": "isolation",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/enchantment/isolation.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/enchantment/IsolationEnchantment.java"
         ]
       },
       "path": "~/Enchantments"
@@ -11358,9 +11358,9 @@
           "src/main/resources/assets/power/models/block/keepers_box.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/entity/KeepersBoxBlockEntity.java",
           "src/main/resources/assets/power/models/item/keepers_box.json",
+          "src/main/resources/data/power/loot_tables/blocks/keepers_box.json",
           "src/main/resources/assets/power/blockstates/keepers_box.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/KeepersBoxBlock.java",
-          "src/main/resources/data/power/loot_table/blocks/keepers_box.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/block/KeepersBoxBlock.java"
         ]
       },
       "path": "~/ItemsAndBlocks/KeepersBox"
@@ -12430,8 +12430,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/MoonBlockBlock.java",
-          "src/main/resources/data/power/loot_table/blocks/moon_block.json",
           "src/main/resources/assets/power/models/block/moon_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/moon_block.json",
           "src/main/resources/assets/power/models/item/moon_block.json",
           "src/main/resources/assets/power/blockstates/moon_block.json"
         ]
@@ -13911,8 +13911,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumControllerBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/energium_controller.json",
           "src/main/resources/assets/power/blockstates/energium_controller.json",
-          "src/main/resources/data/power/loot_table/blocks/energium_controller.json",
           "src/main/resources/assets/power/models/block/energium_controller.json",
           "src/main/resources/assets/power/models/item/energium_controller.json"
         ]
@@ -13958,7 +13958,7 @@
       "registry_name": "energium_controller_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_controller_recipe.json"
+          "src/main/resources/data/power/recipes/energium_controller_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -14889,10 +14889,10 @@
       "registry_name": "amplifier_ore",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/forge/biome_modifier/amplifier_ore_biome_modifier.json",
           "src/main/resources/assets/power/models/block/amplifier_ore.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/AmplifierOreBlock.java",
           "src/main/resources/assets/power/models/item/amplifier_ore.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/amplifier_ore_biome_modifier.json",
           "src/main/resources/data/power/worldgen/placed_feature/amplifier_ore.json",
           "src/main/resources/data/power/worldgen/configured_feature/amplifier_ore.json",
           "src/main/resources/assets/power/blockstates/amplifier_ore.json"
@@ -14908,7 +14908,7 @@
       "registry_name": "amplifier_ore_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_ore_smelting.json"
+          "src/main/resources/data/power/recipes/amplifier_ore_smelting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -14949,7 +14949,7 @@
       "registry_name": "amplifier_ore_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/amplifier_ore.json"
+          "src/main/resources/data/power/loot_tables/blocks/amplifier_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -14962,7 +14962,7 @@
       "registry_name": "raw_amplifier_to_drop_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_amplifier_to_drop_recipe.json"
+          "src/main/resources/data/power/recipes/raw_amplifier_to_drop_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -14975,7 +14975,7 @@
       "registry_name": "amplifier_ore_blasting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_ore_blasting.json"
+          "src/main/resources/data/power/recipes/amplifier_ore_blasting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -14988,7 +14988,7 @@
       "registry_name": "raw_amplifier_blasting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_amplifier_blasting.json"
+          "src/main/resources/data/power/recipes/raw_amplifier_blasting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -16361,9 +16361,9 @@
         "files": [
           "src/main/resources/assets/power/models/item/amplifier_block.json",
           "src/main/resources/assets/power/models/block/amplifier_block.json",
-          "src/main/resources/data/power/loot_table/blocks/amplifier_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/AmplifierBlockBlock.java",
-          "src/main/resources/assets/power/blockstates/amplifier_block.json"
+          "src/main/resources/assets/power/blockstates/amplifier_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/amplifier_block.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -16376,7 +16376,7 @@
       "registry_name": "amplifier_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_block_recipe.json"
+          "src/main/resources/data/power/recipes/amplifier_block_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -16389,7 +16389,7 @@
       "registry_name": "amplifier_drop_from_block",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_drop_from_block.json"
+          "src/main/resources/data/power/recipes/amplifier_drop_from_block.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -17022,11 +17022,11 @@
       "registry_name": "raw_depleted_energium_block",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/loot_tables/blocks/raw_depleted_energium_block.json",
           "src/main/resources/assets/power/models/item/raw_depleted_energium_block.json",
           "src/main/resources/assets/power/blockstates/raw_depleted_energium_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/RawDepletedEnergiumBlockBlock.java",
-          "src/main/resources/assets/power/models/block/raw_depleted_energium_block.json",
-          "src/main/resources/data/power/loot_table/blocks/raw_depleted_energium_block.json"
+          "src/main/resources/assets/power/models/block/raw_depleted_energium_block.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -17039,7 +17039,7 @@
       "registry_name": "raw_depleted_energium_block_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_depleted_energium_block_craft.json"
+          "src/main/resources/data/power/recipes/raw_depleted_energium_block_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -17052,7 +17052,7 @@
       "registry_name": "raw_depleted_energium_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_depleted_energium_craft.json"
+          "src/main/resources/data/power/recipes/raw_depleted_energium_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -17065,8 +17065,8 @@
       "registry_name": "raw_amplifier_block",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/loot_tables/blocks/raw_amplifier_block.json",
           "src/main/resources/assets/power/models/block/raw_amplifier_block.json",
-          "src/main/resources/data/power/loot_table/blocks/raw_amplifier_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/RawAmplifierBlockBlock.java",
           "src/main/resources/assets/power/models/item/raw_amplifier_block.json",
           "src/main/resources/assets/power/blockstates/raw_amplifier_block.json"
@@ -17082,7 +17082,7 @@
       "registry_name": "raw_amplifier_block_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_amplifier_block_craft.json"
+          "src/main/resources/data/power/recipes/raw_amplifier_block_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -17095,7 +17095,7 @@
       "registry_name": "raw_amplifier_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_amplifier_craft.json"
+          "src/main/resources/data/power/recipes/raw_amplifier_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -18053,7 +18053,7 @@
       "registry_name": "keepers_of_the_stones_2",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/keepers_of_the_stones_2.json"
+          "src/main/resources/data/power/advancements/keepers_of_the_stones_2.json"
         ]
       },
       "path": "~/Achievements"
@@ -18085,7 +18085,7 @@
       "registry_name": "super_charge",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/super_charge.json"
+          "src/main/resources/data/power/advancements/super_charge.json"
         ]
       },
       "path": "~/Achievements"
@@ -18159,7 +18159,7 @@
       "registry_name": "energium_temple_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/chests/energium_temple.json"
+          "src/main/resources/data/power/loot_tables/chests/energium_temple.json"
         ]
       },
       "path": "~/Structures"
@@ -19215,8 +19215,8 @@
       "registry_name": "blue_portal",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/blue_portal.json",
           "src/main/resources/assets/power/models/block/blue_portal.json",
+          "src/main/resources/data/power/loot_tables/blocks/blue_portal.json",
           "src/main/resources/assets/power/blockstates/blue_portal.json",
           "src/main/resources/assets/power/models/item/blue_portal.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/BluePortalBlock.java"
@@ -19316,10 +19316,10 @@
       "registry_name": "orange_portal",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/orange_portal.json",
           "src/main/resources/assets/power/models/item/orange_portal.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/OrangePortalBlock.java",
           "src/main/resources/assets/power/models/block/orange_portal.json",
+          "src/main/resources/data/power/loot_tables/blocks/orange_portal.json",
           "src/main/resources/assets/power/blockstates/orange_portal.json"
         ]
       },
@@ -19902,7 +19902,7 @@
       "registry_name": "what_is_this_metal",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/what_is_this_metal.json"
+          "src/main/resources/data/power/advancements/what_is_this_metal.json"
         ]
       },
       "path": "~/Achievements"
@@ -19915,7 +19915,7 @@
       "registry_name": "energized_gold",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/energized_gold.json"
+          "src/main/resources/data/power/advancements/energized_gold.json"
         ]
       },
       "path": "~/Achievements"
@@ -19928,7 +19928,7 @@
       "registry_name": "the_end_of_tyranny",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/the_end_of_tyranny.json"
+          "src/main/resources/data/power/advancements/the_end_of_tyranny.json"
         ]
       },
       "path": "~/Achievements"
@@ -19995,7 +19995,7 @@
       "registry_name": "become_a_master",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/become_a_master.json"
+          "src/main/resources/data/power/advancements/become_a_master.json"
         ]
       },
       "path": "~/Achievements"
@@ -20031,7 +20031,7 @@
       "registry_name": "full_power_of_energium",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/full_power_of_energium.json"
+          "src/main/resources/data/power/advancements/full_power_of_energium.json"
         ]
       },
       "path": "~/Achievements"
@@ -20949,8 +20949,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/AmberBlockBlock.java",
-          "src/main/resources/data/power/loot_table/blocks/amber_block.json",
           "src/main/resources/assets/power/models/block/amber_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/amber_block.json",
           "src/main/resources/assets/power/blockstates/amber_block.json",
           "src/main/resources/assets/power/models/item/amber_block.json"
         ]
@@ -21062,7 +21062,7 @@
       "registry_name": "star_regeneration_potion_recipe",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/recipe/brewing/StarRegenerationPotionRecipeBrewingRecipe.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/StarRegenerationPotionRecipeBrewingRecipe.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -21117,11 +21117,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/block/cursed_stone.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone.json",
           "src/main/resources/data/power/worldgen/configured_feature/cursed_stone.json",
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBlock.java",
+          "src/main/resources/data/power/forge/biome_modifier/cursed_stone_biome_modifier.json",
           "src/main/resources/assets/power/models/item/cursed_stone.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/cursed_stone_biome_modifier.json",
           "src/main/resources/data/power/worldgen/placed_feature/cursed_stone.json",
           "src/main/resources/assets/power/blockstates/cursed_stone.json"
         ]
@@ -21136,8 +21136,8 @@
       "registry_name": "cursed_stone_bricks",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_bricks.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksBlock.java",
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_bricks.json",
           "src/main/resources/assets/power/blockstates/cursed_stone_bricks.json",
           "src/main/resources/assets/power/models/item/cursed_stone_bricks.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks.json"
@@ -21153,7 +21153,7 @@
       "registry_name": "cursed_stone_brick_cut",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_brick_cut.json"
+          "src/main/resources/data/power/recipes/cursed_stone_brick_cut.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21229,8 +21229,8 @@
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneStairsBlock.java",
           "src/main/resources/assets/power/models/block/cursed_stone_stairs.json",
           "src/main/resources/assets/power/models/block/cursed_stone_stairs_inner.json",
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_stairs.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_stairs_outer.json"
+          "src/main/resources/assets/power/models/block/cursed_stone_stairs_outer.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_stairs.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21243,7 +21243,7 @@
       "registry_name": "cursed_stone_slab",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_slab.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_slab.json",
           "src/main/resources/assets/power/models/block/cursed_stone_slab_top.json",
           "src/main/resources/assets/power/models/block/cursed_stone_slab_full.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneSlabBlock.java",
@@ -21263,9 +21263,9 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksStairsBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_bricks_stairs.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_stairs_outer.json",
           "src/main/resources/assets/power/models/item/cursed_stone_bricks_stairs.json",
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_bricks_stairs.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_stairs.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_stairs_inner.json",
           "src/main/resources/assets/power/blockstates/cursed_stone_bricks_stairs.json"
@@ -21284,10 +21284,10 @@
           "src/main/resources/assets/power/blockstates/cursed_stone_bricks_slab.json",
           "src/main/resources/assets/power/models/item/cursed_stone_bricks_slab.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_slab_full.json",
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_bricks_slab.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_slab.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_slab_top.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksSlabBlock.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksSlabBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_bricks_slab.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21306,8 +21306,8 @@
           "src/main/resources/assets/power/models/block/cursed_stone_wall.json",
           "src/main/resources/assets/power/models/item/cursed_stone_wall.json",
           "src/main/resources/assets/power/blockstates/cursed_stone_wall.json",
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_wall.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_wall_side_tall.json"
+          "src/main/resources/assets/power/models/block/cursed_stone_wall_side_tall.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_wall.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21325,8 +21325,8 @@
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_wall_post.json",
           "src/main/resources/assets/power/models/item/cursed_stone_bricks_wall.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksWallBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_bricks_wall.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_wall_inventory.json",
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_bricks_wall.json",
           "src/main/resources/assets/power/blockstates/cursed_stone_bricks_wall.json"
         ]
       },
@@ -21340,7 +21340,7 @@
       "registry_name": "cursed_stone_slab_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_slab_recipe.json"
+          "src/main/resources/data/power/recipes/cursed_stone_slab_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21353,7 +21353,7 @@
       "registry_name": "cursed_stone_stairs_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_stairs_recipe.json"
+          "src/main/resources/data/power/recipes/cursed_stone_stairs_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21366,7 +21366,7 @@
       "registry_name": "cursed_stone_wall_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_wall_recipe.json"
+          "src/main/resources/data/power/recipes/cursed_stone_wall_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21379,7 +21379,7 @@
       "registry_name": "cursed_stone_bricks_slab_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_bricks_slab_recipe.json"
+          "src/main/resources/data/power/recipes/cursed_stone_bricks_slab_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21392,7 +21392,7 @@
       "registry_name": "cursed_stone_bricks_stairs_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_bricks_stairs_recipe.json"
+          "src/main/resources/data/power/recipes/cursed_stone_bricks_stairs_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21405,7 +21405,7 @@
       "registry_name": "cursed_stone_bricks_wall_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_bricks_wall_recipe.json"
+          "src/main/resources/data/power/recipes/cursed_stone_bricks_wall_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21418,7 +21418,7 @@
       "registry_name": "amplifier_ring_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_ring_craft.json"
+          "src/main/resources/data/power/recipes/amplifier_ring_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -21433,9 +21433,9 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneBlock.java",
           "src/main/resources/assets/power/models/item/polished_cursed_stone.json",
+          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone.json",
-          "src/main/resources/assets/power/blockstates/polished_cursed_stone.json",
-          "src/main/resources/data/power/loot_table/blocks/polished_cursed_stone.json"
+          "src/main/resources/assets/power/blockstates/polished_cursed_stone.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21452,8 +21452,8 @@
           "src/main/resources/assets/power/models/block/polished_cursed_stone_stairs.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_stairs_outer.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_stairs_inner.json",
-          "src/main/resources/data/power/loot_table/blocks/polished_cursed_stone_stairs.json",
           "src/main/resources/assets/power/blockstates/polished_cursed_stone_stairs.json",
+          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone_stairs.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneStairsBlock.java"
         ]
       },
@@ -21467,8 +21467,8 @@
       "registry_name": "polished_cursed_stone_slab",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone_slab.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneSlabBlock.java",
-          "src/main/resources/data/power/loot_table/blocks/polished_cursed_stone_slab.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_slab.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_slab_top.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_slab_full.json",
@@ -21487,13 +21487,13 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/block/polished_cursed_stone_wall_post.json",
-          "src/main/resources/data/power/loot_table/blocks/polished_cursed_stone_wall.json",
           "src/main/resources/assets/power/models/item/polished_cursed_stone_wall.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_wall_inventory.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_wall_side_tall.json",
           "src/main/resources/assets/power/blockstates/polished_cursed_stone_wall.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_wall.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneWallBlock.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneWallBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone_wall.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21506,7 +21506,7 @@
       "registry_name": "polished_cursed_stone_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/polished_cursed_stone_craft.json"
+          "src/main/resources/data/power/recipes/polished_cursed_stone_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21519,7 +21519,7 @@
       "registry_name": "polished_cursed_stone_stairs_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/polished_cursed_stone_stairs_craft.json"
+          "src/main/resources/data/power/recipes/polished_cursed_stone_stairs_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21532,7 +21532,7 @@
       "registry_name": "polished_cursed_stone_slab_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/polished_cursed_stone_slab_craft.json"
+          "src/main/resources/data/power/recipes/polished_cursed_stone_slab_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21545,7 +21545,7 @@
       "registry_name": "polished_cursed_stone_wall_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/polished_cursed_stone_wall_craft.json"
+          "src/main/resources/data/power/recipes/polished_cursed_stone_wall_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21562,7 +21562,7 @@
           "src/main/resources/assets/power/blockstates/cursed_stone_pillar.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStonePillarBlock.java",
           "src/main/resources/assets/power/models/block/cursed_stone_pillar.json",
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_pillar.json"
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_pillar.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21575,7 +21575,7 @@
       "registry_name": "cursed_stone_pillar_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_pillar_craft.json"
+          "src/main/resources/data/power/recipes/cursed_stone_pillar_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21588,11 +21588,11 @@
       "registry_name": "cursed_lantern",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/cursed_lantern.json",
           "src/main/resources/assets/power/blockstates/cursed_lantern.json",
           "src/main/resources/assets/power/models/item/cursed_lantern.json",
           "src/main/resources/assets/power/models/block/cursed_lantern.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedLanternBlock.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedLanternBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_lantern.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21637,7 +21637,7 @@
       "registry_name": "cursed_lantern_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_lantern_craft.json"
+          "src/main/resources/data/power/recipes/cursed_lantern_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -21708,11 +21708,11 @@
       "registry_name": "copyrium_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/neoforge/biome_modifier/copyrium_ore_biome_modifier.json",
           "src/main/resources/data/power/worldgen/placed_feature/copyrium_ore.json",
           "src/main/resources/data/power/worldgen/configured_feature/copyrium_ore.json",
           "src/main/resources/assets/power/blockstates/copyrium_ore.json",
           "src/main/resources/assets/power/models/block/copyrium_ore.json",
+          "src/main/resources/data/power/forge/biome_modifier/copyrium_ore_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CopyriumOreBlock.java",
           "src/main/resources/assets/power/models/item/copyrium_ore.json"
         ]
@@ -21728,9 +21728,9 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/CopyriumBlockBlock.java",
-          "src/main/resources/data/power/loot_table/blocks/copyrium_block.json",
           "src/main/resources/assets/power/models/item/copyrium_block.json",
           "src/main/resources/assets/power/blockstates/copyrium_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/copyrium_block.json",
           "src/main/resources/assets/power/models/block/copyrium_block.json"
         ]
       },
@@ -21744,7 +21744,7 @@
       "registry_name": "copyrium_ore_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/copyrium_ore_block_recipe.json"
+          "src/main/resources/data/power/recipes/copyrium_ore_block_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -21757,7 +21757,7 @@
       "registry_name": "copyrium_block_ore_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/copyrium_block_ore_recipe.json"
+          "src/main/resources/data/power/recipes/copyrium_block_ore_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -21770,7 +21770,7 @@
       "registry_name": "copyrium_ore_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/copyrium_ore_smelting.json"
+          "src/main/resources/data/power/recipes/copyrium_ore_smelting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -21798,8 +21798,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/RawCopyriumBlockBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/raw_copyrium_block.json",
           "src/main/resources/assets/power/models/item/raw_copyrium_block.json",
-          "src/main/resources/data/power/loot_table/blocks/raw_copyrium_block.json",
           "src/main/resources/assets/power/blockstates/raw_copyrium_block.json",
           "src/main/resources/assets/power/models/block/raw_copyrium_block.json"
         ]
@@ -21814,9 +21814,9 @@
       "registry_name": "elemental_power_generator",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/loot_tables/blocks/elemental_power_generator.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/ElementalPowerGeneratorBlock.java",
           "src/main/resources/assets/power/models/item/elemental_power_generator.json",
-          "src/main/resources/data/power/loot_table/blocks/elemental_power_generator.json",
           "src/main/resources/assets/power/models/block/elemental_power_generator.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/entity/ElementalPowerGeneratorBlockEntity.java",
           "src/main/resources/assets/power/blockstates/elemental_power_generator.json"
@@ -21832,7 +21832,7 @@
       "registry_name": "copyrium_ore_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/copyrium_ore.json"
+          "src/main/resources/data/power/loot_tables/blocks/copyrium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -21845,7 +21845,7 @@
       "registry_name": "raw_copyrium_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_copyrium_smelting.json"
+          "src/main/resources/data/power/recipes/raw_copyrium_smelting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -21858,7 +21858,7 @@
       "registry_name": "copyrium_ore_blasting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/copyrium_ore_blasting.json"
+          "src/main/resources/data/power/recipes/copyrium_ore_blasting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -21871,7 +21871,7 @@
       "registry_name": "raw_copyrium_blasting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_copyrium_blasting.json"
+          "src/main/resources/data/power/recipes/raw_copyrium_blasting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -22434,9 +22434,9 @@
         "files": [
           "src/main/resources/assets/power/models/item/cursed_vault.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/entity/CursedVaultBlockEntity.java",
-          "src/main/resources/data/power/loot_table/blocks/cursed_vault.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedVaultBlock.java",
           "src/main/resources/assets/power/blockstates/cursed_vault.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_vault.json",
           "src/main/resources/assets/power/models/block/cursed_vault.json"
         ]
       },
@@ -22538,7 +22538,7 @@
       "registry_name": "cursed_castle_vaults",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/chests/cursed_castle_vaults.json"
+          "src/main/resources/data/power/loot_tables/chests/cursed_castle_vaults.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Vaults/Cursed"
@@ -22565,7 +22565,7 @@
       "registry_name": "getting_married",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/getting_married.json"
+          "src/main/resources/data/power/advancements/getting_married.json"
         ]
       },
       "path": "~/Achievements"
@@ -24794,8 +24794,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedLadderBlock.java",
-          "src/main/resources/data/power/loot_table/blocks/cursed_ladder.json",
           "src/main/resources/assets/power/models/block/cursed_ladder.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_ladder.json",
           "src/main/resources/assets/power/models/item/cursed_ladder.json",
           "src/main/resources/assets/power/blockstates/cursed_ladder.json"
         ]
@@ -24810,7 +24810,7 @@
       "registry_name": "cursed_ladder_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_ladder_craft.json"
+          "src/main/resources/data/power/recipes/cursed_ladder_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -24825,7 +24825,7 @@
         "files": [
           "src/main/resources/assets/power/models/block/cursed_lamp.json",
           "src/main/resources/assets/power/blockstates/cursed_lamp.json",
-          "src/main/resources/data/power/loot_table/blocks/cursed_lamp.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_lamp.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedLampBlock.java",
           "src/main/resources/assets/power/models/item/cursed_lamp.json"
         ]
@@ -24840,7 +24840,7 @@
       "registry_name": "cursed_lamp_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_lamp_craft.json"
+          "src/main/resources/data/power/recipes/cursed_lamp_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -24929,7 +24929,7 @@
       "registry_name": "elemental_power_generator_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/elemental_power_generator_craft.json"
+          "src/main/resources/data/power/recipes/elemental_power_generator_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -25341,9 +25341,9 @@
           "src/main/resources/assets/power/blockstates/energium_vault.json",
           "src/main/resources/assets/power/models/block/energium_vault.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumVaultBlock.java",
-          "src/main/resources/data/power/loot_table/blocks/energium_vault.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/entity/EnergiumVaultBlockEntity.java",
-          "src/main/resources/assets/power/models/item/energium_vault.json"
+          "src/main/resources/assets/power/models/item/energium_vault.json",
+          "src/main/resources/data/power/loot_tables/blocks/energium_vault.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Vaults/Energium"
@@ -25458,7 +25458,7 @@
       "registry_name": "energium_temple_vaults",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/chests/energium_temple_vaults.json"
+          "src/main/resources/data/power/loot_tables/chests/energium_temple_vaults.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Vaults/Energium"
@@ -25704,8 +25704,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/power/worldgen/placed_feature/big_cursed_trees.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/big_cursed_trees_biome_modifier.json",
-          "src/main/resources/data/power/worldgen/configured_feature/big_cursed_trees.json"
+          "src/main/resources/data/power/worldgen/configured_feature/big_cursed_trees.json",
+          "src/main/resources/data/power/forge/biome_modifier/big_cursed_trees_biome_modifier.json"
         ]
       },
       "path": "~/Biomes/CursedForest"
@@ -25718,7 +25718,7 @@
       "registry_name": "lets_bail_this_place_isdead",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/lets_bail_this_place_isdead.json"
+          "src/main/resources/data/power/advancements/lets_bail_this_place_isdead.json"
         ]
       },
       "path": "~/Achievements"
@@ -25731,7 +25731,7 @@
       "registry_name": "the_great_win",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/the_great_win.json"
+          "src/main/resources/data/power/advancements/the_great_win.json"
         ]
       },
       "path": "~/Achievements"
@@ -26231,9 +26231,9 @@
         "files": [
           "src/main/resources/assets/power/blockstates/purple_mushroom.json",
           "src/main/resources/assets/power/models/block/purple_mushroom.json",
+          "src/main/resources/data/power/loot_tables/blocks/purple_mushroom.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/PurpleMushroomBlock.java",
-          "src/main/resources/assets/power/models/item/purple_mushroom.json",
-          "src/main/resources/data/power/loot_table/blocks/purple_mushroom.json"
+          "src/main/resources/assets/power/models/item/purple_mushroom.json"
         ]
       },
       "path": "~/Elements/Mushrooms"
@@ -26338,7 +26338,7 @@
       "metadata": {
         "files": [
           "src/main/resources/data/power/worldgen/placed_feature/basic_cursed_trees.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/basic_cursed_trees_biome_modifier.json",
+          "src/main/resources/data/power/forge/biome_modifier/basic_cursed_trees_biome_modifier.json",
           "src/main/resources/data/power/worldgen/configured_feature/basic_cursed_trees.json"
         ]
       },
@@ -26367,7 +26367,7 @@
       "registry_name": "cursed_castle_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/chests/cursed_castle.json"
+          "src/main/resources/data/power/loot_tables/chests/cursed_castle.json"
         ]
       },
       "path": "~/Structures"
@@ -26620,7 +26620,7 @@
       "registry_name": "raw_copyrium_block_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_copyrium_block_craft.json"
+          "src/main/resources/data/power/recipes/raw_copyrium_block_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -26633,7 +26633,7 @@
       "registry_name": "raw_copyrium_from_block_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_copyrium_from_block_craft.json"
+          "src/main/resources/data/power/recipes/raw_copyrium_from_block_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -26676,11 +26676,11 @@
         "files": [
           "src/main/resources/assets/power/models/item/energium_ore.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumOreBlock.java",
+          "src/main/resources/data/power/forge/biome_modifier/energium_ore_biome_modifier.json",
           "src/main/resources/data/power/worldgen/configured_feature/energium_ore.json",
           "src/main/resources/assets/power/models/block/energium_ore.json",
           "src/main/resources/assets/power/blockstates/energium_ore.json",
-          "src/main/resources/data/power/worldgen/placed_feature/energium_ore.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/energium_ore_biome_modifier.json"
+          "src/main/resources/data/power/worldgen/placed_feature/energium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -26693,7 +26693,7 @@
       "registry_name": "energium_ore_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/energium_ore.json"
+          "src/main/resources/data/power/loot_tables/blocks/energium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -26706,7 +26706,7 @@
       "registry_name": "energium_ore_to_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_ore_to_ingot.json"
+          "src/main/resources/data/power/recipes/energium_ore_to_ingot.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -26719,7 +26719,7 @@
       "registry_name": "raw_energium_to_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_energium_to_ingot.json"
+          "src/main/resources/data/power/recipes/raw_energium_to_ingot.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -26757,7 +26757,7 @@
       "registry_name": "power_lock_potion_recipe",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/recipe/brewing/PowerLockPotionRecipeBrewingRecipe.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/PowerLockPotionRecipeBrewingRecipe.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -26770,7 +26770,7 @@
       "registry_name": "energium_dust_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_dust_recipe.json"
+          "src/main/resources/data/power/recipes/energium_dust_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -26783,7 +26783,7 @@
       "registry_name": "energium_dust_to_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_dust_to_ingot.json"
+          "src/main/resources/data/power/recipes/energium_dust_to_ingot.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -26797,7 +26797,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/raw_energium_block.json",
-          "src/main/resources/data/power/loot_table/blocks/raw_energium_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/raw_energium_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/RawEnergiumBlockBlock.java",
           "src/main/resources/assets/power/blockstates/raw_energium_block.json",
           "src/main/resources/assets/power/models/block/raw_energium_block.json"
@@ -27141,7 +27141,7 @@
       "registry_name": "deepslate_depleted_energium_ore_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/deepslate_depleted_energium_ore.json"
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_depleted_energium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -27170,7 +27170,7 @@
       "registry_name": "deepslate_energium_ore_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/deepslate_energium_ore.json"
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_energium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -27199,7 +27199,7 @@
       "registry_name": "deepslate_amplifier_ore_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/deepslate_amplifier_ore.json"
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_amplifier_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -27228,7 +27228,7 @@
       "registry_name": "deepslate_copyrium_ore_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/deepslate_copyrium_ore.json"
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_copyrium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -27365,8 +27365,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/ChiseledCursedStoneBlock.java",
           "src/main/resources/assets/power/models/block/chiseled_cursed_stone.json",
-          "src/main/resources/data/power/loot_table/blocks/chiseled_cursed_stone.json",
           "src/main/resources/assets/power/models/item/chiseled_cursed_stone.json",
+          "src/main/resources/data/power/loot_tables/blocks/chiseled_cursed_stone.json",
           "src/main/resources/assets/power/blockstates/chiseled_cursed_stone.json"
         ]
       },
@@ -27381,8 +27381,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksBlock.java",
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_cracked_bricks.json",
           "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks.json",
           "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks.json",
           "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks.json"
         ]
@@ -27397,7 +27397,7 @@
       "registry_name": "chiseled_cursed_stone_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/chiseled_cursed_stone_craft.json"
+          "src/main/resources/data/power/recipes/chiseled_cursed_stone_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -27410,7 +27410,7 @@
       "registry_name": "cursed_stone_cracked_bricks_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_cracked_bricks_craft.json"
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -27424,8 +27424,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks_slab.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks_slab.json",
           "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_slab_full.json",
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_cracked_bricks_slab.json",
           "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_slab.json",
           "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_slab_top.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksSlabBlock.java",
@@ -27445,10 +27445,10 @@
           "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks_stairs.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksStairsBlock.java",
           "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_stairs_inner.json",
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_cracked_bricks_stairs.json",
           "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_stairs_outer.json",
           "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_stairs.json",
-          "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks_stairs.json"
+          "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks_stairs.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks_stairs.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -27461,14 +27461,14 @@
       "registry_name": "cursed_stone_cracked_bricks_wall",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/cursed_stone_cracked_bricks_wall.json",
           "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall.json",
           "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall_side_tall.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksWallBlock.java",
           "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks_wall.json",
           "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall_post.json",
           "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall_inventory.json",
-          "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks_wall.json"
+          "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks_wall.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks_wall.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -27481,7 +27481,7 @@
       "registry_name": "cursed_stone_cracked_bricks_slab_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_cracked_bricks_slab_craft.json"
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_slab_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -27494,7 +27494,7 @@
       "registry_name": "cursed_stone_cracked_bricks_stairs_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_cracked_bricks_stairs_craft.json"
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_stairs_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -27507,7 +27507,7 @@
       "registry_name": "cursed_stone_cracked_bricks_wall_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_stone_cracked_bricks_wall_craft.json"
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_wall_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -28232,8 +28232,8 @@
         "files": [
           "src/main/resources/assets/power/blockstates/freaking_parsnip_block.json",
           "src/main/resources/data/power/worldgen/placed_feature/freaking_parsnip_block.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/freaking_parsnip_block_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/FreakingParsnipBlockBlock.java",
+          "src/main/resources/data/power/forge/biome_modifier/freaking_parsnip_block_biome_modifier.json",
           "src/main/resources/assets/power/models/block/freaking_parsnip_block.json",
           "src/main/resources/data/power/worldgen/configured_feature/freaking_parsnip_block.json",
           "src/main/resources/assets/power/models/item/freaking_parsnip_block.json"
@@ -28249,7 +28249,7 @@
       "registry_name": "freaking_parsnip_block_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/blocks/freaking_parsnip_block.json"
+          "src/main/resources/data/power/loot_tables/blocks/freaking_parsnip_block.json"
         ]
       },
       "path": "~/ItemsAndBlocks/FreakingParsnip"
@@ -28321,7 +28321,7 @@
       "registry_name": "freaking_parsnip_soup_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/freaking_parsnip_soup_craft.json"
+          "src/main/resources/data/power/recipes/freaking_parsnip_soup_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/FreakingParsnip"
@@ -32526,7 +32526,7 @@
       "registry_name": "grant_your_power",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/grant_your_power.json"
+          "src/main/resources/data/power/advancements/grant_your_power.json"
         ]
       },
       "path": "~/Achievements"
@@ -32611,7 +32611,7 @@
       "registry_name": "raw_energium_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_energium_craft.json"
+          "src/main/resources/data/power/recipes/raw_energium_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -34261,7 +34261,7 @@
       "registry_name": "raw_energium_block_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_energium_block_craft.json"
+          "src/main/resources/data/power/recipes/raw_energium_block_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -35580,7 +35580,6 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/music_disc_call_of_the_past.json",
-          "src/main/resources/data/power/jukebox_song/music_disc_call_of_the_past.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/MusicDiscCallOfThePastItem.java"
         ]
       },
@@ -35594,7 +35593,6 @@
       "registry_name": "music_disc_ancient_mood",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/jukebox_song/music_disc_ancient_mood.json",
           "src/main/resources/assets/power/models/item/music_disc_ancient_mood.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/MusicDiscAncientMoodItem.java"
         ]
@@ -35929,7 +35927,7 @@
       "registry_name": "characteristics_card_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/characteristics_card_craft.json"
+          "src/main/resources/data/power/recipes/characteristics_card_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CharacteristicsCard"
@@ -35942,7 +35940,7 @@
       "registry_name": "become_like_an_adventurer",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/become_like_an_adventurer.json"
+          "src/main/resources/data/power/advancements/become_like_an_adventurer.json"
         ]
       },
       "path": "~/Achievements"
@@ -36017,8 +36015,8 @@
       "registry_name": "cursed_knight",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/forge/biome_modifier/cursed_knight_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKnightRenderer.java",
-          "src/main/resources/data/power/neoforge/biome_modifier/cursed_knight_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKnightEntity.java",
           "src/main/resources/assets/power/models/item/cursed_knight_spawn_egg.json"
         ]
@@ -36291,8 +36289,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedSquireEntity.java",
-          "src/main/resources/data/power/neoforge/biome_modifier/cursed_squire_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedSquireRenderer.java",
+          "src/main/resources/data/power/forge/biome_modifier/cursed_squire_biome_modifier.json",
           "src/main/resources/assets/power/models/item/cursed_squire_spawn_egg.json"
         ]
       },
@@ -36751,7 +36749,7 @@
       "registry_name": "unbreakable_diamond",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/advancement/unbreakable_diamond.json"
+          "src/main/resources/data/power/advancements/unbreakable_diamond.json"
         ]
       },
       "path": "~/Achievements"
@@ -36767,8 +36765,8 @@
           "src/main/resources/assets/power/models/block/rune_cutter.json",
           "src/main/resources/assets/power/blockstates/rune_cutter.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/RuneCutterBlock.java",
-          "src/main/resources/assets/power/models/item/rune_cutter.json",
-          "src/main/resources/data/power/loot_table/blocks/rune_cutter.json"
+          "src/main/resources/data/power/loot_tables/blocks/rune_cutter.json",
+          "src/main/resources/assets/power/models/item/rune_cutter.json"
         ]
       },
       "path": "~/ItemsAndBlocks/RuneCutter"
@@ -36781,7 +36779,7 @@
       "registry_name": "rune_cutter_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/rune_cutter_craft.json"
+          "src/main/resources/data/power/recipes/rune_cutter_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/RuneCutter"
@@ -36850,7 +36848,6 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/item/MusicHopeItem.java",
-          "src/main/resources/data/power/jukebox_song/music_hope.json",
           "src/main/resources/assets/power/models/item/music_hope.json"
         ]
       },
@@ -37909,10 +37906,6 @@
       "EntityBreeze",
       "EntityBlaze"
     ],
-    "ENCHANTMENTS:minecraft:non_treasure": [
-      "~CUSTOM:Isolation",
-      "~CUSTOM:Revenge"
-    ],
     "ENTITIES:mod:xp/2": [
       "EntityCreeper",
       "EntityEnderman",
@@ -38161,124 +38154,11 @@
       "CUSTOM:EnergiumArmor.legs",
       "CUSTOM:EnergiumArmor.boots"
     ],
-    "ENTITIES:minecraft:undead": [
-      "~CUSTOM:Shadow"
-    ],
-    "ITEMS:minecraft:chest_armor": [
-      "~CUSTOM:FilthArmor.body",
-      "~CUSTOM:HorrorArmor.body",
-      "~CUSTOM:ChaosArmor.body",
-      "~CUSTOM:ThirstArmor.body",
-      "~CUSTOM:DarknessArmor.body",
-      "~CUSTOM:GoldenDustArmor.body",
-      "~CUSTOM:MindArmor.body",
-      "~CUSTOM:FormArmor.body",
-      "~CUSTOM:SpiritArmor.body",
-      "~CUSTOM:SmokeArmor.body",
-      "~CUSTOM:GravityArmor.body",
-      "~CUSTOM:BlueFlameArmor.body",
-      "~CUSTOM:PlagueArmor.body",
-      "~CUSTOM:MusicArmor.body",
-      "~CUSTOM:MercuryArmor.body",
-      "~CUSTOM:MushroomsArmor.body",
-      "~CUSTOM:MagnetArmor.body",
-      "~CUSTOM:PoisonArmor.body",
-      "~CUSTOM:SpeedArmor.body",
-      "~CUSTOM:SandArmor.body",
-      "~CUSTOM:MistArmor.body",
-      "~CUSTOM:AmberArmor.body",
-      "~CUSTOM:ExplosionArmor.body",
-      "~CUSTOM:TeleportationArmor.body",
-      "~CUSTOM:TechnologyArmor.body",
-      "~CUSTOM:BloodArmor.body",
-      "~CUSTOM:DestructionArmor.body",
-      "~CUSTOM:CreationArmor.body",
-      "~CUSTOM:TimeArmor.body",
-      "~CUSTOM:SpaceArmor.body",
-      "~CUSTOM:MoonArmor.body",
-      "~CUSTOM:SunArmor.body",
-      "~CUSTOM:EnergyArmor.body",
-      "~CUSTOM:EnergiumArmor.body",
-      "~CUSTOM:VacuumArmor.body",
-      "~CUSTOM:ShadowArmor.body",
-      "~CUSTOM:LightArmor.body",
-      "~CUSTOM:MetalArmor.body",
-      "~CUSTOM:AnimalsArmor.body",
-      "~CUSTOM:PlantsArmor.body",
-      "~CUSTOM:OceanArmor.body",
-      "~CUSTOM:TornadoArmor.body",
-      "~CUSTOM:RainArmor.body",
-      "~CUSTOM:LavaArmor.body",
-      "~CUSTOM:CrystalArmor.body",
-      "~CUSTOM:SoundArmor.body",
-      "~CUSTOM:LightningArmor.body",
-      "~CUSTOM:IceArmor.body",
-      "~CUSTOM:EtherArmor.body",
-      "~CUSTOM:WaterArmor.body",
-      "~CUSTOM:EarthArmor.body",
-      "~CUSTOM:AirArmor.body",
-      "~CUSTOM:FireArmor.body"
-    ],
     "BLOCKS:minecraft:walls": [
       "~CUSTOM:CursedStoneCrackedBricksWall",
       "~CUSTOM:PolishedCursedStoneWall",
       "~CUSTOM:CursedStoneBricksWall",
       "~CUSTOM:CursedStoneWall"
-    ],
-    "ITEMS:minecraft:leg_armor": [
-      "~CUSTOM:FilthArmor.legs",
-      "~CUSTOM:HorrorArmor.legs",
-      "~CUSTOM:ChaosArmor.legs",
-      "~CUSTOM:ThirstArmor.legs",
-      "~CUSTOM:DarknessArmor.legs",
-      "~CUSTOM:GoldenDustArmor.legs",
-      "~CUSTOM:MindArmor.legs",
-      "~CUSTOM:FormArmor.legs",
-      "~CUSTOM:SpiritArmor.legs",
-      "~CUSTOM:SmokeArmor.legs",
-      "~CUSTOM:GravityArmor.legs",
-      "~CUSTOM:BlueFlameArmor.legs",
-      "~CUSTOM:PlagueArmor.legs",
-      "~CUSTOM:MusicArmor.legs",
-      "~CUSTOM:MercuryArmor.legs",
-      "~CUSTOM:MushroomsArmor.legs",
-      "~CUSTOM:MagnetArmor.legs",
-      "~CUSTOM:PoisonArmor.legs",
-      "~CUSTOM:SpeedArmor.legs",
-      "~CUSTOM:SandArmor.legs",
-      "~CUSTOM:MistArmor.legs",
-      "~CUSTOM:AmberArmor.legs",
-      "~CUSTOM:ExplosionArmor.legs",
-      "~CUSTOM:TeleportationArmor.legs",
-      "~CUSTOM:TechnologyArmor.legs",
-      "~CUSTOM:BloodArmor.legs",
-      "~CUSTOM:DestructionArmor.legs",
-      "~CUSTOM:CreationArmor.legs",
-      "~CUSTOM:TimeArmor.legs",
-      "~CUSTOM:SpaceArmor.legs",
-      "~CUSTOM:MoonArmor.legs",
-      "~CUSTOM:SunArmor.legs",
-      "~CUSTOM:EnergyArmor.legs",
-      "~CUSTOM:EnergiumArmor.legs",
-      "~CUSTOM:VacuumArmor.legs",
-      "~CUSTOM:ShadowArmor.legs",
-      "~CUSTOM:LightArmor.legs",
-      "~CUSTOM:MetalArmor.legs",
-      "~CUSTOM:AnimalsArmor.legs",
-      "~CUSTOM:PlantsArmor.legs",
-      "~CUSTOM:OceanArmor.legs",
-      "~CUSTOM:TornadoArmor.legs",
-      "~CUSTOM:RainArmor.legs",
-      "~CUSTOM:LavaArmor.legs",
-      "~CUSTOM:CrystalArmor.legs",
-      "~CUSTOM:SoundArmor.legs",
-      "~CUSTOM:LightningArmor.legs",
-      "~CUSTOM:IceArmor.legs",
-      "~CUSTOM:EtherArmor.legs",
-      "~CUSTOM:WaterArmor.legs",
-      "~CUSTOM:EarthArmor.legs",
-      "~CUSTOM:AirArmor.legs",
-      "~CUSTOM:FireArmor.legs"
     ],
     "ITEMS:mod:passing_armor": [
       "Blocks.AIR",
@@ -38491,118 +38371,8 @@
       "CUSTOM:FilthArmor.legs",
       "CUSTOM:FilthArmor.boots"
     ],
-    "ITEMS:minecraft:head_armor": [
-      "~CUSTOM:FilthArmor.helmet",
-      "~CUSTOM:HorrorArmor.helmet",
-      "~CUSTOM:ChaosArmor.helmet",
-      "~CUSTOM:ThirstArmor.helmet",
-      "~CUSTOM:DarknessArmor.helmet",
-      "~CUSTOM:GoldenDustArmor.helmet",
-      "~CUSTOM:MindArmor.helmet",
-      "~CUSTOM:FormArmor.helmet",
-      "~CUSTOM:SpiritArmor.helmet",
-      "~CUSTOM:SmokeArmor.helmet",
-      "~CUSTOM:GravityArmor.helmet",
-      "~CUSTOM:BlueFlameArmor.helmet",
-      "~CUSTOM:PlagueArmor.helmet",
-      "~CUSTOM:MusicArmor.helmet",
-      "~CUSTOM:MercuryArmor.helmet",
-      "~CUSTOM:MushroomsArmor.helmet",
-      "~CUSTOM:MagnetArmor.helmet",
-      "~CUSTOM:PoisonArmor.helmet",
-      "~CUSTOM:SpeedArmor.helmet",
-      "~CUSTOM:SandArmor.helmet",
-      "~CUSTOM:MistArmor.helmet",
-      "~CUSTOM:AmberArmor.helmet",
-      "~CUSTOM:ExplosionArmor.helmet",
-      "~CUSTOM:TeleportationArmor.helmet",
-      "~CUSTOM:TechnologyArmor.helmet",
-      "~CUSTOM:BloodArmor.helmet",
-      "~CUSTOM:DestructionArmor.helmet",
-      "~CUSTOM:CreationArmor.helmet",
-      "~CUSTOM:TimeArmor.helmet",
-      "~CUSTOM:SpaceArmor.helmet",
-      "~CUSTOM:MoonArmor.helmet",
-      "~CUSTOM:SunArmor.helmet",
-      "~CUSTOM:EnergyArmor.helmet",
-      "~CUSTOM:EnergiumArmor.helmet",
-      "~CUSTOM:VacuumArmor.helmet",
-      "~CUSTOM:ShadowArmor.helmet",
-      "~CUSTOM:LightArmor.helmet",
-      "~CUSTOM:MetalArmor.helmet",
-      "~CUSTOM:AnimalsArmor.helmet",
-      "~CUSTOM:PlantsArmor.helmet",
-      "~CUSTOM:OceanArmor.helmet",
-      "~CUSTOM:TornadoArmor.helmet",
-      "~CUSTOM:RainArmor.helmet",
-      "~CUSTOM:LavaArmor.helmet",
-      "~CUSTOM:CrystalArmor.helmet",
-      "~CUSTOM:SoundArmor.helmet",
-      "~CUSTOM:LightningArmor.helmet",
-      "~CUSTOM:IceArmor.helmet",
-      "~CUSTOM:EtherArmor.helmet",
-      "~CUSTOM:WaterArmor.helmet",
-      "~CUSTOM:EarthArmor.helmet",
-      "~CUSTOM:AirArmor.helmet",
-      "~CUSTOM:FireArmor.helmet"
-    ],
     "ENTITIES:minecraft:fall_damage_immune": [
       "CUSTOM:EnergiumGolem"
-    ],
-    "ITEMS:minecraft:foot_armor": [
-      "~CUSTOM:FilthArmor.boots",
-      "~CUSTOM:HorrorArmor.boots",
-      "~CUSTOM:ChaosArmor.boots",
-      "~CUSTOM:ThirstArmor.boots",
-      "~CUSTOM:DarknessArmor.boots",
-      "~CUSTOM:GoldenDustArmor.boots",
-      "~CUSTOM:MindArmor.boots",
-      "~CUSTOM:FormArmor.boots",
-      "~CUSTOM:SpiritArmor.boots",
-      "~CUSTOM:SmokeArmor.boots",
-      "~CUSTOM:GravityArmor.boots",
-      "~CUSTOM:BlueFlameArmor.boots",
-      "~CUSTOM:PlagueArmor.boots",
-      "~CUSTOM:MusicArmor.boots",
-      "~CUSTOM:MercuryArmor.boots",
-      "~CUSTOM:MushroomsArmor.boots",
-      "~CUSTOM:MagnetArmor.boots",
-      "~CUSTOM:PoisonArmor.boots",
-      "~CUSTOM:SpeedArmor.boots",
-      "~CUSTOM:SandArmor.boots",
-      "~CUSTOM:MistArmor.boots",
-      "~CUSTOM:AmberArmor.boots",
-      "~CUSTOM:ExplosionArmor.boots",
-      "~CUSTOM:TeleportationArmor.boots",
-      "~CUSTOM:TechnologyArmor.boots",
-      "~CUSTOM:BloodArmor.boots",
-      "~CUSTOM:DestructionArmor.boots",
-      "~CUSTOM:CreationArmor.boots",
-      "~CUSTOM:TimeArmor.boots",
-      "~CUSTOM:SpaceArmor.boots",
-      "~CUSTOM:MoonArmor.boots",
-      "~CUSTOM:SunArmor.boots",
-      "~CUSTOM:EnergyArmor.boots",
-      "~CUSTOM:EnergiumArmor.boots",
-      "~CUSTOM:VacuumArmor.boots",
-      "~CUSTOM:ShadowArmor.boots",
-      "~CUSTOM:LightArmor.boots",
-      "~CUSTOM:MetalArmor.boots",
-      "~CUSTOM:AnimalsArmor.boots",
-      "~CUSTOM:PlantsArmor.boots",
-      "~CUSTOM:OceanArmor.boots",
-      "~CUSTOM:TornadoArmor.boots",
-      "~CUSTOM:RainArmor.boots",
-      "~CUSTOM:LavaArmor.boots",
-      "~CUSTOM:CrystalArmor.boots",
-      "~CUSTOM:SoundArmor.boots",
-      "~CUSTOM:LightningArmor.boots",
-      "~CUSTOM:IceArmor.boots",
-      "~CUSTOM:EtherArmor.boots",
-      "~CUSTOM:WaterArmor.boots",
-      "~CUSTOM:EarthArmor.boots",
-      "~CUSTOM:AirArmor.boots",
-      "~CUSTOM:FireArmor.boots"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
       "~CUSTOM:DeepslateCopyriumOre",
@@ -38640,28 +38410,17 @@
       "~CUSTOM:CreationHoe",
       "~CUSTOM:EnergiumHoe"
     ],
-    "ITEMS:minecraft:enchantable/durability": [
-      "~CUSTOM:AmplifierRing"
-    ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:CursedStoneCrackedBricksSlab",
       "~CUSTOM:PolishedCursedStoneSlab",
       "~CUSTOM:CursedStoneBricksSlab",
       "~CUSTOM:CursedStoneSlab"
     ],
-    "ENCHANTMENTS:minecraft:tradeable": [
-      "~CUSTOM:Isolation",
-      "~CUSTOM:Revenge"
-    ],
     "ITEMS:minecraft:axes": [
       "~CUSTOM:MercuryBattleAxe",
       "~CUSTOM:CreationAxe",
       "~CUSTOM:EnergiumAxe",
       "~CUSTOM:TornadoAxe"
-    ],
-    "ENCHANTMENTS:minecraft:on_random_loot": [
-      "~CUSTOM:Isolation",
-      "~CUSTOM:Revenge"
     ],
     "ITEMS:minecraft:trim_materials": [
       "CUSTOM:DepletedEnergiumIngot",
@@ -39359,10 +39118,12 @@
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Подъём тумана, расходует 50",
       "battery.desc.gravity": "Гравитация",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
+      "item.power.extra_star_points_rune_2.description_1": "",
       "item.power.extra_star_points_rune_3.description_3": "§c§oНесовместимы с аналог. рунами",
       "item.power.extra_star_points_rune_2.description_0": "§9Доп. звёздные очки II",
       "item.power.mercury_battle_axe": "Ртутный боевой топор",
       "item.power.extra_star_points_rune_3.description_2": "§1§o+20 к макс. кол-ву звёзд. очков",
+      "item.power.extra_star_points_rune_3.description_1": "",
       "item.power.extra_star_points_rune_3.description_0": "§9Доп. звёздные очки III",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Туманное зелье звёздной регенерации",
       "item.power.extra_star_points_rune_2.description_3": "§c§oНесовместимы с аналог. рунами",
@@ -39480,6 +39241,7 @@
       "item.power.smoke_armor_leggings": "Поножи мастера дыма",
       "item.power.extra_star_points_rune_1.description_0": "§9Доп. звёздные очки I",
       "item.power.creation_hoe": "Мотыга созидания",
+      "item.power.extra_star_points_rune_1.description_1": "",
       "item.power.extra_star_points_rune_1.description_2": "§1§o+10 к макс. кол-ву звёзд. очков",
       "effect.power.water_master": "Мастер воды",
       "advancements.become_like_an_adventurer.descr": "Заполните карточку с характеристиками",

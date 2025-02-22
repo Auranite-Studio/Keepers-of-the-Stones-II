@@ -15,6 +15,7 @@ import net.minecraft.core.particles.ParticleTypes;
 
 import javax.annotation.Nullable;
 
+import java.util.List;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
@@ -44,7 +45,8 @@ public class CursedKeeperShieldTickProcedure {
 				} else if (timer == 0) {
 					{
 						final Vec3 _center = new Vec3(x, (y + 1), z);
-						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
 							if (entityiterator instanceof Arrow) {
 								entity.getPersistentData().putBoolean("barrier", true);
 							}
@@ -64,7 +66,8 @@ public class CursedKeeperShieldTickProcedure {
 						a = a + 12;
 						{
 							final Vec3 _center = new Vec3(x, (y + 1), z);
-							for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
 								if (entity.getPersistentData().getBoolean("barrier") != true) {
 									if (!(entityiterator == entity)) {
 										entityiterator.setDeltaMovement(new Vec3((1.5 * entity.getDeltaMovement().x()), (1.5 * entity.getDeltaMovement().y()), (1.5 * entity.getLookAngle().z)));

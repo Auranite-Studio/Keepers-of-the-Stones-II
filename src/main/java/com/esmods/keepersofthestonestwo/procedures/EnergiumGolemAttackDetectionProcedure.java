@@ -6,6 +6,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 
+import java.util.List;
 import java.util.Comparator;
 
 public class EnergiumGolemAttackDetectionProcedure {
@@ -25,7 +26,8 @@ public class EnergiumGolemAttackDetectionProcedure {
 					Zpar = z + entity.getLookAngle().z * Range;
 					{
 						final Vec3 _center = new Vec3(Xpar, Ypar, Zpar);
-						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(0.75 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(0.75 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
 							if (entityiterator == (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)) {
 								if (Range <= 5.5) {
 									entity.getPersistentData().putString("State", "Hands");
