@@ -60,6 +60,11 @@ public class CharacteristicsCardWritingCharsProcedure {
 					final double _tagValue = entity.getData(PowerModVariables.PLAYER_VARIABLES).resistance_char;
 					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 				}
+				{
+					final String _tagName = "rank";
+					final String _tagValue = entity.getData(PowerModVariables.PLAYER_VARIABLES).rank;
+					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putString(_tagName, _tagValue));
+				}
 			}
 		});
 	}
