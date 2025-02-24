@@ -24,14 +24,12 @@
 
 **API changes**
 - Colorful Powers API has been updated to version 23
-- Added variables level, level_exp and max_level_exp for control levels
-- Added variable base_damage_by_lvl for dynamic change magical abilities damage
-- Added a new field to the config file - enable_levels
+- Added variables ``level``, ``level_exp`` and ``max_level_exp`` for control levels
+- Added variable ``base_damage_by_lvl`` for dynamic change magical abilities damage
+- Added a new field to the config file - ``enable_levels``
 - Added ``enable_runes`` line to config to enable future features from 1.2
 - Removed the lines in the config that control the duration of the stones and their recharge
 - The mod's game rules have been removed, with all their functionality moved to the config
-- Removed variable ``golden_dust_extended_powers``
-- Removed variable ``allow_custom_element_powers_for_stones``
 
 **Bugfixes**
 - [Bugfix] Fixed a bug that caused a poison pit to not always poison the creatures inside it
