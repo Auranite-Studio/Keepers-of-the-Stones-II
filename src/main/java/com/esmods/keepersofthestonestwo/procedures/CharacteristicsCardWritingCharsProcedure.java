@@ -22,6 +22,7 @@ public class CharacteristicsCardWritingCharsProcedure {
 				itemstack.getOrCreateTag().putDouble("haste", ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).haste_char));
 				itemstack.getOrCreateTag().putDouble("jump", ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).jump_char));
 				itemstack.getOrCreateTag().putDouble("resistance", ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).resistance_char));
+				itemstack.getOrCreateTag().putString("rank", ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).rank));
 			}
 		});
 	}
