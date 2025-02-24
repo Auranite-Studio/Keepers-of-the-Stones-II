@@ -2,15 +2,14 @@
 - *N/A*
 
 **Improvemnts** 
-- Hope's music disc can now be found in the cursed vaults
-- Increased the volume of the music of Hope
-- Mystery of the Cursed Forest music volume decreased
+- *N/A*
 
 **API changes**
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] 
+- [Bugfix] Fixed a bug that caused the characteristic card to print the rank of the player who has it in his hand
+- [Bugfix] Fixed a bug that caused a poison pit to not always poison the creatures inside it
 
 **Known issues**
 - *N/A*
