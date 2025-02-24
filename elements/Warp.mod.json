@@ -13,14 +13,12 @@
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
     "isCuredbyHoney": false,
-    "modifiers": [
-      {
-        "attribute": {
-          "value": "SCALE"
-        },
-        "amount": -0.5,
-        "operation": "ADD_VALUE"
-      }
-    ]
+    "modifiers": [],
+    "onStarted": {
+      "name": "WarpPriNalozhieniiEffiekta"
+    },
+    "onExpired": {
+      "name": "WarpPriIstiechieniiEffiekta"
+    }
   }
 }

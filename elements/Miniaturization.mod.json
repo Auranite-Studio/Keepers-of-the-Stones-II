@@ -13,28 +13,12 @@
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
     "isCuredbyHoney": false,
-    "modifiers": [
-      {
-        "attribute": {
-          "value": "SCALE"
-        },
-        "amount": -0.9,
-        "operation": "ADD_VALUE"
-      },
-      {
-        "attribute": {
-          "value": "BLOCK_REACH"
-        },
-        "amount": -1.5,
-        "operation": "ADD_VALUE"
-      },
-      {
-        "attribute": {
-          "value": "ENTITY_REACH"
-        },
-        "amount": -2.25,
-        "operation": "ADD_VALUE"
-      }
-    ]
+    "modifiers": [],
+    "onStarted": {
+      "name": "MiniaturizationPriNalozhieniiEffiekta"
+    },
+    "onExpired": {
+      "name": "MiniaturizationPriIstiechieniiEffiekta"
+    }
   }
 }
