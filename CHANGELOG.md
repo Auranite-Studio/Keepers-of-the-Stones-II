@@ -18,7 +18,7 @@
 - Shooting blocks of earth and metal now also determines the block in the second hand
 - Star points will now not be restored when the power lock effect is active
 - All mobs now have the format of vanilla java models
-- The GeckoLib and pehkui mods is no longer needed
+- The GeckoLib and pehkui (1.21+ only) mods is no longer needed
 - Removed transformation and detransformation animations and dependency on the playerAnimator mod (1.21.4 only)
 
 
@@ -34,6 +34,7 @@
 - Removed variable ``allow_custom_element_powers_for_stones``
 
 **Bugfixes**
+- [Bugfix] Fixed a bug that caused a poison pit to not always poison the creatures inside it
 - [Bugfix] Fixed a bug that caused star regeneration potion to not speed up the recovery of star points
 - [Bugfix] Fixed a bug that made the cursed keeper vulnerable to potion effects
 
