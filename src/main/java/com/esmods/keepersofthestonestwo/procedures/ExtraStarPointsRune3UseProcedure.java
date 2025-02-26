@@ -6,14 +6,14 @@ import net.minecraft.world.entity.Entity;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
-public class ExtraStarPointsRune1UseProcedure {
+public class ExtraStarPointsRune3UseProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.max_power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power + 10;
+				_vars.max_power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power + 20;
 				_vars.syncPlayerVariables(entity);
 			}
 			if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {

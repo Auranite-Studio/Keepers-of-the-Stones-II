@@ -30,13 +30,12 @@ public class ExtraStarPointsRune1Item extends Item {
 		list.add(Component.translatable("item.power.extra_star_points_rune_1.description_0"));
 		list.add(Component.translatable("item.power.extra_star_points_rune_1.description_1"));
 		list.add(Component.translatable("item.power.extra_star_points_rune_1.description_2"));
-		list.add(Component.translatable("item.power.extra_star_points_rune_1.description_3"));
 	}
 
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		ExtraStarPointsRune1UseProcedure.execute(ar.getObject());
+		ExtraStarPointsRune1UseProcedure.execute(entity, ar.getObject());
 		return ar;
 	}
 }

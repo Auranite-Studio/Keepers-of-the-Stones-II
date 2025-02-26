@@ -28,8 +28,7 @@
       "fixedValue": [
         "§9Extra Star Points II",
         "",
-        "§1§o+15 to the max. number of star points",
-        "§c§oIncompatible with similar runes"
+        "§1§o+15 to the max. number of star points"
       ]
     },
     "glowCondition": {
@@ -37,6 +36,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "ExtraStarPointsRune2Use"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
