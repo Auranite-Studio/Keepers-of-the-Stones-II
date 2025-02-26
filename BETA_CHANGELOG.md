@@ -8,7 +8,7 @@
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] 
+- [Bugfix] Fixed a bug that caused the GUI background to be darker than vanilla
 
 **Known issues**
 - *N/A*

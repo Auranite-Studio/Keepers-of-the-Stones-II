@@ -55,7 +55,6 @@ public class WheelAbilitiesPlantsScreen extends AbstractContainerScreen<WheelAbi
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 22 && mouseY < topPos + 46) {
