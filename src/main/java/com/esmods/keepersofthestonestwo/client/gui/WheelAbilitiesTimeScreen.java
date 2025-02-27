@@ -54,7 +54,6 @@ public class WheelAbilitiesTimeScreen extends AbstractContainerScreen<WheelAbili
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 81 && mouseX < leftPos + 105 && mouseY > topPos + 143 && mouseY < topPos + 167) {
