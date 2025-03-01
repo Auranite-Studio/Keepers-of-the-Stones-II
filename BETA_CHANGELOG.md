@@ -1,14 +1,15 @@
 **New features**
 - *N/A*
 
-**Improvemnts** 
-- *N/A*
+**Improvemnts**
+- 
+
 
 **API changes**
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that caused the GUI background to be darker than vanilla
+- *N/A*
 
 **Known issues**
 - *N/A*
