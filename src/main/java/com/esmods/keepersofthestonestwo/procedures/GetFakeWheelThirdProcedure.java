@@ -8,6 +8,6 @@ public class GetFakeWheelThirdProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("0");
+		return !((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_third).equals("0");
 	}
 }

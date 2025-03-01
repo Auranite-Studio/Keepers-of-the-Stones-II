@@ -1,25 +1,33 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.Event;
+import net.minecraftforge.network.NetworkDirection;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.Connection;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import java.util.List;
+import java.util.Iterator;
 
-@EventBusSubscriber
+import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.PowerMod;
+
+@Mod.EventBusSubscriber
 public class DetransformAnimationStartProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(PlayerTickEvent.Post event) {
-		execute(event, event.getEntity().level(), event.getEntity());
+	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		if (event.phase == TickEvent.Phase.END) {
+			execute(event, event.player.level(), event.player);
+		}
 	}
 
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -29,18 +37,29 @@ public class DetransformAnimationStartProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).detransform_anim_trigger) {
-			{
-				Entity _ent = entity;
-				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "playPlayerAnimation @s " + "power:" + "animation.player.detransformation" + " 0" + " 10" + " 0" + " true");
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).detransform_anim_trigger) {
+			if (world.isClientSide()) {
+				AnimationsModuleSetupProcedure.setAnimationClientside((Player) entity, "animation.player.detransformation", false);
+			}
+			if (!world.isClientSide()) {
+				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+					synchronized (connections) {
+						Iterator<Connection> iterator = connections.iterator();
+						while (iterator.hasNext()) {
+							Connection connection = iterator.next();
+							if (!connection.isConnecting() && connection.isConnected())
+								PowerMod.PACKET_HANDLER.sendTo(new AnimationsModuleSetupProcedure.PowerModAnimationMessage(Component.literal("animation.player.detransformation"), entity.getId(), false), connection, NetworkDirection.PLAY_TO_CLIENT);
+						}
+					}
 				}
 			}
 			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.detransform_anim_trigger = false;
-				_vars.syncPlayerVariables(entity);
+				boolean _setval = false;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.detransform_anim_trigger = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 	}

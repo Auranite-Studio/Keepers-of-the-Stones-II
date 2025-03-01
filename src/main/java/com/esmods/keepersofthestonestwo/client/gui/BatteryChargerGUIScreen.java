@@ -35,7 +35,7 @@ public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChar
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
+		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -46,9 +46,9 @@ public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChar
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/battery_charger_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/battery_charger_progress.png"), this.leftPos + 38, this.topPos + 15, 0, Mth.clamp((int) BatteryChargerProgressv2Procedure.execute(world, x, y, z) * 8, 0, 800), 100, 8, 100, 808);
+		guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress.png"), this.leftPos + 38, this.topPos + 15, 0, Mth.clamp((int) BatteryChargerProgressv2Procedure.execute(world, x, y, z) * 8, 0, 800), 100, 8, 100, 808);
 
 		RenderSystem.disableBlend();
 	}

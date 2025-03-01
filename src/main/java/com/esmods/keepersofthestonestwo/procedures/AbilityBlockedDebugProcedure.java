@@ -8,6 +8,6 @@ public class AbilityBlockedDebugProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "ability_blocked: " + entity.getData(PowerModVariables.PLAYER_VARIABLES).ability_block;
+		return "ability_blocked: " + (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability_block;
 	}
 }

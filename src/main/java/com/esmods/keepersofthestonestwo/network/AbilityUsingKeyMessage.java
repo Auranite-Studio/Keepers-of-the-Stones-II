@@ -1,45 +1,45 @@
 
 package com.esmods.keepersofthestonestwo.network;
 
-import net.neoforged.neoforge.network.handling.IPayloadContext;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.network.protocol.PacketFlow;
-import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.FriendlyByteBuf;
+
+import java.util.function.Supplier;
 
 import com.esmods.keepersofthestonestwo.procedures.AbilityUsingKeyPressedProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-public record AbilityUsingKeyMessage(int eventType, int pressedms) implements CustomPacketPayload {
-	public static final Type<AbilityUsingKeyMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "key_ability_using_key"));
-	public static final StreamCodec<RegistryFriendlyByteBuf, AbilityUsingKeyMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, AbilityUsingKeyMessage message) -> {
-		buffer.writeInt(message.eventType);
-		buffer.writeInt(message.pressedms);
-	}, (RegistryFriendlyByteBuf buffer) -> new AbilityUsingKeyMessage(buffer.readInt(), buffer.readInt()));
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+public class AbilityUsingKeyMessage {
+	int type, pressedms;
 
-	@Override
-	public Type<AbilityUsingKeyMessage> type() {
-		return TYPE;
+	public AbilityUsingKeyMessage(int type, int pressedms) {
+		this.type = type;
+		this.pressedms = pressedms;
 	}
 
-	public static void handleData(final AbilityUsingKeyMessage message, final IPayloadContext context) {
-		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.enqueueWork(() -> {
-				pressAction(context.player(), message.eventType, message.pressedms);
-			}).exceptionally(e -> {
-				context.connection().disconnect(Component.literal(e.getMessage()));
-				return null;
-			});
-		}
+	public AbilityUsingKeyMessage(FriendlyByteBuf buffer) {
+		this.type = buffer.readInt();
+		this.pressedms = buffer.readInt();
+	}
+
+	public static void buffer(AbilityUsingKeyMessage message, FriendlyByteBuf buffer) {
+		buffer.writeInt(message.type);
+		buffer.writeInt(message.pressedms);
+	}
+
+	public static void handler(AbilityUsingKeyMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+		NetworkEvent.Context context = contextSupplier.get();
+		context.enqueueWork(() -> {
+			pressAction(context.getSender(), message.type, message.pressedms);
+		});
+		context.setPacketHandled(true);
 	}
 
 	public static void pressAction(Player entity, int type, int pressedms) {
@@ -58,6 +58,6 @@ public record AbilityUsingKeyMessage(int eventType, int pressedms) implements Cu
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(AbilityUsingKeyMessage.TYPE, AbilityUsingKeyMessage.STREAM_CODEC, AbilityUsingKeyMessage::handleData);
+		PowerMod.addNetworkMessage(AbilityUsingKeyMessage.class, AbilityUsingKeyMessage::buffer, AbilityUsingKeyMessage::new, AbilityUsingKeyMessage::handler);
 	}
 }

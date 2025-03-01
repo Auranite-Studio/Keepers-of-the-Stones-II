@@ -10,9 +10,11 @@ public class Attack152Procedure {
 		if (entity == null)
 			return;
 		{
-			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.ability = "mercury_ability_4";
-			_vars.syncPlayerVariables(entity);
+			String _setval = "mercury_ability_4";
+			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.ability = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

@@ -8,6 +8,6 @@ public class ActivePowerDebugProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "active_power: " + entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power;
+		return "active_power: " + (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active_power;
 	}
 }

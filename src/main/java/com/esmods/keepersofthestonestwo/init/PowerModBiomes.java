@@ -4,9 +4,9 @@
  */
 package com.esmods.keepersofthestonestwo.init;
 
-import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.server.ServerAboutToStartEvent;
 
 import net.minecraft.world.level.levelgen.placement.CaveSurface;
 import net.minecraft.world.level.levelgen.SurfaceRules;
@@ -36,7 +36,7 @@ import com.mojang.datafixers.util.Pair;
 
 import com.google.common.base.Suppliers;
 
-@EventBusSubscriber
+@Mod.EventBusSubscriber
 public class PowerModBiomes {
 	@SubscribeEvent
 	public static void onServerAboutToStart(ServerAboutToStartEvent event) {
@@ -51,10 +51,10 @@ public class PowerModBiomes {
 				// Inject biomes to biome source
 				if (chunkGenerator.getBiomeSource() instanceof MultiNoiseBiomeSource noiseSource) {
 					List<Pair<Climate.ParameterPoint, Holder<Biome>>> parameters = new ArrayList<>(noiseSource.parameters().values());
-					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.15f, 0.2f), Climate.Parameter.span(-0.1f, 0.1f), Climate.Parameter.span(-0.19f, 0.03f), Climate.Parameter.span(-0.375f, 0.2225f),
-							Climate.Parameter.point(0.0f), Climate.Parameter.span(-1f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("power", "cursed_forest")))));
-					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.15f, 0.2f), Climate.Parameter.span(-0.1f, 0.1f), Climate.Parameter.span(-0.19f, 0.03f), Climate.Parameter.span(-0.375f, 0.2225f),
-							Climate.Parameter.point(1.0f), Climate.Parameter.span(-1f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("power", "cursed_forest")))));
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.15f, 0.2f), Climate.Parameter.span(-0.1f, 0.1f), Climate.Parameter.span(-0.11f, 0.03f), Climate.Parameter.span(-0.375f, 0.2225f),
+							Climate.Parameter.point(0.0f), Climate.Parameter.span(-1f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("power", "cursed_forest")))));
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.15f, 0.2f), Climate.Parameter.span(-0.1f, 0.1f), Climate.Parameter.span(-0.11f, 0.03f), Climate.Parameter.span(-0.375f, 0.2225f),
+							Climate.Parameter.point(1.0f), Climate.Parameter.span(-1f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, new ResourceLocation("power", "cursed_forest")))));
 					chunkGenerator.biomeSource = MultiNoiseBiomeSource.createFromList(new Climate.ParameterList<>(parameters));
 					chunkGenerator.featuresPerStep = Suppliers
 							.memoize(() -> FeatureSorter.buildFeaturesPerStep(List.copyOf(chunkGenerator.biomeSource.possibleBiomes()), biome -> chunkGenerator.generationSettingsGetter.apply(biome).features(), true));
@@ -65,8 +65,8 @@ public class PowerModBiomes {
 					SurfaceRules.RuleSource currentRuleSource = noiseGeneratorSettings.surfaceRule();
 					if (currentRuleSource instanceof SurfaceRules.SequenceRuleSource sequenceRuleSource) {
 						List<SurfaceRules.RuleSource> surfaceRules = new ArrayList<>(sequenceRuleSource.sequence());
-						addSurfaceRule(surfaceRules, 1, preliminarySurfaceRule(ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("power", "cursed_forest")), Blocks.GRASS_BLOCK.defaultBlockState(),
-								Blocks.DIRT.defaultBlockState(), Blocks.SAND.defaultBlockState()));
+						addSurfaceRule(surfaceRules, 1,
+								preliminarySurfaceRule(ResourceKey.create(Registries.BIOME, new ResourceLocation("power", "cursed_forest")), Blocks.GRASS_BLOCK.defaultBlockState(), Blocks.DIRT.defaultBlockState(), Blocks.SAND.defaultBlockState()));
 						NoiseGeneratorSettings moddedNoiseGeneratorSettings = new NoiseGeneratorSettings(noiseGeneratorSettings.noiseSettings(), noiseGeneratorSettings.defaultBlock(), noiseGeneratorSettings.defaultFluid(),
 								noiseGeneratorSettings.noiseRouter(), SurfaceRules.sequence(surfaceRules.toArray(SurfaceRules.RuleSource[]::new)), noiseGeneratorSettings.spawnTarget(), noiseGeneratorSettings.seaLevel(),
 								noiseGeneratorSettings.disableMobGeneration(), noiseGeneratorSettings.aquifersEnabled(), noiseGeneratorSettings.oreVeinsEnabled(), noiseGeneratorSettings.useLegacyRandomSource());
@@ -92,7 +92,12 @@ public class PowerModBiomes {
 	}
 
 	private static void addSurfaceRule(List<SurfaceRules.RuleSource> surfaceRules, int index, SurfaceRules.RuleSource rule) {
-		if (!surfaceRules.contains(rule))
-			surfaceRules.add(index, rule);
+		if (!surfaceRules.contains(rule)) {
+			if (index >= surfaceRules.size()) {
+				surfaceRules.add(rule);
+			} else {
+				surfaceRules.add(index, rule);
+			}
+		}
 	}
 }

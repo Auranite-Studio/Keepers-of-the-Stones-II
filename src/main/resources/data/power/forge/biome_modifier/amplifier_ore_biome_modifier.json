@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_ocean",
+  "features": "power:amplifier_ore",
+  "step": "underground_ores"
+}

@@ -8,6 +8,6 @@ public class ActiveBatteryDebugProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "active_battery: " + entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery;
+		return "active_battery: " + (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active_battery;
 	}
 }

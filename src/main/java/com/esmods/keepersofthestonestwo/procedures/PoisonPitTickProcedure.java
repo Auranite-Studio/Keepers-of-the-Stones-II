@@ -32,11 +32,14 @@ public class PoisonPitTickProcedure {
 							(z + Mth.nextDouble(RandomSource.create(), (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * (-2), Math.abs((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * (-2)))), 3, 0.1, 0.1,
 							0.1, 0.1);
 				{
-					final Vec3 _center = new Vec3(x, y, z);
+					final Vec3 _center = new Vec3(
+							(x + Mth.nextDouble(RandomSource.create(), (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * (-2), Math.abs((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * (-2)))),
+							(y + Mth.nextDouble(RandomSource.create(), 0, 0.2)),
+							(z + Mth.nextDouble(RandomSource.create(), (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * (-2), Math.abs((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * (-2)))));
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / 2d), e -> true).stream()
 							.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (!(entity == entityiterator)) {
+						if (!(entity == entityiterator) && entityiterator instanceof LivingEntity) {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 4, false, false));
 						}

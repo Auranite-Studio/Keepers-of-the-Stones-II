@@ -1,36 +1,50 @@
 
 package com.esmods.keepersofthestonestwo.client.renderer;
 
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
-
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.HierarchicalModel;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
-import com.esmods.keepersofthestonestwo.entity.model.SpiritModel;
 import com.esmods.keepersofthestonestwo.entity.SpiritEntity;
+import com.esmods.keepersofthestonestwo.client.model.animations.spiritAnimation;
+import com.esmods.keepersofthestonestwo.client.model.Modelspirit;
 
-public class SpiritRenderer extends GeoEntityRenderer<SpiritEntity> {
-	public SpiritRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new SpiritModel());
-		this.shadowRadius = 0.5f;
+public class SpiritRenderer extends MobRenderer<SpiritEntity, Modelspirit<SpiritEntity>> {
+	public SpiritRenderer(EntityRendererProvider.Context context) {
+		super(context, new AnimatedModel(context.bakeLayer(Modelspirit.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public RenderType getRenderType(SpiritEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
-		return RenderType.entityTranslucent(getTextureLocation(animatable));
+	public ResourceLocation getTextureLocation(SpiritEntity entity) {
+		return new ResourceLocation("power:textures/entities/spirit.png");
 	}
 
-	@Override
-	public void preRender(PoseStack poseStack, SpiritEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int color) {
-		float scale = 1f;
-		this.scaleHeight = scale;
-		this.scaleWidth = scale;
-		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);
+	private static final class AnimatedModel extends Modelspirit<SpiritEntity> {
+		private final ModelPart root;
+		private final HierarchicalModel animator = new HierarchicalModel<SpiritEntity>() {
+			@Override
+			public ModelPart root() {
+				return root;
+			}
+
+			@Override
+			public void setupAnim(SpiritEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+				this.root().getAllParts().forEach(ModelPart::resetPose);
+				this.animate(entity.animationState0, spiritAnimation.idle, ageInTicks, 1f);
+			}
+		};
+
+		public AnimatedModel(ModelPart root) {
+			super(root);
+			this.root = root;
+		}
+
+		@Override
+		public void setupAnim(SpiritEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+			animator.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+			super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
+		}
 	}
 }

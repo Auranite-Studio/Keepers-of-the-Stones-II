@@ -1,12 +1,13 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -22,7 +23,7 @@ public class QuakePowerProcedure {
 			_level.getServer().getCommands()
 					.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("execute align xyz run summon block_display" + " ~" + DoubleArgumentType.getDouble(arguments, "x_translate") + " ~-0.9" + " ~" + DoubleArgumentType.getDouble(arguments, "z_translate")
-									+ " {shadow_radius:0f,shadow_strength:0f, width:0f,height:0f,brightness:{sky:15,block:0},block_state:{Name:\"" + BuiltInRegistries.BLOCK
+									+ " {shadow_radius:0f,shadow_strength:0f, width:0f,height:0f,brightness:{sky:15,block:0},block_state:{Name:\"" + ForgeRegistries.BLOCKS
 											.getKey((world.getBlockState(BlockPos.containing(x + DoubleArgumentType.getDouble(arguments, "x_translate"), y - 1, z + DoubleArgumentType.getDouble(arguments, "z_translate")))).getBlock()).toString()
 									+ "\"}}"));
 		world.levelEvent(2001, BlockPos.containing(x + DoubleArgumentType.getDouble(arguments, "x_translate"), y - 1, z + DoubleArgumentType.getDouble(arguments, "z_translate")),

@@ -14,37 +14,37 @@ public class SmokeIntangibilityEndProcedure {
 		{
 			Entity _entity = entity;
 			if (_entity instanceof Player _player) {
-				_player.getInventory().armor.set(3, entity.getData(PowerModVariables.PLAYER_VARIABLES).helmet);
+				_player.getInventory().armor.set(3, ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).helmet));
 				_player.getInventory().setChanged();
 			} else if (_entity instanceof LivingEntity _living) {
-				_living.setItemSlot(EquipmentSlot.HEAD, entity.getData(PowerModVariables.PLAYER_VARIABLES).helmet);
+				_living.setItemSlot(EquipmentSlot.HEAD, ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).helmet));
 			}
 		}
 		{
 			Entity _entity = entity;
 			if (_entity instanceof Player _player) {
-				_player.getInventory().armor.set(2, entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate);
+				_player.getInventory().armor.set(2, ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).chestplate));
 				_player.getInventory().setChanged();
 			} else if (_entity instanceof LivingEntity _living) {
-				_living.setItemSlot(EquipmentSlot.CHEST, entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate);
+				_living.setItemSlot(EquipmentSlot.CHEST, ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).chestplate));
 			}
 		}
 		{
 			Entity _entity = entity;
 			if (_entity instanceof Player _player) {
-				_player.getInventory().armor.set(1, entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings);
+				_player.getInventory().armor.set(1, ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).leggings));
 				_player.getInventory().setChanged();
 			} else if (_entity instanceof LivingEntity _living) {
-				_living.setItemSlot(EquipmentSlot.LEGS, entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings);
+				_living.setItemSlot(EquipmentSlot.LEGS, ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).leggings));
 			}
 		}
 		{
 			Entity _entity = entity;
 			if (_entity instanceof Player _player) {
-				_player.getInventory().armor.set(0, entity.getData(PowerModVariables.PLAYER_VARIABLES).boots);
+				_player.getInventory().armor.set(0, ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).boots));
 				_player.getInventory().setChanged();
 			} else if (_entity instanceof LivingEntity _living) {
-				_living.setItemSlot(EquipmentSlot.FEET, entity.getData(PowerModVariables.PLAYER_VARIABLES).boots);
+				_living.setItemSlot(EquipmentSlot.FEET, ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).boots));
 			}
 		}
 	}

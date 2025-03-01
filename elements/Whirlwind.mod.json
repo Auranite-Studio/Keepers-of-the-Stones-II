@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Whirlwind",
@@ -12,9 +12,8 @@
     "mobEffectCategory": "HARMFUL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "isCuredByMilk": true,
-    "isProtectedByTotem": true,
     "isCuredbyHoney": false,
+    "modifiers": [],
     "onActiveTick": {
       "name": "WhirlwindKazhdyiTikVoVriemiaEffiekta"
     }

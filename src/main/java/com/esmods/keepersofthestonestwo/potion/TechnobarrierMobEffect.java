@@ -13,13 +13,12 @@ public class TechnobarrierMobEffect extends MobEffect {
 	}
 
 	@Override
-	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-		return true;
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		ActiveModeBarrierProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
-	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		ActiveModeBarrierProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		return super.applyEffectTick(entity, amplifier);
+	public boolean isDurationEffectTick(int duration, int amplifier) {
+		return true;
 	}
 }

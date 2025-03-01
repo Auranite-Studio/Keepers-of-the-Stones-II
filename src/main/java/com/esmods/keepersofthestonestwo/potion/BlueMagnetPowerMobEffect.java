@@ -13,13 +13,12 @@ public class BlueMagnetPowerMobEffect extends MobEffect {
 	}
 
 	@Override
-	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-		return true;
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		BlueMagnetPowerTickProcedure.execute(entity.level(), entity);
 	}
 
 	@Override
-	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		BlueMagnetPowerTickProcedure.execute(entity.level(), entity);
-		return super.applyEffectTick(entity, amplifier);
+	public boolean isDurationEffectTick(int duration, int amplifier) {
+		return true;
 	}
 }

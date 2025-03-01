@@ -3,10 +3,10 @@ package com.esmods.keepersofthestonestwo.command;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.neoforged.neoforge.event.RegisterCommandsEvent;
-import net.neoforged.neoforge.common.util.FakePlayerFactory;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.common.util.FakePlayerFactory;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
@@ -20,14 +20,18 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 
 import com.esmods.keepersofthestonestwo.procedures.UnlockKeepersBoxProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTimeSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.QuakePowerProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PwResetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerScaleSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerRecoveryMultiplierSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MaxPowerScaleSetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MasterEffectDurationSetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.LevelUpSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FakeElementSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DebugControlProcedure;
 
-@EventBusSubscriber
+@Mod.EventBusSubscriber
 public class PwCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
@@ -60,7 +64,7 @@ public class PwCommand {
 
 					MaxPowerScaleSetProcedure.execute(arguments, entity);
 					return 0;
-				}))))).then(Commands.literal("multiplier").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 10)).executes(arguments -> {
+				}))))).then(Commands.literal("multiplier").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("multiplier", DoubleArgumentType.doubleArg(0, 10)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -73,6 +77,34 @@ public class PwCommand {
 						direction = entity.getDirection();
 
 					PowerRecoveryMultiplierSetProcedure.execute(arguments, entity);
+					return 0;
+				}))))).then(Commands.literal("master_effect_duration").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("seconds", DoubleArgumentType.doubleArg(1)).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					MasterEffectDurationSetProcedure.execute(arguments, entity);
+					return 0;
+				}))))).then(Commands.literal("recharge_time").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("seconds", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					RechargeStoneTimeSetProcedure.execute(arguments, entity);
 					return 0;
 				}))))).then(Commands.literal("fake_element").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(
 						Commands.argument("element_order", DoubleArgumentType.doubleArg(1, 3)).then(Commands.argument("element_name", StringArgumentType.word()).then(Commands.argument("time", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
@@ -104,7 +136,35 @@ public class PwCommand {
 
 					UnlockKeepersBoxProcedure.execute(arguments, entity);
 					return 0;
-				})))).then(Commands.literal("debug").then(Commands.literal("set").then(Commands.argument("debug_logic", BoolArgumentType.bool()).executes(arguments -> {
+				})))).then(Commands.literal("levelup").then(Commands.argument("players", EntityArgument.players()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					LevelUpSetProcedure.execute(arguments, entity);
+					return 0;
+				}))).then(Commands.literal("reset").then(Commands.argument("players", EntityArgument.players()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					PwResetProcedure.execute(arguments, entity);
+					return 0;
+				}))).then(Commands.literal("debug").then(Commands.literal("set").then(Commands.argument("debug_logic", BoolArgumentType.bool()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

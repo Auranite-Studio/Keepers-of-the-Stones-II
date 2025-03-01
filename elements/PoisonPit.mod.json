@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "livingentity",
   "definition": {
     "mobName": "Poison Pit",
@@ -23,6 +23,7 @@
       "name": "HitboxScale"
     },
     "modelLayers": [],
+    "animations": [],
     "modelWidth": 4.0,
     "modelHeight": 0.2,
     "modelShadowSize": 0.0,
@@ -82,7 +83,6 @@
       "fixedValue": false
     },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "disableCollisions": true,
@@ -115,6 +115,9 @@
       "value": ""
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "entityDataEntries": [],

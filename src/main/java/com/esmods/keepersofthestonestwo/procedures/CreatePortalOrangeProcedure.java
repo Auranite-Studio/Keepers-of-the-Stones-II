@@ -10,9 +10,11 @@ public class CreatePortalOrangeProcedure {
 		if (entity == null)
 			return;
 		{
-			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.ability = "create_portal_orange";
-			_vars.syncPlayerVariables(entity);
+			String _setval = "create_portal_orange";
+			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.ability = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

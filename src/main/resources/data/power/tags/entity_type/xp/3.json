@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "guardian",
+    "ghast",
+    "piglin",
+    "zoglin",
+    "hoglin",
+    "pillager",
+    "evoker",
+    "vindicator",
+    "illusioner",
+    "witch",
+    "magma_cube",
+    "phantom",
+    "breeze",
+    "blaze"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "elder_guardian",
+    "shulker",
+    "power:cursed_knight",
+    "power:cursed_squire",
+    "ravager",
+    "piglin_brute"
+  ]
+}

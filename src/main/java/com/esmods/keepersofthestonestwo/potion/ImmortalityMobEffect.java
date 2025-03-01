@@ -8,4 +8,9 @@ public class ImmortalityMobEffect extends MobEffect {
 	public ImmortalityMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -3368704);
 	}
+
+	@Override
+	public boolean isDurationEffectTick(int duration, int amplifier) {
+		return true;
+	}
 }

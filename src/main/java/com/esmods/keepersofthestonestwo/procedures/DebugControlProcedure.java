@@ -15,11 +15,13 @@ public class DebugControlProcedure {
 		if (entity == null)
 			return;
 		{
-			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.debug = BoolArgumentType.getBool(arguments, "debug_logic");
-			_vars.syncPlayerVariables(entity);
+			boolean _setval = BoolArgumentType.getBool(arguments, "debug_logic");
+			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.debug = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal(("Debug mode set is: " + entity.getData(PowerModVariables.PLAYER_VARIABLES).debug)), false);
+			_player.displayClientMessage(Component.literal(("Debug mode set is: " + (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).debug)), false);
 	}
 }

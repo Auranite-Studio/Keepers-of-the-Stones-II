@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "power:energium_ingot"
+    }
+  },
+  "result": {
+    "item": "power:energium_dust",
+    "count": 1
+  }
+}

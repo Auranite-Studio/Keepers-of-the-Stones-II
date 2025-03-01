@@ -11,7 +11,7 @@ public class MusicArmorKazhdyiTikDliaPonozhieiProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == false) {
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active_power == false) {
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = new ItemStack(PowerModItems.MUSIC_ARMOR_LEGGINGS.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "power:energium_armor_chestplate"
+    },
+    "title": {
+      "translate": "advancements.full_power_of_energium.title"
+    },
+    "description": {
+      "translate": "advancements.full_power_of_energium.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "full_power_of_energium_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "power:energized_gold"
+}

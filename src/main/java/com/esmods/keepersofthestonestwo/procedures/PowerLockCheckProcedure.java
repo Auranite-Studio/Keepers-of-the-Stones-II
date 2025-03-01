@@ -8,6 +8,6 @@ public class PowerLockCheckProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return !entity.getData(PowerModVariables.PLAYER_VARIABLES).ability_block;
+		return !(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability_block;
 	}
 }

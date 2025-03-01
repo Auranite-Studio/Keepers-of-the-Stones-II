@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "power:copyrium_ingot"
+    },
+    "b": {
+      "item": "minecraft:cobbled_deepslate"
+    }
+  },
+  "result": {
+    "item": "power:rune_cutter",
+    "count": 1
+  }
+}

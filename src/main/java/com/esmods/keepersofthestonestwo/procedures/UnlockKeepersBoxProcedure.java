@@ -19,9 +19,11 @@ public class UnlockKeepersBoxProcedure {
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
 				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.unlock_keepers_box = BoolArgumentType.getBool(arguments, "unlock_logic");
-					_vars.syncPlayerVariables(entityiterator);
+					boolean _setval = BoolArgumentType.getBool(arguments, "unlock_logic");
+					entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.unlock_keepers_box = _setval;
+						capability.syncPlayerVariables(entityiterator);
+					});
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal(("The unlocking of the box is set to " + BoolArgumentType.getBool(arguments, "unlock_logic") + " for " + entityiterator.getDisplayName().getString())), false);

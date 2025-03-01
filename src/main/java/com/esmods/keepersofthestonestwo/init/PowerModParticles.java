@@ -4,10 +4,10 @@
  */
 package com.esmods.keepersofthestonestwo.init;
 
-import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.api.distmarker.Dist;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
+import net.minecraftforge.api.distmarker.Dist;
 
 import com.esmods.keepersofthestonestwo.client.particle.VacuumParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.TimeStopParticle;
@@ -30,6 +30,7 @@ import com.esmods.keepersofthestonestwo.client.particle.MoonParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MistParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MindReactionParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MercuryParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.LightningParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.LightSparkleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.InsectsParticle;
 import com.esmods.keepersofthestonestwo.client.particle.FeatherParticleParticle;
@@ -40,7 +41,7 @@ import com.esmods.keepersofthestonestwo.client.particle.BloodSplashParticle;
 import com.esmods.keepersofthestonestwo.client.particle.BassBoomParticle;
 import com.esmods.keepersofthestonestwo.client.particle.AmberPowerParticle;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class PowerModParticles {
 	@SubscribeEvent
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
@@ -74,5 +75,6 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.PLAGUE_PARTICLE_FOUR.get(), PlagueParticleFourParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.FEATHER_PARTICLE.get(), FeatherParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.MIND_REACTION_PARTICLE.get(), MindReactionParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.LIGHTNING_PARTICLE.get(), LightningParticleParticle::provider);
 	}
 }

@@ -19,9 +19,11 @@ public class MaxPowerScaleSetProcedure {
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
 				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.max_power = DoubleArgumentType.getDouble(arguments, "count");
-					_vars.syncPlayerVariables(entityiterator);
+					double _setval = DoubleArgumentType.getDouble(arguments, "count");
+					entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.max_power = _setval;
+						capability.syncPlayerVariables(entityiterator);
+					});
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal(("Set maximum star points to " + Math.round(DoubleArgumentType.getDouble(arguments, "count")) + " for " + entityiterator.getDisplayName().getString())), false);

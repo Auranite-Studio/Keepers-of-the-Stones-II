@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "block",
   "definition": {
     "texture": "elemental_power_generator_side",
@@ -107,7 +107,6 @@
     "vanillaToolTier": "IRON",
     "isBonemealable": false,
     "hasInventory": true,
-    "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 1,
     "inventoryStackSize": 1,

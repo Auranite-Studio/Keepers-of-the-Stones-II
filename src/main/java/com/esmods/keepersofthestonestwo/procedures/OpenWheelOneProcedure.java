@@ -9,9 +9,11 @@ public class OpenWheelOneProcedure {
 		if (entity == null)
 			return;
 		{
-			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.wheel_open_key_var = true;
-			_vars.syncPlayerVariables(entity);
+			boolean _setval = true;
+			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.wheel_open_key_var = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
 	}
 }

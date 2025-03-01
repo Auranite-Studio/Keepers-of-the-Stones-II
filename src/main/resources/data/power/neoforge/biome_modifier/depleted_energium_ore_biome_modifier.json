@@ -1,6 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": "#is_mountain",
-  "features": "power:depleted_energium_ore",
-  "step": "underground_ores"
-}

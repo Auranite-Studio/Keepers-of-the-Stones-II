@@ -1,11 +1,12 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
@@ -29,9 +30,9 @@ public class BatteryChargerClientTickProcedure {
 				world.addParticle((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()), (x + 0.5), (y + 1), (z + 0.5), (-0.5), 0.1, (-0.5));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, y), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:magnetic_waves")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, y), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:magnetic_waves")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, y, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:magnetic_waves")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, y, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:magnetic_waves")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 			}

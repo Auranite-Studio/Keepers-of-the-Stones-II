@@ -1,49 +1,10 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "config",
   "definition": {
-    "pools": [
-      {
-        "category": "basic_settings",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 600.0,
-            "textDefault": "",
-            "comment": "Sets the base duration value for the master effect",
-            "vardisplay": "master_effect_duration",
-            "varname": "master_effect_duration",
-            "enablecomment": true,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 300.0,
-            "textDefault": "",
-            "comment": "Sets the recharge time of the stone",
-            "vardisplay": "recharge_timer",
-            "varname": "recharge_timer",
-            "enablecomment": true,
-            "stringlist": []
-          }
-        ]
-      }
-    ],
     "file": "power_config",
-    "configType": 0
+    "configType": 0,
+    "config": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"config_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"config_category\"><field name=\"name\">stone_distribution_settings</field><statement name=\"write\"><block type=\"config_variable\"><field name=\"name\">first_join_stones_distribution</field><field name=\"comment\">Allows players to select a stone when entering the world</field><value name=\"value\"><block type=\"config_logic_variable\"><field name=\"name\">first_join_stones_distribution</field><field name=\"value\">false</field></block></value><next><block type=\"config_variable\"><field name=\"name\">one_player_limit_stones</field><field name=\"comment\">Enables the One Player, one Power mode</field><value name=\"value\"><block type=\"config_logic_variable\"><field name=\"name\">one_player_limit_stones</field><field name=\"value\">true</field></block></value><next><block type=\"config_variable\"><field name=\"name\">limit_number_stones</field><field name=\"comment\">Limits the number of stones to receive and includes their uniqueness</field><value name=\"value\"><block type=\"config_logic_variable\"><field name=\"name\">limit_number_stones</field><field name=\"value\">true</field></block></value></block></next></block></next></block></statement><next><block type=\"config_category\"><field name=\"name\">additional_features</field><statement name=\"write\"><block type=\"config_variable\"><field name=\"name\">enable_levels</field><field name=\"comment\">Enables and disables the level system</field><value name=\"value\"><block type=\"config_logic_variable\"><field name=\"name\">enable_levels</field><field name=\"value\">true</field></block></value></block></statement><next><block type=\"config_category\"><field name=\"name\">experimental_features</field><statement name=\"write\"><block type=\"config_variable\"><field name=\"name\">enable_runes</field><field name=\"comment\">Enables and disables the runes (1.2)</field><value name=\"value\"><block type=\"config_logic_variable\"><field name=\"name\">enable_runes</field><field name=\"value\">false</field></block></value></block></statement></block></next></block></next></block></next></block></xml>",
+    "defining": false
   }
 }

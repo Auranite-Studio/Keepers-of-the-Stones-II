@@ -3,11 +3,11 @@ package com.esmods.keepersofthestonestwo.client.screens;
 
 import org.checkerframework.checker.units.qual.h;
 
-import net.neoforged.neoforge.client.event.RenderGuiEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.EventPriority;
-import net.neoforged.api.distmarker.Dist;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.client.event.RenderGuiEvent;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -22,21 +22,24 @@ import com.esmods.keepersofthestonestwo.procedures.PowerRecordedDubugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ModVersionDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MergersNumberDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MaxStarPointsDebugProcedure;
+import com.esmods.keepersofthestonestwo.procedures.LevelExpAndMaxDebugProcedure;
+import com.esmods.keepersofthestonestwo.procedures.LevelDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FakeElementsTimerDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FakeElementsActiveDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ElementsActiveDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DebugCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CPAPIVersionDebugProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BaseDamageDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ActivePowerDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ActiveBatteryDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AbilityBlockedDebugProcedure;
 
-@EventBusSubscriber({Dist.CLIENT})
+@Mod.EventBusSubscriber({Dist.CLIENT})
 public class DebugInfoOverlay {
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
-		int w = event.getGuiGraphics().guiWidth();
-		int h = event.getGuiGraphics().guiHeight();
+		int w = event.getWindow().getGuiScaledWidth();
+		int h = event.getWindow().getGuiScaledHeight();
 		Level world = null;
 		double x = 0;
 		double y = 0;
@@ -95,6 +98,15 @@ public class DebugInfoOverlay {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					AbilityBlockedDebugProcedure.execute(entity), 6, 188, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					LevelDebugProcedure.execute(entity), 6, 197, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					LevelExpAndMaxDebugProcedure.execute(entity), 6, 206, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					BaseDamageDebugProcedure.execute(entity), 6, 215, -1, false);
 		}
 	}
 }

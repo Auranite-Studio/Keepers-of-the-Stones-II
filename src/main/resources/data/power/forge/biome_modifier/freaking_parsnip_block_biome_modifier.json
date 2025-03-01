@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "power:cursed_forest",
+  "features": "power:freaking_parsnip_block",
+  "step": "vegetal_decoration"
+}

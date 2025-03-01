@@ -32,7 +32,10 @@ public class EnergiumBlockBlock extends Block {
 	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
-		EnergiumBlockPowerLockProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		EnergiumBlockPowerLockProcedure.execute(world, x, y, z);
 		world.scheduleTick(pos, this, 1);
 	}
 }

@@ -1,16 +1,15 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import org.joml.Vector3f;
 import org.joml.Matrix4f;
 
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.common.extensions.ILevelExtension;
-import net.neoforged.neoforge.client.model.data.ModelData;
-import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
-import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.Event;
-import net.neoforged.api.distmarker.Dist;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.client.model.data.ModelData;
+import net.minecraftforge.client.event.RenderLevelStageEvent;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.chunk.LevelChunk;
@@ -47,34 +46,39 @@ import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
 import java.util.HashMap;
 
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 
-@EventBusSubscriber(value = Dist.CLIENT)
+@Mod.EventBusSubscriber(value = Dist.CLIENT)
 public class RenderItemOnBatteryChargerProcedure {
 	private static RenderLevelStageEvent provider = null;
 	private static Map<EntityType, Entity> data = new HashMap<>();
-	private static float textWidth = 1.0F;
-	private static float textHeight = 1.0F;
-	private static int textColor = -1;
-	private static int backColor = 0;
 
-	public static void setBackColor(int color) {
-		RenderItemOnBatteryChargerProcedure.backColor = color;
-	}
-
-	public static void setTextColor(int color) {
-		RenderItemOnBatteryChargerProcedure.textColor = color;
-	}
-
-	public static void setScale(float width, float height) {
-		RenderItemOnBatteryChargerProcedure.textWidth = width;
-		RenderItemOnBatteryChargerProcedure.textHeight = height;
+	public static void renderBackground(String texts, double x, double y, double z, float yaw, float pitch, float roll, float scale, int color) {
+		Minecraft minecraft = Minecraft.getInstance();
+		Font font = minecraft.font;
+		MultiBufferSource.BufferSource bufferSource = minecraft.renderBuffers().bufferSource();
+		Vec3 pos = provider.getCamera().getPosition();
+		PoseStack poseStack = provider.getPoseStack();
+		poseStack.pushPose();
+		poseStack.translate(x - pos.x(), y - pos.y(), z - pos.z());
+		poseStack.mulPose(com.mojang.math.Axis.YN.rotationDegrees(yaw));
+		poseStack.mulPose(com.mojang.math.Axis.XP.rotationDegrees(pitch));
+		poseStack.mulPose(com.mojang.math.Axis.ZN.rotationDegrees(roll));
+		poseStack.scale(scale, -scale, 1.0F);
+		poseStack.translate((font.width(texts) - 1) * -0.5F, (font.lineHeight - 1) * -0.5F, 0.0F);
+		Matrix4f matrix4f = poseStack.last().pose();
+		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+		font.drawInBatch(texts, 0.0F, 0.0F, 0, false, matrix4f, bufferSource, Font.DisplayMode.SEE_THROUGH, color, LightTexture.FULL_BRIGHT);
+		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+		poseStack.popPose();
 	}
 
 	public static void renderBlock(BlockState blockState, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean glowing) {
@@ -151,7 +155,7 @@ public class RenderItemOnBatteryChargerProcedure {
 	}
 
 	public static void renderEntity(Entity entity, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean glowing) {
-		float partialTick = provider.getPartialTick().getGameTimeDeltaTicks();
+		float partialTick = provider.getPartialTick();
 		int packedLight = glowing ? LightTexture.FULL_BRIGHT : Minecraft.getInstance().getEntityRenderDispatcher().getPackedLightCoords(entity, partialTick);
 		renderEntity(entity, partialTick, x, y, z, yaw, pitch, roll, scale, packedLight);
 	}
@@ -197,10 +201,20 @@ public class RenderItemOnBatteryChargerProcedure {
 		poseStack.popPose();
 	}
 
-	public static void renderTexts(String texts, double x, double y, double z, float yaw, float pitch, float roll, boolean glowing) {
+	public static void renderLine(double x1, double y1, double z1, double x2, double y2, double z2, int color) {
+		MultiBufferSource.BufferSource bufferSource = Minecraft.getInstance().renderBuffers().bufferSource();
+		Vec3 pos = provider.getCamera().getPosition();
+		Vector3f normal = new Vec3(x2 - x1, y2 - y1, z2 - z1).normalize().toVector3f();
+		Matrix4f matrix4f = provider.getPoseStack().last().pose();
+		VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.lines());
+		vertexConsumer.vertex(matrix4f, (float) (x1 - pos.x()), (float) (y1 - pos.y()), (float) (z1 - pos.z())).color(color).normal(normal.x(), normal.y(), normal.z()).endVertex();
+		vertexConsumer.vertex(matrix4f, (float) (x2 - pos.x()), (float) (y2 - pos.y()), (float) (z2 - pos.z())).color(color).normal(normal.x(), normal.y(), normal.z()).endVertex();
+	}
+
+	public static void renderTexts(String texts, double x, double y, double z, float yaw, float pitch, float roll, float scale, int color, boolean glowing) {
 		Minecraft minecraft = Minecraft.getInstance();
-		MultiBufferSource.BufferSource bufferSource = minecraft.renderBuffers().bufferSource();
 		Font font = minecraft.font;
+		MultiBufferSource.BufferSource bufferSource = minecraft.renderBuffers().bufferSource();
 		Vec3 pos = provider.getCamera().getPosition();
 		int packedLight = glowing ? LightTexture.FULL_BRIGHT : LevelRenderer.getLightColor(minecraft.level, BlockPos.containing(x, y, z));
 		PoseStack poseStack = provider.getPoseStack();
@@ -209,13 +223,11 @@ public class RenderItemOnBatteryChargerProcedure {
 		poseStack.mulPose(com.mojang.math.Axis.YN.rotationDegrees(yaw));
 		poseStack.mulPose(com.mojang.math.Axis.XP.rotationDegrees(pitch));
 		poseStack.mulPose(com.mojang.math.Axis.ZN.rotationDegrees(roll));
-		poseStack.scale(textWidth, -textHeight, 1.0F);
+		poseStack.scale(scale, -scale, 1.0F);
 		poseStack.translate((font.width(texts) - 1) * -0.5F, (font.lineHeight - 1) * -0.5F, 0.0F);
 		Matrix4f matrix4f = poseStack.last().pose();
 		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-		if (backColor != 0)
-			font.drawInBatch(texts, 0.0F, 0.0F, 0, false, matrix4f, bufferSource, Font.DisplayMode.SEE_THROUGH, backColor, packedLight);
-		font.drawInBatch(texts, 0.0F, 0.0F, textColor, false, matrix4f, bufferSource, Font.DisplayMode.NORMAL, 0, packedLight);
+		font.drawInBatch(texts, 0.0F, 0.0F, color, false, matrix4f, bufferSource, Font.DisplayMode.NORMAL, 0, packedLight);
 		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 		poseStack.popPose();
 	}
@@ -226,12 +238,8 @@ public class RenderItemOnBatteryChargerProcedure {
 		if (provider.getStage() == RenderLevelStageEvent.Stage.AFTER_ENTITIES) {
 			ClientLevel level = Minecraft.getInstance().level;
 			Entity entity = provider.getCamera().getEntity();
-			Vec3 pos = entity.getPosition(provider.getPartialTick().getGameTimeDeltaTicks());
-			RenderSystem.depthMask(true);
-			RenderSystem.enableDepthTest();
-			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+			Vec3 pos = entity.getPosition(provider.getPartialTick());
 			execute(provider, level);
-			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.disableBlend();
 			RenderSystem.enableCull();
@@ -279,42 +287,38 @@ public class RenderItemOnBatteryChargerProcedure {
 								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.NORTH) {
 									if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											BlockEntity _ent = world.getBlockEntity(pos);
+											if (_ent != null)
+												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+											return _retval.get();
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 0, 90, 0, (float) 0.5, true, false);
 									} else if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											BlockEntity _ent = world.getBlockEntity(pos);
+											if (_ent != null)
+												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+											return _retval.get();
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 0, 90, 0, (float) 0.5, true, false);
 									}
@@ -333,42 +337,38 @@ public class RenderItemOnBatteryChargerProcedure {
 								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.SOUTH) {
 									if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											BlockEntity _ent = world.getBlockEntity(pos);
+											if (_ent != null)
+												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+											return _retval.get();
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 180, 90, 0, (float) 0.5, true, false);
 									} else if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											BlockEntity _ent = world.getBlockEntity(pos);
+											if (_ent != null)
+												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+											return _retval.get();
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 180, 90, 0, (float) 0.5, true, false);
 									}
@@ -387,42 +387,38 @@ public class RenderItemOnBatteryChargerProcedure {
 								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.WEST) {
 									if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											BlockEntity _ent = world.getBlockEntity(pos);
+											if (_ent != null)
+												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+											return _retval.get();
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), -90, 90, 0, (float) 0.5, true, false);
 									} else if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											BlockEntity _ent = world.getBlockEntity(pos);
+											if (_ent != null)
+												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+											return _retval.get();
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), -90, 90, 0, (float) 0.5, true, false);
 									}
@@ -441,42 +437,38 @@ public class RenderItemOnBatteryChargerProcedure {
 								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.EAST) {
 									if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											BlockEntity _ent = world.getBlockEntity(pos);
+											if (_ent != null)
+												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+											return _retval.get();
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 90, 90, 0, (float) 0.5, true, false);
 									} else if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).copy();
-											}
-											return ItemStack.EMPTY;
+											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+											BlockEntity _ent = world.getBlockEntity(pos);
+											if (_ent != null)
+												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+											return _retval.get();
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												if (world instanceof ILevelExtension _ext) {
-													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-													if (_itemHandler != null)
-														return _itemHandler.getStackInSlot(slotid).copy();
-												}
-												return ItemStack.EMPTY;
+												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+												BlockEntity _ent = world.getBlockEntity(pos);
+												if (_ent != null)
+													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+												return _retval.get();
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 90, 90, 0, (float) 0.5, true, false);
 									}

@@ -1,12 +1,12 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "keybind",
   "definition": {
     "triggerKey": "U",
     "keyBindingName": "Detransformation key",
     "keyBindingCategoryKey": "power2",
     "onKeyPressed": {
-      "name": "DetransformKeyPressed"
+      "name": "DetransformationKeyUse"
     }
   }
 }

@@ -1,6 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -9,14 +9,14 @@ import net.minecraft.world.entity.Entity;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.init.PowerModGameRules;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class SpiritElementGetProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (!PowerModVariables.MapVariables.get(world).spirit_stone || !world.getLevelData().getGameRules().getBoolean(PowerModGameRules.LIMITED_NUMBER_OF_STONES)) {
+		if (!PowerModVariables.MapVariables.get(world).spirit_stone || !PowerConfigConfiguration.LIMIT_NUMBER_STONES.get()) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.SPIRIT_STONE.get()).copy();
@@ -28,17 +28,21 @@ public class SpiritElementGetProcedure {
 				_player.closeContainer();
 			PowerModVariables.MapVariables.get(world).spirit_stone = true;
 			PowerModVariables.MapVariables.get(world).syncData(world);
-			if (world.getLevelData().getGameRules().getBoolean(PowerModGameRules.LIMIT_OF_STONES_FOR_ONE_PLAYER)) {
+			if (PowerConfigConfiguration.ONE_PLAYER_LIMIT_STONES.get()) {
 				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.selected = true;
-					_vars.syncPlayerVariables(entity);
+					boolean _setval = true;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.selected = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
 			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.unlock_keepers_box = false;
-				_vars.syncPlayerVariables(entity);
+				boolean _setval = false;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.unlock_keepers_box = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 	}

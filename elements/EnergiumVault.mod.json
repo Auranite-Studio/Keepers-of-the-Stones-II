@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "block",
   "definition": {
     "texture": "energium_vault_front_off",
@@ -59,7 +59,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "NONE"
+      "value": "IRON"
     },
     "tickRate": 1,
     "tickRandomly": false,
@@ -87,26 +87,25 @@
       "value": "NETHERITE"
     },
     "breakSound": {
-      "value": "block.vault.break"
+      "value": "CUSTOM:backport.block.vault.break"
     },
     "fallSound": {
-      "value": "block.vault.fall"
+      "value": "block.netherite_block.fall"
     },
     "hitSound": {
-      "value": "block.vault.hit"
+      "value": "block.netherite_block.hit"
     },
     "placeSound": {
-      "value": "block.vault.place"
+      "value": "CUSTOM:backport.block.vault.place"
     },
     "stepSound": {
-      "value": "block.vault.step"
+      "value": "CUSTOM:backport.block.vault.step"
     },
     "luminance": 6,
     "unbreakable": false,
     "vanillaToolTier": "DIAMOND",
     "isBonemealable": false,
     "hasInventory": true,
-    "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,

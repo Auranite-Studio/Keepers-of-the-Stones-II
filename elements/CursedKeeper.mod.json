@@ -1,23 +1,165 @@
 {
-  "_fv": 69,
-  "_type": "animatedentity",
+  "_fv": 77,
+  "_type": "livingentity",
   "definition": {
     "mobName": "Cursed Keeper",
     "mobLabel": "",
+    "mobModelName": "Modelcursed_keeper",
     "mobModelTexture": "cursed_keeper.png",
-    "mobModelGlowTexture": "",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
     "visualScale": {
       "fixedValue": 1.0
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "entityDataEntries": [],
+    "modelLayers": [],
+    "animations": [
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.run"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperSprinting"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.walk"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperWalk"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.idle_no"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperIdle0"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.idle"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperIdle1"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.idle_ground"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperIdle2"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.aggro"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperAggro"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.fall"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperFall"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.summon_wave"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperAttack1"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.firethrowing"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperAttack2"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.wind_shield"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperAttack3"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.stalagmite_piercing"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperAttack4"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:cursed_keeperAnimation.water_healing"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "CursedKeeperAttack5"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      }
+    ],
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
       "value": -9216650,
@@ -59,18 +201,22 @@
     "attackKnockback": 0.25,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.25,
+    "stepHeight": 0.6,
     "armorBaseValue": 10.0,
     "trackingRange": 256,
     "followRange": 128,
-    "health": 350,
+    "health": 700,
     "xpAmount": 1000,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "deathTime": 20,
-    "lerp": 4,
     "disableCollisions": false,
     "ridable": false,
     "canControlForward": false,
@@ -81,12 +227,12 @@
     "immuneToCactus": true,
     "immuneToDrowning": true,
     "immuneToLightning": true,
-    "immuneToPotions": false,
+    "immuneToPotions": true,
     "immuneToPlayer": false,
     "immuneToExplosion": true,
     "immuneToTrident": false,
     "immuneToAnvil": true,
-    "immuneToWither": false,
+    "immuneToWither": true,
     "immuneToDragonBreath": true,
     "mobDrop": {
       "value": "CUSTOM:LuckCoin"
@@ -106,6 +252,40 @@
     "raidCelebrationSound": {
       "value": ""
     },
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "attack_anim_sync",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "name": "stage_zero_anim_sync",
+        "type": "logic",
+        "value": true
+      },
+      {
+        "name": "stage_one_anim_sync",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "name": "stage_two_anim_sync",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "name": "aggro_anim_sync",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "name": "fall_anim_sync",
+        "type": "logic",
+        "value": false
+      }
+    ],
     "whenMobDies": {
       "name": "CursedKeeperPriGibieliSushchnosti"
     },
@@ -114,33 +294,9 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "cursed_keeper.geo.json",
-    "groupName": "Head",
-    "animation1": "animation.cursed_keeper.idle_ground",
-    "animation2": "animation.cursed_keeper.walk",
-    "animation3": "",
-    "animation4": "",
-    "animation5": "",
-    "animation6": "",
-    "animation7": "animation.cursed_keeper.run",
-    "animation8": "",
-    "animation9": "",
-    "animation10": "",
-    "enable2": true,
-    "enable3": false,
-    "enable4": false,
-    "enable5": false,
-    "enable6": false,
-    "enable7": true,
-    "enable8": false,
-    "enable9": false,
-    "enable10": false,
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"155\" y=\"43\"><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
-    "disableDeathRotation": false,
-    "headMovement": true,
-    "eyeHeight": false,
     "breedTriggerItems": [],
     "ranged": false,
     "rangedAttackItem": {
@@ -149,8 +305,14 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "height": 1.0,
-    "attackRate": 7.0,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 20,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false,
     "raidSpawnsCount": [
       4,
       3,
@@ -159,14 +321,6 @@
       4,
       4,
       2
-    ],
-    "spawnThisMob": false,
-    "doesDespawnWhenIdle": false,
-    "spawningProbability": 20,
-    "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 4,
-    "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [],
-    "spawnInDungeons": false
+    ]
   }
 }

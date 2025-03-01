@@ -21,51 +21,69 @@ public class FakeElementSetProcedure {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
 				if (DoubleArgumentType.getDouble(arguments, "element_order") == 1) {
 					{
-						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.fake_element_name_first = StringArgumentType.getString(arguments, "element_name");
-						_vars.syncPlayerVariables(entityiterator);
+						String _setval = StringArgumentType.getString(arguments, "element_name");
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.fake_element_name_first = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
 					}
 					{
-						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.power_recorded = true;
-						_vars.syncPlayerVariables(entityiterator);
+						boolean _setval = true;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.power_recorded = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
 					}
 					{
-						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.fake_element_name_first_timer = DoubleArgumentType.getDouble(arguments, "time") * 20;
-						_vars.syncPlayerVariables(entityiterator);
+						double _setval = DoubleArgumentType.getDouble(arguments, "time") * 20;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.fake_element_name_first_timer = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
 					}
 				} else if (DoubleArgumentType.getDouble(arguments, "element_order") == 2) {
 					{
-						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.fake_element_name_second = StringArgumentType.getString(arguments, "element_name");
-						_vars.syncPlayerVariables(entityiterator);
+						String _setval = StringArgumentType.getString(arguments, "element_name");
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.fake_element_name_second = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
 					}
 					{
-						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.power_recorded = true;
-						_vars.syncPlayerVariables(entityiterator);
+						boolean _setval = true;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.power_recorded = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
 					}
 					{
-						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.fake_element_name_second_timer = DoubleArgumentType.getDouble(arguments, "time") * 20;
-						_vars.syncPlayerVariables(entityiterator);
+						double _setval = DoubleArgumentType.getDouble(arguments, "time") * 20;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.fake_element_name_second_timer = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
 					}
 				} else if (DoubleArgumentType.getDouble(arguments, "element_order") == 3) {
 					{
-						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.fake_element_name_third = StringArgumentType.getString(arguments, "element_name");
-						_vars.syncPlayerVariables(entityiterator);
+						String _setval = StringArgumentType.getString(arguments, "element_name");
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.fake_element_name_third = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
 					}
 					{
-						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.power_recorded = true;
-						_vars.syncPlayerVariables(entityiterator);
+						boolean _setval = true;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.power_recorded = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
 					}
 					{
-						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.fake_element_name_third_timer = DoubleArgumentType.getDouble(arguments, "time") * 20;
-						_vars.syncPlayerVariables(entityiterator);
+						double _setval = DoubleArgumentType.getDouble(arguments, "time") * 20;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.fake_element_name_third_timer = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
 					}
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())

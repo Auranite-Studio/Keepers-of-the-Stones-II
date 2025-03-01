@@ -3,7 +3,8 @@ package com.esmods.keepersofthestonestwo.block;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.neoforged.neoforge.common.util.DeferredSoundType;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.common.util.ForgeSoundType;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -29,7 +30,6 @@ import net.minecraft.world.Containers;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -42,9 +42,9 @@ public class CursedVaultBlock extends Block implements EntityBlock {
 
 	public CursedVaultBlock() {
 		super(BlockBehaviour.Properties.of()
-				.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.break")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.step")),
-						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.place")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.hit")),
-						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.fall"))))
+				.sound(new ForgeSoundType(1.0f, 1.0f, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.break")),
+						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.step")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.place")),
+						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.netherite_block.hit")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.netherite_block.fall"))))
 				.strength(50f).lightLevel(s -> (new Object() {
 					public int getLightLevel() {
 						if (s.getValue(BLOCKSTATE) == 1)
@@ -110,7 +110,10 @@ public class CursedVaultBlock extends Block implements EntityBlock {
 	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
-		CursedVaultTickUpdateProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		CursedVaultTickUpdateProcedure.execute(world, x, y, z, blockstate);
 		world.scheduleTick(pos, this, 1);
 	}
 

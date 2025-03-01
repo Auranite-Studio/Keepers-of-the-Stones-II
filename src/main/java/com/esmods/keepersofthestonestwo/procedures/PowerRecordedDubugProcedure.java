@@ -8,6 +8,6 @@ public class PowerRecordedDubugProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "power_recorded: " + entity.getData(PowerModVariables.PLAYER_VARIABLES).power_recorded;
+		return "power_recorded: " + (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power_recorded;
 	}
 }

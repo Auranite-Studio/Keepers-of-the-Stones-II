@@ -1,16 +1,13 @@
 
 package com.esmods.keepersofthestonestwo.potion;
 
-import net.neoforged.neoforge.common.EffectCure;
-
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
-import java.util.Set;
-
 import com.esmods.keepersofthestonestwo.procedures.EarthMasterStartProcedure;
+import com.esmods.keepersofthestonestwo.procedures.EarthMasterEndProcedure;
 
 public class EarthMasterMobEffect extends MobEffect {
 	public EarthMasterMobEffect() {
@@ -18,11 +15,19 @@ public class EarthMasterMobEffect extends MobEffect {
 	}
 
 	@Override
-	public void fillEffectCures(Set<EffectCure> cures, MobEffectInstance effectInstance) {
+	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		super.addAttributeModifiers(entity, attributeMap, amplifier);
+		EarthMasterStartProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
-	public void onEffectStarted(LivingEntity entity, int amplifier) {
-		EarthMasterStartProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		super.removeAttributeModifiers(entity, attributeMap, amplifier);
+		EarthMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+	}
+
+	@Override
+	public boolean isDurationEffectTick(int duration, int amplifier) {
+		return true;
 	}
 }

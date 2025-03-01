@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "power:raw_depleted_energium"
+    }
+  },
+  "result": {
+    "item": "power:raw_depleted_energium_block",
+    "count": 1
+  }
+}

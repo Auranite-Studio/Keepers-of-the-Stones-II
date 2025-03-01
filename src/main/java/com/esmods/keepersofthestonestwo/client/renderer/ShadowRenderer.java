@@ -12,12 +12,12 @@ import com.esmods.keepersofthestonestwo.entity.ShadowEntity;
 
 public class ShadowRenderer extends HumanoidMobRenderer<ShadowEntity, HumanoidModel<ShadowEntity>> {
 	public ShadowRenderer(EntityRendererProvider.Context context) {
-		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
+		super(context, new HumanoidModel<ShadowEntity>(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
 		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(ShadowEntity entity) {
-		return ResourceLocation.parse("power:textures/entities/shadow.png");
+		return new ResourceLocation("power:textures/entities/shadow.png");
 	}
 }

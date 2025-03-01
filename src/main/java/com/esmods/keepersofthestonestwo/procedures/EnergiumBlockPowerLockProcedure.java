@@ -20,9 +20,9 @@ public class EnergiumBlockPowerLockProcedure {
 				final Vec3 _center = new Vec3(x, y, z);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
-					if (!(entityiterator instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PowerModMobEffects.POWER_LOCK))) {
+					if (!(entityiterator instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PowerModMobEffects.POWER_LOCK.get()))) {
 						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK, 200, 0));
+							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 200, 0));
 					}
 				}
 			}
