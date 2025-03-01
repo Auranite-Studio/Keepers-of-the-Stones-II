@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 77,
   "_type": "biome",
   "definition": {
     "name": "Cursed Forest",
@@ -68,7 +68,7 @@
       "max": 0.1
     },
     "genContinentalness": {
-      "min": -0.19,
+      "min": -0.11,
       "max": 0.03
     },
     "genErosion": {

@@ -19,7 +19,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
-import java.util.List;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
@@ -41,9 +40,10 @@ public class CursedKeeperFireProcedure {
 		particles = 3;
 		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
 		if (entity.getPersistentData().getDouble("IA") == 15) {
-			if (entity instanceof CursedKeeperEntity) {
-				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.firethrowing");
-			}
+			if (entity instanceof CursedKeeperEntity _datEntSetL)
+				_datEntSetL.getEntityData().set(CursedKeeperEntity.DATA_stage_two_anim_sync, false);
+			if (entity instanceof CursedKeeperEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 2);
 		}
 		if (entity.getPersistentData().getDouble("IA") > 19 && entity.getPersistentData().getDouble("IA") < 30) {
 			entity.getPersistentData().putDouble("BreathRange", (entity.getPersistentData().getDouble("BreathRange") + 1));
@@ -67,11 +67,10 @@ public class CursedKeeperFireProcedure {
 						_level.sendParticles(ParticleTypes.FLAME, XPar, YPar, ZPar, 5, (0.075 + Range * 0.05), (0.075 + Range * 0.05), (0.075 + Range * 0.05), 0);
 					{
 						final Vec3 _center = new Vec3(XPar, YPar, ZPar);
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((0.125 + Range * 0.05) / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-								.toList();
-						for (Entity entityiterator : _entfound) {
+						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((0.125 + Range * 0.05) / 2d), e -> true).stream()
+								.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
-								if (!(entityiterator instanceof LivingEntity _livEnt18 && _livEnt18.isBlocking())) {
+								if (!(entityiterator instanceof LivingEntity _livEnt19 && _livEnt19.isBlocking())) {
 									if (!(entityiterator instanceof ItemEntity)) {
 										entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 9);
 										entityiterator.igniteForSeconds(10);
@@ -117,6 +116,10 @@ public class CursedKeeperFireProcedure {
 			entity.getPersistentData().putDouble("BreathRange", 0);
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putString("State", "Idle");
+			if (entity instanceof CursedKeeperEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 0);
+			if (entity instanceof CursedKeeperEntity _datEntSetL)
+				_datEntSetL.getEntityData().set(CursedKeeperEntity.DATA_stage_two_anim_sync, true);
 		}
 	}
 }

@@ -1,33 +1,11 @@
 repositories {
-    maven {
-    	url = "https://cursemaven.com"
-    }
-}
-
-dependencies {
-	implementation "curse.maven:pehkui-319596:5446174"
-}
-
-
-repositories {
-  maven {
-      url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
-  }
-}
-
-dependencies {
-  implementation 'software.bernie.geckolib:geckolib-neoforge-1.21.1:4.7'
-}
-
-
-repositories {
  maven {
      url = 'https://maven.kosmx.dev/'
  }
 }
 
  dependencies {
-   implementation 'dev.kosmx.player-anim:player-animation-lib-forge:2.0.0-alpha1+1.21'
+   implementation 'dev.kosmx.player-anim:player-animation-lib-forge:2.0.1+1.21.1'
  }
 
 

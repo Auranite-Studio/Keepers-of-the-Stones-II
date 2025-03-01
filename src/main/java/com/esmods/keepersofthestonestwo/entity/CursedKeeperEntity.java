@@ -1,20 +1,13 @@
 
 package com.esmods.keepersofthestonestwo.entity;
 
-import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.animation.RawAnimation;
-import software.bernie.geckolib.animation.PlayState;
-import software.bernie.geckolib.animation.AnimationState;
-import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.AnimatableManager;
-import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animatable.GeoEntity;
-
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import net.neoforged.neoforge.common.NeoForgeMod;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
@@ -26,11 +19,11 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
@@ -44,19 +37,41 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperWalkProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperSprintingProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CursedKeeperPriObnovlieniiTikaSushchnostiProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CursedKeeperPriGibieliSushchnostiProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperIdle2Procedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperIdle1Procedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperIdle0Procedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperFallProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAttack5Procedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAttack4Procedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAttack3Procedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAttack2Procedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAttack1Procedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAggroProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
-public class CursedKeeperEntity extends Monster implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.STRING);
-	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-	private boolean swinging;
-	private boolean lastloop;
-	private long lastSwing;
-	public String animationprocedure = "empty";
+public class CursedKeeperEntity extends Monster {
+	public static final EntityDataAccessor<Integer> DATA_attack_anim_sync = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Boolean> DATA_stage_zero_anim_sync = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Boolean> DATA_stage_one_anim_sync = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Boolean> DATA_stage_two_anim_sync = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Boolean> DATA_aggro_anim_sync = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Boolean> DATA_fall_anim_sync = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
+	public final AnimationState animationState0 = new AnimationState();
+	public final AnimationState animationState1 = new AnimationState();
+	public final AnimationState animationState2 = new AnimationState();
+	public final AnimationState animationState3 = new AnimationState();
+	public final AnimationState animationState4 = new AnimationState();
+	public final AnimationState animationState5 = new AnimationState();
+	public final AnimationState animationState6 = new AnimationState();
+	public final AnimationState animationState7 = new AnimationState();
+	public final AnimationState animationState8 = new AnimationState();
+	public final AnimationState animationState9 = new AnimationState();
+	public final AnimationState animationState10 = new AnimationState();
+	public final AnimationState animationState11 = new AnimationState();
 	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.PURPLE, ServerBossEvent.BossBarOverlay.NOTCHED_10);
 
 	public CursedKeeperEntity(EntityType<CursedKeeperEntity> type, Level world) {
@@ -69,17 +84,12 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 	@Override
 	protected void defineSynchedData(SynchedEntityData.Builder builder) {
 		super.defineSynchedData(builder);
-		builder.define(SHOOT, false);
-		builder.define(ANIMATION, "undefined");
-		builder.define(TEXTURE, "cursed_keeper");
-	}
-
-	public void setTexture(String texture) {
-		this.entityData.set(TEXTURE, texture);
-	}
-
-	public String getTexture() {
-		return this.entityData.get(TEXTURE);
+		builder.define(DATA_attack_anim_sync, 0);
+		builder.define(DATA_stage_zero_anim_sync, true);
+		builder.define(DATA_stage_one_anim_sync, false);
+		builder.define(DATA_stage_two_anim_sync, false);
+		builder.define(DATA_aggro_anim_sync, false);
+		builder.define(DATA_fall_anim_sync, false);
 	}
 
 	@Override
@@ -119,26 +129,30 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.is(DamageTypes.IN_FIRE))
+	public boolean hurt(DamageSource damagesource, float amount) {
+		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
-		if (source.getDirectEntity() instanceof AbstractArrow)
+		if (damagesource.getDirectEntity() instanceof AbstractArrow)
 			return false;
-		if (source.is(DamageTypes.FALL))
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
 			return false;
-		if (source.is(DamageTypes.CACTUS))
+		if (damagesource.is(DamageTypes.FALL))
 			return false;
-		if (source.is(DamageTypes.DROWN))
+		if (damagesource.is(DamageTypes.CACTUS))
 			return false;
-		if (source.is(DamageTypes.LIGHTNING_BOLT))
+		if (damagesource.is(DamageTypes.DROWN))
 			return false;
-		if (source.is(DamageTypes.EXPLOSION) || source.is(DamageTypes.PLAYER_EXPLOSION))
+		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))
 			return false;
-		if (source.is(DamageTypes.FALLING_ANVIL))
+		if (damagesource.is(DamageTypes.EXPLOSION) || damagesource.is(DamageTypes.PLAYER_EXPLOSION))
 			return false;
-		if (source.is(DamageTypes.DRAGON_BREATH))
+		if (damagesource.is(DamageTypes.FALLING_ANVIL))
 			return false;
-		return super.hurt(source, amount);
+		if (damagesource.is(DamageTypes.DRAGON_BREATH))
+			return false;
+		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
+			return false;
+		return super.hurt(damagesource, amount);
 	}
 
 	@Override
@@ -160,26 +174,54 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
-		compound.putString("Texture", this.getTexture());
+		compound.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
+		compound.putBoolean("Datastage_zero_anim_sync", this.entityData.get(DATA_stage_zero_anim_sync));
+		compound.putBoolean("Datastage_one_anim_sync", this.entityData.get(DATA_stage_one_anim_sync));
+		compound.putBoolean("Datastage_two_anim_sync", this.entityData.get(DATA_stage_two_anim_sync));
+		compound.putBoolean("Dataaggro_anim_sync", this.entityData.get(DATA_aggro_anim_sync));
+		compound.putBoolean("Datafall_anim_sync", this.entityData.get(DATA_fall_anim_sync));
 	}
 
 	@Override
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
-		if (compound.contains("Texture"))
-			this.setTexture(compound.getString("Texture"));
+		if (compound.contains("Dataattack_anim_sync"))
+			this.entityData.set(DATA_attack_anim_sync, compound.getInt("Dataattack_anim_sync"));
+		if (compound.contains("Datastage_zero_anim_sync"))
+			this.entityData.set(DATA_stage_zero_anim_sync, compound.getBoolean("Datastage_zero_anim_sync"));
+		if (compound.contains("Datastage_one_anim_sync"))
+			this.entityData.set(DATA_stage_one_anim_sync, compound.getBoolean("Datastage_one_anim_sync"));
+		if (compound.contains("Datastage_two_anim_sync"))
+			this.entityData.set(DATA_stage_two_anim_sync, compound.getBoolean("Datastage_two_anim_sync"));
+		if (compound.contains("Dataaggro_anim_sync"))
+			this.entityData.set(DATA_aggro_anim_sync, compound.getBoolean("Dataaggro_anim_sync"));
+		if (compound.contains("Datafall_anim_sync"))
+			this.entityData.set(DATA_fall_anim_sync, compound.getBoolean("Datafall_anim_sync"));
+	}
+
+	@Override
+	public void tick() {
+		super.tick();
+		if (this.level().isClientSide()) {
+			this.animationState0.animateWhen(CursedKeeperSprintingProcedure.execute(this), this.tickCount);
+			this.animationState1.animateWhen(CursedKeeperWalkProcedure.execute(this), this.tickCount);
+			this.animationState2.animateWhen(CursedKeeperIdle0Procedure.execute(this), this.tickCount);
+			this.animationState3.animateWhen(CursedKeeperIdle1Procedure.execute(this), this.tickCount);
+			this.animationState4.animateWhen(CursedKeeperIdle2Procedure.execute(this), this.tickCount);
+			this.animationState5.animateWhen(CursedKeeperAggroProcedure.execute(this), this.tickCount);
+			this.animationState6.animateWhen(CursedKeeperFallProcedure.execute(this), this.tickCount);
+			this.animationState7.animateWhen(CursedKeeperAttack1Procedure.execute(this), this.tickCount);
+			this.animationState8.animateWhen(CursedKeeperAttack2Procedure.execute(this), this.tickCount);
+			this.animationState9.animateWhen(CursedKeeperAttack3Procedure.execute(this), this.tickCount);
+			this.animationState10.animateWhen(CursedKeeperAttack4Procedure.execute(this), this.tickCount);
+			this.animationState11.animateWhen(CursedKeeperAttack5Procedure.execute(this), this.tickCount);
+		}
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
 		CursedKeeperPriObnovlieniiTikaSushchnostiProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
-		this.refreshDimensions();
-	}
-
-	@Override
-	public EntityDimensions getDefaultDimensions(Pose pose) {
-		return super.getDefaultDimensions(pose).scale(1f);
 	}
 
 	@Override
@@ -206,74 +248,12 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.25);
-		builder = builder.add(Attributes.MAX_HEALTH, 350);
+		builder = builder.add(Attributes.MAX_HEALTH, 700);
 		builder = builder.add(Attributes.ARMOR, 10);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 100);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 128);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.25);
 		return builder;
-	}
-
-	private PlayState movementPredicate(AnimationState event) {
-		if (this.animationprocedure.equals("empty")) {
-			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
-
-					&& !this.isSprinting()) {
-				return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.walk"));
-			}
-			if (this.isSprinting()) {
-				return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.run"));
-			}
-			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.idle_ground"));
-		}
-		return PlayState.STOP;
-	}
-
-	String prevAnim = "empty";
-
-	private PlayState procedurePredicate(AnimationState event) {
-		if (!animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED || (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty"))) {
-			if (!this.animationprocedure.equals(prevAnim))
-				event.getController().forceAnimationReset();
-			event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
-			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-				this.animationprocedure = "empty";
-				event.getController().forceAnimationReset();
-			}
-		} else if (animationprocedure.equals("empty")) {
-			prevAnim = "empty";
-			return PlayState.STOP;
-		}
-		prevAnim = this.animationprocedure;
-		return PlayState.CONTINUE;
-	}
-
-	@Override
-	protected void tickDeath() {
-		++this.deathTime;
-		if (this.deathTime == 20) {
-			this.remove(CursedKeeperEntity.RemovalReason.KILLED);
-			this.dropExperience(this);
-		}
-	}
-
-	public String getSyncedAnimation() {
-		return this.entityData.get(ANIMATION);
-	}
-
-	public void setAnimation(String animation) {
-		this.entityData.set(ANIMATION, animation);
-	}
-
-	@Override
-	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-		data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-		data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
-	}
-
-	@Override
-	public AnimatableInstanceCache getAnimatableInstanceCache() {
-		return this.cache;
 	}
 }

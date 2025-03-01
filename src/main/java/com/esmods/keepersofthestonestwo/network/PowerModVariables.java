@@ -87,8 +87,15 @@ public class PowerModVariables {
 			clone.boots = original.boots;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
 			clone.hypnotized = original.hypnotized;
-			clone.is_set_configurable_zero = original.is_set_configurable_zero;
+			clone.level = original.level;
+			clone.level_exp = original.level_exp;
 			clone.base_damage_by_lvl = original.base_damage_by_lvl;
+			clone.max_level_exp = original.max_level_exp;
+			clone.resistance_char = original.resistance_char;
+			clone.speed_char = original.speed_char;
+			clone.haste_char = original.haste_char;
+			clone.jump_char = original.jump_char;
+			clone.rank = original.rank;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -115,6 +122,11 @@ public class PowerModVariables {
 				clone.transfered_power = original.transfered_power;
 				clone.master_effect_end = original.master_effect_end;
 				clone.master_effect_start = original.master_effect_start;
+				clone.is_not_stone = original.is_not_stone;
+				clone.attribute_is_ready = original.attribute_is_ready;
+				clone.level_up_status = original.level_up_status;
+				clone.cursed_fog = original.cursed_fog;
+				clone.fog_distance = original.fog_distance;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -236,8 +248,7 @@ public class PowerModVariables {
 		public boolean darkness_stone = false;
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
-		public boolean get_limit_of_stones = true;
-		public double cpapi_ver = 20.0;
+		public double cpapi_ver = 21.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -302,7 +313,6 @@ public class PowerModVariables {
 			darkness_stone = nbt.getBoolean("darkness_stone");
 			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
 			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
-			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
 			cpapi_ver = nbt.getDouble("cpapi_ver");
 		}
 
@@ -364,7 +374,6 @@ public class PowerModVariables {
 			nbt.putBoolean("darkness_stone", darkness_stone);
 			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
 			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
-			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
 			nbt.putDouble("cpapi_ver", cpapi_ver);
 			return nbt;
 		}
@@ -471,8 +480,20 @@ public class PowerModVariables {
 		public boolean hypnotized = false;
 		public boolean master_effect_end = false;
 		public boolean master_effect_start = false;
-		public boolean is_set_configurable_zero = false;
-		public double base_damage_by_lvl = 13.5;
+		public double level = 1.0;
+		public double level_exp = 0.0;
+		public double base_damage_by_lvl = 6.0;
+		public double max_level_exp = 100.0;
+		public boolean is_not_stone = false;
+		public boolean attribute_is_ready = false;
+		public double resistance_char = 0.0;
+		public double speed_char = 1.0;
+		public double haste_char = -1.0;
+		public double jump_char = 1.0;
+		public boolean level_up_status = false;
+		public String rank = "D";
+		public boolean cursed_fog = false;
+		public double fog_distance = 100.0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -521,8 +542,20 @@ public class PowerModVariables {
 			nbt.putBoolean("hypnotized", hypnotized);
 			nbt.putBoolean("master_effect_end", master_effect_end);
 			nbt.putBoolean("master_effect_start", master_effect_start);
-			nbt.putBoolean("is_set_configurable_zero", is_set_configurable_zero);
+			nbt.putDouble("level", level);
+			nbt.putDouble("level_exp", level_exp);
 			nbt.putDouble("base_damage_by_lvl", base_damage_by_lvl);
+			nbt.putDouble("max_level_exp", max_level_exp);
+			nbt.putBoolean("is_not_stone", is_not_stone);
+			nbt.putBoolean("attribute_is_ready", attribute_is_ready);
+			nbt.putDouble("resistance_char", resistance_char);
+			nbt.putDouble("speed_char", speed_char);
+			nbt.putDouble("haste_char", haste_char);
+			nbt.putDouble("jump_char", jump_char);
+			nbt.putBoolean("level_up_status", level_up_status);
+			nbt.putString("rank", rank);
+			nbt.putBoolean("cursed_fog", cursed_fog);
+			nbt.putDouble("fog_distance", fog_distance);
 			return nbt;
 		}
 
@@ -572,8 +605,20 @@ public class PowerModVariables {
 			hypnotized = nbt.getBoolean("hypnotized");
 			master_effect_end = nbt.getBoolean("master_effect_end");
 			master_effect_start = nbt.getBoolean("master_effect_start");
-			is_set_configurable_zero = nbt.getBoolean("is_set_configurable_zero");
+			level = nbt.getDouble("level");
+			level_exp = nbt.getDouble("level_exp");
 			base_damage_by_lvl = nbt.getDouble("base_damage_by_lvl");
+			max_level_exp = nbt.getDouble("max_level_exp");
+			is_not_stone = nbt.getBoolean("is_not_stone");
+			attribute_is_ready = nbt.getBoolean("attribute_is_ready");
+			resistance_char = nbt.getDouble("resistance_char");
+			speed_char = nbt.getDouble("speed_char");
+			haste_char = nbt.getDouble("haste_char");
+			jump_char = nbt.getDouble("jump_char");
+			level_up_status = nbt.getBoolean("level_up_status");
+			rank = nbt.getString("rank");
+			cursed_fog = nbt.getBoolean("cursed_fog");
+			fog_distance = nbt.getDouble("fog_distance");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

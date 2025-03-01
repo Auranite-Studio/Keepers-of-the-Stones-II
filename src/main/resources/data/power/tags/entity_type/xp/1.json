@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "zombie",
+    "zombie_villager",
+    "zombified_piglin",
+    "drowned",
+    "husk",
+    "vex",
+    "slime",
+    "endermite",
+    "spider",
+    "skeleton",
+    "bogged",
+    "stray",
+    "silverfish"
+  ]
+}

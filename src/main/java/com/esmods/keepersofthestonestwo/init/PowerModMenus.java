@@ -63,6 +63,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart3Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart2Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
+import com.esmods.keepersofthestonestwo.world.inventory.CharacteristicsCardGUIMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -121,4 +122,5 @@ public class PowerModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<BatteryChargerGUIMenu>> BATTERY_CHARGER_GUI = REGISTRY.register("battery_charger_gui", () -> IMenuTypeExtension.create(BatteryChargerGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbiltiesGoldenDustMenu>> WHEEL_ABILTIES_GOLDEN_DUST = REGISTRY.register("wheel_abilties_golden_dust", () -> IMenuTypeExtension.create(WheelAbiltiesGoldenDustMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilityDarknessMenu>> WHEEL_ABILITY_DARKNESS = REGISTRY.register("wheel_ability_darkness", () -> IMenuTypeExtension.create(WheelAbilityDarknessMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<CharacteristicsCardGUIMenu>> CHARACTERISTICS_CARD_GUI = REGISTRY.register("characteristics_card_gui", () -> IMenuTypeExtension.create(CharacteristicsCardGUIMenu::new));
 }

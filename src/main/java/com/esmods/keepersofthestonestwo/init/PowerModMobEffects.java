@@ -16,17 +16,14 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.core.registries.Registries;
 
 import com.esmods.keepersofthestonestwo.procedures.WaterMasterEndProcedure;
-import com.esmods.keepersofthestonestwo.procedures.WarpPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.VacuumMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TornadoMasterEndProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TimeStoppedPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ThirstDarkMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TeleportationMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TechnologyMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.StunStopSoundProcedure;
-import com.esmods.keepersofthestonestwo.procedures.StarRegenerationEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpiritMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpeedMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceMasterEndProcedure;
@@ -45,7 +42,6 @@ import com.esmods.keepersofthestonestwo.procedures.MusicMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MistMasterEndProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MiniaturizationPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MindMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MercuryMasterEndProcedure;
@@ -59,7 +55,6 @@ import com.esmods.keepersofthestonestwo.procedures.IceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.HorrorDarkMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GravityMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GoldenDustMasterEndProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GigantizationPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FormMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FilthDarkMasterEndProcedure;
@@ -138,6 +133,7 @@ import com.esmods.keepersofthestonestwo.potion.EnergyMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EarthMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DarknessMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.CurseMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ChaosDarkMasterMobEffect;
@@ -222,6 +218,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> CHAOS_DARK_MASTER = REGISTRY.register("chaos_dark_master", () -> new ChaosDarkMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> HORROR_DARK_MASTER = REGISTRY.register("horror_dark_master", () -> new HorrorDarkMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> FILTH_DARK_MASTER = REGISTRY.register("filth_dark_master", () -> new FilthDarkMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> CURSE = REGISTRY.register("curse", () -> new CurseMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -294,8 +291,6 @@ public class PowerModMobEffects {
 			SpaceMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(TIME_MASTER)) {
 			TimeMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(TIME_STOPPED)) {
-			TimeStoppedPriIstiechieniiEffiektaProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(CREATION_MASTER)) {
 			CreationMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(DESTRUCTION_MASTER)) {
@@ -312,8 +307,6 @@ public class PowerModMobEffects {
 			ExplosionMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(AMBER_MASTER)) {
 			AmberMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(STAR_REGENERATION)) {
-			StarRegenerationEndProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(MIST_MASTER)) {
 			MistMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(SAND_MASTER)) {
@@ -344,12 +337,6 @@ public class PowerModMobEffects {
 			SpiritMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(FORM_MASTER)) {
 			FormMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(WARP)) {
-			WarpPriIstiechieniiEffiektaProcedure.execute(entity);
-		} else if (effectInstance.getEffect().is(MINIATURIZATION)) {
-			MiniaturizationPriIstiechieniiEffiektaProcedure.execute(entity);
-		} else if (effectInstance.getEffect().is(GIGANTIZATION)) {
-			GigantizationPriIstiechieniiEffiektaProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(MIND_MASTER)) {
 			MindMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(GOLDEN_DUST_MASTER)) {
