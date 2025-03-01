@@ -37321,7 +37321,7 @@
     {
       "name": "AnimationsModuleSetup",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "animations_module_setup",
       "metadata": {
