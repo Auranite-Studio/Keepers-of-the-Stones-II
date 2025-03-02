@@ -25,8 +25,6 @@ import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
 import dev.kosmx.playerAnim.api.layered.modifier.AbstractFadeModifier;
 import dev.kosmx.playerAnim.api.layered.ModifierLayer;
 import dev.kosmx.playerAnim.api.layered.IAnimation;
-import dev.kosmx.playerAnim.api.firstPerson.FirstPersonMode;
-import dev.kosmx.playerAnim.api.firstPerson.FirstPersonConfiguration;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -81,8 +79,7 @@ public class AnimationsModuleSetupProcedure {
 		if (player instanceof net.minecraft.client.player.AbstractClientPlayer player_) {
 			var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player_).get(ResourceLocation.fromNamespaceAndPath("power", "player_animation"));
 			if (animation != null && override ? true : !animation.isActive()) {
-				animation.replaceAnimationWithFade(AbstractFadeModifier.functionalFadeIn(0, (modelName, type, value) -> value), PlayerAnimationRegistry.getAnimation(ResourceLocation.fromNamespaceAndPath("power", anim)).playAnimation()
-						.setFirstPersonMode(FirstPersonMode.THIRD_PERSON_MODEL).setFirstPersonConfiguration(new FirstPersonConfiguration().setShowRightArm(true).setShowLeftItem(false)));
+				animation.replaceAnimationWithFade(AbstractFadeModifier.functionalFadeIn(0, (modelName, type, value) -> value), PlayerAnimationRegistry.getAnimation(ResourceLocation.fromNamespaceAndPath("power", anim)).playAnimation());
 			}
 		}
 	}
