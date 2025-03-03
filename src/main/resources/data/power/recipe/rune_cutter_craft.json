@@ -7,7 +7,7 @@
     "bbb"
   ],
   "key": {
-    "a": "minecraft:air",
+    "a": "power:copyrium_ingot",
     "b": "minecraft:cobbled_deepslate"
   },
   "result": {
