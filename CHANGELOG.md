@@ -2,7 +2,7 @@
 - *N/A*
 
 **Improvemnts**
-- Animations of transformation and detransformation are working again (only 1.21.4+)
+- The transformation and detransformation animations have been returned (only 1.21.4+)
 
 
 **API changes**
