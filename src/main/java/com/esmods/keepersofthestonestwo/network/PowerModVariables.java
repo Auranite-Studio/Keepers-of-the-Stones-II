@@ -101,7 +101,6 @@ public class PowerModVariables {
 			clone.leggings = original.leggings;
 			clone.boots = original.boots;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
-			clone.hypnotized = original.hypnotized;
 			clone.level = original.level;
 			clone.level_exp = original.level_exp;
 			clone.base_damage_by_lvl = original.base_damage_by_lvl;
@@ -111,6 +110,7 @@ public class PowerModVariables {
 			clone.haste_char = original.haste_char;
 			clone.jump_char = original.jump_char;
 			clone.rank = original.rank;
+			clone.mind_used = original.mind_used;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -142,6 +142,7 @@ public class PowerModVariables {
 				clone.level_up_status = original.level_up_status;
 				clone.cursed_fog = original.cursed_fog;
 				clone.fog_distance = original.fog_distance;
+				clone.mind_player_owner = original.mind_player_owner;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -527,7 +528,6 @@ public class PowerModVariables {
 		public ItemStack boots = ItemStack.EMPTY;
 		public boolean unlock_keepers_box = false;
 		public boolean transfered_power = false;
-		public boolean hypnotized = false;
 		public boolean master_effect_end = false;
 		public boolean master_effect_start = false;
 		public double level = 1.0;
@@ -544,6 +544,8 @@ public class PowerModVariables {
 		public String rank = "D";
 		public boolean cursed_fog = false;
 		public double fog_distance = 100.0;
+		public String mind_player_owner = "\"\"";
+		public boolean mind_used = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -593,7 +595,6 @@ public class PowerModVariables {
 			nbt.put("boots", boots.save(new CompoundTag()));
 			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
 			nbt.putBoolean("transfered_power", transfered_power);
-			nbt.putBoolean("hypnotized", hypnotized);
 			nbt.putBoolean("master_effect_end", master_effect_end);
 			nbt.putBoolean("master_effect_start", master_effect_start);
 			nbt.putDouble("level", level);
@@ -610,6 +611,8 @@ public class PowerModVariables {
 			nbt.putString("rank", rank);
 			nbt.putBoolean("cursed_fog", cursed_fog);
 			nbt.putDouble("fog_distance", fog_distance);
+			nbt.putString("mind_player_owner", mind_player_owner);
+			nbt.putBoolean("mind_used", mind_used);
 			return nbt;
 		}
 
@@ -656,7 +659,6 @@ public class PowerModVariables {
 			boots = ItemStack.of(nbt.getCompound("boots"));
 			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
 			transfered_power = nbt.getBoolean("transfered_power");
-			hypnotized = nbt.getBoolean("hypnotized");
 			master_effect_end = nbt.getBoolean("master_effect_end");
 			master_effect_start = nbt.getBoolean("master_effect_start");
 			level = nbt.getDouble("level");
@@ -673,6 +675,8 @@ public class PowerModVariables {
 			rank = nbt.getString("rank");
 			cursed_fog = nbt.getBoolean("cursed_fog");
 			fog_distance = nbt.getDouble("fog_distance");
+			mind_player_owner = nbt.getString("mind_player_owner");
+			mind_used = nbt.getBoolean("mind_used");
 		}
 	}
 

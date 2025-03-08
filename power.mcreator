@@ -14,10 +14,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -37577,12 +37573,6 @@
       "value": "false"
     },
     {
-      "name": "hypnotized",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
       "name": "cpapi_ver",
       "type": "number",
       "scope": "map",
@@ -37683,6 +37673,18 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "100.0"
+    },
+    {
+      "name": "mind_player_owner",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "mind_used",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -40839,6 +40841,10 @@
           {
             "name": "JavaAnimationsSyncModule",
             "children": []
+          },
+          {
+            "name": "PartyModule",
+            "children": []
           }
         ]
       },
@@ -41400,7 +41406,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.1.0",
+    "version": "1.1.2.1",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
