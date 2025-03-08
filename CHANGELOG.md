@@ -1,14 +1,14 @@
 **New features**
 - *N/A*
 
-**Improvemnts**
-- The transformation and detransformation animations have been returned (only 1.21.4+)
+**Improvemnts** 
+- *N/A*
 
 **API changes**
 - *N/A*
 
 **Bugfixes**
-- *N/A*
+- [Bugfix] 
 
 **Known issues**
 - *N/A*
