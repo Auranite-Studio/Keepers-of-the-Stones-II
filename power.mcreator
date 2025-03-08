@@ -36981,6 +36981,33 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "MindOwnerImmuneSlave",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_owner_immune_slave",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindOwnerImmuneSlaveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mind"
     }
   ],
   "variable_elements": [
