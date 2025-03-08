@@ -41452,7 +41452,6 @@
     "serverSideOnly": false,
     "modPicture": "logo",
     "requiredMods": [
-      "playeranimator"
     ],
     "dependencies": [
       "bettercombat"
@@ -41463,7 +41462,7 @@
     "mcreatorDependencies": [
       "playeranimator"
     ],
-    "currentGenerator": "neoforge-1.21.1",
+    "currentGenerator": "neoforge-1.21.4",
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
