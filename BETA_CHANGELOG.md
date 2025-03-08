@@ -2,13 +2,13 @@
 - *N/A*
 
 **Improvemnts** 
-- *N/A*
+- Improved the technical implementation of the Mind Master's abilities
 
 **API changes**
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that caused the GUI background to be darker than vanilla
+- [Bugfix] Fixed conflicts related to the interception of teams by the master of the mind element
 
 **Known issues**
 - *N/A*
