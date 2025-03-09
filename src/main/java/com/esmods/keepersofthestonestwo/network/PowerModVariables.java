@@ -751,7 +751,6 @@ public class PowerModVariables {
 					variables.boots = message.data.boots;
 					variables.unlock_keepers_box = message.data.unlock_keepers_box;
 					variables.transfered_power = message.data.transfered_power;
-					variables.hypnotized = message.data.hypnotized;
 					variables.master_effect_end = message.data.master_effect_end;
 					variables.master_effect_start = message.data.master_effect_start;
 					variables.level = message.data.level;
@@ -768,6 +767,8 @@ public class PowerModVariables {
 					variables.rank = message.data.rank;
 					variables.cursed_fog = message.data.cursed_fog;
 					variables.fog_distance = message.data.fog_distance;
+					variables.mind_player_owner = message.data.mind_player_owner;
+					variables.mind_used = message.data.mind_used;
 				}
 			});
 			context.setPacketHandled(true);
