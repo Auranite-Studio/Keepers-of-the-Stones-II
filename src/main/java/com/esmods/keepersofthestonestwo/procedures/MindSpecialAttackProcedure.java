@@ -2,7 +2,6 @@ package com.esmods.keepersofthestonestwo.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
-import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
@@ -26,6 +25,8 @@ import net.minecraft.core.BlockPos;
 import java.util.List;
 import java.util.Comparator;
 import java.util.ArrayList;
+
+import com.mojang.util.UUIDTypeAdapter;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
@@ -100,75 +101,60 @@ public class MindSpecialAttackProcedure {
 			}
 		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability).equals("mind_ability_2")) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
-				{
-					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-					for (Entity entityiterator : _entfound) {
-						if (!(entityiterator == entity) && entityiterator instanceof Player) {
-							if (world instanceof Level _level) {
-								PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
-								if (_pt != null)
-									_level.getScoreboard().removePlayerTeam(_pt);
-							}
-							if (world instanceof Level _level)
-								_level.getScoreboard().addPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
-							if (world instanceof Level _level) {
-								PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
-								if (_pt != null)
-									_pt.setAllowFriendlyFire(false);
-							}
-							{
-								Entity _entityTeam = entityiterator;
-								PlayerTeam _pt = _entityTeam.level().getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
-								if (_pt != null) {
-									if (_entityTeam instanceof Player _player)
-										_entityTeam.level().getScoreboard().addPlayerToTeam(_player.getGameProfile().getName(), _pt);
-									else
-										_entityTeam.level().getScoreboard().addPlayerToTeam(_entityTeam.getStringUUID(), _pt);
+				if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mind_used) {
+					{
+						final Vec3 _center = new Vec3(x, y, z);
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
+							if (!(entityiterator == entity) && entityiterator instanceof Player) {
+								{
+									String _setval = entity.getStringUUID();
+									entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.mind_player_owner = _setval;
+										capability.syncPlayerVariables(entityiterator);
+									});
 								}
-							}
-							{
-								boolean _setval = true;
-								entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.hypnotized = _setval;
-									capability.syncPlayerVariables(entityiterator);
-								});
 							}
 						}
 					}
-				}
-				{
-					Entity _entityTeam = entity;
-					PlayerTeam _pt = _entityTeam.level().getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
-					if (_pt != null) {
-						if (_entityTeam instanceof Player _player)
-							_entityTeam.level().getScoreboard().addPlayerToTeam(_player.getGameProfile().getName(), _pt);
-						else
-							_entityTeam.level().getScoreboard().addPlayerToTeam(_entityTeam.getStringUUID(), _pt);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+						}
 					}
-				}
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+					{
+						boolean _setval = true;
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.mind_used = _setval;
+							capability.syncPlayerVariables(entity);
+						});
 					}
-				}
-				{
-					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.power = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					{
+						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.power = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 			}
 		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability).equals("remote_control_1")) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 25) {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
-					if (!(entity == entityiterator)
-							&& (entityiterator instanceof LivingEntity _teamEnt && _teamEnt.level().getScoreboard().getPlayersTeam(_teamEnt instanceof Player _pl ? _pl.getGameProfile().getName() : _teamEnt.getStringUUID()) != null
-									? _teamEnt.level().getScoreboard().getPlayersTeam(_teamEnt instanceof Player _pl ? _pl.getGameProfile().getName() : _teamEnt.getStringUUID()).getName()
-									: "").equals("HypnotizedBy" + entity.getDisplayName().getString())) {
+					if (!(entity == entityiterator) && new Object() {
+						Entity getEntity(String uuid) {
+							Entity _uuidentity = null;
+							if (world instanceof ServerLevel _server) {
+								try {
+									_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+								} catch (IllegalArgumentException e) {
+								}
+							}
+							return _uuidentity;
+						}
+					}.getEntity(((entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mind_player_owner)) == entity) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("X: " + entityiterator.getX() + "Y: " + entityiterator.getY() + "Z: " + entityiterator.getZ())), false);
 					}
@@ -191,10 +177,18 @@ public class MindSpecialAttackProcedure {
 		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability).equals("remote_control_2")) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 25) {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
-					if (!(entity == entityiterator)
-							&& (entityiterator instanceof LivingEntity _teamEnt && _teamEnt.level().getScoreboard().getPlayersTeam(_teamEnt instanceof Player _pl ? _pl.getGameProfile().getName() : _teamEnt.getStringUUID()) != null
-									? _teamEnt.level().getScoreboard().getPlayersTeam(_teamEnt instanceof Player _pl ? _pl.getGameProfile().getName() : _teamEnt.getStringUUID()).getName()
-									: "").equals("HypnotizedBy" + entity.getDisplayName().getString())) {
+					if (!(entity == entityiterator) && new Object() {
+						Entity getEntity(String uuid) {
+							Entity _uuidentity = null;
+							if (world instanceof ServerLevel _server) {
+								try {
+									_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+								} catch (IllegalArgumentException e) {
+								}
+							}
+							return _uuidentity;
+						}
+					}.getEntity(((entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mind_player_owner)) == entity) {
 						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers")))), 500);
 					}
 				}
@@ -216,14 +210,31 @@ public class MindSpecialAttackProcedure {
 		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability).equals("remote_control_3")) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 25) {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
-					if (!(entity == entityiterator)
-							&& (entityiterator instanceof LivingEntity _teamEnt && _teamEnt.level().getScoreboard().getPlayersTeam(_teamEnt instanceof Player _pl ? _pl.getGameProfile().getName() : _teamEnt.getStringUUID()) != null
-									? _teamEnt.level().getScoreboard().getPlayersTeam(_teamEnt instanceof Player _pl ? _pl.getGameProfile().getName() : _teamEnt.getStringUUID()).getName()
-									: "").equals("HypnotizedBy" + entity.getDisplayName().getString())) {
-						if (world instanceof Level _level) {
-							PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
-							if (_pt != null)
-								_level.getScoreboard().removePlayerTeam(_pt);
+					if (!(entity == entityiterator) && new Object() {
+						Entity getEntity(String uuid) {
+							Entity _uuidentity = null;
+							if (world instanceof ServerLevel _server) {
+								try {
+									_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+								} catch (IllegalArgumentException e) {
+								}
+							}
+							return _uuidentity;
+						}
+					}.getEntity(((entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mind_player_owner)) == entity) {
+						{
+							String _setval = "";
+							entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.mind_player_owner = _setval;
+								capability.syncPlayerVariables(entityiterator);
+							});
+						}
+						{
+							boolean _setval = false;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.mind_used = _setval;
+								capability.syncPlayerVariables(entity);
+							});
 						}
 					}
 				}
