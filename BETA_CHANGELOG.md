@@ -2,6 +2,7 @@
 - *N/A*
 
 **Improvemnts** 
+- Dependent players will no longer be able to deal direct damage to a mind master
 - Improved the technical implementation of the Mind Master's abilities
 
 **API changes**
