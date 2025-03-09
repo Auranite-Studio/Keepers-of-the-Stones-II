@@ -14,10 +14,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -27019,6 +27015,20 @@
       "path": "~/ItemsAndBlocks/Copyrium"
     },
     {
+      "name": "AnimationsModuleSetup",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animations_module_setup",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AnimationsModuleSetupProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Modules/BasicModule"
+    },
+    {
       "name": "RawEnergium",
       "type": "item",
       "compiles": true,
@@ -31001,6 +31011,29 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Smoke"
+    },
+    {
+      "name": "DetransformAnimationStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detransform_animation_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DetransformAnimationStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/DetransformationKey"
     },
     {
       "name": "SmokeIntangibility",
@@ -37319,32 +37352,22 @@
       "path": "~/ItemsAndBlocks/Copyrium"
     },
     {
-      "name": "AnimationsModuleSetup",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "animations_module_setup",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AnimationsModuleSetupProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
-      "name": "DetransformAnimationStart",
+      "name": "MindOwnerImmuneSlave",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "detransform_animation_start",
+      "registry_name": "mind_owner_immune_slave",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DetransformAnimationStartProcedure.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindOwnerImmuneSlaveProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
             "type": "entity"
           },
           {
@@ -37353,7 +37376,7 @@
           }
         ]
       },
-      "path": "~/Modules/KeyBindsModule/DetransformationKey"
+      "path": "~/Elements/Mind"
     }
   ],
   "variable_elements": [
@@ -37946,12 +37969,6 @@
       "value": "false"
     },
     {
-      "name": "hypnotized",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
       "name": "cpapi_ver",
       "type": "number",
       "scope": "map",
@@ -38052,6 +38069,18 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "100.0"
+    },
+    {
+      "name": "mind_player_owner",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "mind_used",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -41467,6 +41496,10 @@
           {
             "name": "JavaAnimationsSyncModule",
             "children": []
+          },
+          {
+            "name": "PartyModule",
+            "children": []
           }
         ]
       },
@@ -42028,7 +42061,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
