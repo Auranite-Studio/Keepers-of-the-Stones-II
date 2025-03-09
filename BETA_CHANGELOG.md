@@ -10,6 +10,8 @@
 
 **Bugfixes**
 - [Bugfix] Fixed conflicts related to the interception of teams by the master of the mind element
+- [Bugfix] Fixed a bug where stopping time did not block the abilities of the elemental masters
+- [Bugfix] Fixed a bug that could cause a player under a power lock effect to move
 
 **Known issues**
 - *N/A*
