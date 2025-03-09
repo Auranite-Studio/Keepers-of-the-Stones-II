@@ -54,20 +54,6 @@
       },
       {
         "attribute": {
-          "value": "SNEAKING_SPEED"
-        },
-        "amount": -100.0,
-        "operation": "ADD_VALUE"
-      },
-      {
-        "attribute": {
-          "value": "BLOCK_BREAK_SPEED"
-        },
-        "amount": -100.0,
-        "operation": "ADD_MULTIPLIED_BASE"
-      },
-      {
-        "attribute": {
           "value": "ENTITY_REACH"
         },
         "amount": -100.0,
