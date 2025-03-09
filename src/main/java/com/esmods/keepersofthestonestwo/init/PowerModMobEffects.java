@@ -18,6 +18,7 @@ import net.minecraft.core.registries.Registries;
 import com.esmods.keepersofthestonestwo.procedures.WaterMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.VacuumMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TornadoMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.TimeStoppedPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ThirstDarkMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TeleportationMasterEndProcedure;
@@ -291,6 +292,8 @@ public class PowerModMobEffects {
 			SpaceMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(TIME_MASTER)) {
 			TimeMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(TIME_STOPPED)) {
+			TimeStoppedPriIstiechieniiEffiektaProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(CREATION_MASTER)) {
 			CreationMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(DESTRUCTION_MASTER)) {

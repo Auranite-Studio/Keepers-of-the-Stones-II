@@ -1,17 +1,17 @@
 # Automatically builds and publishes the mod when a new release is created on GitHub.
 # It uploads the mod to GitHub, CurseForge and Modrinth.
 
-name: Beta
+name: Pre-Release & Release Candidate
 
 on:
   push:
     branches:
-      - "1.21.1-beta"
+      - "1.21.4-pre"
 env:                                              
-  MINECRAFT_VERSION: 1.21.1                      
+  MINECRAFT_VERSION: 1.21.4                      
   JAVA_VERSION: 21      
-  VERSION: 1.1.2.1
-  RELEASE_NAME: Keepers of the Stones II 1.1.2.1 Beta
+  VERSION: 1.1.0-rc1
+  RELEASE_NAME: Keepers of the Stones II 1.1.0 Release Candidate 1
 
 jobs:
   build:
@@ -63,7 +63,6 @@ jobs:
             embedded-dependency@0.3.0(embedded)
             conflicting-dependency(conflicting)
             incompatible-dependency(incompatible)
-            playeranimator(required){modrinth:gedNE4y2}{curseforge:658587}#(ignore:github)
             better-combat(recommended){modrinth:8BmcQJ2H}{curseforge:639842}#(ignore:github)
             epic-fight(incompatible){modrinth:vu3NZ5Ma}{curseforge:405076}#(ignore:github)
           modrinth-featured: false
