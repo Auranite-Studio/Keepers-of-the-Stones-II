@@ -8,17 +8,81 @@
       "value": -3407821,
       "falpha": 0.0
     },
+    "onAddedSound": {
+      "value": ""
+    },
     "isInstant": false,
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
     "isCuredbyHoney": false,
-    "modifiers": [],
+    "modifiers": [
+      {
+        "attribute": {
+          "value": "MOVEMENT_SPEED"
+        },
+        "amount": -100.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "FLYING_SPEED"
+        },
+        "amount": -100.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "JUMP_STRENGTH"
+        },
+        "amount": -100.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "SWIM_SPEED"
+        },
+        "amount": -100.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "ATTACK_SPEED"
+        },
+        "amount": -100.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "SNEAKING_SPEED"
+        },
+        "amount": -100.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "BLOCK_BREAK_SPEED"
+        },
+        "amount": -100.0,
+        "operation": "ADD_MULTIPLIED_BASE"
+      },
+      {
+        "attribute": {
+          "value": "ENTITY_REACH"
+        },
+        "amount": -100.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "BLOCK_REACH"
+        },
+        "amount": -100.0,
+        "operation": "ADD_VALUE"
+      }
+    ],
     "onStarted": {
       "name": "TimeStoppedPriNalozhieniiEffiekta"
-    },
-    "onActiveTick": {
-      "name": "TimeStoppedKazhdyiTikVoVriemiaEffiekta"
     },
     "onExpired": {
       "name": "TimeStoppedPriIstiechieniiEffiekta"
