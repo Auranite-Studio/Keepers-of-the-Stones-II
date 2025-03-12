@@ -14,10 +14,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -36852,6 +36848,19 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExtraStarPointsRune1UseProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindOwnerImmuneSlave",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_owner_immune_slave",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindOwnerImmuneSlaveProcedure.java"
         ],
         "dependencies": [
           {
@@ -36912,6 +36921,10 @@
           {
             "name": "z",
             "type": "number"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
           },
           {
             "name": "world",
@@ -37551,12 +37564,6 @@
       "value": "false"
     },
     {
-      "name": "hypnotized",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
       "name": "cpapi_ver",
       "type": "number",
       "scope": "map",
@@ -37657,6 +37664,18 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "100.0"
+    },
+    {
+      "name": "mind_player_owner",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "mind_used",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -40963,6 +40982,10 @@
           {
             "name": "JavaAnimationsSyncModule",
             "children": []
+          },
+          {
+            "name": "PartyModule",
+            "children": []
           }
         ]
       },
@@ -41560,5 +41583,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500109323
+  "mcreatorVersion": 202500111122
 }
