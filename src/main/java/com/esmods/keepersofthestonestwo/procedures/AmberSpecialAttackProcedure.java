@@ -229,6 +229,8 @@ public class AmberSpecialAttackProcedure {
 									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.AMBER_POWER.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 35, 1, 2, 1, 0);
 						}
 					}
 				}
