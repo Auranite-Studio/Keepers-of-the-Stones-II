@@ -12,22 +12,22 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "PowerModItems.COPYRIUM_INGOT"
+        "value": "CUSTOM:CopyriumIngot"
       },
       {
-        "value": "PowerModItems.COPYRIUM_INGOT"
+        "value": "CUSTOM:CopyriumIngot"
       },
       {
-        "value": "PowerModItems.COPYRIUM_INGOT"
+        "value": "CUSTOM:CopyriumIngot"
       },
       {
-        "value": "PowerModItems.COPYRIUM_INGOT"
+        "value": "CUSTOM:CopyriumIngot"
       },
       {
         "value": "Blocks.COBBLED_DEEPSLATE"
       },
       {
-        "value": "PowerModItems.COPYRIUM_INGOT"
+        "value": "CUSTOM:CopyriumIngot"
       },
       {
         "value": "Blocks.COBBLED_DEEPSLATE"
