@@ -36878,6 +36878,18 @@
         ]
       },
       "path": "~/Elements/Mind"
+    },
+    {
+      "name": "PlayerGlowRenderer",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "player_glow_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/PlayerGlowRenderer.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
