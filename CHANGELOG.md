@@ -10,5 +10,7 @@
 **Bugfixes**
 - [Bugfix] 
 
+  fixed burial (almost)
+
 **Known issues**
 - *N/A*
