@@ -28,6 +28,7 @@ import java.util.Comparator;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 import com.esmods.keepersofthestonestwo.entity.IceAttackProjectileEntity;
+import com.esmods.keepersofthestonestwo.EntityGlowRenderer;
 
 public class IceSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -174,6 +175,7 @@ public class IceSpecialAttackProcedure {
 								_vars.ability_block = true;
 								_vars.syncPlayerVariables(entityiterator);
 							}
+							EntityGlowRenderer.handleGlowUpdate(entityiterator.getUUID(), true, 0f, 0f, 1f);
 							entityiterator.getPersistentData().putBoolean("iceLayer", true);
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {

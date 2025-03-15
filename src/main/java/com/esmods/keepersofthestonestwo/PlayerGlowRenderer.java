@@ -9,31 +9,86 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
+import net.minecraft.world.entity.player.Player;
+
+import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 @EventBusSubscriber(modid = "power", bus = EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
 public class PlayerGlowRenderer {
-    private static boolean RENDERING = false;
-    public static boolean GLOW_ENABLED = false;
-    public static float RED;
-    public static float GREEN;
-    public static float BLUE;
+    private static final Map<UUID, GlowSettings> GLOW_PLAYERS = new ConcurrentHashMap<>();
+    private static final Set<UUID> RENDERING_PLAYERS = ConcurrentHashMap.newKeySet();
     private static final float GLOW_ALPHA = 0.8f;
+
+    private static class GlowSettings {
+        boolean enabled;
+        float red;
+        float green;
+        float blue;
+
+        GlowSettings(float red, float green, float blue) {
+            this.red = red;
+            this.green = green;
+            this.blue = blue;
+            this.enabled = true;
+        }
+    }
+
+    // API методы для управления свечением
+    public static void enableGlow(UUID playerId) {
+        GLOW_PLAYERS.computeIfPresent(playerId, (k, v) -> {
+            v.enabled = true;
+            return v;
+        });
+    }
+
+    public static void disableGlow(UUID playerId) {
+        GLOW_PLAYERS.computeIfPresent(playerId, (k, v) -> {
+            v.enabled = false;
+            return v;
+        });
+    }
+
+    public static void setGlowColor(UUID playerId, float red, float green, float blue) {
+        GLOW_PLAYERS.compute(playerId, (k, v) -> {
+            if (v == null) {
+                return new GlowSettings(red, green, blue);
+            }
+            v.red = red;
+            v.green = green;
+            v.blue = blue;
+            return v;
+        });
+    }
+
+    public static void removeGlow(UUID playerId) {
+        GLOW_PLAYERS.remove(playerId);
+    }
 
     @SubscribeEvent
     public static void onPlayerRender(RenderPlayerEvent.Post event) {
-        if (!RENDERING && GLOW_ENABLED) {
-            RENDERING = true;
-            try {
-                renderGlowEffect(
-                        event.getRenderer(),
-                        (AbstractClientPlayer) event.getEntity(),
-                        event.getPoseStack(),
-                        event.getMultiBufferSource(),
-                        event.getPackedLight(),
-                        event.getPartialTick()
-                );
-            } finally {
-                RENDERING = false;
+        Player player = event.getEntity();
+        UUID playerId = player.getUUID();
+
+        if (!RENDERING_PLAYERS.contains(playerId)) {
+            GlowSettings settings = GLOW_PLAYERS.get(playerId);
+            if (settings != null && settings.enabled) {
+                RENDERING_PLAYERS.add(playerId);
+                try {
+                    renderGlowEffect(
+                            (PlayerRenderer) event.getRenderer(),
+                            (AbstractClientPlayer) player,
+                            event.getPoseStack(),
+                            event.getMultiBufferSource(),
+                            event.getPackedLight(),
+                            event.getPartialTick(),
+                            settings
+                    );
+                } finally {
+                    RENDERING_PLAYERS.remove(playerId);
+                }
             }
         }
     }
@@ -44,19 +99,19 @@ public class PlayerGlowRenderer {
             PoseStack poseStack,
             MultiBufferSource bufferSource,
             int packedLight,
-            float partialTick
+            float partialTick,
+            GlowSettings settings
     ) {
         poseStack.pushPose();
         RenderSystem.enableBlend();
         RenderSystem.defaultBlendFunc();
         RenderSystem.depthMask(false);
-        RenderSystem.setShaderColor(RED, GREEN, BLUE, GLOW_ALPHA);
+        RenderSystem.setShaderColor(settings.red, settings.green, settings.blue, GLOW_ALPHA);
 
         // Настройки трансформации
         poseStack.translate(0, 0, 0.001);
         poseStack.scale(1.02f, 1.02f, 1.02f);
 
-        // Рендер через вспомогательный метод
         renderHelper(
                 renderer,
                 player,
@@ -82,7 +137,6 @@ public class PlayerGlowRenderer {
             MultiBufferSource bufferSource,
             int packedLight
     ) {
-        // Прямой вызов внутреннего метода рендеринга
         renderer.render(
                 player,
                 entityYaw,
