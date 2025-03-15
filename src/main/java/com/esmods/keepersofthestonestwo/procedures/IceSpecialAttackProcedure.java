@@ -12,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrowableProjectile;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
@@ -28,6 +29,7 @@ import java.util.Comparator;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 import com.esmods.keepersofthestonestwo.entity.IceAttackProjectileEntity;
+import com.esmods.keepersofthestonestwo.EntityGlowRenderer;
 
 public class IceSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -174,6 +176,7 @@ public class IceSpecialAttackProcedure {
 								_vars.ability_block = true;
 								_vars.syncPlayerVariables(entityiterator);
 							}
+							EntityGlowRenderer.addTarget((LivingEntity) entityiterator, new EntityGlowRenderer.GlowColor(214f / 255.0f, 255f / 255.0f, 250f / 255.0f));
 							entityiterator.getPersistentData().putBoolean("iceLayer", true);
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {

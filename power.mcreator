@@ -36902,7 +36902,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/EntityGlowRenderer.java"
         ]
-      }
+      },
+      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [
