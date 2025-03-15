@@ -17,14 +17,14 @@ public class PlayerGlowRenderer {
     public static float RED;
     public static float GREEN;
     public static float BLUE;
-    private static final float GLOW_ALPHA = 1.0f; // Полная непрозрачность
+    private static final float GLOW_ALPHA = 0.8f;
 
     @SubscribeEvent
     public static void onPlayerRender(RenderPlayerEvent.Post event) {
         if (!RENDERING && GLOW_ENABLED) {
             RENDERING = true;
             try {
-                renderOutline(
+                renderGlowEffect(
                         event.getRenderer(),
                         (AbstractClientPlayer) event.getEntity(),
                         event.getPoseStack(),
@@ -38,7 +38,7 @@ public class PlayerGlowRenderer {
         }
     }
 
-    private static void renderOutline(
+    private static void renderGlowEffect(
             PlayerRenderer renderer,
             AbstractClientPlayer player,
             PoseStack poseStack,
@@ -50,44 +50,43 @@ public class PlayerGlowRenderer {
         RenderSystem.enableBlend();
         RenderSystem.defaultBlendFunc();
         RenderSystem.depthMask(false);
-
-        // Устанавливаем цвет обводки
         RenderSystem.setShaderColor(RED, GREEN, BLUE, GLOW_ALPHA);
 
-        // Параметры контура
-        final float scaleFactor = 1.05f;
-        final float[][] offsets = {
-                {0.03F, 0}, { -0.03F, 0 },
-                {0, 0.03F}, {0, -0.03F}
-        };
+        // Настройки трансформации
+        poseStack.translate(0, 0, 0.001);
+        poseStack.scale(1.02f, 1.02f, 1.02f);
 
-        // Рендер контурных слоев
-        for (float[] offset : offsets) {
-            poseStack.pushPose();
-            poseStack.translate(offset[0], offset[1], 0.001F);
-            poseStack.scale(scaleFactor, scaleFactor, scaleFactor);
-            renderPlayerModel(renderer, player, poseStack, bufferSource, packedLight, partialTick);
-            poseStack.popPose();
-        }
+        // Рендер через вспомогательный метод
+        renderHelper(
+                renderer,
+                player,
+                player.getYRot(),
+                partialTick,
+                poseStack,
+                bufferSource,
+                packedLight
+        );
 
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+        RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
         RenderSystem.depthMask(true);
         RenderSystem.disableBlend();
         poseStack.popPose();
     }
 
-    private static void renderPlayerModel(
+    private static void renderHelper(
             PlayerRenderer renderer,
             AbstractClientPlayer player,
+            float entityYaw,
+            float partialTicks,
             PoseStack poseStack,
             MultiBufferSource bufferSource,
-            int packedLight,
-            float partialTick
+            int packedLight
     ) {
+        // Прямой вызов внутреннего метода рендеринга
         renderer.render(
                 player,
-                player.getYRot(),
-                partialTick,
+                entityYaw,
+                partialTicks,
                 poseStack,
                 bufferSource,
                 packedLight
