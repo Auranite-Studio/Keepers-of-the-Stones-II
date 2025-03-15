@@ -22,7 +22,6 @@ import java.util.Optional;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.PlayerGlowRenderer;
 
 public class FireMasterStartProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -33,12 +32,6 @@ public class FireMasterStartProcedure {
 			_vars.active_power = true;
 			_vars.syncPlayerVariables(entity);
 		}
-		// Активация
-		PlayerGlowRenderer.GLOW_ENABLED = true;
-		// Изменение цвета (RGB 0.0-1.0)
-		PlayerGlowRenderer.RED = 226f / 255.0f;
-		PlayerGlowRenderer.GREEN = 88f / 255.0f;
-		PlayerGlowRenderer.BLUE = 34f / 255.0f;
 		for (int index0 = 0; index0 < 40; index0++) {
 			if (world instanceof ServerLevel _level && _level.getServer() != null) {
 				Optional<CommandFunction<CommandSourceStack>> _fopt = _level.getServer().getFunctions().get(ResourceLocation.parse("power:fire_master"));
