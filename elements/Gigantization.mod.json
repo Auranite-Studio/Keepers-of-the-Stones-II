@@ -8,6 +8,9 @@
       "value": -26113,
       "falpha": 0.0
     },
+    "onAddedSound": {
+      "value": ""
+    },
     "isInstant": false,
     "mobEffectCategory": "NEUTRAL",
     "renderStatusInInventory": true,
@@ -47,6 +50,13 @@
           "value": "BLOCK_REACH"
         },
         "amount": 45.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "JUMP_STRENGTH"
+        },
+        "amount": 1.0,
         "operation": "ADD_VALUE"
       }
     ]
