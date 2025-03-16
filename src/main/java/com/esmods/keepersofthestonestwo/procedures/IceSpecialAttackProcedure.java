@@ -198,6 +198,8 @@ public class IceSpecialAttackProcedure {
 									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles(ParticleTypes.SNOWFLAKE, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 50, 1, 2, 1, 0);
 						}
 					}
 				}
