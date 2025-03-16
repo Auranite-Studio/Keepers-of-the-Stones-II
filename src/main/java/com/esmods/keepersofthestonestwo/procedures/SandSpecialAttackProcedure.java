@@ -99,13 +99,15 @@ public class SandSpecialAttackProcedure {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity) && !(entity instanceof ItemEntity)) {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0, false, true));
-							int horizontalRadiusHemiBot = (int) 3 - 1;
-							int verticalRadiusHemiBot = (int) 3;
+							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 255, false, false));
+							int horizontalRadiusHemiBot = (int) 4 - 1;
+							int verticalRadiusHemiBot = (int) 4;
 							int yIterationsHemiBot = verticalRadiusHemiBot;
 							for (int i = -yIterationsHemiBot; i <= 0; i++) {
 								if (i == -verticalRadiusHemiBot) {
@@ -117,7 +119,8 @@ public class SandSpecialAttackProcedure {
 												+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
 										if (distanceSq <= 1.0) {
 											if (world instanceof ServerLevel _level)
-												FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + i + 10, z + zi), Blocks.SAND.defaultBlockState());
+												FallingBlockEntity.fall(_level, BlockPos.containing((entityiterator.getX() + entityiterator.getLookAngle().x * 0) + xi, y + i + 4, (entityiterator.getZ() + entityiterator.getLookAngle().z * 0) + zi),
+														Blocks.SAND.defaultBlockState());
 										}
 									}
 								}
