@@ -4,7 +4,7 @@
 **Improvemnts** 
 - Added particles when using some ice and amber abilities
 - Increased flight altitude when using the third ability of the rain stone during rainy weather
-- The solar healing ability now heals all allies only if the player presses SHIFT. Otherwise, it only heals the player himself.
+- The solar healing ability now heals all allies only if the player presses SHIFT. Otherwise, it only heals the player himself
 
 **API changes**
 - *N/A*
