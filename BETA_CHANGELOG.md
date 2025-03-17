@@ -8,7 +8,7 @@
 - The solar healing ability now heals all allies only if the player presses SHIFT. Otherwise, it only heals the player himself
 
 **API changes**
-- *N/A*
+- Colorful Powers API has been updated to version 24
 
 **Bugfixes**
 - [Bugfix] Fixed a bug where the power lock effect was not given in some scenarios
