@@ -22314,87 +22314,11 @@
       "registry_name": "mushrooms_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mushrooms_armor_boots.json",
-          "src/main/resources/assets/power/models/item/mushrooms_armor_chestplate.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/MushroomsArmorItem.java",
+          "src/main/resources/assets/power/models/item/mushrooms_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/mushrooms_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/mushrooms_armor_leggings.json"
-        ]
-      },
-      "path": "~/Elements/Mushrooms"
-    },
-    {
-      "name": "MushroomsArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mushrooms_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushroomsArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Mushrooms"
-    },
-    {
-      "name": "MushroomsArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mushrooms_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushroomsArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Mushrooms"
-    },
-    {
-      "name": "MushroomsArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mushrooms_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushroomsArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Mushrooms"
-    },
-    {
-      "name": "MushroomsArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mushrooms_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushroomsArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/mushrooms_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/mushrooms_armor_boots.json"
         ]
       },
       "path": "~/Elements/Mushrooms"
@@ -22753,27 +22677,8 @@
       "registry_name": "mushrooms_hammer",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mushrooms_hammer.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MushroomsHammerItem.java"
-        ]
-      },
-      "path": "~/Elements/Mushrooms"
-    },
-    {
-      "name": "MushroomsHammerKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mushrooms_hammer_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushroomsHammerKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MushroomsHammerItem.java",
+          "src/main/resources/assets/power/models/item/mushrooms_hammer.json"
         ]
       },
       "path": "~/Elements/Mushrooms"
@@ -22961,87 +22866,11 @@
       "registry_name": "mercury_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mercury_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/mercury_armor_boots.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryArmorItem.java",
           "src/main/resources/assets/power/models/item/mercury_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/mercury_armor_helmet.json"
-        ]
-      },
-      "path": "~/Elements/Mercury"
-    },
-    {
-      "name": "MercuryArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mercury_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Mercury"
-    },
-    {
-      "name": "MercuryArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mercury_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Mercury"
-    },
-    {
-      "name": "MercuryArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mercury_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Mercury"
-    },
-    {
-      "name": "MercuryArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mercury_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/mercury_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/mercury_armor_helmet.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryArmorItem.java",
+          "src/main/resources/assets/power/models/item/mercury_armor_boots.json"
         ]
       },
       "path": "~/Elements/Mercury"
@@ -23649,27 +23478,8 @@
       "registry_name": "mercury_battle_axe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mercury_battle_axe.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryBattleAxeItem.java"
-        ]
-      },
-      "path": "~/Elements/Mercury"
-    },
-    {
-      "name": "MercuryBattleAxeKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mercury_battle_axe_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryBattleAxeKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryBattleAxeItem.java",
+          "src/main/resources/assets/power/models/item/mercury_battle_axe.json"
         ]
       },
       "path": "~/Elements/Mercury"
@@ -24138,87 +23948,11 @@
       "registry_name": "music_armor",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicArmorItem.java",
+          "src/main/resources/assets/power/models/item/music_armor_helmet.json",
           "src/main/resources/assets/power/models/item/music_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/music_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/music_armor_helmet.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicArmorItem.java",
           "src/main/resources/assets/power/models/item/music_armor_boots.json"
-        ]
-      },
-      "path": "~/Elements/Music"
-    },
-    {
-      "name": "MusicArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "music_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MusicArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Music"
-    },
-    {
-      "name": "MusicArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "music_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MusicArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Music"
-    },
-    {
-      "name": "MusicArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "music_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MusicArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Music"
-    },
-    {
-      "name": "MusicArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "music_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MusicArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/Elements/Music"
@@ -24747,25 +24481,6 @@
       "path": "~/Elements/Music"
     },
     {
-      "name": "MusicGuitarKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "music_guitar_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MusicGuitarKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Music"
-    },
-    {
       "name": "FreakingParsnip",
       "type": "item",
       "compiles": true,
@@ -24904,87 +24619,11 @@
       "registry_name": "plague_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/plague_armor_helmet.json",
           "src/main/resources/assets/power/models/item/plague_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/plague_armor_boots.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/PlagueArmorItem.java",
-          "src/main/resources/assets/power/models/item/plague_armor_leggings.json"
-        ]
-      },
-      "path": "~/Elements/Plague"
-    },
-    {
-      "name": "PlagueArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "plague_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlagueArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Plague"
-    },
-    {
-      "name": "PlagueArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "plague_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlagueArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Plague"
-    },
-    {
-      "name": "PlagueArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "plague_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlagueArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Plague"
-    },
-    {
-      "name": "PlagueArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "plague_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlagueArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/plague_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/plague_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/plague_armor_boots.json"
         ]
       },
       "path": "~/Elements/Plague"
@@ -25518,25 +25157,6 @@
       "path": "~/Elements/Plague"
     },
     {
-      "name": "PlagueWalkingStickKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "plague_walking_stick_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlagueWalkingStickKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Plague"
-    },
-    {
       "name": "BlueFlameMaster",
       "type": "potioneffect",
       "compiles": true,
@@ -25557,87 +25177,11 @@
       "registry_name": "blue_flame_armor",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/BlueFlameArmorItem.java",
-          "src/main/resources/assets/power/models/item/blue_flame_armor_boots.json",
           "src/main/resources/assets/power/models/item/blue_flame_armor_leggings.json",
           "src/main/resources/assets/power/models/item/blue_flame_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/blue_flame_armor_chestplate.json"
-        ]
-      },
-      "path": "~/Elements/BlueFlame"
-    },
-    {
-      "name": "BlueFlameArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_flame_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueFlameArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/BlueFlame"
-    },
-    {
-      "name": "BlueFlameArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_flame_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueFlameArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/BlueFlame"
-    },
-    {
-      "name": "BlueFlameArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_flame_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueFlameArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/BlueFlame"
-    },
-    {
-      "name": "BlueFlameArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_flame_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueFlameArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/com/esmods/keepersofthestonestwo/item/BlueFlameArmorItem.java",
+          "src/main/resources/assets/power/models/item/blue_flame_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/blue_flame_armor_boots.json"
         ]
       },
       "path": "~/Elements/BlueFlame"
@@ -26023,27 +25567,8 @@
       "registry_name": "blue_flame_sword",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/BlueFlameSwordItem.java",
-          "src/main/resources/assets/power/models/item/blue_flame_sword.json"
-        ]
-      },
-      "path": "~/Elements/BlueFlame"
-    },
-    {
-      "name": "BlueFlameSwordKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_flame_sword_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueFlameSwordKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/blue_flame_sword.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/BlueFlameSwordItem.java"
         ]
       },
       "path": "~/Elements/BlueFlame"
@@ -26105,86 +25630,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/gravity_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/gravity_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/gravity_armor_helmet.json",
           "src/main/resources/assets/power/models/item/gravity_armor_boots.json",
+          "src/main/resources/assets/power/models/item/gravity_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/gravity_armor_leggings.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/GravityArmorItem.java"
-        ]
-      },
-      "path": "~/Elements/Gravity"
-    },
-    {
-      "name": "GravityArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gravity_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Gravity"
-    },
-    {
-      "name": "GravityArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gravity_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Gravity"
-    },
-    {
-      "name": "GravityArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gravity_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Gravity"
-    },
-    {
-      "name": "GravityArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gravity_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/Elements/Gravity"
@@ -26635,25 +26084,6 @@
       "path": "~/Elements/Gravity"
     },
     {
-      "name": "GravityMaceKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gravity_mace_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityMaceKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Gravity"
-    },
-    {
       "name": "FeatherParticle",
       "type": "particle",
       "compiles": true,
@@ -26710,85 +26140,9 @@
         "files": [
           "src/main/resources/assets/power/models/item/smoke_armor_leggings.json",
           "src/main/resources/assets/power/models/item/smoke_armor_helmet.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SmokeArmorItem.java",
           "src/main/resources/assets/power/models/item/smoke_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/smoke_armor_boots.json"
-        ]
-      },
-      "path": "~/Elements/Smoke"
-    },
-    {
-      "name": "SmokeArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "smoke_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Smoke"
-    },
-    {
-      "name": "SmokeArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "smoke_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Smoke"
-    },
-    {
-      "name": "SmokeArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "smoke_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Smoke"
-    },
-    {
-      "name": "SmokeArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "smoke_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/smoke_armor_boots.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SmokeArmorItem.java"
         ]
       },
       "path": "~/Elements/Smoke"
@@ -27418,27 +26772,8 @@
       "registry_name": "smoke_musket",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/smoke_musket.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SmokeMusketItem.java"
-        ]
-      },
-      "path": "~/Elements/Smoke"
-    },
-    {
-      "name": "SmokeMusketKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "smoke_musket_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeMusketKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SmokeMusketItem.java",
+          "src/main/resources/assets/power/models/item/smoke_musket.json"
         ]
       },
       "path": "~/Elements/Smoke"
@@ -27594,87 +26929,11 @@
       "registry_name": "spirit_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/spirit_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/spirit_armor_boots.json",
           "src/main/resources/assets/power/models/item/spirit_armor_helmet.json",
           "src/main/resources/assets/power/models/item/spirit_armor_chestplate.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SpiritArmorItem.java"
-        ]
-      },
-      "path": "~/Elements/Spirit"
-    },
-    {
-      "name": "SpiritArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spirit_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Spirit"
-    },
-    {
-      "name": "SpiritArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spirit_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Spirit"
-    },
-    {
-      "name": "SpiritArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spirit_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Spirit"
-    },
-    {
-      "name": "SpiritArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spirit_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/spirit_armor_boots.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpiritArmorItem.java",
+          "src/main/resources/assets/power/models/item/spirit_armor_leggings.json"
         ]
       },
       "path": "~/Elements/Spirit"
@@ -28131,27 +27390,8 @@
       "registry_name": "spirit_sickle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/spirit_sickle.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SpiritSickleItem.java"
-        ]
-      },
-      "path": "~/Elements/Spirit"
-    },
-    {
-      "name": "SpiritSickleKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spirit_sickle_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritSickleKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpiritSickleItem.java",
+          "src/main/resources/assets/power/models/item/spirit_sickle.json"
         ]
       },
       "path": "~/Elements/Spirit"
@@ -28644,87 +27884,11 @@
       "registry_name": "form_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/form_armor_chestplate.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/FormArmorItem.java",
-          "src/main/resources/assets/power/models/item/form_armor_helmet.json",
           "src/main/resources/assets/power/models/item/form_armor_boots.json",
-          "src/main/resources/assets/power/models/item/form_armor_leggings.json"
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "FormArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "form_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FormArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "FormArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "form_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FormArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "FormArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "form_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FormArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "FormArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "form_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FormArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/com/esmods/keepersofthestonestwo/item/FormArmorItem.java",
+          "src/main/resources/assets/power/models/item/form_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/form_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/form_armor_helmet.json"
         ]
       },
       "path": "~/Elements/Form"
@@ -29135,27 +28299,8 @@
       "registry_name": "form_sai",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/form_sai.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/FormSaiItem.java"
-        ]
-      },
-      "path": "~/Elements/Form"
-    },
-    {
-      "name": "FormSaiKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "form_sai_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FormSaiKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/com/esmods/keepersofthestonestwo/item/FormSaiItem.java",
+          "src/main/resources/assets/power/models/item/form_sai.json"
         ]
       },
       "path": "~/Elements/Form"
@@ -29194,87 +28339,11 @@
       "registry_name": "mind_armor",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MindArmorItem.java",
-          "src/main/resources/assets/power/models/item/mind_armor_boots.json",
-          "src/main/resources/assets/power/models/item/mind_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/mind_armor_helmet.json",
           "src/main/resources/assets/power/models/item/mind_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/mind_armor_helmet.json"
-        ]
-      },
-      "path": "~/Elements/Mind"
-    },
-    {
-      "name": "MindArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mind_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Mind"
-    },
-    {
-      "name": "MindArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mind_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Mind"
-    },
-    {
-      "name": "MindArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mind_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Mind"
-    },
-    {
-      "name": "MindArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mind_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/mind_armor_chestplate.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MindArmorItem.java",
+          "src/main/resources/assets/power/models/item/mind_armor_boots.json"
         ]
       },
       "path": "~/Elements/Mind"
@@ -29685,27 +28754,8 @@
       "registry_name": "mind_epee",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mind_epee.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MindEpeeItem.java"
-        ]
-      },
-      "path": "~/Elements/Mind"
-    },
-    {
-      "name": "MindEpeeKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mind_epee_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindEpeeKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MindEpeeItem.java",
+          "src/main/resources/assets/power/models/item/mind_epee.json"
         ]
       },
       "path": "~/Elements/Mind"
@@ -29780,87 +28830,11 @@
       "registry_name": "golden_dust_armor",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/GoldenDustArmorItem.java",
-          "src/main/resources/assets/power/models/item/golden_dust_armor_boots.json",
           "src/main/resources/assets/power/models/item/golden_dust_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/golden_dust_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/GoldenDustArmorItem.java",
           "src/main/resources/assets/power/models/item/golden_dust_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/golden_dust_armor_leggings.json"
-        ]
-      },
-      "path": "~/Elements/GoldenDust"
-    },
-    {
-      "name": "GoldenDustArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "golden_dust_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GoldenDustArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/GoldenDust"
-    },
-    {
-      "name": "GoldenDustArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "golden_dust_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GoldenDustArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/GoldenDust"
-    },
-    {
-      "name": "GoldenDustArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "golden_dust_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GoldenDustArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/GoldenDust"
-    },
-    {
-      "name": "GoldenDustArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "golden_dust_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GoldenDustArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/golden_dust_armor_boots.json"
         ]
       },
       "path": "~/Elements/GoldenDust"
@@ -30340,25 +29314,6 @@
       "path": "~/Elements/GoldenDust"
     },
     {
-      "name": "GoldenDustStaffKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "golden_dust_staff_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GoldenDustStaffKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/GoldenDust"
-    },
-    {
       "name": "DarknessMaster",
       "type": "potioneffect",
       "compiles": true,
@@ -30379,87 +29334,11 @@
       "registry_name": "darkness_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/darkness_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/darkness_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/darkness_armor_leggings.json",
           "src/main/resources/assets/power/models/item/darkness_armor_boots.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/DarknessArmorItem.java",
-          "src/main/resources/assets/power/models/item/darkness_armor_leggings.json"
-        ]
-      },
-      "path": "~/Elements/Darkness"
-    },
-    {
-      "name": "DarknessArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "darkness_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DarknessArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Darkness"
-    },
-    {
-      "name": "DarknessArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "darkness_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DarknessArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Darkness"
-    },
-    {
-      "name": "DarknessArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "darkness_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DarknessArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Darkness"
-    },
-    {
-      "name": "DarknessArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "darkness_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DarknessArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/darkness_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/darkness_armor_helmet.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/DarknessArmorItem.java"
         ]
       },
       "path": "~/Elements/Darkness"
@@ -30838,25 +29717,6 @@
       "path": "~/Elements/Darkness"
     },
     {
-      "name": "DarkSwordKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dark_sword_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DarkSwordKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Darkness"
-    },
-    {
       "name": "ThirstArmor",
       "type": "armor",
       "compiles": true,
@@ -30864,87 +29724,11 @@
       "registry_name": "thirst_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/thirst_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/thirst_armor_boots.json",
-          "src/main/resources/assets/power/models/item/thirst_armor_leggings.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/ThirstArmorItem.java",
-          "src/main/resources/assets/power/models/item/thirst_armor_helmet.json"
-        ]
-      },
-      "path": "~/DarkElements/Thirst"
-    },
-    {
-      "name": "ThirstArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "thirst_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ThirstArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Thirst"
-    },
-    {
-      "name": "ThirstArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "thirst_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ThirstArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Thirst"
-    },
-    {
-      "name": "ThirstArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "thirst_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ThirstArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Thirst"
-    },
-    {
-      "name": "ThirstArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "thirst_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ThirstArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/thirst_armor_boots.json",
+          "src/main/resources/assets/power/models/item/thirst_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/thirst_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/thirst_armor_leggings.json"
         ]
       },
       "path": "~/DarkElements/Thirst"
@@ -31040,87 +29824,11 @@
       "registry_name": "chaos_armor",
       "metadata": {
         "files": [
+          "src/main/resources/assets/power/models/item/chaos_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/chaos_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/chaos_armor_leggings.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/ChaosArmorItem.java",
-          "src/main/resources/assets/power/models/item/chaos_armor_boots.json",
-          "src/main/resources/assets/power/models/item/chaos_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/chaos_armor_chestplate.json"
-        ]
-      },
-      "path": "~/DarkElements/Chaos"
-    },
-    {
-      "name": "ChaosArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chaos_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ChaosArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Chaos"
-    },
-    {
-      "name": "ChaosArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chaos_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ChaosArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Chaos"
-    },
-    {
-      "name": "ChaosArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chaos_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ChaosArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Chaos"
-    },
-    {
-      "name": "ChaosArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chaos_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ChaosArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/chaos_armor_boots.json"
         ]
       },
       "path": "~/DarkElements/Chaos"
@@ -31216,11 +29924,11 @@
       "registry_name": "horror_armor",
       "metadata": {
         "files": [
+          "src/main/resources/assets/power/models/item/horror_armor_chestplate.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/HorrorArmorItem.java",
           "src/main/resources/assets/power/models/item/horror_armor_helmet.json",
           "src/main/resources/assets/power/models/item/horror_armor_boots.json",
-          "src/main/resources/assets/power/models/item/horror_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/horror_armor_chestplate.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/HorrorArmorItem.java"
+          "src/main/resources/assets/power/models/item/horror_armor_leggings.json"
         ]
       },
       "path": "~/DarkElements/Horror"
@@ -31234,82 +29942,6 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/potion/HorrorDarkMasterMobEffect.java"
-        ]
-      },
-      "path": "~/DarkElements/Horror"
-    },
-    {
-      "name": "HorrorArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "horror_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HorrorArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Horror"
-    },
-    {
-      "name": "HorrorArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "horror_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HorrorArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Horror"
-    },
-    {
-      "name": "HorrorArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "horror_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HorrorArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Horror"
-    },
-    {
-      "name": "HorrorArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "horror_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HorrorArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/DarkElements/Horror"
@@ -31392,87 +30024,11 @@
       "registry_name": "filth_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/filth_armor_boots.json",
+          "src/main/resources/assets/power/models/item/filth_armor_chestplate.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/FilthArmorItem.java",
           "src/main/resources/assets/power/models/item/filth_armor_helmet.json",
           "src/main/resources/assets/power/models/item/filth_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/filth_armor_chestplate.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/FilthArmorItem.java"
-        ]
-      },
-      "path": "~/DarkElements/Filth"
-    },
-    {
-      "name": "FilthArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "filth_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FilthArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Filth"
-    },
-    {
-      "name": "FilthArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "filth_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FilthArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Filth"
-    },
-    {
-      "name": "FilthArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "filth_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FilthArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/DarkElements/Filth"
-    },
-    {
-      "name": "FilthArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "filth_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FilthArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/power/models/item/filth_armor_boots.json"
         ]
       },
       "path": "~/DarkElements/Filth"
