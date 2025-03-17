@@ -1,14 +1,14 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "power_tle:item/shockwave_stone"
+    "layer0": "power:item/shockwave_stone"
   },
   "overrides": [
     {
       "predicate": {
-        "power_tle:shockwave_stone_rechage": 0.01
+        "power:shockwave_stone_rechage": 0.01
       },
-      "model": "power_tle:item/shockwave_stone_0"
+      "model": "power:item/shockwave_stone_0"
     }
   ]
 }

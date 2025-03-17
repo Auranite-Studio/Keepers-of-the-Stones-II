@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "power_tle:item/colors_armor_boots"
+    "layer0": "power:item/colors_armor_boots"
   }
 }

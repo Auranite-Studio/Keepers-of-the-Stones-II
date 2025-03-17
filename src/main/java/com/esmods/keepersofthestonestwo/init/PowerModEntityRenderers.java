@@ -11,6 +11,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import com.esmods.keepersofthestonestwo.client.renderer.WhiteBombRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.WaterAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.TurretRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.TurretProjectileRenderer;
@@ -107,5 +108,7 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.ENERGIUM_GOLEM.get(), EnergiumGolemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_SQUIRE.get(), CursedSquireRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_KEEPER.get(), CursedKeeperRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.SHOCKWAVE_GUN_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.WHITE_BOMB.get(), WhiteBombRenderer::new);
 	}
 }

@@ -21,6 +21,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
 import com.esmods.keepersofthestonestwo.procedures.StoneGetRechargeStateProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetRechargeStoneStateProcedure;
 import com.esmods.keepersofthestonestwo.item.WaterStoneItem;
 import com.esmods.keepersofthestonestwo.item.WaterKatanaItem;
 import com.esmods.keepersofthestonestwo.item.WaterBatteryItem;
@@ -56,6 +57,7 @@ import com.esmods.keepersofthestonestwo.item.SpiritArmorItem;
 import com.esmods.keepersofthestonestwo.item.SpeedStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SpeedArmorItem;
+import com.esmods.keepersofthestonestwo.item.SpearBrashItem;
 import com.esmods.keepersofthestonestwo.item.SpaceStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpaceBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SpaceArmorItem;
@@ -68,6 +70,10 @@ import com.esmods.keepersofthestonestwo.item.SmokeStoneItem;
 import com.esmods.keepersofthestonestwo.item.SmokeMusketItem;
 import com.esmods.keepersofthestonestwo.item.SmokeBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SmokeArmorItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveStoneItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveGunItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveBatteryItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveArmorItem;
 import com.esmods.keepersofthestonestwo.item.ShadowStoneItem;
 import com.esmods.keepersofthestonestwo.item.ShadowScytheItem;
 import com.esmods.keepersofthestonestwo.item.ShadowBatteryItem;
@@ -156,6 +162,10 @@ import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
 import com.esmods.keepersofthestonestwo.item.IceArmorItem;
 import com.esmods.keepersofthestonestwo.item.HorrorArmorItem;
 import com.esmods.keepersofthestonestwo.item.HighspeedDaggerItem;
+import com.esmods.keepersofthestonestwo.item.HeatStoneItem;
+import com.esmods.keepersofthestonestwo.item.HeatKnifeItem;
+import com.esmods.keepersofthestonestwo.item.HeatBatteryItem;
+import com.esmods.keepersofthestonestwo.item.HeatArmorItem;
 import com.esmods.keepersofthestonestwo.item.GreenStaffItem;
 import com.esmods.keepersofthestonestwo.item.GravityStoneItem;
 import com.esmods.keepersofthestonestwo.item.GravityMaceItem;
@@ -233,6 +243,9 @@ import com.esmods.keepersofthestonestwo.item.CreationAxeItem;
 import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.CopyriumIngotItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
+import com.esmods.keepersofthestonestwo.item.ColorsStoneItem;
+import com.esmods.keepersofthestonestwo.item.ColorsBatteryItem;
+import com.esmods.keepersofthestonestwo.item.ColorsArmorItem;
 import com.esmods.keepersofthestonestwo.item.CharacteristicsCardItem;
 import com.esmods.keepersofthestonestwo.item.ChaosArmorItem;
 import com.esmods.keepersofthestonestwo.item.BlueMagicFireballItem;
@@ -712,6 +725,27 @@ public class PowerModItems {
 	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_2 = REGISTRY.register("extra_star_points_rune_2", ExtraStarPointsRune2Item::new);
 	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_3 = REGISTRY.register("extra_star_points_rune_3", ExtraStarPointsRune3Item::new);
 	public static final DeferredItem<Item> MUSIC_HOPE = REGISTRY.register("music_hope", MusicHopeItem::new);
+	public static final DeferredItem<Item> HEAT_STONE = REGISTRY.register("heat_stone", HeatStoneItem::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_HELMET = REGISTRY.register("heat_armor_helmet", HeatArmorItem.Helmet::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_CHESTPLATE = REGISTRY.register("heat_armor_chestplate", HeatArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_LEGGINGS = REGISTRY.register("heat_armor_leggings", HeatArmorItem.Leggings::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_BOOTS = REGISTRY.register("heat_armor_boots", HeatArmorItem.Boots::new);
+	public static final DeferredItem<Item> HEAT_KNIFE = REGISTRY.register("heat_knife", HeatKnifeItem::new);
+	public static final DeferredItem<Item> HEAT_BATTERY = REGISTRY.register("heat_battery", HeatBatteryItem::new);
+	public static final DeferredItem<Item> SHOCKWAVE_STONE = REGISTRY.register("shockwave_stone", ShockwaveStoneItem::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_HELMET = REGISTRY.register("shockwave_armor_helmet", ShockwaveArmorItem.Helmet::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_CHESTPLATE = REGISTRY.register("shockwave_armor_chestplate", ShockwaveArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_LEGGINGS = REGISTRY.register("shockwave_armor_leggings", ShockwaveArmorItem.Leggings::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_BOOTS = REGISTRY.register("shockwave_armor_boots", ShockwaveArmorItem.Boots::new);
+	public static final DeferredItem<Item> SHOCKWAVE_GUN = REGISTRY.register("shockwave_gun", ShockwaveGunItem::new);
+	public static final DeferredItem<Item> SHOCKWAVE_BATTERY = REGISTRY.register("shockwave_battery", ShockwaveBatteryItem::new);
+	public static final DeferredItem<Item> COLORS_STONE = REGISTRY.register("colors_stone", ColorsStoneItem::new);
+	public static final DeferredItem<Item> COLORS_ARMOR_HELMET = REGISTRY.register("colors_armor_helmet", ColorsArmorItem.Helmet::new);
+	public static final DeferredItem<Item> COLORS_ARMOR_CHESTPLATE = REGISTRY.register("colors_armor_chestplate", ColorsArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> COLORS_ARMOR_LEGGINGS = REGISTRY.register("colors_armor_leggings", ColorsArmorItem.Leggings::new);
+	public static final DeferredItem<Item> COLORS_ARMOR_BOOTS = REGISTRY.register("colors_armor_boots", ColorsArmorItem.Boots::new);
+	public static final DeferredItem<Item> SPEAR_BRASH = REGISTRY.register("spear_brash", SpearBrashItem::new);
+	public static final DeferredItem<Item> COLORS_BATTERY = REGISTRY.register("colors_battery", ColorsBatteryItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -774,6 +808,9 @@ public class PowerModItems {
 				ItemProperties.register(DARKNESS_STONE.get(), ResourceLocation.parse("power:darkness_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 				ItemProperties.register(ENERGY_STONE.get(), ResourceLocation.parse("power:energy_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 				ItemProperties.register(SPIRIT_STONE.get(), ResourceLocation.parse("power:spirit_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+				ItemProperties.register(HEAT_STONE.get(), ResourceLocation.parse("power:heat_stone_rechage"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetRechargeStoneStateProcedure.execute(itemStackToRender));
+				ItemProperties.register(SHOCKWAVE_STONE.get(), ResourceLocation.parse("power:shockwave_stone_rechage"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetRechargeStoneStateProcedure.execute(itemStackToRender));
+				ItemProperties.register(COLORS_STONE.get(), ResourceLocation.parse("power:colors_stone_rechage"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetRechargeStoneStateProcedure.execute(itemStackToRender));
 			});
 		}
 	}

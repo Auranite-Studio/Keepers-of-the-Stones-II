@@ -3,7 +3,6 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.entity.player.Player;
@@ -31,8 +30,8 @@ public class CursedKeepersFirstPhaseImmuneProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (entity instanceof CursedKeeperEntity && (!entity.getPersistentData().getBoolean("Phase") || entity.getPersistentData().getDouble("windShield") > 0) && (sourceentity instanceof ServerPlayer || sourceentity instanceof Player)) {
-			if (event instanceof ICancellableEvent _cancellable) {
-				_cancellable.setCanceled(true);
+			if (event != null && event.isCancelable()) {
+				event.setCanceled(true);
 			}
 		}
 	}

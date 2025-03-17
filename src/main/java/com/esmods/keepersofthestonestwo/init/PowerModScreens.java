@@ -23,6 +23,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSpeedScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSpaceScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSoundScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSmokeScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesShockwaveScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesShadowScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSandScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesRainScreen;
@@ -42,6 +43,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLightningScreen
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLightScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLavaScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesIceScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesHeatScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesGravityScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesFormScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesFireScreen;
@@ -52,6 +54,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEarthScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesDestructionScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCrystalScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCreationScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesColorsScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesBlueFlameScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesBloodScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAnimalsScreen;
@@ -122,5 +125,8 @@ public class PowerModScreens {
 		event.register(PowerModMenus.WHEEL_ABILTIES_GOLDEN_DUST.get(), WheelAbiltiesGoldenDustScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITY_DARKNESS.get(), WheelAbilityDarknessScreen::new);
 		event.register(PowerModMenus.CHARACTERISTICS_CARD_GUI.get(), CharacteristicsCardGUIScreen::new);
+		event.register(PowerModMenus.WHEEL_ABILITIES_HEAT.get(), WheelAbilitiesHeatScreen::new);
+		event.register(PowerModMenus.WHEEL_ABILITIES_SHOCKWAVE.get(), WheelAbilitiesShockwaveScreen::new);
+		event.register(PowerModMenus.WHEEL_ABILITIES_COLORS.get(), WheelAbilitiesColorsScreen::new);
 	}
 }

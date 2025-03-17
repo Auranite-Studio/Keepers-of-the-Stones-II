@@ -3,7 +3,6 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.item.ItemStack;
@@ -40,8 +39,8 @@ public class EnergiumSetCheckingProcedure {
 						&& (sourceentity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).getItem() == PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get()
 						&& (sourceentity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == PowerModItems.ENERGIUM_ARMOR_BOOTS.get())
 				&& (sourceentity instanceof ServerPlayer || sourceentity instanceof Player)) {
-			if (event instanceof ICancellableEvent _cancellable) {
-				_cancellable.setCanceled(true);
+			if (event != null && event.isCancelable()) {
+				event.setCanceled(true);
 			}
 		}
 	}

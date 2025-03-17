@@ -3,7 +3,6 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.entity.Entity;
@@ -36,8 +35,8 @@ public class ExplosionPassiveProtectionProcedure {
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("explosion") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("explosion")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("explosion") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("explosion")) {
 			if (damagesource.is(DamageTypes.EXPLOSION) || damagesource.is(DamageTypes.PLAYER_EXPLOSION)) {
-				if (event instanceof ICancellableEvent _cancellable) {
-					_cancellable.setCanceled(true);
+				if (event != null && event.isCancelable()) {
+					event.setCanceled(true);
 				}
 			}
 		}

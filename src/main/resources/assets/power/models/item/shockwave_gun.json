@@ -1,7 +1,6 @@
 {
-  "parent": "power_tle:custom/shockwave_gun",
+  "parent": "power:custom/shockwave_gun",
   "textures": {
-    "6": "power_tle:block/shockwave_gun",
-    "particle": "power_tle:item/shockwave_gun"
+    "particle": "power:item/shockwave_gun"
   }
 }

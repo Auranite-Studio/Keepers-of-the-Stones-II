@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
+    "power:colors_armor_leggings",
+    "power:shockwave_armor_leggings",
+    "power:heat_armor_leggings",
     "power:filth_armor_leggings",
     "power:horror_armor_leggings",
     "power:chaos_armor_leggings",

@@ -16,6 +16,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 
+import com.esmods.keepersofthestonestwo.entity.WhiteBombEntity;
 import com.esmods.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.TurretProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.TurretEntity;
@@ -25,6 +26,7 @@ import com.esmods.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SoundBombProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SmokeMusketProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SmokeBombProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.ShockwaveGunProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowSphereEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowEntity;
 import com.esmods.keepersofthestonestwo.entity.RainDropProjectileEntity;
@@ -164,6 +166,10 @@ public class PowerModEntities {
 			EntityType.Builder.<CursedSquireEntity>of(CursedSquireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune().sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper",
 			EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(256).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ShockwaveGunProjectileEntity>> SHOCKWAVE_GUN_PROJECTILE = register("shockwave_gun_projectile",
+			EntityType.Builder.<ShockwaveGunProjectileEntity>of(ShockwaveGunProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.1f, 0.1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<WhiteBombEntity>> WHITE_BOMB = register("white_bomb",
+			EntityType.Builder.<WhiteBombEntity>of(WhiteBombEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

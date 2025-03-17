@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "power:spear_brash",
+    "power:heat_knife",
     "power:dark_sword",
     "power:golden_dust_staff",
     "power:mind_epee",
