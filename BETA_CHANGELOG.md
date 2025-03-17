@@ -5,7 +5,8 @@
 - 
 
 **API changes**
-- *N/A*
+- Colorful Powers API has been updated to version 24
+- Now forbidden items are now removed through a single class
 
 **Bugfixes**
 - [Bugfix] 
