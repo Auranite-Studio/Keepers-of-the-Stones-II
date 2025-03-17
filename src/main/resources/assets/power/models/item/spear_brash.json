@@ -1,0 +1,7 @@
+{
+  "parent": "power_tle:custom/spear_brush",
+  "textures": {
+    "0": "power_tle:block/spear_brush",
+    "particle": "power_tle:item/spear_brush"
+  }
+}

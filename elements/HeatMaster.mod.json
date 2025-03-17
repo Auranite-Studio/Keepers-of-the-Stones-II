@@ -1,0 +1,26 @@
+{
+  "_fv": 73,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Heat",
+    "icon": "heat_master",
+    "color": {
+      "value": -59804,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": true,
+    "isProtectedByTotem": true,
+    "isCuredbyHoney": false,
+    "modifiers": [],
+    "onStarted": {
+      "name": "HeatMasterStart"
+    },
+    "onExpired": {
+      "name": "HeatMasterEnd"
+    }
+  }
+}

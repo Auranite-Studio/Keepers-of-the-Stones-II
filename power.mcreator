@@ -36878,6 +36878,2138 @@
         ]
       },
       "path": "~/Elements/Mind"
+    },
+    {
+      "name": "GetRechargeInfo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_recharge_info",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/GetRechargeInfoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Recharge"
+    },
+    {
+      "name": "RechargeStoneTickEvent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_stone_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/RechargeStoneTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Recharge"
+    },
+    {
+      "name": "GetRechargeStoneState",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_recharge_stone_state",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/GetRechargeStoneStateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Recharge"
+    },
+    {
+      "name": "DetransformKey",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detransform_key",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/DetransformKeyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "AbilityKey",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_key",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/AbilityKeyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "WheelKey",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_key",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/WheelKeyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "ReturnStoneAfterDeath",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_stone_after_death",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ReturnStoneAfterDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WhenOpenSecondWheel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "when_open_second_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/WhenOpenSecondWheelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "OpenThirdWheelAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_third_wheel_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/OpenThirdWheelAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "OpenFirstWheel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_first_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/OpenFirstWheelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "OpenSecondWheel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_second_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/OpenSecondWheelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "OpenThirdWheel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_third_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/OpenThirdWheelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "GetWheelTwo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_wheel_two",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/GetWheelTwoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "GetWheelThree",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_wheel_three",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/GetWheelThreeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "HeatStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power_tle/models/item/heat_stone_0.json",
+          "src/main/resources/assets/power_tle/models/item/heat_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/HeatStoneItem.java"
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatMaster",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/potion/HeatMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power_tle/models/item/heat_armor_chestplate.json",
+          "src/main/resources/assets/power_tle/models/item/heat_armor_boots.json",
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/HeatArmorItem.java",
+          "src/main/resources/assets/power_tle/models/item/heat_armor_helmet.json",
+          "src/main/resources/assets/power_tle/models/item/heat_armor_leggings.json"
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatStoneUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatMasterStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatMasterEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatSpecialAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "WheelAbilitiesHeat",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_heat",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/client/gui/WheelAbilitiesHeatScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwotle/world/inventory/WheelAbilitiesHeatMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwotle/network/WheelAbilitiesHeatButtonMessage.java"
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatAttack1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_attack_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatAttack1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatAttack2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_attack_2",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatAttack2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatAttack3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_attack_3",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatAttack3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatAttack4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_attack_4",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatAttack4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatKnife",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_knife",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power_tle/models/item/heat_knife.json",
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/HeatKnifeItem.java"
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatKnifeTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_knife_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatKnifeTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "WhenOpenFakeFirstWheel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "when_open_fake_first_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/WhenOpenFakeFirstWheelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "WhenOpenFakeSecondWheel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "when_open_fake_second_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/WhenOpenFakeSecondWheelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "WhenOpenFakeThirdWheel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "when_open_fake_third_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/WhenOpenFakeThirdWheelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "OpenFakeFirstWheel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_fake_first_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/OpenFakeFirstWheelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "OpenFakeSecondWheel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_fake_second_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/OpenFakeSecondWheelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "OpenFakeThirdWheel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_fake_third_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/OpenFakeThirdWheelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "GetWheelTwoOrFake",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_wheel_two_or_fake",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/GetWheelTwoOrFakeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "GetWheelFakeFirst",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_wheel_fake_first",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/GetWheelFakeFirstProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "GetWheelFakeSecond",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_wheel_fake_second",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/GetWheelFakeSecondProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "GetWheelFakeThird",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_wheel_fake_third",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/GetWheelFakeThirdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "TheLostElementsStones",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_lost_elements_stones",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "TheLostElementsBatteries",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_lost_elements_batteries",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "HeatBattery",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/HeatBatteryItem.java",
+          "src/main/resources/assets/power_tle/models/item/heat_battery.json"
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatBatteryDesc",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "HeatBatteryUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/HeatBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Heat"
+    },
+    {
+      "name": "PowerLockCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_lock_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/PowerLockCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShockwaveStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/ShockwaveStoneItem.java",
+          "src/main/resources/assets/power_tle/models/item/shockwave_stone.json",
+          "src/main/resources/assets/power_tle/models/item/shockwave_stone_0.json"
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveMaster",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/potion/ShockwaveMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power_tle/models/item/shockwave_armor_boots.json",
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/ShockwaveArmorItem.java",
+          "src/main/resources/assets/power_tle/models/item/shockwave_armor_leggings.json",
+          "src/main/resources/assets/power_tle/models/item/shockwave_armor_helmet.json",
+          "src/main/resources/assets/power_tle/models/item/shockwave_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveStoneUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveMasterStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveMasterEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveSpecialAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "WheelAbilitiesShockwave",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_shockwave",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/world/inventory/WheelAbilitiesShockwaveMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwotle/client/gui/WheelAbilitiesShockwaveScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwotle/network/WheelAbilitiesShockwaveButtonMessage.java"
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveAttack1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_attack_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveAttack1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveAttack2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_attack_2",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveAttack2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveAttack3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_attack_3",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveAttack3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveAttack4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_attack_4",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveAttack4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveGun",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_gun",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/ShockwaveGunItem.java",
+          "src/main/resources/assets/power_tle/models/item/shockwave_gun.json"
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveGunKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_gun_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveGunKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockWavesParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shock_waves_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/client/particle/ShockWavesParticleParticle.java",
+          "src/main/resources/assets/power_tle/particles/shock_waves_particle.json"
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveGunProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_gun_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/client/renderer/ShockwaveGunProjectileRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwotle/entity/ShockwaveGunProjectileEntity.java"
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveGunPriVystrielieSnariadomIzPriedmieta",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_gun_pri_vystrielie_snariadom_iz_priedmieta",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveGunPriVystrielieSnariadomIzPriedmietaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveBattery",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power_tle/models/item/shockwave_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/ShockwaveBatteryItem.java"
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveBatteryDesc",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ShockwaveBatteryUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ShockwaveBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Shockwave"
+    },
+    {
+      "name": "ColorsStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/ColorsStoneItem.java",
+          "src/main/resources/assets/power_tle/models/item/colors_stone_0.json",
+          "src/main/resources/assets/power_tle/models/item/colors_stone.json"
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "DragonStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power_tle/models/item/dragon_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/DragonStoneItem.java",
+          "src/main/resources/assets/power_tle/models/item/dragon_stone_0.json"
+        ]
+      }
+    },
+    {
+      "name": "TearStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tear_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power_tle/models/item/tear_stone_0.json",
+          "src/main/resources/assets/power_tle/models/item/tear_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/TearStoneItem.java"
+        ]
+      }
+    },
+    {
+      "name": "ColorsMaster",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/potion/ColorsMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power_tle/models/item/colors_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/ColorsArmorItem.java",
+          "src/main/resources/assets/power_tle/models/item/colors_armor_boots.json",
+          "src/main/resources/assets/power_tle/models/item/colors_armor_chestplate.json",
+          "src/main/resources/assets/power_tle/models/item/colors_armor_helmet.json"
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "SpearBrash",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spear_brash",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/SpearBrashItem.java",
+          "src/main/resources/assets/power_tle/models/item/spear_brash.json"
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "SpearBrashKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spear_brash_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/SpearBrashKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsStoneUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsMasterStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsMasterEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsSpecialAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "WheelAbilitiesColors",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_colors",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/world/inventory/WheelAbilitiesColorsMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwotle/network/WheelAbilitiesColorsButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwotle/client/gui/WheelAbilitiesColorsScreen.java"
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsAttack1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_attack_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsAttack1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsAttack2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_attack_2",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsAttack2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsAttack3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_attack_3",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsAttack3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsAttack4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_attack_4",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsAttack4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "WhiteBombKazhdyiTikPriPoliotieSnariada",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_bomb_kazhdyi_tik_pri_poliotie_snariada",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/WhiteBombKazhdyiTikPriPoliotieSnariadaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "WhiteBomb",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_bomb",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/client/renderer/WhiteBombRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwotle/entity/WhiteBombEntity.java"
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "WhiteBombKoghdaSnariadPopadaietVSushchnost",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_bomb_koghda_snariad_popadaiet_v_sushchnost",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/WhiteBombKoghdaSnariadPopadaietVSushchnostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsBattery",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/item/ColorsBatteryItem.java",
+          "src/main/resources/assets/power_tle/models/item/colors_battery.json"
+        ]
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsBatteryDesc",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Colors"
+    },
+    {
+      "name": "ColorsBatteryUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwotle/procedures/ColorsBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Colors"
     }
   ],
   "variable_elements": [
@@ -41409,6 +43541,26 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Recharge",
+        "children": []
+      },
+      {
+        "name": "Keybinds",
+        "children": []
+      },
+      {
+        "name": "Heat",
+        "children": []
+      },
+      {
+        "name": "Shockwave",
+        "children": []
+      },
+      {
+        "name": "Colors",
+        "children": []
       },
       {
         "name": "DarkElements",

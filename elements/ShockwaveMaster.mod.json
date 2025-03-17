@@ -1,0 +1,26 @@
+{
+  "_fv": 73,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Shockwave",
+    "icon": "shockwave_master",
+    "color": {
+      "value": -39220,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
+    "modifiers": [],
+    "onStarted": {
+      "name": "ShockwaveMasterStart"
+    },
+    "onExpired": {
+      "name": "ShockwaveMasterEnd"
+    }
+  }
+}

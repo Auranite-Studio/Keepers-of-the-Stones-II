@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "power_tle:item/colors_stone"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "power_tle:colors_stone_rechage": 0.01
+      },
+      "model": "power_tle:item/colors_stone_0"
+    }
+  ]
+}

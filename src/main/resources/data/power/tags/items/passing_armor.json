@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "power_tle:heat_armor_helmet",
+    "power_tle:heat_armor_chestplate",
+    "power_tle:heat_armor_leggings",
+    "power_tle:heat_armor_boots"
+  ]
+}

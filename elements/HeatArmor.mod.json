@@ -1,0 +1,96 @@
+{
+  "_fv": 73,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "heat_armor_helmet",
+    "enableBody": true,
+    "textureBody": "heat_armor_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "heat_armor_leggings",
+    "enableBoots": true,
+    "textureBoots": "heat_armor_boots",
+    "onHelmetTick": {
+      "name": "HeatArmorKazhdyiTikDliaShliema"
+    },
+    "onBodyTick": {
+      "name": "HeatArmorKazhdyiTikDliaNaghrudnika"
+    },
+    "onLeggingsTick": {
+      "name": "HeatArmorKazhdyiTikDliaPonozhiei"
+    },
+    "onBootsTick": {
+      "name": "HeatArmorKazhdyiTikDliaBotinok"
+    },
+    "creativeTabs": [],
+    "armorTextureFile": "heat_armor",
+    "helmetName": "Heat Helmet",
+    "bodyName": "Heat Chestplate",
+    "leggingsName": "Heat Leggings",
+    "bootsName": "Heat Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 37,
+    "damageValueHelmet": 3,
+    "damageValueBody": 8,
+    "damageValueLeggings": 6,
+    "damageValueBoots": 3,
+    "enchantability": 0,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": []
+  }
+}

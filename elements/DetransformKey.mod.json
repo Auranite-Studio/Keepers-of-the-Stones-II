@@ -1,0 +1,7 @@
+{
+  "_fv": 73,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">player_ticks</field><next><block type=\"controls_if\"><comment pinned=\"false\" h=\"80\" w=\"160\">This procedure is performed when the stone deactivation key is pressed</comment><value name=\"IF0\"><block type=\"get_detransform_key_pressed\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></value><statement name=\"DO0\"><block type=\"wait\"><value name=\"ticks\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><statement name=\"do\"><block type=\"entity_remove_specific_potion_effect\"><field name=\"potion\">CUSTOM:HeatMaster</field><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><next><block type=\"entity_remove_specific_potion_effect\"><field name=\"potion\">CUSTOM:ShockwaveMaster</field><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><next><block type=\"entity_remove_specific_potion_effect\"><field name=\"potion\">CUSTOM:ColorsMaster</field><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></next></block></next></block></statement></block></statement></block></next></block></xml>"
+  }
+}

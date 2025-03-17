@@ -1,0 +1,26 @@
+{
+  "_fv": 73,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Colors",
+    "icon": "colors_master",
+    "color": {
+      "value": -13108,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
+    "modifiers": [],
+    "onStarted": {
+      "name": "ColorsMasterStart"
+    },
+    "onExpired": {
+      "name": "ColorsMasterEnd"
+    }
+  }
+}
