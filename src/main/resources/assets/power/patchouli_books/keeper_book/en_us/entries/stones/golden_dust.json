@@ -1,0 +1,27 @@
+{
+    "name": "Golden Dust",
+    "icon": "power:textures/mob_effect/golden_dust_master.png",
+    "category": "power:stones",
+    "sortnum": 47,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Golden dust attack - attacks entities with a beam attack.",
+                "$(li)",
+                "Random power - gives out a random elemental power (can be used three times)",
+                "$(li)",
+                "Golden dust regeneration - gives a regeneration effect to the player."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Golden Dust",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:golden_dust_staff\",count:1}],ArmorItems:[{id:\"power:golden_dust_armor_boots\",count:1},{id:\"power:golden_dust_armor_leggings\",count:1},{id:\"power:golden_dust_armor_chestplate\",count:1},{id:\"power:golden_dust_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

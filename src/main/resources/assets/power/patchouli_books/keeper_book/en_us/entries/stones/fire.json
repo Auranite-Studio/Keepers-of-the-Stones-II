@@ -9,9 +9,9 @@
             "text": [
                 "$(l)Abilities$()",
                 "$(li)",
-                "Triple Fireball - the fire master fires three projectiles every second.",
-                "$(li)",
                 "Flamethrower - allows the fire master to set a target on fire (if the battle is underwater, it can do serious damage to the enemy).",
+                "$(li)",
+                "Triple Fireball - the fire master fires three projectiles every second.",
                 "$(li)",
                 "Jet Flight - allows the firebender to temporarily fly into the air."
             ]

@@ -21,7 +21,7 @@
             "name": "Master of Music",
             "border": true,
             "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:music_guitar\",count:1}],ArmorItems:[{id:\"power:music_armor_boots\",count:1},{id:\"power:music_armor_leggings\",count:1},{id:\"power:music_chestplate\",count:1},{id:\"power:music_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "entity": "power:example_master{HandItems:[{id:\"power:music_guitar\",count:1}],ArmorItems:[{id:\"power:music_armor_boots\",count:1},{id:\"power:music_armor_leggings\",count:1},{id:\"power:music_armor_chestplate\",count:1},{id:\"power:music_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
         }
     ]
 }

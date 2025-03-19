@@ -13,7 +13,7 @@
                 "$(li)",
                 "Sun explosion - explodes the nearest entity.",
                 "$(li)",
-                "Sun healing - gives regeneration to the player for a certain period of time."
+                "Sun healing - heals all allies only if the player presses SHIFT. Otherwise, it only heals the player himself. "
             ]
         },
         {
