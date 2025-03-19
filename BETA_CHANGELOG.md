@@ -1,3 +1,4 @@
+
 **New features**
 - *N/A*
 
@@ -10,6 +11,7 @@
 
 **Bugfixes**
 - [Bugfix] Fixed the sound when using the third ability of the sun stone
+- [Bugfix] Fixed bug related some projectile hitboxes not working with block collisions
 
 **Known issues**
 - *N/A*
