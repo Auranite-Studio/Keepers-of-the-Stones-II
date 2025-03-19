@@ -1,0 +1,27 @@
+{
+    "name": "Speed",
+    "icon": "power:textures/mob_effect/speed_master.png",
+    "category": "power:stones",
+    "sortnum": 33,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Dash - teleports the player to the nearest entity, dealing damage to it.",
+                "$(li)",
+                "Acceleration - speeds up the player for a certain amount of time.",
+                "$(li)",
+                "Deceleration - slows down entities within an 8 block radius."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Speed",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:highspeed_dagger\",count:1}],ArmorItems:[{id:\"power:speed_armor_boots\",count:1},{id:\"power:speed_armor_leggings\",count:1},{id:\"power:speed_armor_chestplate\",count:1},{id:\"power:speed_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

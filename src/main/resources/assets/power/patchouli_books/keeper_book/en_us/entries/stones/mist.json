@@ -1,0 +1,27 @@
+{
+    "name": "Mist",
+    "icon": "power:textures/mob_effect/mist_master.png",
+    "category": "power:stones",
+    "sortnum": 31,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Stream of Mist - attacks entities with a beam attack, dealing a mist effect to them.",
+                "$(li)",
+                "Mist lifting - applies fog effect to the nearest entities within 12 blocks radius.",
+                "$(li)",
+                "Misty invisibility - makes the player invisible when using this ability for 15 seconds."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Mist",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:misty_fan\",count:1}],ArmorItems:[{id:\"power:mist_armor_boots\",count:1},{id:\"power:mist_armor_leggings\",count:1},{id:\"power:mist_armor_chestplate\",count:1},{id:\"power:mist_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
