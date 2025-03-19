@@ -1,0 +1,27 @@
+{
+    "name": "Amber",
+    "icon": "power:textures/mob_effect/amber_master.png",
+    "category": "power:stones",
+    "sortnum": 30,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Liquid amber flow - attacks with a beam attack on entities.",
+                "$(li)",
+                "Copying power - copies the power of elemental masters (up to 3 times).",
+                "$(li)",
+                "Sealing in amber - freezes the player indefinitely until he takes any type of damage (player can jump)."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Amber",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:amber_staff\",count:1}],ArmorItems:[{id:\"power:amber_armor_boots\",count:1},{id:\"power:amber_armor_leggings\",count:1},{id:\"power:amber_armor_chestplate\",count:1},{id:\"power:amber_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
