@@ -29,11 +29,7 @@ public class HeatMasterEndProcedure {
 			}
 		}
 		MasterEffectEndControlProcedure.execute(world, entity);
-		{
-			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.detransf_key_var = true;
-			_vars.syncPlayerVariables(entity);
-		}
+		DetransformationKeyUseProcedure.execute(entity);
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("heat")) {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

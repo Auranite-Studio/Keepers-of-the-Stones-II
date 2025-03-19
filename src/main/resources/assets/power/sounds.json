@@ -203,5 +203,13 @@
         "stream": true
       }
     ]
+  },
+  "shockwave_impact": {
+    "sounds": [
+      {
+        "name": "power:shockwave_impact",
+        "stream": false
+      }
+    ]
   }
 }

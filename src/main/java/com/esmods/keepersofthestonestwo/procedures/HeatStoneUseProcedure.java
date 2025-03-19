@@ -35,7 +35,7 @@ public class HeatStoneUseProcedure {
 					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.HEAT_MASTER, (int) (entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration * 20), 0, false, false));
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.mergers = (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1);
+					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
 					_vars.syncPlayerVariables(entity);
 				}
 				{
