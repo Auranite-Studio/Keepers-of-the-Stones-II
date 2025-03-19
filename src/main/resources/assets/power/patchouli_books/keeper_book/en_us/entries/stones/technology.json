@@ -2,7 +2,7 @@
     "name": "Technology",
     "icon": "power:textures/mob_effect/technology_master.png",
     "category": "power:stones",
-    "sortnum": 27,
+    "sortnum": 28,
     "pages": [
         {
             "type": "patchouli:text",

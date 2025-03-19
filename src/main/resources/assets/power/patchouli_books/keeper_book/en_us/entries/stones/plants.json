@@ -2,7 +2,7 @@
     "name": "Plants",
     "icon": "power:textures/mob_effect/plants_master.png",
     "category": "power:stones",
-    "sortnum": 13,
+    "sortnum": 14,
     "pages": [
         {
             "type": "patchouli:text",

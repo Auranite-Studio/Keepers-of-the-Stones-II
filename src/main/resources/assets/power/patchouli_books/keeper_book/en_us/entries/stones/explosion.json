@@ -2,7 +2,7 @@
     "name": "Explosion",
     "icon": "power:textures/mob_effect/explosion_master.png",
     "category": "power:stones",
-    "sortnum": 29,
+    "sortnum": 30,
     "pages": [
         {
             "type": "patchouli:text",

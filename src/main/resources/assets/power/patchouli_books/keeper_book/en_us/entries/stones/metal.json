@@ -2,7 +2,7 @@
     "name": "Metal",
     "icon": "power:textures/mob_effect/metal_master.png",
     "category": "power:stones",
-    "sortnum": 15,
+    "sortnum": 16,
     "pages": [
         {
             "type": "patchouli:text",

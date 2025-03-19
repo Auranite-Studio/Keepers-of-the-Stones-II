@@ -2,7 +2,7 @@
     "name": "Plague",
     "icon": "power:textures/mob_effect/plague_master.png",
     "category": "power:stones",
-    "sortnum": 39,
+    "sortnum": 40,
     "pages": [
         {
             "type": "patchouli:text",

@@ -2,7 +2,7 @@
     "name": "Light",
     "icon": "power:textures/mob_effect/light_master.png",
     "category": "power:stones",
-    "sortnum": 16,
+    "sortnum": 17,
     "pages": [
         {
             "type": "patchouli:text",

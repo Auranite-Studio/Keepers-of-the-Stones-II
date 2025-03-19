@@ -2,7 +2,7 @@
     "name": "Mist",
     "icon": "power:textures/mob_effect/mist_master.png",
     "category": "power:stones",
-    "sortnum": 31,
+    "sortnum": 32,
     "pages": [
         {
             "type": "patchouli:text",

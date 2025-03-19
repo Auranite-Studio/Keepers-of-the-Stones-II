@@ -2,7 +2,7 @@
     "name": "Vacuum",
     "icon": "power:textures/mob_effect/vacuum_master.png",
     "category": "power:stones",
-    "sortnum": 18,
+    "sortnum": 19,
     "pages": [
         {
             "type": "patchouli:text",

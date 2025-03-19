@@ -2,7 +2,7 @@
     "name": "Teleportation",
     "icon": "power:textures/mob_effect/teleportation_master.png",
     "category": "power:stones",
-    "sortnum": 28,
+    "sortnum": 29,
     "pages": [
         {
             "type": "patchouli:text",

@@ -2,7 +2,7 @@
     "name": "Energy",
     "icon": "power:textures/mob_effect/energy_master.png",
     "category": "power:stones",
-    "sortnum": 19,
+    "sortnum": 20,
     "pages": [
         {
             "type": "patchouli:text",

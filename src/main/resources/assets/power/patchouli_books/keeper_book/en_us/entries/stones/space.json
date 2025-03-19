@@ -2,7 +2,7 @@
     "name": "Space",
     "icon": "power:textures/mob_effect/space_master.png",
     "category": "power:stones",
-    "sortnum": 22,
+    "sortnum": 23,
     "pages": [
         {
             "type": "patchouli:text",

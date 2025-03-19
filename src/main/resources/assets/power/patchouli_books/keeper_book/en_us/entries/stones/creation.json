@@ -2,7 +2,7 @@
     "name": "Creation",
     "icon": "power:textures/mob_effect/creation_master.png",
     "category": "power:stones",
-    "sortnum": 24,
+    "sortnum": 25,
     "pages": [
         {
             "type": "patchouli:text",

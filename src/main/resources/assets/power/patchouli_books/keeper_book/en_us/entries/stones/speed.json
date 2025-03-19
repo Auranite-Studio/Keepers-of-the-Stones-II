@@ -2,7 +2,7 @@
     "name": "Speed",
     "icon": "power:textures/mob_effect/speed_master.png",
     "category": "power:stones",
-    "sortnum": 33,
+    "sortnum": 34,
     "pages": [
         {
             "type": "patchouli:text",

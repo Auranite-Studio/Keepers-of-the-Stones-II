@@ -2,7 +2,7 @@
     "name": "Poison",
     "icon": "power:textures/mob_effect/poison_master.png",
     "category": "power:stones",
-    "sortnum": 34,
+    "sortnum": 35,
     "pages": [
         {
             "type": "patchouli:text",

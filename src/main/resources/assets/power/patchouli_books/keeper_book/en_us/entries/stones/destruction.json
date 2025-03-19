@@ -2,7 +2,7 @@
     "name": "Destruction",
     "icon": "power:textures/mob_effect/destruction_master.png",
     "category": "power:stones",
-    "sortnum": 25,
+    "sortnum": 26,
     "pages": [
         {
             "type": "patchouli:text",

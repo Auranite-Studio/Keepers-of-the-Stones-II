@@ -2,7 +2,7 @@
     "name": "Music",
     "icon": "power:textures/mob_effect/music_master.png",
     "category": "power:stones",
-    "sortnum": 38,
+    "sortnum": 39,
     "pages": [
         {
             "type": "patchouli:text",

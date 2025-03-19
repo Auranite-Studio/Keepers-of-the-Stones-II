@@ -2,7 +2,7 @@
     "name": "Moon",
     "icon": "power:textures/mob_effect/moon_master.png",
     "category": "power:stones",
-    "sortnum": 21,
+    "sortnum": 22,
     "pages": [
         {
             "type": "patchouli:text",

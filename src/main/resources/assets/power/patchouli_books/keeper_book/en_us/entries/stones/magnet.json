@@ -2,7 +2,7 @@
     "name": "Magnet",
     "icon": "power:textures/mob_effect/magnet_master.png",
     "category": "power:stones",
-    "sortnum": 35,
+    "sortnum": 36,
     "pages": [
         {
             "type": "patchouli:text",

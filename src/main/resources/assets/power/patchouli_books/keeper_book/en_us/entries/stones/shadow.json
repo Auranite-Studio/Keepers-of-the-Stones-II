@@ -2,7 +2,7 @@
     "name": "Shadow",
     "icon": "power:textures/mob_effect/shadow_master.png",
     "category": "power:stones",
-    "sortnum": 17,
+    "sortnum": 18,
     "pages": [
         {
             "type": "patchouli:text",

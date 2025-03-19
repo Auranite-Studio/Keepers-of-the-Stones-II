@@ -2,7 +2,7 @@
     "name": "Animals",
     "icon": "power:textures/mob_effect/animals_master.png",
     "category": "power:stones",
-    "sortnum": 14,
+    "sortnum": 15,
     "pages": [
         {
             "type": "patchouli:text",

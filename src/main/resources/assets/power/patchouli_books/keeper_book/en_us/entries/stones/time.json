@@ -2,7 +2,7 @@
     "name": "Time",
     "icon": "power:textures/mob_effect/time_master.png",
     "category": "power:stones",
-    "sortnum": 23,
+    "sortnum": 24,
     "pages": [
         {
             "type": "patchouli:text",

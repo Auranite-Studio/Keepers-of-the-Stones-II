@@ -2,7 +2,7 @@
     "name": "Amber",
     "icon": "power:textures/mob_effect/amber_master.png",
     "category": "power:stones",
-    "sortnum": 30,
+    "sortnum": 31,
     "pages": [
         {
             "type": "patchouli:text",

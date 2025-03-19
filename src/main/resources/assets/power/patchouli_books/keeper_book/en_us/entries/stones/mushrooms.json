@@ -2,7 +2,7 @@
     "name": "Mushrooms",
     "icon": "power:textures/mob_effect/mushrooms_master.png",
     "category": "power:stones",
-    "sortnum": 36,
+    "sortnum": 37,
     "pages": [
         {
             "type": "patchouli:text",

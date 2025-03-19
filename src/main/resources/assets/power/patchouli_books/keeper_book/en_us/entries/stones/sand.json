@@ -2,7 +2,7 @@
     "name": "Sand",
     "icon": "power:textures/mob_effect/sand_master.png",
     "category": "power:stones",
-    "sortnum": 32,
+    "sortnum": 33,
     "pages": [
         {
             "type": "patchouli:text",
