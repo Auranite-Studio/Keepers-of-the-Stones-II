@@ -63,6 +63,7 @@ jobs:
             embedded-dependency@0.3.0(embedded)
             conflicting-dependency(conflicting)
             incompatible-dependency(incompatible)
+            patchouli(recommended){modrinth:nU0bVIaL}{curseforge:306770}#(ignore:github)
             better-combat(recommended){modrinth:8BmcQJ2H}{curseforge:639842}#(ignore:github)
             epic-fight(incompatible){modrinth:vu3NZ5Ma}{curseforge:405076}#(ignore:github)
           modrinth-featured: false
