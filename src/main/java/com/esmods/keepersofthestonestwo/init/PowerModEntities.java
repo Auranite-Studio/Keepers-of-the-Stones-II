@@ -127,7 +127,7 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<TurretProjectileEntity>> TURRET_PROJECTILE = register("turret_projectile",
 			EntityType.Builder.<TurretProjectileEntity>of(TurretProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<AtomicRocketEntity>> ATOMIC_ROCKET = register("atomic_rocket",
-			EntityType.Builder.<AtomicRocketEntity>of(AtomicRocketEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<AtomicRocketEntity>of(AtomicRocketEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<GrenadeEntity>> GRENADE = register("grenade",
 			EntityType.Builder.<GrenadeEntity>of(GrenadeEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PoisonDropProjectileEntity>> POISON_DROP_PROJECTILE = register("poison_drop_projectile",
