@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
@@ -32,8 +33,8 @@ public class MindOwnerImmuneSlaveProcedure {
 			return;
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
 			if ((sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner).equals(entity.getStringUUID())) {
-				if (event != null && event.isCancelable()) {
-					event.setCanceled(true);
+				if (event instanceof ICancellableEvent _cancellable) {
+					_cancellable.setCanceled(true);
 				}
 			}
 		}

@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.entity.Entity;
@@ -34,8 +35,8 @@ public class CursedKeeperCancelAttackProcedure {
 		double particles = 0;
 		double ZPar = 0;
 		if (sourceentity instanceof CursedKeeperEntity) {
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
+			if (event instanceof ICancellableEvent _cancellable) {
+				_cancellable.setCanceled(true);
 			}
 		}
 	}

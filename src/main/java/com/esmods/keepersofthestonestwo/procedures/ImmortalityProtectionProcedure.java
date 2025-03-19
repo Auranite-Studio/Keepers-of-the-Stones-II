@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.entity.LivingEntity;
@@ -33,8 +34,8 @@ public class ImmortalityProtectionProcedure {
 		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.IMMORTALITY)) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth(1);
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
+			if (event instanceof ICancellableEvent _cancellable) {
+				_cancellable.setCanceled(true);
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 4));

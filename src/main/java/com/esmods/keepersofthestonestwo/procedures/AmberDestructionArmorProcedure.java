@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.block.Block;
@@ -36,8 +37,8 @@ public class AmberDestructionArmorProcedure {
 		if (entity == null)
 			return;
 		if (entity.getPersistentData().getBoolean("amberLayer")) {
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
+			if (event instanceof ICancellableEvent _cancellable) {
+				_cancellable.setCanceled(true);
 			}
 			world.levelEvent(2001, BlockPos.containing(x, y + 1, z), Block.getId(PowerModBlocks.AMBER_BLOCK.get().defaultBlockState()));
 			world.levelEvent(2001, BlockPos.containing(x, y, z), Block.getId(PowerModBlocks.AMBER_BLOCK.get().defaultBlockState()));
