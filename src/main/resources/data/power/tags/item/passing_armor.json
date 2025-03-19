@@ -210,9 +210,6 @@
     "power:filth_armor_chestplate",
     "power:filth_armor_leggings",
     "power:filth_armor_boots",
-    "power:heat_armor_helmet",
-    "power:heat_armor_chestplate",
-    "power:heat_armor_leggings",
     "power:shockwave_armor_helmet",
     "power:shockwave_armor_chestplate",
     "power:shockwave_armor_leggings",
@@ -220,6 +217,10 @@
     "power:colors_armor_helmet",
     "power:colors_armor_chestplate",
     "power:colors_armor_leggings",
-    "power:colors_armor_boots"
+    "power:colors_armor_boots",
+    "power:heat_armor_helmet",
+    "power:heat_armor_chestplate",
+    "power:heat_armor_leggings",
+    "power:heat_armor_boots"
   ]
 }

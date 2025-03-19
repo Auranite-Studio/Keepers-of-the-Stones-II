@@ -14,6 +14,7 @@ import com.esmods.keepersofthestonestwo.client.model.Modelturret;
 import com.esmods.keepersofthestonestwo.client.model.Modelspirit;
 import com.esmods.keepersofthestonestwo.client.model.Modelsolar_salvo;
 import com.esmods.keepersofthestonestwo.client.model.Modelsmoke_bomb;
+import com.esmods.keepersofthestonestwo.client.model.Modelshockwave_bullet;
 import com.esmods.keepersofthestonestwo.client.model.Modelrain_drop;
 import com.esmods.keepersofthestonestwo.client.model.Modelpoisonous_thorn;
 import com.esmods.keepersofthestonestwo.client.model.Modelpoison_bomb;
@@ -43,6 +44,7 @@ public class PowerModModels {
 		event.registerLayerDefinition(Modelether_bullet.LAYER_LOCATION, Modelether_bullet::createBodyLayer);
 		event.registerLayerDefinition(Modelgrenade.LAYER_LOCATION, Modelgrenade::createBodyLayer);
 		event.registerLayerDefinition(Modelblack_hole.LAYER_LOCATION, Modelblack_hole::createBodyLayer);
+		event.registerLayerDefinition(Modelshockwave_bullet.LAYER_LOCATION, Modelshockwave_bullet::createBodyLayer);
 		event.registerLayerDefinition(ModelCrossed.LAYER_LOCATION, ModelCrossed::createBodyLayer);
 		event.registerLayerDefinition(Modelrain_drop.LAYER_LOCATION, Modelrain_drop::createBodyLayer);
 		event.registerLayerDefinition(Modelsmoke_bomb.LAYER_LOCATION, Modelsmoke_bomb::createBodyLayer);

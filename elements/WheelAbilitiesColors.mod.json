@@ -17,10 +17,10 @@
           "image": "wheel_button_1.png",
           "hoveredImage": "wheel_button_1_highlight.png",
           "onClick": {
-            "name": "OpenFirstWheel"
+            "name": "OpenWheelOne"
           },
           "displayCondition": {
-            "name": "GetWheelTwoOrFake"
+            "name": "GetWheelTwoOrFirstFake"
           },
           "x": 258,
           "y": 178,
@@ -34,10 +34,10 @@
           "image": "wheel_button_2.png",
           "hoveredImage": "wheel_button_2_highlight.png",
           "onClick": {
-            "name": "OpenSecondWheel"
+            "name": "OpenWheelTwo"
           },
           "displayCondition": {
-            "name": "GetWheelTwo"
+            "name": "GetFakeWheelTwo"
           },
           "x": 270,
           "y": 178,
@@ -51,7 +51,7 @@
           "image": "wheel_button_3.png",
           "hoveredImage": "wheel_button_3_highlight.png",
           "onClick": {
-            "name": "OpenThirdWheel"
+            "name": "OpenWheelThree"
           },
           "displayCondition": {
             "name": "GetWheelThree"
@@ -78,10 +78,10 @@
           "image": "fake_wheel_button_1.png",
           "hoveredImage": "fake_wheel_button_1_highlight.png",
           "onClick": {
-            "name": "OpenFakeFirstWheel"
+            "name": "OpenFakeWheelOne"
           },
           "displayCondition": {
-            "name": "GetWheelFakeFirst"
+            "name": "GetFakeWheelOne"
           },
           "x": 258,
           "y": 188,
@@ -95,10 +95,10 @@
           "image": "fake_wheel_button_2.png",
           "hoveredImage": "fake_wheel_button_2_highlight.png",
           "onClick": {
-            "name": "OpenFakeSecondWheel"
+            "name": "OpenFakeWheelSecond"
           },
           "displayCondition": {
-            "name": "GetWheelFakeSecond"
+            "name": "GetFakeWheelTwo"
           },
           "x": 270,
           "y": 188,
@@ -112,10 +112,10 @@
           "image": "fake_wheel_button_3.png",
           "hoveredImage": "fake_wheel_button_3_highlight.png",
           "onClick": {
-            "name": "OpenFakeThirdWheel"
+            "name": "OpenFakeWheelThird"
           },
           "displayCondition": {
-            "name": "GetWheelFakeThird"
+            "name": "GetFakeWheelThird"
           },
           "x": 282,
           "y": 188,

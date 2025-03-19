@@ -22,6 +22,12 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesShockwaveM
 import com.esmods.keepersofthestonestwo.procedures.ShockwaveAttack3Procedure;
 import com.esmods.keepersofthestonestwo.procedures.ShockwaveAttack2Procedure;
 import com.esmods.keepersofthestonestwo.procedures.ShockwaveAttack1Procedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -63,27 +69,27 @@ public record WheelAbilitiesShockwaveButtonMessage(int buttonID, int x, int y, i
 			return;
 		if (buttonID == 0) {
 
-			OpenFirstWheelProcedure.execute();
+			OpenWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			OpenSecondWheelProcedure.execute();
+			OpenWheelTwoProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			OpenThirdWheelProcedure.execute();
+			OpenWheelThreeProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
-			OpenFakeFirstWheelProcedure.execute();
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			OpenFakeSecondWheelProcedure.execute();
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			OpenFakeThirdWheelProcedure.execute();
+			OpenFakeWheelThirdProcedure.execute(entity);
 		}
 		if (buttonID == 6) {
 

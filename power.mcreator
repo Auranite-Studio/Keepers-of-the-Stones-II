@@ -32062,82 +32062,6 @@
       "path": "~/CollectionElements/Heat"
     },
     {
-      "name": "HeatArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "heat_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HeatArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Heat"
-    },
-    {
-      "name": "HeatArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "heat_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HeatArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Heat"
-    },
-    {
-      "name": "HeatArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "heat_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HeatArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Heat"
-    },
-    {
-      "name": "HeatArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "heat_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HeatArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Heat"
-    },
-    {
       "name": "HeatStoneUse",
       "type": "procedure",
       "compiles": true,
@@ -32284,7 +32208,7 @@
     {
       "name": "WheelAbilitiesHeat",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_heat",
       "metadata": {
@@ -32382,25 +32306,6 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/item/HeatKnifeItem.java",
           "src/main/resources/assets/power/models/item/heat_knife.json"
-        ]
-      },
-      "path": "~/CollectionElements/Heat"
-    },
-    {
-      "name": "HeatKnifeTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "heat_knife_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HeatKnifeTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/CollectionElements/Heat"
@@ -32514,82 +32419,6 @@
           "src/main/resources/assets/power/models/item/shockwave_armor_leggings.json",
           "src/main/resources/assets/power/models/item/shockwave_armor_boots.json",
           "src/main/resources/assets/power/models/item/shockwave_armor_helmet.json"
-        ]
-      },
-      "path": "~/CollectionElements/Shockwave"
-    },
-    {
-      "name": "ShockwaveArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shockwave_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ShockwaveArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Shockwave"
-    },
-    {
-      "name": "ShockwaveArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shockwave_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ShockwaveArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Shockwave"
-    },
-    {
-      "name": "ShockwaveArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shockwave_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ShockwaveArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Shockwave"
-    },
-    {
-      "name": "ShockwaveArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shockwave_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ShockwaveArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/CollectionElements/Shockwave"
@@ -32741,7 +32570,7 @@
     {
       "name": "WheelAbilitiesShockwave",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_shockwave",
       "metadata": {
@@ -32844,25 +32673,6 @@
       "path": "~/CollectionElements/Shockwave"
     },
     {
-      "name": "ShockwaveGunKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shockwave_gun_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ShockwaveGunKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Shockwave"
-    },
-    {
       "name": "ShockWavesParticle",
       "type": "particle",
       "compiles": true,
@@ -32884,6 +32694,7 @@
       "registry_name": "shockwave_gun_projectile",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/ShockwaveGunProjectileRenderer.java",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/ShockwaveGunProjectileEntity.java"
         ]
       },
@@ -33022,82 +32833,6 @@
       "path": "~/CollectionElements/Colors"
     },
     {
-      "name": "ColorsArmorKazhdyiTikDliaShliema",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "colors_armor_kazhdyi_tik_dlia_shliema",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsArmorKazhdyiTikDliaShliemaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Colors"
-    },
-    {
-      "name": "ColorsArmorKazhdyiTikDliaNaghrudnika",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "colors_armor_kazhdyi_tik_dlia_naghrudnika",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Colors"
-    },
-    {
-      "name": "ColorsArmorKazhdyiTikDliaPonozhiei",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "colors_armor_kazhdyi_tik_dlia_ponozhiei",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsArmorKazhdyiTikDliaPonozhieiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Colors"
-    },
-    {
-      "name": "ColorsArmorKazhdyiTikDliaBotinok",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "colors_armor_kazhdyi_tik_dlia_botinok",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsArmorKazhdyiTikDliaBotinokProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/CollectionElements/Colors"
-    },
-    {
       "name": "SpearBrash",
       "type": "tool",
       "compiles": true,
@@ -33107,25 +32842,6 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/item/SpearBrashItem.java",
           "src/main/resources/assets/power/models/item/spear_brash.json"
-        ]
-      },
-      "path": "~/CollectionElements/Colors"
-    },
-    {
-      "name": "SpearBrashKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spear_brash_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpearBrashKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/CollectionElements/Colors"
@@ -33277,7 +32993,7 @@
     {
       "name": "WheelAbilitiesColors",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_colors",
       "metadata": {
@@ -35077,9 +34793,6 @@
       "CUSTOM:FilthArmor.body",
       "CUSTOM:FilthArmor.legs",
       "CUSTOM:FilthArmor.boots",
-      "CUSTOM:HeatArmor.helmet",
-      "CUSTOM:HeatArmor.body",
-      "CUSTOM:HeatArmor.legs",
       "CUSTOM:ShockwaveArmor.helmet",
       "CUSTOM:ShockwaveArmor.body",
       "CUSTOM:ShockwaveArmor.legs",
@@ -35087,7 +34800,11 @@
       "CUSTOM:ColorsArmor.helmet",
       "CUSTOM:ColorsArmor.body",
       "CUSTOM:ColorsArmor.legs",
-      "CUSTOM:ColorsArmor.boots"
+      "CUSTOM:ColorsArmor.boots",
+      "CUSTOM:HeatArmor.helmet",
+      "CUSTOM:HeatArmor.body",
+      "CUSTOM:HeatArmor.legs",
+      "CUSTOM:HeatArmor.boots"
     ],
     "ITEMS:minecraft:head_armor": [
       "~CUSTOM:ColorsArmor.helmet",
@@ -35341,7 +35058,10 @@
       "FormStone",
       "MindStone",
       "GoldenDustStone",
-      "DarknessStone"
+      "DarknessStone",
+      "ColorsStone",
+      "ShockwaveStone",
+      "HeatStone"
     ],
     "CUSTOM:Batteries": [
       "EmptyBattery",
@@ -35392,7 +35112,10 @@
       "FormBattery",
       "MindBattery",
       "GoldenDustBattery",
-      "DarknessBattery"
+      "DarknessBattery",
+      "ColorsBattery",
+      "ShockwaveBattery",
+      "HeatBattery"
     ],
     "CUSTOM:Items": [
       "LuckCoin",

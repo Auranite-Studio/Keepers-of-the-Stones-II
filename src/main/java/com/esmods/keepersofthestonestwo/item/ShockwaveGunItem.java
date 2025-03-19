@@ -16,7 +16,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 
 import com.esmods.keepersofthestonestwo.procedures.ShockwaveGunPriVystrielieSnariadomIzPriedmietaProcedure;
-import com.esmods.keepersofthestonestwo.procedures.ShockwaveGunKazhdyiTikVInvientarieProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 import com.esmods.keepersofthestonestwo.entity.ShockwaveGunProjectileEntity;
 
 public class ShockwaveGunItem extends Item {
@@ -47,7 +47,7 @@ public class ShockwaveGunItem extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		ShockwaveGunKazhdyiTikVInvientarieProcedure.execute(entity);
+		RemoveForbiddenItemProcedure.execute(entity, itemstack);
 	}
 
 	@Override

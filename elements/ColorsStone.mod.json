@@ -32,7 +32,7 @@
     "rarity": "COMMON",
     "creativeTabs": [
       {
-        "value": "CUSTOM:TheLostElementsStones"
+        "value": "CUSTOM:Stones"
       }
     ],
     "stackSize": 1,

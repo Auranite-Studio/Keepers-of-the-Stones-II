@@ -19,6 +19,12 @@ import net.minecraft.core.BlockPos;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesHeatMenu;
+import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.HeatAttack3Procedure;
 import com.esmods.keepersofthestonestwo.procedures.HeatAttack2Procedure;
 import com.esmods.keepersofthestonestwo.procedures.HeatAttack1Procedure;
@@ -63,15 +69,15 @@ public record WheelAbilitiesHeatButtonMessage(int buttonID, int x, int y, int z)
 			return;
 		if (buttonID == 0) {
 
-			OpenFirstWheelProcedure.execute();
+			OpenWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			OpenSecondWheelProcedure.execute();
+			OpenWheelTwoProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			OpenThirdWheelProcedure.execute();
+			OpenWheelThreeProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
@@ -87,15 +93,15 @@ public record WheelAbilitiesHeatButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 6) {
 
-			OpenFakeFirstWheelProcedure.execute();
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			OpenFakeSecondWheelProcedure.execute();
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 8) {
 
-			OpenFakeThirdWheelProcedure.execute();
+			OpenFakeWheelThirdProcedure.execute(entity);
 		}
 	}
 
