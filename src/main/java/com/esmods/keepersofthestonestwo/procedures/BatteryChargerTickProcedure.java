@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
@@ -20,11 +19,8 @@ import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class BatteryChargerTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy())
-				.getItem() == BuiltInRegistries.ITEM.get(ResourceLocation.parse((((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).is(ItemTags.create(ResourceLocation.parse("power:elemental_stones")))
-						? BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem()).toString()
-						: BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))).asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PowerModItems.EMPTY_BATTERY.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) {
+		if (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == ItemStack.EMPTY.getItem()) && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PowerModItems.EMPTY_BATTERY.get()
+				&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) {
 			if (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == Blocks.AIR.asItem())) {
 				if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "inputStoneSlot")).equals("")) {
 					if (!world.isClientSide()) {
@@ -32,10 +28,7 @@ public class BatteryChargerTickProcedure {
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putString("inputStoneSlot",
-									((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).is(ItemTags.create(ResourceLocation.parse("power:elemental_stones")))
-											? BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem()).toString()
-											: ""));
+							_blockEntity.getPersistentData().putString("inputStoneSlot", (BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem()).toString()));
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -67,10 +60,7 @@ public class BatteryChargerTickProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(
-								BuiltInRegistries.ITEM.get(ResourceLocation.parse((((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).is(ItemTags.create(ResourceLocation.parse("power:elemental_stones")))
-										? (getBlockNBTString(world, BlockPos.containing(x, y, z), "inputStoneSlot")).replace("_stone", "_battery")
-										: "minecraft:air")).toLowerCase(java.util.Locale.ENGLISH))))
-								.copy();
+								BuiltInRegistries.ITEM.get(ResourceLocation.parse((((getBlockNBTString(world, BlockPos.containing(x, y, z), "inputStoneSlot")).replace("_stone", "_battery"))).toLowerCase(java.util.Locale.ENGLISH)))).copy();
 						_setstack.setCount(1);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}

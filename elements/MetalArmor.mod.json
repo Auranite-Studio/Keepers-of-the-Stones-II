@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 77,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -11,16 +11,16 @@
     "enableBoots": true,
     "textureBoots": "metal_armor_boots",
     "onHelmetTick": {
-      "name": "MetalArmorKazhdyiTikDliaShliema"
+      "name": "RemoveForbiddenItem"
     },
     "onBodyTick": {
-      "name": "MetalArmorKazhdyiTikDliaNaghrudnika"
+      "name": "RemoveForbiddenItem"
     },
     "onLeggingsTick": {
-      "name": "MetalArmorKazhdyiTikDliaPonozhiei"
+      "name": "RemoveForbiddenItem"
     },
     "onBootsTick": {
-      "name": "MetalArmorKazhdyiTikDliaBotinok"
+      "name": "RemoveForbiddenItem"
     },
     "creativeTabs": [],
     "armorTextureFile": "metal_armor",
@@ -68,6 +68,18 @@
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
     "helmetPiglinNeutral": {
       "fixedValue": false
     },
@@ -85,7 +97,7 @@
     "damageValueBody": 8,
     "damageValueLeggings": 6,
     "damageValueBoots": 3,
-    "enchantability": 0,
+    "enchantability": 1,
     "toughness": 0.0,
     "knockbackResistance": 0.0,
     "equipSound": {

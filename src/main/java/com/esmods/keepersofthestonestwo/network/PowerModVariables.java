@@ -86,8 +86,6 @@ public class PowerModVariables {
 			clone.leggings = original.leggings;
 			clone.boots = original.boots;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
-			clone.hypnotized = original.hypnotized;
-			clone.is_set_configurable_zero = original.is_set_configurable_zero;
 			clone.level = original.level;
 			clone.level_exp = original.level_exp;
 			clone.base_damage_by_lvl = original.base_damage_by_lvl;
@@ -97,6 +95,7 @@ public class PowerModVariables {
 			clone.haste_char = original.haste_char;
 			clone.jump_char = original.jump_char;
 			clone.rank = original.rank;
+			clone.mind_used = original.mind_used;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -128,7 +127,7 @@ public class PowerModVariables {
 				clone.level_up_status = original.level_up_status;
 				clone.cursed_fog = original.cursed_fog;
 				clone.fog_distance = original.fog_distance;
-				clone.golden_dust_extended_powers = original.golden_dust_extended_powers;
+				clone.mind_player_owner = original.mind_player_owner;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -250,9 +249,7 @@ public class PowerModVariables {
 		public boolean darkness_stone = false;
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
-		public boolean get_limit_of_stones = true;
 		public double cpapi_ver = 21.0;
-		public boolean allow_custom_element_powers_for_stones = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -317,9 +314,7 @@ public class PowerModVariables {
 			darkness_stone = nbt.getBoolean("darkness_stone");
 			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
 			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
-			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
 			cpapi_ver = nbt.getDouble("cpapi_ver");
-			allow_custom_element_powers_for_stones = nbt.getBoolean("allow_custom_element_powers_for_stones");
 		}
 
 		@Override
@@ -380,9 +375,7 @@ public class PowerModVariables {
 			nbt.putBoolean("darkness_stone", darkness_stone);
 			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
 			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
-			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
 			nbt.putDouble("cpapi_ver", cpapi_ver);
-			nbt.putBoolean("allow_custom_element_powers_for_stones", allow_custom_element_powers_for_stones);
 			return nbt;
 		}
 
@@ -485,10 +478,8 @@ public class PowerModVariables {
 		public ItemStack boots = ItemStack.EMPTY;
 		public boolean unlock_keepers_box = false;
 		public boolean transfered_power = false;
-		public boolean hypnotized = false;
 		public boolean master_effect_end = false;
 		public boolean master_effect_start = false;
-		public boolean is_set_configurable_zero = false;
 		public double level = 1.0;
 		public double level_exp = 0.0;
 		public double base_damage_by_lvl = 6.0;
@@ -502,8 +493,9 @@ public class PowerModVariables {
 		public boolean level_up_status = false;
 		public String rank = "D";
 		public boolean cursed_fog = false;
-		public double fog_distance = 0;
-		public boolean golden_dust_extended_powers = false;
+		public double fog_distance = 100.0;
+		public String mind_player_owner = "\"\"";
+		public boolean mind_used = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -549,10 +541,8 @@ public class PowerModVariables {
 			nbt.put("boots", boots.saveOptional(lookupProvider));
 			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
 			nbt.putBoolean("transfered_power", transfered_power);
-			nbt.putBoolean("hypnotized", hypnotized);
 			nbt.putBoolean("master_effect_end", master_effect_end);
 			nbt.putBoolean("master_effect_start", master_effect_start);
-			nbt.putBoolean("is_set_configurable_zero", is_set_configurable_zero);
 			nbt.putDouble("level", level);
 			nbt.putDouble("level_exp", level_exp);
 			nbt.putDouble("base_damage_by_lvl", base_damage_by_lvl);
@@ -567,7 +557,8 @@ public class PowerModVariables {
 			nbt.putString("rank", rank);
 			nbt.putBoolean("cursed_fog", cursed_fog);
 			nbt.putDouble("fog_distance", fog_distance);
-			nbt.putBoolean("golden_dust_extended_powers", golden_dust_extended_powers);
+			nbt.putString("mind_player_owner", mind_player_owner);
+			nbt.putBoolean("mind_used", mind_used);
 			return nbt;
 		}
 
@@ -614,10 +605,8 @@ public class PowerModVariables {
 			boots = ItemStack.parseOptional(lookupProvider, nbt.getCompound("boots"));
 			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
 			transfered_power = nbt.getBoolean("transfered_power");
-			hypnotized = nbt.getBoolean("hypnotized");
 			master_effect_end = nbt.getBoolean("master_effect_end");
 			master_effect_start = nbt.getBoolean("master_effect_start");
-			is_set_configurable_zero = nbt.getBoolean("is_set_configurable_zero");
 			level = nbt.getDouble("level");
 			level_exp = nbt.getDouble("level_exp");
 			base_damage_by_lvl = nbt.getDouble("base_damage_by_lvl");
@@ -632,7 +621,8 @@ public class PowerModVariables {
 			rank = nbt.getString("rank");
 			cursed_fog = nbt.getBoolean("cursed_fog");
 			fog_distance = nbt.getDouble("fog_distance");
-			golden_dust_extended_powers = nbt.getBoolean("golden_dust_extended_powers");
+			mind_player_owner = nbt.getString("mind_player_owner");
+			mind_used = nbt.getBoolean("mind_used");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

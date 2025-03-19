@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 77,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -11,16 +11,16 @@
     "enableBoots": true,
     "textureBoots": "dark_element_boots",
     "onHelmetTick": {
-      "name": "ChaosArmorKazhdyiTikDliaShliema"
+      "name": "RemoveForbiddenItem"
     },
     "onBodyTick": {
-      "name": "ChaosArmorKazhdyiTikDliaNaghrudnika"
+      "name": "RemoveForbiddenItem"
     },
     "onLeggingsTick": {
-      "name": "ChaosArmorKazhdyiTikDliaPonozhiei"
+      "name": "RemoveForbiddenItem"
     },
     "onBootsTick": {
-      "name": "ChaosArmorKazhdyiTikDliaBotinok"
+      "name": "RemoveForbiddenItem"
     },
     "creativeTabs": [],
     "armorTextureFile": "chaos_armor",
@@ -97,7 +97,7 @@
     "damageValueBody": 8,
     "damageValueLeggings": 6,
     "damageValueBoots": 3,
-    "enchantability": 0,
+    "enchantability": 1,
     "toughness": 0.0,
     "knockbackResistance": 0.0,
     "equipSound": {

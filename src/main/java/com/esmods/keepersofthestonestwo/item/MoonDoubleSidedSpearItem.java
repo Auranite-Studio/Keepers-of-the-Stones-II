@@ -17,7 +17,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.core.component.DataComponents;
 
-import com.esmods.keepersofthestonestwo.procedures.MoonDoubleSidedSpearKazhdyiTikVInvientarieProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -45,7 +45,7 @@ public class MoonDoubleSidedSpearItem extends SwordItem {
 
 		@Override
 		public int getEnchantmentValue() {
-			return 0;
+			return 1;
 		}
 
 		@Override
@@ -66,6 +66,6 @@ public class MoonDoubleSidedSpearItem extends SwordItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		MoonDoubleSidedSpearKazhdyiTikVInvientarieProcedure.execute(entity);
+		RemoveForbiddenItemProcedure.execute(entity, itemstack);
 	}
 }

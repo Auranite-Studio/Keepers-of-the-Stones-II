@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 77,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -11,16 +11,16 @@
     "enableBoots": true,
     "textureBoots": "blue_flame_armor_boots",
     "onHelmetTick": {
-      "name": "BlueFlameArmorKazhdyiTikDliaShliema"
+      "name": "RemoveForbiddenItem"
     },
     "onBodyTick": {
-      "name": "BlueFlameArmorKazhdyiTikDliaNaghrudnika"
+      "name": "RemoveForbiddenItem"
     },
     "onLeggingsTick": {
-      "name": "BlueFlameArmorKazhdyiTikDliaPonozhiei"
+      "name": "RemoveForbiddenItem"
     },
     "onBootsTick": {
-      "name": "BlueFlameArmorKazhdyiTikDliaBotinok"
+      "name": "RemoveForbiddenItem"
     },
     "creativeTabs": [],
     "armorTextureFile": "blue_flame_armor",
@@ -97,7 +97,7 @@
     "damageValueBody": 8,
     "damageValueLeggings": 6,
     "damageValueBoots": 3,
-    "enchantability": 0,
+    "enchantability": 1,
     "toughness": 0.0,
     "knockbackResistance": 0.0,
     "equipSound": {

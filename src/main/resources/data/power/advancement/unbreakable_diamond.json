@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:diamond"
+    },
+    "title": {
+      "translate": "advancements.unbreakable_diamond.title"
+    },
+    "description": {
+      "translate": "advancements.unbreakable_diamond.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "unbreakable_diamond_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "power:become_like_an_adventurer"
+}

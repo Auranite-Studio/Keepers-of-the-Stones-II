@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 77,
   "_type": "tool",
   "definition": {
     "toolType": "Pickaxe",
@@ -15,7 +15,7 @@
     "creativeTabs": [],
     "efficiency": 12.0,
     "attackSpeed": 1.44,
-    "enchantability": 0,
+    "enchantability": 1,
     "damageVsEntity": 9.9,
     "usageCount": 0,
     "glowCondition": {
@@ -28,7 +28,7 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onItemInInventoryTick": {
-      "name": "TechnoPickaxeKazhdyiTikVInvientarie"
+      "name": "RemoveForbiddenItem"
     }
   }
 }

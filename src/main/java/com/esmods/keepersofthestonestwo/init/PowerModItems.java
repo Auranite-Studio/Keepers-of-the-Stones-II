@@ -101,6 +101,7 @@ import com.esmods.keepersofthestonestwo.item.OceanStoneItem;
 import com.esmods.keepersofthestonestwo.item.OceanBatteryItem;
 import com.esmods.keepersofthestonestwo.item.OceanArmorItem;
 import com.esmods.keepersofthestonestwo.item.MusicStoneItem;
+import com.esmods.keepersofthestonestwo.item.MusicHopeItem;
 import com.esmods.keepersofthestonestwo.item.MusicGuitarItem;
 import com.esmods.keepersofthestonestwo.item.MusicDiscCallOfThePastItem;
 import com.esmods.keepersofthestonestwo.item.MusicDiscAncientMoodItem;
@@ -149,7 +150,6 @@ import com.esmods.keepersofthestonestwo.item.LavaStoneItem;
 import com.esmods.keepersofthestonestwo.item.LavaHammerItem;
 import com.esmods.keepersofthestonestwo.item.LavaBatteryItem;
 import com.esmods.keepersofthestonestwo.item.LavaArmorItem;
-import com.esmods.keepersofthestonestwo.item.KeepersBookItem;
 import com.esmods.keepersofthestonestwo.item.IceStoneItem;
 import com.esmods.keepersofthestonestwo.item.IceSpearItem;
 import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
@@ -176,6 +176,9 @@ import com.esmods.keepersofthestonestwo.item.FireStoneItem;
 import com.esmods.keepersofthestonestwo.item.FireBatteryItem;
 import com.esmods.keepersofthestonestwo.item.FireArmorItem;
 import com.esmods.keepersofthestonestwo.item.FilthArmorItem;
+import com.esmods.keepersofthestonestwo.item.ExtraStarPointsRune3Item;
+import com.esmods.keepersofthestonestwo.item.ExtraStarPointsRune2Item;
+import com.esmods.keepersofthestonestwo.item.ExtraStarPointsRune1Item;
 import com.esmods.keepersofthestonestwo.item.ExplosionStoneItem;
 import com.esmods.keepersofthestonestwo.item.ExplosionMaceItem;
 import com.esmods.keepersofthestonestwo.item.ExplosionBatteryItem;
@@ -704,7 +707,11 @@ public class PowerModItems {
 	public static final DeferredItem<Item> ENERGIUM_GOLEM_SPAWN_EGG = REGISTRY.register("energium_golem_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.ENERGIUM_GOLEM, -2242726, -8337805, new Item.Properties()));
 	public static final DeferredItem<Item> CURSED_SQUIRE_SPAWN_EGG = REGISTRY.register("cursed_squire_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_SQUIRE, -11447452, -9817013, new Item.Properties()));
 	public static final DeferredItem<Item> CURSED_KEEPER_SPAWN_EGG = REGISTRY.register("cursed_keeper_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KEEPER, -9216650, -7256744, new Item.Properties()));
-	public static final DeferredItem<Item> KEEPERS_BOOK = REGISTRY.register("keepers_book", KeepersBookItem::new);
+	public static final DeferredItem<Item> RUNE_CUTTER = block(PowerModBlocks.RUNE_CUTTER);
+	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_1 = REGISTRY.register("extra_star_points_rune_1", ExtraStarPointsRune1Item::new);
+	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_2 = REGISTRY.register("extra_star_points_rune_2", ExtraStarPointsRune2Item::new);
+	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_3 = REGISTRY.register("extra_star_points_rune_3", ExtraStarPointsRune3Item::new);
+	public static final DeferredItem<Item> MUSIC_HOPE = REGISTRY.register("music_hope", MusicHopeItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

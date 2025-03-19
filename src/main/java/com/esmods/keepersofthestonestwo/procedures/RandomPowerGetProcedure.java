@@ -1,6 +1,5 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
@@ -8,12 +7,12 @@ import net.minecraft.util.Mth;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
 public class RandomPowerGetProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		double RandomPower = 0;
 		String element = "";
-		RandomPower = Mth.nextInt(RandomSource.create(), 1, (int) (PowerModVariables.MapVariables.get(world).allow_custom_element_powers_for_stones ? 47 : 46));
+		RandomPower = Mth.nextInt(RandomSource.create(), 1, 46);
 		if (RandomPower == 1) {
 			element = "fire";
 			if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0")) {
@@ -1301,12 +1300,6 @@ public class RandomPowerGetProcedure {
 						_vars.syncPlayerVariables(entity);
 					}
 				}
-			}
-		} else if (RandomPower == 47) {
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.golden_dust_extended_powers = true;
-				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

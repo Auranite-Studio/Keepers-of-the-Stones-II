@@ -10,8 +10,8 @@ on:
 env:                                              
   MINECRAFT_VERSION: 1.21.1                      
   JAVA_VERSION: 21      
-  VERSION: 1.1.0.2
-  RELEASE_NAME: Keepers of the Stones II 1.1.0.2 Beta
+  VERSION: 1.1.4.1
+  RELEASE_NAME: Keepers of the Stones II 1.1.4.1 Beta
 
 jobs:
   build:
@@ -69,29 +69,3 @@ jobs:
             epic-fight(incompatible){modrinth:vu3NZ5Ma}{curseforge:405076}#(ignore:github)
           modrinth-featured: false
           fail-mode: warn
-      - name: Send Discord webhook
-        uses: Ilshidur/action-discord@0.3.2
-        with:
-          args: "<@&1195647504730050670>"
-        env:
-          DISCORD_WEBHOOK: "${{secrets.DISCORD_WEBHOOK}}"
-          DISCORD_EMBEDS: |
-            [{
-              "title": "${{env.RELEASE_NAME}} for Minecraft ${{env.MINECRAFT_VERSION}} Released",
-              "color": 285786,
-              "thumbnail": {
-                "url": "https://sun9-46.userapi.com/impg/KjoKaipv7nUE92Gv31ayUUMYaf5fzo9DDdHAZA/Aeg7SVdK8Tc.jpg?size=1920x1080&quality=95&sign=f64a55015b32b9b16e0166ac1945c004&type=album"
-              },
-              "url": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones-ii",
-              "fields": [
-                  {
-                    "name": "Download now:",
-                    "value": "[<:curseforge:805066577871110196> CurseForge](https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones-ii)\n[<:modrinth:805066578215043092> Modrinth](https://modrinth.com/mod/keepers-of-the-stones-2)\n[<:github:805066578164580392> GitHub](https://github.com/Environment-Studios-Official/Keepers-of-the-Stones-2)",
-                    "inline": true
-                  }
-              ],
-              "footer": {
-                "text": "Created by the Environment Studios team!",
-                "icon_url": "https://sun9-2.userapi.com/impg/uV8n02lvJ-IPojMugzVzla-mS1XNSYxP7kK37w/dFRlvkG06Pg.jpg?size=2268x2268&quality=95&sign=d1bc84ea1e0be3a5ad198ce9f1227b11&type=album"
-              }
-            }]

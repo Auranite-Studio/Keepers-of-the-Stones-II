@@ -25,10 +25,7 @@ import java.util.EnumMap;
 
 import com.google.common.collect.Iterables;
 
-import com.esmods.keepersofthestonestwo.procedures.TechnologyArmorKazhdyiTikDliaShliemaProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TechnologyArmorKazhdyiTikDliaPonozhieiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TechnologyArmorKazhdyiTikDliaNaghrudnikaProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TechnologyArmorKazhdyiTikDliaBotinokProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public abstract class TechnologyArmorItem extends ArmorItem {
@@ -43,7 +40,7 @@ public abstract class TechnologyArmorItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 8);
 				map.put(ArmorItem.Type.HELMET, 3);
 				map.put(ArmorItem.Type.BODY, 8);
-			}), 0, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("power:technology_armor"))), 0f, 0f);
+			}), 1, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("power:technology_armor"))), 0f, 0f);
 			registerHelper.register(ResourceLocation.parse("power:technology_armor"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
@@ -62,7 +59,7 @@ public abstract class TechnologyArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				TechnologyArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}
@@ -76,7 +73,7 @@ public abstract class TechnologyArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				TechnologyArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}
@@ -90,7 +87,7 @@ public abstract class TechnologyArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				TechnologyArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}
@@ -104,7 +101,7 @@ public abstract class TechnologyArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				TechnologyArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}

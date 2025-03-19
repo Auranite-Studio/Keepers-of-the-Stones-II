@@ -195,5 +195,13 @@
         "stream": false
       }
     ]
+  },
+  "record.hope": {
+    "sounds": [
+      {
+        "name": "power:hope_record",
+        "stream": true
+      }
+    ]
   }
 }

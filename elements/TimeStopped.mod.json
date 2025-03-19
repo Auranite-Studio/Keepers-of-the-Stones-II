@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 77,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Time Stopped",
@@ -8,77 +8,84 @@
       "value": -3407821,
       "falpha": 0.0
     },
+    "onAddedSound": {
+      "value": ""
+    },
     "isInstant": false,
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "isCuredByMilk": true,
-    "isProtectedByTotem": true,
     "isCuredbyHoney": false,
     "modifiers": [
       {
         "attribute": {
           "value": "MOVEMENT_SPEED"
         },
-        "amount": -1.0,
+        "amount": -100.0,
         "operation": "ADD_VALUE"
       },
       {
         "attribute": {
           "value": "FLYING_SPEED"
         },
-        "amount": -0.4,
+        "amount": -100.0,
         "operation": "ADD_VALUE"
       },
       {
         "attribute": {
           "value": "JUMP_STRENGTH"
         },
-        "amount": -1.0,
+        "amount": -100.0,
         "operation": "ADD_VALUE"
       },
       {
         "attribute": {
           "value": "SWIM_SPEED"
         },
-        "amount": -0.4,
+        "amount": -100.0,
         "operation": "ADD_VALUE"
       },
       {
         "attribute": {
           "value": "ATTACK_SPEED"
         },
-        "amount": -4.0,
+        "amount": -100.0,
         "operation": "ADD_VALUE"
       },
       {
         "attribute": {
           "value": "SNEAKING_SPEED"
         },
-        "amount": -0.3,
+        "amount": -100.0,
         "operation": "ADD_VALUE"
       },
       {
         "attribute": {
           "value": "BLOCK_BREAK_SPEED"
         },
-        "amount": -1.0,
+        "amount": -100.0,
         "operation": "ADD_MULTIPLIED_BASE"
       },
       {
         "attribute": {
           "value": "ENTITY_REACH"
         },
-        "amount": -2.5,
+        "amount": -100.0,
         "operation": "ADD_VALUE"
       },
       {
         "attribute": {
           "value": "BLOCK_REACH"
         },
-        "amount": -4.5,
+        "amount": -100.0,
         "operation": "ADD_VALUE"
       }
-    ]
+    ],
+    "onStarted": {
+      "name": "TimeStoppedPriNalozhieniiEffiekta"
+    },
+    "onExpired": {
+      "name": "TimeStoppedPriIstiechieniiEffiekta"
+    }
   }
 }

@@ -25,10 +25,7 @@ import java.util.EnumMap;
 
 import com.google.common.collect.Iterables;
 
-import com.esmods.keepersofthestonestwo.procedures.AmberArmorKazhdyiTikDliaShliemaProcedure;
-import com.esmods.keepersofthestonestwo.procedures.AmberArmorKazhdyiTikDliaPonozhieiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.AmberArmorKazhdyiTikDliaNaghrudnikaProcedure;
-import com.esmods.keepersofthestonestwo.procedures.AmberArmorKazhdyiTikDliaBotinokProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public abstract class AmberArmorItem extends ArmorItem {
@@ -43,7 +40,7 @@ public abstract class AmberArmorItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 8);
 				map.put(ArmorItem.Type.HELMET, 3);
 				map.put(ArmorItem.Type.BODY, 8);
-			}), 0, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("power:amber_armor"))), 0f, 0f);
+			}), 1, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("power:amber_armor"))), 0f, 0f);
 			registerHelper.register(ResourceLocation.parse("power:amber_armor"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
@@ -62,7 +59,7 @@ public abstract class AmberArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				AmberArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}
@@ -76,7 +73,7 @@ public abstract class AmberArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				AmberArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}
@@ -90,7 +87,7 @@ public abstract class AmberArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				AmberArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}
@@ -104,7 +101,7 @@ public abstract class AmberArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				AmberArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}
