@@ -1,0 +1,41 @@
+{
+    "name": "Amplifier Ore",
+    "icon": "power:amplifier_ore",
+    "category": "power:ores",
+    "pages": [
+        {
+            "type": "text",
+            "text": "Amplifier Ore — the counterpart of energium, generated in ocean biomes. It lacks direct magical properties but serves as the foundation for creating unique items."
+        },
+        {
+            "type": "spotlight",
+            "title": "Amplifier Ore",
+            "item": "power:amplifier_ore",
+            "text": "Generates between heights 16 and 80 in oceans.$(br2)Mining drops $(l)Amplifier Drop$(), used for crafting. Processed ore emits light (level 6)."
+        },
+        {
+            "type": "spotlight",
+            "title": "Amplifier Drop",
+            "item": "power:amplifier_drop",
+            "text": "Key component for:$(br)- Star Regeneration Potion$(br)- Amplifier Ring"
+        },
+        {
+            "type": "spotlight",
+            "item": "minecraft:potion",
+            "title": "Star Regeneration Potion",
+            "text": "Effect: Doubles star points recovery speed per level.$(br2)Ingredients:$(br)Amplifier Drop + Awkward Potion"
+        },
+        {
+            "type": "spotlight",
+            "title": "Amplifier Ring",
+            "item": "power:amplifier_ring",
+            "text": "Resets the recharge of elemental stones. To do this, put a ring in the main hand and a stone in the spare hand and press the right mouse button."
+        },
+        {
+            "type": "crafting",
+            "title": "Ring Recipe",
+            "recipe": "power:amplifier_ring_craft",
+            "text": "Requires:$(br)4 Amplifier Drops"
+        }
+    ]
+}
