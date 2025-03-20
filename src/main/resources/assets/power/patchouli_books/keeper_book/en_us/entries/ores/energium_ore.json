@@ -1,0 +1,61 @@
+{
+    "name": "Energium Ore",
+    "icon": "power:energium_ore",
+    "category": "power:ores",
+    "pages": [
+        {
+            "type": "text",
+            "text": "Energium is a unique ore containing clusters of elemental energy. It exists in two forms: Depleted and Pure. Both versions generate in mountain biomes, but with different frequencies and conditions."
+        },
+        {
+            "type": "spotlight",
+            "title": "Depleted Energium Ore",
+            "item": "power:depleted_energium_ore",
+            "text": "Depleted ore generates between heights 16 and 256 in mountains. It can be found rarely and lacks special properties, but can be refined into useful materials."
+        },
+        {
+            "type": "spotlight",
+            "title": "Energium Ore",
+            "item": "power:energium_ore",
+            "text": "Pure ore generates extremely rarely between levels 16 and 48. Its main feature is suppressing elemental power. Used to craft powerful tools and blocks."
+        },
+        {
+            "type": "text",
+            "title": "Refining Depleted Energium",
+            "text": "To convert a Depleted Energium Ingot into a pure one, combine it with Redstone and an Energium Upgrade Smithing Template at a smithing table. Templates can be found in ancient Energium temples or duplicated via a special craft."
+        },
+        {
+            "type": "smithing",
+            "title": "Purification Recipe",
+            "recipe": "power:energium_ingot_cleaning_recipe",
+            "text": "Requires Depleted Energium Ingot, Redstone, and an upgrade template."
+        },
+        {
+            "type": "crafting",
+            "title": "Template Duplication",
+            "recipe": "power:duplicate_energium_upgrade_smithing_template",
+            "text": "Use 7 diamonds and an original template to create copies."
+        },
+        {
+            "type": "text",
+            "title": "Energium Tools",
+            "text": "Tools possess unique properties:$(br2)$(l)Legendary Durability$() — 3 times more durable than iron.$(br2)$(l)Revenge Enchantment$() — Attacks inflict $(#FF0000)Power Lock$() on targets for 8 seconds.$(br2)$(l)Isolation Enchantment$() — Protects the wielder from $(#FF0000)Power Lock effects."
+        },
+        {
+            "type": "text",
+            "title": "Energium Armor",
+            "text": "A full armor set grants:$(br2)$(l)Suppression Aura$() — Blocks elemental power within 4 blocks.$(br2)$(l)Curse Immunity$() — Neutralizes all effects of the Cursed Forest biome."
+        },
+        {
+            "type": "spotlight",
+            "title": "Energium Controller",
+            "item": "power:energium_controller",
+            "text": "When activated with Redstone, blocks all power-based effects within a 48-block radius."
+        },
+        {
+            "type": "crafting",
+            "recipe": "power:energium_controller_recipe",
+            "text": "Energium Controller recipe. Place the device at the center of the protected area."
+        }
+    ]
+}
