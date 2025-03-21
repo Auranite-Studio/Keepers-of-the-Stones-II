@@ -32030,14 +32030,14 @@
       "path": "~/Modules/BasicModule"
     },
     {
-      "name": "Grantbookonfirstjoin",
-      "type": "loottable",
+      "name": "KeepersBookGetting",
+      "type": "function",
       "compiles": true,
-      "locked_code": true,
-      "registry_name": "grantbookonfirstjoin",
+      "locked_code": false,
+      "registry_name": "keepers_book_getting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_table/grant_book_on_first_join.json"
+          "src/main/resources/data/power/function/keepers_book_getting.mcfunction"
         ]
       },
       "path": "~/Achievements"

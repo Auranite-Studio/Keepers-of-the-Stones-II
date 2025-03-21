@@ -12,10 +12,9 @@
     "showPopup": true,
     "announceToChat": true,
     "hideIfNotCompleted": false,
-    "rewardLoot": [
-      "Grantbookonfirstjoin"
-    ],
+    "rewardLoot": [],
     "rewardRecipes": [],
+    "rewardFunction": "KeepersBookGetting",
     "rewardXP": 0,
     "achievementType": "task",
     "parent": {
