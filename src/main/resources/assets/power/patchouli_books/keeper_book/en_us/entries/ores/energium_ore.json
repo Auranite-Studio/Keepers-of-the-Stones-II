@@ -45,17 +45,6 @@
             "type": "text",
             "title": "Energium Armor",
             "text": "A full armor set grants:$(br2)$(l)Suppression Aura$() — Blocks elemental power within 4 blocks.$(br2)$(l)Curse Immunity$() — Neutralizes all effects of the Cursed Forest biome."
-        },
-        {
-            "type": "spotlight",
-            "title": "Energium Controller",
-            "item": "power:energium_controller",
-            "text": "When activated with Redstone, blocks all power-based effects within a 48-block radius."
-        },
-        {
-            "type": "crafting",
-            "recipe": "power:energium_controller_recipe",
-            "text": "Energium Controller recipe. Place the device at the center of the protected area."
         }
     ]
 }
