@@ -1,0 +1,27 @@
+{
+    "name": "Darkness",
+    "icon": "power:textures/mob_effect/darkness_master.png",
+    "category": "power:stones",
+    "sortnum": 48,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Darkness ray - attacks entities with a beam attack, dealing a darkness effect to them.",
+                "$(li)",
+                "Darkness Absorption - inflicts a darkness effect on entities within a 12 block radius.",
+                "$(li)",
+                "Dark power transfer - distributes one of 4 forms of dark elemental powers to other players (provided they have no active elemental powers)."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Darkness",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:dark_sword\",count:1}],ArmorItems:[{id:\"power:darkness_armor_boots\",count:1},{id:\"power:darkness_armor_leggings\",count:1},{id:\"power:darkness_armor_chestplate\",count:1},{id:\"power:darkness_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

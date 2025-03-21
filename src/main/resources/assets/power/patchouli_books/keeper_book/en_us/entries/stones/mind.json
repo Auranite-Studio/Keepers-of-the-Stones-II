@@ -1,0 +1,27 @@
+{
+    "name": "Mind",
+    "icon": "power:textures/mob_effect/mind_master.png",
+    "category": "power:stones",
+    "sortnum": 46,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Psychowaves - attacks entities with a beam attack, dealing a nausea effect to them.",
+                "$(li)",
+                "Hypnosis - hypnotizes another player, turning him into an ally.",
+                "$(li)",
+                "Remote control - controls an allied player."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Mind",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:mind_epee\",count:1}],ArmorItems:[{id:\"power:mind_armor_boots\",count:1},{id:\"power:mind_armor_leggings\",count:1},{id:\"power:mind_armor_chestplate\",count:1},{id:\"power:mind_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

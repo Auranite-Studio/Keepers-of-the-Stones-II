@@ -1,0 +1,27 @@
+{
+    "name": "Blood",
+    "icon": "power:textures/mob_effect/blood_master.png",
+    "category": "power:stones",
+    "sortnum": 27,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Bleeding - attacks with a blood beam attack on enemies.",
+                "$(li)",
+                "Vampirism - takes 15% of the enemy's health with the help of a blood beam.",
+                "$(li)",
+                "Transfusion - Transfers 15% of the player's health to another entity."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Blood",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:blood_sickle\",count:1}],ArmorItems:[{id:\"power:blood_armor_boots\",count:1},{id:\"power:blood_armor_leggings\",count:1},{id:\"power:blood_armor_chestplate\",count:1},{id:\"power:blood_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

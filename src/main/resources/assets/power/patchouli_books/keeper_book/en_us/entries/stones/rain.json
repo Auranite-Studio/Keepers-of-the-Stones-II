@@ -1,0 +1,27 @@
+{
+    "name": "Rain",
+    "icon": "power:textures/mob_effect/rain_master.png",
+    "category": "power:stones",
+    "sortnum": 11,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Rain splash - deals damage in the form of a rainwater beam attack.",
+                "$(li)",
+                "Rain Curtain - deals damage to the nearest mobs within a 10 block radius.",
+                "$(li)",
+                "Rain Flying - allows the player to fly (the lifting power is stronger in rain than not in rain)."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Rain",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:rain_bow\",count:1}],ArmorItems:[{id:\"power:rain_armor_boots\",count:1},{id:\"power:rain_armor_leggings\",count:1},{id:\"power:rain_armor_chestplate\",count:1},{id:\"power:rain_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

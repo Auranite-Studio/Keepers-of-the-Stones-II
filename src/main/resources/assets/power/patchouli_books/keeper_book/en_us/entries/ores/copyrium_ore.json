@@ -1,0 +1,40 @@
+{
+    "name": "Copyrium Ore",
+    "icon": "power:copyrium_ore",
+    "category": "power:ores",
+    "sortnum": 3,
+    "pages": [
+        {
+            "type": "text",
+            "text": "Copyrium Ore — a unique mineral found in snowy biomes, capable of temporarily copying and transferring elemental powers. Used to craft Elemental Power Generators and empty characteristic cards."
+        },
+        {
+            "type": "spotlight",
+            "title": "Copyrium Ore",
+            "item": "power:copyrium_ore",
+            "text": "Generates in snowy biomes between heights 8-64.$(br2)Smelting yields $(l)Copyrium Ingot$(), used in advanced crafting."
+        },
+        {
+            "type": "crafting",
+            "title": "Empty Characteristics Card",
+            "recipe": "power:characteristics_card_craft",
+            "text": "Recipe:$(br)Paper + Copyrium Ingot$(br2)Recording rank and level player data."
+        },
+        {
+            "type": "spotlight",
+            "title": "Elemental Power Generator",
+            "item": "power:elemental_power_generator",
+            "text": "Mechanics:$(br2)- Transfer power to player (RMB)$(br)- Reset: SHIFT+RMB"
+        },
+        {
+            "type": "crafting",
+            "title": "Generator Crafting",
+            "recipe": "power:elemental_power_generator_craft",
+            "text": "Requires:$(br)5x Copyrium Ingot$(br)4x Amplifier Drop"
+        },
+        {
+            "type": "text",
+            "text": "Features:$(br2)Copied elemental power:$(br)- Automatically disappears after 90 seconds$(br2)Star points regenerate within 64 blocks$(br2)Generator works in any conditions."
+        }
+    ]
+}

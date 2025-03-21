@@ -1,0 +1,27 @@
+{
+    "name": "Smoke",
+    "icon": "power:textures/mob_effect/smoke_master.png",
+    "category": "power:stones",
+    "sortnum": 43,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Smoke attack - attacks entities with a beam attack, dealing a some negative effect to them.",
+                "$(li)",
+                "Smoke bomb - when it hits a block, it spawns tubers of smoke.",
+                "$(li)",
+                "Smoke Intangibility - turns the player into smoke and cannot be attacked."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Smoke",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:smoke_musket\",count:1}],ArmorItems:[{id:\"power:smoke_armor_boots\",count:1},{id:\"power:smoke_armor_leggings\",count:1},{id:\"power:smoke_armor_chestplate\",count:1},{id:\"power:smoke_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

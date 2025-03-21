@@ -1,9 +1,9 @@
 
 **New features**
-- *N/A*
+- Added keeper's book (works if the Patchouli mod is installed)
 
 **Improvemnts** 
-- 
+- *N/A*
 
 **API changes**
 - Colorful Powers API has been updated to version 24
