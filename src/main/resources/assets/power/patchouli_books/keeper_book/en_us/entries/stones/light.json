@@ -1,0 +1,27 @@
+{
+    "name": "Light",
+    "icon": "power:textures/mob_effect/light_master.png",
+    "category": "power:stones",
+    "sortnum": 17,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Ray of Light - attacks with a beam attack.",
+                "$(li)",
+                "Ball of Light - blinds an entity when it hits it.",
+                "$(li)",
+                "Blinding Flash - blinds everyone within a 3 block radius."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Light",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:light_sword\",count:1}],ArmorItems:[{id:\"power:light_armor_boots\",count:1},{id:\"power:light_armor_leggings\",count:1},{id:\"power:light_armor_chestplate\",count:1},{id:\"power:light_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

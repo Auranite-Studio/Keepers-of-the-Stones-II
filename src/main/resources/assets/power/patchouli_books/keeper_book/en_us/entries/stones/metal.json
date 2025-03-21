@@ -1,0 +1,27 @@
+{
+    "name": "Metal",
+    "icon": "power:textures/mob_effect/metal_master.png",
+    "category": "power:stones",
+    "sortnum": 16,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Metal Attack - allows you to use metal blocks to attack (if you have gold or iron blocks in your inventory, you can throw them. The damage will be higher).",
+                "$(li)",
+                "Metal Knives - attacks with knives on a radius in all directions except up and down.",
+                "$(li)",
+                "Metal Skin - gives invulnerability to most attacks, but slows the player down (also useless against the first poison elemental attack)."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Metal",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:right_metal_gauntlet\",count:1},{id:\"power:left_metal_gauntlet\",count:1}],ArmorItems:[{id:\"power:metal_armor_boots\",count:1},{id:\"power:metal_armor_leggings\",count:1},{id:\"power:metal_armor_chestplate\",count:1},{id:\"power:metal_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

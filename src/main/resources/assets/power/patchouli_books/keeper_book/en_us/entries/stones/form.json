@@ -1,0 +1,27 @@
+{
+    "name": "Form",
+    "icon": "power:textures/mob_effect/form_master.png",
+    "category": "power:stones",
+    "sortnum": 44,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Warp wave - warps the size of the entity",
+                "$(li)",
+                "Miniaturization - reduces the player's size.",
+                "$(li)",
+                "Gigantization - increases the player's size."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Form",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:form_sai\",count:1},{id:\"power:form_sai\",count:1}],ArmorItems:[{id:\"power:form_armor_boots\",count:1},{id:\"power:form_armor_leggings\",count:1},{id:\"power:form_armor_chestplate\",count:1},{id:\"power:form_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

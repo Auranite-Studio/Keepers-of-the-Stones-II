@@ -1,0 +1,27 @@
+{
+    "name": "Space",
+    "icon": "power:textures/mob_effect/space_master.png",
+    "category": "power:stones",
+    "sortnum": 23,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Star flow - fires a beam attack at an entity.",
+                "$(li)",
+                "Meteorite - fires a powerful meteorite that does good damage to an entity.",
+                "$(li)",
+                "Black hole - creates a black hole that attracts all entities (black hole disappears over time)."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Space",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:constellation_sword\",count:1}],ArmorItems:[{id:\"power:space_armor_boots\",count:1},{id:\"power:space_armor_leggings\",count:1},{id:\"power:space_armor_chestplate\",count:1},{id:\"power:space_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

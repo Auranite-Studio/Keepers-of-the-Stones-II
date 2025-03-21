@@ -1,0 +1,27 @@
+{
+    "name": "Poison",
+    "icon": "power:textures/mob_effect/poison_master.png",
+    "category": "power:stones",
+    "sortnum": 35,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Toxic acid flow - attacks entities with a beam attack, dealing a poison effect to them.",
+                "$(li)",
+                "Poison bomb - creates a poisonous puddle when it hits a block.",
+                "$(li)",
+                "Cleaning - removes all negative effects from the player."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Poison",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:poison_bow\",count:1}],ArmorItems:[{id:\"power:poison_armor_boots\",count:1},{id:\"power:poison_armor_leggings\",count:1},{id:\"power:poison_armor_chestplate\",count:1},{id:\"power:poison_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

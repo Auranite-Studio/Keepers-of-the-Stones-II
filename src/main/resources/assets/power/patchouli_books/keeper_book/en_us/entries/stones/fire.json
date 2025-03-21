@@ -1,0 +1,27 @@
+{
+    "name": "Fire",
+    "icon": "power:textures/mob_effect/fire_master.png",
+    "category": "power:stones",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Flamethrower - allows the fire master to set a target on fire (if the battle is underwater, it can do serious damage to the enemy).",
+                "$(li)",
+                "Triple Fireball - the fire master fires three projectiles every second.",
+                "$(li)",
+                "Jet Flight - allows the firebender to temporarily fly into the air."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Fire",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:fire_sword\",count:1}],ArmorItems:[{id:\"power:fire_armor_boots\",count:1},{id:\"power:fire_armor_leggings\",count:1},{id:\"power:fire_armor_chestplate\",count:1},{id:\"power:fire_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
