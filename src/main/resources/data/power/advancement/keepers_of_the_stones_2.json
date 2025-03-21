@@ -17,7 +17,13 @@
   },
   "criteria": {
     "keepers_of_the_stones_2_0": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:tick"
     }
+  },
+  "rewards": {
+    "experience": 0,
+    "loot": [
+      "power:grant_book_on_first_join"
+    ]
   }
 }

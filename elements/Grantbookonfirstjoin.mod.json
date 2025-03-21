@@ -1,0 +1,10 @@
+{
+  "_fv": 77,
+  "_type": "loottable",
+  "definition": {
+    "type": "Advancement reward",
+    "pools": [],
+    "name": "grant_book_on_first_join",
+    "namespace": "mod"
+  }
+}
