@@ -2,6 +2,7 @@
     "name": "Amplifier Ore",
     "icon": "power:amplifier_ore",
     "category": "power:ores",
+    "sortnum": 2,
     "pages": [
         {
             "type": "text",

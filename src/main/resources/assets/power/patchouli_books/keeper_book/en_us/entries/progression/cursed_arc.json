@@ -1,41 +1,41 @@
 {
-    "name": "First Stage: Energium Golem",
-    "icon": "power:energium_key",
+    "name": "Second Stage",
+    "icon": "power:cursed_key",
     "category": "power:progression",
+    "sortnum": 2,
     "pages": [
         {
             "type": "text",
-            "text": "The first major milestone requires defeating the Energium Golem. This powerful boss guards ancient secrets in Energium Temples found in desert and mesa biomes."
+            "text": "The second stage requires defeating the Cursed Keeper. You must craft a full Energium Armor set to enter the Cursed Forest biome without fatal curse effects."
         },
         {
             "type": "spotlight",
-            "title": "Energium Temple",
-            "item": "power:energium_block",
-            "text": "Temples generate in deserts/mesas.$(br2)The golem awaits on the $(l)second floor$()."
+            "title": "Cursed Forest Biome",
+            "item": "power:freaking_parsnip",
+            "text": "Accessible only with $(l)full Energium Armor$(). Contains Cursed Knights and Squires. The Cursed Castle spawns at biome center."
         },
         {
             "type": "entity",
-            "entity": "power:energium_golem",
-            "scale": 0.70,
-            "offset": 1,
-            "title": "Energium Golem",
-            "text":"Stats:$(br)- 500 HP$(br)- Immune to knockback and ranged weapons"
+            "entity": "power:cursed_keeper",
+            "scale": 0.75,
+            "title": "Cursed Keeper",
+            "text": "Stats:$(br)- 700 HP$(br)- Phase-based mechanics"
         },
         {
             "type": "text",
-            "text": "Drops:$(br)11 Energium Keys$(br)1 Energium Core$(br)Combat Mechanics:$(br2)Melee:$(br)- Powerful punches with extreme knockback$(br2)Ranged:$(br)- Shoots energy from the core"
+            "text": "Combat Phases:$(br2)$(l)Phase 1 (Invulnerable):$()$(br)- Summons 3 waves of Cursed Knights/Squires$(br2)$(l)Phase 2 (Vulnerable):$()$(br)- Flamethrower$(br)- Air shield (invincibility)$(br)- Stalagmite piercing$(br)- Water healing (increase chance below 350 HP)"
         },
         {
             "type": "spotlight",
-            "title": "Energium Vaults",
-            "item": "power:energium_vault",
-            "text": "Use 11 keys from the golem to open vaults in temple's secret rooms. Contains smithing templates and some rare resources."
+            "title": "Rewards",
+            "item": "power:luck_coin",
+            "text": "Drops:$(br)1 Luck Coin$(br)8 Cursed Keys$(br2)Unlocks the Keeper's Box on castle's 3rd floor with permanent elemental stone choice."
         },
         {
-            "type": "crafting",
-            "title": "Core Utilization",
-            "recipe": "power:energium_controller_recipe",
-            "text": "Energium Core is essential for crafting the Energium Controller.$(br2)When activated with Redstone, blocks all power-based effects within a 48-block radius."
+            "type": "spotlight",
+            "title": "Cursed Vaults",
+            "item": "power:cursed_vault",
+            "text": "Use 8 Cursed Keys to open vaults in the castle. Contains rare exclusive resources."
         }
     ]
 }

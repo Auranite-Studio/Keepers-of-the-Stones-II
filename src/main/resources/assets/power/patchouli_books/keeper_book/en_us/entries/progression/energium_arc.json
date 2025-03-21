@@ -1,7 +1,8 @@
 {
-    "name": "First Stage: Energium Golem",
+    "name": "First Stage",
     "icon": "power:energium_key",
     "category": "power:progression",
+    "sortnum": 1,
     "pages": [
         {
             "type": "text",

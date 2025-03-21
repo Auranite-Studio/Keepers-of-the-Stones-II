@@ -2,6 +2,7 @@
     "name": "Copyrium Ore",
     "icon": "power:copyrium_ore",
     "category": "power:ores",
+    "sortnum": 3,
     "pages": [
         {
             "type": "text",
