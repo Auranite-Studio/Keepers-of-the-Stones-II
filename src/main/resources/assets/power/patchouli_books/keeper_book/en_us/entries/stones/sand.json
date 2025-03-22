@@ -1,0 +1,27 @@
+{
+    "name": "Sand",
+    "icon": "power:textures/mob_effect/sand_master.png",
+    "category": "power:stones",
+    "sortnum": 32,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Sand jet - attacks entities with a beam attack, dealing a blinding effect to them.",
+                "$(li)",
+                "Burial - spawns falling sand over the entity.",
+                "$(li)",
+                "Sandstorm - creates a sandstorm that damages all entities within it for a while."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Sand",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:sand_saber\",count:1}],ArmorItems:[{id:\"power:sand_armor_boots\",count:1},{id:\"power:sand_armor_leggings\",count:1},{id:\"power:sand_armor_chestplate\",count:1},{id:\"power:sand_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
