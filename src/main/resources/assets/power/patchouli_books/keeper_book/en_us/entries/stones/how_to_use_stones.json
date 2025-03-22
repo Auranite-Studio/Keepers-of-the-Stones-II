@@ -1,0 +1,17 @@
+{
+    "name": "How to use the stones?",
+    "icon": "power:textures/item/fire_armor_helmet.png",
+    "category": "power:stones",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "In order to use the stone you need to take it in your main hand and press right mouse button. After that your stone will be activated and you will be wearing weapons and armor.To use an ability first press the Y key to select one of the four abilities. Then press the R key to use the selected ability. To deactivate the stone press the U key. Keep in mind that using abilities consumes star points."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Also you have a limited time to use the stone (10 minutes), if the time runs out or you deactivate the stone in survival mode it will go into recharge mode for 5 minutes. Also, stones can be combined up to 3 pieces at a time."
+        }
+
+    ]
+}

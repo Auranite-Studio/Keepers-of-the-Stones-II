@@ -1,0 +1,27 @@
+{
+    "name": "Destruction",
+    "icon": "power:textures/mob_effect/destruction_master.png",
+    "category": "power:stones",
+    "sortnum": 26,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Destruction ray - attacks with a beam attack and also applies a wither effect to the enemy.",
+                "$(li)",
+                "Destruction ball - explodes when hitting a block or an entity (hitting an entity causes a wither effect).",
+                "$(li)",
+                "Lethal result - imposes an effect on the nearest entity that causes it to die after a while, unless it has an totem of undying."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Destruction",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:destruction_broadsword\",count:1}],ArmorItems:[{id:\"power:destruction_armor_boots\",count:1},{id:\"power:destruction_armor_leggings\",count:1},{id:\"power:destruction_armor_chestplate\",count:1},{id:\"power:destruction_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

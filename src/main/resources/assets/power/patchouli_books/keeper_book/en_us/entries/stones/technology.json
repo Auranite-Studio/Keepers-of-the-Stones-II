@@ -1,0 +1,27 @@
+{
+    "name": "Technology",
+    "icon": "power:textures/mob_effect/technology_master.png",
+    "category": "power:stones",
+    "sortnum": 28,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Red plasma ball - shoots a small ball at the enemy.",
+                "$(li)",
+                "Technobarrier - Creates a barrier that entities cannot pass through, but some types of damage can pass through it.",
+                "$(li)",
+                "Turret - creates a turret that shoots plasma balls at enemies."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Technologies",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:techno_pickaxe\",count:1}],ArmorItems:[{id:\"power:technology_armor_boots\",count:1},{id:\"power:technology_armor_leggings\",count:1},{id:\"power:technology_armor_chestplate\",count:1},{id:\"power:technology_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
