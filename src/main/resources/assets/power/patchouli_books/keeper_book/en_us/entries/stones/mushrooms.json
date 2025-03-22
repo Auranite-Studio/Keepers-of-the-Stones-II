@@ -1,0 +1,27 @@
+{
+    "name": "Mushrooms",
+    "icon": "power:textures/mob_effect/mushrooms_master.png",
+    "category": "power:stones",
+    "sortnum": 37,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Flying spores - attacks entities with a beam attack, dealing a some negative effect to them.",
+                "$(li)",
+                "Planting mushrooms - plants mushrooms that impose negative effects within range with spores.",
+                "$(li)",
+                "Mushroom saturation - gives saturation to the player for a while."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Mushrooms",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:mushrooms_hammer\",count:1}],ArmorItems:[{id:\"power:mushrooms_armor_boots\",count:1},{id:\"power:mushrooms_armor_leggings\",count:1},{id:\"power:mushrooms_armor_chestplate\",count:1},{id:\"power:mushrooms_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

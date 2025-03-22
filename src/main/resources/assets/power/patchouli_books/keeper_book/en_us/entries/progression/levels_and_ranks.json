@@ -1,0 +1,38 @@
+{
+    "name": "Level & Rank System",
+    "icon": "power:characteristics_card",
+    "category": "power:progression",
+    "sortnum": 3,
+    "pages": [
+        {
+            "type": "text",
+            "text": "Level System:$(br2)- 20 total levels$(br)- Requires killing mobs with activated elemental stone$(br)- Each level needs 100 more XP than previous$(br2)Bonus per level:$(br)- Ability damage increase$(br)- Strength effect (1.5 minutes)"
+        },
+        {
+            "type": "text",
+            "title": "XP Values",
+            "text": "1 XP:$(br)Zombie, Zombie Villager, Drowned, Husk, Vex, Slime, Endermite, Spider, Skeleton, Bogged, Stray, Silverfish$(br2)2 XP:$(br)Creeper, Enderman, Cave Spider, Wither Skeleton$(br2)3 XP:$(br)Guardian, Ghast, Piglin, Zoglin, Hoglin, Pillager, Evoker, Vindicator, Illusioner, Witch, Magma Cube, Phantom, Breeze, Blaze"
+        },
+        {
+            "type": "text",
+            "text": "5 XP:$(br)Elder Guardian, Shulker, Cursed Knight, Cursed Squire, Ravager, Piglin Brute$(br2)50 XP:$(br)Cursed Keeper, Energium Golem, Wither, Ender Dragon, Warden"
+        },
+        {
+            "type": "text",
+            "title": "Rank System",
+            "text": "Ranks unlock at specific levels:$(br2)$(l)D Rank$() - Starting rank$(br)$(l)C Rank$() - Level 5$(br)$(l)B Rank$() - Level 10$(br)$(l)A Rank$() - Level 15$(br)$(l)S Rank$() - Level 20$(br2)Ranks enhance Master Effect tiers"
+        },
+        {
+            "type": "image",
+            "title": "Rank Seals",
+            "images": [
+                "power:textures/screens/book_images/rank_d_print.png",
+                "power:textures/screens/book_images/rank_c_print.png",
+                "power:textures/screens/book_images/rank_b_print.png",
+                "power:textures/screens/book_images/rank_a_print.png",
+                "power:textures/screens/book_images/rank_s_print.png"
+            ],
+            "text": "Rank seal designs displayed above."
+        }
+    ]
+}
