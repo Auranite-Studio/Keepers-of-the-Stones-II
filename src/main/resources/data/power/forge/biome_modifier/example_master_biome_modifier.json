@@ -1,7 +1,7 @@
 {
-  "type": "neoforge:add_spawns",
+  "type": "forge:add_spawns",
   "biomes": {
-    "type": "neoforge:any"
+    "type": "forge:any"
   },
   "spawners": {
     "type": "power:example_master",

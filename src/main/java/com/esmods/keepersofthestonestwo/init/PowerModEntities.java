@@ -46,6 +46,7 @@ import com.esmods.keepersofthestonestwo.entity.IceAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.GrenadeEntity;
 import com.esmods.keepersofthestonestwo.entity.GrassBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.GoldAttackProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.ExampleMasterEntity;
 import com.esmods.keepersofthestonestwo.entity.EtherAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.EnergyChargeEntity;
 import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
@@ -137,7 +138,7 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<TurretProjectileEntity>> TURRET_PROJECTILE = register("turret_projectile", EntityType.Builder.<TurretProjectileEntity>of(TurretProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(TurretProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<AtomicRocketEntity>> ATOMIC_ROCKET = register("atomic_rocket",
-			EntityType.Builder.<AtomicRocketEntity>of(AtomicRocketEntity::new, MobCategory.MISC).setCustomClientFactory(AtomicRocketEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<AtomicRocketEntity>of(AtomicRocketEntity::new, MobCategory.MISC).setCustomClientFactory(AtomicRocketEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(1f, 1f));
 	public static final RegistryObject<EntityType<GrenadeEntity>> GRENADE = register("grenade",
 			EntityType.Builder.<GrenadeEntity>of(GrenadeEntity::new, MobCategory.MISC).setCustomClientFactory(GrenadeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PoisonDropProjectileEntity>> POISON_DROP_PROJECTILE = register("poison_drop_projectile", EntityType.Builder.<PoisonDropProjectileEntity>of(PoisonDropProjectileEntity::new, MobCategory.MISC)
@@ -175,6 +176,10 @@ public class PowerModEntities {
 			.setTrackingRange(32).setUpdateInterval(3).setCustomClientFactory(CursedSquireEntity::new).fireImmune().sized(1f, 1f));
 	public static final RegistryObject<EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper", EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(256).setUpdateInterval(3).setCustomClientFactory(CursedKeeperEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ExampleMasterEntity>> EXAMPLE_MASTER = register("example_master",
+			EntityType.Builder.<ExampleMasterEntity>of(ExampleMasterEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ExampleMasterEntity::new)
+
+					.sized(0.6f, 2f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -194,6 +199,7 @@ public class PowerModEntities {
 			EnergiumGolemEntity.init();
 			CursedSquireEntity.init();
 			CursedKeeperEntity.init();
+			ExampleMasterEntity.init();
 		});
 	}
 
@@ -208,5 +214,6 @@ public class PowerModEntities {
 		event.put(ENERGIUM_GOLEM.get(), EnergiumGolemEntity.createAttributes().build());
 		event.put(CURSED_SQUIRE.get(), CursedSquireEntity.createAttributes().build());
 		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
+		event.put(EXAMPLE_MASTER.get(), ExampleMasterEntity.createAttributes().build());
 	}
 }

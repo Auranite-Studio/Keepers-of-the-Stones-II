@@ -18,6 +18,6 @@ public class ExampleMasterRenderer extends HumanoidMobRenderer<ExampleMasterEnti
 
 	@Override
 	public ResourceLocation getTextureLocation(ExampleMasterEntity entity) {
-		return ResourceLocation.parse("power:textures/entities/steve.png");
+		return new ResourceLocation("power:textures/entities/steve.png");
 	}
 }
