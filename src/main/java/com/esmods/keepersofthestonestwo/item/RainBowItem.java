@@ -15,7 +15,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
-import com.esmods.keepersofthestonestwo.procedures.RainBowKazhdyiTikVInvientarieProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 import com.esmods.keepersofthestonestwo.entity.RainDropProjectileEntity;
 
 public class RainBowItem extends Item {
@@ -46,7 +46,7 @@ public class RainBowItem extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		RainBowKazhdyiTikVInvientarieProcedure.execute(entity);
+		RemoveForbiddenItemProcedure.execute(entity, itemstack);
 	}
 
 	@Override

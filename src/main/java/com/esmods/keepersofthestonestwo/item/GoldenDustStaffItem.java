@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.Entity;
 
-import com.esmods.keepersofthestonestwo.procedures.GoldenDustStaffKazhdyiTikVInvientarieProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 
 public class GoldenDustStaffItem extends SwordItem {
 	public GoldenDustStaffItem() {
@@ -46,7 +46,7 @@ public class GoldenDustStaffItem extends SwordItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		GoldenDustStaffKazhdyiTikVInvientarieProcedure.execute(entity);
+		RemoveForbiddenItemProcedure.execute(entity, itemstack);
 	}
 
 	@Override

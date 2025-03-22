@@ -40,7 +40,7 @@ public class CursedKeeperAttackDetectionProcedure {
 										entity.getPersistentData().putString("State", "Air");
 									} else if (Math.random() < (5) / ((float) 10)) {
 										entity.getPersistentData().putString("State", "Earth");
-									} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 175 ? Math.random() < (3) / ((float) 10) : Math.random() < (6) / ((float) 10)) {
+									} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 350 ? Math.random() < (3) / ((float) 10) : Math.random() < (6) / ((float) 10)) {
 										entity.getPersistentData().putString("State", "Water");
 									}
 								}

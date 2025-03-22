@@ -39,6 +39,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.IceAttackProjectileRende
 import com.esmods.keepersofthestonestwo.client.renderer.GrenadeRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.GrassBlockAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.GoldAttackProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.ExampleMasterRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.EtherAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.EnergyChargeRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.EnergiumGolemRenderer;
@@ -107,5 +108,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.ENERGIUM_GOLEM.get(), EnergiumGolemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_SQUIRE.get(), CursedSquireRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_KEEPER.get(), CursedKeeperRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.EXAMPLE_MASTER.get(), ExampleMasterRenderer::new);
 	}
 }

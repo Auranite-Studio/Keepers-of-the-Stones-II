@@ -35,8 +35,6 @@ public class ImmortalityProtectionProcedure {
 				_entity.setHealth(1);
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 4));

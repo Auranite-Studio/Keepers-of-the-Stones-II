@@ -32,8 +32,6 @@ public class CursedKeepersFirstPhaseImmuneProcedure {
 		if (entity instanceof CursedKeeperEntity && (!entity.getPersistentData().getBoolean("Phase") || entity.getPersistentData().getDouble("windShield") > 0) && (sourceentity instanceof ServerPlayer || sourceentity instanceof Player)) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
 			}
 		}
 	}

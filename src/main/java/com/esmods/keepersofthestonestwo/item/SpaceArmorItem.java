@@ -15,10 +15,7 @@ import net.minecraft.sounds.SoundEvent;
 
 import com.google.common.collect.Iterables;
 
-import com.esmods.keepersofthestonestwo.procedures.SpaceArmorKazhdyiTikDliaShliemaProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SpaceArmorKazhdyiTikDliaPonozhieiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SpaceArmorKazhdyiTikDliaNaghrudnikaProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SpaceArmorKazhdyiTikDliaBotinokProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 
 public abstract class SpaceArmorItem extends ArmorItem {
 	public SpaceArmorItem(ArmorItem.Type type, Item.Properties properties) {
@@ -79,7 +76,7 @@ public abstract class SpaceArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				SpaceArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}
@@ -98,7 +95,7 @@ public abstract class SpaceArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				SpaceArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}
@@ -117,7 +114,7 @@ public abstract class SpaceArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				SpaceArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}
@@ -136,7 +133,7 @@ public abstract class SpaceArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				SpaceArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
 	}

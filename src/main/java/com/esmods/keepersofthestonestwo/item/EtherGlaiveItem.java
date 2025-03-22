@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.Entity;
 
-import com.esmods.keepersofthestonestwo.procedures.EtherGlaiveKazhdyiTikVInvientarieProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 
 public class EtherGlaiveItem extends SwordItem {
 	public EtherGlaiveItem() {
@@ -46,7 +46,7 @@ public class EtherGlaiveItem extends SwordItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		EtherGlaiveKazhdyiTikVInvientarieProcedure.execute(entity);
+		RemoveForbiddenItemProcedure.execute(entity, itemstack);
 	}
 
 	@Override

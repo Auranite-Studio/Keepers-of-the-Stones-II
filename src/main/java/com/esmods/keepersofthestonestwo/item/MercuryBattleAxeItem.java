@@ -12,7 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.Entity;
 
-import com.esmods.keepersofthestonestwo.procedures.MercuryBattleAxeKazhdyiTikVInvientarieProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 
 public class MercuryBattleAxeItem extends AxeItem {
 	public MercuryBattleAxeItem() {
@@ -46,7 +46,7 @@ public class MercuryBattleAxeItem extends AxeItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		MercuryBattleAxeKazhdyiTikVInvientarieProcedure.execute(entity);
+		RemoveForbiddenItemProcedure.execute(entity, itemstack);
 	}
 
 	@Override

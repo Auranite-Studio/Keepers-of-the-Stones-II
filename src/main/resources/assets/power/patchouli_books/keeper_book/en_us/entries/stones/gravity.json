@@ -1,0 +1,27 @@
+{
+    "name": "Gravity",
+    "icon": "power:textures/mob_effect/gravity_master.png",
+    "category": "power:stones",
+    "sortnum": 42,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Gravity wave - deals damage to the enemy while pushing them back by about 3 block.",
+                "$(li)",
+                "Telekinesis - makes the entity fly up into the sky.",
+                "$(li)",
+                "Gravity denial - allows the master to fly temporarily into the air."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Gravity",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:gravity_mace\",count:1}],ArmorItems:[{id:\"power:gravity_armor_boots\",count:1},{id:\"power:gravity_armor_leggings\",count:1},{id:\"power:gravity_armor_chestplate\",count:1},{id:\"power:gravity_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

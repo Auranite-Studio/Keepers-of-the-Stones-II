@@ -11,16 +11,16 @@
     "enableBoots": true,
     "textureBoots": "light_armor_boots",
     "onHelmetTick": {
-      "name": "LightArmorKazhdyiTikDliaShliema"
+      "name": "RemoveForbiddenItem"
     },
     "onBodyTick": {
-      "name": "LightArmorKazhdyiTikDliaNaghrudnika"
+      "name": "RemoveForbiddenItem"
     },
     "onLeggingsTick": {
-      "name": "LightArmorKazhdyiTikDliaPonozhiei"
+      "name": "RemoveForbiddenItem"
     },
     "onBootsTick": {
-      "name": "LightArmorKazhdyiTikDliaBotinok"
+      "name": "RemoveForbiddenItem"
     },
     "creativeTabs": [],
     "armorTextureFile": "light_armor",
@@ -68,6 +68,18 @@
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
     "helmetPiglinNeutral": {
       "fixedValue": false
     },

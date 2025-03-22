@@ -31,8 +31,6 @@ public class SmokeIntangibilityCancelAttackProcedure {
 		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.SMOKE_INTANGIBILITY.get()) && entity instanceof LivingEntity) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
 			}
 		}
 	}

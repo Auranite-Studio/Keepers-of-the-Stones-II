@@ -1,0 +1,27 @@
+{
+    "name": "Explosion",
+    "icon": "power:textures/mob_effect/explosion_master.png",
+    "category": "power:stones",
+    "sortnum": 30,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Grenade explosion - throws a grenade that explodes on impact.",
+                "$(li)",
+                "Self-detonation - undermines a mob in close combat.",
+                "$(li)",
+                "Atomic bomb - throws a nuclear missile on impact explodes and imposes a powerful poisoning effect."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Explosion",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:explosion_mace\",count:1}],ArmorItems:[{id:\"power:explosion_armor_boots\",count:1},{id:\"power:explosion_armor_leggings\",count:1},{id:\"power:explosion_armor_chestplate\",count:1},{id:\"power:explosion_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

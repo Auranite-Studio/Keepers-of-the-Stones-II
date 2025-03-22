@@ -38,8 +38,6 @@ public class AmberDestructionArmorProcedure {
 		if (entity.getPersistentData().getBoolean("amberLayer")) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
 			}
 			world.levelEvent(2001, BlockPos.containing(x, y + 1, z), Block.getId(PowerModBlocks.AMBER_BLOCK.get().defaultBlockState()));
 			world.levelEvent(2001, BlockPos.containing(x, y, z), Block.getId(PowerModBlocks.AMBER_BLOCK.get().defaultBlockState()));
