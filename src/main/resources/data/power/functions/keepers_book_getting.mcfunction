@@ -1,1 +1,1 @@
-give @s patchouli:guide_book[patchouli:book="power:keeper_book"]
+give @s patchouli:guide_book{"patchouli:book":"power:keeper_book"}

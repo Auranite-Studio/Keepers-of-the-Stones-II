@@ -2,7 +2,7 @@
   "_fv": 77,
   "_type": "function",
   "definition": {
-    "code": "give @s patchouli:guide_book[patchouli:book=\"power:keeper_book\"]",
+    "code": "give @s patchouli:guide_book{\"patchouli:book\":\"power:keeper_book\"}",
     "name": "keepers_book_getting",
     "namespace": "mod"
   }
