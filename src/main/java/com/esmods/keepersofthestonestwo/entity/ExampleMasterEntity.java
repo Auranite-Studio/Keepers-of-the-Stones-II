@@ -16,17 +16,13 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import com.esmods.keepersofthestonestwo.procedures.ExampleMasterKillingProcedure;
+
 public class ExampleMasterEntity extends Monster {
 	public ExampleMasterEntity(EntityType<ExampleMasterEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(true);
-		setPersistenceRequired();
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override
@@ -44,13 +40,19 @@ public class ExampleMasterEntity extends Monster {
 		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
 	}
 
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		ExampleMasterKillingProcedure.execute(this);
+	}
+
 	public static void init(RegisterSpawnPlacementsEvent event) {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 10);
+		builder = builder.add(Attributes.MAX_HEALTH, 1);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
