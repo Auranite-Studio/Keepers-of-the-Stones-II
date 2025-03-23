@@ -28254,7 +28254,7 @@
     {
       "name": "CursedKeeperAttackDetection",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_keeper_attack_detection",
       "metadata": {
@@ -32209,7 +32209,6 @@
       "registry_name": "example_master",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/neoforge/biome_modifier/example_master_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/ExampleMasterEntity.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/ExampleMasterRenderer.java"
         ]
@@ -32541,6 +32540,25 @@
         ]
       },
       "path": "~/Achievements"
+    },
+    {
+      "name": "ExampleMasterKilling",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "example_master_killing",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExampleMasterKillingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/ExampleMaster"
     }
   ],
   "variable_elements": [
@@ -33431,11 +33449,6 @@
     }
   ],
   "tag_elements": {
-    "ITEMS:minecraft:music_discs": [
-      "~CUSTOM:MusicHope",
-      "~CUSTOM:MusicDiscAncientMood",
-      "~CUSTOM:MusicDiscCallOfThePast"
-    ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",
       "CUSTOM:EnergiumAxe",
@@ -33448,19 +33461,24 @@
       "CUSTOM:CreationHoe",
       "CUSTOM:CreationShovel"
     ],
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:MusicHope",
+      "~CUSTOM:MusicDiscAncientMood",
+      "~CUSTOM:MusicDiscCallOfThePast"
+    ],
     "BLOCKS:minecraft:stairs": [
       "~CUSTOM:CursedStoneCrackedBricksStairs",
       "~CUSTOM:PolishedCursedStoneStairs",
       "~CUSTOM:CursedStoneBricksStairs",
       "~CUSTOM:CursedStoneStairs"
     ],
+    "BIOMES:mod:cursed_biomes": [
+      "CUSTOM:CursedForest"
+    ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:TechnoPickaxe",
       "~CUSTOM:CreationPickaxe",
       "~CUSTOM:EnergiumPickaxe"
-    ],
-    "BIOMES:mod:cursed_biomes": [
-      "CUSTOM:CursedForest"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:DarkSword",
@@ -33754,18 +33772,18 @@
       "~CUSTOM:EnergiumAxe",
       "~CUSTOM:TornadoAxe"
     ],
+    "ITEMS:minecraft:trim_materials": [
+      "CUSTOM:DepletedEnergiumIngot",
+      "CUSTOM:EnergiumIngot",
+      "CUSTOM:AmplifierDrop",
+      "CUSTOM:CopyriumIngot"
+    ],
     "ENTITIES:mod:xp/50": [
       "CUSTOM:CursedKeeper",
       "CUSTOM:EnergiumGolem",
       "EntityWither",
       "EntityDragon",
       "EntityWarden"
-    ],
-    "ITEMS:minecraft:trim_materials": [
-      "CUSTOM:DepletedEnergiumIngot",
-      "CUSTOM:EnergiumIngot",
-      "CUSTOM:AmplifierDrop",
-      "CUSTOM:CopyriumIngot"
     ],
     "ITEMS:power:energium_sword_repair_items": [
       "~CUSTOM:EnergiumIngot"
@@ -34487,8 +34505,8 @@
     "ru_ru": {
       "item.power.ether_battery": "Батарея",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
-      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Передача тёмной силы, расходует 80",
       "item.power.ether_stone": "Камень эфира",
+      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Передача тёмной силы, расходует 80",
       "item.power.moon_battery": "Батарея",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
@@ -34749,8 +34767,8 @@
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Энергетический заряженный шар, расходует 35",
       "item.power.thirst_armor_helmet": "Шлем тёмного мастера жажды",
       "block.power.raw_depleted_energium_block": "Блок рудного обеднённого энергиума",
-      "gui.power.keepers_box_gui_part_1.tooltip_lava": "Лава",
       "item.power.energy_battery": "Батарея",
+      "gui.power.keepers_box_gui_part_1.tooltip_lava": "Лава",
       "effect.power.time_master": "Мастер времени",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
       "advancements.what_is_this_metal.title": "Это что за металл?",
@@ -34766,8 +34784,8 @@
       "item.power.lava_battery": "Батарея",
       "item.power.vacuum_stone": "Камень пустоты",
       "item.power.energium_armor_boots": "Энергиумные ботинки",
-      "item.power.poison_stone": "Камень яда",
       "effect.power.destruction_master": "Мастер разрушения",
+      "item.power.poison_stone": "Камень яда",
       "item.power.poison_armor_boots": "Ботинки мастера яда",
       "effect.power.immortality": "Бессмертие",
       "gui.power.wheel_abilities_speed.tooltip_dash_uses_20": "Рывок, расходует 20",
@@ -34781,8 +34799,8 @@
       "gui.power.wheel_abilities_spirit.tooltip_summon_spirit_uses_75": "Призыв духа, расходует 75",
       "item.power.cursed_ladder": "Cursed Ladder",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
-      "item.power.amber_stone": "Камень янтаря",
       "battery.desc.destruction": "Разрушение",
+      "item.power.amber_stone": "Камень янтаря",
       "battery.desc.magnet": "Магнит",
       "effect.power.ether_master": "Мастер эфира",
       "item.power.time_armor_chestplate": "Нагрудник мастера времени",
@@ -35445,8 +35463,8 @@
     "en_us": {
       "item.power.ether_battery": "Battery",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
-      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Dark power transfer, uses 80",
       "item.power.ether_stone": "Ether Stone",
+      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Dark power transfer, uses 80",
       "item.power.moon_battery": "Battery",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
@@ -35707,8 +35725,8 @@
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Energy charged ball, uses 35",
       "item.power.thirst_armor_helmet": "Thirst Helmet",
       "block.power.raw_depleted_energium_block": "Block of Raw Depleted Energium",
-      "gui.power.keepers_box_gui_part_1.tooltip_lava": "Lava",
       "item.power.energy_battery": "Battery",
+      "gui.power.keepers_box_gui_part_1.tooltip_lava": "Lava",
       "effect.power.time_master": "Master of Time",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
       "advancements.what_is_this_metal.title": "What is this metal?",
@@ -35724,8 +35742,8 @@
       "item.power.lava_battery": "Battery",
       "item.power.vacuum_stone": "Vacuum Stone",
       "item.power.energium_armor_boots": "Energium Boots",
-      "item.power.poison_stone": "Poison Stone",
       "effect.power.destruction_master": "Master of Destruction",
+      "item.power.poison_stone": "Poison Stone",
       "item.power.poison_armor_boots": "Poison Boots",
       "effect.power.immortality": "Immortality",
       "gui.power.wheel_abilities_speed.tooltip_dash_uses_20": "Dash, uses 20",
@@ -35739,8 +35757,8 @@
       "gui.power.wheel_abilities_spirit.tooltip_summon_spirit_uses_75": "Summon spirit, uses 75",
       "item.power.cursed_ladder": "Cursed Ladder",
       "item.power.ice_armor_boots": "Ice Boots",
-      "item.power.amber_stone": "Amber Stone",
       "battery.desc.destruction": "Destruction",
+      "item.power.amber_stone": "Amber Stone",
       "battery.desc.magnet": "Magnet",
       "effect.power.ether_master": "Master of the Ether",
       "item.power.time_armor_chestplate": "Time Chestplate",
@@ -37239,7 +37257,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
