@@ -9,7 +9,7 @@
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that caused the example master technical entity to appear in the world
+- [Bugfix] 
 
 **Known issues**
 - *N/A*
