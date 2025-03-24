@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
@@ -65,9 +66,11 @@ public class FireSpecialAttackProcedure {
 							if (!(entityiterator == entity)) {
 								if (entity.isInWater()) {
 									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
-											(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
+											(float) ((world instanceof Level _lvl ? _lvl.dimension() : (world instanceof WorldGenLevel _wgl ? _wgl.getLevel().dimension() : Level.OVERWORLD)) == Level.NETHER
+													? entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.2
+													: entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl));
 								} else {
-									entityiterator.igniteForSeconds(7);
+									entityiterator.igniteForSeconds((int) ((world instanceof Level _lvl ? _lvl.dimension() : (world instanceof WorldGenLevel _wgl ? _wgl.getLevel().dimension() : Level.OVERWORLD)) == Level.NETHER ? 10 : 7));
 									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), 0);
 								}
 							}
@@ -124,7 +127,11 @@ public class FireSpecialAttackProcedure {
 						Level projectileLevel = _shootFrom.level();
 						if (!projectileLevel.isClientSide()) {
 							Projectile _entityToSpawn = initArrowProjectile(new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), 0, 0, 0, projectileLevel, createArrowWeaponItemStack(projectileLevel, 1, (byte) 0)),
-									entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, true, true, false, AbstractArrow.Pickup.DISALLOWED);
+									entity,
+									(float) ((world instanceof Level _lvl ? _lvl.dimension() : (world instanceof WorldGenLevel _wgl ? _wgl.getLevel().dimension() : Level.OVERWORLD)) == Level.NETHER
+											? entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.2
+											: entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl),
+									true, true, false, AbstractArrow.Pickup.DISALLOWED);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -143,7 +150,11 @@ public class FireSpecialAttackProcedure {
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = initArrowProjectile(new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), 0, 0, 0, projectileLevel, createArrowWeaponItemStack(projectileLevel, 1, (byte) 0)),
-										entity, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, true, true, false, AbstractArrow.Pickup.DISALLOWED);
+										entity,
+										(float) ((world instanceof Level _lvl ? _lvl.dimension() : (world instanceof WorldGenLevel _wgl ? _wgl.getLevel().dimension() : Level.OVERWORLD)) == Level.NETHER
+												? entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.2
+												: entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl),
+										true, true, false, AbstractArrow.Pickup.DISALLOWED);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -163,7 +174,10 @@ public class FireSpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = initArrowProjectile(
 											new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), 0, 0, 0, projectileLevel, createArrowWeaponItemStack(projectileLevel, 1, (byte) 0)), entity,
-											(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, true, true, false, AbstractArrow.Pickup.DISALLOWED);
+											(float) ((world instanceof Level _lvl ? _lvl.dimension() : (world instanceof WorldGenLevel _wgl ? _wgl.getLevel().dimension() : Level.OVERWORLD)) == Level.NETHER
+													? entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.2
+													: entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl),
+											true, true, false, AbstractArrow.Pickup.DISALLOWED);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
