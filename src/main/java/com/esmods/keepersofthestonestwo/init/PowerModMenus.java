@@ -6,25 +6,10 @@ package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.network.handling.IPayloadContext;
-import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.inventory.MenuType;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.network.protocol.PacketFlow;
-import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.network.chat.ComponentSerialization;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.registries.Registries;
-
-import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbiltiesGoldenDustMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilityDarknessMenu;
@@ -82,7 +67,6 @@ import com.esmods.keepersofthestonestwo.world.inventory.CharacteristicsCardGUIMe
 import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PowerModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(Registries.MENU, PowerMod.MODID);
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesFireMenu>> WHEEL_ABILITIES_FIRE = REGISTRY.register("wheel_abilities_fire", () -> IMenuTypeExtension.create(WheelAbilitiesFireMenu::new));
@@ -139,45 +123,4 @@ public class PowerModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbiltiesGoldenDustMenu>> WHEEL_ABILTIES_GOLDEN_DUST = REGISTRY.register("wheel_abilties_golden_dust", () -> IMenuTypeExtension.create(WheelAbiltiesGoldenDustMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilityDarknessMenu>> WHEEL_ABILITY_DARKNESS = REGISTRY.register("wheel_ability_darkness", () -> IMenuTypeExtension.create(WheelAbilityDarknessMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<CharacteristicsCardGUIMenu>> CHARACTERISTICS_CARD_GUI = REGISTRY.register("characteristics_card_gui", () -> IMenuTypeExtension.create(CharacteristicsCardGUIMenu::new));
-
-	public static void setText(String boxname, String value, @Nullable ServerPlayer player) {
-		if (player != null) {
-			PacketDistributor.sendToPlayer(player, new GuiSyncMessage(boxname, value));
-		} else {
-			PacketDistributor.sendToAllPlayers(new GuiSyncMessage(boxname, value));
-		}
-	}
-
-	public static record GuiSyncMessage(String editbox, String value) implements CustomPacketPayload {
-		public static final Type<GuiSyncMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "gui_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, GuiSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, GuiSyncMessage message) -> {
-			ComponentSerialization.TRUSTED_STREAM_CODEC.encode(buffer, Component.literal(message.editbox));
-			ComponentSerialization.TRUSTED_STREAM_CODEC.encode(buffer, Component.literal(message.value));
-		}, (RegistryFriendlyByteBuf buffer) -> {
-			String editbox = ComponentSerialization.TRUSTED_STREAM_CODEC.decode(buffer).getString();
-			String value = ComponentSerialization.TRUSTED_STREAM_CODEC.decode(buffer).getString();
-			return new GuiSyncMessage(editbox, value);
-		});
-
-		@Override
-		public Type<GuiSyncMessage> type() {
-			return TYPE;
-		}
-
-		public static void handleData(final GuiSyncMessage message, final IPayloadContext context) {
-			if (context.flow() == PacketFlow.CLIENTBOUND) {
-				context.enqueueWork(() -> {
-					PowerModScreens.handleTextBoxMessage(message);
-				}).exceptionally(e -> {
-					context.connection().disconnect(Component.literal(e.getMessage()));
-					return null;
-				});
-			}
-		}
-	}
-
-	@SubscribeEvent
-	public static void init(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(GuiSyncMessage.TYPE, GuiSyncMessage.STREAM_CODEC, GuiSyncMessage::handleData);
-	}
 }
