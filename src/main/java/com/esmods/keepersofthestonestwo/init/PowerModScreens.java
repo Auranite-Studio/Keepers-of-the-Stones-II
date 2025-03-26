@@ -9,6 +9,13 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.client.Minecraft;
+
+import java.util.HashMap;
+
+import com.esmods.keepersofthestonestwo.init.PowerModMenus.GuiSyncMessage;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbiltiesGoldenDustScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilityDarknessScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesWaterScreen;
@@ -122,5 +129,22 @@ public class PowerModScreens {
 		event.register(PowerModMenus.WHEEL_ABILTIES_GOLDEN_DUST.get(), WheelAbiltiesGoldenDustScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITY_DARKNESS.get(), WheelAbilityDarknessScreen::new);
 		event.register(PowerModMenus.CHARACTERISTICS_CARD_GUI.get(), CharacteristicsCardGUIScreen::new);
+	}
+
+	static void handleTextBoxMessage(GuiSyncMessage message) {
+		String editbox = message.editbox();
+		String value = message.value();
+		Screen currentScreen = Minecraft.getInstance().screen;
+		if (currentScreen instanceof WidgetScreen sc) {
+			HashMap<String, Object> widgets = sc.getWidgets();
+			Object obj = widgets.get("text:" + editbox);
+			if (obj instanceof EditBox box) {
+				box.setValue(value);
+			}
+		}
+	}
+
+	public interface WidgetScreen {
+		HashMap<String, Object> getWidgets();
 	}
 }
