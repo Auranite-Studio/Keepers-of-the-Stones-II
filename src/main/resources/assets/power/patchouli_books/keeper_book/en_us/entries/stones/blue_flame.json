@@ -1,0 +1,27 @@
+{
+    "name": "Blue Flame",
+    "icon": "power:textures/mob_effect/blue_flame_master.png",
+    "category": "power:stones",
+    "sortnum": 41,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Blue flamethrower - allows the fire master to set a target on fire (if the battle is underwater, it can do serious damage to the enemy).",
+                "$(li)",
+                "Six-shot fireballs - the fire master fires six projectiles every second.",
+                "$(li)",
+                "Electric discharge - strikes an entity with lightning."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Blue Flame",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:blue_flame_sword\",count:1}],ArmorItems:[{id:\"power:blue_flame_armor_boots\",count:1},{id:\"power:blue_flame_armor_leggings\",count:1},{id:\"power:blue_flame_armor_chestplate\",count:1},{id:\"power:blue_flame_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
