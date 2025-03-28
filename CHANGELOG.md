@@ -3,7 +3,7 @@
 - *N/A*
 
 **Improvemnts** 
-- *N/A*
+- Added battery charger information to the keeper's book
 
 **API changes**
 - *N/A*
