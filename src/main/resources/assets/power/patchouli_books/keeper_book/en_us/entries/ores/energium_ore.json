@@ -48,6 +48,38 @@
             "title": "Energium Armor",
             "item": "power:energium_armor_helmet,power:energium_armor_chestplate,power:energium_armor_leggings,power:energium_armor_boots",
             "text": "A full armor set grants:$(br2)$(l)Suppression Aura$() — Blocks elemental power within 4 blocks.$(br2)$(l)Curse Immunity$() — Neutralizes all effects of the Cursed Forest biome."
+        },
+        {
+            "type": "text",
+            "title": "Battery Charger",
+            "text": "The Battery Charger is a device that charges elemental batteries using power from elemental stones. Provides temporary elemental energy storage with limited capacity."
+        },
+        {
+            "type": "crafting",
+            "title": "Battery Charger Recipe",
+            "recipe": "power:battery_charger_recipe",
+            "text": "Requires:$(br)6x Depleted Energium Ingots$(br)2x Redstone$(br)1x Nether Quartz"
+        },
+        {
+            "type": "spotlight",
+            "title": "Elemental Batteries",
+            "item": "power:empty_battery",
+            "text": "Key features:$(br2)- Stores 500 star points (non-renewable)$(br)- Lasts 5 minutes (vs stones' 10)$(br)- Charges in Battery Charger (30 seconds)"
+        },
+        {
+            "type": "crafting",
+            "title": "Empty Battery Recipe",
+            "recipe": "power:empty_battery_recipe",
+            "text": "Base component for all elemental batteries. Must be charged in Battery Charger before use."
+        },
+        {
+            "type": "text",
+            "title": "Usage Mechanics",
+            "text": "1. Place Battery Charger$(br2)2. Insert Empty Battery$(br3)3. Provide elemental stone$(br4)4. Wait 30 seconds$(br5)5. Retrieve charged battery"
+        },
+        {
+            "type": "text",
+            "text": "Important limitations:$(br2)- Batteries cannot be recharged$(br)- Star points deplete permanently$(br)- Destroyed when empty$(br2)Best for sharing power with a friend or in emergency situations."
         }
     ]
 }
