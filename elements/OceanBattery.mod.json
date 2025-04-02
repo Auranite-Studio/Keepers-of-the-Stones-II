@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "OceanBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Ocean"
+      ]
     },
     "glowCondition": {
       "fixedValue": false
