@@ -10,6 +10,7 @@
 **API changes**
 - Colorful Powers API has been updated to version 25
 - Removed class for getting element name
+- Unused variables have been removed: ``fog_distance``, ``cursed_fog``, ``is_not_stone``, ``attribute_is_ready``
 
 **Bugfixes**
 - [Bugfix]
