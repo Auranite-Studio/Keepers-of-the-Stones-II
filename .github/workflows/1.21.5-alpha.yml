@@ -1,17 +1,17 @@
 # Automatically builds and publishes the mod when a new release is created on GitHub.
 # It uploads the mod to GitHub, CurseForge and Modrinth.
 
-name: RELEASE
+name: Beta
 
 on:
   push:
     branches:
-      - "1.20.1-release"
+      - "1.21.5-alpha"
 env:                                              
-  MINECRAFT_VERSION: 1.20.1                      
-  JAVA_VERSION: 17      
-  VERSION: 1.1.6
-  RELEASE_NAME: Keepers of the Stones II 1.1.6
+  MINECRAFT_VERSION: 1.21.5                      
+  JAVA_VERSION: 21      
+  VERSION: 1.1.6.1
+  RELEASE_NAME: Keepers of the Stones II 1.1.6.1 Alpha
 
 jobs:
   build:
@@ -49,12 +49,11 @@ jobs:
           
           name: "${{env.RELEASE_NAME}}"                             
           version: "${{env.VERSION}}"
-          version-type: release
-          changelog-file: CHANGELOG.md                                      
+          version-type: alpha
+          changelog-file: BETA_CHANGELOG.md                                      
 
           loaders: |
             neoforge
-            forge
           game-versions: "${{env.MINECRAFT_VERSION}}"
           java: "${{env.JAVA_VERSION}}"
           dependencies: |
@@ -66,7 +65,6 @@ jobs:
             incompatible-dependency(incompatible)
             playeranimator(required){modrinth:gedNE4y2}{curseforge:658587}#(ignore:github)
             patchouli(recommended){modrinth:nU0bVIaL}{curseforge:306770}#(ignore:github)
-            pehkui(required){modrinth:t5W7Jfwy}{curseforge:319596}#(ignore:github)
             better-combat(recommended){modrinth:8BmcQJ2H}{curseforge:639842}#(ignore:github)
             epic-fight(incompatible){modrinth:vu3NZ5Ma}{curseforge:405076}#(ignore:github)
           modrinth-featured: false
