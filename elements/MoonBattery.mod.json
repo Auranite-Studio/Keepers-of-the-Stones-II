@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "MoonBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Moon"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

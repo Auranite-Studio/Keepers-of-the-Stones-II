@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "PlantsBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Plants"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

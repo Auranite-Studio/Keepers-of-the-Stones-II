@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "FormBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Form"
+      ]
     },
     "glowCondition": {
       "fixedValue": false
