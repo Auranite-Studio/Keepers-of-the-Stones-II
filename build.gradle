@@ -3,9 +3,9 @@ plugins {
     id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
 }
 
-version = '1.0'
+version = '1.1.6'
 group = 'com.yourname.modid'
-archivesBaseName = 'modid'
+archivesBaseName = 'Keepers-of-the-Stones-II'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
