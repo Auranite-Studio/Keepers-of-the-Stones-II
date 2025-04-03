@@ -717,16 +717,12 @@ public class PowerModVariables {
 					variables.level_exp = message.data.level_exp;
 					variables.base_damage_by_lvl = message.data.base_damage_by_lvl;
 					variables.max_level_exp = message.data.max_level_exp;
-					variables.is_not_stone = message.data.is_not_stone;
-					variables.attribute_is_ready = message.data.attribute_is_ready;
 					variables.resistance_char = message.data.resistance_char;
 					variables.speed_char = message.data.speed_char;
 					variables.haste_char = message.data.haste_char;
 					variables.jump_char = message.data.jump_char;
 					variables.level_up_status = message.data.level_up_status;
 					variables.rank = message.data.rank;
-					variables.cursed_fog = message.data.cursed_fog;
-					variables.fog_distance = message.data.fog_distance;
 					variables.mind_player_owner = message.data.mind_player_owner;
 					variables.mind_used = message.data.mind_used;
 				}
