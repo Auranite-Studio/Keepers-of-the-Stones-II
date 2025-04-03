@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "LavaBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Lava"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

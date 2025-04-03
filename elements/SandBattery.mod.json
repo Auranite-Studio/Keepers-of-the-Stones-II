@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "SandBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Sand"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

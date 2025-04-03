@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "CreationBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Creation"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

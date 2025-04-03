@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "TornadoBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Tornado"
+      ]
     },
     "glowCondition": {
       "fixedValue": false
