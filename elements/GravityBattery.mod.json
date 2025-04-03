@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "GravityBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Gravity"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

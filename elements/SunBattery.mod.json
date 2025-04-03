@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "SunBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Sun"
+      ]
     },
     "glowCondition": {
       "fixedValue": false
