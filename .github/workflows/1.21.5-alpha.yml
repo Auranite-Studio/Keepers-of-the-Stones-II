@@ -1,7 +1,7 @@
 # Automatically builds and publishes the mod when a new release is created on GitHub.
 # It uploads the mod to GitHub, CurseForge and Modrinth.
 
-name: Beta
+name: ALPHA
 
 on:
   push:
