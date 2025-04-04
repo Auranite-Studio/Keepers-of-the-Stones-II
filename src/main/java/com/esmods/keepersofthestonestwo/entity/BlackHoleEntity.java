@@ -65,7 +65,7 @@ public class BlackHoleEntity extends PathfinderMob {
 	}
 
 	@Override
-	public boolean causeFallDamage(float l, float d, DamageSource source) {
+	public boolean causeFallDamage(double l, float d, DamageSource source) {
 		return false;
 	}
 

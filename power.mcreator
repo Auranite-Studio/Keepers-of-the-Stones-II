@@ -10554,7 +10554,7 @@
     {
       "name": "SpacePassiveAbIlity",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "space_passive_ab_ility",
       "metadata": {
@@ -14998,7 +14998,7 @@
     {
       "name": "VacuumSpecialAttack",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_special_attack",
       "metadata": {
@@ -16058,7 +16058,7 @@
     {
       "name": "TeleportationSpecialAttack",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "teleportation_special_attack",
       "metadata": {
@@ -30867,7 +30867,7 @@
     {
       "name": "BlackHole",
       "type": "livingentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole",
       "metadata": {
@@ -30881,7 +30881,7 @@
     {
       "name": "Spirit",
       "type": "livingentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "spirit",
       "metadata": {

@@ -37,7 +37,7 @@ public class SpacePassiveAbIlityProcedure {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
 				entity.clearFire();
-			} else if (entity.isInWaterOrBubble()) {
+			} else if (entity.isInWater()) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 400, 0, false, false));
 			}
