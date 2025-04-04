@@ -137,7 +137,7 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob {
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Datais_attack"))
-			this.entityData.set(DATA_is_attack, compound.getBoolean("Datais_attack"));
+			this.entityData.set(DATA_is_attack, compound.getBooleanOr("Datais_attack", false));
 	}
 
 	@Override

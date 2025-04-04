@@ -98,7 +98,7 @@ public class SandSpecialAttackProcedure {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0, false, true));
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 255, false, false));
+								_entity.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 100, 255, false, false));
 							int horizontalRadiusHemiBot = (int) 4 - 1;
 							int verticalRadiusHemiBot = (int) 4;
 							int yIterationsHemiBot = verticalRadiusHemiBot;
@@ -153,12 +153,12 @@ public class SandSpecialAttackProcedure {
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 0, false, false));
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 4, false, false));
+											_entity.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 100, 4, false, false));
 									} else if (Math.random() > 0.5) {
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 0, false, false));
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 600, 0, false, false));
+											_entity.addEffect(new MobEffectInstance(MobEffects.NAUSEA, 600, 0, false, false));
 									}
 									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
 											(float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 0.4));

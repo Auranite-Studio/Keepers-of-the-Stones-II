@@ -84,7 +84,7 @@ public class TimeSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("time_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 4, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.SPEED, 200, 4, false, false));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("power:time_ability_effect")), SoundSource.PLAYERS, 1, 1);

@@ -1,6 +1,6 @@
 repositories {
  maven {
-     url = 'https://repo.redlance.org/public'
+     url = 'https://maven.kosmx.dev/'
  }
 }
 

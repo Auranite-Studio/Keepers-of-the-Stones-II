@@ -27,13 +27,13 @@ public class AmberLayerOnEntityProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity) {
-			if (entity.getPersistentData().getBoolean("amberLayer")) {
+			if (entity.getPersistentData().getBooleanOr("amberLayer", false)) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 200, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 200, 200, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.MINING_FATIGUE, 200, 200, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 200, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 200, 200, false, false));
 			}
 		}
 	}

@@ -191,7 +191,7 @@ public class LevelUpProcedure {
 				}
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1800, 1, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.STRENGTH, 1800, 1, false, false));
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.level_up_status = false;

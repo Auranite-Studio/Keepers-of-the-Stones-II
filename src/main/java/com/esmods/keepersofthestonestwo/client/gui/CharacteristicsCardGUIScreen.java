@@ -64,8 +64,6 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
 
 		guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/characteristics_card_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 
@@ -120,7 +118,6 @@ public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<Charac
 		if (RankSCheckProcedure.execute(entity)) {
 			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/rank_s_print.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 320, 176, 320, 176);
 		}
-		RenderSystem.disableBlend();
 	}
 
 	@Override

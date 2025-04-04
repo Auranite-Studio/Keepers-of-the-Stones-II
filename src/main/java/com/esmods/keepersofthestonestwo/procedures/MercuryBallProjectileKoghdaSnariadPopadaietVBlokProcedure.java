@@ -23,7 +23,7 @@ public class MercuryBallProjectileKoghdaSnariadPopadaietVBlokProcedure {
 					final Vec3 _center = new Vec3(x, y, z);
 					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 4, false, false));
+							_entity.addEffect(new MobEffectInstance(MobEffects.NAUSEA, 200, 4, false, false));
 						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 300, 3, false, false));
 					}

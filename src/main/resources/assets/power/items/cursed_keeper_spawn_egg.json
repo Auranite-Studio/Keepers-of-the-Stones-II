@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": -9216650
-      },
-      {
-        "type": "minecraft:constant",
-        "value": -7256744
-      }
-    ]
+    "model": "power:item/cursed_keeper_spawn_egg"
   }
 }

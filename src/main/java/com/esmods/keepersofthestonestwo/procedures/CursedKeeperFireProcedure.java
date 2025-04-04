@@ -38,18 +38,18 @@ public class CursedKeeperFireProcedure {
 		double ZPar = 0;
 		Range = 1;
 		particles = 3;
-		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
-		if (entity.getPersistentData().getDouble("IA") == 15) {
+		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDoubleOr("IA", 0) + 1));
+		if (entity.getPersistentData().getDoubleOr("IA", 0) == 15) {
 			if (entity instanceof CursedKeeperEntity _datEntSetL)
 				_datEntSetL.getEntityData().set(CursedKeeperEntity.DATA_stage_two_anim_sync, false);
 			if (entity instanceof CursedKeeperEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 2);
 		}
-		if (entity.getPersistentData().getDouble("IA") > 19 && entity.getPersistentData().getDouble("IA") < 30) {
-			entity.getPersistentData().putDouble("BreathRange", (entity.getPersistentData().getDouble("BreathRange") + 1));
+		if (entity.getPersistentData().getDoubleOr("IA", 0) > 19 && entity.getPersistentData().getDoubleOr("IA", 0) < 30) {
+			entity.getPersistentData().putDouble("BreathRange", (entity.getPersistentData().getDoubleOr("BreathRange", 0) + 1));
 		}
-		if (entity.getPersistentData().getDouble("IA") > 35 && entity.getPersistentData().getDouble("IA") < 62) {
-			if (entity.getPersistentData().getDouble("IA") > 35 && entity.getPersistentData().getDouble("IA") < 37) {
+		if (entity.getPersistentData().getDoubleOr("IA", 0) > 35 && entity.getPersistentData().getDoubleOr("IA", 0) < 62) {
+			if (entity.getPersistentData().getDoubleOr("IA", 0) > 35 && entity.getPersistentData().getDoubleOr("IA", 0) < 37) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("item.firecharge.use")), SoundSource.HOSTILE, 1, 1);
@@ -58,7 +58,7 @@ public class CursedKeeperFireProcedure {
 					}
 				}
 			}
-			for (int index0 = 0; index0 < (int) entity.getPersistentData().getDouble("BreathRange"); index0++) {
+			for (int index0 = 0; index0 < (int) entity.getPersistentData().getDoubleOr("BreathRange", 0); index0++) {
 				for (int index1 = 0; index1 < (int) particles; index1++) {
 					XPar = x + Math.cos(((Math.PI * 0.5) / particles) * loop + Math.toRadians(entity.getYRot() + 75)) * Range;
 					YPar = y + 1.5;
@@ -112,7 +112,7 @@ public class CursedKeeperFireProcedure {
 				loop = 0;
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") == 70) {
+		if (entity.getPersistentData().getDoubleOr("IA", 0) == 70) {
 			entity.getPersistentData().putDouble("BreathRange", 0);
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putString("State", "Idle");

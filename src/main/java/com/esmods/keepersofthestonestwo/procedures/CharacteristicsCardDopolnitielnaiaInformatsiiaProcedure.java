@@ -6,8 +6,8 @@ import net.minecraft.core.component.DataComponents;
 
 public class CharacteristicsCardDopolnitielnaiaInformatsiiaProcedure {
 	public static String execute(ItemStack itemstack) {
-		return !(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("name")).equals("")
-				? "\u00A77" + itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("name")
+		return !(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("name", "")).equals("")
+				? "\u00A77" + itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("name", "")
 				: "\u00A77Null";
 	}
 }
