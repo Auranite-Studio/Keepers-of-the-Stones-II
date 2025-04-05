@@ -10,16 +10,13 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.Minecraft;
 
 import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.LightningBatteryUseProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LightningBatteryDescProcedure;
 
 public class LightningBatteryItem extends Item {
 	public LightningBatteryItem(Item.Properties properties) {
@@ -30,13 +27,8 @@ public class LightningBatteryItem extends Item {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
-		String hoverText = LightningBatteryDescProcedure.execute();
-		if (hoverText != null) {
-			for (String line : hoverText.split("\n")) {
-				list.add(Component.literal(line));
-			}
-		}
+		list.add(Component.translatable("item.power.lightning_battery.description_0"));
+		list.add(Component.translatable("item.power.lightning_battery.description_1"));
 	}
 
 	@Override

@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "AnimalsBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Animals"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

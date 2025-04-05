@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "CrystalBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Crystal"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

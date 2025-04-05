@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "ShadowBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Shadow"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

@@ -10,16 +10,13 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.Minecraft;
 
 import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.EtherBatteryUseProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EtherBatteryDescProcedure;
 
 public class EtherBatteryItem extends Item {
 	public EtherBatteryItem(Item.Properties properties) {
@@ -30,13 +27,8 @@ public class EtherBatteryItem extends Item {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
-		String hoverText = EtherBatteryDescProcedure.execute();
-		if (hoverText != null) {
-			for (String line : hoverText.split("\n")) {
-				list.add(Component.literal(line));
-			}
-		}
+		list.add(Component.translatable("item.power.ether_battery.description_0"));
+		list.add(Component.translatable("item.power.ether_battery.description_1"));
 	}
 
 	@Override

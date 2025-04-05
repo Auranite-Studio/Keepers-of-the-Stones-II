@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "BloodBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Blood"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

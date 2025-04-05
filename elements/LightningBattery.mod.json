@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "LightningBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Lightning"
+      ]
     },
     "glowCondition": {
       "fixedValue": false
