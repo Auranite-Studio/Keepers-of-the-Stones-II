@@ -24,8 +24,10 @@ import net.minecraft.client.Minecraft;
 
 import java.util.Comparator;
 
+import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
+
 public class CursedVaultTickUpdateProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "Opened") != 0) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -36,7 +38,7 @@ public class CursedVaultTickUpdateProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if ((blockstate.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip4 ? blockstate.getValue(_getip4) : -1) != 2) {
+			if ((PowerModBlocks.CURSED_VAULT.get().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip3 ? PowerModBlocks.CURSED_VAULT.get().defaultBlockState().getValue(_getip3) : -1) != 2) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.open_shutter")), SoundSource.BLOCKS, 1, 1);
@@ -56,7 +58,7 @@ public class CursedVaultTickUpdateProcedure {
 			if (!(!world.getEntitiesOfClass(Player.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(5 / 2d), e -> true).isEmpty())
 					|| getEntityGameType((findEntityInWorldRange(world, Player.class, x, y, z, 5))) == GameType.SPECTATOR
 					|| getBlockNBTNumber(world, BlockPos.containing(x, y, z), ((findEntityInWorldRange(world, Player.class, x, y, z, 5)).getStringUUID())) != 0) {
-				if ((blockstate.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip14 ? blockstate.getValue(_getip14) : -1) != 0) {
+				if ((PowerModBlocks.CURSED_VAULT.get().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip12 ? PowerModBlocks.CURSED_VAULT.get().defaultBlockState().getValue(_getip12) : -1) != 0) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.deactivate")), SoundSource.BLOCKS, 1, 1);
@@ -73,7 +75,7 @@ public class CursedVaultTickUpdateProcedure {
 						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 				}
 			} else {
-				if ((blockstate.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip18 ? blockstate.getValue(_getip18) : -1) != 1) {
+				if ((PowerModBlocks.CURSED_VAULT.get().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip15 ? PowerModBlocks.CURSED_VAULT.get().defaultBlockState().getValue(_getip15) : -1) != 1) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.vault.activate")), SoundSource.BLOCKS, 1, 1);
@@ -91,8 +93,8 @@ public class CursedVaultTickUpdateProcedure {
 				}
 			}
 		}
-		if ((blockstate.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip22 ? blockstate.getValue(_getip22) : -1) == 1
-				|| (blockstate.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip24 ? blockstate.getValue(_getip24) : -1) == 2) {
+		if ((PowerModBlocks.CURSED_VAULT.get().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip18 ? PowerModBlocks.CURSED_VAULT.get().defaultBlockState().getValue(_getip18) : -1) == 1
+				|| (PowerModBlocks.CURSED_VAULT.get().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip19 ? PowerModBlocks.CURSED_VAULT.get().defaultBlockState().getValue(_getip19) : -1) == 2) {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.SMALL_FLAME, (x + Mth.nextDouble(RandomSource.create(), 0, 1)), (y + Mth.nextDouble(RandomSource.create(), 0, 1)), (z + Mth.nextDouble(RandomSource.create(), 0, 1)), (int) 0.1, 0.1, 0.1, 0.1, 0.05);
 		}
