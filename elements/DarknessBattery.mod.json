@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "DarknessBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Darkness"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

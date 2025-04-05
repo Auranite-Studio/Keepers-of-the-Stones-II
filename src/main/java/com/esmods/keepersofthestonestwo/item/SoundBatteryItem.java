@@ -7,7 +7,6 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
@@ -15,7 +14,6 @@ import net.minecraft.network.chat.Component;
 import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.SoundBatteryUseProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SoundBatteryDescProcedure;
 
 public class SoundBatteryItem extends Item {
 	public SoundBatteryItem() {
@@ -25,13 +23,8 @@ public class SoundBatteryItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		Entity entity = itemstack.getEntityRepresentation();
-		String hoverText = SoundBatteryDescProcedure.execute();
-		if (hoverText != null) {
-			for (String line : hoverText.split("\n")) {
-				list.add(Component.literal(line));
-			}
-		}
+		list.add(Component.translatable("item.power.sound_battery.description_0"));
+		list.add(Component.translatable("item.power.sound_battery.description_1"));
 	}
 
 	@Override
