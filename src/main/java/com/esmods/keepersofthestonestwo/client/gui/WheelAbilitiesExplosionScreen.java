@@ -71,12 +71,9 @@ public class WheelAbilitiesExplosionScreen extends AbstractContainerScreen<Wheel
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
 
 		guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 
-		RenderSystem.disableBlend();
 	}
 
 	@Override

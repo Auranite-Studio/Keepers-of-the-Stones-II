@@ -92,9 +92,9 @@ public class SpeedSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("speed_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 45) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300, 8, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.SPEED, 300, 8, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 300, 4, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.HASTE, 300, 4, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 300, 8, false, false));
 				if (world instanceof Level _level) {
@@ -144,7 +144,7 @@ public class SpeedSpecialAttackProcedure {
 							entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
 									(float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.4));
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 3));
+								_entity.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 300, 3));
 						}
 					}
 				}

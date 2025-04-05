@@ -30,13 +30,13 @@ public class EnergiumKeyOpenVaultProcedure {
 		double particleRadius = 0;
 		double particleAmount = 0;
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PowerModBlocks.ENERGIUM_VAULT.get()) {
-			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), (entity.getStringUUID())) == 0 && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "Opened") == 0) {
+			if (!getBlockNBTLogic(world, BlockPos.containing(x, y, z), (entity.getStringUUID())) && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "Opened") == 0) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble((entity.getStringUUID()), 1);
+						_blockEntity.getPersistentData().putBoolean((entity.getStringUUID()), true);
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -101,10 +101,17 @@ public class EnergiumKeyOpenVaultProcedure {
 		}
 	}
 
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBooleanOr(tag, false);
+		return false;
+	}
+
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, -1);
 		return -1;
 	}
 }

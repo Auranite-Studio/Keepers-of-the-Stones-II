@@ -1,6 +1,6 @@
 {
   "display": {
-    "background": "power:textures/screens/ach_theme.png",
+    "background": "power:screens/ach_theme",
     "icon": {
       "id": "power:keepers_box"
     },

@@ -9,7 +9,7 @@ base.archivesName = "Keepers-of-the-Stones-II"
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
-    version = "21.5.16-beta"
+    version = "21.5.24-beta"
 
     runs {
         client {

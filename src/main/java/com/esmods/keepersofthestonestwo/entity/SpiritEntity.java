@@ -146,7 +146,7 @@ public class SpiritEntity extends TamableAnimal {
 	}
 
 	@Override
-	public boolean causeFallDamage(float l, float d, DamageSource source) {
+	public boolean causeFallDamage(double l, float d, DamageSource source) {
 		return false;
 	}
 

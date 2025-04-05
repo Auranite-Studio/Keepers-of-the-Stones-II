@@ -19,7 +19,7 @@ public class CursedKeeperAttackDetectionProcedure {
 		double Range = 0;
 		double Zpar = 0;
 		Range = 0.75;
-		if (entity.getPersistentData().getDouble("IA") > 25) {
+		if (entity.getPersistentData().getDoubleOr("IA", 0) > 25) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					Xpar = x + entity.getLookAngle().x * Range;
@@ -29,7 +29,7 @@ public class CursedKeeperAttackDetectionProcedure {
 						final Vec3 _center = new Vec3(Xpar, Ypar, Zpar);
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(0.75 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (entityiterator == (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)) {
-								if (!entity.getPersistentData().getBoolean("Phase")) {
+								if (!entity.getPersistentData().getBooleanOr("Phase", false)) {
 									entity.getPersistentData().putString("State", "Summon");
 								} else {
 									if (Math.random() < (7) / ((float) 10)) {
@@ -50,7 +50,7 @@ public class CursedKeeperAttackDetectionProcedure {
 				}
 			}
 		} else {
-			entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
+			entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDoubleOr("IA", 0) + 1));
 		}
 	}
 }

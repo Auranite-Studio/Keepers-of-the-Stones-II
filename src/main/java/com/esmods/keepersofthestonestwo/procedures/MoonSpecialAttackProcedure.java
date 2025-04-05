@@ -62,7 +62,7 @@ public class MoonSpecialAttackProcedure {
 										(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 3));
-								if (!(world instanceof Level _lvl11 && _lvl11.isDay())) {
+								if (!(world instanceof Level _lvl11 && _lvl11.isBrightOutside())) {
 									entityiterator.setTicksFrozen(100);
 								}
 								{

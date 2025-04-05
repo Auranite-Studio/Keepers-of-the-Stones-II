@@ -17,4 +17,4 @@
 - [Bugfix]
 
 **Known issues**
-- *N/A*
+- Temporarily disabled item renders for vaults and battery charger blocks (only 1.21.5)

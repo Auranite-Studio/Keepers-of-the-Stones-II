@@ -37,7 +37,7 @@ public class FrozenDestructionArmorProcedure {
 		if (entity == null)
 			return;
 		double Scaling = 0;
-		if (entity.getPersistentData().getBoolean("iceLayer")) {
+		if (entity.getPersistentData().getBooleanOr("iceLayer", false)) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
 			}

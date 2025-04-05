@@ -14,7 +14,7 @@ public class CharacteristicsCardWritingCharsProcedure {
 		if (entity == null)
 			return;
 		PowerMod.queueServerWork(1, () -> {
-			if ((entity.getPersistentData().getString("ownerCard")).equals(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("owner"))) {
+			if ((entity.getPersistentData().getStringOr("ownerCard", "")).equals(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("owner", ""))) {
 				{
 					final String _tagName = "name";
 					final String _tagValue = (entity.getDisplayName().getString());
