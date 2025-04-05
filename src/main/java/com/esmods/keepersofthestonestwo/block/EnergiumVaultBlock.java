@@ -108,7 +108,7 @@ public class EnergiumVaultBlock extends Block implements EntityBlock {
 	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
-		EnergiumVaultTickUpdateProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		EnergiumVaultTickUpdateProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
 		world.scheduleTick(pos, this, 1);
 	}
 
