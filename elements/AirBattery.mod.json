@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "AirBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Air"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

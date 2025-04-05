@@ -1,17 +1,17 @@
 # Automatically builds and publishes the mod when a new release is created on GitHub.
 # It uploads the mod to GitHub, CurseForge and Modrinth.
 
-name: BETA
+name: RELEASE
 
 on:
   push:
     branches:
-      - "1.21.1-beta"
+      - "1.21.5-release"
 env:                                              
-  MINECRAFT_VERSION: 1.21.1                      
+  MINECRAFT_VERSION: 1.21.5                      
   JAVA_VERSION: 21      
-  VERSION: 1.2.0.1
-  RELEASE_NAME: Keepers of the Stones II 1.2.0.1 Beta
+  VERSION: 1.1.6
+  RELEASE_NAME: Keepers of the Stones II 1.1.6
 
 jobs:
   build:
@@ -49,8 +49,8 @@ jobs:
           
           name: "${{env.RELEASE_NAME}}"                             
           version: "${{env.VERSION}}"
-          version-type: beta
-          changelog-file: BETA_CHANGELOG.md                                      
+          version-type: release
+          changelog-file: CHANGELOG.md                                      
 
           loaders: |
             neoforge

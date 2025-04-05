@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "VacuumBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Vacuum"
+      ]
     },
     "glowCondition": {
       "fixedValue": false
