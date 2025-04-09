@@ -31166,19 +31166,6 @@
       "path": "~/ItemsAndBlocks/RuneCutter"
     },
     {
-      "name": "ExperimentalTabHandler",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "experimental_tab_handler",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/ExperimentalTabHandler.java"
-        ]
-      },
-      "path": "~/Tabs"
-    },
-    {
       "name": "ExtraStarPointsRune1",
       "type": "item",
       "compiles": true,
@@ -31190,7 +31177,7 @@
           "src/main/resources/assets/power/models/item/extra_star_points_rune_1.json"
         ]
       },
-      "path": "~/ItemsAndBlocks/Runes"
+      "path": "~/ItemsAndBlocks/Runes/ExtraStarPoints1"
     },
     {
       "name": "ExtraStarPointsRune2",
@@ -31204,7 +31191,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/ExtraStarPointsRune2Item.java"
         ]
       },
-      "path": "~/ItemsAndBlocks/Runes"
+      "path": "~/ItemsAndBlocks/Runes/ExtraStarPoints2"
     },
     {
       "name": "ExtraStarPointsRune3",
@@ -31218,7 +31205,7 @@
           "src/main/resources/assets/power/models/item/extra_star_points_rune_3.json"
         ]
       },
-      "path": "~/ItemsAndBlocks/Runes"
+      "path": "~/ItemsAndBlocks/Runes/ExtraStarPointes3"
     },
     {
       "name": "MusicHope",
@@ -31236,6 +31223,19 @@
       "path": "~/ItemsAndBlocks/Copyrium"
     },
     {
+      "name": "ExtraStarPointsRune1Use",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extra_star_points_rune_1_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExtraStarPointsRune1UseProcedure.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/ExtraStarPoints1"
+    },
+    {
       "name": "MindOwnerImmuneSlave",
       "type": "procedure",
       "compiles": true,
@@ -31251,6 +31251,61 @@
             "type": "entity"
           },
           {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/ExtraStarPoints1"
+    },
+    {
+      "name": "ExtraStarPointsRune2Use",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extra_star_points_rune_2_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExtraStarPointsRune2UseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "sourceentity",
             "type": "entity"
           },
@@ -31260,7 +31315,20 @@
           }
         ]
       },
-      "path": "~/Elements/Mind"
+      "path": "~/ItemsAndBlocks/Runes/ExtraStarPoints2"
+    },
+    {
+      "name": "ExtraStarPointsRune3Use",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extra_star_points_rune_3_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExtraStarPointsRune3UseProcedure.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/ExtraStarPointes3"
     },
     {
       "name": "RemoveForbiddenItem",
@@ -31280,6 +31348,22 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -32995,6 +33079,11 @@
       "~CUSTOM:CursedStoneBricksSlab",
       "~CUSTOM:CursedStoneSlab"
     ],
+    "ITEMS:mod:rune": [
+      "CUSTOM:ExtraStarPointsRune1",
+      "CUSTOM:ExtraStarPointsRune2",
+      "CUSTOM:ExtraStarPointsRune3"
+    ],
     "ENCHANTMENTS:minecraft:tradeable": [
       "~CUSTOM:Isolation",
       "~CUSTOM:Revenge"
@@ -33177,6 +33266,10 @@
       "RawCopyriumBlock",
       "CopyriumBlock",
       "ElementalPowerGenerator",
+      "RuneCutter",
+      "ExtraStarPointsRune1",
+      "ExtraStarPointsRune2",
+      "ExtraStarPointsRune3",
       "RawCopyrium",
       "CopyriumIngot",
       "MusicHope",
@@ -33260,6 +33353,7 @@
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
       "block.power.amplifier_block": "Блок амплифера",
       "item.power.gravity_mace": "Гравитационная булава",
+      "battery.desc.plants": "Зелень",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "item.power.music_armor_leggings": "Поножи мастера музыки",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Туманная невидимость, расходует 70",
@@ -33434,6 +33528,7 @@
       "item.power.creation_armor_chestplate": "Нагрудник мастера созидания",
       "effect.power.ocean_master": "Мастер океана",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "battery.desc.fire": "Огонь",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "advancements.the_great_win.descr": "Победите проклятого хранителя и освободите его от проклятия",
       "effect.power.vacuum_master": "Мастер пустоты",
@@ -33460,6 +33555,7 @@
       "item.power.spirit_stone": "Камень духа",
       "item.power.music_disc_ancient_mood.desc": "bxkqq - Ancient Mood",
       "item.power.teleportation_battery.description_1": "§9Телепортация",
+      "battery.desc.lightning": "Молния",
       "gui.power.wheel_abilities_form.tooltip_warp_wave_uses_15": "Волна искажения, расходует 15",
       "item.power.raw_amplifier": "Рудный амплифер",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Ядовитый шип, расходует 35",
@@ -33512,6 +33608,9 @@
       "item.power.amber_stone": "Камень янтаря",
       "item.power.darkness_battery.description_1": "§9Тьма",
       "item.power.smoke_battery.description_1": "§9Дым",
+      "item.power.amber_stone": "Камень янтаря",
+      "battery.desc.destruction": "Разрушение",
+      "battery.desc.magnet": "Магнит",
       "effect.power.ether_master": "Мастер эфира",
       "item.power.time_armor_chestplate": "Нагрудник мастера времени",
       "item.power.smoke_battery.description_0": "§aЗаряжен элементом:",
@@ -34176,8 +34275,8 @@
     "en_us": {
       "item.power.ether_battery": "Battery",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
-      "item.power.ether_stone": "Ether Stone",
       "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Dark power transfer, uses 80",
+      "item.power.ether_stone": "Ether Stone",
       "item.power.moon_battery": "Battery",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.power.time_battery.description_0": "§aCharged with element:",
@@ -34194,8 +34293,8 @@
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 20",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
-      "advancements.grant_your_power.title": "Grant your power",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
+      "advancements.grant_your_power.title": "Grant your power",
       "item.power.extra_star_points_rune_3": "Rune",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
@@ -34217,7 +34316,9 @@
       "block.power.amplifier_block": "Amplifier Block",
       "item.power.gravity_mace": "Gravity Mace",
       "item.power.music_armor_leggings": "Music Leggings",
+      "battery.desc.plants": "Plants",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
+      "item.power.music_armor_leggings": "Music Leggings",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
       "item.power.music_battery": "Battery",
       "item.power.darkness_battery": "Battery",
@@ -34268,9 +34369,9 @@
       "item.power.music_guitar": "Music Guitar",
       "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
       "item.power.ocean_battery": "Battery",
-      "effect.power.star_regeneration": "Star regeneration",
-      "item.power.mist_battery": "Battery",
       "item.power.smoke_armor_chestplate": "Smoke Chestplate",
+      "item.power.mist_battery": "Battery",
+      "effect.power.star_regeneration": "Star regeneration",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "item.power.cursed_knight_spawn_egg": "Cursed Knight Spawn Egg",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
@@ -34314,8 +34415,8 @@
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.empty_characteristics_card.description_0": "§7Empty",
       "item.power.smoke_stone": "Smoke Stone",
-      "effect.power.air_master": "Master of the Air",
       "item.power.blue_flame_sword": "Blue Flame Sword",
+      "effect.power.air_master": "Master of the Air",
       "effect.power.miniaturization": "Miniaturization",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
@@ -34359,8 +34460,8 @@
       "gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30": "Time dilation, uses 20",
       "item.power.horror_armor_leggings": "Horror Leggings",
       "item.power.horror_armor_helmet": "Horror Helmet",
-      "item.power.spirit_armor_chestplate": "Spirit Chestplate",
       "block.power.amber_block": "Amber Block",
+      "item.power.spirit_armor_chestplate": "Spirit Chestplate",
       "effect.power.chaos_dark_master": "Dark Master of Chaos",
       "item.power.blue_flame_battery.description_0": "§aCharged with element:",
       "entity.power.cursed_knight": "Cursed Knight",
@@ -34387,11 +34488,14 @@
       "item.power.blood_battery.description_0": "§aCharged with element:",
       "item.power.moon_armor_chestplate": "Moon Chestplate",
       "item.power.raw_copyrium": "Raw Copyrium",
+      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "item.power.creation_armor_chestplate": "Creation Chestplate",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "effect.power.ocean_master": "Master of the Ocean",
       "item.power.crystal_armor_boots": "Crystal Boots",
+      "battery.desc.fire": "Fire",
       "advancements.the_great_win.descr": "Defeat the cursed keeper and free him from the curse",
+      "item.power.crystal_armor_boots": "Crystal Boots",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.tornado_battery.description_0": "§aCharged with element:",
       "item.power.mercury_armor_chestplate": "Mercury Chestplate",
@@ -34417,15 +34521,16 @@
       "item.power.music_disc_ancient_mood.desc": "bxkqq - Ancient Mood",
       "item.power.teleportation_battery.description_1": "§9Teleportation",
       "gui.power.wheel_abilities_form.tooltip_warp_wave_uses_15": "Warp wave, uses 15",
+      "battery.desc.lightning": "Lightning",
       "item.power.raw_amplifier": "Raw Amplifier",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Poisonous thorn, uses 35",
       "effect.power.blood_master": "Master of Blood",
       "advancements.lets_bail_this_place_isdead.descr": "Find the biome - the cursed forest",
       "block.power.cursed_stone_stairs": " Cursed Stone Stairs",
-      "effect.power.stun": "Stun",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
-      "item.power.chaos_armor_chestplate": "Chaos Chestplate",
+      "effect.power.stun": "Stun",
       "item.power.explosion_battery": "Battery",
+      "item.power.chaos_armor_chestplate": "Chaos Chestplate",
       "gui.power.keepers_box_gui_part_2.tooltip_smoke": "Smoke",
       "item.power.water_battery": "Battery",
       "gui.power.wheel_abilities_teleportation.tooltip_creatingdestructing_portals_us": "Creating/Destructing portals, uses 20",
@@ -34468,6 +34573,9 @@
       "item.power.amber_stone": "Amber Stone",
       "item.power.darkness_battery.description_1": "§9Darkness",
       "item.power.smoke_battery.description_1": "§9Smoke",
+      "item.power.amber_stone": "Amber Stone",
+      "battery.desc.destruction": "Destruction",
+      "battery.desc.magnet": "Magnet",
       "effect.power.ether_master": "Master of the Ether",
       "item.power.time_armor_chestplate": "Time Chestplate",
       "item.power.smoke_battery.description_0": "§aCharged with element:",
@@ -35905,7 +36013,20 @@
           },
           {
             "name": "Runes",
-            "children": []
+            "children": [
+              {
+                "name": "ExtraStarPoints1",
+                "children": []
+              },
+              {
+                "name": "ExtraStarPoints2",
+                "children": []
+              },
+              {
+                "name": "ExtraStarPointes3",
+                "children": []
+              }
+            ]
           }
         ]
       },

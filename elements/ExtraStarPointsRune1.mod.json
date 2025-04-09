@@ -9,7 +9,11 @@
     "states": [],
     "name": "Rune",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Items"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -28,8 +32,7 @@
       "fixedValue": [
         "§9Extra Star Points I",
         "",
-        "§1§o+10 to the max. number of star points",
-        "§c§oIncompatible with similar runes"
+        "§1§o+10 to the max. number of star points"
       ]
     },
     "glowCondition": {
@@ -37,6 +40,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "ExtraStarPointsRune1Use"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
