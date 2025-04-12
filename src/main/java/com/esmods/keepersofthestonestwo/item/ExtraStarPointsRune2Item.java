@@ -35,7 +35,7 @@ public class ExtraStarPointsRune2Item extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		ExtraStarPointsRune2UseProcedure.execute(world, entity);
+		ExtraStarPointsRune2UseProcedure.execute(entity, ar.getObject());
 		return ar;
 	}
 }
