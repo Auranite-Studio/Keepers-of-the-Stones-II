@@ -1,0 +1,103 @@
+{
+  "_fv": 77,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_power_scale",
+          "text": {
+            "fixedValue": "0",
+            "name": "GetStarPoints"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 31,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "star_points_overlay.png",
+          "use1Xscale": false,
+          "anchorPoint": "TOP_LEFT",
+          "x": 2,
+          "y": 28,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "runes_inventory.png",
+          "use1Xscale": false,
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 350,
+          "y": 200,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "star_extra_booster_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BlueRune1Check"
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 358,
+          "y": 208,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "star_extra_booster_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BlueRune2Check"
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 358,
+          "y": 208,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "star_extra_booster_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BlueRune3Check"
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 358,
+          "y": 208,
+          "locked": false
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "GetActive"
+    },
+    "gridSettings": {
+      "sx": 16,
+      "sy": 16,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

@@ -31032,19 +31032,6 @@
       "path": "~/Modules/StarPointsModule"
     },
     {
-      "name": "StarPointsOverlay",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_points_overlay",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/screens/StarPointsOverlayOverlay.java"
-        ]
-      },
-      "path": "~/Modules/StarPointsModule"
-    },
-    {
       "name": "Curse",
       "type": "potioneffect",
       "compiles": true,
@@ -31450,6 +31437,79 @@
           {
             "name": "world",
             "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "PowerOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/screens/PowerOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "BlueRune1Check",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_1_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune1CheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "BlueRune2Check",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_2_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune2CheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "BlueRune3Check",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_3_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune3CheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
