@@ -16,6 +16,7 @@ import net.minecraft.server.level.ServerLevel;
 import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 @EventBusSubscriber
 public class DropRunesAfterDeathProcedure {
@@ -42,6 +43,27 @@ public class DropRunesAfterDeathProcedure {
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.blue_rune_slot = ItemStack.EMPTY.copy();
 						_vars.syncPlayerVariables(entity);
+					}
+					if (copySlot.getItem() == PowerModItems.EXTRA_STAR_POINTS_RUNE_1.get()) {
+						{
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.max_power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power - 10;
+							_vars.syncPlayerVariables(entity);
+						}
+					}
+					if (copySlot.getItem() == PowerModItems.EXTRA_STAR_POINTS_RUNE_2.get()) {
+						{
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.max_power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power - 15;
+							_vars.syncPlayerVariables(entity);
+						}
+					}
+					if (copySlot.getItem() == PowerModItems.EXTRA_STAR_POINTS_RUNE_3.get()) {
+						{
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.max_power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power - 20;
+							_vars.syncPlayerVariables(entity);
+						}
 					}
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, copySlot);
