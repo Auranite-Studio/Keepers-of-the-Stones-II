@@ -557,7 +557,7 @@
     {
       "name": "WheelAbilitiesFire",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_fire",
       "metadata": {
@@ -661,7 +661,7 @@
     {
       "name": "WheelAbilitiesAir",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_air",
       "metadata": {
@@ -1756,7 +1756,7 @@
     {
       "name": "WheelAbilitiesEarth",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_earth",
       "metadata": {
@@ -1771,7 +1771,7 @@
     {
       "name": "WheelAbilitiesEther",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_ether",
       "metadata": {
@@ -2183,7 +2183,7 @@
     {
       "name": "WheelAbilitiesLightning",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_lightning",
       "metadata": {
@@ -2669,7 +2669,7 @@
     {
       "name": "WheelAbilitiesSound",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_sound",
       "metadata": {
@@ -2952,7 +2952,7 @@
     {
       "name": "WheelAbilitiesCrystal",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_crystal",
       "metadata": {
@@ -3203,7 +3203,7 @@
     {
       "name": "WheelAbilitiesLava",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_lava",
       "metadata": {
@@ -4140,7 +4140,7 @@
     {
       "name": "WheelAbilitiesIce",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_ice",
       "metadata": {
@@ -4721,7 +4721,7 @@
     {
       "name": "WheelAbilitiesRain",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_rain",
       "metadata": {
@@ -5102,7 +5102,7 @@
     {
       "name": "WheelAbilitiesOcean",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_ocean",
       "metadata": {
@@ -5365,7 +5365,7 @@
     {
       "name": "WheelAbilitiesPlants",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_plants",
       "metadata": {
@@ -5613,7 +5613,7 @@
     {
       "name": "WheelAbilitiesAnimals",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_animals",
       "metadata": {
@@ -5842,7 +5842,7 @@
     {
       "name": "WheelAbilitiesMetal",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_metal",
       "metadata": {
@@ -7254,7 +7254,7 @@
     {
       "name": "WheelAbilitiesLight",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_light",
       "metadata": {
@@ -7506,7 +7506,7 @@
     {
       "name": "WheelAbilitiesShadow",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_shadow",
       "metadata": {
@@ -9004,7 +9004,7 @@
     {
       "name": "WheelAbilitiesEnergy",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_energy",
       "metadata": {
@@ -9680,7 +9680,7 @@
     {
       "name": "WheelAbilitiesSun",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_sun",
       "metadata": {
@@ -10017,7 +10017,7 @@
     {
       "name": "WheelAbilitiesMoon",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_moon",
       "metadata": {
@@ -10353,7 +10353,7 @@
     {
       "name": "WheelAbilitiesSpace",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_space",
       "metadata": {
@@ -10808,7 +10808,7 @@
     {
       "name": "WheelAbilitiesTime",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_time",
       "metadata": {
@@ -11237,7 +11237,7 @@
     {
       "name": "WheelAbilitiesCreation",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_creation",
       "metadata": {
@@ -11534,7 +11534,7 @@
     {
       "name": "KeepersBoxGUIPart1",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "keepers_box_gui_part_1",
       "metadata": {
@@ -11549,7 +11549,7 @@
     {
       "name": "KeepersBoxGUIPart2",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "keepers_box_gui_part_2",
       "metadata": {
@@ -11564,7 +11564,7 @@
     {
       "name": "KeepersBoxGUIPart3",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "keepers_box_gui_part_3",
       "metadata": {
@@ -11579,7 +11579,7 @@
     {
       "name": "KeepersBoxGUIPart4",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "keepers_box_gui_part_4",
       "metadata": {
@@ -12747,7 +12747,7 @@
     {
       "name": "WheelAbilitiesDestruction",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_destruction",
       "metadata": {
@@ -14124,7 +14124,7 @@
     {
       "name": "WheelAbilitiesBlood",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_blood",
       "metadata": {
@@ -15615,7 +15615,7 @@
     {
       "name": "WheelAbilitiesTechnology",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_technology",
       "metadata": {
@@ -16093,7 +16093,7 @@
     {
       "name": "WheelAbilitiesTeleportation",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_teleportation",
       "metadata": {
@@ -16589,7 +16589,7 @@
     {
       "name": "WheelAbilitiesExplosion",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_explosion",
       "metadata": {
@@ -17358,7 +17358,7 @@
     {
       "name": "WheelAbilitiesAmber",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_amber",
       "metadata": {
@@ -18679,7 +18679,7 @@
     {
       "name": "ElementalPowerGenerator",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "elemental_power_generator",
       "metadata": {
@@ -18937,7 +18937,7 @@
     {
       "name": "WheelAbilitiesMist",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_mist",
       "metadata": {
@@ -19195,7 +19195,7 @@
     {
       "name": "CursedVault",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "cursed_vault",
       "metadata": {
@@ -19627,7 +19627,7 @@
     {
       "name": "WheelAbilitiesSand",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_sand",
       "metadata": {
@@ -19966,7 +19966,7 @@
     {
       "name": "WheelAbilitiesSpeed",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_speed",
       "metadata": {
@@ -20391,7 +20391,7 @@
     {
       "name": "WheelAbilitiesPoison",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_poison",
       "metadata": {
@@ -20950,7 +20950,7 @@
     {
       "name": "WheelAbilitiesMagnet",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_magnet",
       "metadata": {
@@ -21671,7 +21671,7 @@
     {
       "name": "EnergiumVault",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "energium_vault",
       "metadata": {
@@ -22297,7 +22297,7 @@
     {
       "name": "WheelAbilitiesMushrooms",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_mushrooms",
       "metadata": {
@@ -23053,7 +23053,7 @@
     {
       "name": "WheelAbilitiesMercury",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_mercury",
       "metadata": {
@@ -23931,7 +23931,7 @@
     {
       "name": "WheelAbilitiesMusic",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_music",
       "metadata": {
@@ -24554,7 +24554,7 @@
     {
       "name": "WheelAbilitiesPlague",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_plague",
       "metadata": {
@@ -25112,7 +25112,7 @@
     {
       "name": "WheelAbilitiesBlueFlame",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_blue_flame",
       "metadata": {
@@ -25592,7 +25592,7 @@
     {
       "name": "WheelAbilitiesGravity",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_gravity",
       "metadata": {
@@ -26147,7 +26147,7 @@
     {
       "name": "WheelAbilitiesSmoke",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_smoke",
       "metadata": {
@@ -26249,10 +26249,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -26974,7 +26970,7 @@
     {
       "name": "WheelAbilitiesSpirit",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_spirit",
       "metadata": {
@@ -27813,7 +27809,7 @@
     {
       "name": "WheelAbilitiesForm",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_form",
       "metadata": {
@@ -28260,7 +28256,7 @@
     {
       "name": "WheelAbilitiesMind",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "wheel_abilities_mind",
       "metadata": {
@@ -28472,7 +28468,7 @@
     {
       "name": "BatteryChargerGUI",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "battery_charger_gui",
       "metadata": {
@@ -30205,7 +30201,7 @@
     {
       "name": "CharacteristicsCardGUI",
       "type": "gui",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "characteristics_card_gui",
       "metadata": {
@@ -36592,10 +36588,8 @@
     "dependants": [
       "cpapi"
     ],
-    "mcreatorDependencies": [
-      "playeranimator"
-    ],
-    "currentGenerator": "neoforge-1.21.5",
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-25w14craftmine",
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
