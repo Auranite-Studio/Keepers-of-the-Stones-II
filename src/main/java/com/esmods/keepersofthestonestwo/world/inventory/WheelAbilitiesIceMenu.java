@@ -37,8 +37,8 @@ public class WheelAbilitiesIceMenu extends AbstractContainerMenu implements Supp
 
 	public WheelAbilitiesIceMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(PowerModMenus.WHEEL_ABILITIES_ICE.get(), id);
-		this.entity = inv.player;
-		this.world = inv.player.level();
+		this.entity = inv.getPlayer();
+		this.world = inv.getPlayer().level();
 		this.internal = new ItemStackHandler(0);
 		BlockPos pos = null;
 		if (extraData != null) {

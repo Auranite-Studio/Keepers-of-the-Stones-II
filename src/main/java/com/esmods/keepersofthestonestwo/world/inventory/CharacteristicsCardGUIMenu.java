@@ -37,8 +37,8 @@ public class CharacteristicsCardGUIMenu extends AbstractContainerMenu implements
 
 	public CharacteristicsCardGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(PowerModMenus.CHARACTERISTICS_CARD_GUI.get(), id);
-		this.entity = inv.player;
-		this.world = inv.player.level();
+		this.entity = inv.getPlayer();
+		this.world = inv.getPlayer().level();
 		this.internal = new ItemStackHandler(0);
 		BlockPos pos = null;
 		if (extraData != null) {

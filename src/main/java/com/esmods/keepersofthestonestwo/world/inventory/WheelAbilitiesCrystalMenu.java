@@ -37,8 +37,8 @@ public class WheelAbilitiesCrystalMenu extends AbstractContainerMenu implements 
 
 	public WheelAbilitiesCrystalMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(PowerModMenus.WHEEL_ABILITIES_CRYSTAL.get(), id);
-		this.entity = inv.player;
-		this.world = inv.player.level();
+		this.entity = inv.getPlayer();
+		this.world = inv.getPlayer().level();
 		this.internal = new ItemStackHandler(0);
 		BlockPos pos = null;
 		if (extraData != null) {

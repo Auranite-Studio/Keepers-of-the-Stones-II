@@ -34,7 +34,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModItems;
 public abstract class EnergiumArmorItem extends Item {
 	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(34, Map.of(ArmorType.BOOTS, 4, ArmorType.LEGGINGS, 13, ArmorType.CHESTPLATE, 10, ArmorType.HELMET, 4, ArmorType.BODY, 10), 20,
 			BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), 0f, 0f, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:energium_armor_repair_items")),
-			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("power:energium_armor")));
+			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("power:energium_armor")), 1);
 
 	@SubscribeEvent
 	public static void registerItemExtensions(RegisterClientExtensionsEvent event) {

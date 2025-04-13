@@ -15,7 +15,7 @@ import net.minecraft.core.registries.Registries;
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
 
 public class EnergiumAxeItem extends Item {
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 778, 10f, 0, 5, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:energium_axe_repair_items")));
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 778, 10f, 0, 5, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:energium_axe_repair_items")), 1);
 
 	public EnergiumAxeItem(Item.Properties properties) {
 		super(properties.axe(TOOL_MATERIAL, 11f, -3.2f));

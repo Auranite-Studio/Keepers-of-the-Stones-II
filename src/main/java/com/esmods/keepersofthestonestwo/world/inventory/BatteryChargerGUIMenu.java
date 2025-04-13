@@ -46,8 +46,8 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 
 	public BatteryChargerGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(PowerModMenus.BATTERY_CHARGER_GUI.get(), id);
-		this.entity = inv.player;
-		this.world = inv.player.level();
+		this.entity = inv.getPlayer();
+		this.world = inv.getPlayer().level();
 		this.internal = new ItemStackHandler(3);
 		BlockPos pos = null;
 		if (extraData != null) {

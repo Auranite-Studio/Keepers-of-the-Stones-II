@@ -24,7 +24,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class LightningFalchionItem extends Item {
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 12f, 0, 1, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:lightning_falchion_repair_items")));
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 12f, 0, 1, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:lightning_falchion_repair_items")), 1);
 
 	public LightningFalchionItem(Item.Properties properties) {
 		super(properties.sword(TOOL_MATERIAL, 5.3f, -1.92f).fireResistant());

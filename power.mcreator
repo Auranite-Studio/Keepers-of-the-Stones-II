@@ -249,7 +249,7 @@
     {
       "name": "FireMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "fire_master_start",
       "metadata": {
@@ -472,7 +472,7 @@
     {
       "name": "AirMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "air_master_start",
       "metadata": {
@@ -557,7 +557,7 @@
     {
       "name": "WheelAbilitiesFire",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_fire",
       "metadata": {
@@ -661,7 +661,7 @@
     {
       "name": "WheelAbilitiesAir",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_air",
       "metadata": {
@@ -1207,7 +1207,7 @@
     {
       "name": "EarthMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "earth_master_start",
       "metadata": {
@@ -1484,7 +1484,7 @@
     {
       "name": "EtherMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ether_master_start",
       "metadata": {
@@ -1756,7 +1756,7 @@
     {
       "name": "WheelAbilitiesEarth",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_earth",
       "metadata": {
@@ -1771,7 +1771,7 @@
     {
       "name": "WheelAbilitiesEther",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_ether",
       "metadata": {
@@ -1986,7 +1986,7 @@
     {
       "name": "IceMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ice_master_start",
       "metadata": {
@@ -2183,7 +2183,7 @@
     {
       "name": "WheelAbilitiesLightning",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_lightning",
       "metadata": {
@@ -2313,7 +2313,7 @@
     {
       "name": "LightningMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "lightning_master_start",
       "metadata": {
@@ -2669,7 +2669,7 @@
     {
       "name": "WheelAbilitiesSound",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_sound",
       "metadata": {
@@ -2882,7 +2882,7 @@
     {
       "name": "CrystalMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "crystal_master_start",
       "metadata": {
@@ -2952,7 +2952,7 @@
     {
       "name": "WheelAbilitiesCrystal",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_crystal",
       "metadata": {
@@ -3133,7 +3133,7 @@
     {
       "name": "LavaMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "lava_master_start",
       "metadata": {
@@ -3203,7 +3203,7 @@
     {
       "name": "WheelAbilitiesLava",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_lava",
       "metadata": {
@@ -4140,7 +4140,7 @@
     {
       "name": "WheelAbilitiesIce",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_ice",
       "metadata": {
@@ -4721,7 +4721,7 @@
     {
       "name": "WheelAbilitiesRain",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_rain",
       "metadata": {
@@ -5102,7 +5102,7 @@
     {
       "name": "WheelAbilitiesOcean",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_ocean",
       "metadata": {
@@ -5365,7 +5365,7 @@
     {
       "name": "WheelAbilitiesPlants",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_plants",
       "metadata": {
@@ -5613,7 +5613,7 @@
     {
       "name": "WheelAbilitiesAnimals",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_animals",
       "metadata": {
@@ -5704,7 +5704,7 @@
     {
       "name": "AnimalsMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "animals_master_start",
       "metadata": {
@@ -5842,7 +5842,7 @@
     {
       "name": "WheelAbilitiesMetal",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_metal",
       "metadata": {
@@ -7184,7 +7184,7 @@
     {
       "name": "LightMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "light_master_start",
       "metadata": {
@@ -7254,7 +7254,7 @@
     {
       "name": "WheelAbilitiesLight",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_light",
       "metadata": {
@@ -7506,7 +7506,7 @@
     {
       "name": "WheelAbilitiesShadow",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_shadow",
       "metadata": {
@@ -9004,7 +9004,7 @@
     {
       "name": "WheelAbilitiesEnergy",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_energy",
       "metadata": {
@@ -9147,7 +9147,7 @@
     {
       "name": "EnergyMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "energy_master_start",
       "metadata": {
@@ -9680,7 +9680,7 @@
     {
       "name": "WheelAbilitiesSun",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_sun",
       "metadata": {
@@ -10017,7 +10017,7 @@
     {
       "name": "WheelAbilitiesMoon",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_moon",
       "metadata": {
@@ -10353,7 +10353,7 @@
     {
       "name": "WheelAbilitiesSpace",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_space",
       "metadata": {
@@ -10808,7 +10808,7 @@
     {
       "name": "WheelAbilitiesTime",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_time",
       "metadata": {
@@ -11129,7 +11129,7 @@
     {
       "name": "CreationMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "creation_master_start",
       "metadata": {
@@ -11237,7 +11237,7 @@
     {
       "name": "WheelAbilitiesCreation",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_creation",
       "metadata": {
@@ -11534,7 +11534,7 @@
     {
       "name": "KeepersBoxGUIPart1",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "keepers_box_gui_part_1",
       "metadata": {
@@ -11549,7 +11549,7 @@
     {
       "name": "KeepersBoxGUIPart2",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "keepers_box_gui_part_2",
       "metadata": {
@@ -11564,7 +11564,7 @@
     {
       "name": "KeepersBoxGUIPart3",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "keepers_box_gui_part_3",
       "metadata": {
@@ -11579,7 +11579,7 @@
     {
       "name": "KeepersBoxGUIPart4",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "keepers_box_gui_part_4",
       "metadata": {
@@ -12677,7 +12677,7 @@
     {
       "name": "DestructionMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "destruction_master_start",
       "metadata": {
@@ -12747,7 +12747,7 @@
     {
       "name": "WheelAbilitiesDestruction",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_destruction",
       "metadata": {
@@ -13972,7 +13972,7 @@
     {
       "name": "BloodMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "blood_master_start",
       "metadata": {
@@ -14124,7 +14124,7 @@
     {
       "name": "WheelAbilitiesBlood",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_blood",
       "metadata": {
@@ -15615,7 +15615,7 @@
     {
       "name": "WheelAbilitiesTechnology",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_technology",
       "metadata": {
@@ -16093,7 +16093,7 @@
     {
       "name": "WheelAbilitiesTeleportation",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_teleportation",
       "metadata": {
@@ -16519,7 +16519,7 @@
     {
       "name": "ExplosionMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "explosion_master_start",
       "metadata": {
@@ -16589,7 +16589,7 @@
     {
       "name": "WheelAbilitiesExplosion",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_explosion",
       "metadata": {
@@ -16893,7 +16893,7 @@
     {
       "name": "EnergiumGolemPriGibieliSushchnosti",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "energium_golem_pri_gibieli_sushchnosti",
       "metadata": {
@@ -16960,7 +16960,7 @@
     {
       "name": "BecomeAMasterGet",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "become_a_master_get",
       "metadata": {
@@ -16996,7 +16996,7 @@
     {
       "name": "FullPowerOfEnergiumGet",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "full_power_of_energium_get",
       "metadata": {
@@ -17210,7 +17210,7 @@
     {
       "name": "AmberMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "amber_master_start",
       "metadata": {
@@ -17358,7 +17358,7 @@
     {
       "name": "WheelAbilitiesAmber",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_amber",
       "metadata": {
@@ -18937,7 +18937,7 @@
     {
       "name": "WheelAbilitiesMist",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_mist",
       "metadata": {
@@ -19259,7 +19259,7 @@
     {
       "name": "CursedKeyOpenVault",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "cursed_key_open_vault",
       "metadata": {
@@ -19339,7 +19339,7 @@
     {
       "name": "ElementalPowerGeneratorSaveElementalPower",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "elemental_power_generator_save_elemental_power",
       "metadata": {
@@ -19627,7 +19627,7 @@
     {
       "name": "WheelAbilitiesSand",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_sand",
       "metadata": {
@@ -19966,7 +19966,7 @@
     {
       "name": "WheelAbilitiesSpeed",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_speed",
       "metadata": {
@@ -20391,7 +20391,7 @@
     {
       "name": "WheelAbilitiesPoison",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_poison",
       "metadata": {
@@ -20950,7 +20950,7 @@
     {
       "name": "WheelAbilitiesMagnet",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_magnet",
       "metadata": {
@@ -21735,7 +21735,7 @@
     {
       "name": "EnergiumKeyOpenVault",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "energium_key_open_vault",
       "metadata": {
@@ -22297,7 +22297,7 @@
     {
       "name": "WheelAbilitiesMushrooms",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_mushrooms",
       "metadata": {
@@ -23053,7 +23053,7 @@
     {
       "name": "WheelAbilitiesMercury",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_mercury",
       "metadata": {
@@ -23931,7 +23931,7 @@
     {
       "name": "WheelAbilitiesMusic",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_music",
       "metadata": {
@@ -24554,7 +24554,7 @@
     {
       "name": "WheelAbilitiesPlague",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_plague",
       "metadata": {
@@ -24999,7 +24999,7 @@
     {
       "name": "BlueFlameMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "blue_flame_master_start",
       "metadata": {
@@ -25112,7 +25112,7 @@
     {
       "name": "WheelAbilitiesBlueFlame",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_blue_flame",
       "metadata": {
@@ -25444,7 +25444,7 @@
     {
       "name": "GravityMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "gravity_master_start",
       "metadata": {
@@ -25592,7 +25592,7 @@
     {
       "name": "WheelAbilitiesGravity",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_gravity",
       "metadata": {
@@ -26147,7 +26147,7 @@
     {
       "name": "WheelAbilitiesSmoke",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_smoke",
       "metadata": {
@@ -26970,7 +26970,7 @@
     {
       "name": "WheelAbilitiesSpirit",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_spirit",
       "metadata": {
@@ -27502,7 +27502,7 @@
     {
       "name": "CursedKeeperPriGibieliSushchnosti",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "cursed_keeper_pri_gibieli_sushchnosti",
       "metadata": {
@@ -27704,7 +27704,7 @@
     {
       "name": "FormMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "form_master_start",
       "metadata": {
@@ -27809,7 +27809,7 @@
     {
       "name": "WheelAbilitiesForm",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_form",
       "metadata": {
@@ -28256,7 +28256,7 @@
     {
       "name": "WheelAbilitiesMind",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_mind",
       "metadata": {
@@ -28468,7 +28468,7 @@
     {
       "name": "BatteryChargerGUI",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger_gui",
       "metadata": {
@@ -28634,7 +28634,7 @@
     {
       "name": "GoldenDustMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "golden_dust_master_start",
       "metadata": {
@@ -29130,7 +29130,7 @@
     {
       "name": "DarknessMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "darkness_master_start",
       "metadata": {
@@ -30201,7 +30201,7 @@
     {
       "name": "CharacteristicsCardGUI",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "characteristics_card_gui",
       "metadata": {
@@ -30803,7 +30803,7 @@
     {
       "name": "LevelUp",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "level_up",
       "metadata": {
@@ -32990,18 +32990,18 @@
       "~CUSTOM:EnergiumAxe",
       "~CUSTOM:TornadoAxe"
     ],
+    "ITEMS:minecraft:trim_materials": [
+      "CUSTOM:DepletedEnergiumIngot",
+      "CUSTOM:EnergiumIngot",
+      "CUSTOM:AmplifierDrop",
+      "CUSTOM:CopyriumIngot"
+    ],
     "ENTITIES:mod:xp/50": [
       "CUSTOM:CursedKeeper",
       "CUSTOM:EnergiumGolem",
       "EntityWither",
       "EntityDragon",
       "EntityWarden"
-    ],
-    "ITEMS:minecraft:trim_materials": [
-      "CUSTOM:DepletedEnergiumIngot",
-      "CUSTOM:EnergiumIngot",
-      "CUSTOM:AmplifierDrop",
-      "CUSTOM:CopyriumIngot"
     ],
     "ITEMS:power:energium_sword_repair_items": [
       "~CUSTOM:EnergiumIngot"
@@ -33735,14 +33735,14 @@
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.speed_armor_helmet": "Шлем мастера скорости",
-      "item.power.blue_flame_armor_boots": "Ботинки мастера синего пламени",
       "gui.power.keepers_box_gui_part_3.tooltip_form": "Форма",
+      "item.power.blue_flame_armor_boots": "Ботинки мастера синего пламени",
       "item.power.mushrooms_armor_leggings": "Поножи мастера грибов",
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Поток астральной энергии, расходует 10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 20",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
-      "advancements.grant_your_power.title": "Даруй свою силу",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
+      "advancements.grant_your_power.title": "Даруй свою силу",
       "item.power.extra_star_points_rune_3": "Руна",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.cursed_keeper_spawn_egg": "Яйцо призыва проклятого хранителя",
@@ -33764,8 +33764,8 @@
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
       "item.power.gravity_mace": "Гравитационная булава",
       "block.power.amplifier_block": "Блок амплифера",
-      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "item.power.music_armor_leggings": "Поножи мастера музыки",
+      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Туманная невидимость, расходует 70",
       "item.power.music_battery": "Батарея",
       "item.power.darkness_battery": "Батарея",
@@ -33819,12 +33819,12 @@
       "effect.power.horror_dark_master": "Т. Мастер Хоррора",
       "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Грибное насыщение, расходует 50",
       "item.power.music_guitar": "Музыкальная гитара",
-      "item.power.cursed_stone": "Cursed Stone",
       "advancements.the_end_of_tyranny.descr": "Победите энергиумного голема",
+      "item.power.cursed_stone": "Cursed Stone",
       "item.power.ocean_battery": "Батарея",
-      "item.power.smoke_armor_chestplate": "Нагрудник мастера дыма",
-      "item.power.mist_battery": "Батарея",
       "effect.power.star_regeneration": "Звёзд. регенерация",
+      "item.power.mist_battery": "Батарея",
+      "item.power.smoke_armor_chestplate": "Нагрудник мастера дыма",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "item.power.cursed_knight_spawn_egg": "Яйцо призыва проклятого рыцаря",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
@@ -33852,8 +33852,8 @@
       "item.power.energium_hoe": "Энергиумная мотыга",
       "trim_material.power.copyrium_material": "Копириум",
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
-      "item.power.empty_battery.description_0": "§cНе заряжена",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
+      "item.power.empty_battery.description_0": "§cНе заряжена",
       "item.power.amber_staff": "Посох янтаря",
       "subtitles.electric_spark": "Искра",
       "gui.power.wheel_abilities_blue_flame.tooltip_electric_discharge_uses_75": "Электрический разряд, расходует 75",
@@ -33871,8 +33871,8 @@
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "item.power.empty_characteristics_card.description_0": "§7Пустая",
       "item.power.smoke_stone": "Камень дыма",
-      "item.power.blue_flame_sword": "Меч синего пламени",
       "effect.power.air_master": "Мастер воздуха",
+      "item.power.blue_flame_sword": "Меч синего пламени",
       "effect.power.miniaturization": "Миниатюризация",
       "item.power.raw_depleted_energium": "Рудный обеднённый энергиум",
       "item.minecraft.potion.effect.power_lock_potion": "Зелье блокировки силы",
@@ -33916,8 +33916,8 @@
       "gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30": "Замедление времени, расходует 20",
       "item.power.horror_armor_leggings": "Поножи тёмного мастера хоррора",
       "item.power.horror_armor_helmet": "Шлем тёмного мастера хоррора",
-      "item.power.spirit_armor_chestplate": "Нагрудник мастера духа",
       "block.power.amber_block": "Блок янтаря",
+      "item.power.spirit_armor_chestplate": "Нагрудник мастера духа",
       "effect.power.chaos_dark_master": "Т. Мастер Хаоса",
       "item.power.blue_flame_battery.description_0": "§aЗаряжен элементом:",
       "entity.power.cursed_knight": "Проклятый рыцарь",
@@ -33942,8 +33942,8 @@
       "item.power.blood_battery.description_1": "§9Кровь",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Телепортация",
       "item.power.blood_battery.description_0": "§aЗаряжен элементом:",
-      "item.power.raw_copyrium": "Рудный копириум",
       "item.power.moon_armor_chestplate": "Нагрудник мастера луны",
+      "item.power.raw_copyrium": "Рудный копириум",
       "item.power.creation_armor_chestplate": "Нагрудник мастера созидания",
       "effect.power.ocean_master": "Мастер океана",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
@@ -34747,8 +34747,8 @@
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 20",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
-      "advancements.grant_your_power.title": "Grant your power",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
+      "advancements.grant_your_power.title": "Grant your power",
       "item.power.extra_star_points_rune_3": "Rune",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
@@ -34770,8 +34770,8 @@
       "item.power.teleportation_armor_chestplate": "Teleportation Chestplate",
       "item.power.gravity_mace": "Gravity Mace",
       "block.power.amplifier_block": "Amplifier Block",
-      "item.power.music_armor_leggings": "Music Leggings",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
+      "item.power.music_armor_leggings": "Music Leggings",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
       "item.power.music_battery": "Battery",
       "item.power.darkness_battery": "Battery",
@@ -34825,12 +34825,12 @@
       "effect.power.horror_dark_master": "Dark Master of Horror",
       "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Mushroom saturation, uses 50",
       "item.power.music_guitar": "Music Guitar",
-      "item.power.cursed_stone": "Cursed Stone",
       "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
+      "item.power.cursed_stone": "Cursed Stone",
       "item.power.ocean_battery": "Battery",
-      "effect.power.star_regeneration": "Star regeneration",
-      "item.power.mist_battery": "Battery",
       "item.power.smoke_armor_chestplate": "Smoke Chestplate",
+      "item.power.mist_battery": "Battery",
+      "effect.power.star_regeneration": "Star regeneration",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "item.power.cursed_knight_spawn_egg": "Cursed Knight Spawn Egg",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
@@ -34858,8 +34858,8 @@
       "item.power.energium_hoe": "Energium Hoe",
       "trim_material.power.copyrium_material": "Copyrium",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
-      "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "item.power.empty_battery.description_0": "§cNot charged",
+      "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "item.power.amber_staff": "Amber Staff",
       "subtitles.electric_spark": "Spark",
       "gui.power.wheel_abilities_blue_flame.tooltip_electric_discharge_uses_75": "Electric discharge, uses 75",
@@ -34877,8 +34877,8 @@
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.empty_characteristics_card.description_0": "§7Empty",
       "item.power.smoke_stone": "Smoke Stone",
-      "effect.power.air_master": "Master of the Air",
       "item.power.blue_flame_sword": "Blue Flame Sword",
+      "effect.power.air_master": "Master of the Air",
       "effect.power.miniaturization": "Miniaturization",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
@@ -34922,8 +34922,8 @@
       "gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30": "Time dilation, uses 20",
       "item.power.horror_armor_leggings": "Horror Leggings",
       "item.power.horror_armor_helmet": "Horror Helmet",
-      "item.power.spirit_armor_chestplate": "Spirit Chestplate",
       "block.power.amber_block": "Amber Block",
+      "item.power.spirit_armor_chestplate": "Spirit Chestplate",
       "effect.power.chaos_dark_master": "Dark Master of Chaos",
       "item.power.blue_flame_battery.description_0": "§aCharged with element:",
       "entity.power.cursed_knight": "Cursed Knight",
@@ -34948,8 +34948,8 @@
       "item.power.blood_battery.description_1": "§9Blood",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
       "item.power.blood_battery.description_0": "§aCharged with element:",
-      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "item.power.raw_copyrium": "Raw Copyrium",
+      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "item.power.creation_armor_chestplate": "Creation Chestplate",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "effect.power.ocean_master": "Master of the Ocean",

@@ -37,8 +37,8 @@ public class WheelAbilitiesTornadoMenu extends AbstractContainerMenu implements 
 
 	public WheelAbilitiesTornadoMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(PowerModMenus.WHEEL_ABILITIES_TORNADO.get(), id);
-		this.entity = inv.player;
-		this.world = inv.player.level();
+		this.entity = inv.getPlayer();
+		this.world = inv.getPlayer().level();
 		this.internal = new ItemStackHandler(0);
 		BlockPos pos = null;
 		if (extraData != null) {

@@ -37,8 +37,8 @@ public class WheelAbiltiesGoldenDustMenu extends AbstractContainerMenu implement
 
 	public WheelAbiltiesGoldenDustMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(PowerModMenus.WHEEL_ABILTIES_GOLDEN_DUST.get(), id);
-		this.entity = inv.player;
-		this.world = inv.player.level();
+		this.entity = inv.getPlayer();
+		this.world = inv.getPlayer().level();
 		this.internal = new ItemStackHandler(0);
 		BlockPos pos = null;
 		if (extraData != null) {

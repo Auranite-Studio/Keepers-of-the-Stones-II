@@ -15,7 +15,7 @@ import net.minecraft.core.registries.Registries;
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
 
 public class EnergiumSwordItem extends Item {
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 778, 10f, 0, 5, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:energium_sword_repair_items")));
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 778, 10f, 0, 5, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:energium_sword_repair_items")), 1);
 
 	public EnergiumSwordItem(Item.Properties properties) {
 		super(properties.sword(TOOL_MATERIAL, 9f, -2.4f));
