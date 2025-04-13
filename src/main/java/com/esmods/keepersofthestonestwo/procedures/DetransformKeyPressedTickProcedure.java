@@ -1,5 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -8,6 +9,8 @@ import net.neoforged.bus.api.Event;
 import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
@@ -30,6 +33,7 @@ public class DetransformKeyPressedTickProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
+		ItemStack copySlot = ItemStack.EMPTY;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).detransf_key_var) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == true) {
 				if (entity instanceof LivingEntity _entity)
@@ -155,6 +159,45 @@ public class DetransformKeyPressedTickProcedure {
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.transfered_power = false;
 					_vars.syncPlayerVariables(entity);
+				}
+				if (!(ItemStack.EMPTY.getItem() == entity.getData(PowerModVariables.PLAYER_VARIABLES).blue_rune_slot.getItem())) {
+					copySlot = entity.getData(PowerModVariables.PLAYER_VARIABLES).blue_rune_slot.copy();
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.blue_rune_slot = ItemStack.EMPTY.copy();
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = copySlot.copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				}
+				if (!(ItemStack.EMPTY.getItem() == entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.getItem())) {
+					copySlot = entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.copy();
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.red_rune_slot = ItemStack.EMPTY.copy();
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = copySlot.copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				}
+				if (!(ItemStack.EMPTY.getItem() == entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem())) {
+					copySlot = entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.copy();
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.green_rune_slot = ItemStack.EMPTY.copy();
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = copySlot.copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
 				}
 			}
 			{

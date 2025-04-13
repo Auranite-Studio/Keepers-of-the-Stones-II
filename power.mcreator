@@ -31419,6 +31419,41 @@
         ]
       },
       "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "DropRunesAfterDeath",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drop_runes_after_death",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DropRunesAfterDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
     }
   ],
   "variable_elements": [
@@ -32117,18 +32152,6 @@
       "type": "itemstack",
       "scope": "player_persistent",
       "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "setup_rune_to_blue_slot_event",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "remove_rune_to_blue_slot_event",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     }
   ],
   "sound_elements": [
