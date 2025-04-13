@@ -19,7 +19,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 31,
           "y": 35,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -30,7 +30,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 2,
           "y": 28,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -38,10 +38,10 @@
         "data": {
           "image": "runes_inventory.png",
           "use1Xscale": false,
-          "anchorPoint": "BOTTOM_RIGHT",
-          "x": 350,
-          "y": 200,
-          "locked": false
+          "anchorPoint": "TOP_LEFT",
+          "x": 2,
+          "y": 50,
+          "locked": true
         }
       },
       {
@@ -52,10 +52,10 @@
           "displayCondition": {
             "name": "BlueRune1Check"
           },
-          "anchorPoint": "BOTTOM_RIGHT",
-          "x": 358,
-          "y": 208,
-          "locked": false
+          "anchorPoint": "TOP_LEFT",
+          "x": 8,
+          "y": 53,
+          "locked": true
         }
       },
       {
@@ -66,10 +66,10 @@
           "displayCondition": {
             "name": "BlueRune2Check"
           },
-          "anchorPoint": "BOTTOM_RIGHT",
-          "x": 358,
-          "y": 208,
-          "locked": false
+          "anchorPoint": "TOP_LEFT",
+          "x": 8,
+          "y": 53,
+          "locked": true
         }
       },
       {
@@ -80,10 +80,10 @@
           "displayCondition": {
             "name": "BlueRune3Check"
           },
-          "anchorPoint": "BOTTOM_RIGHT",
-          "x": 358,
-          "y": 208,
-          "locked": false
+          "anchorPoint": "TOP_LEFT",
+          "x": 8,
+          "y": 53,
+          "locked": true
         }
       }
     ],
@@ -97,7 +97,7 @@
       "sy": 16,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

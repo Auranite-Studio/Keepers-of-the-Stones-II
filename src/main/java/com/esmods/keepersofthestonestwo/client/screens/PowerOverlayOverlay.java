@@ -50,16 +50,16 @@ public class PowerOverlayOverlay {
 		if (GetActiveProcedure.execute(entity)) {
 			event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_points_overlay.png"), 2, 28, 0, 0, 59, 20, 59, 20);
 
-			event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/runes_inventory.png"), w - 77, h - 40, 0, 0, 68, 33, 68, 33);
+			event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/runes_inventory.png"), 2, 50, 0, 0, 59, 22, 59, 22);
 
 			if (BlueRune1CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_1.png"), w - 69, h - 32, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_1.png"), 8, 53, 0, 0, 16, 16, 16, 16);
 			}
 			if (BlueRune2CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_2.png"), w - 69, h - 32, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_2.png"), 8, 53, 0, 0, 16, 16, 16, 16);
 			}
 			if (BlueRune3CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_3.png"), w - 69, h - 32, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_3.png"), 8, 53, 0, 0, 16, 16, 16, 16);
 			}
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
