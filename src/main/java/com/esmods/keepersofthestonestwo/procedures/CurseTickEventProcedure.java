@@ -11,7 +11,7 @@ public class CurseTickEventProcedure {
 			return;
 		if (entity.getPersistentData().getDouble("curseTickDamage") == 60) {
 			entity.getPersistentData().putDouble("curseTickDamage", 0);
-			entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC)), 6);
+			entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC)), 3);
 		} else if (entity.getPersistentData().getDouble("curseTickDamage") < 60) {
 			entity.getPersistentData().putDouble("curseTickDamage", (entity.getPersistentData().getDouble("curseTickDamage") + 1));
 		}

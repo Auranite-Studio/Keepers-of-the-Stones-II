@@ -3,7 +3,7 @@
 - *N/A*
 
 **Improvemnts** 
-- *N/A*
+- Reduced damage from curse effect by half (from 6 to 3 HP)
 
 **API changes**
 - *N/A*
