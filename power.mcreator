@@ -30778,33 +30778,6 @@
       "path": "~/Achievements"
     },
     {
-      "name": "CharacteristicsCardWritingChars",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "characteristics_card_writing_chars",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CharacteristicsCardWritingCharsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/CharacteristicsCard"
-    },
-    {
       "name": "LevelUp",
       "type": "procedure",
       "compiles": true,
