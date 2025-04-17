@@ -5,6 +5,7 @@
 |------------|-----------|---------|
 | 1.21.5     |  NEOFORGE | Active  |
 | 1.21.4     |  NEOFORGE | Active  |
+| 1.21.3     |  NEOFORGE | Skipped |
 | 1.21.1     |  NEOFORGE | Active  |
 | 1.20.6     |  NEOFORGE |  NSL    |
 | 1.20.4     |  NEOFORGE |  NSL    |
