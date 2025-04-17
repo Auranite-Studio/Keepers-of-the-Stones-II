@@ -40,9 +40,6 @@
     "onRightClickedInAir": {
       "name": "CharacteristicsCardPriShchielchkiePKM"
     },
-    "onItemInInventoryTick": {
-      "name": "CharacteristicsCardWritingChars"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

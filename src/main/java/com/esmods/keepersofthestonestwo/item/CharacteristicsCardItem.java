@@ -11,17 +11,14 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
 import java.util.function.Consumer;
 
-import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardWritingCharsProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardPriShchielchkiePKMProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardDopolnitielnaiaInformatsiiaProcedure;
 
@@ -48,11 +45,5 @@ public class CharacteristicsCardItem extends Item {
 		InteractionResult ar = super.use(world, entity, hand);
 		CharacteristicsCardPriShchielchkiePKMProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, entity.getItemInHand(hand));
 		return ar;
-	}
-
-	@Override
-	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-		super.inventoryTick(itemstack, world, entity, slot);
-		CharacteristicsCardWritingCharsProcedure.execute(world, entity, itemstack);
 	}
 }
