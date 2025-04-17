@@ -29,14 +29,14 @@ public class EnergiumKeyOpenVaultProcedure {
 		double particleRadius = 0;
 		double particleAmount = 0;
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PowerModBlocks.ENERGIUM_VAULT.get()) {
-			if (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+			if (!(new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), (entity.getStringUUID())) == 0 && new Object() {
+			}.getValue(world, BlockPos.containing(x, y, z), (entity.getStringUUID()))) && new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
@@ -49,7 +49,7 @@ public class EnergiumKeyOpenVaultProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble((entity.getStringUUID()), 1);
+						_blockEntity.getPersistentData().putBoolean((entity.getStringUUID()), true);
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}

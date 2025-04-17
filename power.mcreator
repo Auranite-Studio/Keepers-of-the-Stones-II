@@ -30419,33 +30419,6 @@
       "path": "~/Achievements"
     },
     {
-      "name": "CharacteristicsCardWritingChars",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "characteristics_card_writing_chars",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CharacteristicsCardWritingCharsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/CharacteristicsCard"
-    },
-    {
       "name": "LevelUp",
       "type": "procedure",
       "compiles": true,
@@ -32452,9 +32425,6 @@
       "~CUSTOM:DepletedEnergiumBlock",
       "~CUSTOM:DepletedEnergiumOre"
     ],
-    "BIOMES:minecraft:is_overworld": [
-      "CUSTOM:CursedForest"
-    ],
     "ENTITIES:mod:xp/3": [
       "EntityGuardian",
       "EntityGhast",
@@ -32470,6 +32440,9 @@
       "EntityPhantom",
       "EntityBreeze",
       "EntityBlaze"
+    ],
+    "BIOMES:minecraft:is_overworld": [
+      "CUSTOM:CursedForest"
     ],
     "ENTITIES:mod:xp/2": [
       "EntityCreeper",
@@ -33239,8 +33212,8 @@
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
       "item.power.gravity_mace": "Гравитационная булава",
       "block.power.amplifier_block": "Блок амплифера",
-      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "item.power.music_armor_leggings": "Поножи мастера музыки",
+      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Туманная невидимость, расходует 70",
       "item.power.music_battery": "Батарея",
       "item.power.darkness_battery": "Батарея",
@@ -33294,8 +33267,8 @@
       "effect.power.horror_dark_master": "Т. Мастер Хоррора",
       "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Грибное насыщение, расходует 50",
       "item.power.music_guitar": "Музыкальная гитара",
-      "item.power.cursed_stone": "Cursed Stone",
       "advancements.the_end_of_tyranny.descr": "Победите энергиумного голема",
+      "item.power.cursed_stone": "Cursed Stone",
       "item.power.ocean_battery": "Батарея",
       "item.power.smoke_armor_chestplate": "Нагрудник мастера дыма",
       "item.power.mist_battery": "Батарея",
@@ -34300,8 +34273,8 @@
       "effect.power.horror_dark_master": "Dark Master of Horror",
       "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Mushroom saturation, uses 50",
       "item.power.music_guitar": "Music Guitar",
-      "item.power.cursed_stone": "Cursed Stone",
       "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
+      "item.power.cursed_stone": "Cursed Stone",
       "item.power.ocean_battery": "Battery",
       "effect.power.star_regeneration": "Star regeneration",
       "item.power.mist_battery": "Battery",
@@ -36046,7 +36019,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.1.6",
+    "version": "1.1.7",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",

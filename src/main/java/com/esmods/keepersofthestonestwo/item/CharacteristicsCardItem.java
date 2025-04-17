@@ -14,7 +14,6 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardWritingCharsProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardPriShchielchkiePKMProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardDopolnitielnaiaInformatsiiaProcedure;
 
@@ -40,11 +39,5 @@ public class CharacteristicsCardItem extends Item {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		CharacteristicsCardPriShchielchkiePKMProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
-	}
-
-	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
-		CharacteristicsCardWritingCharsProcedure.execute(world, entity, itemstack);
 	}
 }
