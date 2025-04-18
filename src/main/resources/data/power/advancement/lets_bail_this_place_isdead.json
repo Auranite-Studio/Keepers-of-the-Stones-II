@@ -24,7 +24,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biomes": "power:deleted_mod_element"
+                "biomes": "dark_forest"
               }
             }
           }

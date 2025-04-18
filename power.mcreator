@@ -32208,9 +32208,6 @@
       "~CUSTOM:CursedStoneBricksStairs",
       "~CUSTOM:CursedStoneStairs"
     ],
-    "BIOMES:mod:cursed_biomes": [
-      "CUSTOM:CursedForest"
-    ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:TechnoPickaxe",
       "~CUSTOM:CreationPickaxe",
@@ -35521,10 +35518,6 @@
       },
       {
         "name": "DamageSources",
-        "children": []
-      },
-      {
-        "name": "Biomes",
         "children": []
       },
       {

@@ -10,6 +10,6 @@
     "absolute": 0
   },
   "project_start_to_heightmap": "WORLD_SURFACE",
-  "biomes": [],
+  "biomes": "dark_forest",
   "use_expansion_hack": false
 }

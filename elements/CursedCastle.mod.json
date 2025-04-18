@@ -16,7 +16,7 @@
     "separation": 24,
     "restrictionBiomes": [
       {
-        "value": "CUSTOM:CursedForest"
+        "value": "roofed_forest"
       }
     ],
     "terrainAdaptation": "beard_box",

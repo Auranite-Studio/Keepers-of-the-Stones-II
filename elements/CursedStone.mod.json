@@ -124,7 +124,7 @@
     "generateFeature": true,
     "restrictionBiomes": [
       {
-        "value": "CUSTOM:CursedForest"
+        "value": "roofed_forest"
       }
     ],
     "blocksToReplace": [

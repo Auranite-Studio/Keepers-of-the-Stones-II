@@ -1,8 +1,6 @@
 {
   "type": "neoforge:add_features",
-  "biomes": {
-    "type": "neoforge:any"
-  },
+  "biomes": "dark_forest",
   "features": "power:cursed_stone",
   "step": "underground_ores"
 }

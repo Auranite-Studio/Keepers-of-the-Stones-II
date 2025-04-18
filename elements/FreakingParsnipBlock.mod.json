@@ -130,11 +130,7 @@
     "isBonemealable": false,
     "frequencyOnChunks": 4,
     "generateFeature": true,
-    "restrictionBiomes": [
-      {
-        "value": "CUSTOM:CursedForest"
-      }
-    ],
+    "restrictionBiomes": [],
     "generationType": "Grass",
     "patchSize": 1,
     "generateAtAnyHeight": false
