@@ -15383,34 +15383,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "EnergiumTemple",
-      "type": "structure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_temple",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/worldgen/template_pool/energium_temple.json",
-          "src/main/resources/data/power/worldgen/structure/energium_temple.json",
-          "src/main/resources/data/power/worldgen/structure_set/energium_temple.json"
-        ]
-      },
-      "path": "~/Structures"
-    },
-    {
-      "name": "EnergiumTempleLoot",
-      "type": "loottable",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_temple_loot",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/loot_table/chests/energium_temple.json"
-        ]
-      },
-      "path": "~/Structures"
-    },
-    {
       "name": "TechnologyMaster",
       "type": "potioneffect",
       "compiles": true,
@@ -22220,34 +22192,6 @@
         "dependencies": []
       },
       "path": "~/Mobs/EnergiumGolem"
-    },
-    {
-      "name": "CursedCastle",
-      "type": "structure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_castle",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/worldgen/structure/cursed_castle.json",
-          "src/main/resources/data/power/worldgen/structure_set/cursed_castle.json",
-          "src/main/resources/data/power/worldgen/template_pool/cursed_castle.json"
-        ]
-      },
-      "path": "~/Structures"
-    },
-    {
-      "name": "CursedCastleLoot",
-      "type": "loottable",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_castle_loot",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/loot_table/chests/cursed_castle.json"
-        ]
-      },
-      "path": "~/Structures"
     },
     {
       "name": "Batteries",
