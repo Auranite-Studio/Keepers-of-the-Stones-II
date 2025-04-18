@@ -22,11 +22,12 @@ import net.minecraft.core.BlockPos;
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
+import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
 
 public class ElementalPowerGeneratorBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(1, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
 	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
 
 	public ElementalPowerGeneratorBlockEntity(BlockPos position, BlockState state) {
@@ -84,7 +85,7 @@ public class ElementalPowerGeneratorBlockEntity extends RandomizableContainerBlo
 
 	@Override
 	public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-		return ChestMenu.threeRows(id, inventory);
+		return ChestMenu.threeRows(id, inventory, new ArrayList<>());
 	}
 
 	@Override

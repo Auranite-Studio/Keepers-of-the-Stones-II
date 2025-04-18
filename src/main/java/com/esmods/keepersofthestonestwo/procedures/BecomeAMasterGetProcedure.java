@@ -37,7 +37,7 @@ public class BecomeAMasterGetProcedure {
 				ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
 				if (itemstackiterator.is(ItemTags.create(ResourceLocation.parse("power:elemental_stones")))) {
 					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("power:become_a_master"));
+						AdvancementHolder _adv = _player.theGame().getAdvancements().get(ResourceLocation.parse("power:become_a_master"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {

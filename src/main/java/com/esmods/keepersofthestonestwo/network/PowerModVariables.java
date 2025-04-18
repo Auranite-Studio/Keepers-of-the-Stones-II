@@ -638,7 +638,7 @@ public class PowerModVariables {
 
 		public static MapVariables get(LevelAccessor world) {
 			if (world instanceof ServerLevelAccessor serverLevelAcc) {
-				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(TYPE);
+				return serverLevelAcc.getLevel().theGame().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(TYPE);
 			} else {
 				return clientSide;
 			}

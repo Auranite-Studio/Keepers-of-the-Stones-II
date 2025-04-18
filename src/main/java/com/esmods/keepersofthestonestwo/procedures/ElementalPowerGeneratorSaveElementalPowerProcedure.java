@@ -50,7 +50,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 							world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 					}
 					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("power:grant_your_power"));
+						AdvancementHolder _adv = _player.theGame().getAdvancements().get(ResourceLocation.parse("power:grant_your_power"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {

@@ -196,7 +196,6 @@ import com.esmods.keepersofthestonestwo.item.EnergiumUpgradeSmithingTemplateItem
 import com.esmods.keepersofthestonestwo.item.EnergiumSwordItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumShovelItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumPickaxeItem;
-import com.esmods.keepersofthestonestwo.item.EnergiumKeyItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumIngotItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumHoeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumDustItem;
@@ -218,7 +217,6 @@ import com.esmods.keepersofthestonestwo.item.DarknessStoneItem;
 import com.esmods.keepersofthestonestwo.item.DarknessBatteryItem;
 import com.esmods.keepersofthestonestwo.item.DarknessArmorItem;
 import com.esmods.keepersofthestonestwo.item.DarkSwordItem;
-import com.esmods.keepersofthestonestwo.item.CursedKeyItem;
 import com.esmods.keepersofthestonestwo.item.CrystalStoneItem;
 import com.esmods.keepersofthestonestwo.item.CrystalKnifeItem;
 import com.esmods.keepersofthestonestwo.item.CrystalBatteryItem;
@@ -561,8 +559,6 @@ public class PowerModItems {
 	public static final DeferredItem<Item> MIST_ARMOR_BOOTS = register("mist_armor_boots", MistArmorItem.Boots::new);
 	public static final DeferredItem<Item> MIST_BATTERY = register("mist_battery", MistBatteryItem::new);
 	public static final DeferredItem<Item> MISTY_FAN = register("misty_fan", MistyFanItem::new);
-	public static final DeferredItem<Item> CURSED_VAULT = block(PowerModBlocks.CURSED_VAULT);
-	public static final DeferredItem<Item> CURSED_KEY = register("cursed_key", CursedKeyItem::new);
 	public static final DeferredItem<Item> SAND_ARMOR_HELMET = register("sand_armor_helmet", SandArmorItem.Helmet::new);
 	public static final DeferredItem<Item> SAND_ARMOR_CHESTPLATE = register("sand_armor_chestplate", SandArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> SAND_ARMOR_LEGGINGS = register("sand_armor_leggings", SandArmorItem.Leggings::new);
@@ -590,8 +586,6 @@ public class PowerModItems {
 	public static final DeferredItem<Item> CURSED_LADDER = block(PowerModBlocks.CURSED_LADDER);
 	public static final DeferredItem<Item> CURSED_LAMP = block(PowerModBlocks.CURSED_LAMP);
 	public static final DeferredItem<Item> TELEPORTATION_BLADE = register("teleportation_blade", TeleportationBladeItem::new);
-	public static final DeferredItem<Item> ENERGIUM_VAULT = block(PowerModBlocks.ENERGIUM_VAULT);
-	public static final DeferredItem<Item> ENERGIUM_KEY = register("energium_key", EnergiumKeyItem::new);
 	public static final DeferredItem<Item> MUSHROOMS_ARMOR_HELMET = register("mushrooms_armor_helmet", MushroomsArmorItem.Helmet::new);
 	public static final DeferredItem<Item> MUSHROOMS_ARMOR_CHESTPLATE = register("mushrooms_armor_chestplate", MushroomsArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> MUSHROOMS_ARMOR_LEGGINGS = register("mushrooms_armor_leggings", MushroomsArmorItem.Leggings::new);

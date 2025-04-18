@@ -156,8 +156,6 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get());
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_BOOTS.get());
 				tabData.accept(PowerModItems.ENERGIUM_CORE.get());
-				tabData.accept(PowerModBlocks.ENERGIUM_VAULT.get().asItem());
-				tabData.accept(PowerModItems.ENERGIUM_KEY.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_CALL_OF_THE_PAST.get());
 				tabData.accept(PowerModBlocks.COPYRIUM_ORE.get().asItem());
 				tabData.accept(PowerModBlocks.DEEPSLATE_COPYRIUM_ORE.get().asItem());
@@ -188,8 +186,6 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.CURSED_LADDER.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_LAMP.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_LANTERN.get().asItem());
-				tabData.accept(PowerModBlocks.CURSED_VAULT.get().asItem());
-				tabData.accept(PowerModItems.CURSED_KEY.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP.get());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP_SOUP.get());

@@ -33,10 +33,10 @@ public class MindMasterStartProcedure {
 			_vars.syncPlayerVariables(entity);
 		}
 		for (int index0 = 0; index0 < 40; index0++) {
-			if (world instanceof ServerLevel _level && _level.getServer() != null) {
-				Optional<CommandFunction<CommandSourceStack>> _fopt = _level.getServer().getFunctions().get(ResourceLocation.parse("power:mind_master"));
+			if (world instanceof ServerLevel _level && _level.theGame() != null) {
+				Optional<CommandFunction<CommandSourceStack>> _fopt = _level.theGame().getFunctions().get(ResourceLocation.parse("power:mind_master"));
 				if (_fopt.isPresent())
-					_level.getServer().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null));
+					_level.theGame().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.theGame(), null));
 			}
 		}
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 0) {

@@ -249,7 +249,7 @@
     {
       "name": "FireMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "fire_master_start",
       "metadata": {
@@ -472,7 +472,7 @@
     {
       "name": "AirMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "air_master_start",
       "metadata": {
@@ -1207,7 +1207,7 @@
     {
       "name": "EarthMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "earth_master_start",
       "metadata": {
@@ -1484,7 +1484,7 @@
     {
       "name": "EtherMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ether_master_start",
       "metadata": {
@@ -1986,7 +1986,7 @@
     {
       "name": "IceMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ice_master_start",
       "metadata": {
@@ -2313,7 +2313,7 @@
     {
       "name": "LightningMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_master_start",
       "metadata": {
@@ -2882,7 +2882,7 @@
     {
       "name": "CrystalMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_master_start",
       "metadata": {
@@ -3133,7 +3133,7 @@
     {
       "name": "LavaMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lava_master_start",
       "metadata": {
@@ -5704,7 +5704,7 @@
     {
       "name": "AnimalsMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "animals_master_start",
       "metadata": {
@@ -7184,7 +7184,7 @@
     {
       "name": "LightMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "light_master_start",
       "metadata": {
@@ -9147,7 +9147,7 @@
     {
       "name": "EnergyMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energy_master_start",
       "metadata": {
@@ -11129,7 +11129,7 @@
     {
       "name": "CreationMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "creation_master_start",
       "metadata": {
@@ -12677,7 +12677,7 @@
     {
       "name": "DestructionMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "destruction_master_start",
       "metadata": {
@@ -13972,7 +13972,7 @@
     {
       "name": "BloodMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blood_master_start",
       "metadata": {
@@ -16519,7 +16519,7 @@
     {
       "name": "ExplosionMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "explosion_master_start",
       "metadata": {
@@ -16893,7 +16893,7 @@
     {
       "name": "EnergiumGolemPriGibieliSushchnosti",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energium_golem_pri_gibieli_sushchnosti",
       "metadata": {
@@ -16960,7 +16960,7 @@
     {
       "name": "BecomeAMasterGet",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "become_a_master_get",
       "metadata": {
@@ -16996,7 +16996,7 @@
     {
       "name": "FullPowerOfEnergiumGet",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "full_power_of_energium_get",
       "metadata": {
@@ -17210,7 +17210,7 @@
     {
       "name": "AmberMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amber_master_start",
       "metadata": {
@@ -18679,7 +18679,7 @@
     {
       "name": "ElementalPowerGenerator",
       "type": "block",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "elemental_power_generator",
       "metadata": {
@@ -19193,137 +19193,6 @@
       "path": "~/Elements/Mist"
     },
     {
-      "name": "CursedVault",
-      "type": "block",
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "cursed_vault",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/cursed_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/CursedVaultBlockEntity.java",
-          "src/main/resources/data/power/loot_table/blocks/cursed_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedVaultBlock.java",
-          "src/main/resources/assets/power/blockstates/cursed_vault.json",
-          "src/main/resources/assets/power/models/block/cursed_vault.json",
-          "src/main/resources/assets/power/items/cursed_vault.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Cursed"
-    },
-    {
-      "name": "CursedVaultBlockstates",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_vault_blockstates",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/block/cursed_vault_blockstates_blockstate_1.json",
-          "src/main/resources/assets/power/models/block/cursed_vault_blockstates_blockstate_0.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Cursed"
-    },
-    {
-      "name": "CursedVaultTickUpdate",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_vault_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedVaultTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Cursed"
-    },
-    {
-      "name": "CursedKeyOpenVault",
-      "type": "procedure",
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "cursed_key_open_vault",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeyOpenVaultProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Cursed"
-    },
-    {
-      "name": "CursedCastleVaults",
-      "type": "loottable",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_castle_vaults",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/loot_table/chests/cursed_castle_vaults.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Cursed"
-    },
-    {
-      "name": "CursedKey",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_key",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/cursed_key.json",
-          "src/main/resources/assets/power/items/cursed_key.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/CursedKeyItem.java"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Cursed"
-    },
-    {
       "name": "GettingMarried",
       "type": "achievement",
       "compiles": true,
@@ -19339,7 +19208,7 @@
     {
       "name": "ElementalPowerGeneratorSaveElementalPower",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "elemental_power_generator_save_elemental_power",
       "metadata": {
@@ -21669,137 +21538,6 @@
       "path": "~/Elements/Teleportation"
     },
     {
-      "name": "EnergiumVault",
-      "type": "block",
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "energium_vault",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/blockstates/energium_vault.json",
-          "src/main/resources/assets/power/models/block/energium_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumVaultBlock.java",
-          "src/main/resources/assets/power/items/energium_vault.json",
-          "src/main/resources/data/power/loot_table/blocks/energium_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/EnergiumVaultBlockEntity.java",
-          "src/main/resources/assets/power/models/item/energium_vault.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Energium"
-    },
-    {
-      "name": "EnergiumVaultBlockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_vault_blockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/block/energium_vault_blockstate_blockstate_0.json",
-          "src/main/resources/assets/power/models/block/energium_vault_blockstate_blockstate_1.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Energium"
-    },
-    {
-      "name": "EnergiumVaultTickUpdate",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_vault_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumVaultTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Energium"
-    },
-    {
-      "name": "EnergiumKeyOpenVault",
-      "type": "procedure",
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "energium_key_open_vault",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumKeyOpenVaultProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Energium"
-    },
-    {
-      "name": "EnergiumKey",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_key",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/energium_key.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumKeyItem.java",
-          "src/main/resources/assets/power/items/energium_key.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Energium"
-    },
-    {
-      "name": "EnergiumTempleVaults",
-      "type": "loottable",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_temple_vaults",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/loot_table/chests/energium_temple_vaults.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Energium"
-    },
-    {
       "name": "UpdateGeneratedVaults",
       "type": "procedure",
       "compiles": true,
@@ -21809,24 +21547,7 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/UpdateGeneratedVaultsProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Modules/BasicModule"
     },
@@ -21912,54 +21633,6 @@
       "path": "~/Elements/Magnet"
     },
     {
-      "name": "CursedForest",
-      "type": "biome",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_forest",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/worldgen/biome/cursed_forest.json"
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
-      "name": "PlayerWitheringInCursedForest",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "player_withering_in_cursed_forest",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlayerWitheringInCursedForestProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
       "name": "RedMagnetPowerTick",
       "type": "procedure",
       "compiles": true,
@@ -22030,21 +21703,6 @@
         ]
       },
       "path": "~/Elements/Magnet"
-    },
-    {
-      "name": "BigCursedTrees",
-      "type": "feature",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "big_cursed_trees",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/worldgen/placed_feature/big_cursed_trees.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/big_cursed_trees_biome_modifier.json",
-          "src/main/resources/data/power/worldgen/configured_feature/big_cursed_trees.json"
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
     },
     {
       "name": "LetsBailThisPlaceIsdead",
@@ -22562,21 +22220,6 @@
         "dependencies": []
       },
       "path": "~/Mobs/EnergiumGolem"
-    },
-    {
-      "name": "BasicCursedTrees",
-      "type": "feature",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "basic_cursed_trees",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/worldgen/placed_feature/basic_cursed_trees.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/basic_cursed_trees_biome_modifier.json",
-          "src/main/resources/data/power/worldgen/configured_feature/basic_cursed_trees.json"
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
     },
     {
       "name": "CursedCastle",
@@ -24999,7 +24642,7 @@
     {
       "name": "BlueFlameMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blue_flame_master_start",
       "metadata": {
@@ -25444,7 +25087,7 @@
     {
       "name": "GravityMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "gravity_master_start",
       "metadata": {
@@ -27128,34 +26771,6 @@
       "path": "~/Elements/Spirit"
     },
     {
-      "name": "RenderItemInEnergiumVaults",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_item_in_energium_vaults",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderItemInEnergiumVaultsProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Energium"
-    },
-    {
-      "name": "RenderItemInCursedVault",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_item_in_cursed_vault",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderItemInCursedVaultProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/ItemsAndBlocks/Vaults/Cursed"
-    },
-    {
       "name": "BatteryChargerProgressv2",
       "type": "procedure",
       "compiles": true,
@@ -27502,7 +27117,7 @@
     {
       "name": "CursedKeeperPriGibieliSushchnosti",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_keeper_pri_gibieli_sushchnosti",
       "metadata": {
@@ -27704,7 +27319,7 @@
     {
       "name": "FormMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "form_master_start",
       "metadata": {
@@ -28634,7 +28249,7 @@
     {
       "name": "GoldenDustMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "golden_dust_master_start",
       "metadata": {
@@ -29130,7 +28745,7 @@
     {
       "name": "DarknessMasterStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "darkness_master_start",
       "metadata": {
@@ -29885,25 +29500,6 @@
         ]
       },
       "path": "~/Modules/BasicModule"
-    },
-    {
-      "name": "ItemRotationWorldTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "item_rotation_world_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ItemRotationWorldTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Vaults"
     },
     {
       "name": "ConverterModule",
@@ -30803,7 +30399,7 @@
     {
       "name": "LevelUp",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "level_up",
       "metadata": {
@@ -31523,84 +31119,6 @@
         ]
       },
       "path": "~/Modules/StarPointsModule"
-    },
-    {
-      "name": "Curse",
-      "type": "potioneffect",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "curse",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/potion/CurseMobEffect.java"
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
-      "name": "RenderFogByCurse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_fog_by_curse",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderFogByCurseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "end",
-            "type": "number"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
-      "name": "CurseTickEvent",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "curse_tick_event",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CurseTickEventProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
-      "name": "CalculateFogColorByCurse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "calculate_fog_color_by_curse",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CalculateFogColorByCurseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
     },
     {
       "name": "UnbreakableDiamond",
@@ -32667,6 +32185,11 @@
     }
   ],
   "tag_elements": {
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:MusicHope",
+      "~CUSTOM:MusicDiscAncientMood",
+      "~CUSTOM:MusicDiscCallOfThePast"
+    ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",
       "CUSTOM:EnergiumAxe",
@@ -32679,24 +32202,19 @@
       "CUSTOM:CreationHoe",
       "CUSTOM:CreationShovel"
     ],
-    "ITEMS:minecraft:music_discs": [
-      "~CUSTOM:MusicHope",
-      "~CUSTOM:MusicDiscAncientMood",
-      "~CUSTOM:MusicDiscCallOfThePast"
-    ],
     "BLOCKS:minecraft:stairs": [
       "~CUSTOM:CursedStoneCrackedBricksStairs",
       "~CUSTOM:PolishedCursedStoneStairs",
       "~CUSTOM:CursedStoneBricksStairs",
       "~CUSTOM:CursedStoneStairs"
     ],
-    "BIOMES:mod:cursed_biomes": [
-      "CUSTOM:CursedForest"
-    ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:TechnoPickaxe",
       "~CUSTOM:CreationPickaxe",
       "~CUSTOM:EnergiumPickaxe"
+    ],
+    "BIOMES:mod:cursed_biomes": [
+      "CUSTOM:CursedForest"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:DarkSword",
@@ -32818,8 +32336,6 @@
       "~CUSTOM:DeepslateDepletedEnergiumOre",
       "~CUSTOM:RawEnergiumBlock",
       "~CUSTOM:EnergiumOre",
-      "~CUSTOM:EnergiumVault",
-      "~CUSTOM:CursedVault",
       "~CUSTOM:RawDepletedEnergiumBlock",
       "~CUSTOM:EnergiumController",
       "~CUSTOM:EnergiumBlock",
@@ -32990,18 +32506,18 @@
       "~CUSTOM:EnergiumAxe",
       "~CUSTOM:TornadoAxe"
     ],
-    "ITEMS:minecraft:trim_materials": [
-      "CUSTOM:DepletedEnergiumIngot",
-      "CUSTOM:EnergiumIngot",
-      "CUSTOM:AmplifierDrop",
-      "CUSTOM:CopyriumIngot"
-    ],
     "ENTITIES:mod:xp/50": [
       "CUSTOM:CursedKeeper",
       "CUSTOM:EnergiumGolem",
       "EntityWither",
       "EntityDragon",
       "EntityWarden"
+    ],
+    "ITEMS:minecraft:trim_materials": [
+      "CUSTOM:DepletedEnergiumIngot",
+      "CUSTOM:EnergiumIngot",
+      "CUSTOM:AmplifierDrop",
+      "CUSTOM:CopyriumIngot"
     ],
     "ITEMS:power:energium_sword_repair_items": [
       "~CUSTOM:EnergiumIngot"
@@ -33023,10 +32539,8 @@
       "~CUSTOM:DeepslateDepletedEnergiumOre",
       "~CUSTOM:RawEnergiumBlock",
       "~CUSTOM:EnergiumOre",
-      "~CUSTOM:EnergiumVault",
       "~CUSTOM:CursedLamp",
       "~CUSTOM:CursedLadder",
-      "~CUSTOM:CursedVault",
       "~CUSTOM:ElementalPowerGenerator",
       "~CUSTOM:RawCopyriumBlock",
       "~CUSTOM:CopyriumBlock",
@@ -33672,8 +33186,6 @@
       "EnergiumHoe",
       "EnergiumArmor",
       "EnergiumCore",
-      "EnergiumVault",
-      "EnergiumKey",
       "MusicDiscCallOfThePast",
       "CopyriumOre",
       "DeepslateCopyriumOre",
@@ -33704,8 +33216,6 @@
       "CursedLadder",
       "CursedLamp",
       "CursedLantern",
-      "CursedVault",
-      "CursedKey",
       "MusicDiscAncientMood",
       "FreakingParsnip",
       "FreakingParsnipSoup",
@@ -33735,14 +33245,14 @@
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.speed_armor_helmet": "Шлем мастера скорости",
-      "gui.power.keepers_box_gui_part_3.tooltip_form": "Форма",
       "item.power.blue_flame_armor_boots": "Ботинки мастера синего пламени",
+      "gui.power.keepers_box_gui_part_3.tooltip_form": "Форма",
       "item.power.mushrooms_armor_leggings": "Поножи мастера грибов",
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Поток астральной энергии, расходует 10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 20",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
-      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "advancements.grant_your_power.title": "Даруй свою силу",
+      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "item.power.extra_star_points_rune_3": "Руна",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.cursed_keeper_spawn_egg": "Яйцо призыва проклятого хранителя",
@@ -33764,8 +33274,8 @@
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
       "item.power.gravity_mace": "Гравитационная булава",
       "block.power.amplifier_block": "Блок амплифера",
-      "item.power.music_armor_leggings": "Поножи мастера музыки",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
+      "item.power.music_armor_leggings": "Поножи мастера музыки",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Туманная невидимость, расходует 70",
       "item.power.music_battery": "Батарея",
       "item.power.darkness_battery": "Батарея",
@@ -33793,7 +33303,6 @@
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "item.power.cursed_stone_pillar": "Cursed Stone Pillar",
       "item.power.amplifier_ring": "Амплиферовое кольцо",
-      "effect.power.curse": "Curse",
       "subtitles.cursed_knight.attack": "",
       "item.power.cursed_stone_bricks_wall": "Cursed Stone Bricks Wall",
       "item.power.spirit_battery": "Батарея",
@@ -33819,12 +33328,12 @@
       "effect.power.horror_dark_master": "Т. Мастер Хоррора",
       "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Грибное насыщение, расходует 50",
       "item.power.music_guitar": "Музыкальная гитара",
-      "advancements.the_end_of_tyranny.descr": "Победите энергиумного голема",
       "item.power.cursed_stone": "Cursed Stone",
+      "advancements.the_end_of_tyranny.descr": "Победите энергиумного голема",
       "item.power.ocean_battery": "Батарея",
-      "effect.power.star_regeneration": "Звёзд. регенерация",
-      "item.power.mist_battery": "Батарея",
       "item.power.smoke_armor_chestplate": "Нагрудник мастера дыма",
+      "item.power.mist_battery": "Батарея",
+      "effect.power.star_regeneration": "Звёзд. регенерация",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "item.power.cursed_knight_spawn_egg": "Яйцо призыва проклятого рыцаря",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
@@ -33843,7 +33352,6 @@
       "item.power.teleportation_stone": "Камень телепортации",
       "gui.power.wheel_abilities_sand.tooltip_burial_uses_30": "Погребение, расходует 30",
       "item.power.air_rapier": "Воздушная рапира",
-      "biome.power.cursed_forest": "Проклятый лес",
       "item.power.polished_cursed_stone_wall": "Polished Cursed Stone Wall",
       "effect.power.lethality": "Летальность",
       "gui.power.wheel_abilties_golden_dust.tooltip_random_power_uses_80": "Рандомная сила, расходует 80",
@@ -33852,8 +33360,8 @@
       "item.power.energium_hoe": "Энергиумная мотыга",
       "trim_material.power.copyrium_material": "Копириум",
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
-      "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
       "item.power.empty_battery.description_0": "§cНе заряжена",
+      "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
       "item.power.amber_staff": "Посох янтаря",
       "subtitles.electric_spark": "Искра",
       "gui.power.wheel_abilities_blue_flame.tooltip_electric_discharge_uses_75": "Электрический разряд, расходует 75",
@@ -33871,8 +33379,8 @@
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "item.power.empty_characteristics_card.description_0": "§7Пустая",
       "item.power.smoke_stone": "Камень дыма",
-      "effect.power.air_master": "Мастер воздуха",
       "item.power.blue_flame_sword": "Меч синего пламени",
+      "effect.power.air_master": "Мастер воздуха",
       "effect.power.miniaturization": "Миниатюризация",
       "item.power.raw_depleted_energium": "Рудный обеднённый энергиум",
       "item.minecraft.potion.effect.power_lock_potion": "Зелье блокировки силы",
@@ -33916,8 +33424,8 @@
       "gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30": "Замедление времени, расходует 20",
       "item.power.horror_armor_leggings": "Поножи тёмного мастера хоррора",
       "item.power.horror_armor_helmet": "Шлем тёмного мастера хоррора",
-      "block.power.amber_block": "Блок янтаря",
       "item.power.spirit_armor_chestplate": "Нагрудник мастера духа",
+      "block.power.amber_block": "Блок янтаря",
       "effect.power.chaos_dark_master": "Т. Мастер Хаоса",
       "item.power.blue_flame_battery.description_0": "§aЗаряжен элементом:",
       "entity.power.cursed_knight": "Проклятый рыцарь",
@@ -33942,13 +33450,13 @@
       "item.power.blood_battery.description_1": "§9Кровь",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Телепортация",
       "item.power.blood_battery.description_0": "§aЗаряжен элементом:",
-      "item.power.moon_armor_chestplate": "Нагрудник мастера луны",
       "item.power.raw_copyrium": "Рудный копириум",
+      "item.power.moon_armor_chestplate": "Нагрудник мастера луны",
       "item.power.creation_armor_chestplate": "Нагрудник мастера созидания",
       "effect.power.ocean_master": "Мастер океана",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
-      "advancements.the_great_win.descr": "Победите проклятого хранителя и освободите его от проклятия",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "advancements.the_great_win.descr": "Победите проклятого хранителя и освободите его от проклятия",
       "effect.power.vacuum_master": "Мастер пустоты",
       "item.power.tornado_battery.description_0": "§aЗаряжен элементом:",
       "item.power.mercury_armor_chestplate": "Нагрудник мастера ртути",
@@ -34040,7 +33548,6 @@
       "item.power.mind_armor_chestplate": "Нагрудник мастера разума",
       "effect.power.lightning_master": "Мастер молнии",
       "block.power.deepslate_depleted_energium_ore": "Обеднённый энергиумоносный глубинный сланец",
-      "item.power.cursed_vault": "Cursed Vault",
       "item.power.water_stone": "Камень воды",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Вишнёвый ветер, расходует 10",
       "item.power.fire_armor_leggings": "Поножи мастера огня",
@@ -34320,7 +33827,6 @@
       "gui.power.wheel_abilities_form.tooltip_gigantization_uses_50": "Гигантизация, расходует 50",
       "item.power.cursed_stone_bricks": "Cursed Stone Bricks",
       "item.power.earth_armor_leggings": "Поножи мастера земли",
-      "item.power.cursed_key": "Проклятый ключ",
       "gui.power.wheel_abilities_spirit.tooltip_spiritual_flight_uses_5": "Спиритический полёт, расходует 5",
       "block.power.moon_block": "Лунный блок",
       "power.modinfo.recharge_stone": "Перезарядка: ",
@@ -34359,7 +33865,6 @@
       "item.power.lava_armor_chestplate": "Нагрудник мастера лавы",
       "item.power.poison_armor_helmet": "Шлем мастера яда",
       "gui.power.wheel_abilities_plague.tooltip_plague_healing_uses_75": "Чумное исцеление, расходует 75",
-      "item.power.energium_vault": "Energium Vault",
       "effect.power.creation_master": "Мастер творения",
       "gui.power.wheel_abilities_mushrooms.tooltip_flying_spores_uses_15": "Летающие споры, расходует 15",
       "gui.power.wheel_abilities_metal.tooltip_iron_skin_uses_80": "Железная кожа, расходует 80",
@@ -34619,7 +34124,6 @@
       "item.power.sand_saber": "Песочная сабля",
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
       "effect.power.form_master": "Мастер формы",
-      "item.power.energium_key": "Энергиумный ключ",
       "item.power.music_disc_call_of_the_past.desc": "bxkqq - Call of the Past",
       "entity.power.shadow": "Тень",
       "item.power.green_staff": "Зелёный посох",
@@ -34747,8 +34251,8 @@
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 20",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
-      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "advancements.grant_your_power.title": "Grant your power",
+      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.extra_star_points_rune_3": "Rune",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
@@ -34770,8 +34274,8 @@
       "item.power.teleportation_armor_chestplate": "Teleportation Chestplate",
       "item.power.gravity_mace": "Gravity Mace",
       "block.power.amplifier_block": "Amplifier Block",
-      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "item.power.music_armor_leggings": "Music Leggings",
+      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
       "item.power.music_battery": "Battery",
       "item.power.darkness_battery": "Battery",
@@ -34799,7 +34303,6 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
       "item.power.cursed_stone_pillar": "Cursed Stone Pillar",
       "item.power.amplifier_ring": "Amplifier Ring",
-      "effect.power.curse": "Curse",
       "subtitles.cursed_knight.attack": "",
       "item.power.cursed_stone_bricks_wall": "Cursed Stone Bricks Wall",
       "item.power.spirit_battery": "Battery",
@@ -34825,12 +34328,12 @@
       "effect.power.horror_dark_master": "Dark Master of Horror",
       "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Mushroom saturation, uses 50",
       "item.power.music_guitar": "Music Guitar",
-      "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
       "item.power.cursed_stone": "Cursed Stone",
+      "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
       "item.power.ocean_battery": "Battery",
-      "item.power.smoke_armor_chestplate": "Smoke Chestplate",
-      "item.power.mist_battery": "Battery",
       "effect.power.star_regeneration": "Star regeneration",
+      "item.power.mist_battery": "Battery",
+      "item.power.smoke_armor_chestplate": "Smoke Chestplate",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "item.power.cursed_knight_spawn_egg": "Cursed Knight Spawn Egg",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
@@ -34849,7 +34352,6 @@
       "item.power.teleportation_stone": "Teleportation Stone",
       "gui.power.wheel_abilities_sand.tooltip_burial_uses_30": "Burial, uses 30",
       "item.power.air_rapier": "Air Rapier",
-      "biome.power.cursed_forest": "Cursed Forest",
       "item.power.polished_cursed_stone_wall": "Polished Cursed Stone Wall",
       "effect.power.lethality": "Lethality",
       "gui.power.wheel_abilties_golden_dust.tooltip_random_power_uses_80": "Random power, uses 80",
@@ -34858,8 +34360,8 @@
       "item.power.energium_hoe": "Energium Hoe",
       "trim_material.power.copyrium_material": "Copyrium",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
-      "item.power.empty_battery.description_0": "§cNot charged",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
+      "item.power.empty_battery.description_0": "§cNot charged",
       "item.power.amber_staff": "Amber Staff",
       "subtitles.electric_spark": "Spark",
       "gui.power.wheel_abilities_blue_flame.tooltip_electric_discharge_uses_75": "Electric discharge, uses 75",
@@ -34877,8 +34379,8 @@
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.empty_characteristics_card.description_0": "§7Empty",
       "item.power.smoke_stone": "Smoke Stone",
-      "item.power.blue_flame_sword": "Blue Flame Sword",
       "effect.power.air_master": "Master of the Air",
+      "item.power.blue_flame_sword": "Blue Flame Sword",
       "effect.power.miniaturization": "Miniaturization",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
@@ -34922,8 +34424,8 @@
       "gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30": "Time dilation, uses 20",
       "item.power.horror_armor_leggings": "Horror Leggings",
       "item.power.horror_armor_helmet": "Horror Helmet",
-      "block.power.amber_block": "Amber Block",
       "item.power.spirit_armor_chestplate": "Spirit Chestplate",
+      "block.power.amber_block": "Amber Block",
       "effect.power.chaos_dark_master": "Dark Master of Chaos",
       "item.power.blue_flame_battery.description_0": "§aCharged with element:",
       "entity.power.cursed_knight": "Cursed Knight",
@@ -34948,13 +34450,13 @@
       "item.power.blood_battery.description_1": "§9Blood",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
       "item.power.blood_battery.description_0": "§aCharged with element:",
-      "item.power.raw_copyrium": "Raw Copyrium",
       "item.power.moon_armor_chestplate": "Moon Chestplate",
+      "item.power.raw_copyrium": "Raw Copyrium",
       "item.power.creation_armor_chestplate": "Creation Chestplate",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "effect.power.ocean_master": "Master of the Ocean",
-      "advancements.the_great_win.descr": "Defeat the cursed keeper and free him from the curse",
       "item.power.crystal_armor_boots": "Crystal Boots",
+      "advancements.the_great_win.descr": "Defeat the cursed keeper and free him from the curse",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.tornado_battery.description_0": "§aCharged with element:",
       "item.power.mercury_armor_chestplate": "Mercury Chestplate",
@@ -35046,7 +34548,6 @@
       "item.power.mind_armor_chestplate": "Mind Chestplate",
       "effect.power.lightning_master": "Master of Lightning",
       "block.power.deepslate_depleted_energium_ore": "Deepslate Depleted Energium Ore",
-      "item.power.cursed_vault": "Cursed Vault",
       "item.power.water_stone": "Water Stone",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Cherry wind, uses 10",
       "effect.power.energy_master": "Master of Energy",
@@ -35325,7 +34826,6 @@
       "gui.power.wheel_abilities_form.tooltip_gigantization_uses_50": "Gigantization, uses 50",
       "item.power.cursed_stone_bricks": "Cursed Stone Bricks",
       "item.power.earth_armor_leggings": "Earth Leggings",
-      "item.power.cursed_key": "Cursed Key",
       "gui.power.wheel_abilities_spirit.tooltip_spiritual_flight_uses_5": "Spiritual flight, uses 5",
       "block.power.moon_block": "Moon Block",
       "power.modinfo.recharge_stone": "Recharge: ",
@@ -35364,7 +34864,6 @@
       "item.power.lava_armor_chestplate": "Lava Chestplate",
       "item.power.poison_armor_helmet": "Poison Helmet",
       "gui.power.wheel_abilities_plague.tooltip_plague_healing_uses_75": "Plague healing, uses 75",
-      "item.power.energium_vault": "Energium Vault",
       "effect.power.creation_master": "Master of Creation",
       "gui.power.wheel_abilities_mushrooms.tooltip_flying_spores_uses_15": "Flying spores, uses 15",
       "gui.power.wheel_abilities_metal.tooltip_iron_skin_uses_80": "Iron skin, uses 80",
@@ -35625,7 +35124,6 @@
       "item.power.sand_saber": "Sand Saber",
       "item.power.lava_armor_boots": "Lava Boots",
       "effect.power.form_master": "Master of Form ",
-      "item.power.energium_key": "Energium Key",
       "item.power.music_disc_call_of_the_past.desc": "bxkqq - Call of the Past",
       "entity.power.shadow": "Shadow",
       "item.power.green_staff": "Green Staff",
@@ -36027,12 +35525,7 @@
       },
       {
         "name": "Biomes",
-        "children": [
-          {
-            "name": "CursedForest",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "name": "Elements",
@@ -36475,19 +35968,6 @@
           {
             "name": "FreakingParsnip",
             "children": []
-          },
-          {
-            "name": "Vaults",
-            "children": [
-              {
-                "name": "Energium",
-                "children": []
-              },
-              {
-                "name": "Cursed",
-                "children": []
-              }
-            ]
           },
           {
             "name": "CharacteristicsCard",

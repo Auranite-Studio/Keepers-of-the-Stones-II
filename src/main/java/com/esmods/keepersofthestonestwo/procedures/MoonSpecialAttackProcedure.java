@@ -67,10 +67,9 @@ public class MoonSpecialAttackProcedure {
 								}
 								{
 									Entity _ent = entityiterator;
-									if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-										_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-												_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
-												"particle power:moon_particle ~ ~10 ~ 0.5 10 0.5 10 500 force");
+									if (!_ent.level().isClientSide() && _ent.theGame() != null) {
+										_ent.theGame().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+												4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().theGame(), _ent), "particle power:moon_particle ~ ~10 ~ 0.5 10 0.5 10 500 force");
 									}
 								}
 								success = true;
