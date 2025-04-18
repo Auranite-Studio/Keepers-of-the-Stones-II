@@ -1,6 +1,8 @@
 {
   "type": "neoforge:add_spawns",
-  "biomes": "power:cursed_forest",
+  "biomes": {
+    "type": "neoforge:any"
+  },
   "spawners": {
     "type": "power:cursed_squire",
     "weight": 8,
