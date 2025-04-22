@@ -18,7 +18,7 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 [[dependencies.power]]
     modId="neoforge"
     type="required"
-    versionRange="[0.25w14craftmine.3-beta,)"
+    versionRange="[0.25w14craftmine.5-beta,)"
     ordering="AFTER"
     side="BOTH"
 
