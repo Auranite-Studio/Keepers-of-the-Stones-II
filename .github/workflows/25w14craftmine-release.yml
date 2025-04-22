@@ -10,8 +10,8 @@ on:
 env:                                              
   MINECRAFT_VERSION: 25w14craftmine                      
   JAVA_VERSION: 21      
-  VERSION: 1.1.6
-  RELEASE_NAME: Keepers of the Stones II 1.1.6
+  VERSION: 1.1.7
+  RELEASE_NAME: Keepers of the Stones II 1.1.7 Alpha
 
 jobs:
   build:
@@ -49,7 +49,7 @@ jobs:
           
           name: "${{env.RELEASE_NAME}}"                             
           version: "${{env.VERSION}}"
-          version-type: release
+          version-type: alpha
           changelog-file: CHANGELOG.md                                      
 
           loaders: |
