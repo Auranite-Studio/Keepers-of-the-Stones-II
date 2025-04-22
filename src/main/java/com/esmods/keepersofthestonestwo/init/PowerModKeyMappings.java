@@ -22,7 +22,7 @@ import com.esmods.keepersofthestonestwo.network.AbilityUsingKeyMessage;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class PowerModKeyMappings {
-	public static final KeyMapping DETRANSFORMATION_KEY = new KeyMapping("key.power.detransformation_key", GLFW.GLFW_KEY_U, "key.categories.power2") {
+	public static final KeyMapping DETRANSFORMATION_KEY = new KeyMapping("key.power.detransformation_key", GLFW.GLFW_KEY_I, "key.categories.power2") {
 		private boolean isDownOld = false;
 
 		@Override
