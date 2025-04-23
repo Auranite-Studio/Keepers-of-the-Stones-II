@@ -31426,7 +31426,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/screens/PowerOverlayOverlay.java"
         ]
       },
-      "path": "~/Modules/BasicModule"
+      "path": "~/Modules/StarPointsModule"
     },
     {
       "name": "BlueRune1Check",
@@ -31478,6 +31478,58 @@
         "return_type": "logic",
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune3CheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RunesOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "runes_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/screens/RunesOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GetRunes",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_runes",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GetRunesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RunesOverlayRenderingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "runes_overlay_rendering_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RunesOverlayRenderingTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -32185,6 +32237,12 @@
       "type": "itemstack",
       "scope": "player_persistent",
       "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "rune_ovelay_display",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [
