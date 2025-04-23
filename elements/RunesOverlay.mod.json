@@ -24,8 +24,8 @@
             "name": "BlueRune1Check"
           },
           "anchorPoint": "TOP_LEFT",
-          "x": 8,
-          "y": 53,
+          "x": 7,
+          "y": 56,
           "locked": true
         }
       },
@@ -38,8 +38,8 @@
             "name": "BlueRune2Check"
           },
           "anchorPoint": "TOP_LEFT",
-          "x": 8,
-          "y": 53,
+          "x": 7,
+          "y": 56,
           "locked": true
         }
       },
@@ -52,8 +52,8 @@
             "name": "BlueRune3Check"
           },
           "anchorPoint": "TOP_LEFT",
-          "x": 8,
-          "y": 53,
+          "x": 7,
+          "y": 56,
           "locked": true
         }
       }

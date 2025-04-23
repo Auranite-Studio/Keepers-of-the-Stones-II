@@ -31133,8 +31133,8 @@
       "registry_name": "extra_star_points_rune_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/extra_star_points_rune_1.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/ExtraStarPointsRune1Item.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ExtraStarPointsRune1Item.java",
+          "src/main/resources/assets/power/models/item/extra_star_points_rune_1.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Runes/ExtraStarPoints1"
