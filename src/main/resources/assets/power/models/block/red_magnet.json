@@ -1,0 +1,9 @@
+{
+  "parent": "power:custom/magnet",
+  "textures": {
+    "all": "power:block/magnet_red",
+    "particle": "power:block/magnet_red",
+    "0": "power:block/magnet_red"
+  },
+  "render_type": "solid"
+}

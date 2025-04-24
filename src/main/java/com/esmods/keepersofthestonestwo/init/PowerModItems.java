@@ -714,6 +714,8 @@ public class PowerModItems {
 	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_2 = REGISTRY.register("extra_star_points_rune_2", ExtraStarPointsRune2Item::new);
 	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_3 = REGISTRY.register("extra_star_points_rune_3", ExtraStarPointsRune3Item::new);
 	public static final DeferredItem<Item> MUSIC_HOPE = REGISTRY.register("music_hope", MusicHopeItem::new);
+	public static final DeferredItem<Item> BLUE_MAGNET = block(PowerModBlocks.BLUE_MAGNET);
+	public static final DeferredItem<Item> RED_MAGNET = block(PowerModBlocks.RED_MAGNET);
 
 	// Start of user code block custom items
 	// End of user code block custom items

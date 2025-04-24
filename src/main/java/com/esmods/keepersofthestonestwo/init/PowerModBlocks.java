@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.minecraft.world.level.block.Block;
 
 import com.esmods.keepersofthestonestwo.block.RuneCutterBlock;
+import com.esmods.keepersofthestonestwo.block.RedMagnetBlock;
 import com.esmods.keepersofthestonestwo.block.RawEnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.RawDepletedEnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.RawCopyriumBlockBlock;
@@ -55,6 +56,7 @@ import com.esmods.keepersofthestonestwo.block.CopyriumOreBlock;
 import com.esmods.keepersofthestonestwo.block.CopyriumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.ChiseledCursedStoneBlock;
 import com.esmods.keepersofthestonestwo.block.BluePortalBlock;
+import com.esmods.keepersofthestonestwo.block.BlueMagnetBlock;
 import com.esmods.keepersofthestonestwo.block.BatteryChargerBlock;
 import com.esmods.keepersofthestonestwo.block.AmplifierOreBlock;
 import com.esmods.keepersofthestonestwo.block.AmplifierBlockBlock;
@@ -113,6 +115,8 @@ public class PowerModBlocks {
 	public static final DeferredBlock<Block> CURSED_STONE_CRACKED_BRICKS_WALL = REGISTRY.register("cursed_stone_cracked_bricks_wall", CursedStoneCrackedBricksWallBlock::new);
 	public static final DeferredBlock<Block> FREAKING_PARSNIP_BLOCK = REGISTRY.register("freaking_parsnip_block", FreakingParsnipBlockBlock::new);
 	public static final DeferredBlock<Block> RUNE_CUTTER = REGISTRY.register("rune_cutter", RuneCutterBlock::new);
+	public static final DeferredBlock<Block> BLUE_MAGNET = REGISTRY.register("blue_magnet", BlueMagnetBlock::new);
+	public static final DeferredBlock<Block> RED_MAGNET = REGISTRY.register("red_magnet", RedMagnetBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

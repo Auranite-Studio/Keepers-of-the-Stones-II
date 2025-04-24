@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "red": {
+      "map": {
+        "0": "magnet_red"
+      },
+      "name": "red"
+    },
+    "default": {
+      "map": {
+        "0": "magnet_blue"
+      },
+      "name": "default"
+    }
+  }
+}
