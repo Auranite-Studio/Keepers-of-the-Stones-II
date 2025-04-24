@@ -20,7 +20,7 @@ import com.esmods.keepersofthestonestwo.procedures.ExtraStarPointsRune1UseProced
 
 public class ExtraStarPointsRune1Item extends Item {
 	public ExtraStarPointsRune1Item() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE));
 	}
 
 	@Override

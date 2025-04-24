@@ -18,11 +18,13 @@ import net.minecraft.client.Minecraft;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
 
-import com.esmods.keepersofthestonestwo.procedures.GetStarPointsProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetActiveProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetRunesProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BlueRune3CheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BlueRune2CheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BlueRune1CheckProcedure;
 
 @EventBusSubscriber({Dist.CLIENT})
-public class PowerOverlayOverlay {
+public class RunesOverlayOverlay {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
 		int w = event.getGuiGraphics().guiWidth();
@@ -44,12 +46,18 @@ public class PowerOverlayOverlay {
 		RenderSystem.setShader(GameRenderer::getPositionTexShader);
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
-		if (GetActiveProcedure.execute(entity)) {
-			event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_points_overlay.png"), 2, 28, 0, 0, 59, 20, 59, 20);
+		if (GetRunesProcedure.execute(entity)) {
+			event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/runes_inventory.png"), 2, 50, 0, 0, 59, 26, 59, 26);
 
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
-
-					GetStarPointsProcedure.execute(entity), 31, 35, -1, false);
+			if (BlueRune1CheckProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_1.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+			}
+			if (BlueRune2CheckProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_2.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+			}
+			if (BlueRune3CheckProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_3.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+			}
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();

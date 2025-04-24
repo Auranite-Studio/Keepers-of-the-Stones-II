@@ -1,9 +1,10 @@
 
 **New features**
-- *N/A*
+- Added basic functionality to runes
+- Now runes can only be used one of each type (star runes, charge runes, and power runes)
 
 **Improvemnts** 
-- *N/A*
+- Runes are no longer an experimental feature.
 
 **API changes**
 - *N/A*

@@ -30299,33 +30299,6 @@
       "path": "~/Achievements"
     },
     {
-      "name": "CharacteristicsCardWritingChars",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "characteristics_card_writing_chars",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CharacteristicsCardWritingCharsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/CharacteristicsCard"
-    },
-    {
       "name": "LevelUp",
       "type": "procedure",
       "compiles": true,
@@ -31160,8 +31133,8 @@
       "registry_name": "extra_star_points_rune_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/extra_star_points_rune_1.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/ExtraStarPointsRune1Item.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ExtraStarPointsRune1Item.java",
+          "src/main/resources/assets/power/models/item/extra_star_points_rune_1.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Runes/ExtraStarPoints1"
@@ -31453,7 +31426,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/screens/PowerOverlayOverlay.java"
         ]
       },
-      "path": "~/Modules/BasicModule"
+      "path": "~/Modules/StarPointsModule"
     },
     {
       "name": "BlueRune1Check",
@@ -31505,6 +31478,58 @@
         "return_type": "logic",
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune3CheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RunesOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "runes_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/screens/RunesOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GetRunes",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_runes",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GetRunesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RunesOverlayRenderingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "runes_overlay_rendering_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RunesOverlayRenderingTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -32212,6 +32237,12 @@
       "type": "itemstack",
       "scope": "player_persistent",
       "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "rune_ovelay_display",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -33694,10 +33725,10 @@
       "effect.power.blood_master": "Мастер крови",
       "advancements.lets_bail_this_place_isdead.descr": "Найдите биом - проклятый лес",
       "block.power.cursed_stone_stairs": "Ступеньки из проклятого камня",
-      "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
       "effect.power.stun": "Оглушение",
-      "item.power.explosion_battery": "Батарея",
+      "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
       "item.power.chaos_armor_chestplate": "Нагрудник тёмного мастера хаоса",
+      "item.power.explosion_battery": "Батарея",
       "gui.power.keepers_box_gui_part_2.tooltip_smoke": "Дым",
       "item.power.water_battery": "Батарея",
       "gui.power.wheel_abilities_teleportation.tooltip_creatingdestructing_portals_us": "Создание/разрушение порталов, расходует 20",
