@@ -22,6 +22,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.SmokeMusketProjectileRen
 import com.esmods.keepersofthestonestwo.client.renderer.SmokeBombProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.ShadowSphereRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.ShadowRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.RedMagnetRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.RainDropProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.PoisonousThornRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.PoisonPitRenderer;
@@ -51,6 +52,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.CursedKeeperRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CopperAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CobblestoneAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CobbledDeepslateAttackProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.BlueMagnetRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.BlackHoleRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.BallLightningProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.AtomicRocketRenderer;
@@ -109,5 +111,7 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.CURSED_SQUIRE.get(), CursedSquireRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_KEEPER.get(), CursedKeeperRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.EXAMPLE_MASTER.get(), ExampleMasterRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.RED_MAGNET.get(), RedMagnetRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.BLUE_MAGNET.get(), BlueMagnetRenderer::new);
 	}
 }

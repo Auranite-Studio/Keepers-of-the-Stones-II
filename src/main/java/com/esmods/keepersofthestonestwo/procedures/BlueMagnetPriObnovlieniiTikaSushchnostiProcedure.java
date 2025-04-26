@@ -18,7 +18,7 @@ import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
-public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
+public class BlueMagnetPriObnovlieniiTikaSushchnostiProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
@@ -40,9 +40,9 @@ public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 		{
 			final Vec3 _center = new Vec3(playerPosX, playerPosY, playerPosZ);
 			for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
-				if (!((entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("space")
-						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space")
-						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("space"))) {
+				if (!((entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("magnet") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("magnet")
+						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("magnet") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("magnet")
+						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("magnet") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("magnet"))) {
 					if (!entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:magnetic_entity")))) {
 						if (entityiterator instanceof Mob || entityiterator instanceof Player) {
 							if (!(getEntityGameType(entityiterator) == GameType.CREATIVE) && !(getEntityGameType(entityiterator) == GameType.SPECTATOR)) {
@@ -50,19 +50,19 @@ public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 								itemPosY = entityiterator.getY();
 								itemPosZ = entityiterator.getZ();
 								if (itemPosX < playerPosX) {
-									entityiterator.setDeltaMovement(new Vec3(0.25, (entityiterator.getDeltaMovement().y()), (entityiterator.getDeltaMovement().z())));
+									entityiterator.setDeltaMovement(new Vec3((-0.05), (entityiterator.getDeltaMovement().y()), (entityiterator.getDeltaMovement().z())));
 								} else if (itemPosX > playerPosX) {
-									entityiterator.setDeltaMovement(new Vec3((-0.25), (entityiterator.getDeltaMovement().y()), (entityiterator.getDeltaMovement().z())));
+									entityiterator.setDeltaMovement(new Vec3(0.05, (entityiterator.getDeltaMovement().y()), (entityiterator.getDeltaMovement().z())));
 								}
 								if (itemPosY < playerPosY) {
-									entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), 0.25, (entityiterator.getDeltaMovement().z())));
+									entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (-0.05), (entityiterator.getDeltaMovement().z())));
 								} else if (itemPosY > playerPosY) {
-									entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (-0.25), (entityiterator.getDeltaMovement().z())));
+									entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), 0.05, (entityiterator.getDeltaMovement().z())));
 								}
 								if (itemPosZ < playerPosZ) {
-									entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (entityiterator.getDeltaMovement().y()), 0.25));
+									entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (entityiterator.getDeltaMovement().y()), (-0.05)));
 								} else if (itemPosZ > playerPosZ) {
-									entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (entityiterator.getDeltaMovement().y()), (-0.25)));
+									entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (entityiterator.getDeltaMovement().y()), 0.05));
 								}
 							}
 						}

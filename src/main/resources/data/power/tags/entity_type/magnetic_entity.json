@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "power:red_magnet",
+    "power:blue_magnet",
+    "power:black_hole"
+  ]
+}
