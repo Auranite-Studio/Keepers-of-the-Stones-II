@@ -192,7 +192,7 @@
         "data": {
           "name": "tooltip_negative_charge_uses_30",
           "text": {
-            "fixedValue": "Negative charge, uses 30"
+            "fixedValue": "Negative magnet, uses 50"
           },
           "width": 24,
           "height": 24,
@@ -206,7 +206,7 @@
         "data": {
           "name": "tooltip_positive_charge_uses_30",
           "text": {
-            "fixedValue": "Positive charge, uses 30"
+            "fixedValue": "Positive magnet, uses 50"
           },
           "width": 24,
           "height": 24,

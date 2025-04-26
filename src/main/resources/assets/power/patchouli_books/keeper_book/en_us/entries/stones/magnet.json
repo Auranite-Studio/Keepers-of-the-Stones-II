@@ -11,9 +11,9 @@
                 "$(li)",
                 "Magnetic field wave - attacks entities with a beam attack.",
                 "$(li)",
-                "Negative charge - repels entities.",
+                "Negative magnet - spawn blue magnet which repels entities.",
                 "$(li)",
-                "Positive charge - attracts entities."
+                "Positive magnet - spawn red magnet which attracts entities."
             ]
         },
         {
