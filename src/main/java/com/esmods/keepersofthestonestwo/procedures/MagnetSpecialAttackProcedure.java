@@ -95,7 +95,7 @@ public class MagnetSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("magnet_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 50) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = PowerModEntities.BLUE_MAGNET.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = PowerModEntities.BLUE_MAGNET.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 						entityToSpawn.setDeltaMovement(0, 0, 0);
 					}
@@ -109,7 +109,7 @@ public class MagnetSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("magnet_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 50) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = PowerModEntities.RED_MAGNET.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = PowerModEntities.RED_MAGNET.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 						entityToSpawn.setDeltaMovement(0, 0, 0);
 					}
