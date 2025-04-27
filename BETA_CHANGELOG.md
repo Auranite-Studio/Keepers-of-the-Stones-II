@@ -5,8 +5,8 @@
 
 **Improvemnts** 
 - Runes are no longer an experimental feature
-- Redesigned the second and third abilities of the Magnet Master
-- The Magnet Master can place two magnets of different polarities (blue - repels, red - attracts)
+- Redesigned the second and third abilities of the magnet element abilities
+- Now Magnet Master can place two magnets of different polarities (blue - repels, red - attracts)
 
 **API changes**
 - *N/A*
