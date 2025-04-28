@@ -120,7 +120,7 @@
       "name": "BlueMagnetPriObnovlieniiTikaSushchnosti"
     },
     "onInitialSpawn": {
-      "name": "BlackHolePriNachalnomPrizyvieSushchnosti"
+      "name": "MagnetSetTimer"
     },
     "hasAI": false,
     "aiBase": "(none)",

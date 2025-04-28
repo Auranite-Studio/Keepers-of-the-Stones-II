@@ -31585,8 +31585,8 @@
       "registry_name": "blue_magnet",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/BlueMagnetRenderer.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/BlueMagnetEntity.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/BlueMagnetEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/BlueMagnetRenderer.java"
         ]
       },
       "path": "~/Elements/Magnet"
@@ -31645,6 +31645,25 @@
         ]
       },
       "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "MagnetSetTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_set_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetSetTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Magnet"
     }
   ],
   "variable_elements": [

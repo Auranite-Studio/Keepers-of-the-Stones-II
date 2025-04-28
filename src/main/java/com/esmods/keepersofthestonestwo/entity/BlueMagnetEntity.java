@@ -33,8 +33,8 @@ import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
+import com.esmods.keepersofthestonestwo.procedures.MagnetSetTimerProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BlueMagnetPriObnovlieniiTikaSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.BlackHolePriNachalnomPrizyvieSushchnostiProcedure;
 
 public class BlueMagnetEntity extends PathfinderMob {
 	public BlueMagnetEntity(EntityType<BlueMagnetEntity> type, Level world) {
@@ -109,7 +109,7 @@ public class BlueMagnetEntity extends PathfinderMob {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
-		BlackHolePriNachalnomPrizyvieSushchnostiProcedure.execute(this);
+		MagnetSetTimerProcedure.execute(this);
 		return retval;
 	}
 
