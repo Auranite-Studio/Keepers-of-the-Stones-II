@@ -941,6 +941,7 @@
   "item.power.space_armor_chestplate": "Нагрудник мастера космоса",
   "effect.power.technology_master": "Мастер технологий",
   "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Жало скорпиона, расходует 35",
+  "gui.power.beta_version_overlay.label_warning_this_version_is_not_fin": "Внимание! Эта версия не является окончательной!",
   "item.power.speed_armor_chestplate": "Нагрудник мастера скорости",
   "effect.power.light_master": "Мастер света",
   "advancements.energized_gold.descr": "Используйте энергиумное улучшение, чтобы получить заряженный слиток энергиума",

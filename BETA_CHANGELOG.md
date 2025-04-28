@@ -9,7 +9,7 @@
 - Now Magnet Master can place two magnets of different polarities (blue - repels, red - attracts)
 
 **API changes**
-- *N/A*
+- Warning will now be displayed when using the beta version of the mod
 
 **Bugfixes**
 - [Bugfix] 

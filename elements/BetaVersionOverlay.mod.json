@@ -1,0 +1,41 @@
+{
+  "_fv": 77,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_warning_this_version_is_not_fin",
+          "text": {
+            "fixedValue": "Warning! This version is not final!"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "BetaVersionOverlayUsloviiePokazaNalozhieniia"
+          },
+          "anchorPoint": "TOP_CENTER",
+          "x": 132,
+          "y": 3,
+          "locked": false
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "BetaVersionOverlayIsGUINotHidding"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
