@@ -31664,6 +31664,29 @@
         ]
       },
       "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "GravityPassiveProtection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_passive_protection",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityPassiveProtectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Gravity"
     }
   ],
   "variable_elements": [
