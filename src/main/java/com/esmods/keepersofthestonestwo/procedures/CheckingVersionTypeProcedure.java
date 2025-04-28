@@ -6,7 +6,8 @@ import net.neoforged.neoforgespi.language.IModInfo;
 import java.util.List;
 import java.util.regex.Pattern;
 
-public class BetaVersionOverlayUsloviiePokazaNalozhieniiaProcedure {
+    @Deprecated(since = "release", forRemoval = true)
+public class CheckingVersionTypeProcedure {
 
 	public static boolean execute() {
 		String version = "";
