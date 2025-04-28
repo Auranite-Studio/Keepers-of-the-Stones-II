@@ -13,7 +13,7 @@
 - Warning will now be displayed when using the beta version of the mod
 
 **Bugfixes**
-- [Bugfix] 
+- [Bugfix] Minor localization fixes
 
 **Known issues**
 - *N/A*
