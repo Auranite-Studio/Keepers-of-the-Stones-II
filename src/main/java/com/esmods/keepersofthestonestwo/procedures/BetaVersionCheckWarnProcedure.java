@@ -11,6 +11,8 @@ import net.minecraft.network.chat.Component;
 
 import javax.annotation.Nullable;
 
+import com.esmods.keepersofthestonestwo.CheckingModVersionType;
+
 @EventBusSubscriber
 public class BetaVersionCheckWarnProcedure {
 	@SubscribeEvent
@@ -25,7 +27,7 @@ public class BetaVersionCheckWarnProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (CheckingVersionTypeProcedure.execute()) {
+		if (CheckingModVersionType.get()) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal((Component.translatable("chat.power.versioncheckwarn").getString())), false);
 		}

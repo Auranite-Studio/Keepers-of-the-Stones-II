@@ -31615,21 +31615,6 @@
       "path": "~/Elements/Magnet"
     },
     {
-      "name": "CheckingVersionType",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "checking_version_type",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CheckingVersionTypeProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "BetaVersionCheckWarn",
       "type": "procedure",
       "compiles": true,
@@ -31644,6 +31629,19 @@
             "name": "entity",
             "type": "entity"
           }
+        ]
+      },
+      "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "CheckingModVersionType",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "checking_mod_version_type",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/CheckingModVersionType.java"
         ]
       },
       "path": "~/Modules/BasicModule"

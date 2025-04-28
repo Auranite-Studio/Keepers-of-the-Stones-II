@@ -1,4 +1,4 @@
-package com.esmods.keepersofthestonestwo.procedures;
+package com.esmods.keepersofthestonestwo;
 
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforgespi.language.IModInfo;
@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.regex.Pattern;
 
     @Deprecated(since = "release", forRemoval = true)
-public class CheckingVersionTypeProcedure {
+public class CheckingModVersionType {
 
-	public static boolean execute() {
+	public static boolean get() {
 		String version = "";
 		List<IModInfo> mods = ModList.get().getMods();
 
