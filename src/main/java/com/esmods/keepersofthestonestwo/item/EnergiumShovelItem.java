@@ -2,6 +2,7 @@
 package com.esmods.keepersofthestonestwo.item;
 
 import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -14,11 +15,11 @@ import net.minecraft.core.registries.Registries;
 
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
 
-public class EnergiumShovelItem extends Item {
+public class EnergiumShovelItem extends ShovelItem {
 	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 778, 10f, 0, 5, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:energium_shovel_repair_items")));
 
 	public EnergiumShovelItem(Item.Properties properties) {
-		super(properties.shovel(TOOL_MATERIAL, 4.25f, -3f));
+		super(TOOL_MATERIAL, 4.25f, -3f, properties);
 	}
 
 	@Override
