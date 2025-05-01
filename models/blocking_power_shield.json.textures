@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "earth_shield"
+        "layer0": "energium_shield"
       },
       "name": "default"
     }

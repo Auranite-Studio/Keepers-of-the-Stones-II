@@ -155,6 +155,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_CHESTPLATE.get());
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get());
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_BOOTS.get());
+				tabData.accept(PowerModItems.ENERGIUM_SHIELD.get());
 				tabData.accept(PowerModItems.ENERGIUM_CORE.get());
 				tabData.accept(PowerModBlocks.ENERGIUM_VAULT.get().asItem());
 				tabData.accept(PowerModItems.ENERGIUM_KEY.get());

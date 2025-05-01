@@ -2,6 +2,7 @@
 **New features**
 - Added basic functionality to runes
 - Now runes can only be used one of each type (star runes, charge runes, and power runes)
+- Added the energium shield
 
 **Improvemnts** 
 - Runes are no longer an experimental feature
