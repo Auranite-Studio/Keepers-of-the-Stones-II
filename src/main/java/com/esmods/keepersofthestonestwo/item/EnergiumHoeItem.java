@@ -4,6 +4,7 @@ package com.esmods.keepersofthestonestwo.item;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
@@ -14,11 +15,11 @@ import net.minecraft.core.registries.Registries;
 
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
 
-public class EnergiumHoeItem extends Item {
+public class EnergiumHoeItem extends HoeItem {
 	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 778, 10f, 0, 5, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:energium_hoe_repair_items")));
 
 	public EnergiumHoeItem(Item.Properties properties) {
-		super(properties.hoe(TOOL_MATERIAL, 0f, -1f));
+		super(TOOL_MATERIAL, 0f, -1f, properties);
 	}
 
 	@Override

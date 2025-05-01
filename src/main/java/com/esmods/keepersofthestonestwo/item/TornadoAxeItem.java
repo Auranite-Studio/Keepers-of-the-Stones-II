@@ -10,6 +10,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
@@ -23,11 +24,11 @@ import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-public class TornadoAxeItem extends Item {
+public class TornadoAxeItem extends AxeItem {
 	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 12f, 0, 1, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:tornado_axe_repair_items")));
 
 	public TornadoAxeItem(Item.Properties properties) {
-		super(properties.axe(TOOL_MATERIAL, 10.88f, -2.91f).fireResistant());
+		super(TOOL_MATERIAL, 10.88f, -2.91f, properties.fireResistant());
 	}
 
 	@SubscribeEvent
