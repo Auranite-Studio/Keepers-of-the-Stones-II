@@ -13,7 +13,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class EnergiumShieldItem extends ShieldItem {
 	public EnergiumShieldItem() {
-		super(new Item.Properties().durability(100));
+		super(new Item.Properties().durability(778));
 	}
 
 	@Override
