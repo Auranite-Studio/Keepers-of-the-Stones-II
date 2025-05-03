@@ -1,0 +1,85 @@
+{
+    "name": "Energium Ore",
+    "icon": "power:energium_ore",
+    "category": "power:ores",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "text",
+            "text": "Energium is a unique ore containing clusters of elemental energy. It exists in two forms: Depleted and Pure. Both versions generate in mountain biomes, but with different frequencies and conditions."
+        },
+        {
+            "type": "spotlight",
+            "title": "Depleted Energium Ore",
+            "item": "power:depleted_energium_ore",
+            "text": "Depleted ore generates between heights 16 and 256 in mountains. It can be found rarely and lacks special properties, but can be refined into useful materials."
+        },
+        {
+            "type": "spotlight",
+            "title": "Energium Ore",
+            "item": "power:energium_ore",
+            "text": "Pure ore generates extremely rarely between levels 16 and 48. Its main feature is suppressing elemental power. Used to craft powerful tools and blocks."
+        },
+        {
+            "type": "text",
+            "title": "Refining Depleted Energium",
+            "text": "To convert a Depleted Energium Ingot into a pure one, combine it with Redstone and an Energium Upgrade Smithing Template at a smithing table. Templates can be found in ancient Energium temples or duplicated via a special craft."
+        },
+        {
+            "type": "smithing",
+            "title": "Purification Recipe",
+            "recipe": "power:energium_ingot_cleaning_recipe",
+            "text": "Requires Depleted Energium Ingot, Redstone, and an upgrade template."
+        },
+        {
+            "type": "crafting",
+            "title": "Template Duplication",
+            "recipe": "power:duplicate_energium_upgrade_smithing_template",
+            "text": "Use 7 diamonds and an original template to create copies."
+        },
+        {
+            "type": "spotlight",
+            "title": "Energium Tools",
+            "item": "power:energium_sword,power:energium_axe,power:energium_pickaxe,power:energium_shovel,power:energium_hoe",
+            "text": "Tools possess unique properties:$(br2)$(l)Legendary Durability$() — 3 times more durable than iron.$(br2)$(l)Revenge Enchantment$() — Attacks inflict $(#FF0000)Power Lock$() on targets for 8 seconds.$(br2)$(l)Isolation Enchantment$() — Protects the wielder from $(#FF0000)Power Lock effects."
+        },
+        {
+            "type": "spotlight",
+            "title": "Energium Armor",
+            "item": "power:energium_armor_helmet,power:energium_armor_chestplate,power:energium_armor_leggings,power:energium_armor_boots",
+            "text": "A full armor set grants:$(br2)$(l)Suppression Aura$() — Blocks elemental power within 4 blocks.$(br2)$(l)Curse Immunity$() — Neutralizes all effects of the Cursed Forest biome."
+        },
+        {
+            "type": "text",
+            "title": "Battery Charger",
+            "text": "The Battery Charger is a device that charges elemental batteries using power from elemental stones. Provides temporary elemental energy storage with limited capacity."
+        },
+        {
+            "type": "crafting",
+            "title": "Battery Charger Recipe",
+            "recipe": "power:battery_charger_recipe",
+            "text": "Requires:$(br)6x Depleted Energium Ingots$(br)2x Redstone$(br)1x Nether Quartz"
+        },
+        {
+            "type": "spotlight",
+            "title": "Elemental Batteries",
+            "item": "power:empty_battery",
+            "text": "Key features:$(br2)- Stores 500 star points (non-renewable)$(br)- Lasts 5 minutes (vs stones' 10)$(br)- Charges in Battery Charger (30 seconds)"
+        },
+        {
+            "type": "crafting",
+            "title": "Empty Battery Recipe",
+            "recipe": "power:empty_battery_recipe",
+            "text": "Base component for all elemental batteries. Must be charged in Battery Charger before use."
+        },
+        {
+            "type": "text",
+            "title": "Usage Mechanics",
+            "text": "1. Place Battery Charger$(br2)2. Insert Empty Battery$(br3)3. Provide elemental stone$(br4)4. Wait 30 seconds$(br5)5. Retrieve charged battery"
+        },
+        {
+            "type": "text",
+            "text": "Important limitations:$(br2)- Batteries cannot be recharged$(br)- Star points deplete permanently$(br)- Destroyed when empty$(br2)Best for sharing power with a friend or in emergency situations."
+        }
+    ]
+}

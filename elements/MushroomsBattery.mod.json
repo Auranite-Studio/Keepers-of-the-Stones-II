@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "MushroomsBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Mushrooms"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

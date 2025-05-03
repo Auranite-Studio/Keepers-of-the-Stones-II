@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "RainBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Rain"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

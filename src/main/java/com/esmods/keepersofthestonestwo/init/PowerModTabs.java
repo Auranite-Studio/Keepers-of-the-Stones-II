@@ -155,6 +155,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_CHESTPLATE.get());
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get());
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_BOOTS.get());
+				tabData.accept(PowerModItems.ENERGIUM_SHIELD.get());
 				tabData.accept(PowerModItems.ENERGIUM_CORE.get());
 				tabData.accept(PowerModBlocks.ENERGIUM_VAULT.get().asItem());
 				tabData.accept(PowerModItems.ENERGIUM_KEY.get());
@@ -164,8 +165,13 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.RAW_COPYRIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.COPYRIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ELEMENTAL_POWER_GENERATOR.get().asItem());
+				tabData.accept(PowerModBlocks.RUNE_CUTTER.get().asItem());
+				tabData.accept(PowerModItems.EXTRA_STAR_POINTS_RUNE_1.get());
+				tabData.accept(PowerModItems.EXTRA_STAR_POINTS_RUNE_2.get());
+				tabData.accept(PowerModItems.EXTRA_STAR_POINTS_RUNE_3.get());
 				tabData.accept(PowerModItems.RAW_COPYRIUM.get());
 				tabData.accept(PowerModItems.COPYRIUM_INGOT.get());
+				tabData.accept(PowerModItems.MUSIC_HOPE.get());
 				tabData.accept(PowerModBlocks.CURSED_STONE.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS.get().asItem());

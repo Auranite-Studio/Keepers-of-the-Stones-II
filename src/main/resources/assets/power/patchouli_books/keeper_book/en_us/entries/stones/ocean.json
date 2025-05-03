@@ -1,0 +1,27 @@
+{
+    "name": "Ocean",
+    "icon": "power:textures/mob_effect/ocean_master.png",
+    "category": "power:stones",
+    "sortnum": 13,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Ocean current - attacks ocean water in the form of a beam attack.",
+                "$(li)",
+                "Ocean Storm - Attacks the closest entity to the player, with a strong attack.",
+                "$(li)",
+                "Streamlining - gives the Dolphin grace effect to accelerate underwater."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of the Ocean",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:oceanic_trident\",count:1}],ArmorItems:[{id:\"power:ocean_armor_boots\",count:1},{id:\"power:ocean_armor_leggings\",count:1},{id:\"power:ocean_armor_chestplate\",count:1},{id:\"power:ocean_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

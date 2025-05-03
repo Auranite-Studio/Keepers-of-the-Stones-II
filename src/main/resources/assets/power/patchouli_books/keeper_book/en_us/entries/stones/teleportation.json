@@ -1,0 +1,27 @@
+{
+    "name": "Teleportation",
+    "icon": "power:textures/mob_effect/teleportation_master.png",
+    "category": "power:stones",
+    "sortnum": 29,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Teleportation grabs - moves an entity to the player while dealing damage to it.",
+                "$(li)",
+                "Checkpoint - sets/moves you to a checkpoint.",
+                "$(li)",
+                "Portals - allows you to set up and destroy portals at two points."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Teleportation",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:teleportation_blade\",count:1}],ArmorItems:[{id:\"power:teleportation_armor_boots\",count:1},{id:\"power:teleportation_armor_leggings\",count:1},{id:\"power:teleportation_armor_chestplate\",count:1},{id:\"power:teleportation_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

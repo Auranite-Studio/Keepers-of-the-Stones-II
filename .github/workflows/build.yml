@@ -5,8 +5,12 @@ on:
   push:
     branches:
       - "cpapi/dev"
+      - "1.20.1-dev"
       - "1.21.1-dev"
       - "1.21.1-devhotfix"
+      - "1.21.4-dev"
+      - "1.21.5-dev"
+      - "25w14craftmine-dev"
 
 jobs:
   build:

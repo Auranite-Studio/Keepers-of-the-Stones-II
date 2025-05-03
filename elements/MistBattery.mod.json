@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "MistBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Mist"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

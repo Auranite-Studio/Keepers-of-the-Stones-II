@@ -1,0 +1,74 @@
+{
+  "_fv": 77,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "runes_inventory.png",
+          "use1Xscale": false,
+          "anchorPoint": "TOP_LEFT",
+          "x": 2,
+          "y": 50,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "star_extra_booster_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BlueRune1Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 7,
+          "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "star_extra_booster_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BlueRune2Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 7,
+          "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "star_extra_booster_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BlueRune3Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 7,
+          "y": 56,
+          "locked": true
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "GetRunes"
+    },
+    "gridSettings": {
+      "sx": 16,
+      "sy": 16,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

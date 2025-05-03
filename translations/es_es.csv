@@ -1,0 +1,965 @@
+SEP=,
+Translation key (DON'T EDIT),TRANSLATION IN es_es - EDIT THIS COLUMN,English text (DON'T EDIT - reference only)
+item.power.ether_battery,Battery,Battery
+item.power.crystal_armor_chestplate,Crystal Chestplate,Crystal Chestplate
+item.power.ether_stone,Ether Stone,Ether Stone
+gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80,"Dark power transfer, uses 80","Dark power transfer, uses 80"
+item.power.moon_battery,Battery,Battery
+gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50,"Copying power, uses 50","Copying power, uses 50"
+item.power.time_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.time_battery.description_1,§9Time,§9Time
+item.power.vacuum_armor_chestplate,Vacuum Chestplate,Vacuum Chestplate
+item.power.energium_shovel,Energium Shovel,Energium Shovel
+effect.power.gigantization,Gigantization,Gigantization
+gui.power.keepers_box_gui_part_3.tooltip_blood,Blood,Blood
+item.power.lava_hammer,Lava Hammer,Lava Hammer
+item.power.speed_armor_helmet,Speed Helmet,Speed Helmet
+gui.power.keepers_box_gui_part_3.tooltip_form,Form,Form
+item.power.blue_flame_armor_boots,Blue Flame Boots,Blue Flame Boots
+item.power.mushrooms_armor_leggings,Mushrooms Leggings,Mushrooms Leggings
+gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10,"Flow astral energy, uses 10","Flow astral energy, uses 10"
+gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40,"Transfusion, uses 20","Transfusion, uses 20"
+item.power.mushrooms_armor_boots,Mushrooms Boots,Mushrooms Boots
+advancements.grant_your_power.title,Grant your power,Grant your power
+gui.power.keepers_box_gui_part_2.tooltip_technology,Technology,Technology
+item.power.extra_star_points_rune_3,Rune,Rune
+item.power.space_armor_boots,Space Boots,Space Boots
+item.power.cursed_keeper_spawn_egg,Cursed Keeper Spawn Egg,Cursed Keeper Spawn Egg
+item.power.plants_stone,Plants Stone,Plants Stone
+subtitles.strange_sound,,
+gui.power.wheel_abilities_music.tooltip_explosion_of_notes_uses_40,"Explosion of notes, uses 40","Explosion of notes, uses 40"
+item.power.creation_staff,Creation Staff,Creation Staff
+item.power.golden_dust_armor_boots,Golden Dust Boots,Golden Dust Boots
+item.power.extra_star_points_rune_1,Rune,Rune
+item.power.extra_star_points_rune_2,Rune,Rune
+gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p,"Triple fireball, uses 35","Triple fireball, uses 35"
+gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45,"Sun explosion, uses 45","Sun explosion, uses 45"
+item.power.filth_armor_chestplate,Filth Chestplate,Filth Chestplate
+entity.power.example_master,Example Master,Example Master
+item.power.gravity_stone,Gravity Stone,Gravity Stone
+item.power.time_armor_leggings,Time Leggings,Time Leggings
+gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55,"Mercury condition, uses 55","Mercury condition, uses 55"
+item.power.teleportation_armor_chestplate,Teleportation Chestplate,Teleportation Chestplate
+item.power.gravity_mace,Gravity Mace,Gravity Mace
+block.power.amplifier_block,Amplifier Block,Amplifier Block
+battery.desc.plants,Plants,Plants
+gui.power.wheel_abilities_space.tooltip_meteorite_uses_45,"Meteorite, uses 45","Meteorite, uses 45"
+item.power.music_armor_leggings,Music Leggings,Music Leggings
+gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70,"Misty invisibility, uses 70","Misty invisibility, uses 70"
+item.power.music_battery,Battery,Battery
+item.power.darkness_battery,Battery,Battery
+gui.power.keepers_box_gui_part_2.tooltip_mist,Mist,Mist
+block.power.copyrium_ore,Copyrium Ore,Copyrium Ore
+item.power.golden_dust_stone,Golden Dust Stone,Golden Dust Stone
+gui.power.wheel_abilities_plague.tooltip_plague_bomb_uses_40,"Plague bomb, uses 40","Plague bomb, uses 40"
+item.power.energium_armor_leggings,Energium Leggings,Energium Leggings
+item.power.music_armor_helmet,Music Helmet,Music Helmet
+gui.power.keepers_box_gui_part_3.tooltip_mind,Mind,Mind
+item.power.explosion_stone,Explosion Stone,Explosion Stone
+item.power.crystal_armor_helmet,Crystal Helmet,Crystal Helmet
+gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80,"Metal skin, uses 80","Metal skin, uses 80"
+gui.power.wheel_abilities_mind.tooltip_remote_control_uses_25,"Remote control, uses 25","Remote control, uses 25"
+gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30,"Metal knives, uses 30","Metal knives, uses 30"
+item.power.animals_stone,Animals Stone,Animals Stone
+item.power.light_battery,Battery,Battery
+item.minecraft.lingering_potion.effect.power_lock_potion,Lingering Potion of Power Lock,Lingering Potion of Power Lock
+item.power.oceanic_trident,Oceanic Trident,Oceanic Trident
+effect.power.tornado_master,Master of Tornado,Master of Tornado
+effect.power.warp,Warp,Warp
+item.keeper_book.name,The Keeper's Book,The Keeper's Book
+item.power.ether_armor_boots,Ether Boots,Ether Boots
+gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80,"Moon withering, uses 80","Moon withering, uses 80"
+item.power.amplifier_ring,Amplifier Ring,Amplifier Ring
+effect.power.curse,Curse,Curse
+subtitles.cursed_knight.attack,,
+item.power.spirit_battery,Battery,Battery
+item.power.energium_axe,Energium Axe,Energium Axe
+gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35,"Smoke bomb, uses 35","Smoke bomb, uses 35"
+gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35,"Shadow sphere, uses 35","Shadow sphere, uses 35"
+gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70,"Deceleration, uses 70","Deceleration, uses 70"
+gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15,"Moon light, uses 15","Moon light, uses 15"
+block.power.cursed_stone_cracked_bricks_stairs,Cursed Stone Cracked Bricks,Cursed Stone Cracked Bricks
+gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80,"Hypnosis, uses 80","Hypnosis, uses 80"
+item.power.plants_armor_boots,Plants Boots,Plants Boots
+item.power.sand_battery,Battery,Battery
+item.power.space_armor_leggings,Space Leggings,Space Leggings
+item.power.metal_armor_leggings,Metal Leggings,Metal Leggings
+effect.power.filth_dark_master,Dark Master of Filth,Dark Master of Filth
+gui.power.keepers_box_gui_part_1.tooltip_gravity,Gravity,Gravity
+gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe,"Stalagmite piercing, uses 40","Stalagmite piercing, uses 40"
+gui.power.wheel_abilities_teleportation.tooltip_teleportation_grabs_uses_25,"Teleportation grabs, uses 25","Teleportation grabs, uses 25"
+subtitles.stone_activation,The stone has been activated,The stone has been activated
+entity.power.spirit,Spirit,Spirit
+effect.power.horror_dark_master,Dark Master of Horror,Dark Master of Horror
+gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50,"Mushroom saturation, uses 50","Mushroom saturation, uses 50"
+item.power.music_guitar,Music Guitar,Music Guitar
+advancements.the_end_of_tyranny.descr,Defeat the energium golem,Defeat the energium golem
+item.power.ocean_battery,Battery,Battery
+entity.power.red_magnet,Red Magnet,Red Magnet
+effect.power.star_regeneration,Star regeneration,Star regeneration
+item.power.mist_battery,Battery,Battery
+item.power.smoke_armor_chestplate,Smoke Chestplate,Smoke Chestplate
+item.power.crystal_armor_leggings,Crystal Leggings,Crystal Leggings
+item.power.cursed_knight_spawn_egg,Cursed Knight Spawn Egg,Cursed Knight Spawn Egg
+gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80,"Sealing in amber, uses 80","Sealing in amber, uses 80"
+item.power.mist_armor_boots,Mist Boots,Mist Boots
+gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75,"Rising shadow, uses 75","Rising shadow, uses 75"
+death.attack.energium_golem_ds.item,%1$s was killed by an Energium Golem,%1$s was killed by an Energium Golem
+effect.power.power_lock,Power lock,Power lock
+gui.power.wheel_abilities_form.tooltip_miniaturization_uses_50,"Miniaturization, uses 50","Miniaturization, uses 50"
+item.power.metal_armor_helmet,Metal Helmet,Metal Helmet
+subtitles.time_ability_effect,Time power using,Time power using
+subtitles.musket,Shoot from musket,Shoot from musket
+item.minecraft.splash_potion.effect.star_regeneration_potion,Splash Potion of Star Regeneration,Splash Potion of Star Regeneration
+item.power.plants_battery,Battery,Battery
+item.power.space_stone,Space Stone,Space Stone
+item.power.teleportation_stone,Teleportation Stone,Teleportation Stone
+gui.power.wheel_abilities_sand.tooltip_burial_uses_30,"Burial, uses 30","Burial, uses 30"
+item.power.air_rapier,Air Rapier,Air Rapier
+biome.power.cursed_forest,Cursed Forest,Cursed Forest
+effect.power.lethality,Lethality,Lethality
+gui.power.wheel_abilties_golden_dust.tooltip_random_power_uses_80,"Random power, uses 80","Random power, uses 80"
+item.power.light_armor_chestplate,Light Chestplate,Light Chestplate
+item.power.mist_armor_chestplate,Mist Chestplate,Mist Chestplate
+item.power.energium_hoe,Energium Hoe,Energium Hoe
+trim_material.power.copyrium_material,Copyrium,Copyrium
+item.power.plants_armor_chestplate,Plants Chestplate,Plants Chestplate
+item.power.empty_battery.description_0,§cNot charged,§cNot charged
+gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35,"Oceanic storm, uses 35","Oceanic storm, uses 35"
+item.power.amber_staff,Amber Staff,Amber Staff
+subtitles.electric_spark,Spark,Spark
+gui.power.wheel_abilities_blue_flame.tooltip_electric_discharge_uses_75,"Electric discharge, uses 75","Electric discharge, uses 75"
+item.power.cursed_squire_spawn_egg,Cursed Squire Spawn Egg,Cursed Squire Spawn Egg
+item.power.energium_sword,Energium Sword,Energium Sword
+item.power.tornado_armor_chestplate,Tornado Chestplate,Tornado Chestplate
+item.power.magnet_stone,Magnet Stone,Magnet Stone
+gui.power.keepers_box_gui_part_1.tooltip_rain,Rain,Rain
+gui.power.wheel_abilties_golden_dust.tooltip_golden_dust_regeneration_uses,"Golden dust regeneration, uses 80","Golden dust regeneration, uses 80"
+advancements.keepers_of_the_stones_2.title,Keepers of the Stones II,Keepers of the Stones II
+item.power.moon_double_sided_spear,Moon Double-Sided Spear,Moon Double-Sided Spear
+gui.power.debug_info.label_debug_mode,DEBUG_MODE,DEBUG_MODE
+block.power.raw_energium_block,Block of Raw Energium,Block of Raw Energium
+item.power.sound_armor_boots,Sound Boots,Sound Boots
+item.power.empty_characteristics_card.description_0,§7Empty,§7Empty
+item.power.smoke_stone,Smoke Stone,Smoke Stone
+effect.power.air_master,Master of the Air,Master of the Air
+item.power.blue_flame_sword,Blue Flame Sword,Blue Flame Sword
+effect.power.miniaturization,Miniaturization,Miniaturization
+item.power.raw_depleted_energium,Raw Depleted Energium,Raw Depleted Energium
+item.minecraft.potion.effect.power_lock_potion,Potion of Power Lock,Potion of Power Lock
+item.power.destruction_broadsword,Destruction Broadsword,Destruction Broadsword
+block.power.cursed_stone_bricks,Cursed Stone Bricks,Cursed Stone Bricks
+item.power.gravity_armor_chestplate,Gravity Chestplate,Gravity Chestplate
+death.attack.elemental_powers,%1$s died by elemental power,%1$s died by elemental power
+item.power.music_stone,Music Stone,Music Stone
+gui.power.wheel_abilities_time.tooltip_stopping_time_uses_30,"Stopping time, uses 80","Stopping time, uses 80"
+item.power.creation_shovel,Creation Shovel,Creation Shovel
+item.power.sand_armor_chestplate,Sand Chestplate,Sand Chestplate
+death.attack.elemental_powers.player,%1$s died by elemental power whilst trying to escape %2$s,%1$s died by elemental power whilst trying to escape %2$s
+item.power.chaos_armor_leggings,Chaos Leggings,Chaos Leggings
+item.power.characteristics_card,Characteristics Card,Characteristics Card
+gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5,"Rain flying, uses 5","Rain flying, uses 5"
+gui.power.wheel_ability_darkness.tooltip_darkness_ray_uses_15,"Darkness ray, uses 15","Darkness ray, uses 15"
+advancements.super_charge.descr,Create and charge the battery,Create and charge the battery
+item.power.moon_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.moon_battery.description_1,§9Moon,§9Moon
+item.power.metal_armor_boots,Metal Boots,Metal Boots
+item.power.mushrooms_battery,Battery,Battery
+item.power.blood_sickle,Blood Sickle,Blood Sickle
+item.power.ocean_armor_helmet,Ocean Helmet,Ocean Helmet
+block.power.purple_mushroom,Purple Mushroom,Purple Mushroom
+item.power.mushrooms_armor_helmet,Mushrooms Helmet,Mushrooms Helmet
+item.power.light_armor_helmet,Light Helmet,Light Helmet
+advancements.become_like_an_adventurer.title,Become like an adventurer,Become like an adventurer
+gui.power.keepers_box_gui_part_4.tooltip_plants,Plants,Plants
+item.power.magnet_claws,Magnet Claws,Magnet Claws
+entity.power.cursed_keeper,Cursed Keeper,Cursed Keeper
+gui.power.wheel_abilities_light.tooltip_light_ball_uses_35,"Light ball, uses 35","Light ball, uses 35"
+effect.power.mist_master,Master of the Mist,Master of the Mist
+item.power.sound_dagger,Sound Dagger,Sound Dagger
+item.power.sand_armor_leggings,Sand Leggings,Sand Leggings
+item.power.animals_battery.description_1,§9Animals,§9Animals
+item.power.animals_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.speed_battery,Battery,Battery
+item.power.blue_flame_battery.description_1,§9Blue Flame,§9Blue Flame
+block.power.energium_block,Block of Energium,Block of Energium
+death.attack.elemental_powers.item,%1$s was killed by %2$s using elemental power,%1$s was killed by %2$s using elemental power
+gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30,"Time dilation, uses 20","Time dilation, uses 20"
+item.power.horror_armor_leggings,Horror Leggings,Horror Leggings
+item.power.horror_armor_helmet,Horror Helmet,Horror Helmet
+item.power.spirit_armor_chestplate,Spirit Chestplate,Spirit Chestplate
+block.power.amber_block,Amber Block,Amber Block
+effect.power.chaos_dark_master,Dark Master of Chaos,Dark Master of Chaos
+item.power.blue_flame_battery.description_0,§aCharged with element:,§aCharged with element:
+entity.power.cursed_knight,Cursed Knight,Cursed Knight
+gui.power.keepers_box_gui_part_3.tooltip_sun,Sun,Sun
+block.power.blue_portal,Blue Portal,Blue Portal
+item.power.air_armor_boots,Air Boots,Air Boots
+block.power.cursed_stone_bricks_slab,Cursed Stone Bricks Slab,Cursed Stone Bricks Slab
+gui.power.wheel_abilities_gravity.tooltip_gravity_denial_uses_5,"Gravity denial, uses 5","Gravity denial, uses 5"
+item.power.time_armor_boots,Time Boots,Time Boots
+item.power.keepers_book,Keeper's Book,Keeper's Book
+gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi,"Ethereal aura, uses 80","Ethereal aura, uses 80"
+item.power.air_stone,Air Stone,Air Stone
+item.power.sound_stone,Sound Stone,Sound Stone
+item.power.animals_armor_leggings,Animals Leggings,Animals Leggings
+item.power.destruction_armor_chestplate,Destruction Chestplate,Destruction Chestplate
+gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10,"Energy flux, uses 10","Energy flux, uses 10"
+gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30,"Positive magnet, uses 50","Positive magnet, uses 50"
+item.power.form_battery.description_0,§aCharged with element:,§aCharged with element:
+effect.power.sound_master,Master of Sound,Master of Sound
+item.power.music_hope.desc,bxkqq - Hope,bxkqq - Hope
+item.power.form_battery.description_1,§9Form,§9Form
+item.power.blood_battery.description_1,§9Blood,§9Blood
+gui.power.keepers_box_gui_part_2.tooltip_teleportation,Teleportation,Teleportation
+item.power.blood_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.raw_copyrium,Raw Copyrium,Raw Copyrium
+item.power.moon_armor_chestplate,Moon Chestplate,Moon Chestplate
+item.power.creation_armor_chestplate,Creation Chestplate,Creation Chestplate
+gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30,"Sound bomb, uses 30","Sound bomb, uses 30"
+effect.power.ocean_master,Master of the Ocean,Master of the Ocean
+battery.desc.fire,Fire,Fire
+advancements.the_great_win.descr,Defeat the cursed keeper and free him from the curse,Defeat the cursed keeper and free him from the curse
+item.power.crystal_armor_boots,Crystal Boots,Crystal Boots
+effect.power.vacuum_master,Master of Vacuum,Master of Vacuum
+item.power.tornado_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.mercury_armor_chestplate,Mercury Chestplate,Mercury Chestplate
+item.power.tornado_battery.description_1,§9Tornado,§9Tornado
+item.power.freaking_parsnip,Freaking Parsnip,Freaking Parsnip
+item.power.teleportation_armor_helmet,Teleportation Helmet,Teleportation Helmet
+gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60,"Wolf pack, uses 80","Wolf pack, uses 80"
+item.power.technology_armor_helmet,Technology Helmet,Technology Helmet
+item.power.destruction_armor_boots,Destruction Boots,Destruction Boots
+gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45,"Destruction ball, uses 45","Destruction ball, uses 45"
+item.power.space_armor_helmet,Space Helmet,Space Helmet
+effect.power.darkness_master,Master of Darkness,Master of Darkness
+advancements.keepers_of_the_stones_2.descr,Upgrade to Keepers of the Stones II,Upgrade to Keepers of the Stones II
+gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10,"Freezing ray, uses 10","Freezing ray, uses 10"
+power.modinfo.update_cpapi,§eThe Colorful Powers API version has been updated to:,§eThe Colorful Powers API version has been updated to:
+gui.power.keepers_box_gui_part_4.tooltip_plague,Plague,Plague
+item.power.mist_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.mist_battery.description_1,§9Mist,§9Mist
+item.power.ice_armor_helmet,Ice Helmet,Ice Helmet
+item.power.teleportation_battery.description_0,§aCharged with element:,§aCharged with element:
+advancements.full_power_of_energium.descr,Wear a full set of energium armor,Wear a full set of energium armor
+item.power.spirit_stone,Spirit Stone,Spirit Stone
+item.power.music_disc_ancient_mood.desc,bxkqq - Ancient Mood,bxkqq - Ancient Mood
+item.power.teleportation_battery.description_1,§9Teleportation,§9Teleportation
+battery.desc.lightning,Lightning,Lightning
+gui.power.wheel_abilities_form.tooltip_warp_wave_uses_15,"Warp wave, uses 15","Warp wave, uses 15"
+item.power.raw_amplifier,Raw Amplifier,Raw Amplifier
+gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35,"Poisonous thorn, uses 35","Poisonous thorn, uses 35"
+effect.power.blood_master,Master of Blood,Master of Blood
+advancements.lets_bail_this_place_isdead.descr,Find the biome - the cursed forest,Find the biome - the cursed forest
+block.power.cursed_stone_stairs,Cursed Stone Stairs,Cursed Stone Stairs
+gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80,"Sound boom, uses 80","Sound boom, uses 80"
+effect.power.stun,Stun,Stun
+item.power.explosion_battery,Battery,Battery
+item.power.chaos_armor_chestplate,Chaos Chestplate,Chaos Chestplate
+gui.power.keepers_box_gui_part_2.tooltip_smoke,Smoke,Smoke
+item.power.water_battery,Battery,Battery
+gui.power.wheel_abilities_teleportation.tooltip_creatingdestructing_portals_us,"Creating/Destructing portals, uses 20","Creating/Destructing portals, uses 20"
+gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35,"Energy charged ball, uses 35","Energy charged ball, uses 35"
+item.power.thirst_armor_helmet,Thirst Helmet,Thirst Helmet
+block.power.raw_depleted_energium_block,Block of Raw Depleted Energium,Block of Raw Depleted Energium
+gui.power.keepers_box_gui_part_1.tooltip_lava,Lava,Lava
+item.power.energy_battery,Battery,Battery
+effect.power.time_master,Master of Time,Master of Time
+item.power.fire_armor_chestplate,Fire Chestplate,Fire Chestplate
+advancements.what_is_this_metal.title,What is this metal?,What is this metal?
+gui.power.wheel_abilities_lightning.tooltip_electrical_discharges_uses_10,"Electrical discharges, uses 10","Electrical discharges, uses 10"
+item.power.shadow_battery,Battery,Battery
+gui.power.characteristics_card_gui.label_13,1,1
+gui.power.characteristics_card_gui.label_12,1,1
+gui.power.characteristics_card_gui.label_11,1,1
+gui.power.wheel_abilities_explosion.tooltip_atomic_bomb_uses_100,"Atomic bomb, uses 100","Atomic bomb, uses 100"
+gui.power.characteristics_card_gui.label_10,10,10
+item.power.thirst_armor_chestplate,Thirst Chestplate,Thirst Chestplate
+item.power.lava_battery,Battery,Battery
+item.power.vacuum_stone,Vacuum Stone,Vacuum Stone
+item.power.energium_armor_boots,Energium Boots,Energium Boots
+item.power.poison_stone,Poison Stone,Poison Stone
+effect.power.destruction_master,Master of Destruction,Master of Destruction
+item.power.poison_armor_boots,Poison Boots,Poison Boots
+effect.power.immortality,Immortality,Immortality
+gui.power.wheel_abilities_speed.tooltip_dash_uses_20,"Dash, uses 20","Dash, uses 20"
+item.power.plague_armor_helmet,Plague Helmet,Plague Helmet
+item.power.metal_battery,Battery,Battery
+gui.power.keepers_box_gui_part_4.tooltip_earth,Earth,Earth
+item.power.smoke_battery,Battery,Battery
+gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35,"Lava attack, uses 35","Lava attack, uses 35"
+effect.power.blue_magnet_power,Blue Magnet Power,Blue Magnet Power
+effect.power.plague_master,Master of the Plague,Master of the Plague
+gui.power.wheel_abilities_spirit.tooltip_summon_spirit_uses_75,"Summon spirit, uses 75","Summon spirit, uses 75"
+item.power.ice_armor_boots,Ice Boots,Ice Boots
+item.power.ice_battery.description_1,§9Ice,§9Ice
+item.power.ice_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.darkness_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.amber_stone,Amber Stone,Amber Stone
+item.power.darkness_battery.description_1,§9Darkness,§9Darkness
+battery.desc.destruction,Destruction,Destruction
+battery.desc.magnet,Magnet,Magnet
+item.power.smoke_battery.description_1,§9Smoke,§9Smoke
+effect.power.ether_master,Master of the Ether,Master of the Ether
+item.power.time_armor_chestplate,Time Chestplate,Time Chestplate
+item.power.smoke_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.time_battery,Battery,Battery
+effect.power.gravity_master,Master of Gravity,Master of Gravity
+block.power.cursed_stone_cracked_bricks_slab,Cursed Stone Cracked Bricks Slab,Cursed Stone Cracked Bricks Slab
+item.power.blood_battery,Battery,Battery
+effect.power.sun_master,Master of the Sun,Master of the Sun
+item.power.golden_dust_armor_helmet,Golden Dust Helmet,Golden Dust Helmet
+item.power.mind_armor_chestplate,Mind Chestplate,Mind Chestplate
+effect.power.lightning_master,Master of Lightning,Master of Lightning
+block.power.deepslate_depleted_energium_ore,Deepslate Depleted Energium Ore,Deepslate Depleted Energium Ore
+item.power.water_stone,Water Stone,Water Stone
+gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10,"Cherry wind, uses 10","Cherry wind, uses 10"
+effect.power.energy_master,Master of Energy,Master of Energy
+item.power.fire_armor_leggings,Fire Leggings,Fire Leggings
+subtitles.cursed_knight.hurt,,
+gui.power.wheel_abilities_blue_flame.tooltip_sixshot_fireballs_uses_55,"Six-shot fireballs, uses 55","Six-shot fireballs, uses 55"
+item.power.shadow_stone,Shadow Stone,Shadow Stone
+item.power.earth_armor_boots,Earth Boots,Earth Boots
+gui.power.keepers_box_gui_part_1.tooltip_water,Water,Water
+effect.power.magnet_master,Magnet Master,Magnet Master
+item.power.spirit_sickle,Spirit Sickle,Spirit Sickle
+block.power.deepslate_copyrium_ore,Deepslate Copyrium Ore,Deepslate Copyrium Ore
+block.power.cursed_stone_pillar,Cursed Stone Pillar,Cursed Stone Pillar
+gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15,"Destruction ray, uses 15","Destruction ray, uses 15"
+item.power.lava_battery.description_1,§9Lava,§9Lava
+effect.power.iron_skin,Iron Skin,Iron Skin
+item.power.lava_battery.description_0,§aCharged with element:,§aCharged with element:
+gui.power.wheel_abilities_music.tooltip_musical_relaxation_uses_75,"Musical relaxation, uses 75","Musical relaxation, uses 75"
+item.power.mercury_battery.description_1,§9Mercury,§9Mercury
+item.power.mercury_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.moon_armor_helmet,Moon Helmet,Moon Helmet
+item.power.rain_armor_helmet,Rain Helmet,Rain Helmet
+item.power.lightning_stone,Lightning Stone,Lightning Stone
+item.power.water_armor_chestplate,Water Chestplate,Water Chestplate
+item.power.blue_flame_stone,Blue Flame Stone,Blue Flame Stone
+item.power.mushrooms_stone,Mushrooms Stone,Mushrooms Stone
+gui.power.characteristics_card_gui.label_7,1,1
+item.power.poison_armor_leggings,Poison Leggings,Poison Leggings
+power.modinfo.outdated_mod,§9[Keepers of the Stones II]§r This mod is out of date! (latest version: v,§9[Keepers of the Stones II]§r This mod is out of date! (latest version: v
+item.power.ether_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.sand_armor_helmet,Sand Helmet,Sand Helmet
+gui.power.characteristics_card_gui.label_1,1,1
+effect.power.smoke_intangibility,Smoke Intangibility,Smoke Intangibility
+item.power.plants_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.plants_battery.description_1,§9Plants,§9Plants
+gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10,"Insect attack, uses 10","Insect attack, uses 10"
+gui.power.keepers_box_gui_part_3.tooltip_vacuum,Vacuum,Vacuum
+effect.power.teleportation_master,Master of Teleportation,Master of Teleportation
+item.power.lava_stone,Lava Stone,Lava Stone
+gui.power.wheel_abilities_technology.tooltip_turret_uses_80,"Turret, uses 80","Turret, uses 80"
+item.power.speed_armor_boots,Speed Boots,Speed Boots
+gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin,"Flamethrower, uses 10","Flamethrower, uses 10"
+item.power.lightning_falchion,Lightning Falchion,Lightning Falchion
+item.power.space_battery,Battery,Battery
+gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20,"Grenade explosion, uses 20","Grenade explosion, uses 20"
+gui.power.wheel_abilities_gravity.tooltip_telekinesis_uses_35,"Telekinesis, uses 35","Telekinesis, uses 35"
+item.power.plague_armor_leggings,Plague Leggings,Plague Leggings
+item.power.ether_battery.description_1,§9Ether,§9Ether
+gui.power.keepers_box_gui_part_4.tooltip_amber,Amber,Amber
+gui.power.wheel_abilities_poison.tooltip_cleaning_uses_70,"Cleaning, uses 70","Cleaning, uses 70"
+gui.power.wheel_abilities_explosion.tooltip_selfdetonation_uses_50,"Self-detonation, uses 50","Self-detonation, uses 50"
+effect.power.music_master,Master of Music,Master of Music
+advancements.become_a_master.descr,Get the elemental stone from the magic box,Get the elemental stone from the magic box
+advancements.unbreakable_diamond.title,Unbreakable diamond,Unbreakable diamond
+gui.power.keepers_box_gui_part_2.tooltip_speed,Speed,Speed
+item.power.music_hope,Music Disc,Music Disc
+block.power.cursed_stone_cracked_bricks_wall,Cursed Stone Cracked Bricks Wall,Cursed Stone Cracked Bricks Wall
+gui.power.keepers_box_gui_part_3.tooltip_golden_dust,Golden Dust,Golden Dust
+block.power.depleted_energium_block,Block of Depleted Energium,Block of Depleted Energium
+item.power.amber_armor_leggings,Amber Leggings,Amber Leggings
+item.power.mist_armor_helmet,Mist Helmet,Mist Helmet
+subtitles.cursed_squire.death,,
+item.power.blood_armor_leggings,Blood Leggings,Blood Leggings
+item.power.explosion_armor_leggings,Explosion Leggings,Explosion Leggings
+item.power.mercury_armor_boots,Mercury Boots,Mercury Boots
+advancements.full_power_of_energium.title,Full power of energium,Full power of energium
+key.power.ability_wheel_openingkey,Ability wheel opening key,Ability wheel opening key
+item.power.darkness_stone,Darkness Stone,Darkness Stone
+item.power.destruction_stone,Destruction Stone,Destruction Stone
+item.power.dark_sword,Dark Sword,Dark Sword
+block.power.cursed_stone_bricks_wall,Cursed Stone Bricks Wall,Cursed Stone Bricks Wall
+item.power.lava_armor_helmet,Lava Helmet,Lava Helmet
+item.power.music_armor_boots,Music Boots,Music Boots
+gui.power.keepers_box_gui_part_1.tooltip_explosion,Explosion,Explosion
+item.power.magnet_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.magnet_battery.description_1,§9Magnet,§9Magnet
+item.power.left_metal_gauntlet,Left Metal Gauntlet,Left Metal Gauntlet
+item.power.plants_armor_leggings,Plants Leggings,Plants Leggings
+gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100,"Zeroing out, uses 75","Zeroing out, uses 75"
+item.power.plague_battery,Battery,Battery
+item.power.magic_fireball,Magic Fireball,Magic Fireball
+gui.power.wheel_abilities_blue_flame.tooltip_blue_flamethrower_uses_20,"Blue flamethrower, uses 20","Blue flamethrower, uses 20"
+item.power.technology_stone,Technology Stone,Technology Stone
+item.power.misty_fan,Misty Fan,Misty Fan
+gui.power.keepers_box_gui_part_2.tooltip_creation,Creation,Creation
+advancements.the_great_win.title,Great victory!,Great victory!
+item.power.plague_walking_stick,Plague Walking Stick,Plague Walking Stick
+effect.power.blue_flame_master,Master of the Blue Flame,Master of the Blue Flame
+key.power.detransformation_key,Detransformation key,Detransformation key
+item.power.energium_core,Energium Core,Energium Core
+item.power.golden_dust_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.speed_stone,Speed Stone,Speed Stone
+item.power.golden_dust_battery.description_1,§9Golden Dust,§9Golden Dust
+item.power.crystal_battery.description_1,§9Crystal,§9Crystal
+gui.power.keepers_box_gui_part_2.tooltip_sound,Sound,Sound
+item.power.solar_blade,Solar Blade,Solar Blade
+gui.power.wheel_abilities_lightning.tooltip_ball_lightning_uses_80,"Ball lightning, uses 80","Ball lightning, uses 80"
+item.power.animals_halberd,Animals Halberd,Animals Halberd
+subtitles.magnetic_waves,Using magnetic powers,Using magnetic powers
+item.power.magnet_armor_leggings,Magnet Leggings,Magnet Leggings
+gui.power.wheel_abilities_shadow.tooltip_shadow_ray_uses_10,"Shadow ray, uses 10","Shadow ray, uses 10"
+item.power.shadow_armor_leggings,Shadow Leggings,Shadow Leggings
+item.power.technology_armor_boots,Technology Boots,Technology Boots
+gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p,"Ethereal volley, uses 30","Ethereal volley, uses 30"
+item.power.mind_armor_boots,Mind Boots,Mind Boots
+item.power.mind_battery,Battery,Battery
+item.power.blood_armor_helmet,Blood Helmet,Blood Helmet
+gui.power.keepers_box_gui_part_1.tooltip_ice,Ice,Ice
+gui.power.keepers_box_gui_part_3.tooltip_spirit,Spirit,Spirit
+gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points,"Jet flight, uses 5","Jet flight, uses 5"
+gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15,"Metal attack, uses 15","Metal attack, uses 15"
+gui.power.debug_info.label_star_points_recovery_multiplier,star_points_recovery_multiplier: 0,star_points_recovery_multiplier: 0
+item.power.rain_bow,Rain Bow,Rain Bow
+item.power.form_armor_chestplate,Form Chestplate,Form Chestplate
+death.attack.cursed_knight_ds.item,%1$s was killed by an Cursed Knight,%1$s was killed by an Cursed Knight
+item.power.destruction_armor_helmet,Destruction Helmet,Destruction Helmet
+gui.power.wheel_abilities_magnet.tooltip_magnetic_field_wave_uses_10,"Magnetic field wave, uses 10","Magnetic field wave, uses 10"
+gui.power.wheel_abilities_poison.tooltip_toxic_acid_flow_uses_15,"Toxic acid flow, uses 15","Toxic acid flow, uses 15"
+gui.power.wheel_abilities_teleportation.tooltip_checkpoint_uses_20,"Checkpoint, uses 20","Checkpoint, uses 20"
+item.power.water_armor_helmet,Water Helmet,Water Helmet
+item.power.ice_battery,Battery,Battery
+item.power.sand_stone,Sand Stone,Sand Stone
+item.power.lightning_armor_boots,Lightning Boots,Lightning Boots
+gui.power.keepers_box_gui_part_2.tooltip_tornado,Tornado,Tornado
+advancements.unbreakable_diamond.descr,Reach rank S,Reach rank S
+subtitles.cursed_squire.attack,,
+gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65,"Crystal volley, uses 65","Crystal volley, uses 65"
+gui.power.keepers_box_gui_part_1.tooltip_energy,Energy,Energy
+block.power.polished_cursed_stone_stairs,Polished Cursed Stone Stairs,Polished Cursed Stone Stairs
+advancements.become_a_master.title,Become a Master,Become a Master
+item.power.thirst_armor_leggings,Thirst Leggings,Thirst Leggings
+item.power.shadow_armor_boots,Shadow Boots,Shadow Boots
+item.power.light_armor_boots,Light Boots,Light Boots
+gui.power.wheel_abilities_mist.tooltip_stream_of_mist_uses_10,"Stream of mist, uses 10","Stream of mist, uses 10"
+item.power.energy_armor_boots,Energy Boots,Energy Boots
+item.power.explosion_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.explosion_battery.description_1,§9Explosion,§9Explosion
+gui.power.keepers_box_gui_part_3.tooltip_light,Light,Light
+subtitles.electricity,Electricity discharge,Electricity discharge
+item.power.metal_armor_chestplate,Metal Chestplate,Metal Chestplate
+gui.power.keepers_box_gui_part_2.tooltip_air,Air,Air
+item.power.magnet_armor_helmet,Magnet Helmet,Magnet Helmet
+item.power.ice_armor_leggings,Ice Leggings,Ice Leggings
+gui.power.wheel_abilities_mercury.tooltip_liquid_mercury_uses_15,"Liquid mercury, uses 15","Liquid mercury, uses 15"
+item.power.light_armor_leggings,Light Leggings,Light Leggings
+item.power.form_armor_boots,Form Boots,Form Boots
+subtitles.ambient.biome.cursed_forest,,
+item.power.crystal_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.amplifier_drop,Amplifier Drop,Amplifier Drop
+item.power.sun_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.sun_battery.description_1,§9Sun,§9Sun
+item.power.energium_upgrade_smithing_template,Smithing Template,Smithing Template
+item.power.golden_dust_battery,Battery,Battery
+gui.power.keepers_box_gui_part_3.tooltip_moon,Moon,Moon
+item.power.chaos_armor_helmet,Chaos Helmet,Chaos Helmet
+gui.power.wheel_abilities_smoke.tooltip_smoke_intangibility_uses_80,"Smoke intangibility, uses 80","Smoke intangibility, uses 80"
+gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30,"Tornado capture attack, uses 30","Tornado capture attack, uses 30"
+advancements.what_is_this_metal.descr,Obtain and smelt the energium ore,Obtain and smelt the energium ore
+item.power.tornado_armor_helmet,Tornado Helmet,Tornado Helmet
+item.power.smoke_musket,Smoke Musket,Smoke Musket
+item.power.form_battery,Battery,Battery
+item.power.sun_battery,Battery,Battery
+item.minecraft.potion.effect.star_regeneration_potion,Potion of Star Regeneration,Potion of Star Regeneration
+item.power.ice_armor_chestplate,Ice Chestplate,Ice Chestplate
+item.power.mind_armor_leggings,Mind Leggings,Mind Leggings
+gui.power.debug_info.label_max_star_points_0,max_star_points: 0,max_star_points: 0
+item.power.highspeed_dagger,High-speed Dagger,High-speed Dagger
+effect.power.plague,Plague,Plague
+gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70,"Earthquake, uses 70","Earthquake, uses 70"
+item.power.lightning_battery,Battery,Battery
+entity.power.cursed_squire,Cursed Squire,Cursed Squire
+gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40,"Moon dripstone, uses 40","Moon dripstone, uses 40"
+item.power.blue_flame_battery,Battery,Battery
+subtitles.cursed_knight.walk,,
+item.power.earth_battery,Battery,Battery
+block.power.polished_cursed_stone_slab,Polished Cursed Stone Slab,Polished Cursed Stone Slab
+gui.power.wheel_abilities_lava.tooltip_melting_uses_50,"Melting, uses 50","Melting, uses 50"
+enchantment.power.revenge,Revenge,Revenge
+item.power.amber_armor_helmet,Amber Helmet,Amber Helmet
+gui.power.keepers_box_gui_part_4.tooltip_animals,Animals,Animals
+item_group.power.items,KotS: Items,KotS: Items
+block.power.cursed_stone_slab,Cursed Stone Slab,Cursed Stone Slab
+gui.power.wheel_abilities_space.tooltip_star_flow_uses_10,"Star flow, uses 10","Star flow, uses 10"
+item.power.poison_battery,Battery,Battery
+item.power.time_armor_helmet,Time Helmet,Time Helmet
+gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15,"Sand jet, uses 15","Sand jet, uses 15"
+gui.power.wheel_abilities_creation.tooltip_supertool_uses_50,"Supertool, uses 50","Supertool, uses 50"
+item.power.creation_axe,Creation Axe,Creation Axe
+item.power.magnet_battery,Battery,Battery
+item.power.air_battery.description_1,§9Air,§9Air
+item.power.creation_armor_helmet,Creation Helmet,Creation Helmet
+item.power.air_battery.description_0,§aCharged with element:,§aCharged with element:
+effect.power.mushrooms_master,Master of Mushrooms,Master of Mushrooms
+death.attack.cursed_squire_ds,%1$s was killed by an Cursed Squire,%1$s was killed by an Cursed Squire
+block.power.cursed_lantern,Cursed Lantern,Cursed Lantern
+item.power.blood_armor_chestplate,Blood Chestplate,Blood Chestplate
+gui.power.wheel_abilities_smoke.tooltip_smoke_attack_uses_10,"Smoke attack, uses 15","Smoke attack, uses 15"
+gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50,"Mist lifting, uses 50","Mist lifting, uses 50"
+item.power.ocean_armor_chestplate,Ocean Chestplate,Ocean Chestplate
+item.power.extra_star_points_rune_2.description_1,,
+item.power.extra_star_points_rune_3.description_3,§c§oIncompatible with similar runes,§c§oIncompatible with similar runes
+item.power.extra_star_points_rune_2.description_0,§9Extra Star Points II,§9Extra Star Points II
+item.power.mercury_battle_axe,Mercury Battle Axe,Mercury Battle Axe
+item.power.extra_star_points_rune_3.description_2,§1§o+20 to the max. number of star points,§1§o+20 to the max. number of star points
+item.power.extra_star_points_rune_3.description_1,,
+item.power.extra_star_points_rune_3.description_0,§9Extra Star Points III,§9Extra Star Points III
+item.minecraft.lingering_potion.effect.star_regeneration_potion,Lingering Potion of Star Regeneration,Lingering Potion of Star Regeneration
+item.power.extra_star_points_rune_2.description_3,§c§oIncompatible with similar runes,§c§oIncompatible with similar runes
+item.power.extra_star_points_rune_2.description_2,§1§o+15 to the max. number of star points,§1§o+15 to the max. number of star points
+effect.power.ice_master,Master of the Ice,Master of the Ice
+item.power.ether_armor_leggings,Ether Leggings,Ether Leggings
+gui.power.debug_info.label_fake_elements_timer_000,fake_elements_timer: 0/0/0,fake_elements_timer: 0/0/0
+subtitles.power.level_up,Level up!,Level up!
+effect.power.time_stopped,Time Stopped,Time Stopped
+item.power.spirit_armor_boots,Spirit Boots,Spirit Boots
+gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point,"Water shock, uses 20","Water shock, uses 20"
+item.power.golden_dust_armor_chestplate,Golden Dust Chestplate,Golden Dust Chestplate
+subtitles.cursed_squire.walk,,
+subtitles.cursed_knight.death,,
+gui.power.keepers_box_gui_part_4.tooltip_poison,Poison,Poison
+item.power.rain_armor_leggings,Rain Leggings,Rain Leggings
+item.power.ocean_armor_boots,Ocean Boots,Ocean Boots
+gui.power.keepers_box_gui_part_4.tooltip_crystal,Crystal,Crystal
+item.power.depleted_energium_ingot,Depleted Energium Ingot,Depleted Energium Ingot
+item.power.water_armor_boots,Water Boots,Water Boots
+entity.power.black_hole,Black Hole,Black Hole
+item.keeper_book.desc,A book for mastering the power of the elements,A book for mastering the power of the elements
+gui.power.wheel_abilties_golden_dust.tooltip_golden_dust_attack_uses_15,"Golden dust attack, uses 15","Golden dust attack, uses 15"
+item.power.teleportation_armor_leggings,Teleportation Leggings,Teleportation Leggings
+item.power.energium_dust,Energium Dust,Energium Dust
+item.power.moon_armor_boots,Moon Boots,Moon Boots
+block.power.polished_cursed_stone,Polished Cursed Stone,Polished Cursed Stone
+item.power.destruction_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.destruction_battery.description_1,§9Destruction,§9Destruction
+item.power.rain_armor_chestplate,Rain Chestplate,Rain Chestplate
+item.power.energy_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.mercury_stone,Mercury Stone,Mercury Stone
+item.power.energy_battery.description_1,§9Energy,§9Energy
+gui.power.wheel_abilities_amber.tooltip_liquid_amber_flow_uses_15,"Liquid amber flow, uses 15","Liquid amber flow, uses 15"
+gui.power.keepers_box_gui_part_2.tooltip_creation1,Destruction,Destruction
+item.power.blue_flame_armor_helmet,Blue Flame Helmet,Blue Flame Helmet
+item.power.energy_staff,Energy Staff,Energy Staff
+item.power.mist_armor_leggings,Mist Leggings,Mist Leggings
+block.power.cursed_stone_bricks_stairs,Cursed Stone Bricks Stairs,Cursed Stone Bricks Stairs
+item.power.technology_battery.description_1,§9Technology,§9Technology
+block.power.cursed_lamp,Cursed Lamp,Cursed Lamp
+block.power.cursed_ladder,Cursed Ladder,Cursed Ladder
+item.power.technology_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.thirst_armor_boots,Thirst Boots,Thirst Boots
+gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20,"Sphere of nothing, uses 20","Sphere of nothing, uses 20"
+gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15,"Bleeding, uses 15","Bleeding, uses 15"
+effect.power.poison_master,Master of Poison,Master of Poison
+item.power.fire_armor_boots,Fire Boots,Fire Boots
+death.attack.cursed_squire_ds.player,%1$s was killed by an Cursed Squire,%1$s was killed by an Cursed Squire
+item.power.copyrium_ingot,Copyrium Ingot,Copyrium Ingot
+item.power.horror_armor_chestplate,Horror Chestplate,Horror Chestplate
+subtitles.record.hope,,
+item.power.chaos_armor_boots,Chaos Boots,Chaos Boots
+item.power.tornado_armor_boots,Tornado Boots,Tornado Boots
+gui.power.wheel_abilities_destruction.tooltip_lethal_result_uses_80,"Lethal result, uses 80","Lethal result, uses 80"
+item.power.gravity_battery,Battery,Battery
+item.power.fire_stone,Fire Stone,Fire Stone
+item.power.blood_stone,Blood Stone,Blood Stone
+gui.power.wheel_abilities_plants.tooltip_natural_healing_uses_65,"Natural healing, uses 65","Natural healing, uses 65"
+item.power.ice_spear,Ice Spear,Ice Spear
+gui.power.wheel_abilities_form.tooltip_gigantization_uses_50,"Gigantization, uses 50","Gigantization, uses 50"
+item.power.earth_armor_leggings,Earth Leggings,Earth Leggings
+item.power.cursed_key,Cursed Key,Cursed Key
+gui.power.wheel_abilities_spirit.tooltip_spiritual_flight_uses_5,"Spiritual flight, uses 5","Spiritual flight, uses 5"
+block.power.moon_block,Moon Block,Moon Block
+power.modinfo.recharge_stone,Recharge:,Recharge:
+block.power.freaking_parsnip_block,Freaking Parsnip Block,Freaking Parsnip Block
+item.keepers_book.desc,The Book of Knowledge about the powers of the elements,The Book of Knowledge about the powers of the elements
+gui.power.keepers_box_gui_part_4.tooltip_sand,Sand,Sand
+item.power.poison_armor_chestplate,Poison Chestplate,Poison Chestplate
+item.power.mercury_ball,Mercury Ball,Mercury Ball
+item.power.mind_battery.description_0,§aCharged with element:,§aCharged with element:
+gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80,"Energy charge, uses 80","Energy charge, uses 80"
+gui.power.keepers_box_gui_part_4.tooltip_mercury,Mercury,Mercury
+item.power.creation_armor_boots,Creation Boots,Creation Boots
+item.power.form_armor_helmet,Form Helmet,Form Helmet
+block.power.rune_cutter,Rune Cutter,Rune Cutter
+item.power.mushrooms_armor_chestplate,Mushrooms Chestplate,Mushrooms Chestplate
+item.power.mind_battery.description_1,§9Mind,§9Mind
+item.power.tornado_battery,Battery,Battery
+gui.power.wheel_abilities_gravity.tooltip_gravity_wave_uses_15,"Gravity wave, uses 15","Gravity wave, uses 15"
+block.power.energium_controller,Energium Controller,Energium Controller
+item.power.fire_battery,Battery,Battery
+item.power.music_disc_ancient_mood,Music Disc,Music Disc
+item.power.shadow_scythe,Shadow Scythe,Shadow Scythe
+item.power.rain_battery.description_1,§9Rain,§9Rain
+item.power.rain_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.metal_stone,Metal Stone,Metal Stone
+item.power.sun_armor_chestplate,Sun Chestplate,Sun Chestplate
+item_group.power.stones,KotS: Stones,KotS: Stones
+gui.power.wheel_abilities_technology.tooltip_red_plasma_ball_uses_15,"Red plasma ball, uses 15","Red plasma ball, uses 15"
+item.power.animals_armor_chestplate,Animals Chestplate,Animals Chestplate
+effect.power.red_magnet_power,Red Magnet Power,Red Magnet Power
+advancements.lets_bail_this_place_isdead.title,"Let's bail, this place is dead","Let's bail, this place is dead"
+item.power.sun_stone,Sun Stone,Sun Stone
+item.power.lava_armor_chestplate,Lava Chestplate,Lava Chestplate
+item.power.poison_armor_helmet,Poison Helmet,Poison Helmet
+gui.power.wheel_abilities_plague.tooltip_plague_healing_uses_75,"Plague healing, uses 75","Plague healing, uses 75"
+effect.power.creation_master,Master of Creation,Master of Creation
+gui.power.wheel_abilities_mushrooms.tooltip_flying_spores_uses_15,"Flying spores, uses 15","Flying spores, uses 15"
+gui.power.wheel_abilities_metal.tooltip_iron_skin_uses_80,"Iron skin, uses 80","Iron skin, uses 80"
+item.power.empty_characteristics_card,Characteristics Card,Characteristics Card
+item.power.earth_battery.description_0,§aCharged with element:,§aCharged with element:
+block.power.cursed_vault,Cursed Vault,Cursed Vault
+gui.power.keepers_box_gui_part_1.tooltip_magnet,Magnet,Magnet
+block.power.deepslate_amplifier_ore,Deepslate Amplifier Ore,Deepslate Amplifier Ore
+item.power.earth_battery.description_1,§9Earth,§9Earth
+entity.power.energium_golem,Energium Golem,Energium Golem
+item.power.space_battery.description_1,§9Space,§9Space
+gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points,"Air flight, uses 5","Air flight, uses 5"
+item.power.plague_armor_boots,Plague Boots,Plague Boots
+gui.power.keepers_box_gui_part_3.tooltip_darkness,Darkness,Darkness
+item.power.empty_battery,Battery,Battery
+item.power.technology_armor_leggings,Technology Leggings,Technology Leggings
+subtitles.record.call_of_the_past,A record is playing,A record is playing
+item.minecraft.tipped_arrow.effect.power_lock_potion,Arrow of Power Lock,Arrow of Power Lock
+advancements.super_charge.title,Super Charge!,Super Charge!
+item.power.mushrooms_hammer,Mushrooms Hammer,Mushrooms Hammer
+item.power.space_battery.description_0,§aCharged with element:,§aCharged with element:
+effect.power.mind_master,Master of the Mind,Master of the Mind
+item.power.vacuum_armor_helmet,Vacuum Helmet,Vacuum Helmet
+item.power.blue_magic_fireball,Blue Magic Fireball,Blue Magic Fireball
+trim_material.power.energium_material,Energium,Energium
+item.power.light_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.light_battery.description_1,§9Light,§9Light
+item.power.smoke_armor_leggings,Smoke Leggings,Smoke Leggings
+item.power.extra_star_points_rune_1.description_0,§9Extra Star Points I,§9Extra Star Points I
+item.power.creation_hoe,Creation Hoe,Creation Hoe
+item.power.extra_star_points_rune_1.description_1,,
+item.power.extra_star_points_rune_1.description_2,§1§o+10 to the max. number of star points,§1§o+10 to the max. number of star points
+effect.power.water_master,Master of Water,Master of Water
+advancements.become_like_an_adventurer.descr,Fill out the characteristics card,Fill out the characteristics card
+item_group.power.mobs,KotS: Mobs,KotS: Mobs
+item.power.fire_armor_helmet,Fire Helmet,Fire Helmet
+item.power.earth_stone,Earth Stone,Earth Stone
+item.power.luck_coin,Luck Coin,Luck Coin
+item.power.rain_battery,Battery,Battery
+item.power.creation_sword,Creation Sword,Creation Sword
+item.power.extra_star_points_rune_1.description_3,§c§oIncompatible with similar runes,§c§oIncompatible with similar runes
+gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30,"Ice attack, uses 30","Ice attack, uses 30"
+item.power.speed_battery.description_1,§9Speed,§9Speed
+item.power.crystal_battery,Battery,Battery
+item.power.speed_armor_leggings,Speed Leggings,Speed Leggings
+item.power.speed_battery.description_0,§aCharged with element:,§aCharged with element:
+entity.power.blue_magnet,Red Magnet,Red Magnet
+item.power.destruction_battery,Battery,Battery
+gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin,"Water stream, uses 10","Water stream, uses 10"
+item.power.ether_glaive,Ether Glaive,Ether Glaive
+gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60,"Ice trap, uses 80","Ice trap, uses 80"
+item.power.explosion_mace,Explosion Mace,Explosion Mace
+entity.power.poison_pit,Poison Pit,Poison Pit
+item.power.mind_epee,Mind Epee,Mind Epee
+item.power.magnet_armor_chestplate,Magnet Chestplate,Magnet Chestplate
+gui.power.wheel_abilities_lava.tooltip_surface_melting_uses_75,"Surface melting, uses 75","Surface melting, uses 75"
+item.minecraft.tipped_arrow.effect.star_regeneration_potion,Arrow of Star Regeneration,Arrow of Star Regeneration
+item.power.crystal_knife,Crystal Knife,Crystal Knife
+gui.power.wheel_abilities_tornado.tooltip_tornado_flight_uses_5,"Tornado flight, uses 5","Tornado flight, uses 5"
+item.power.light_sword,Light Sword,Light Sword
+advancements.the_end_of_tyranny.title,The end of tyranny,The end of tyranny
+death.attack.cursed_knight_ds,%1$s was killed by an Cursed Knight,%1$s was killed by an Cursed Knight
+item.power.darkness_armor_chestplate,Darkness Chestplate,Darkness Chestplate
+gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points,"Air flow, uses 10","Air flow, uses 10"
+item.power.mushrooms_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.mushrooms_battery.description_1,§9Mushrooms,§9Mushrooms
+item.power.ice_stone,Ice Stone,Ice Stone
+item.power.energy_armor_chestplate,Energy Chestplate,Energy Chestplate
+item.power.mind_stone,Mind Stone,Mind Stone
+effect.power.thirst_dark_master,Dark Master of Thirst,Dark Master of Thirst
+item.power.gravity_armor_helmet,Gravity Helmet,Gravity Helmet
+item.power.vacuum_dagger,Vacuum Dagger,Vacuum Dagger
+item.power.air_battery,Battery,Battery
+gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15,"Sun ray, uses 15","Sun ray, uses 15"
+item.power.energy_armor_helmet,Energy Helmet,Energy Helmet
+item.power.sun_armor_boots,Sun Boots,Sun Boots
+subtitles.bass_boom,Bass,Bass
+subtitles.stone_deactivation,The stone has been deactivated,The stone has been deactivated
+block.power.elemental_power_generator,Elemental Power Generator,Elemental Power Generator
+item.power.sun_armor_leggings,Sun Leggings,Sun Leggings
+item.power.mercury_armor_helmet,Mercury Helmet,Mercury Helmet
+effect.power.plants_master,Master of Plants,Master of Plants
+item.power.plants_armor_helmet,Plants Helmet,Plants Helmet
+subtitles.record.ancient_mood,,
+item.power.sound_armor_helmet,Sound Helmet,Sound Helmet
+item.power.fire_battery.description_1,§9Fire,§9Fire
+item.power.right_metal_gauntlet,Right Metal Gauntlet,Right Metal Gauntlet
+power.modinfo.unofficial_version,§9[Keepers of the Stones II]§r You are using an unofficial version of the mod!,§9[Keepers of the Stones II]§r You are using an unofficial version of the mod!
+item.power.filth_armor_boots,Filth Boots,Filth Boots
+item.power.golden_dust_armor_leggings,Golden Dust Leggings,Golden Dust Leggings
+entity.power.turret,Turret,Turret
+effect.power.fire_master,Master of Fire,Master of Fire
+effect.power.technobarrier,Technobarrier,Technobarrier
+item.power.sand_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.fire_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.sand_battery.description_1,§9Sand,§9Sand
+item.power.ocean_stone,Ocean Stone,Ocean Stone
+effect.power.animals_master,Master of Animals,Master of Animals
+gui.power.wheel_abilities_vacuum.tooltip_rifts_uses_45,"Rifts, uses 45","Rifts, uses 45"
+item_group.power.batteries,KotS: Batteries,KotS: Batteries
+gui.power.keepers_box_gui_part_4.tooltip_metal,Metal,Metal
+item.power.spirit_battery.description_1,§9Spirit,§9Spirit
+item.power.spirit_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.amber_battery.description_1,§9Amber,§9Amber
+gui.power.wheel_abilities_rain.tooltip_rain_splash_uses_10,"Rain splash, uses 10","Rain splash, uses 10"
+item.power.amber_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.earth_hammer,Earth Hammer,Earth Hammer
+item.power.energium_upgrade_smithing_template.name_upgrade,§7Energium Upgrade,§7Energium Upgrade
+item.power.golden_dust_staff,Golden Dust Staff,Golden Dust Staff
+gui.power.wheel_abilities_poison.tooltip_poison_bomb_uses_40,"Poison bomb, uses 40","Poison bomb, uses 40"
+effect.power.smoke_master,Master of Smoke,Master of Smoke
+subtitles.ear_ringing,Ear ringing,Ear ringing
+gui.power.keepers_box_gui_part_4.tooltip_ether,Ether,Ether
+trim_material.power.amplifier_material,Amplifier,Amplifier
+item.power.sound_armor_leggings,Sound Leggings,Sound Leggings
+gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points,"Wind gust, uses 35","Wind gust, uses 35"
+item.minecraft.splash_potion.effect.power_lock_potion,Splash Potion of Power Lock,Splash Potion of Power Lock
+effect.power.speed_master,Master of Speed,Master of Speed
+item.power.poison_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.poison_battery.description_1,§9Poison,§9Poison
+key.power.ability_using_key,Ability using key,Ability using key
+death.attack.energium_golem_ds,%1$s was killed by an Energium Golem,%1$s was killed by an Energium Golem
+power.modinfo.recharge_stone.seconds,seconds,seconds
+gui.power.keepers_box_gui_part_1.tooltip_fire,Fire,Fire
+effect.power.mist,Mist,Mist
+item.power.lightning_armor_chestplate,Lightning Chestplate,Lightning Chestplate
+item.power.lightning_armor_helmet,Lightning Helmet,Lightning Helmet
+gui.power.keepers_box_gui_part_2.tooltip_time,Time,Time
+gui.power.wheel_abilities_mercury.tooltip_mercury_ball_uses_35,"Mercury ball, uses 35","Mercury ball, uses 35"
+item.power.water_katana,Water Katana,Water Katana
+advancements.energized_gold.title,Energized gold,Energized gold
+item.power.darkness_armor_helmet,Darkness Helmet,Darkness Helmet
+effect.power.time_slowing,Time Slowing,Time Slowing
+gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi,"Healing water, uses 70","Healing water, uses 70"
+item.power.animals_armor_boots,Animals Boots,Animals Boots
+effect.power.rain_master,Master of the Rain,Master of the Rain
+subtitles.cursed_squire.hurt,,
+effect.power.spirit_master,Master of the Spirit,Master of the Spirit
+gui.power.keepers_box_gui_part_3.tooltip_space,Space,Space
+effect.power.crystal_master,Master of the Crystal,Master of the Crystal
+advancements.grant_your_power.descr,Charge the elemental power generator with the power of the stone,Charge the elemental power generator with the power of the stone
+gui.power.wheel_abilities_creation.tooltip_four_elements_attack_uses_10,"Four elements attack, uses 10","Four elements attack, uses 10"
+item.power.shadow_armor_chestplate,Shadow Chestplate,Shadow Chestplate
+effect.power.golden_dust_master,Master of the Golden Dust,Master of the Golden Dust
+item.power.music_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.music_battery.description_1,§9Music,§9Music
+item.power.tornado_axe,Tornado Axe,Tornado Axe
+death.attack.cursed_knight_ds.player,%1$s was killed by an Cursed Knight,%1$s was killed by an Cursed Knight
+block.power.depleted_energium_ore,Depleted Energium Ore,Depleted Energium Ore
+gui.power.wheel_abilities_sun.tooltip_sun_healing_uses_80,"Sun healing, uses 80","Sun healing, uses 80"
+block.power.raw_copyrium_block,Block of Raw Copyrium,Block of Raw Copyrium
+item.power.rain_armor_boots,Rain Boots,Rain Boots
+item.power.techno_pickaxe,Techno Pickaxe,Techno Pickaxe
+effect.power.lava_master,Master of Lava,Master of Lava
+item.power.blood_armor_boots,Blood Boots,Blood Boots
+item.power.sun_armor_helmet,Sun Helmet,Sun Helmet
+effect.power.whirlwind,Whirlwind,Whirlwind
+gui.power.wheel_abilities_ocean.tooltip_oceanic_current_uses_10,"Oceanic current, uses 10","Oceanic current, uses 10"
+item.power.tornado_stone,Tornado Stone,Tornado Stone
+item.power.smoke_armor_boots,Smoke Boots,Smoke Boots
+item.power.creation_battery,Battery,Battery
+item.power.spirit_armor_helmet,Spirit Helmet,Spirit Helmet
+item.power.technology_battery,Battery,Battery
+gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75,"Blinding flash, uses 75","Blinding flash, uses 75"
+effect.power.explosion_master,Master of Explosion,Master of Explosion
+gui.power.keepers_box_gui_part_1.tooltip_blue_flame,Blue Flame,Blue Flame
+title.level_up.message,§5You've reached level,§5You've reached level
+item.power.sound_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.sound_battery.description_1,§9Sound,§9Sound
+gui.power.wheel_abilities_magnet.tooltip_negative_charge_uses_30,"Negative magnet, uses 50","Negative magnet, uses 50"
+item.power.gravity_armor_boots,Gravity Boots,Gravity Boots
+effect.power.amber_master,Master of Amber,Master of Amber
+item.power.amber_armor_boots,Amber Boots,Amber Boots
+effect.power.shadow_master,Master of Shadow,Master of Shadow
+item.power.vacuum_battery,Battery,Battery
+item.power.plague_battery.description_1,§9Plague,§9Plague
+item.power.plague_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.earth_armor_chestplate,Earth Chestplate,Earth Chestplate
+item.power.vacuum_armor_leggings,Vacuum Leggings,Vacuum Leggings
+advancements.getting_married.descr,Create an amplifier ring to reset the stone's recharge,Create an amplifier ring to reset the stone's recharge
+item.power.blue_flame_armor_leggings,Blue Flame Leggings,Blue Flame Leggings
+block.power.polished_cursed_stone_wall,Polished Cursed Stone Wall,Polished Cursed Stone Wall
+block.power.amplifier_ore,Amplifier Ore,Amplifier Ore
+item.power.raw_energium,Raw Energium,Raw Energium
+gui.power.wheel_abilities_blood.tooltip_vampirism_uses_40,"Vampirism, uses 20","Vampirism, uses 20"
+gui.power.wheel_abilities_space.tooltip_black_hole_uses_80,"Black hole, uses 80","Black hole, uses 80"
+item.power.water_battery.description_0,§aCharged with element:,§aCharged with element:
+gui.power.wheel_abilities_mushrooms.tooltip_planting_mushrooms_uses_35,"Planting mushrooms, uses 35","Planting mushrooms, uses 35"
+item.power.water_battery.description_1,§9Water,§9Water
+item.power.music_armor_chestplate,Music Chestplate,Music Chestplate
+item.power.filth_armor_helmet,Filth Helmet,Filth Helmet
+item.power.explosion_armor_helmet,Explosion Helmet,Explosion Helmet
+block.power.cursed_stone_cracked_bricks,Cursed Stone Cracked Bricks,Cursed Stone Cracked Bricks
+gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10,"Sound wave, uses 10","Sound wave, uses 10"
+item.power.lightning_battery.description_1,§9Lightning,§9Lightning
+item.power.lightning_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.darkness_armor_boots,Darkness Boots,Darkness Boots
+item.power.water_armor_leggings,Water Leggings,Water Leggings
+gui.power.wheel_abilities_sand.tooltip_sandstorm_uses_80,"Sandstorm, uses 80","Sandstorm, uses 80"
+item.power.energium_pickaxe,Energium Pickaxe,Energium Pickaxe
+item.power.animals_battery,Battery,Battery
+item.power.explosion_armor_chestplate,Explosion Chestplate,Explosion Chestplate
+block.power.energium_ore,Energium Ore,Energium Ore
+gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35,"Lightning strike, uses 35","Lightning strike, uses 35"
+block.power.energium_vault,Energium Vault,Energium Vault
+item.power.darkness_armor_leggings,Darkness Leggings,Darkness Leggings
+item.power.teleportation_battery,Battery,Battery
+item.power.energium_armor_helmet,Energium Helmet,Energium Helmet
+item.power.spirit_armor_leggings,Spirit Leggings,Spirit Leggings
+gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe,"Earth block attack, uses 15","Earth block attack, uses 15"
+item.power.gravity_battery.description_1,§9Gravity,§9Gravity
+item.power.creation_stone,Creation Stone,Creation Stone
+item.power.magnet_armor_boots,Magnet Boots,Magnet Boots
+item.power.gravity_battery.description_0,§aCharged with element:,§aCharged with element:
+effect.power.earth_master,Master of the Earth,Master of the Earth
+block.power.chiseled_cursed_stone,Chiseled Cursed Stone,Chiseled Cursed Stone
+item.power.amber_armor_chestplate,Amber Chestplate,Amber Chestplate
+item.power.ether_armor_helmet,Ether Helmet,Ether Helmet
+block.power.copyrium_block,Block of Copyrium,Block of Copyrium
+item.power.time_stone,Time Stone,Time Stone
+item.power.lava_armor_leggings,Lava Leggings,Lava Leggings
+subtitles.music.mystery_of_the_cursed_forest,,
+gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15,"Mini tornado attack, uses 15","Mini tornado attack, uses 15"
+item.power.destruction_armor_leggings,Destruction Leggings,Destruction Leggings
+effect.power.space_master,Master of Space,Master of Space
+item.power.plague_stone,Plague Stone,Plague Stone
+gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40,"Crystal piercing, uses 40","Crystal piercing, uses 40"
+gui.power.wheel_abilities_plague.tooltip_plague_wind_uses_15,"Plague wind, uses 15","Plague wind, uses 15"
+chat.power.versioncheckwarn,"§cWarning! You are using a beta version of the Keepers of the Stones II mod, which may cause unstable operation or damage to your game world. Be careful!","§cWarning! You are using a beta version of the Keepers of the Stones II mod, which may cause unstable operation or damage to your game world. Be careful!"
+item.power.technology_armor_chestplate,Technology Chestplate,Technology Chestplate
+item.power.vacuum_armor_boots,Vacuum Boots,Vacuum Boots
+item.power.creation_armor_leggings,Creation Leggings,Creation Leggings
+trim_material.power.depleted_energium_material,Depleted Energium,Depleted Energium
+item.power.plague_armor_chestplate,Plague Chestplate,Plague Chestplate
+item.power.energium_shield,Energium Shield,Energium Shield
+advancements.getting_married.title,Getting married,Getting married
+block.power.battery_charger,Battery Charger,Battery Charger
+item.power.explosion_armor_boots,Explosion Boots,Explosion Boots
+item.power.sound_armor_chestplate,Sound Chestplate,Sound Chestplate
+item.power.sand_armor_boots,Sand Boots,Sand Boots
+key.categories.power2,Keepers of the Stones II,Keepers of the Stones II
+item.power.teleportation_armor_boots,Teleportation Boots,Teleportation Boots
+gui.power.keepers_box_gui_part_3.tooltip_shadow,Shadow,Shadow
+gui.power.keepers_box_gui_part_2.tooltip_music,Music,Music
+item.power.tornado_armor_leggings,Tornado Leggings,Tornado Leggings
+item.power.poison_bow,Poison Bow,Poison Bow
+item.power.sand_saber,Sand Saber,Sand Saber
+item.power.lava_armor_boots,Lava Boots,Lava Boots
+effect.power.form_master,Master of Form,Master of Form
+item.power.energium_key,Energium Key,Energium Key
+item.power.music_disc_call_of_the_past.desc,bxkqq - Call of the Past,bxkqq - Call of the Past
+entity.power.shadow,Shadow,Shadow
+item.power.green_staff,Green Staff,Green Staff
+gui.power.wheel_abilities_time.tooltip_acceleration_of_time_uses_30,"Acceleration of time, uses 40","Acceleration of time, uses 40"
+item.power.mercury_armor_leggings,Mercury Leggings,Mercury Leggings
+item.power.amber_battery,Battery,Battery
+item.power.energy_armor_leggings,Energy Leggings,Energy Leggings
+item.power.air_armor_leggings,Air Leggings,Air Leggings
+gui.power.wheel_abilities_ocean.tooltip_streamlining_uses_5,"Streamlining, uses 5","Streamlining, uses 5"
+effect.power.moon_master,Master of the Moon,Master of the Moon
+item.power.energy_stone,Energy Stone,Energy Stone
+item.power.sound_battery,Battery,Battery
+item.power.form_armor_leggings,Form Leggings,Form Leggings
+block.power.orange_portal,Orange Portal,Orange Portal
+item.power.ocean_armor_leggings,Ocean Leggings,Ocean Leggings
+item.power.mind_armor_helmet,Mind Helmet,Mind Helmet
+item.power.lightning_armor_leggings,Lightning Leggings,Lightning Leggings
+enchantment.power.isolation,Isolation,Isolation
+item.power.fire_sword,Fire Sword,Fire Sword
+item.power.animals_armor_helmet,Animals Helmet,Animals Helmet
+item.power.shadow_armor_helmet,Shadow Helmet,Shadow Helmet
+gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45,"Rain curtain, uses 45","Rain curtain, uses 45"
+item.power.smoke_armor_helmet,Smoke Helmet,Smoke Helmet
+item.power.music_disc_call_of_the_past,Music Disc,Music Disc
+power.modinfo.cpapi_check,§9[CPAPI]§r The current version of the Colorful Powers API: v,§9[CPAPI]§r The current version of the Colorful Powers API: v
+gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin,"Ethereal ray, uses 10","Ethereal ray, uses 10"
+gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10,"Lava outburst, uses 10","Lava outburst, uses 10"
+item.power.shadow_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.shadow_battery.description_1,§9Shadow,§9Shadow
+item.power.time_khopesh,Time Khopesh,Time Khopesh
+item.power.metal_battery.description_1,§9Metal,§9Metal
+item.power.metal_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.air_armor_chestplate,Air Chestplate,Air Chestplate
+item.power.earth_armor_helmet,Earth Helmet,Earth Helmet
+gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10,"Crystal block attack, uses 10","Crystal block attack, uses 10"
+block.power.deepslate_energium_ore,Deepslate Energium Ore,Deepslate Energium Ore
+block.power.cursed_stone,Cursed Stone,Cursed Stone
+item.power.freaking_parsnip_soup,Soup from Freaking Parsnip,Soup from Freaking Parsnip
+item.power.crystal_stone,Crystal Stone,Crystal Stone
+item.power.gravity_armor_leggings,Gravity Leggings,Gravity Leggings
+item.power.energium_golem_spawn_egg,Energium Golem Spawn Egg,Energium Golem Spawn Egg
+item.power.energium_upgrade_smithing_template.description_0,§7Energium Upgrade,§7Energium Upgrade
+item.power.ocean_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.mercury_battery,Battery,Battery
+item.power.energium_upgrade_smithing_template.description_4,§7Ingredients:,§7Ingredients:
+item.power.energium_upgrade_smithing_template.description_3,§9Depleted Energium,§9Depleted Energium
+item.power.energium_upgrade_smithing_template.description_2,§7Applies to:,§7Applies to:
+item.power.energium_upgrade_smithing_template.description_1,,
+item.power.air_armor_helmet,Air Helmet,Air Helmet
+gui.power.wheel_abilities_speed.tooltip_acceleration_uses_45,"Acceleration, uses 45","Acceleration, uses 45"
+item.power.ether_armor_chestplate,Ether Chestplate,Ether Chestplate
+gui.power.wheel_abilities_light.tooltip_light_beam_uses_10,"Light beam, uses 10","Light beam, uses 10"
+item.power.rain_stone,Rain Stone,Rain Stone
+block.power.cursed_stone_wall,Cursed Stone Wall,Cursed Stone Wall
+item.power.ocean_battery.description_1,§9Ocean,§9Ocean
+gui.power.keepers_box_gui_part_1.tooltip_lightning,Lightning,Lightning
+item.power.energium_ingot,Energium Ingot,Energium Ingot
+item.power.form_sai,Form Sai,Form Sai
+item.power.vacuum_battery.description_0,§aCharged with element:,§aCharged with element:
+gui.power.wheel_abilities_technology.tooltip_technobarrier_uses_60,"Technobarrier, uses 60","Technobarrier, uses 60"
+item.power.energium_upgrade_smithing_template.description_5,§9Redstone,§9Redstone
+item.power.vacuum_battery.description_1,§9Vacuum,§9Vacuum
+item.power.teleportation_blade,Teleportation Blade,Teleportation Blade
+item.power.moon_stone,Moon Stone,Moon Stone
+gui.power.wheel_ability_darkness.tooltip_darkness_absorption_uses_80,"Darkness absorption, uses 80","Darkness absorption, uses 80"
+gui.power.keepers_box_gui_part_4.tooltip_mushrooms,Mushrooms,Mushrooms
+death.attack.cursed_squire_ds.item,%1$s was killed by an Cursed Squire,%1$s was killed by an Cursed Squire
+gui.power.wheel_abilities_creation.tooltip_immortality_mark_uses_80,"Immortality mark, uses 80","Immortality mark, uses 80"
+effect.power.sand_master,Master of Sand,Master of Sand
+gui.power.keepers_box_gui_part_1.tooltip_ocean,Ocean,Ocean
+block.power.keepers_box,Keeper's Box,Keeper's Box
+item.power.horror_armor_boots,Horror Boots,Horror Boots
+item.power.filth_armor_leggings,Filth Leggings,Filth Leggings
+power.modinfo.recharge_stone.done,Ready to use,Ready to use
+item.power.light_stone,Light Stone,Light Stone
+item.power.moon_armor_leggings,Moon Leggings,Moon Leggings
+item.power.space_armor_chestplate,Space Chestplate,Space Chestplate
+effect.power.technology_master,Master of Technologies,Master of Technologies
+gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35,"Scorpion sting, uses 35","Scorpion sting, uses 35"
+item.power.speed_armor_chestplate,Speed Chestplate,Speed Chestplate
+effect.power.light_master,Master of Light,Master of Light
+advancements.energized_gold.descr,Use energium upgrade to get a full energium ingot,Use energium upgrade to get a full energium ingot
+death.attack.energium_golem_ds.player,%1$s was killed by an Energium Golem,%1$s was killed by an Energium Golem
+effect.power.metal_master,Master of the Metal,Master of the Metal
+gui.power.wheel_abilities_mind.tooltip_psychowaves_uses_15,"Psychowaves, uses 15","Psychowaves, uses 15"
+item.power.basic_box.tooltip,Basic,Basic
+block.power.raw_amplifier_block,Block of Raw Amplifier,Block of Raw Amplifier
+item.power.constellation_sword,Constellation Sword,Constellation Sword
+item.power.creation_battery.description_0,§aCharged with element:,§aCharged with element:
+item.power.creation_battery.description_1,§9Creation,§9Creation
+item.power.form_stone,Form Stone,Form Stone
+effect.power.mercury_master,Master of Mercury,Master of Mercury
+item.power.energium_armor_chestplate,Energium Chestplate,Energium Chestplate
+item.power.mist_stone,Mist Stone,Mist Stone
+item.power.blue_flame_armor_chestplate,Blue Flame Chestplate,Blue Flame Chestplate
+item.power.creation_pickaxe,Creation Pickaxe,Creation Pickaxe
+gui.power.debug_info.label_power_recorded_false,power_recorded: false,power_recorded: false
+gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15,"Musical attack, uses 15","Musical attack, uses 15"

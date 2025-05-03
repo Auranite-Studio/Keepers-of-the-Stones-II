@@ -1,18 +1,21 @@
+
 **New features**
-- Added a new effect - Curse
-- The curse effect reduces some of the player's stats, as well as dealing 6 damage and impairing visibility by creating a cursed fog
-- Cursed forest will now give curse effect instead of wither effect
-- Curse does not affect players with activated stones or batteries
-- The curse effect is given regardless of difficulty
+- Added basic functionality to runes
+- Now runes can only be used one of each type (star runes, charge runes, and power runes)
+- Added the energium shield
 
 **Improvemnts** 
-- *N/A*
+- Runes are no longer an experimental feature
+- Redesigned the second and third abilities of the magnet element
+- Now Magnet Master can place two magnets of different polarities (blue - repels, red - attracts)
+- Master of Gravity no longer takes fall damage
+- Increased the chance to drop an energium upgrade smithing template from the energium vaults
 
 **API changes**
-- *N/A*
+- Warning will now be displayed when using the beta version of the mod
 
 **Bugfixes**
-- [Bugfix] 
+- [Bugfix] Minor localization fixes
 
 **Known issues**
 - *N/A*
