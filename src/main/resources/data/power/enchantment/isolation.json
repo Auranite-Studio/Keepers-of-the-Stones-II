@@ -11,7 +11,8 @@
     "power:energium_armor_helmet",
     "power:energium_armor_chestplate",
     "power:energium_armor_leggings",
-    "power:energium_armor_boots"
+    "power:energium_armor_boots",
+    "power:energium_shield"
   ],
   "weight": 5,
   "max_level": 1,
