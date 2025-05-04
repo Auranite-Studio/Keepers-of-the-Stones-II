@@ -9,7 +9,7 @@
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] 
+- [Bugfix] Fixed a bug that caused ores to not be mined with the silk touch enchantment
 
 **Known issues**
 - *N/A*
