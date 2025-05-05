@@ -1,6 +1,6 @@
 
 **New features**
-- 
+- Added a runologist's house to villages
 
 **Improvemnts** 
 - The energium shield can now be enchanted to isolation
