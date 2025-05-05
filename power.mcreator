@@ -31715,6 +31715,28 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "Runologist",
+      "type": "villagerprofession",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "runologist",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Professions"
+    },
+    {
+      "name": "RunologistTrades",
+      "type": "villagertrade",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "runologist_trades",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Professions"
     }
   ],
   "variable_elements": [
@@ -33849,6 +33871,7 @@
       "item.power.blue_flame_battery.description_0": "§aЗаряжена элементом:",
       "entity.power.cursed_knight": "Проклятый рыцарь",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Солнце",
+      "entity.minecraft.villager.power.runologist": "Runologist",
       "block.power.blue_portal": "Синий портал",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "block.power.cursed_stone_bricks_slab": "Плита из проклятых каменных кирпичей",
@@ -34814,6 +34837,7 @@
       "item.power.blue_flame_battery.description_0": "§aCharged with element:",
       "entity.power.cursed_knight": "Cursed Knight",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Sun",
+      "entity.minecraft.villager.power.runologist": "Runologist",
       "block.power.blue_portal": "Blue Portal",
       "item.power.air_armor_boots": "Air Boots",
       "block.power.cursed_stone_bricks_slab": "Cursed Stone Bricks Slab",
@@ -36434,6 +36458,10 @@
       },
       {
         "name": "Configs",
+        "children": []
+      },
+      {
+        "name": "Professions",
         "children": []
       }
     ]

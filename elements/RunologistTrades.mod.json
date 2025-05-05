@@ -1,0 +1,33 @@
+{
+  "_fv": 77,
+  "_type": "villagertrade",
+  "definition": {
+    "tradeEntries": [
+      {
+        "villagerProfession": {
+          "value": "CUSTOM:Runologist"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "CUSTOM:ExtraStarPointsRune1"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 12,
+            "offer": {
+              "value": "CUSTOM:ExtraStarPointsRune2"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          }
+        ]
+      }
+    ]
+  }
+}
