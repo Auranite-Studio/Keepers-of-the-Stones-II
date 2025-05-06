@@ -19,6 +19,7 @@ import net.minecraft.core.BlockPos;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerRuneAbilityProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
@@ -93,13 +94,17 @@ public record WheelAbilitiesCrystalButtonMessage(int buttonID, int x, int y, int
 		}
 		if (buttonID == 6) {
 
-			Attack33Procedure.execute(entity);
+			PowerRuneAbilityProcedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			Attack34Procedure.execute(entity);
+			Attack33Procedure.execute(entity);
 		}
 		if (buttonID == 8) {
+
+			Attack34Procedure.execute(entity);
+		}
+		if (buttonID == 9) {
 
 			Attack35Procedure.execute(entity);
 		}

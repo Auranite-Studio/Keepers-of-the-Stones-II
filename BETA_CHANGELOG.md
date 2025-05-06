@@ -3,6 +3,7 @@
 - Added a runologist's house to villages
 
 **Improvemnts** 
+- The fourth ability is now activated if the power rune is active
 - The energium shield can now be enchanted to isolation
 
 **API changes**

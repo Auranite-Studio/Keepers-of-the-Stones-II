@@ -19,6 +19,7 @@ import net.minecraft.core.BlockPos;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMusicMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerRuneAbilityProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
@@ -93,13 +94,17 @@ public record WheelAbilitiesMusicButtonMessage(int buttonID, int x, int y, int z
 		}
 		if (buttonID == 6) {
 
-			Attack153Procedure.execute(entity);
+			PowerRuneAbilityProcedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			Attack154Procedure.execute(entity);
+			Attack153Procedure.execute(entity);
 		}
 		if (buttonID == 8) {
+
+			Attack154Procedure.execute(entity);
+		}
+		if (buttonID == 9) {
 
 			Attack155Procedure.execute(entity);
 		}

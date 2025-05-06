@@ -12,11 +12,14 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
 import java.util.HashMap;
+import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilityDarknessMenu;
+import com.esmods.keepersofthestonestwo.procedures.RuneTooltipRenderProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
@@ -37,6 +40,7 @@ public class WheelAbilityDarknessScreen extends AbstractContainerScreen<WheelAbi
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
+	ImageButton imagebutton_power_rune_ability;
 	ImageButton imagebutton_darkness_ray;
 	ImageButton imagebutton_darkness_absorption;
 	ImageButton imagebutton_dark_power_transfer;
@@ -56,6 +60,12 @@ public class WheelAbilityDarknessScreen extends AbstractContainerScreen<WheelAbi
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 82 && mouseY < topPos + 106) {
+			String hoverText = RuneTooltipRenderProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+		}
 		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 21 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_ability_darkness.tooltip_darkness_ray_uses_15"), mouseX, mouseY);
 		}
@@ -184,11 +194,26 @@ public class WheelAbilityDarknessScreen extends AbstractContainerScreen<WheelAbi
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_darkness_ray = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
-				new WidgetSprites(ResourceLocation.parse("power:textures/screens/darkness_ray.png"), ResourceLocation.parse("power:textures/screens/darkness_ray_highlight.png")), e -> {
+		imagebutton_power_rune_ability = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/power_rune_ability.png"), ResourceLocation.parse("power:textures/screens/power_rune_ability_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilityDarknessButtonMessage(6, x, y, z));
 						WheelAbilityDarknessButtonMessage.handleButtonAction(entity, 6, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_power_rune_ability", imagebutton_power_rune_ability);
+		this.addRenderableWidget(imagebutton_power_rune_ability);
+		imagebutton_darkness_ray = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/darkness_ray.png"), ResourceLocation.parse("power:textures/screens/darkness_ray_highlight.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbilityDarknessButtonMessage(7, x, y, z));
+						WheelAbilityDarknessButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
@@ -202,8 +227,8 @@ public class WheelAbilityDarknessScreen extends AbstractContainerScreen<WheelAbi
 		imagebutton_darkness_absorption = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/darkness_absorption.png"), ResourceLocation.parse("power:textures/screens/darkness_absorption_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilityDarknessButtonMessage(7, x, y, z));
-						WheelAbilityDarknessButtonMessage.handleButtonAction(entity, 7, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbilityDarknessButtonMessage(8, x, y, z));
+						WheelAbilityDarknessButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
@@ -217,8 +242,8 @@ public class WheelAbilityDarknessScreen extends AbstractContainerScreen<WheelAbi
 		imagebutton_dark_power_transfer = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/dark_power_transfer.png"), ResourceLocation.parse("power:textures/screens/dark_power_transfer_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilityDarknessButtonMessage(8, x, y, z));
-						WheelAbilityDarknessButtonMessage.handleButtonAction(entity, 8, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbilityDarknessButtonMessage(9, x, y, z));
+						WheelAbilityDarknessButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
 			@Override
