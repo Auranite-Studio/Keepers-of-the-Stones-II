@@ -1,0 +1,57 @@
+{
+  "_fv": 77,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 267,
+    "height": 188,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "keepers_box_gui_part_5.png",
+          "use1Xscale": false,
+          "x": 85,
+          "y": -8,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_button_up",
+          "image": "keepers_box_button_up.png",
+          "hoveredImage": "keepers_box_button_up_active.png",
+          "onClick": {
+            "name": "KBtoPart4"
+          },
+          "x": 289,
+          "y": 96,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_button_down_locked",
+          "image": "keepers_box_button_down_locked.png",
+          "hoveredImage": "",
+          "x": 289,
+          "y": 129,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
