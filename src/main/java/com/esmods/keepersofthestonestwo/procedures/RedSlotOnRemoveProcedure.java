@@ -60,7 +60,7 @@ public class RedSlotOnRemoveProcedure {
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.recharge_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer + 180;
+				_vars.recharge_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer + 150;
 				_vars.syncPlayerVariables(entity);
 			}
 		}
@@ -77,7 +77,7 @@ public class RedSlotOnRemoveProcedure {
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.master_effect_duration = entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration - 180;
+				_vars.master_effect_duration = entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration - 150;
 				_vars.syncPlayerVariables(entity);
 			}
 		}

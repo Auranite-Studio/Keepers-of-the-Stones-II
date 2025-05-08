@@ -18,7 +18,7 @@ public class ReducedStoneRechargeTimeRune3UseProcedure {
 			itemstack.shrink(1);
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.recharge_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer - 180;
+				_vars.recharge_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer - 150;
 				_vars.syncPlayerVariables(entity);
 			}
 			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
@@ -39,7 +39,7 @@ public class ReducedStoneRechargeTimeRune3UseProcedure {
 				itemstack.shrink(1);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.recharge_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer - 180;
+					_vars.recharge_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer - 150;
 					_vars.syncPlayerVariables(entity);
 				}
 				if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {

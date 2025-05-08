@@ -18,7 +18,7 @@ public class AdditionTimeMasterEffectRune1UseProcedure {
 			itemstack.shrink(1);
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.master_effect_duration = entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration + 180;
+				_vars.master_effect_duration = entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration + 150;
 				_vars.syncPlayerVariables(entity);
 			}
 			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
@@ -39,7 +39,7 @@ public class AdditionTimeMasterEffectRune1UseProcedure {
 				itemstack.shrink(1);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.master_effect_duration = entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration + 180;
+					_vars.master_effect_duration = entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration + 150;
 					_vars.syncPlayerVariables(entity);
 				}
 				if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
