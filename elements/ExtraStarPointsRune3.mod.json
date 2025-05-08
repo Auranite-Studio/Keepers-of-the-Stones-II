@@ -31,8 +31,10 @@
     "specialInformation": {
       "fixedValue": [
         "§9Extra Star Points III",
-        "",
-        "§1§o+20 to the max. number of star points"
+        "§7Type:",
+        " §1Blue",
+        "§7Specifications:",
+        " §9+20 to the max. number of star points"
       ]
     },
     "glowCondition": {

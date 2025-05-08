@@ -30,6 +30,8 @@ public class AdditionTimeMasterEffectRune1Item extends Item {
 		list.add(Component.translatable("item.power.addition_time_master_effect_rune_1.description_0"));
 		list.add(Component.translatable("item.power.addition_time_master_effect_rune_1.description_1"));
 		list.add(Component.translatable("item.power.addition_time_master_effect_rune_1.description_2"));
+		list.add(Component.translatable("item.power.addition_time_master_effect_rune_1.description_3"));
+		list.add(Component.translatable("item.power.addition_time_master_effect_rune_1.description_4"));
 	}
 
 	@Override

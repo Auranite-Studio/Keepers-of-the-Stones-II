@@ -31,8 +31,10 @@
     "specialInformation": {
       "fixedValue": [
         "§9Reduced Stone Recharge II",
-        "",
-        "§1§o-1 min of stone recharge"
+        "§7Type:",
+        " §4Red",
+        "§7Specifications:",
+        " §9-1 min of stone recharge"
       ]
     },
     "glowCondition": {

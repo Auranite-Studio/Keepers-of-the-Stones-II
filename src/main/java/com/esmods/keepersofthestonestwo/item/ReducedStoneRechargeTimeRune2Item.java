@@ -30,6 +30,8 @@ public class ReducedStoneRechargeTimeRune2Item extends Item {
 		list.add(Component.translatable("item.power.reduced_stone_recharge_time_rune_2.description_0"));
 		list.add(Component.translatable("item.power.reduced_stone_recharge_time_rune_2.description_1"));
 		list.add(Component.translatable("item.power.reduced_stone_recharge_time_rune_2.description_2"));
+		list.add(Component.translatable("item.power.reduced_stone_recharge_time_rune_2.description_3"));
+		list.add(Component.translatable("item.power.reduced_stone_recharge_time_rune_2.description_4"));
 	}
 
 	@Override

@@ -31,8 +31,10 @@
     "specialInformation": {
       "fixedValue": [
         "§9Additional Master's Effect Time III",
-        "",
-        "§1§o+10 min of master effect"
+        "§7Type:",
+        " §4Red",
+        "§7Specifications:",
+        " §9+10 min of master effect"
       ]
     },
     "glowCondition": {

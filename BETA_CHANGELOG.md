@@ -1,7 +1,7 @@
 
 **New features**
 - Added a runologist's house to villages
-- Added charge runes (red runes)
+- Added red runes
 - Added an empty rune
 
 **Improvemnts** 
