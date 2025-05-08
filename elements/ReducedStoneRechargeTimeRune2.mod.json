@@ -1,0 +1,70 @@
+{
+  "_fv": 77,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "reduced_stone_recharge_time_rune_2",
+    "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
+    "name": "Rune",
+    "rarity": "RARE",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Items"
+      }
+    ],
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": [
+        "§9Reduced Stone Recharge II",
+        "",
+        "§1§o-1 min of stone recharge"
+      ]
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "ReducedStoneRechargeTimeRune2Use"
+    },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "CUSTOM:MagicFireballProjectile"
+    },
+    "projectileDisableAmmoCheck": false,
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "none",
+    "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
+    "musicDiscLengthInTicks": 0,
+    "musicDiscAnalogOutput": 0
+  }
+}

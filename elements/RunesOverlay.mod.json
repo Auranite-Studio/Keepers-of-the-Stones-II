@@ -56,6 +56,90 @@
           "y": 56,
           "locked": true
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "reduced_stone_recharge_time_rune_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RedRune1Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 23,
+          "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "reduced_stone_recharge_time_rune_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RedRune2Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 23,
+          "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "reduced_stone_recharge_time_rune_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RedRune3Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 23,
+          "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "addition_time_master_effect_rune_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RedRune4Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 23,
+          "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "addition_time_master_effect_rune_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RedRune5Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 23,
+          "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "addition_time_master_effect_rune_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RedRune6Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 23,
+          "y": 56,
+          "locked": true
+        }
       }
     ],
     "baseTexture": "",
