@@ -206,6 +206,7 @@ import com.esmods.keepersofthestonestwo.item.EnergiumDustItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumCoreItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumAxeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumArmorItem;
+import com.esmods.keepersofthestonestwo.item.EmptyRuneItem;
 import com.esmods.keepersofthestonestwo.item.EmptyCharacteristicsCardItem;
 import com.esmods.keepersofthestonestwo.item.EmptyBatteryItem;
 import com.esmods.keepersofthestonestwo.item.EarthStoneItem;
@@ -718,6 +719,7 @@ public class PowerModItems {
 	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_3 = REGISTRY.register("extra_star_points_rune_3", ExtraStarPointsRune3Item::new);
 	public static final DeferredItem<Item> MUSIC_HOPE = REGISTRY.register("music_hope", MusicHopeItem::new);
 	public static final DeferredItem<Item> ENERGIUM_SHIELD = REGISTRY.register("energium_shield", EnergiumShieldItem::new);
+	public static final DeferredItem<Item> EMPTY_RUNE = REGISTRY.register("empty_rune", EmptyRuneItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

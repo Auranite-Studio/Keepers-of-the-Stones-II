@@ -31743,6 +31743,20 @@
         ]
       },
       "path": "~/Modules/RunesSystem/PowerRuneAbilities"
+    },
+    {
+      "name": "EmptyRune",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_rune",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/empty_rune.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EmptyRuneItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes"
     }
   ],
   "variable_elements": [
@@ -33640,6 +33654,7 @@
       "CopyriumBlock",
       "ElementalPowerGenerator",
       "RuneCutter",
+      "EmptyRune",
       "ExtraStarPointsRune1",
       "ExtraStarPointsRune2",
       "ExtraStarPointsRune3",
@@ -33698,10 +33713,11 @@
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.speed_armor_helmet": "Шлем мастера скорости",
-      "item.power.blue_flame_armor_boots": "Ботинки мастера синего пламени",
       "gui.power.keepers_box_gui_part_3.tooltip_form": "Форма",
+      "item.power.blue_flame_armor_boots": "Ботинки мастера синего пламени",
       "item.power.mushrooms_armor_leggings": "Поножи мастера грибов",
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Поток астральной энергии, расходует 10",
+      "item.power.empty_rune.description_0": "§9Пустая",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 20",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
       "advancements.grant_your_power.title": "Даруй свою силу",
@@ -33925,8 +33941,8 @@
       "item.power.mist_battery.description_0": "§aЗаряжена элементом:",
       "item.power.mist_battery.description_1": "§9Туман",
       "item.power.ice_armor_helmet": "Шлем мастера льда",
-      "advancements.full_power_of_energium.descr": "Оденьте полный сет энергиумной брони",
       "item.power.teleportation_battery.description_0": "§aЗаряжена элементом:",
+      "advancements.full_power_of_energium.descr": "Оденьте полный сет энергиумной брони",
       "item.power.spirit_stone": "Камень духа",
       "item.power.music_disc_ancient_mood.desc": "bxkqq - Ancient Mood",
       "item.power.teleportation_battery.description_1": "§9Телепортация",
@@ -34315,6 +34331,7 @@
       "item.power.space_battery.description_1": "§9Космос",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5",
       "item.power.plague_armor_boots": "Ботинки мастра чумы",
+      "item.power.empty_rune": "Руна",
       "gui.power.keepers_box_gui_part_3.tooltip_darkness": "Тьма",
       "item.power.empty_battery": "Батарея",
       "item.power.technology_armor_leggings": "Поножи мастера технологий",
@@ -34669,6 +34686,7 @@
       "item.power.blue_flame_armor_boots": "Blue Flame Boots",
       "item.power.mushrooms_armor_leggings": "Mushrooms Leggings",
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
+      "item.power.empty_rune.description_0": "§9Empty",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 20",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
@@ -35281,6 +35299,7 @@
       "item.power.space_battery.description_1": "§9Space",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5",
       "item.power.plague_armor_boots": "Plague Boots",
+      "item.power.empty_rune": "Rune",
       "gui.power.keepers_box_gui_part_3.tooltip_darkness": "Darkness",
       "item.power.empty_battery": "Battery",
       "item.power.technology_armor_leggings": "Technology Leggings",
