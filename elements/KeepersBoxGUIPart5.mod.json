@@ -44,6 +44,141 @@
           "y": 129,
           "locked": false
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "onClick": {
+            "name": "KBtoPart5"
+          },
+          "x": 129,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element1",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 151,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element2",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 175,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element3",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 218,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element4",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 242,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element5",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 264,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element6",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 264,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element7",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 242,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element8",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 218,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element9",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 175,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element10",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 151,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element11",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 129,
+          "y": 132,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

@@ -26,6 +26,18 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 	private final Player entity;
 	ImageButton imagebutton_keepers_box_button_up;
 	ImageButton imagebutton_keepers_box_button_down_locked;
+	ImageButton imagebutton_coming_element;
+	ImageButton imagebutton_coming_element1;
+	ImageButton imagebutton_coming_element2;
+	ImageButton imagebutton_coming_element3;
+	ImageButton imagebutton_coming_element4;
+	ImageButton imagebutton_coming_element5;
+	ImageButton imagebutton_coming_element6;
+	ImageButton imagebutton_coming_element7;
+	ImageButton imagebutton_coming_element8;
+	ImageButton imagebutton_coming_element9;
+	ImageButton imagebutton_coming_element10;
+	ImageButton imagebutton_coming_element11;
 
 	public KeepersBoxGUIPart5Screen(KeepersBoxGUIPart5Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -95,5 +107,129 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_keepers_box_button_down_locked", imagebutton_keepers_box_button_down_locked);
 		this.addRenderableWidget(imagebutton_keepers_box_button_down_locked);
+		imagebutton_coming_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart5ButtonMessage(2, x, y, z));
+						KeepersBoxGUIPart5ButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element", imagebutton_coming_element);
+		this.addRenderableWidget(imagebutton_coming_element);
+		imagebutton_coming_element1 = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element1", imagebutton_coming_element1);
+		this.addRenderableWidget(imagebutton_coming_element1);
+		imagebutton_coming_element2 = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element2", imagebutton_coming_element2);
+		this.addRenderableWidget(imagebutton_coming_element2);
+		imagebutton_coming_element3 = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element3", imagebutton_coming_element3);
+		this.addRenderableWidget(imagebutton_coming_element3);
+		imagebutton_coming_element4 = new ImageButton(this.leftPos + 162, this.topPos + 69, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element4", imagebutton_coming_element4);
+		this.addRenderableWidget(imagebutton_coming_element4);
+		imagebutton_coming_element5 = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element5", imagebutton_coming_element5);
+		this.addRenderableWidget(imagebutton_coming_element5);
+		imagebutton_coming_element6 = new ImageButton(this.leftPos + 184, this.topPos + 106, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element6", imagebutton_coming_element6);
+		this.addRenderableWidget(imagebutton_coming_element6);
+		imagebutton_coming_element7 = new ImageButton(this.leftPos + 162, this.topPos + 106, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element7", imagebutton_coming_element7);
+		this.addRenderableWidget(imagebutton_coming_element7);
+		imagebutton_coming_element8 = new ImageButton(this.leftPos + 138, this.topPos + 106, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element8", imagebutton_coming_element8);
+		this.addRenderableWidget(imagebutton_coming_element8);
+		imagebutton_coming_element9 = new ImageButton(this.leftPos + 95, this.topPos + 106, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element9", imagebutton_coming_element9);
+		this.addRenderableWidget(imagebutton_coming_element9);
+		imagebutton_coming_element10 = new ImageButton(this.leftPos + 71, this.topPos + 106, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element10", imagebutton_coming_element10);
+		this.addRenderableWidget(imagebutton_coming_element10);
+		imagebutton_coming_element11 = new ImageButton(this.leftPos + 49, this.topPos + 106, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_coming_element11", imagebutton_coming_element11);
+		this.addRenderableWidget(imagebutton_coming_element11);
 	}
 }
