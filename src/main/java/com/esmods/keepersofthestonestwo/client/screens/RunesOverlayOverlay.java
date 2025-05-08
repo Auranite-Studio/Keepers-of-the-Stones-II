@@ -50,13 +50,13 @@ public class RunesOverlayOverlay {
 			event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/runes_inventory.png"), 2, 50, 0, 0, 59, 26, 59, 26);
 
 			if (BlueRune1CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_1.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_rune_1.png"), 7, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (BlueRune2CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_2.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_rune_2.png"), 7, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (BlueRune3CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_3.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_rune_3.png"), 7, 56, 0, 0, 16, 16, 16, 16);
 			}
 		}
 		RenderSystem.depthMask(true);
