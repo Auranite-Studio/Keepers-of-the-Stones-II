@@ -17,7 +17,10 @@ public class PowerModTrades {
 	@SubscribeEvent
 	public static void registerTrades(VillagerTradesEvent event) {
 		if (event.getType() == PowerModVillagerProfessions.RUNOLOGIST.get()) {
-			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(PowerModItems.EXTRA_STAR_POINTS_RUNE_1.get()), new ItemStack(Items.EMERALD, 12), new ItemStack(PowerModItems.EXTRA_STAR_POINTS_RUNE_2.get()), 10, 5, 0.05f));
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(PowerModItems.EMPTY_RUNE.get()), new ItemStack(Items.EMERALD, 12), new ItemStack(PowerModItems.EXTRA_STAR_POINTS_RUNE_1.get()), 1, 5, 0.05f));
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(PowerModItems.EMPTY_RUNE.get()), new ItemStack(Items.EMERALD, 12), new ItemStack(PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_1.get()), 1, 5, 0.05f));
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(PowerModItems.EMPTY_RUNE.get()), new ItemStack(Items.EMERALD, 12), new ItemStack(PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_1.get()), 1, 5, 0.05f));
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(PowerModItems.EMPTY_RUNE.get()), new ItemStack(Items.EMERALD, 8), 3, 5, 0.05f));
 		}
 	}
 }

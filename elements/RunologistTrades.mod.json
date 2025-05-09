@@ -10,7 +10,7 @@
         "entries": [
           {
             "price1": {
-              "value": "CUSTOM:ExtraStarPointsRune1"
+              "value": "CUSTOM:EmptyRune"
             },
             "countPrice1": 1,
             "price2": {
@@ -18,11 +18,65 @@
             },
             "countPrice2": 12,
             "offer": {
-              "value": "CUSTOM:ExtraStarPointsRune2"
+              "value": "CUSTOM:ExtraStarPointsRune1"
             },
             "countOffer": 1,
             "level": 1,
-            "maxTrades": 10,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:EmptyRune"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 12,
+            "offer": {
+              "value": "CUSTOM:ReducedStoneRechargeTimeRune1"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:EmptyRune"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 12,
+            "offer": {
+              "value": "CUSTOM:AdditionTimeMasterEffectRune1"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:EmptyRune"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "Items.EMERALD"
+            },
+            "countOffer": 8,
+            "level": 1,
+            "maxTrades": 3,
             "xp": 5,
             "priceMultiplier": 0.05
           }

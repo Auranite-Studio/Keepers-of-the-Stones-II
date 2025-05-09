@@ -79,6 +79,9 @@ import com.esmods.keepersofthestonestwo.item.SandSaberItem;
 import com.esmods.keepersofthestonestwo.item.SandBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SandArmorItem;
 import com.esmods.keepersofthestonestwo.item.RightMetalGauntletItem;
+import com.esmods.keepersofthestonestwo.item.ReducedStoneRechargeTimeRune3Item;
+import com.esmods.keepersofthestonestwo.item.ReducedStoneRechargeTimeRune2Item;
+import com.esmods.keepersofthestonestwo.item.ReducedStoneRechargeTimeRune1Item;
 import com.esmods.keepersofthestonestwo.item.RawEnergiumItem;
 import com.esmods.keepersofthestonestwo.item.RawDepletedEnergiumItem;
 import com.esmods.keepersofthestonestwo.item.RawCopyriumItem;
@@ -206,6 +209,7 @@ import com.esmods.keepersofthestonestwo.item.EnergiumDustItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumCoreItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumAxeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumArmorItem;
+import com.esmods.keepersofthestonestwo.item.EmptyRuneItem;
 import com.esmods.keepersofthestonestwo.item.EmptyCharacteristicsCardItem;
 import com.esmods.keepersofthestonestwo.item.EmptyBatteryItem;
 import com.esmods.keepersofthestonestwo.item.EarthStoneItem;
@@ -262,6 +266,9 @@ import com.esmods.keepersofthestonestwo.item.AirStoneItem;
 import com.esmods.keepersofthestonestwo.item.AirRapierItem;
 import com.esmods.keepersofthestonestwo.item.AirBatteryItem;
 import com.esmods.keepersofthestonestwo.item.AirArmorItem;
+import com.esmods.keepersofthestonestwo.item.AdditionTimeMasterEffectRune3Item;
+import com.esmods.keepersofthestonestwo.item.AdditionTimeMasterEffectRune2Item;
+import com.esmods.keepersofthestonestwo.item.AdditionTimeMasterEffectRune1Item;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class PowerModItems {
@@ -718,6 +725,13 @@ public class PowerModItems {
 	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_3 = REGISTRY.register("extra_star_points_rune_3", ExtraStarPointsRune3Item::new);
 	public static final DeferredItem<Item> MUSIC_HOPE = REGISTRY.register("music_hope", MusicHopeItem::new);
 	public static final DeferredItem<Item> ENERGIUM_SHIELD = REGISTRY.register("energium_shield", EnergiumShieldItem::new);
+	public static final DeferredItem<Item> EMPTY_RUNE = REGISTRY.register("empty_rune", EmptyRuneItem::new);
+	public static final DeferredItem<Item> REDUCED_STONE_RECHARGE_TIME_RUNE_1 = REGISTRY.register("reduced_stone_recharge_time_rune_1", ReducedStoneRechargeTimeRune1Item::new);
+	public static final DeferredItem<Item> REDUCED_STONE_RECHARGE_TIME_RUNE_2 = REGISTRY.register("reduced_stone_recharge_time_rune_2", ReducedStoneRechargeTimeRune2Item::new);
+	public static final DeferredItem<Item> REDUCED_STONE_RECHARGE_TIME_RUNE_3 = REGISTRY.register("reduced_stone_recharge_time_rune_3", ReducedStoneRechargeTimeRune3Item::new);
+	public static final DeferredItem<Item> ADDITION_TIME_MASTER_EFFECT_RUNE_1 = REGISTRY.register("addition_time_master_effect_rune_1", AdditionTimeMasterEffectRune1Item::new);
+	public static final DeferredItem<Item> ADDITION_TIME_MASTER_EFFECT_RUNE_2 = REGISTRY.register("addition_time_master_effect_rune_2", AdditionTimeMasterEffectRune2Item::new);
+	public static final DeferredItem<Item> ADDITION_TIME_MASTER_EFFECT_RUNE_3 = REGISTRY.register("addition_time_master_effect_rune_3", AdditionTimeMasterEffectRune3Item::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
