@@ -10,7 +10,7 @@
       "value": "entity.villager.work_armorer"
     },
     "hat": "None",
-    "professionTextureFile": "cursed_keeper.png",
-    "zombifiedProfessionTextureFile": "cursed_keeper.png"
+    "professionTextureFile": "runologist.png",
+    "zombifiedProfessionTextureFile": "runologist.png"
   }
 }
