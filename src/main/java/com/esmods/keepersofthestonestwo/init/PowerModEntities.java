@@ -25,6 +25,7 @@ import com.esmods.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SoundBombProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SmokeMusketProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SmokeBombProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.ShockwaveGunProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowSphereEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowEntity;
 import com.esmods.keepersofthestonestwo.entity.RedMagnetEntity;
@@ -175,6 +176,8 @@ public class PowerModEntities {
 			EntityType.Builder.<RedMagnetEntity>of(RedMagnetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BlueMagnetEntity>> BLUE_MAGNET = register("blue_magnet",
 			EntityType.Builder.<BlueMagnetEntity>of(BlueMagnetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ShockwaveGunProjectileEntity>> SHOCKWAVE_GUN_PROJECTILE = register("shockwave_gun_projectile",
+			EntityType.Builder.<ShockwaveGunProjectileEntity>of(ShockwaveGunProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.1f, 0.1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

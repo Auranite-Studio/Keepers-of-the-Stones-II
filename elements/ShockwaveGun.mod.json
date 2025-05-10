@@ -1,0 +1,59 @@
+{
+  "_fv": 77,
+  "_type": "item",
+  "definition": {
+    "renderType": 1,
+    "texture": "shockwave_gun",
+    "customModelName": "shockwave_gun:default",
+    "customProperties": {},
+    "states": [],
+    "name": "Shockwave Gun",
+    "rarity": "COMMON",
+    "creativeTabs": [],
+    "stackSize": 64,
+    "enchantability": 0,
+    "useDuration": 72000,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "enableRanged": true,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "CUSTOM:MagicFireballProjectile"
+    },
+    "projectileDisableAmmoCheck": true,
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "bow",
+    "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
+    "musicDiscLengthInTicks": 0,
+    "musicDiscAnalogOutput": 0
+  }
+}

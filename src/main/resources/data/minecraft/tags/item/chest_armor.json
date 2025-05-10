@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:shockwave_armor_chestplate",
     "power:heat_armor_chestplate",
     "power:filth_armor_chestplate",
     "power:horror_armor_chestplate",

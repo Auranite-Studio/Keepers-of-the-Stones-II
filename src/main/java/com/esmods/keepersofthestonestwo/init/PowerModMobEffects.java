@@ -95,6 +95,7 @@ import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SoundMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SmokeMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SmokeIntangibilityMobEffect;
+import com.esmods.keepersofthestonestwo.potion.ShockwaveMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ShadowMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SandMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.RedMagnetPowerMobEffect;
@@ -223,6 +224,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> FILTH_DARK_MASTER = REGISTRY.register("filth_dark_master", () -> new FilthDarkMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> CURSE = REGISTRY.register("curse", () -> new CurseMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> HEAT_MASTER = REGISTRY.register("heat_master", () -> new HeatMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> SHOCKWAVE_MASTER = REGISTRY.register("shockwave_master", () -> new ShockwaveMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

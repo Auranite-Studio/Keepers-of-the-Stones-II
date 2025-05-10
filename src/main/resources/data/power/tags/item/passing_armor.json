@@ -213,6 +213,10 @@
     "power:heat_armor_helmet",
     "power:heat_armor_chestplate",
     "power:heat_armor_leggings",
-    "power:heat_armor_boots"
+    "power:heat_armor_boots",
+    "power:shockwave_armor_helmet",
+    "power:shockwave_armor_chestplate",
+    "power:shockwave_armor_leggings",
+    "power:shockwave_armor_boots"
   ]
 }

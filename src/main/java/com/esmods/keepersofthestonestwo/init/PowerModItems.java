@@ -70,6 +70,10 @@ import com.esmods.keepersofthestonestwo.item.SmokeStoneItem;
 import com.esmods.keepersofthestonestwo.item.SmokeMusketItem;
 import com.esmods.keepersofthestonestwo.item.SmokeBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SmokeArmorItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveStoneItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveGunItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveBatteryItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveArmorItem;
 import com.esmods.keepersofthestonestwo.item.ShadowStoneItem;
 import com.esmods.keepersofthestonestwo.item.ShadowScytheItem;
 import com.esmods.keepersofthestonestwo.item.ShadowBatteryItem;
@@ -743,6 +747,13 @@ public class PowerModItems {
 	public static final DeferredItem<Item> HEAT_ARMOR_BOOTS = REGISTRY.register("heat_armor_boots", HeatArmorItem.Boots::new);
 	public static final DeferredItem<Item> HEAT_KNIFE = REGISTRY.register("heat_knife", HeatKnifeItem::new);
 	public static final DeferredItem<Item> HEAT_BATTERY = REGISTRY.register("heat_battery", HeatBatteryItem::new);
+	public static final DeferredItem<Item> SHOCKWAVE_STONE = REGISTRY.register("shockwave_stone", ShockwaveStoneItem::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_HELMET = REGISTRY.register("shockwave_armor_helmet", ShockwaveArmorItem.Helmet::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_CHESTPLATE = REGISTRY.register("shockwave_armor_chestplate", ShockwaveArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_LEGGINGS = REGISTRY.register("shockwave_armor_leggings", ShockwaveArmorItem.Leggings::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_BOOTS = REGISTRY.register("shockwave_armor_boots", ShockwaveArmorItem.Boots::new);
+	public static final DeferredItem<Item> SHOCKWAVE_GUN = REGISTRY.register("shockwave_gun", ShockwaveGunItem::new);
+	public static final DeferredItem<Item> SHOCKWAVE_BATTERY = REGISTRY.register("shockwave_battery", ShockwaveBatteryItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -807,6 +818,7 @@ public class PowerModItems {
 				ItemProperties.register(SPIRIT_STONE.get(), ResourceLocation.parse("power:spirit_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 				ItemProperties.register(ENERGIUM_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(HEAT_STONE.get(), ResourceLocation.parse("power:heat_stone_rechage"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+				ItemProperties.register(SHOCKWAVE_STONE.get(), ResourceLocation.parse("power:shockwave_stone_rechage"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 			});
 		}
 	}
