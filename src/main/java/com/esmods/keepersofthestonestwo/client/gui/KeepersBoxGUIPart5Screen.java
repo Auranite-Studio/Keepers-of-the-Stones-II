@@ -26,7 +26,6 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 	private final Player entity;
 	ImageButton imagebutton_keepers_box_button_up;
 	ImageButton imagebutton_keepers_box_button_down_locked;
-	ImageButton imagebutton_coming_element;
 	ImageButton imagebutton_coming_element1;
 	ImageButton imagebutton_coming_element2;
 	ImageButton imagebutton_coming_element3;
@@ -38,6 +37,7 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_coming_element9;
 	ImageButton imagebutton_coming_element10;
 	ImageButton imagebutton_coming_element11;
+	ImageButton imagebutton_heat_element;
 
 	public KeepersBoxGUIPart5Screen(KeepersBoxGUIPart5Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -54,6 +54,9 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 43 && mouseX < leftPos + 67 && mouseY > topPos + 66 && mouseY < topPos + 90) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_5.tooltip_heat"), mouseX, mouseY);
+		}
 	}
 
 	@Override
@@ -107,20 +110,6 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_keepers_box_button_down_locked", imagebutton_keepers_box_button_down_locked);
 		this.addRenderableWidget(imagebutton_keepers_box_button_down_locked);
-		imagebutton_coming_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
-					if (true) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart5ButtonMessage(2, x, y, z));
-						KeepersBoxGUIPart5ButtonMessage.handleButtonAction(entity, 2, x, y, z);
-					}
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		guistate.put("button:imagebutton_coming_element", imagebutton_coming_element);
-		this.addRenderableWidget(imagebutton_coming_element);
 		imagebutton_coming_element1 = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
 				}) {
@@ -231,5 +220,19 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_coming_element11", imagebutton_coming_element11);
 		this.addRenderableWidget(imagebutton_coming_element11);
+		imagebutton_heat_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/heat_element.png"), ResourceLocation.parse("power:textures/screens/heat_element_highlight.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart5ButtonMessage(13, x, y, z));
+						KeepersBoxGUIPart5ButtonMessage.handleButtonAction(entity, 13, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_heat_element", imagebutton_heat_element);
+		this.addRenderableWidget(imagebutton_heat_element);
 	}
 }

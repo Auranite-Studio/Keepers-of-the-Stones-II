@@ -48,20 +48,6 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_coming_element",
-          "image": "coming_element.png",
-          "hoveredImage": "coming_element_highlight.png",
-          "onClick": {
-            "name": "KBtoPart5"
-          },
-          "x": 129,
-          "y": 95,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
           "name": "imagebutton_coming_element1",
           "image": "coming_element.png",
           "hoveredImage": "coming_element_highlight.png",
@@ -177,6 +163,34 @@
           "hoveredImage": "coming_element_highlight.png",
           "x": 129,
           "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_heat_element",
+          "image": "heat_element.png",
+          "hoveredImage": "heat_element_highlight.png",
+          "onClick": {
+            "name": "HeatElementGet"
+          },
+          "x": 129,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_heat",
+          "text": {
+            "fixedValue": "Heat"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 123,
+          "y": 92,
           "locked": false
         }
       }

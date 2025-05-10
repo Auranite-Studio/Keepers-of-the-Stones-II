@@ -54,6 +54,7 @@ import com.esmods.keepersofthestonestwo.procedures.LavaMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IronSkinEffectEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.HorrorDarkMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.HeatMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GravityMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GoldenDustMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FormMasterEndProcedure;
@@ -356,6 +357,8 @@ public class PowerModMobEffects {
 			HorrorDarkMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(FILTH_DARK_MASTER)) {
 			FilthDarkMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(HEAT_MASTER)) {
+			HeatMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

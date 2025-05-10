@@ -138,6 +138,8 @@ public class DetransformKeyPressedTickProcedure {
 					_entity.removeEffect(PowerModMobEffects.HORROR_DARK_MASTER);
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.FILTH_DARK_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.HEAT_MASTER);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.active_power = false;

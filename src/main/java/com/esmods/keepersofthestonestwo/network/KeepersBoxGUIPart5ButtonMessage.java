@@ -19,8 +19,8 @@ import net.minecraft.core.BlockPos;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart5Menu;
-import com.esmods.keepersofthestonestwo.procedures.KBtoPart5Procedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart4Procedure;
+import com.esmods.keepersofthestonestwo.procedures.HeatElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -64,9 +64,9 @@ public record KeepersBoxGUIPart5ButtonMessage(int buttonID, int x, int y, int z)
 
 			KBtoPart4Procedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 2) {
+		if (buttonID == 13) {
 
-			KBtoPart5Procedure.execute(world, x, y, z, entity);
+			HeatElementGetProcedure.execute(world, entity);
 		}
 	}
 
