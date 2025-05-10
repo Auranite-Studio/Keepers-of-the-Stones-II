@@ -58,6 +58,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "ShockwaveStoneUse"
+    },
     "onItemInInventoryTick": {
       "name": "RechargeStoneTickEvent"
     },

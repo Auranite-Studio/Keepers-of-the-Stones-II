@@ -3,7 +3,7 @@
 - Added a runologist's house to villages
 - Added red runes
 - Added an empty rune
-- Added new element - heat
+- Added new elements - heat and shockwave
 
 **Improvemnts** 
 - The fourth ability is now activated if the power rune is active

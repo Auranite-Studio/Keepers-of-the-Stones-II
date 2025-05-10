@@ -25,6 +25,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpeedMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpaceMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSmokeMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesShockwaveMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesShadowMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSandMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
@@ -127,4 +128,5 @@ public class PowerModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<CharacteristicsCardGUIMenu>> CHARACTERISTICS_CARD_GUI = REGISTRY.register("characteristics_card_gui", () -> IMenuTypeExtension.create(CharacteristicsCardGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<KeepersBoxGUIPart5Menu>> KEEPERS_BOX_GUI_PART_5 = REGISTRY.register("keepers_box_gui_part_5", () -> IMenuTypeExtension.create(KeepersBoxGUIPart5Menu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesHeatMenu>> WHEEL_ABILITIES_HEAT = REGISTRY.register("wheel_abilities_heat", () -> IMenuTypeExtension.create(WheelAbilitiesHeatMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesShockwaveMenu>> WHEEL_ABILITIES_SHOCKWAVE = REGISTRY.register("wheel_abilities_shockwave", () -> IMenuTypeExtension.create(WheelAbilitiesShockwaveMenu::new));
 }

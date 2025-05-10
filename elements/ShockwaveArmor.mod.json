@@ -10,6 +10,18 @@
     "textureLeggings": "shockwave_armor_leggings",
     "enableBoots": true,
     "textureBoots": "shockwave_armor_boots",
+    "onHelmetTick": {
+      "name": "RemoveForbiddenItem"
+    },
+    "onBodyTick": {
+      "name": "RemoveForbiddenItem"
+    },
+    "onLeggingsTick": {
+      "name": "RemoveForbiddenItem"
+    },
+    "onBootsTick": {
+      "name": "RemoveForbiddenItem"
+    },
     "creativeTabs": [],
     "armorTextureFile": "shockwave_armor",
     "helmetName": "Shockwave Helmet",

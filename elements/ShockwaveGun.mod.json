@@ -32,11 +32,14 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onItemInInventoryTick": {
+      "name": "RemoveForbiddenItem"
+    },
     "enableRanged": true,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
     "projectile": {
-      "value": "CUSTOM:MagicFireballProjectile"
+      "value": "CUSTOM:ShockwaveGunProjectile"
     },
     "projectileDisableAmmoCheck": true,
     "isFood": false,

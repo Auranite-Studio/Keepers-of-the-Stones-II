@@ -16,6 +16,12 @@
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
     "isCuredbyHoney": false,
-    "modifiers": []
+    "modifiers": [],
+    "onStarted": {
+      "name": "ShockwaveMasterStart"
+    },
+    "onExpired": {
+      "name": "ShockwaveMasterEnd"
+    }
   }
 }

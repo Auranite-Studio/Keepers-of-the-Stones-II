@@ -48,17 +48,6 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_coming_element1",
-          "image": "coming_element.png",
-          "hoveredImage": "coming_element_highlight.png",
-          "x": 151,
-          "y": 95,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
           "name": "imagebutton_coming_element2",
           "image": "coming_element.png",
           "hoveredImage": "coming_element_highlight.png",
@@ -175,6 +164,9 @@
           "onClick": {
             "name": "HeatElementGet"
           },
+          "displayCondition": {
+            "name": "HeatStoneCheck"
+          },
           "x": 129,
           "y": 95,
           "locked": false
@@ -191,6 +183,37 @@
           "height": 24,
           "x": 123,
           "y": 92,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_shockwave_element",
+          "image": "shockwave_element.png",
+          "hoveredImage": "shockwave_element_highlight.png",
+          "onClick": {
+            "name": "ShockwaveElementGet"
+          },
+          "displayCondition": {
+            "name": "ShockwaveStoneCheck"
+          },
+          "x": 151,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_shockwave",
+          "text": {
+            "fixedValue": "Shockwave"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 148,
+          "y": 91,
           "locked": false
         }
       }

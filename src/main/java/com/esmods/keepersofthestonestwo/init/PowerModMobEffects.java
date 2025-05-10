@@ -31,6 +31,7 @@ import com.esmods.keepersofthestonestwo.procedures.SpaceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SmokeMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SmokeIntangibilityEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ShockwaveMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ShadowMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SandMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RainMasterEndProcedure;
@@ -361,6 +362,8 @@ public class PowerModMobEffects {
 			FilthDarkMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(HEAT_MASTER)) {
 			HeatMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(SHOCKWAVE_MASTER)) {
+			ShockwaveMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

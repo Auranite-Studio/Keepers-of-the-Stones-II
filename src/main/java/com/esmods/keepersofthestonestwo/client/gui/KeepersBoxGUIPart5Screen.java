@@ -17,6 +17,8 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart5Menu;
+import com.esmods.keepersofthestonestwo.procedures.ShockwaveStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.HeatStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart5ButtonMessage;
 
 public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBoxGUIPart5Menu> {
@@ -26,7 +28,6 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 	private final Player entity;
 	ImageButton imagebutton_keepers_box_button_up;
 	ImageButton imagebutton_keepers_box_button_down_locked;
-	ImageButton imagebutton_coming_element1;
 	ImageButton imagebutton_coming_element2;
 	ImageButton imagebutton_coming_element3;
 	ImageButton imagebutton_coming_element4;
@@ -38,6 +39,7 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_coming_element10;
 	ImageButton imagebutton_coming_element11;
 	ImageButton imagebutton_heat_element;
+	ImageButton imagebutton_shockwave_element;
 
 	public KeepersBoxGUIPart5Screen(KeepersBoxGUIPart5Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -56,6 +58,9 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 43 && mouseX < leftPos + 67 && mouseY > topPos + 66 && mouseY < topPos + 90) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_5.tooltip_heat"), mouseX, mouseY);
+		}
+		if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 65 && mouseY < topPos + 89) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_5.tooltip_shockwave"), mouseX, mouseY);
 		}
 	}
 
@@ -110,16 +115,6 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_keepers_box_button_down_locked", imagebutton_keepers_box_button_down_locked);
 		this.addRenderableWidget(imagebutton_keepers_box_button_down_locked);
-		imagebutton_coming_element1 = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		guistate.put("button:imagebutton_coming_element1", imagebutton_coming_element1);
-		this.addRenderableWidget(imagebutton_coming_element1);
 		imagebutton_coming_element2 = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
 				}) {
@@ -222,17 +217,33 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 		this.addRenderableWidget(imagebutton_coming_element11);
 		imagebutton_heat_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/heat_element.png"), ResourceLocation.parse("power:textures/screens/heat_element_highlight.png")), e -> {
-					if (true) {
+					if (HeatStoneCheckProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart5ButtonMessage(12, x, y, z));
+						KeepersBoxGUIPart5ButtonMessage.handleButtonAction(entity, 12, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (HeatStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_heat_element", imagebutton_heat_element);
+		this.addRenderableWidget(imagebutton_heat_element);
+		imagebutton_shockwave_element = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/shockwave_element.png"), ResourceLocation.parse("power:textures/screens/shockwave_element_highlight.png")), e -> {
+					if (ShockwaveStoneCheckProcedure.execute(world)) {
 						PacketDistributor.sendToServer(new KeepersBoxGUIPart5ButtonMessage(13, x, y, z));
 						KeepersBoxGUIPart5ButtonMessage.handleButtonAction(entity, 13, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (ShockwaveStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_heat_element", imagebutton_heat_element);
-		this.addRenderableWidget(imagebutton_heat_element);
+		guistate.put("button:imagebutton_shockwave_element", imagebutton_shockwave_element);
+		this.addRenderableWidget(imagebutton_shockwave_element);
 	}
 }
