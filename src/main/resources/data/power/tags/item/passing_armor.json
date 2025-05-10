@@ -209,6 +209,10 @@
     "power:filth_armor_helmet",
     "power:filth_armor_chestplate",
     "power:filth_armor_leggings",
-    "power:filth_armor_boots"
+    "power:filth_armor_boots",
+    "power:heat_armor_helmet",
+    "power:heat_armor_chestplate",
+    "power:heat_armor_leggings",
+    "power:heat_armor_boots"
   ]
 }

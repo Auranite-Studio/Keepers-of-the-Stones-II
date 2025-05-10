@@ -122,6 +122,7 @@ import com.esmods.keepersofthestonestwo.potion.IronSkinMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ImmortalityMobEffect;
 import com.esmods.keepersofthestonestwo.potion.IceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.HorrorDarkMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.HeatMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.GravityMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.GoldenDustMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.GigantizationMobEffect;
@@ -220,6 +221,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> HORROR_DARK_MASTER = REGISTRY.register("horror_dark_master", () -> new HorrorDarkMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> FILTH_DARK_MASTER = REGISTRY.register("filth_dark_master", () -> new FilthDarkMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> CURSE = REGISTRY.register("curse", () -> new CurseMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> HEAT_MASTER = REGISTRY.register("heat_master", () -> new HeatMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

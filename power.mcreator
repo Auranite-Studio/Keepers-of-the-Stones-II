@@ -32016,8 +32016,7 @@
       "locked_code": false,
       "registry_name": "reduced_stone_recharge_time_rune_1_use",
       "metadata": {
-        "files": [
-        ],
+        "files": [],
         "dependencies": [
           {
             "name": "entity",
@@ -32157,6 +32156,79 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Runes/AdditionTimeMasterEffectRune3"
+    },
+    {
+      "name": "HeatStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/HeatStoneItem.java",
+          "src/main/resources/assets/power/models/item/heat_stone.json",
+          "src/main/resources/assets/power/models/item/heat_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Heat"
+    },
+    {
+      "name": "HeatMaster",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/HeatMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Heat"
+    },
+    {
+      "name": "HeatArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/heat_armor_helmet.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/HeatArmorItem.java",
+          "src/main/resources/assets/power/models/item/heat_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/heat_armor_boots.json",
+          "src/main/resources/assets/power/models/item/heat_armor_leggings.json"
+        ]
+      },
+      "path": "~/Elements/Heat"
+    },
+    {
+      "name": "HeatKnife",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_knife",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/HeatKnifeItem.java",
+          "src/main/resources/assets/power/models/item/heat_knife.json"
+        ]
+      },
+      "path": "~/Elements/Heat"
+    },
+    {
+      "name": "HeatBattery",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heat_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/heat_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/HeatBatteryItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/HeatBattery"
     }
   ],
   "variable_elements": [
@@ -33185,6 +33257,7 @@
       "~CUSTOM:EnergiumPickaxe"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:HeatKnife",
       "~CUSTOM:DarkSword",
       "~CUSTOM:GoldenDustStaff",
       "~CUSTOM:MindEpee",
@@ -33282,7 +33355,8 @@
       "CUSTOM:DarknessStone",
       "CUSTOM:EnergyStone",
       "CUSTOM:SpiritStone",
-      "CUSTOM:GoldenDustStone"
+      "CUSTOM:GoldenDustStone",
+      "CUSTOM:HeatStone"
     ],
     "ITEMS:mod:elemental_batteries": [
       "CUSTOM:FireBattery",
@@ -33333,7 +33407,8 @@
       "CUSTOM:FormBattery",
       "CUSTOM:MindBattery",
       "CUSTOM:GoldenDustBattery",
-      "CUSTOM:DarknessBattery"
+      "CUSTOM:DarknessBattery",
+      "CUSTOM:HeatBattery"
     ],
     "ITEMS:power:power_lock_items_not_tools": [
       "CUSTOM:EnergiumIngot",
@@ -33376,6 +33451,7 @@
       "~CUSTOM:Shadow"
     ],
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:HeatArmor.body",
       "~CUSTOM:FilthArmor.body",
       "~CUSTOM:HorrorArmor.body",
       "~CUSTOM:ChaosArmor.body",
@@ -33437,6 +33513,7 @@
       "~CUSTOM:CursedStoneWall"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:HeatArmor.legs",
       "~CUSTOM:FilthArmor.legs",
       "~CUSTOM:HorrorArmor.legs",
       "~CUSTOM:ChaosArmor.legs",
@@ -33700,9 +33777,14 @@
       "CUSTOM:FilthArmor.helmet",
       "CUSTOM:FilthArmor.body",
       "CUSTOM:FilthArmor.legs",
-      "CUSTOM:FilthArmor.boots"
+      "CUSTOM:FilthArmor.boots",
+      "CUSTOM:HeatArmor.helmet",
+      "CUSTOM:HeatArmor.body",
+      "CUSTOM:HeatArmor.legs",
+      "CUSTOM:HeatArmor.boots"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:HeatArmor.helmet",
       "~CUSTOM:FilthArmor.helmet",
       "~CUSTOM:HorrorArmor.helmet",
       "~CUSTOM:ChaosArmor.helmet",
@@ -33761,6 +33843,7 @@
       "CUSTOM:EnergiumGolem"
     ],
     "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:HeatArmor.boots",
       "~CUSTOM:FilthArmor.boots",
       "~CUSTOM:HorrorArmor.boots",
       "~CUSTOM:ChaosArmor.boots",
@@ -33958,7 +34041,8 @@
       "FormStone",
       "MindStone",
       "GoldenDustStone",
-      "DarknessStone"
+      "DarknessStone",
+      "HeatStone"
     ],
     "CUSTOM:Batteries": [
       "EmptyBattery",
@@ -34009,7 +34093,8 @@
       "FormBattery",
       "MindBattery",
       "GoldenDustBattery",
-      "DarknessBattery"
+      "DarknessBattery",
+      "HeatBattery"
     ],
     "CUSTOM:Items": [
       "LuckCoin",
@@ -34107,8 +34192,8 @@
     "ru_ru": {
       "item.power.ether_battery": "Батарея",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
-      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Передача тёмной силы, расходует 80",
       "item.power.ether_stone": "Камень эфира",
+      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Передача тёмной силы, расходует 80",
       "item.power.moon_battery": "Батарея",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
       "item.power.time_battery.description_0": "§aЗаряжена элементом:",
@@ -34119,15 +34204,15 @@
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.speed_armor_helmet": "Шлем мастера скорости",
-      "item.power.blue_flame_armor_boots": "Ботинки мастера синего пламени",
       "gui.power.keepers_box_gui_part_3.tooltip_form": "Форма",
+      "item.power.blue_flame_armor_boots": "Ботинки мастера синего пламени",
       "item.power.mushrooms_armor_leggings": "Поножи мастера грибов",
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Поток астральной энергии, расходует 10",
       "item.power.empty_rune.description_0": "§9Пустая",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 20",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
-      "advancements.grant_your_power.title": "Даруй свою силу",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
+      "advancements.grant_your_power.title": "Даруй свою силу",
       "item.power.extra_star_points_rune_3": "Руна",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.cursed_keeper_spawn_egg": "Яйцо призыва проклятого хранителя",
@@ -34149,8 +34234,8 @@
       "block.power.amplifier_block": "Блок амплифера",
       "item.power.gravity_mace": "Гравитационная булава",
       "battery.desc.plants": "Зелень",
-      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "item.power.music_armor_leggings": "Поножи мастера музыки",
+      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Туманная невидимость, расходует 70",
       "item.power.music_battery": "Батарея",
       "item.power.darkness_battery": "Батарея",
@@ -34180,8 +34265,8 @@
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Батарея",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7Спецификация:",
-      "item.power.addition_time_master_effect_rune_3.description_4": " §9+10 мин к эффекту мастера",
       "item.power.energium_axe": "Энергиумный топор",
+      "item.power.addition_time_master_effect_rune_3.description_4": " §9+10 мин к эффекту мастера",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "Дымовая шашка, расходует 35",
       "item.power.addition_time_master_effect_rune_3.description_1": "§7Тип:",
       "item.power.addition_time_master_effect_rune_3.description_2": " §4Красный",
@@ -34230,8 +34315,8 @@
       "item.power.air_rapier": "Воздушная рапира",
       "gui.power.keepers_box_gui_part_5.tooltip_crystal": "Crystal",
       "biome.power.cursed_forest": "Проклятый лес",
-      "effect.power.lethality": "Летальность",
       "item.power.reduced_stone_recharge_time_rune_1": "Руна",
+      "effect.power.lethality": "Летальность",
       "gui.power.wheel_abilties_golden_dust.tooltip_random_power_uses_80": "Рандомная сила, расходует 80",
       "item.power.reduced_stone_recharge_time_rune_3": "Руна",
       "item.power.reduced_stone_recharge_time_rune_2": "Руна",
@@ -34240,8 +34325,8 @@
       "item.power.energium_hoe": "Энергиумная мотыга",
       "trim_material.power.copyrium_material": "Копириум",
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
-      "item.power.empty_battery.description_0": "§cНе заряжена",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
+      "item.power.empty_battery.description_0": "§cНе заряжена",
       "item.power.amber_staff": "Посох янтаря",
       "subtitles.electric_spark": "Искра",
       "gui.power.wheel_abilities_blue_flame.tooltip_electric_discharge_uses_75": "Электрический разряд, расходует 75",
@@ -34258,8 +34343,8 @@
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "item.power.empty_characteristics_card.description_0": "§7Пустая",
       "item.power.smoke_stone": "Камень дыма",
-      "item.power.blue_flame_sword": "Меч синего пламени",
       "effect.power.air_master": "Мастер воздуха",
+      "item.power.blue_flame_sword": "Меч синего пламени",
       "effect.power.miniaturization": "Миниатюризация",
       "item.power.raw_depleted_energium": "Рудный обеднённый энергиум",
       "item.minecraft.potion.effect.power_lock_potion": "Зелье блокировки силы",
@@ -34303,8 +34388,8 @@
       "gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30": "Замедление времени, расходует 20",
       "item.power.horror_armor_leggings": "Поножи тёмного мастера хоррора",
       "item.power.horror_armor_helmet": "Шлем тёмного мастера хоррора",
-      "item.power.spirit_armor_chestplate": "Нагрудник мастера духа",
       "block.power.amber_block": "Блок янтаря",
+      "item.power.spirit_armor_chestplate": "Нагрудник мастера духа",
       "effect.power.chaos_dark_master": "Т. Мастер Хаоса",
       "item.power.blue_flame_battery.description_0": "§aЗаряжена элементом:",
       "entity.power.cursed_knight": "Проклятый рыцарь",
@@ -34335,6 +34420,7 @@
       "item.power.creation_armor_chestplate": "Нагрудник мастера созидания",
       "effect.power.ocean_master": "Мастер океана",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "item.power.heat_armor_chestplate": "Heat Chestplate",
       "battery.desc.fire": "Огонь",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "advancements.the_great_win.descr": "Победите проклятого хранителя и освободите его от проклятия",
@@ -34354,6 +34440,7 @@
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "power.modinfo.update_cpapi": "§eВерсия Colorful Powers API была обновлена до версии: ",
       "gui.power.keepers_box_gui_part_4.tooltip_plague": "Чума",
+      "item.power.heat_armor_helmet": "Heat Helmet",
       "item.power.mist_battery.description_0": "§aЗаряжена элементом:",
       "item.power.mist_battery.description_1": "§9Туман",
       "item.power.ice_armor_helmet": "Шлем мастера льда",
@@ -34457,6 +34544,7 @@
       "gui.power.wheel_abilities_music.tooltip_musical_relaxation_uses_75": "Музыкальная релаксация, расходует 75",
       "item.power.mercury_battery.description_1": "§9Ртуть",
       "item.power.mercury_battery.description_0": "§aЗаряжена элементом:",
+      "item.power.heat_knife": "Heat Knife",
       "item.power.moon_armor_helmet": "Шлем мастера луны",
       "item.power.rain_armor_helmet": "Шлем мастера дождя",
       "item.power.water_armor_chestplate": "Нагрудник мастера воды",
@@ -34467,6 +34555,7 @@
       "item.power.poison_armor_leggings": "Поножи мастера яда",
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r Этот мод устарел! (последняя версия: v",
       "item.power.ether_battery.description_0": "§aЗаряжена элементом:",
+      "effect.power.heat_master": "Master of Heat",
       "item.power.sand_armor_helmet": "Шлем мастера песка",
       "gui.power.characteristics_card_gui.label_1": "1",
       "effect.power.smoke_intangibility": "Дымовая неосязаемость",
@@ -34662,6 +34751,7 @@
       "item.power.extra_star_points_rune_2.description_2": " §1Синий",
       "effect.power.ice_master": "Мастер льда",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
+      "item.power.heat_stone": "Heat Stone",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
       "subtitles.power.level_up": "Уровень повышен!",
       "effect.power.time_stopped": "Остановка времени",
@@ -34838,6 +34928,7 @@
       "item.power.air_battery": "Батарея",
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Солнечный луч, расходует 15",
       "item.power.energy_armor_helmet": "Шлем мастера энергии",
+      "item.power.heat_battery": "Battery",
       "item.power.sun_armor_boots": "Ботинки мастера солнца",
       "subtitles.stone_deactivation": "Камень был деактивирован",
       "subtitles.bass_boom": "Бас",
@@ -34855,7 +34946,9 @@
       "item.power.golden_dust_armor_leggings": "Поножи мастера золотой пыли",
       "entity.power.turret": "Турель",
       "effect.power.fire_master": "Мастер огня",
+      "item.power.heat_battery.description_0": "§aCharged with element:",
       "effect.power.technobarrier": "Технобарьер",
+      "item.power.heat_battery.description_1": "§9Heat",
       "item.power.sand_battery.description_0": "§aЗаряжена элементом:",
       "item.power.fire_battery.description_0": "§aЗаряжена элементом:",
       "item.power.sand_battery.description_1": "§9Песок",
@@ -34907,6 +35000,7 @@
       "item.power.shadow_armor_chestplate": "Нагрудник мастера тени",
       "effect.power.golden_dust_master": "Мастер золотой пыли",
       "item.power.music_battery.description_0": "§aЗаряжена элементом:",
+      "item.power.heat_armor_boots": "Heat Boots",
       "item.power.music_battery.description_1": "§9Музыка",
       "item.power.tornado_axe": "Топор торнадо",
       "death.attack.cursed_knight_ds.player": "%1$s  был убит Проклятый рыцарь",
@@ -35045,6 +35139,7 @@
       "power.modinfo.cpapi_check": "§9[CPAPI]§r Текущая версия Colorful Powers API: v",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10",
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Лавовый всплеск, uses 10",
+      "item.power.heat_armor_leggings": "Heat Leggings",
       "item.power.shadow_battery.description_0": "§aЗаряжена элементом:",
       "item.power.shadow_battery.description_1": "§9Тень",
       "item.power.time_khopesh": "Хопеш времени",
@@ -35127,8 +35222,8 @@
     "en_us": {
       "item.power.ether_battery": "Battery",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
-      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Dark power transfer, uses 80",
       "item.power.ether_stone": "Ether Stone",
+      "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Dark power transfer, uses 80",
       "item.power.moon_battery": "Battery",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.power.time_battery.description_0": "§aCharged with element:",
@@ -35146,8 +35241,8 @@
       "item.power.empty_rune.description_0": "§9Empty",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 20",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
-      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "advancements.grant_your_power.title": "Grant your power",
+      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.extra_star_points_rune_3": "Rune",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
@@ -35169,8 +35264,8 @@
       "item.power.gravity_mace": "Gravity Mace",
       "block.power.amplifier_block": "Amplifier Block",
       "battery.desc.plants": "Plants",
-      "item.power.music_armor_leggings": "Music Leggings",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
+      "item.power.music_armor_leggings": "Music Leggings",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
       "item.power.music_battery": "Battery",
       "item.power.darkness_battery": "Battery",
@@ -35200,8 +35295,8 @@
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Battery",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7Specifications:",
-      "item.power.energium_axe": "Energium Axe",
       "item.power.addition_time_master_effect_rune_3.description_4": " §9+10 min of master effect",
+      "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "Smoke bomb, uses 35",
       "item.power.addition_time_master_effect_rune_3.description_1": "§7Type:",
       "item.power.addition_time_master_effect_rune_3.description_2": " §4Red",
@@ -35250,8 +35345,8 @@
       "item.power.air_rapier": "Air Rapier",
       "gui.power.keepers_box_gui_part_5.tooltip_crystal": "Crystal",
       "biome.power.cursed_forest": "Cursed Forest",
-      "item.power.reduced_stone_recharge_time_rune_1": "Rune",
       "effect.power.lethality": "Lethality",
+      "item.power.reduced_stone_recharge_time_rune_1": "Rune",
       "gui.power.wheel_abilties_golden_dust.tooltip_random_power_uses_80": "Random power, uses 80",
       "item.power.reduced_stone_recharge_time_rune_3": "Rune",
       "item.power.reduced_stone_recharge_time_rune_2": "Rune",
@@ -35260,8 +35355,8 @@
       "item.power.energium_hoe": "Energium Hoe",
       "trim_material.power.copyrium_material": "Copyrium",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
-      "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "item.power.empty_battery.description_0": "§cNot charged",
+      "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "item.power.amber_staff": "Amber Staff",
       "subtitles.electric_spark": "Spark",
       "gui.power.wheel_abilities_blue_flame.tooltip_electric_discharge_uses_75": "Electric discharge, uses 75",
@@ -35278,8 +35373,8 @@
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.empty_characteristics_card.description_0": "§7Empty",
       "item.power.smoke_stone": "Smoke Stone",
-      "item.power.blue_flame_sword": "Blue Flame Sword",
       "effect.power.air_master": "Master of the Air",
+      "item.power.blue_flame_sword": "Blue Flame Sword",
       "effect.power.miniaturization": "Miniaturization",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
@@ -35323,8 +35418,8 @@
       "gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30": "Time dilation, uses 20",
       "item.power.horror_armor_leggings": "Horror Leggings",
       "item.power.horror_armor_helmet": "Horror Helmet",
-      "block.power.amber_block": "Amber Block",
       "item.power.spirit_armor_chestplate": "Spirit Chestplate",
+      "block.power.amber_block": "Amber Block",
       "effect.power.chaos_dark_master": "Dark Master of Chaos",
       "item.power.blue_flame_battery.description_0": "§aCharged with element:",
       "entity.power.cursed_knight": "Cursed Knight",
@@ -35355,6 +35450,7 @@
       "item.power.creation_armor_chestplate": "Creation Chestplate",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "effect.power.ocean_master": "Master of the Ocean",
+      "item.power.heat_armor_chestplate": "Heat Chestplate",
       "battery.desc.fire": "Fire",
       "item.power.crystal_armor_boots": "Crystal Boots",
       "advancements.the_great_win.descr": "Defeat the cursed keeper and free him from the curse",
@@ -35374,6 +35470,7 @@
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "power.modinfo.update_cpapi": "§eThe Colorful Powers API version has been updated to: ",
       "gui.power.keepers_box_gui_part_4.tooltip_plague": "Plague",
+      "item.power.heat_armor_helmet": "Heat Helmet",
       "item.power.mist_battery.description_0": "§aCharged with element:",
       "item.power.mist_battery.description_1": "§9Mist",
       "item.power.ice_armor_helmet": "Ice Helmet",
@@ -35477,6 +35574,7 @@
       "gui.power.wheel_abilities_music.tooltip_musical_relaxation_uses_75": "Musical relaxation, uses 75",
       "item.power.mercury_battery.description_1": "§9Mercury",
       "item.power.mercury_battery.description_0": "§aCharged with element:",
+      "item.power.heat_knife": "Heat Knife",
       "item.power.moon_armor_helmet": "Moon Helmet",
       "item.power.rain_armor_helmet": "Rain Helmet",
       "item.power.lightning_stone": "Lightning Stone",
@@ -35487,6 +35585,7 @@
       "item.power.poison_armor_leggings": "Poison Leggings",
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r This mod is out of date! (latest version: v",
       "item.power.ether_battery.description_0": "§aCharged with element:",
+      "effect.power.heat_master": "Master of Heat",
       "item.power.sand_armor_helmet": "Sand Helmet",
       "gui.power.characteristics_card_gui.label_1": "1",
       "effect.power.smoke_intangibility": "Smoke Intangibility",
@@ -35681,6 +35780,7 @@
       "item.power.extra_star_points_rune_2.description_2": " §1Blue",
       "effect.power.ice_master": "Master of the Ice",
       "item.power.ether_armor_leggings": "Ether Leggings",
+      "item.power.heat_stone": "Heat Stone",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
       "subtitles.power.level_up": "Level up!",
       "effect.power.time_stopped": "Time Stopped",
@@ -35857,6 +35957,7 @@
       "item.power.air_battery": "Battery",
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Sun ray, uses 15",
       "item.power.energy_armor_helmet": "Energy Helmet",
+      "item.power.heat_battery": "Battery",
       "item.power.sun_armor_boots": "Sun Boots",
       "subtitles.bass_boom": "Bass",
       "subtitles.stone_deactivation": "The stone has been deactivated",
@@ -35874,7 +35975,9 @@
       "item.power.golden_dust_armor_leggings": "Golden Dust Leggings",
       "entity.power.turret": "Turret",
       "effect.power.fire_master": "Master of Fire",
+      "item.power.heat_battery.description_0": "§aCharged with element:",
       "effect.power.technobarrier": "Technobarrier",
+      "item.power.heat_battery.description_1": "§9Heat",
       "item.power.sand_battery.description_0": "§aCharged with element:",
       "item.power.fire_battery.description_0": "§aCharged with element:",
       "item.power.sand_battery.description_1": "§9Sand",
@@ -35927,6 +36030,7 @@
       "item.power.shadow_armor_chestplate": "Shadow Chestplate",
       "effect.power.golden_dust_master": "Master of the Golden Dust",
       "item.power.music_battery.description_0": "§aCharged with element:",
+      "item.power.heat_armor_boots": "Heat Boots",
       "item.power.music_battery.description_1": "§9Music",
       "item.power.tornado_axe": "Tornado Axe",
       "death.attack.cursed_knight_ds.player": "%1$s was killed by an Cursed Knight",
@@ -36065,6 +36169,7 @@
       "power.modinfo.cpapi_check": "§9[CPAPI]§r The current version of the Colorful Powers API: v",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10",
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Lava outburst, uses 10",
+      "item.power.heat_armor_leggings": "Heat Leggings",
       "item.power.shadow_battery.description_0": "§aCharged with element:",
       "item.power.shadow_battery.description_1": "§9Shadow",
       "item.power.time_khopesh": "Time Khopesh",
@@ -36864,6 +36969,10 @@
               },
               {
                 "name": "DarknessBattery",
+                "children": []
+              },
+              {
+                "name": "HeatBattery",
                 "children": []
               }
             ]

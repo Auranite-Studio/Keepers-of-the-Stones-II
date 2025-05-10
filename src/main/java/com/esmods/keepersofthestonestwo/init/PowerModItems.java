@@ -162,6 +162,10 @@ import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
 import com.esmods.keepersofthestonestwo.item.IceArmorItem;
 import com.esmods.keepersofthestonestwo.item.HorrorArmorItem;
 import com.esmods.keepersofthestonestwo.item.HighspeedDaggerItem;
+import com.esmods.keepersofthestonestwo.item.HeatStoneItem;
+import com.esmods.keepersofthestonestwo.item.HeatKnifeItem;
+import com.esmods.keepersofthestonestwo.item.HeatBatteryItem;
+import com.esmods.keepersofthestonestwo.item.HeatArmorItem;
 import com.esmods.keepersofthestonestwo.item.GreenStaffItem;
 import com.esmods.keepersofthestonestwo.item.GravityStoneItem;
 import com.esmods.keepersofthestonestwo.item.GravityMaceItem;
@@ -732,6 +736,13 @@ public class PowerModItems {
 	public static final DeferredItem<Item> ADDITION_TIME_MASTER_EFFECT_RUNE_1 = REGISTRY.register("addition_time_master_effect_rune_1", AdditionTimeMasterEffectRune1Item::new);
 	public static final DeferredItem<Item> ADDITION_TIME_MASTER_EFFECT_RUNE_2 = REGISTRY.register("addition_time_master_effect_rune_2", AdditionTimeMasterEffectRune2Item::new);
 	public static final DeferredItem<Item> ADDITION_TIME_MASTER_EFFECT_RUNE_3 = REGISTRY.register("addition_time_master_effect_rune_3", AdditionTimeMasterEffectRune3Item::new);
+	public static final DeferredItem<Item> HEAT_STONE = REGISTRY.register("heat_stone", HeatStoneItem::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_HELMET = REGISTRY.register("heat_armor_helmet", HeatArmorItem.Helmet::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_CHESTPLATE = REGISTRY.register("heat_armor_chestplate", HeatArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_LEGGINGS = REGISTRY.register("heat_armor_leggings", HeatArmorItem.Leggings::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_BOOTS = REGISTRY.register("heat_armor_boots", HeatArmorItem.Boots::new);
+	public static final DeferredItem<Item> HEAT_KNIFE = REGISTRY.register("heat_knife", HeatKnifeItem::new);
+	public static final DeferredItem<Item> HEAT_BATTERY = REGISTRY.register("heat_battery", HeatBatteryItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -795,6 +806,7 @@ public class PowerModItems {
 				ItemProperties.register(ENERGY_STONE.get(), ResourceLocation.parse("power:energy_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 				ItemProperties.register(SPIRIT_STONE.get(), ResourceLocation.parse("power:spirit_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 				ItemProperties.register(ENERGIUM_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(HEAT_STONE.get(), ResourceLocation.parse("power:heat_stone_rechage"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 			});
 		}
 	}

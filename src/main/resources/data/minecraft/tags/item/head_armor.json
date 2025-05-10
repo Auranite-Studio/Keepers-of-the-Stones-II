@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:heat_armor_helmet",
     "power:filth_armor_helmet",
     "power:horror_armor_helmet",
     "power:chaos_armor_helmet",
