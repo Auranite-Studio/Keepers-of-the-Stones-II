@@ -15,6 +15,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 
+import com.esmods.keepersofthestonestwo.procedures.ShockwaveGunPriVystrielieSnariadomIzPriedmietaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 import com.esmods.keepersofthestonestwo.entity.ShockwaveGunProjectileEntity;
 
@@ -66,6 +67,7 @@ public class ShockwaveGunItem extends Item {
 						stack.shrink(1);
 					}
 				}
+				ShockwaveGunPriVystrielieSnariadomIzPriedmietaProcedure.execute(entity);
 			}
 		}
 	}

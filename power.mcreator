@@ -32999,6 +32999,25 @@
         ]
       },
       "path": "~/ItemsAndBlocks/KeepersBox/GUI"
+    },
+    {
+      "name": "ShockwaveGunPriVystrielieSnariadomIzPriedmieta",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockwave_gun_pri_vystrielie_snariadom_iz_priedmieta",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ShockwaveGunPriVystrielieSnariadomIzPriedmietaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Shockwave"
     }
   ],
   "variable_elements": [
@@ -33898,6 +33917,14 @@
       ],
       "category": "record",
       "subtitle": ""
+    },
+    {
+      "name": "shockwave_impact",
+      "files": [
+        "shockwave_impact"
+      ],
+      "category": "player",
+      "subtitle": "Shockwave impact"
     }
   ],
   "tag_elements": {
@@ -34832,10 +34859,10 @@
       "SpiritStone",
       "FormStone",
       "MindStone",
-      "GoldenDustStone",
-      "DarknessStone",
       "HeatStone",
-      "ShockwaveStone"
+      "ShockwaveStone",
+      "GoldenDustStone",
+      "DarknessStone"
     ],
     "CUSTOM:Batteries": [
       "EmptyBattery",
@@ -34885,10 +34912,10 @@
       "SpiritBattery",
       "FormBattery",
       "MindBattery",
-      "GoldenDustBattery",
-      "DarknessBattery",
       "HeatBattery",
-      "ShockwaveBattery"
+      "ShockwaveBattery",
+      "GoldenDustBattery",
+      "DarknessBattery"
     ],
     "CUSTOM:Items": [
       "LuckCoin",
@@ -34998,7 +35025,7 @@
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.speed_armor_helmet": "Шлем мастера скорости",
-      "item.power.shockwave_armor_leggings": "Shockwave Leggings",
+      "item.power.shockwave_armor_leggings": "Поножи мастера импульса",
       "gui.power.keepers_box_gui_part_3.tooltip_form": "Форма",
       "item.power.blue_flame_armor_boots": "Ботинки мастера синего пламени",
       "item.power.mushrooms_armor_leggings": "Поножи мастера грибов",
@@ -35021,7 +35048,7 @@
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 35",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Солнечный взрыв, расходует 45",
       "item.power.filth_armor_chestplate": "Нагрудник тёмного мастера скверны",
-      "effect.power.shockwave_master": "Master of Shockwave",
+      "effect.power.shockwave_master": "Мастер импульса",
       "entity.power.example_master": "Example Master",
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.time_armor_leggings": "Поножи мастера времени",
@@ -35131,7 +35158,7 @@
       "item.power.tornado_armor_chestplate": "Нагрудник мастера торнадо",
       "item.power.magnet_stone": "Камень магнита",
       "gui.power.keepers_box_gui_part_1.tooltip_rain": "Дождь",
-      "item.power.shockwave_armor_boots": "Shockwave Boots",
+      "item.power.shockwave_armor_boots": "Ботинки мастера импульса",
       "gui.power.wheel_abilties_golden_dust.tooltip_golden_dust_regeneration_uses": "Регенерация золотой пыли, расходует 80",
       "advancements.keepers_of_the_stones_2.title": "Хранители Камней II",
       "item.power.moon_double_sided_spear": "Двухстороннее лунное копьё",
@@ -35206,6 +35233,7 @@
       "item.power.animals_armor_leggings": "Поножи мастера животных",
       "item.power.destruction_armor_chestplate": "Нагрудник мастера разрушение",
       "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Поток энергии, расходует 10",
+      "subtitles.shockwave_impact": "Shockwave impact",
       "gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30": "Положительный магнит, расходует 50",
       "item.power.form_battery.description_0": "§aЗаряжена элементом:",
       "effect.power.sound_master": "Мастер звука",
@@ -35286,14 +35314,14 @@
       "item.power.poison_stone": "Камень яда",
       "effect.power.destruction_master": "Мастер разрушения",
       "item.power.poison_armor_boots": "Ботинки мастера яда",
-      "gui.power.wheel_abilities_shockwave.tooltip_shockwave_push_uses_15": "Shockwave push, uses 15",
+      "gui.power.wheel_abilities_shockwave.tooltip_shockwave_push_uses_15": "Импульсный толчок, расходует 15",
       "effect.power.immortality": "Бессмертие",
       "gui.power.wheel_abilities_speed.tooltip_dash_uses_20": "Рывок, расходует 20",
       "item.power.plague_armor_helmet": "Шлем мастера чумы",
       "item.power.metal_battery": "Батарея",
       "gui.power.keepers_box_gui_part_4.tooltip_earth": "Земля",
       "item.power.smoke_battery": "Батарея",
-      "item.power.shockwave_stone": "Shockwave Stone",
+      "item.power.shockwave_stone": "Камень импульса",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Лавовая атака, расходует 35",
       "effect.power.blue_magnet_power": "Сила синего магнита",
       "effect.power.plague_master": "Мастер чумы",
@@ -35315,7 +35343,7 @@
       "effect.power.gravity_master": "Мастер гравитации",
       "block.power.cursed_stone_cracked_bricks_slab": "Плита из проклятых потрескавшихся каменных кирпичей",
       "item.power.blood_battery": "Батарея",
-      "gui.power.wheel_abilities_shockwave.tooltip_shockwave_strike_uses_20": "Shockwave strike, uses 20",
+      "gui.power.wheel_abilities_shockwave.tooltip_shockwave_strike_uses_20": "Импульсный удар, расходует 20",
       "effect.power.sun_master": "Мастер солнца",
       "item.power.golden_dust_armor_helmet": "Шлем мастера золотой пыли",
       "item.power.addition_time_master_effect_rune_2.description_3": "§7Спецификация:",
@@ -35383,7 +35411,7 @@
       "effect.power.music_master": "Мастер музыки",
       "advancements.become_a_master.descr": "Получите камень стихии из волшебной шкатулки",
       "advancements.unbreakable_diamond.title": "Несокрушимый Алмаз",
-      "gui.power.wheel_abilities_shockwave.tooltip_shock_wave_uses_50": "Shock wave, uses 50",
+      "gui.power.wheel_abilities_shockwave.tooltip_shock_wave_uses_50": "Ударная волна, расходует 50",
       "gui.power.keepers_box_gui_part_2.tooltip_speed": "Скорость",
       "item.power.music_hope": "Пластинка",
       "block.power.cursed_stone_cracked_bricks_wall": "Ограда из проклятых потрескавшихся каменных кирпичей",
@@ -35441,7 +35469,7 @@
       "gui.power.keepers_box_gui_part_1.tooltip_ice": "Лёд",
       "gui.power.keepers_box_gui_part_3.tooltip_spirit": "Дух",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5",
-      "gui.power.keepers_box_gui_part_5.tooltip_shockwave": "Shockwave",
+      "gui.power.keepers_box_gui_part_5.tooltip_shockwave": "Импульс",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Металлическая атака, расходует 15",
       "gui.power.debug_info.label_star_points_recovery_multiplier": "star_points_recovery_multiplier: 0",
       "item.power.rain_bow": "Дождевой Лук",
@@ -35580,7 +35608,7 @@
       "item.power.teleportation_armor_leggings": "Поножи мастера телепортации",
       "gui.power.keepers_box_gui_part_5.tooltip_amber": "Amber",
       "item.power.energium_dust": "Энергиумная пыль",
-      "item.power.shockwave_armor_chestplate": "Shockwave Chestplate",
+      "item.power.shockwave_armor_chestplate": "Нагрудник мастера импульса",
       "item.power.moon_armor_boots": "Ботинки мастера луны",
       "block.power.polished_cursed_stone": "Полированный проклятый камень",
       "item.power.destruction_battery.description_0": "§aЗаряжена элементом:",
@@ -35839,7 +35867,7 @@
       "effect.power.shadow_master": "Мастер тени",
       "item.power.vacuum_battery": "Батарея",
       "item.power.plague_battery.description_1": "§9Чума",
-      "item.power.shockwave_armor_helmet": "Shockwave Helmet",
+      "item.power.shockwave_armor_helmet": "Шлем мастера импульса",
       "item.power.addition_time_master_effect_rune_1.description_4": " §9+2 мин 30 с к эффекту мастера",
       "item.power.plague_battery.description_0": "§aЗаряжена элементом:",
       "item.power.addition_time_master_effect_rune_1.description_3": "§7Спецификация:",
@@ -35848,9 +35876,9 @@
       "item.power.addition_time_master_effect_rune_1.description_0": "§9Доп. время эффекта мастера I",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "item.power.vacuum_armor_leggings": "Поножи мастера пустоты",
-      "item.power.shockwave_battery.description_0": "§aCharged with element:",
+      "item.power.shockwave_battery.description_0": "§aЗаряжена элементом:",
       "advancements.getting_married.descr": "Создайте амплиферовое кольцо, чтобы сбросить перезарядку камня",
-      "item.power.shockwave_battery.description_1": "§9Shockwave",
+      "item.power.shockwave_battery.description_1": "§9Импульс",
       "item.power.blue_flame_armor_leggings": "Поножи мастера синего пламени",
       "block.power.polished_cursed_stone_wall": "Ограда из полированного проклятого камня",
       "block.power.amplifier_ore": "Амплиферовая руда",
@@ -35918,7 +35946,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_music": "Музыка",
       "item.power.tornado_armor_leggings": "Поножи мастера торнадо",
       "item.power.poison_bow": "Ядовитый лук",
-      "item.power.shockwave_battery": "Battery",
+      "item.power.shockwave_battery": "Батарея",
       "item.power.sand_saber": "Песочная сабля",
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
       "effect.power.form_master": "Мастер формы",
@@ -35941,7 +35969,7 @@
       "item.power.mind_armor_helmet": "Шлем мастера разума",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
       "enchantment.power.isolation": "Изоляция",
-      "item.power.shockwave_gun": "Shockwave Gun",
+      "item.power.shockwave_gun": "Импульсный пистолет",
       "item.power.fire_sword": "Меч огня",
       "item.power.animals_armor_helmet": "Шлем мастера животных",
       "item.power.shadow_armor_helmet": "Шлем мастера тени",
@@ -36254,6 +36282,7 @@
       "item.power.animals_armor_leggings": "Animals Leggings",
       "item.power.destruction_armor_chestplate": "Destruction Chestplate",
       "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Energy flux, uses 10",
+      "subtitles.shockwave_impact": "Shockwave impact",
       "gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30": "Positive magnet, uses 50",
       "item.power.form_battery.description_0": "§aCharged with element:",
       "effect.power.sound_master": "Master of Sound",
