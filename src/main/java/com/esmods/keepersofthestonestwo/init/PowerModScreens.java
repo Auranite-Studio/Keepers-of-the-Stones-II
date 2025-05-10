@@ -57,6 +57,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesBloodScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAnimalsScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAmberScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAirScreen;
+import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart5Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart4Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart3Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart2Screen;
@@ -122,5 +123,6 @@ public class PowerModScreens {
 		event.register(PowerModMenus.WHEEL_ABILTIES_GOLDEN_DUST.get(), WheelAbiltiesGoldenDustScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITY_DARKNESS.get(), WheelAbilityDarknessScreen::new);
 		event.register(PowerModMenus.CHARACTERISTICS_CARD_GUI.get(), CharacteristicsCardGUIScreen::new);
+		event.register(PowerModMenus.KEEPERS_BOX_GUI_PART_5.get(), KeepersBoxGUIPart5Screen::new);
 	}
 }

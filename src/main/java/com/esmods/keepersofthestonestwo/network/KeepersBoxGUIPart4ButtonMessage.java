@@ -26,6 +26,7 @@ import com.esmods.keepersofthestonestwo.procedures.PlagueElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushrooomsElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MercuryElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.KBtoPart5Procedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EarthElementGetProcedure;
@@ -74,6 +75,10 @@ public record KeepersBoxGUIPart4ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 0) {
 
 			KBtoPart3Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 1) {
+
+			KBtoPart5Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
