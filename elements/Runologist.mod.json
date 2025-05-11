@@ -11,6 +11,6 @@
     },
     "hat": "None",
     "professionTextureFile": "runologist.png",
-    "zombifiedProfessionTextureFile": "runologist.png"
+    "zombifiedProfessionTextureFile": "zombified_runologist.png"
   }
 }
