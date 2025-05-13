@@ -6,7 +6,7 @@
 - Added empty rune
 
 **Improvemnts** 
-- The fourth ability is now activated if the green rune is active
+- The fourth ability can be activated if the green rune is active.
 - The energium shield can now be enchanted to isolation
 
 **API changes**
