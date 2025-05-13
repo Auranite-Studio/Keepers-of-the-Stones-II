@@ -1,11 +1,12 @@
 
 **New features**
-- Added a runologist's house to villages
+- Added runologist
+- Added runologist's house to villages
 - Added red runes
-- Added an empty rune
+- Added empty rune
 
 **Improvemnts** 
-- The fourth ability is now activated if the power rune is active
+- The fourth ability is now activated if the green rune is active
 - The energium shield can now be enchanted to isolation
 
 **API changes**
