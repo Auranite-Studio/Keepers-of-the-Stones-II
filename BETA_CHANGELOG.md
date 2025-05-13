@@ -1,21 +1,19 @@
 
 **New features**
-- Added basic functionality to runes
-- Now runes can only be used one of each type (star runes, charge runes, and power runes)
-- Added the energium shield
+- Added runologist
+- Added runologist's house to villages
+- Added red runes
+- Added empty rune
 
 **Improvemnts** 
-- Runes are no longer an experimental feature
-- Redesigned the second and third abilities of the magnet element
-- Now Magnet Master can place two magnets of different polarities (blue - repels, red - attracts)
-- Master of Gravity no longer takes fall damage
-- Increased the chance to drop an energium upgrade smithing template from the energium vaults
+- The fourth ability can be activated if the green rune is active.
+- The energium shield can now be enchanted to isolation
 
 **API changes**
-- Warning will now be displayed when using the beta version of the mod
+- *N/A*
 
 **Bugfixes**
-- [Bugfix] Minor localization fixes
+- [Bugfix] Fixed a bug that caused ores to not be mined with the silk touch enchantment
 
 **Known issues**
 - *N/A*

@@ -125,6 +125,38 @@
       {
         "type": "imagebutton",
         "data": {
+          "name": "imagebutton_power_rune_ability",
+          "image": "power_rune_ability.png",
+          "hoveredImage": "power_rune_ability_highlight.png",
+          "onClick": {
+            "name": "PowerRuneAbility"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 129,
+          "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_rune_tooltip_render",
+          "text": {
+            "fixedValue": "",
+            "name": "RuneTooltipRender"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 140,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
           "name": "imagebutton_metal_attack",
           "image": "metal_attack.png",
           "hoveredImage": "metal_attack_highlight.png",

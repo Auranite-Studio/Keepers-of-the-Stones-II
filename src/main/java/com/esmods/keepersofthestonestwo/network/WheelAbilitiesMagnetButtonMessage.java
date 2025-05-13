@@ -19,6 +19,7 @@ import net.minecraft.core.BlockPos;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMagnetMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerRuneAbilityProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
@@ -93,13 +94,17 @@ public record WheelAbilitiesMagnetButtonMessage(int buttonID, int x, int y, int 
 		}
 		if (buttonID == 6) {
 
-			Attack141Procedure.execute(entity);
+			PowerRuneAbilityProcedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			Attack142Procedure.execute(entity);
+			Attack141Procedure.execute(entity);
 		}
 		if (buttonID == 8) {
+
+			Attack142Procedure.execute(entity);
+		}
+		if (buttonID == 9) {
 
 			Attack143Procedure.execute(entity);
 		}

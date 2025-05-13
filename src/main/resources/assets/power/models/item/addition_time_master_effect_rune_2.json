@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "power:item/addition_time_master_effect_rune_2"
+  }
+}

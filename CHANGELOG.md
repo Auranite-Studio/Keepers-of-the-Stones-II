@@ -1,16 +1,21 @@
 
 **New features**
-- *N/A*
+- Added basic functionality to runes
+- Now runes can only be used one of each type (star runes, charge runes, and power runes)
+- Added the energium shield
 
 **Improvemnts** 
-- Reduced damage from curse effect by half (from 6 to 3 HP)
+- Runes are no longer an experimental feature
+- Redesigned the second and third abilities of the magnet element
+- Now Magnet Master can place two magnets of different polarities (blue - repels, red - attracts)
+- Master of Gravity no longer takes fall damage
+- Increased the chance to drop an energium upgrade smithing template from the energium vaults
 
 **API changes**
-- *N/A*
+- Warning will now be displayed when using the beta version of the mod
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that caused player characteristics to sometimes not be recorded in the characteristic card
-- [Bugfix] Fixed incorrect battery texture charged with the power of the element of time
+- [Bugfix] Minor localization fixes
 
 **Known issues**
 - Temporarily disabled item renders for vaults and battery charger blocks (only 1.21.5)

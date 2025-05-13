@@ -20602,8 +20602,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMagnetButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMagnetMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMagnetScreen.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMagnetScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMagnetMenu.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Magnet"
@@ -31165,7 +31165,7 @@
           "src/main/resources/assets/power/models/item/extra_star_points_rune_3.json"
         ]
       },
-      "path": "~/ItemsAndBlocks/Runes/ExtraStarPointes3"
+      "path": "~/ItemsAndBlocks/Runes/ExtraStarPoints3"
     },
     {
       "name": "MusicHope",
@@ -31221,20 +31221,8 @@
             "type": "entity"
           },
           {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
+            "name": "sourceentity",
+            "type": "entity"
           },
           {
             "name": "world",
@@ -31288,7 +31276,7 @@
           }
         ]
       },
-      "path": "~/ItemsAndBlocks/Runes/ExtraStarPointes3"
+      "path": "~/ItemsAndBlocks/Runes/ExtraStarPoints3"
     },
     {
       "name": "RemoveForbiddenItem",
@@ -31308,22 +31296,6 @@
           {
             "name": "itemstack",
             "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -31696,9 +31668,9 @@
       "registry_name": "energium_shield",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/energium_shield_0.json",
           "src/main/resources/assets/power/models/item/energium_shield.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumShieldItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumShieldItem.java",
+          "src/main/resources/assets/power/models/item/energium_shield_0.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -31715,6 +31687,437 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "Runologist",
+      "type": "villagerprofession",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "runologist",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/ProfessionsAndTrades"
+    },
+    {
+      "name": "RunologistTrades",
+      "type": "villagertrade",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "runologist_trades",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/ProfessionsAndTrades"
+    },
+    {
+      "name": "RuneTooltipRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_tooltip_render",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneTooltipRenderProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Modules/RunesSystem/PowerRuneAbilities"
+    },
+    {
+      "name": "PowerRuneAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_rune_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PowerRuneAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem/PowerRuneAbilities"
+    },
+    {
+      "name": "EmptyRune",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_rune",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/empty_rune.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EmptyRuneItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes"
+    },
+    {
+      "name": "ReducedStoneRechargeTimeRune1",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reduced_stone_recharge_time_rune_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/reduced_stone_recharge_time_rune_1.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ReducedStoneRechargeTimeRune1Item.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/ReducedStoneRechargeTimeRune1"
+    },
+    {
+      "name": "ReducedStoneRechargeTimeRune2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reduced_stone_recharge_time_rune_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/reduced_stone_recharge_time_rune_2.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ReducedStoneRechargeTimeRune2Item.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/ReducedStoneRechargeTimeRune2"
+    },
+    {
+      "name": "ReducedStoneRechargeTimeRune3",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reduced_stone_recharge_time_rune_3",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ReducedStoneRechargeTimeRune3Item.java",
+          "src/main/resources/assets/power/models/item/reduced_stone_recharge_time_rune_3.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/ReducedStoneRechargeTimeRune3"
+    },
+    {
+      "name": "AdditionTimeMasterEffectRune1",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "addition_time_master_effect_rune_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/addition_time_master_effect_rune_1.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/AdditionTimeMasterEffectRune1Item.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/AdditionTimeMasterEffectRune1"
+    },
+    {
+      "name": "AdditionTimeMasterEffectRune2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "addition_time_master_effect_rune_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/addition_time_master_effect_rune_2.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/AdditionTimeMasterEffectRune2Item.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/AdditionTimeMasterEffectRune2"
+    },
+    {
+      "name": "AdditionTimeMasterEffectRune3",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "addition_time_master_effect_rune_3",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/AdditionTimeMasterEffectRune3Item.java",
+          "src/main/resources/assets/power/models/item/addition_time_master_effect_rune_3.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/AdditionTimeMasterEffectRune3"
+    },
+    {
+      "name": "RedRune1Check",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_1_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune1CheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune2Check",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_2_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune2CheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune3Check",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_3_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune3CheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune4Check",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_4_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune4CheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune5Check",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_5_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune5CheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune6Check",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_6_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune6CheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedSlotOnRemove",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_slot_on_remove",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedSlotOnRemoveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "ReducedStoneRechargeTimeRune1Use",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reduced_stone_recharge_time_rune_1_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ReducedStoneRechargeTimeRune1UseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/ReducedStoneRechargeTimeRune1"
+    },
+    {
+      "name": "ReducedStoneRechargeTimeRune2Use",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reduced_stone_recharge_time_rune_2_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ReducedStoneRechargeTimeRune2UseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/ReducedStoneRechargeTimeRune2"
+    },
+    {
+      "name": "ReducedStoneRechargeTimeRune3Use",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reduced_stone_recharge_time_rune_3_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ReducedStoneRechargeTimeRune3UseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/ReducedStoneRechargeTimeRune3"
+    },
+    {
+      "name": "AdditionTimeMasterEffectRune1Use",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "addition_time_master_effect_rune_1_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AdditionTimeMasterEffectRune1UseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/AdditionTimeMasterEffectRune1"
+    },
+    {
+      "name": "AdditionTimeMasterEffectRune2Use",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "addition_time_master_effect_rune_2_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AdditionTimeMasterEffectRune2UseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/AdditionTimeMasterEffectRune2"
+    },
+    {
+      "name": "AdditionTimeMasterEffectRune3Use",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "addition_time_master_effect_rune_3_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AdditionTimeMasterEffectRune3UseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes/AdditionTimeMasterEffectRune3"
     }
   ],
   "variable_elements": [
@@ -33412,16 +33815,16 @@
     "ITEMS:minecraft:enchantable/durability": [
       "~CUSTOM:AmplifierRing"
     ],
+    "ITEMS:mod:rune": [
+      "CUSTOM:ExtraStarPointsRune1",
+      "CUSTOM:ExtraStarPointsRune2",
+      "CUSTOM:ExtraStarPointsRune3"
+    ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:CursedStoneCrackedBricksSlab",
       "~CUSTOM:PolishedCursedStoneSlab",
       "~CUSTOM:CursedStoneBricksSlab",
       "~CUSTOM:CursedStoneSlab"
-    ],
-    "ITEMS:mod:rune": [
-      "CUSTOM:ExtraStarPointsRune1",
-      "CUSTOM:ExtraStarPointsRune2",
-      "CUSTOM:ExtraStarPointsRune3"
     ],
     "ENCHANTMENTS:minecraft:tradeable": [
       "~CUSTOM:Isolation",
@@ -33612,9 +34015,16 @@
       "CopyriumBlock",
       "ElementalPowerGenerator",
       "RuneCutter",
+      "EmptyRune",
       "ExtraStarPointsRune1",
       "ExtraStarPointsRune2",
       "ExtraStarPointsRune3",
+      "ReducedStoneRechargeTimeRune1",
+      "ReducedStoneRechargeTimeRune2",
+      "ReducedStoneRechargeTimeRune3",
+      "AdditionTimeMasterEffectRune1",
+      "AdditionTimeMasterEffectRune2",
+      "AdditionTimeMasterEffectRune3",
       "RawCopyrium",
       "CopyriumIngot",
       "MusicHope",
@@ -33670,10 +34080,11 @@
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.speed_armor_helmet": "Шлем мастера скорости",
-      "gui.power.keepers_box_gui_part_3.tooltip_form": "Форма",
       "item.power.blue_flame_armor_boots": "Ботинки мастера синего пламени",
+      "gui.power.keepers_box_gui_part_3.tooltip_form": "Форма",
       "item.power.mushrooms_armor_leggings": "Поножи мастера грибов",
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Поток астральной энергии, расходует 10",
+      "item.power.empty_rune.description_0": "§9Пустая",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 20",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
@@ -33729,10 +34140,15 @@
       "effect.power.curse": "Curse",
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Батарея",
+      "item.power.addition_time_master_effect_rune_3.description_3": "§7Спецификация:",
       "item.power.energium_axe": "Энергиумный топор",
+      "item.power.addition_time_master_effect_rune_3.description_4": " §9+10 мин к эффекту мастера",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "Дымовая шашка, расходует 35",
+      "item.power.addition_time_master_effect_rune_3.description_1": "§7Тип:",
+      "item.power.addition_time_master_effect_rune_3.description_2": " §4Красный",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
       "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Замедление, расходует 70",
+      "item.power.addition_time_master_effect_rune_3.description_0": "§9Доп. время эффекта мастера III",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "block.power.cursed_stone_cracked_bricks_stairs": "Ступенки из проклятых потрескавшихся каменных кирпичей",
       "gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80": "Гипноз, расходует 80",
@@ -33773,8 +34189,11 @@
       "gui.power.wheel_abilities_sand.tooltip_burial_uses_30": "Погребение, расходует 30",
       "item.power.air_rapier": "Воздушная рапира",
       "biome.power.cursed_forest": "Проклятый лес",
+      "item.power.reduced_stone_recharge_time_rune_1": "Руна",
       "effect.power.lethality": "Летальность",
       "gui.power.wheel_abilties_golden_dust.tooltip_random_power_uses_80": "Рандомная сила, расходует 80",
+      "item.power.reduced_stone_recharge_time_rune_3": "Руна",
+      "item.power.reduced_stone_recharge_time_rune_2": "Руна",
       "item.power.light_armor_chestplate": "Нагрудник мастера света",
       "item.power.mist_armor_chestplate": "Нагрудник мастера тумана",
       "item.power.energium_hoe": "Энергиумная мотыга",
@@ -33849,6 +34268,7 @@
       "item.power.blue_flame_battery.description_0": "§aЗаряжена элементом:",
       "entity.power.cursed_knight": "Проклятый рыцарь",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Солнце",
+      "entity.minecraft.villager.power.runologist": "Runologist",
       "block.power.blue_portal": "Синий портал",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "block.power.cursed_stone_bricks_slab": "Плита из проклятых каменных кирпичей",
@@ -33875,8 +34295,8 @@
       "effect.power.ocean_master": "Мастер океана",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "battery.desc.fire": "Огонь",
-      "advancements.the_great_win.descr": "Победите проклятого хранителя и освободите его от проклятия",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "advancements.the_great_win.descr": "Победите проклятого хранителя и освободите его от проклятия",
       "effect.power.vacuum_master": "Мастер пустоты",
       "item.power.tornado_battery.description_0": "§aЗаряжена элементом:",
       "item.power.mercury_armor_chestplate": "Нагрудник мастера ртути",
@@ -33965,6 +34385,11 @@
       "item.power.blood_battery": "Батарея",
       "effect.power.sun_master": "Мастер солнца",
       "item.power.golden_dust_armor_helmet": "Шлем мастера золотой пыли",
+      "item.power.addition_time_master_effect_rune_2.description_3": "§7Спецификация:",
+      "item.power.addition_time_master_effect_rune_2.description_2": " §4Красный",
+      "item.power.addition_time_master_effect_rune_2.description_1": "§7Тип:",
+      "item.power.addition_time_master_effect_rune_2.description_0": "§9Доп. время эффекта мастера II",
+      "item.power.addition_time_master_effect_rune_2.description_4": " §9+5 мин к эффекту мастера",
       "item.power.mind_armor_chestplate": "Нагрудник мастера разума",
       "effect.power.lightning_master": "Мастер молнии",
       "block.power.deepslate_depleted_energium_ore": "Обеднённый энергиумоносный глубинный сланец",
@@ -34085,14 +34510,19 @@
       "death.attack.cursed_knight_ds.item": "%1$s  был убит Проклятый рыцарь",
       "item.power.destruction_armor_helmet": "Шлем мастера разрушение",
       "gui.power.wheel_abilities_magnet.tooltip_magnetic_field_wave_uses_10": "Волна магнитного поля, расходует 10",
+      "item.power.reduced_stone_recharge_time_rune_2.description_1": "§7Тип:",
+      "item.power.reduced_stone_recharge_time_rune_2.description_2": " §4Красный",
       "gui.power.wheel_abilities_poison.tooltip_toxic_acid_flow_uses_15": "Поток токсичной кислоты, расходует 15",
+      "item.power.reduced_stone_recharge_time_rune_2.description_0": "§9Снижение перезарядки камня II",
       "gui.power.wheel_abilities_teleportation.tooltip_checkpoint_uses_20": "Чекпоинт, расходует 20",
       "item.power.water_armor_helmet": "Шлем мастера воды",
       "item.power.ice_battery": "Батарея",
       "item.power.sand_stone": "Камень песка",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
       "gui.power.keepers_box_gui_part_2.tooltip_tornado": "Торнадо",
+      "item.power.reduced_stone_recharge_time_rune_2.description_3": "§7Спецификация:",
       "advancements.unbreakable_diamond.descr": "Достигните ранга S",
+      "item.power.reduced_stone_recharge_time_rune_2.description_4": " §9-1 мин к перезарядке камня",
       "subtitles.cursed_squire.attack": "",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Кристальный залп, расходует 65",
       "gui.power.keepers_box_gui_part_1.tooltip_energy": "Энергия",
@@ -34142,10 +34572,15 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.blue_flame_battery": "Батарея",
       "subtitles.cursed_knight.walk": "",
+      "item.power.reduced_stone_recharge_time_rune_1.description_4": " §9-30 c к перезарядке камня",
       "item.power.earth_battery": "Батарея",
       "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
+      "item.power.reduced_stone_recharge_time_rune_1.description_2": " §4Красный",
+      "item.power.reduced_stone_recharge_time_rune_1.description_3": "§7Спецификация:",
       "enchantment.power.revenge": "Возмездие",
+      "item.power.reduced_stone_recharge_time_rune_1.description_0": "§9Снижение перезарядки камня I",
+      "item.power.reduced_stone_recharge_time_rune_1.description_1": "§7Тип:",
       "item.power.amber_armor_helmet": "Шлем мастера янтаря",
       "item_group.power.items": "KotS: Предметы",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
@@ -34168,16 +34603,18 @@
       "gui.power.wheel_abilities_smoke.tooltip_smoke_attack_uses_10": "Дымовая атака, расходует 15",
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Подъём тумана, расходует 50",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
-      "item.power.extra_star_points_rune_2.description_1": "",
-      "item.power.extra_star_points_rune_3.description_3": "§c§oНесовместимы с аналог. рунами",
+      "item.power.extra_star_points_rune_2.description_1": "§7Тип:",
+      "item.power.extra_star_points_rune_3.description_4": " §9+20 к макс. кол-ву звёзд. очков",
       "item.power.extra_star_points_rune_2.description_0": "§9Доп. звёздные очки II",
+      "item.power.extra_star_points_rune_3.description_3": "§7Спецификация:",
       "item.power.mercury_battle_axe": "Ртутный боевой топор",
-      "item.power.extra_star_points_rune_3.description_2": "§1§o+20 к макс. кол-ву звёзд. очков",
-      "item.power.extra_star_points_rune_3.description_1": "",
+      "item.power.extra_star_points_rune_3.description_2": " §1Синий",
+      "item.power.extra_star_points_rune_3.description_1": "§7Тип:",
       "item.power.extra_star_points_rune_3.description_0": "§9Доп. звёздные очки III",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Туманное зелье звёздной регенерации",
-      "item.power.extra_star_points_rune_2.description_3": "§c§oНесовместимы с аналог. рунами",
-      "item.power.extra_star_points_rune_2.description_2": "§1§o+15 к макс. кол-ву звёзд. очков",
+      "item.power.extra_star_points_rune_2.description_4": " §9+15 к макс. кол-ву звёзд. очков",
+      "item.power.extra_star_points_rune_2.description_3": "§7Спецификация:",
+      "item.power.extra_star_points_rune_2.description_2": " §1Синий",
       "effect.power.ice_master": "Мастер льда",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
@@ -34189,6 +34626,9 @@
       "subtitles.cursed_squire.walk": "",
       "subtitles.cursed_knight.death": "",
       "gui.power.keepers_box_gui_part_4.tooltip_poison": "Яд",
+      "item.power.addition_time_master_effect_rune_2": "Руна",
+      "item.power.addition_time_master_effect_rune_1": "Руна",
+      "item.power.addition_time_master_effect_rune_3": "Руна",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
       "item.power.ocean_armor_boots": "Ботинки мастера океана",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Кристалл",
@@ -34265,6 +34705,7 @@
       "item.power.sun_armor_chestplate": "Нагрудник мастера солнца",
       "item_group.power.stones": "KotS: Камни",
       "gui.power.wheel_abilities_technology.tooltip_red_plasma_ball_uses_15": "Красный плазменный шар, расходует 15",
+      "gui.power.wheel_abilities.tooltip.rune_not_install": "Руна неактивна",
       "item.power.animals_armor_chestplate": "Нагрудник маастера животных",
       "effect.power.red_magnet_power": "Сила красного магнита",
       "advancements.lets_bail_this_place_isdead.title": "Погибель близко...",
@@ -34285,6 +34726,7 @@
       "item.power.space_battery.description_1": "§9Космос",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5",
       "item.power.plague_armor_boots": "Ботинки мастра чумы",
+      "item.power.empty_rune": "Руна",
       "gui.power.keepers_box_gui_part_3.tooltip_darkness": "Тьма",
       "item.power.empty_battery": "Батарея",
       "item.power.technology_armor_leggings": "Поножи мастера технологий",
@@ -34302,8 +34744,8 @@
       "item.power.smoke_armor_leggings": "Поножи мастера дыма",
       "item.power.extra_star_points_rune_1.description_0": "§9Доп. звёздные очки I",
       "item.power.creation_hoe": "Мотыга созидания",
-      "item.power.extra_star_points_rune_1.description_1": "",
-      "item.power.extra_star_points_rune_1.description_2": "§1§o+10 к макс. кол-ву звёзд. очков",
+      "item.power.extra_star_points_rune_1.description_1": "§7Тип:",
+      "item.power.extra_star_points_rune_1.description_2": " §1Синий",
       "effect.power.water_master": "Мастер воды",
       "advancements.become_like_an_adventurer.descr": "Заполните карточку с характеристиками",
       "item_group.power.mobs": "KotS: Мобы",
@@ -34312,8 +34754,9 @@
       "item.power.luck_coin": "Счастливая монета",
       "item.power.rain_battery": "Батарея",
       "item.power.creation_sword": "Меч созидания",
-      "item.power.extra_star_points_rune_1.description_3": "§c§oНесовместимы с аналог. рунами",
+      "item.power.extra_star_points_rune_1.description_3": "§7Спецификация:",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ледяная атака, расходует 30",
+      "item.power.extra_star_points_rune_1.description_4": " §9+10 к макс. кол-ву звёзд. очков",
       "item.power.speed_battery.description_1": "§9Скорость",
       "item.power.crystal_battery": "Батарея",
       "item.power.speed_armor_leggings": "Поножи мастера скорости",
@@ -34447,7 +34890,12 @@
       "effect.power.shadow_master": "Мастер тени",
       "item.power.vacuum_battery": "Батарея",
       "item.power.plague_battery.description_1": "§9Чума",
+      "item.power.addition_time_master_effect_rune_1.description_4": " §9+2 мин 30 с к эффекту мастера",
       "item.power.plague_battery.description_0": "§aЗаряжена элементом:",
+      "item.power.addition_time_master_effect_rune_1.description_3": "§7Спецификация:",
+      "item.power.addition_time_master_effect_rune_1.description_2": " §4Красный",
+      "item.power.addition_time_master_effect_rune_1.description_1": "§7Тип:",
+      "item.power.addition_time_master_effect_rune_1.description_0": "§9Доп. время эффекта мастера I",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "item.power.vacuum_armor_leggings": "Поножи мастера пустоты",
       "advancements.getting_married.descr": "Создайте амплиферовое кольцо, чтобы сбросить перезарядку камня",
@@ -34607,10 +35055,15 @@
       "effect.power.metal_master": "Мастер металла",
       "gui.power.wheel_abilities_mind.tooltip_psychowaves_uses_15": "Психоволны, расходует 15",
       "item.power.basic_box.tooltip": "Базовая",
+      "item.power.reduced_stone_recharge_time_rune_3.description_1": "§7Тип:",
+      "item.power.reduced_stone_recharge_time_rune_3.description_0": "§9Снижение перезарядки камня III",
       "block.power.raw_amplifier_block": "Блок рудного амплифера",
+      "item.power.reduced_stone_recharge_time_rune_3.description_3": "§7Спецификация:",
+      "item.power.reduced_stone_recharge_time_rune_3.description_2": " §4Красный",
       "item.power.constellation_sword": "Меч созвездий",
       "item.power.creation_battery.description_0": "§aЗаряжена элементом:",
       "item.power.creation_battery.description_1": "§9Созидание",
+      "item.power.reduced_stone_recharge_time_rune_3.description_4": " §9-2 мин 30 с к перезарядке камня",
       "item.power.form_stone": "Камень формы",
       "effect.power.mercury_master": "Мастер ртути",
       "item.power.energium_armor_chestplate": "Энергиумный нагрудник",
@@ -34623,8 +35076,8 @@
     "en_us": {
       "item.power.ether_battery": "Battery",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
-      "item.power.ether_stone": "Ether Stone",
       "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Dark power transfer, uses 80",
+      "item.power.ether_stone": "Ether Stone",
       "item.power.moon_battery": "Battery",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.power.time_battery.description_0": "§aCharged with element:",
@@ -34639,10 +35092,11 @@
       "item.power.blue_flame_armor_boots": "Blue Flame Boots",
       "item.power.mushrooms_armor_leggings": "Mushrooms Leggings",
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
+      "item.power.empty_rune.description_0": "§9Empty",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 20",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
-      "advancements.grant_your_power.title": "Grant your power",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
+      "advancements.grant_your_power.title": "Grant your power",
       "item.power.extra_star_points_rune_3": "Rune",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
@@ -34664,8 +35118,8 @@
       "item.power.gravity_mace": "Gravity Mace",
       "block.power.amplifier_block": "Amplifier Block",
       "battery.desc.plants": "Plants",
-      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "item.power.music_armor_leggings": "Music Leggings",
+      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
       "item.power.music_battery": "Battery",
       "item.power.darkness_battery": "Battery",
@@ -34694,10 +35148,15 @@
       "effect.power.curse": "Curse",
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Battery",
+      "item.power.addition_time_master_effect_rune_3.description_3": "§7Specifications:",
+      "item.power.addition_time_master_effect_rune_3.description_4": " §9+10 min of master effect",
       "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "Smoke bomb, uses 35",
+      "item.power.addition_time_master_effect_rune_3.description_1": "§7Type:",
+      "item.power.addition_time_master_effect_rune_3.description_2": " §4Red",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
       "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Deceleration, uses 70",
+      "item.power.addition_time_master_effect_rune_3.description_0": "§9Additional Master\u0027s Effect Time III",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "block.power.cursed_stone_cracked_bricks_stairs": "Cursed Stone Cracked Bricks",
       "gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80": "Hypnosis, uses 80",
@@ -34717,9 +35176,9 @@
       "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
       "item.power.ocean_battery": "Battery",
       "entity.power.red_magnet": "Red Magnet",
-      "effect.power.star_regeneration": "Star regeneration",
-      "item.power.mist_battery": "Battery",
       "item.power.smoke_armor_chestplate": "Smoke Chestplate",
+      "item.power.mist_battery": "Battery",
+      "effect.power.star_regeneration": "Star regeneration",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "item.power.cursed_knight_spawn_egg": "Cursed Knight Spawn Egg",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
@@ -34739,14 +35198,17 @@
       "item.power.air_rapier": "Air Rapier",
       "biome.power.cursed_forest": "Cursed Forest",
       "effect.power.lethality": "Lethality",
+      "item.power.reduced_stone_recharge_time_rune_1": "Rune",
       "gui.power.wheel_abilties_golden_dust.tooltip_random_power_uses_80": "Random power, uses 80",
+      "item.power.reduced_stone_recharge_time_rune_3": "Rune",
+      "item.power.reduced_stone_recharge_time_rune_2": "Rune",
       "item.power.light_armor_chestplate": "Light Chestplate",
       "item.power.mist_armor_chestplate": "Mist Chestplate",
       "item.power.energium_hoe": "Energium Hoe",
       "trim_material.power.copyrium_material": "Copyrium",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
-      "item.power.empty_battery.description_0": "§cNot charged",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
+      "item.power.empty_battery.description_0": "§cNot charged",
       "item.power.amber_staff": "Amber Staff",
       "subtitles.electric_spark": "Spark",
       "gui.power.wheel_abilities_blue_flame.tooltip_electric_discharge_uses_75": "Electric discharge, uses 75",
@@ -34763,8 +35225,8 @@
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.empty_characteristics_card.description_0": "§7Empty",
       "item.power.smoke_stone": "Smoke Stone",
-      "effect.power.air_master": "Master of the Air",
       "item.power.blue_flame_sword": "Blue Flame Sword",
+      "effect.power.air_master": "Master of the Air",
       "effect.power.miniaturization": "Miniaturization",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
@@ -34808,12 +35270,13 @@
       "gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30": "Time dilation, uses 20",
       "item.power.horror_armor_leggings": "Horror Leggings",
       "item.power.horror_armor_helmet": "Horror Helmet",
-      "item.power.spirit_armor_chestplate": "Spirit Chestplate",
       "block.power.amber_block": "Amber Block",
+      "item.power.spirit_armor_chestplate": "Spirit Chestplate",
       "effect.power.chaos_dark_master": "Dark Master of Chaos",
       "item.power.blue_flame_battery.description_0": "§aCharged with element:",
       "entity.power.cursed_knight": "Cursed Knight",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Sun",
+      "entity.minecraft.villager.power.runologist": "Runologist",
       "block.power.blue_portal": "Blue Portal",
       "item.power.air_armor_boots": "Air Boots",
       "block.power.cursed_stone_bricks_slab": "Cursed Stone Bricks Slab",
@@ -34834,8 +35297,8 @@
       "item.power.blood_battery.description_1": "§9Blood",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
       "item.power.blood_battery.description_0": "§aCharged with element:",
-      "item.power.raw_copyrium": "Raw Copyrium",
       "item.power.moon_armor_chestplate": "Moon Chestplate",
+      "item.power.raw_copyrium": "Raw Copyrium",
       "item.power.creation_armor_chestplate": "Creation Chestplate",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "effect.power.ocean_master": "Master of the Ocean",
@@ -34861,13 +35324,13 @@
       "item.power.mist_battery.description_0": "§aCharged with element:",
       "item.power.mist_battery.description_1": "§9Mist",
       "item.power.ice_armor_helmet": "Ice Helmet",
-      "item.power.teleportation_battery.description_0": "§aCharged with element:",
       "advancements.full_power_of_energium.descr": "Wear a full set of energium armor",
+      "item.power.teleportation_battery.description_0": "§aCharged with element:",
       "item.power.spirit_stone": "Spirit Stone",
       "item.power.music_disc_ancient_mood.desc": "bxkqq - Ancient Mood",
       "item.power.teleportation_battery.description_1": "§9Teleportation",
-      "battery.desc.lightning": "Lightning",
       "gui.power.wheel_abilities_form.tooltip_warp_wave_uses_15": "Warp wave, uses 15",
+      "battery.desc.lightning": "Lightning",
       "item.power.raw_amplifier": "Raw Amplifier",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Poisonous thorn, uses 35",
       "effect.power.blood_master": "Master of Blood",
@@ -34930,6 +35393,11 @@
       "item.power.blood_battery": "Battery",
       "effect.power.sun_master": "Master of the Sun",
       "item.power.golden_dust_armor_helmet": "Golden Dust Helmet",
+      "item.power.addition_time_master_effect_rune_2.description_3": "§7Specifications:",
+      "item.power.addition_time_master_effect_rune_2.description_2": " §4Red",
+      "item.power.addition_time_master_effect_rune_2.description_1": "§7Type:",
+      "item.power.addition_time_master_effect_rune_2.description_0": "§9Additional Master\u0027s Effect Time II",
+      "item.power.addition_time_master_effect_rune_2.description_4": " §9+5 min of master effect",
       "item.power.mind_armor_chestplate": "Mind Chestplate",
       "effect.power.lightning_master": "Master of Lightning",
       "block.power.deepslate_depleted_energium_ore": "Deepslate Depleted Energium Ore",
@@ -35050,14 +35518,19 @@
       "death.attack.cursed_knight_ds.item": "%1$s was killed by an Cursed Knight",
       "item.power.destruction_armor_helmet": "Destruction Helmet",
       "gui.power.wheel_abilities_magnet.tooltip_magnetic_field_wave_uses_10": "Magnetic field wave, uses 10",
+      "item.power.reduced_stone_recharge_time_rune_2.description_1": "§7Type:",
+      "item.power.reduced_stone_recharge_time_rune_2.description_2": " §4Red",
       "gui.power.wheel_abilities_poison.tooltip_toxic_acid_flow_uses_15": "Toxic acid flow, uses 15",
+      "item.power.reduced_stone_recharge_time_rune_2.description_0": "§9Reduced Stone Recharge II",
       "gui.power.wheel_abilities_teleportation.tooltip_checkpoint_uses_20": "Checkpoint, uses 20",
       "item.power.water_armor_helmet": "Water Helmet",
       "item.power.ice_battery": "Battery",
       "item.power.sand_stone": "Sand Stone",
       "item.power.lightning_armor_boots": "Lightning Boots",
       "gui.power.keepers_box_gui_part_2.tooltip_tornado": "Tornado",
+      "item.power.reduced_stone_recharge_time_rune_2.description_3": "§7Specifications:",
       "advancements.unbreakable_diamond.descr": "Reach rank S",
+      "item.power.reduced_stone_recharge_time_rune_2.description_4": " §9-1 min of stone recharge",
       "subtitles.cursed_squire.attack": "",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Crystal volley, uses 65",
       "gui.power.keepers_box_gui_part_1.tooltip_energy": "Energy",
@@ -35107,10 +35580,15 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
       "item.power.blue_flame_battery": "Battery",
       "subtitles.cursed_knight.walk": "",
+      "item.power.reduced_stone_recharge_time_rune_1.description_4": " §9-30 sec of stone recharge",
       "item.power.earth_battery": "Battery",
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
+      "item.power.reduced_stone_recharge_time_rune_1.description_2": " §4Red",
+      "item.power.reduced_stone_recharge_time_rune_1.description_3": "§7Specifications:",
       "enchantment.power.revenge": "Revenge",
+      "item.power.reduced_stone_recharge_time_rune_1.description_0": "§9Reduced Stone Recharge I",
+      "item.power.reduced_stone_recharge_time_rune_1.description_1": "§7Type:",
       "item.power.amber_armor_helmet": "Amber Helmet",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item_group.power.items": "KotS: Items",
@@ -35132,16 +35610,18 @@
       "gui.power.wheel_abilities_smoke.tooltip_smoke_attack_uses_10": "Smoke attack, uses 15",
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Mist lifting, uses 50",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
-      "item.power.extra_star_points_rune_2.description_1": "",
-      "item.power.extra_star_points_rune_3.description_3": "§c§oIncompatible with similar runes",
+      "item.power.extra_star_points_rune_2.description_1": "§7Type:",
+      "item.power.extra_star_points_rune_3.description_4": " §9+20 to the max. number of star points",
       "item.power.extra_star_points_rune_2.description_0": "§9Extra Star Points II",
+      "item.power.extra_star_points_rune_3.description_3": "§7Specifications:",
       "item.power.mercury_battle_axe": "Mercury Battle Axe",
-      "item.power.extra_star_points_rune_3.description_2": "§1§o+20 to the max. number of star points",
-      "item.power.extra_star_points_rune_3.description_1": "",
+      "item.power.extra_star_points_rune_3.description_2": " §1Blue",
+      "item.power.extra_star_points_rune_3.description_1": "§7Type:",
       "item.power.extra_star_points_rune_3.description_0": "§9Extra Star Points III",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
-      "item.power.extra_star_points_rune_2.description_3": "§c§oIncompatible with similar runes",
-      "item.power.extra_star_points_rune_2.description_2": "§1§o+15 to the max. number of star points",
+      "item.power.extra_star_points_rune_2.description_4": " §9+15 to the max. number of star points",
+      "item.power.extra_star_points_rune_2.description_3": "§7Specifications:",
+      "item.power.extra_star_points_rune_2.description_2": " §1Blue",
       "effect.power.ice_master": "Master of the Ice",
       "item.power.ether_armor_leggings": "Ether Leggings",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
@@ -35153,6 +35633,9 @@
       "subtitles.cursed_squire.walk": "",
       "subtitles.cursed_knight.death": "",
       "gui.power.keepers_box_gui_part_4.tooltip_poison": "Poison",
+      "item.power.addition_time_master_effect_rune_2": "Rune",
+      "item.power.addition_time_master_effect_rune_1": "Rune",
+      "item.power.addition_time_master_effect_rune_3": "Rune",
       "item.power.rain_armor_leggings": "Rain Leggings",
       "item.power.ocean_armor_boots": "Ocean Boots",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
@@ -35229,6 +35712,7 @@
       "item.power.sun_armor_chestplate": "Sun Chestplate",
       "item_group.power.stones": "KotS: Stones",
       "gui.power.wheel_abilities_technology.tooltip_red_plasma_ball_uses_15": "Red plasma ball, uses 15",
+      "gui.power.wheel_abilities.tooltip.rune_not_install": "The rune is inactive",
       "item.power.animals_armor_chestplate": "Animals Chestplate",
       "effect.power.red_magnet_power": "Red Magnet Power",
       "advancements.lets_bail_this_place_isdead.title": "Let\u0027s bail, this place is dead",
@@ -35249,6 +35733,7 @@
       "item.power.space_battery.description_1": "§9Space",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5",
       "item.power.plague_armor_boots": "Plague Boots",
+      "item.power.empty_rune": "Rune",
       "gui.power.keepers_box_gui_part_3.tooltip_darkness": "Darkness",
       "item.power.empty_battery": "Battery",
       "item.power.technology_armor_leggings": "Technology Leggings",
@@ -35266,8 +35751,8 @@
       "item.power.smoke_armor_leggings": "Smoke Leggings",
       "item.power.extra_star_points_rune_1.description_0": "§9Extra Star Points I",
       "item.power.creation_hoe": "Creation Hoe",
-      "item.power.extra_star_points_rune_1.description_1": "",
-      "item.power.extra_star_points_rune_1.description_2": "§1§o+10 to the max. number of star points",
+      "item.power.extra_star_points_rune_1.description_1": "§7Type:",
+      "item.power.extra_star_points_rune_1.description_2": " §1Blue",
       "effect.power.water_master": "Master of Water",
       "advancements.become_like_an_adventurer.descr": "Fill out the characteristics card",
       "item_group.power.mobs": "KotS: Mobs",
@@ -35276,8 +35761,9 @@
       "item.power.luck_coin": "Luck Coin",
       "item.power.rain_battery": "Battery",
       "item.power.creation_sword": "Creation Sword",
-      "item.power.extra_star_points_rune_1.description_3": "§c§oIncompatible with similar runes",
+      "item.power.extra_star_points_rune_1.description_3": "§7Specifications:",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ice attack, uses 30",
+      "item.power.extra_star_points_rune_1.description_4": " §9+10 to the max. number of star points",
       "item.power.speed_battery.description_1": "§9Speed",
       "item.power.crystal_battery": "Battery",
       "item.power.speed_armor_leggings": "Speed Leggings",
@@ -35412,7 +35898,12 @@
       "effect.power.shadow_master": "Master of Shadow",
       "item.power.vacuum_battery": "Battery",
       "item.power.plague_battery.description_1": "§9Plague",
+      "item.power.addition_time_master_effect_rune_1.description_4": " §9+2 min 30 sec of master effect",
       "item.power.plague_battery.description_0": "§aCharged with element:",
+      "item.power.addition_time_master_effect_rune_1.description_3": "§7Specifications:",
+      "item.power.addition_time_master_effect_rune_1.description_2": " §4Red",
+      "item.power.addition_time_master_effect_rune_1.description_1": "§7Type:",
+      "item.power.addition_time_master_effect_rune_1.description_0": "§9Additional Master\u0027s Effect Time I",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
       "item.power.vacuum_armor_leggings": "Vacuum Leggings",
       "advancements.getting_married.descr": "Create an amplifier ring to reset the stone\u0027s recharge",
@@ -35572,10 +36063,15 @@
       "effect.power.metal_master": "Master of the Metal",
       "gui.power.wheel_abilities_mind.tooltip_psychowaves_uses_15": "Psychowaves, uses 15",
       "item.power.basic_box.tooltip": "Basic",
+      "item.power.reduced_stone_recharge_time_rune_3.description_1": "§7Type:",
+      "item.power.reduced_stone_recharge_time_rune_3.description_0": "§9Reduced Stone Recharge III",
       "block.power.raw_amplifier_block": "Block of Raw Amplifier",
+      "item.power.reduced_stone_recharge_time_rune_3.description_3": "§7Specifications:",
+      "item.power.reduced_stone_recharge_time_rune_3.description_2": " §4Red",
       "item.power.constellation_sword": "Constellation Sword",
       "item.power.creation_battery.description_0": "§aCharged with element:",
       "item.power.creation_battery.description_1": "§9Creation",
+      "item.power.reduced_stone_recharge_time_rune_3.description_4": " §9-2 min 30 sec of stone recharge",
       "item.power.form_stone": "Form Stone",
       "effect.power.mercury_master": "Master of Mercury",
       "item.power.energium_armor_chestplate": "Energium Chestplate",
@@ -35638,7 +36134,12 @@
           },
           {
             "name": "RunesSystem",
-            "children": []
+            "children": [
+              {
+                "name": "PowerRuneAbilities",
+                "children": []
+              }
+            ]
           },
           {
             "name": "KeyBindsModule",
@@ -36375,7 +36876,31 @@
                 "children": []
               },
               {
-                "name": "ExtraStarPointes3",
+                "name": "ExtraStarPoints3",
+                "children": []
+              },
+              {
+                "name": "ReducedStoneRechargeTimeRune1",
+                "children": []
+              },
+              {
+                "name": "ReducedStoneRechargeTimeRune2",
+                "children": []
+              },
+              {
+                "name": "ReducedStoneRechargeTimeRune3",
+                "children": []
+              },
+              {
+                "name": "AdditionTimeMasterEffectRune1",
+                "children": []
+              },
+              {
+                "name": "AdditionTimeMasterEffectRune2",
+                "children": []
+              },
+              {
+                "name": "AdditionTimeMasterEffectRune3",
                 "children": []
               }
             ]
@@ -36435,13 +36960,17 @@
       {
         "name": "Configs",
         "children": []
+      },
+      {
+        "name": "ProfessionsAndTrades",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.2.0.1",
+    "version": "1.2.0.2",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",

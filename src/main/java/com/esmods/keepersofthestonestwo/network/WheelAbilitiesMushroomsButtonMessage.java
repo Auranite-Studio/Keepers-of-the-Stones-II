@@ -19,6 +19,7 @@ import net.minecraft.core.BlockPos;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMushroomsMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerRuneAbilityProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
@@ -93,13 +94,17 @@ public record WheelAbilitiesMushroomsButtonMessage(int buttonID, int x, int y, i
 		}
 		if (buttonID == 6) {
 
-			Attack145Procedure.execute(entity);
+			PowerRuneAbilityProcedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			Attack146Procedure.execute(entity);
+			Attack145Procedure.execute(entity);
 		}
 		if (buttonID == 8) {
+
+			Attack146Procedure.execute(entity);
+		}
+		if (buttonID == 9) {
 
 			Attack147Procedure.execute(entity);
 		}

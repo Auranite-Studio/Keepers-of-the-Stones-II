@@ -18,6 +18,12 @@ import net.minecraft.client.Minecraft;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
 
+import com.esmods.keepersofthestonestwo.procedures.RedRune6CheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RedRune5CheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RedRune4CheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RedRune3CheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RedRune2CheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RedRune1CheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetRunesProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BlueRune3CheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BlueRune2CheckProcedure;
@@ -50,13 +56,31 @@ public class RunesOverlayOverlay {
 			event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/runes_inventory.png"), 2, 50, 0, 0, 59, 26, 59, 26);
 
 			if (BlueRune1CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_1.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_rune_1.png"), 7, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (BlueRune2CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_2.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_rune_2.png"), 7, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (BlueRune3CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_booster_3.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_extra_rune_3.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+			}
+			if (RedRune1CheckProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/reduced_stone_recharge_time_rune_1.png"), 23, 56, 0, 0, 16, 16, 16, 16);
+			}
+			if (RedRune2CheckProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/reduced_stone_recharge_time_rune_2.png"), 23, 56, 0, 0, 16, 16, 16, 16);
+			}
+			if (RedRune3CheckProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/reduced_stone_recharge_time_rune_3.png"), 23, 56, 0, 0, 16, 16, 16, 16);
+			}
+			if (RedRune4CheckProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/addition_time_master_effect_rune_1.png"), 23, 56, 0, 0, 16, 16, 16, 16);
+			}
+			if (RedRune5CheckProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/addition_time_master_effect_rune_2.png"), 23, 56, 0, 0, 16, 16, 16, 16);
+			}
+			if (RedRune6CheckProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/addition_time_master_effect_rune_3.png"), 23, 56, 0, 0, 16, 16, 16, 16);
 			}
 		}
 		RenderSystem.depthMask(true);
