@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/shockwave_gun",
+  "textures": {
+    "6": "power:block/shockwave_gun",
+    "particle": "power:item/shockwave_gun"
+  }
+}

@@ -31,6 +31,7 @@ import com.esmods.keepersofthestonestwo.procedures.SpaceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SmokeMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SmokeIntangibilityEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ShockwaveMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ShadowMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SandMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RainMasterEndProcedure;
@@ -54,6 +55,7 @@ import com.esmods.keepersofthestonestwo.procedures.LavaMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IronSkinEffectEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.HorrorDarkMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.HeatMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GravityMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GoldenDustMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FormMasterEndProcedure;
@@ -94,6 +96,7 @@ import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SoundMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SmokeMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SmokeIntangibilityMobEffect;
+import com.esmods.keepersofthestonestwo.potion.ShockwaveMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ShadowMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SandMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.RedMagnetPowerMobEffect;
@@ -122,6 +125,7 @@ import com.esmods.keepersofthestonestwo.potion.IronSkinMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ImmortalityMobEffect;
 import com.esmods.keepersofthestonestwo.potion.IceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.HorrorDarkMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.HeatMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.GravityMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.GoldenDustMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.GigantizationMobEffect;
@@ -220,6 +224,8 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> HORROR_DARK_MASTER = REGISTRY.register("horror_dark_master", () -> new HorrorDarkMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> FILTH_DARK_MASTER = REGISTRY.register("filth_dark_master", () -> new FilthDarkMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> CURSE = REGISTRY.register("curse", () -> new CurseMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> HEAT_MASTER = REGISTRY.register("heat_master", () -> new HeatMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> SHOCKWAVE_MASTER = REGISTRY.register("shockwave_master", () -> new ShockwaveMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -354,6 +360,10 @@ public class PowerModMobEffects {
 			HorrorDarkMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(FILTH_DARK_MASTER)) {
 			FilthDarkMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(HEAT_MASTER)) {
+			HeatMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(SHOCKWAVE_MASTER)) {
+			ShockwaveMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

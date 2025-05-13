@@ -159,7 +159,11 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		guistate.put("button:imagebutton_keepers_box_button_up", imagebutton_keepers_box_button_up);
 		this.addRenderableWidget(imagebutton_keepers_box_button_up);
 		imagebutton_keepers_box_button_down_locked = new ImageButton(this.leftPos + 209, this.topPos + 103, 18, 18,
-				new WidgetSprites(ResourceLocation.parse("power:textures/screens/keepers_box_button_down_locked.png"), ResourceLocation.parse("power:textures/screens/keepers_box_button_down_locked.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/keepers_box_button_down.png"), ResourceLocation.parse("power:textures/screens/keepers_box_button_down_active.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(1, x, y, z));
+						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
@@ -273,7 +277,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_amber_element", imagebutton_amber_element);
 		this.addRenderableWidget(imagebutton_amber_element);
-		imagebutton_sand_element = new ImageButton(this.leftPos + 163, this.topPos + 106, 16, 16,
+		imagebutton_sand_element = new ImageButton(this.leftPos + 162, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/sand_element.png"), ResourceLocation.parse("power:textures/screens/sand_element_highlighted.png")), e -> {
 					if (SandStoneCheckProcedure.execute(world)) {
 						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(9, x, y, z));

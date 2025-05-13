@@ -20,6 +20,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.SphereNothingProjectileR
 import com.esmods.keepersofthestonestwo.client.renderer.SoundBombProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.SmokeMusketProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.SmokeBombProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.ShockwaveGunProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.ShadowSphereRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.ShadowRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.RedMagnetRenderer;
@@ -113,5 +114,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.EXAMPLE_MASTER.get(), ExampleMasterRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.RED_MAGNET.get(), RedMagnetRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.BLUE_MAGNET.get(), BlueMagnetRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.SHOCKWAVE_GUN_PROJECTILE.get(), ShockwaveGunProjectileRenderer::new);
 	}
 }

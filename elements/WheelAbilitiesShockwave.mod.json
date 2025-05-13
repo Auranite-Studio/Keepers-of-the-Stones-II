@@ -1,0 +1,259 @@
+{
+  "_fv": 77,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 192,
+    "height": 192,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_1",
+          "image": "wheel_button_1.png",
+          "hoveredImage": "wheel_button_1_highlight.png",
+          "onClick": {
+            "name": "OpenWheelOne"
+          },
+          "displayCondition": {
+            "name": "GetWheelTwoOrFirstFake"
+          },
+          "x": 258,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_2",
+          "image": "wheel_button_2.png",
+          "hoveredImage": "wheel_button_2_highlight.png",
+          "onClick": {
+            "name": "OpenWheelTwo"
+          },
+          "displayCondition": {
+            "name": "GetWheelTwo"
+          },
+          "x": 270,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_3",
+          "image": "wheel_button_3.png",
+          "hoveredImage": "wheel_button_3_highlight.png",
+          "onClick": {
+            "name": "OpenWheelThree"
+          },
+          "displayCondition": {
+            "name": "GetWheelThree"
+          },
+          "x": 282,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wheel_of_abilities.png",
+          "use1Xscale": false,
+          "x": 117,
+          "y": 24,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_1",
+          "image": "fake_wheel_button_1.png",
+          "hoveredImage": "fake_wheel_button_1_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelOne"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelOne"
+          },
+          "x": 258,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_2",
+          "image": "fake_wheel_button_2.png",
+          "hoveredImage": "fake_wheel_button_2_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelSecond"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelTwo"
+          },
+          "x": 270,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_3",
+          "image": "fake_wheel_button_3.png",
+          "hoveredImage": "fake_wheel_button_3_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelThird"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelThird"
+          },
+          "x": 282,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_shockwave_strike",
+          "image": "shockwave_strike.png",
+          "hoveredImage": "shockwave_strike_highlight.png",
+          "onClick": {
+            "name": "Attack197"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 190,
+          "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_shock_wave",
+          "image": "shock_wave.png",
+          "hoveredImage": "shock_wave_highlight.png",
+          "onClick": {
+            "name": "Attack198"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 251,
+          "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_shockwave_push",
+          "image": "shockwave_push.png",
+          "hoveredImage": "shockwave_push_highlight.png",
+          "onClick": {
+            "name": "Attack199"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 190,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_shockwave_strike_uses_20",
+          "text": {
+            "fixedValue": "Shockwave strike, uses 20"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 47,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_shock_wave_uses_50",
+          "text": {
+            "fixedValue": "Shock wave, uses 50"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 261,
+          "y": 108,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_shockwave_push_uses_15",
+          "text": {
+            "fixedValue": "Shockwave push, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 169,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_power_rune_ability",
+          "image": "power_rune_ability.png",
+          "hoveredImage": "power_rune_ability_highlight.png",
+          "onClick": {
+            "name": "PowerRuneAbility"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 129,
+          "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_rune_tooltip_render",
+          "text": {
+            "fixedValue": "",
+            "name": "RuneTooltipRender"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 140,
+          "y": 106,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 4,
+      "sy": 4,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
