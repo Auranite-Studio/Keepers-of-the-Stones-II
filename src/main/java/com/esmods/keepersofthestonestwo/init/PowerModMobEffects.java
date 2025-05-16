@@ -69,6 +69,7 @@ import com.esmods.keepersofthestonestwo.procedures.DestructionMasterEndProcedure
 import com.esmods.keepersofthestonestwo.procedures.DarknessMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CrystalMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreationMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ColorsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ChaosDarkMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BlueFlameMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodMasterEndProcedure;
@@ -141,6 +142,7 @@ import com.esmods.keepersofthestonestwo.potion.DarknessMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CurseMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.ColorsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ChaosDarkMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BlueMagnetPowerMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BlueFlameMasterMobEffect;
@@ -226,6 +228,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> CURSE = REGISTRY.register("curse", () -> new CurseMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> HEAT_MASTER = REGISTRY.register("heat_master", () -> new HeatMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SHOCKWAVE_MASTER = REGISTRY.register("shockwave_master", () -> new ShockwaveMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> COLORS_MASTER = REGISTRY.register("colors_master", () -> new ColorsMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -364,6 +367,8 @@ public class PowerModMobEffects {
 			HeatMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(SHOCKWAVE_MASTER)) {
 			ShockwaveMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(COLORS_MASTER)) {
+			ColorsMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

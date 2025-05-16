@@ -12,7 +12,7 @@ public class RandomPowerGetProcedure {
 			return;
 		double RandomPower = 0;
 		String element = "";
-		RandomPower = Mth.nextInt(RandomSource.create(), 1, 48);
+		RandomPower = Mth.nextInt(RandomSource.create(), 1, 49);
 		if (RandomPower == 1) {
 			element = "fire";
 			if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0")) {
@@ -1330,6 +1330,34 @@ public class RandomPowerGetProcedure {
 				}
 			}
 		} else if (RandomPower == 48) {
+			element = "shockwave";
+			if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0")) {
+				if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals(element) && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals(element)) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.fake_element_name_first = element;
+						_vars.syncPlayerVariables(entity);
+					}
+				}
+			} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0") && (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("0")) {
+				if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals(element) && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals(element)) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.fake_element_name_second = element;
+						_vars.syncPlayerVariables(entity);
+					}
+				}
+			} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0") && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("0")
+					&& (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("0")) {
+				if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals(element) && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals(element)) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.fake_element_name_third = element;
+						_vars.syncPlayerVariables(entity);
+					}
+				}
+			}
+		} else if (RandomPower == 49) {
 			element = "shockwave";
 			if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0")) {
 				if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals(element) && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals(element)) {

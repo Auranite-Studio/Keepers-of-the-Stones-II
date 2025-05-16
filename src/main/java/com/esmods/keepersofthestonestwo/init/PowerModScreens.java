@@ -54,6 +54,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEarthScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesDestructionScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCrystalScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCreationScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesColorsScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesBlueFlameScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesBloodScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAnimalsScreen;
@@ -128,5 +129,6 @@ public class PowerModScreens {
 		event.register(PowerModMenus.KEEPERS_BOX_GUI_PART_5.get(), KeepersBoxGUIPart5Screen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_HEAT.get(), WheelAbilitiesHeatScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_SHOCKWAVE.get(), WheelAbilitiesShockwaveScreen::new);
+		event.register(PowerModMenus.WHEEL_ABILITIES_COLORS.get(), WheelAbilitiesColorsScreen::new);
 	}
 }

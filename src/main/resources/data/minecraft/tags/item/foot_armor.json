@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:colors_armor_boots",
     "power:shockwave_armor_boots",
     "power:heat_armor_boots",
     "power:filth_armor_boots",

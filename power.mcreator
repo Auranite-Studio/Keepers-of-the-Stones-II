@@ -33018,6 +33018,460 @@
         ]
       },
       "path": "~/Elements/Shockwave"
+    },
+    {
+      "name": "ColorsStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/colors_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ColorsStoneItem.java",
+          "src/main/resources/assets/power/models/item/colors_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsMaster",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/ColorsMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/colors_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/colors_armor_boots.json",
+          "src/main/resources/assets/power/models/item/colors_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/colors_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ColorsArmorItem.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "SpearBrash",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spear_brash",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpearBrashItem.java",
+          "src/main/resources/assets/power/models/item/spear_brash.json"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsElementGet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsStoneUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsMasterStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsMasterEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "WhiteBombKazhdyiTikPriPoliotieSnariada",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_bomb_kazhdyi_tik_pri_poliotie_snariada",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WhiteBombKazhdyiTikPriPoliotieSnariadaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "WhiteBomb",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_bomb",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/WhiteBombEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/WhiteBombRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "WhiteBombKoghdaSnariadPopadaietVSushchnost",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_bomb_koghda_snariad_popadaiet_v_sushchnost",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WhiteBombKoghdaSnariadPopadaietVSushchnostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsBattery",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/colors_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ColorsBatteryItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/ColorsBattery"
+    },
+    {
+      "name": "ColorsBatteryUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/ColorsBattery"
+    },
+    {
+      "name": "ColorsSpecialAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesColors",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_colors",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesColorsScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesColorsMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesColorsButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "Attack201",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_201",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack201Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "Attack202",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_202",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack202Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "Attack203",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_203",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack203Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "Attack204",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_204",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack204Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "ColorsStoneCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     }
   ],
   "variable_elements": [
@@ -33734,6 +34188,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "colors_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -34066,6 +34526,7 @@
       "~CUSTOM:EnergiumPickaxe"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:SpearBrash",
       "~CUSTOM:HeatKnife",
       "~CUSTOM:DarkSword",
       "~CUSTOM:GoldenDustStaff",
@@ -34166,7 +34627,8 @@
       "CUSTOM:SpiritStone",
       "CUSTOM:GoldenDustStone",
       "CUSTOM:HeatStone",
-      "CUSTOM:ShockwaveStone"
+      "CUSTOM:ShockwaveStone",
+      "CUSTOM:ColorsStone"
     ],
     "ITEMS:mod:elemental_batteries": [
       "CUSTOM:FireBattery",
@@ -34219,7 +34681,8 @@
       "CUSTOM:GoldenDustBattery",
       "CUSTOM:DarknessBattery",
       "CUSTOM:HeatBattery",
-      "CUSTOM:ShockwaveBattery"
+      "CUSTOM:ShockwaveBattery",
+      "CUSTOM:ColorsBattery"
     ],
     "ITEMS:power:power_lock_items_not_tools": [
       "CUSTOM:EnergiumIngot",
@@ -34262,6 +34725,7 @@
       "~CUSTOM:Shadow"
     ],
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:ColorsArmor.body",
       "~CUSTOM:ShockwaveArmor.body",
       "~CUSTOM:HeatArmor.body",
       "~CUSTOM:FilthArmor.body",
@@ -34325,6 +34789,7 @@
       "~CUSTOM:CursedStoneWall"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:ColorsArmor.legs",
       "~CUSTOM:ShockwaveArmor.legs",
       "~CUSTOM:HeatArmor.legs",
       "~CUSTOM:FilthArmor.legs",
@@ -34598,9 +35063,14 @@
       "CUSTOM:ShockwaveArmor.helmet",
       "CUSTOM:ShockwaveArmor.body",
       "CUSTOM:ShockwaveArmor.legs",
-      "CUSTOM:ShockwaveArmor.boots"
+      "CUSTOM:ShockwaveArmor.boots",
+      "CUSTOM:ColorsArmor.helmet",
+      "CUSTOM:ColorsArmor.body",
+      "CUSTOM:ColorsArmor.legs",
+      "CUSTOM:ColorsArmor.boots"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:ColorsArmor.helmet",
       "~CUSTOM:ShockwaveArmor.helmet",
       "~CUSTOM:HeatArmor.helmet",
       "~CUSTOM:FilthArmor.helmet",
@@ -34661,6 +35131,7 @@
       "CUSTOM:EnergiumGolem"
     ],
     "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:ColorsArmor.boots",
       "~CUSTOM:ShockwaveArmor.boots",
       "~CUSTOM:HeatArmor.boots",
       "~CUSTOM:FilthArmor.boots",
@@ -34861,6 +35332,7 @@
       "MindStone",
       "HeatStone",
       "ShockwaveStone",
+      "ColorsStone",
       "GoldenDustStone",
       "DarknessStone"
     ],
@@ -35013,14 +35485,15 @@
     "ru_ru": {
       "item.power.ether_battery": "Батарея",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
-      "item.power.ether_stone": "Камень эфира",
       "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Передача тёмной силы, расходует 80",
+      "item.power.ether_stone": "Камень эфира",
       "item.power.moon_battery": "Батарея",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
       "item.power.time_battery.description_0": "§aЗаряжена элементом:",
       "item.power.time_battery.description_1": "§9Время",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "item.power.energium_shovel": "Энергиумная лопата",
+      "item.power.colors_armor_chestplate": "Colors Chestplate",
       "effect.power.gigantization": "Гигантизация",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.lava_hammer": "Лавовый молот",
@@ -35033,8 +35506,8 @@
       "item.power.empty_rune.description_0": "§9Пустая",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 20",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
-      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "advancements.grant_your_power.title": "Даруй свою силу",
+      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "item.power.extra_star_points_rune_3": "Руна",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.cursed_keeper_spawn_egg": "Яйцо призыва проклятого хранителя",
@@ -35057,8 +35530,8 @@
       "block.power.amplifier_block": "Блок амплифера",
       "item.power.gravity_mace": "Гравитационная булава",
       "battery.desc.plants": "Зелень",
-      "item.power.music_armor_leggings": "Поножи мастера музыки",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
+      "item.power.music_armor_leggings": "Поножи мастера музыки",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Туманная невидимость, расходует 70",
       "item.power.music_battery": "Батарея",
       "item.power.darkness_battery": "Батарея",
@@ -35081,21 +35554,22 @@
       "effect.power.tornado_master": "Мастер торнадо",
       "effect.power.warp": "Искажение",
       "item.keeper_book.name": "Книга хранителя",
-      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
+      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
       "item.power.amplifier_ring": "Амплиферовое кольцо",
       "effect.power.curse": "Curse",
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Батарея",
+      "item.power.colors_armor_boots": "Colors Boots",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7Спецификация:",
-      "item.power.energium_axe": "Энергиумный топор",
       "item.power.addition_time_master_effect_rune_3.description_4": " §9+10 мин к эффекту мастера",
+      "item.power.energium_axe": "Энергиумный топор",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "Дымовая шашка, расходует 35",
       "item.power.addition_time_master_effect_rune_3.description_1": "§7Тип:",
       "item.power.addition_time_master_effect_rune_3.description_2": " §4Красный",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
-      "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Замедление, расходует 70",
       "item.power.addition_time_master_effect_rune_3.description_0": "§9Доп. время эффекта мастера III",
+      "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Замедление, расходует 70",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "block.power.cursed_stone_cracked_bricks_stairs": "Ступенки из проклятых потрескавшихся каменных кирпичей",
       "gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80": "Гипноз, расходует 80",
@@ -35148,6 +35622,7 @@
       "item.power.energium_hoe": "Энергиумная мотыга",
       "trim_material.power.copyrium_material": "Копириум",
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
+      "item.power.spear_brash": "Spear Brash",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
       "item.power.empty_battery.description_0": "§cНе заряжена",
       "item.power.amber_staff": "Посох янтаря",
@@ -35167,8 +35642,8 @@
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "item.power.empty_characteristics_card.description_0": "§7Пустая",
       "item.power.smoke_stone": "Камень дыма",
-      "effect.power.air_master": "Мастер воздуха",
       "item.power.blue_flame_sword": "Меч синего пламени",
+      "effect.power.air_master": "Мастер воздуха",
       "effect.power.miniaturization": "Миниатюризация",
       "item.power.raw_depleted_energium": "Рудный обеднённый энергиум",
       "item.minecraft.potion.effect.power_lock_potion": "Зелье блокировки силы",
@@ -35193,6 +35668,7 @@
       "item.power.metal_armor_boots": "Ботинки мастера металла",
       "item.power.mushrooms_battery": "Батарея",
       "item.power.blood_sickle": "Кровавый серп",
+      "item.power.colors_armor_helmet": "Colors Helmet",
       "item.power.ocean_armor_helmet": "Шлем мастера океана",
       "block.power.purple_mushroom": "Фиолетовый гриб",
       "item.power.mushrooms_armor_helmet": "Шлем мастера грибов",
@@ -35239,6 +35715,7 @@
       "effect.power.sound_master": "Мастер звука",
       "item.power.music_hope.desc": "bxkqq - Hope",
       "item.power.form_battery.description_1": "§9Форма",
+      "item.power.colors_stone": "Colors Stone",
       "item.power.blood_battery.description_1": "§9Кровь",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Телепортация",
       "item.power.blood_battery.description_0": "§aЗаряжена элементом:",
@@ -35324,6 +35801,8 @@
       "item.power.shockwave_stone": "Камень импульса",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Лавовая атака, расходует 35",
       "effect.power.blue_magnet_power": "Сила синего магнита",
+      "item.power.colors_battery.description_1": "§9Colors",
+      "item.power.colors_battery.description_0": "§aCharged with element:",
       "effect.power.plague_master": "Мастер чумы",
       "gui.power.wheel_abilities_spirit.tooltip_summon_spirit_uses_75": "Призыв духа, расходует 75",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
@@ -35627,12 +36106,14 @@
       "gui.power.keepers_box_gui_part_5.tooltip_plants": "Plants",
       "block.power.cursed_lamp": "Проклятая лампа",
       "block.power.cursed_ladder": "Проклятая лестница",
+      "effect.power.colors_master": "Master of Colors",
       "item.power.technology_battery.description_0": "§aЗаряжена элементом:",
       "item.power.thirst_armor_boots": "Ботинки тёмного мастера жажды",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Сфера небытия, сфера 20",
       "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Кровотечение, расходует 15",
       "effect.power.poison_master": "Мастер яда",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
       "death.attack.cursed_squire_ds.player": "%1$s  был убит Проклятый оруженосец",
       "item.power.copyrium_ingot": "Копириумный слиток",
       "item.power.horror_armor_chestplate": "Нагрудник тёмного мастера хоррора",
@@ -35685,6 +36166,7 @@
       "item.power.sun_stone": "Камень солнца",
       "item.power.lava_armor_chestplate": "Нагрудник мастера лавы",
       "item.power.poison_armor_helmet": "Шлем мастера яда",
+      "item.power.colors_armor_leggings": "Colors Leggings",
       "gui.power.wheel_abilities_plague.tooltip_plague_healing_uses_75": "Чумное исцеление, расходует 75",
       "effect.power.creation_master": "Мастер творения",
       "gui.power.wheel_abilities_mushrooms.tooltip_flying_spores_uses_15": "Летающие споры, расходует 15",
@@ -35952,6 +36434,7 @@
       "effect.power.form_master": "Мастер формы",
       "item.power.energium_key": "Энергиумный ключ",
       "item.power.music_disc_call_of_the_past.desc": "bxkqq - Call of the Past",
+      "item.power.colors_battery": "Battery",
       "entity.power.shadow": "Тень",
       "item.power.green_staff": "Зелёный посох",
       "gui.power.wheel_abilities_time.tooltip_acceleration_of_time_uses_30": "Ускорение времени, расходует 40",
@@ -36062,28 +36545,29 @@
     "en_us": {
       "item.power.ether_battery": "Battery",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
-      "item.power.ether_stone": "Ether Stone",
       "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Dark power transfer, uses 80",
+      "item.power.ether_stone": "Ether Stone",
       "item.power.moon_battery": "Battery",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.power.time_battery.description_0": "§aCharged with element:",
       "item.power.time_battery.description_1": "§9Time",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.energium_shovel": "Energium Shovel",
+      "item.power.colors_armor_chestplate": "Colors Chestplate",
       "effect.power.gigantization": "Gigantization",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.speed_armor_helmet": "Speed Helmet",
       "item.power.shockwave_armor_leggings": "Shockwave Leggings",
-      "gui.power.keepers_box_gui_part_3.tooltip_form": "Form",
       "item.power.blue_flame_armor_boots": "Blue Flame Boots",
+      "gui.power.keepers_box_gui_part_3.tooltip_form": "Form",
       "item.power.mushrooms_armor_leggings": "Mushrooms Leggings",
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
       "item.power.empty_rune.description_0": "§9Empty",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 20",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
-      "advancements.grant_your_power.title": "Grant your power",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
+      "advancements.grant_your_power.title": "Grant your power",
       "item.power.extra_star_points_rune_3": "Rune",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
@@ -36106,8 +36590,8 @@
       "item.power.gravity_mace": "Gravity Mace",
       "block.power.amplifier_block": "Amplifier Block",
       "battery.desc.plants": "Plants",
-      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "item.power.music_armor_leggings": "Music Leggings",
+      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
       "item.power.music_battery": "Battery",
       "item.power.darkness_battery": "Battery",
@@ -36130,21 +36614,22 @@
       "effect.power.tornado_master": "Master of Tornado",
       "effect.power.warp": "Warp",
       "item.keeper_book.name": "The Keeper\u0027s Book",
-      "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
+      "item.power.ether_armor_boots": "Ether Boots",
       "item.power.amplifier_ring": "Amplifier Ring",
       "effect.power.curse": "Curse",
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Battery",
+      "item.power.colors_armor_boots": "Colors Boots",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7Specifications:",
-      "item.power.energium_axe": "Energium Axe",
       "item.power.addition_time_master_effect_rune_3.description_4": " §9+10 min of master effect",
+      "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "Smoke bomb, uses 35",
       "item.power.addition_time_master_effect_rune_3.description_1": "§7Type:",
       "item.power.addition_time_master_effect_rune_3.description_2": " §4Red",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
-      "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Deceleration, uses 70",
       "item.power.addition_time_master_effect_rune_3.description_0": "§9Additional Master\u0027s Effect Time III",
+      "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Deceleration, uses 70",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "block.power.cursed_stone_cracked_bricks_stairs": "Cursed Stone Cracked Bricks",
       "gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80": "Hypnosis, uses 80",
@@ -36197,6 +36682,7 @@
       "item.power.energium_hoe": "Energium Hoe",
       "trim_material.power.copyrium_material": "Copyrium",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
+      "item.power.spear_brash": "Spear Brash",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "item.power.empty_battery.description_0": "§cNot charged",
       "item.power.amber_staff": "Amber Staff",
@@ -36216,8 +36702,8 @@
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.empty_characteristics_card.description_0": "§7Empty",
       "item.power.smoke_stone": "Smoke Stone",
-      "effect.power.air_master": "Master of the Air",
       "item.power.blue_flame_sword": "Blue Flame Sword",
+      "effect.power.air_master": "Master of the Air",
       "effect.power.miniaturization": "Miniaturization",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
@@ -36242,6 +36728,7 @@
       "item.power.metal_armor_boots": "Metal Boots",
       "item.power.mushrooms_battery": "Battery",
       "item.power.blood_sickle": "Blood Sickle",
+      "item.power.colors_armor_helmet": "Colors Helmet",
       "item.power.ocean_armor_helmet": "Ocean Helmet",
       "block.power.purple_mushroom": "Purple Mushroom",
       "item.power.mushrooms_armor_helmet": "Mushrooms Helmet",
@@ -36288,6 +36775,7 @@
       "effect.power.sound_master": "Master of Sound",
       "item.power.music_hope.desc": "bxkqq - Hope",
       "item.power.form_battery.description_1": "§9Form",
+      "item.power.colors_stone": "Colors Stone",
       "item.power.blood_battery.description_1": "§9Blood",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
       "item.power.blood_battery.description_0": "§aCharged with element:",
@@ -36373,6 +36861,8 @@
       "item.power.shockwave_stone": "Shockwave Stone",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Lava attack, uses 35",
       "effect.power.blue_magnet_power": "Blue Magnet Power",
+      "item.power.colors_battery.description_1": "§9Colors",
+      "item.power.colors_battery.description_0": "§aCharged with element:",
       "effect.power.plague_master": "Master of the Plague",
       "gui.power.wheel_abilities_spirit.tooltip_summon_spirit_uses_75": "Summon spirit, uses 75",
       "item.power.ice_armor_boots": "Ice Boots",
@@ -36675,12 +37165,14 @@
       "gui.power.keepers_box_gui_part_5.tooltip_plants": "Plants",
       "block.power.cursed_lamp": "Cursed Lamp",
       "block.power.cursed_ladder": "Cursed Ladder",
+      "effect.power.colors_master": "Master of Colors",
       "item.power.technology_battery.description_0": "§aCharged with element:",
       "item.power.thirst_armor_boots": "Thirst Boots",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Sphere of nothing, uses 20",
       "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
       "effect.power.poison_master": " Master of Poison",
       "item.power.fire_armor_boots": "Fire Boots",
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
       "death.attack.cursed_squire_ds.player": "%1$s was killed by an Cursed Squire",
       "item.power.copyrium_ingot": "Copyrium Ingot",
       "item.power.horror_armor_chestplate": "Horror Chestplate",
@@ -36733,6 +37225,7 @@
       "item.power.sun_stone": "Sun Stone",
       "item.power.lava_armor_chestplate": "Lava Chestplate",
       "item.power.poison_armor_helmet": "Poison Helmet",
+      "item.power.colors_armor_leggings": "Colors Leggings",
       "gui.power.wheel_abilities_plague.tooltip_plague_healing_uses_75": "Plague healing, uses 75",
       "effect.power.creation_master": "Master of Creation",
       "gui.power.wheel_abilities_mushrooms.tooltip_flying_spores_uses_15": "Flying spores, uses 15",
@@ -37001,6 +37494,7 @@
       "effect.power.form_master": "Master of Form ",
       "item.power.energium_key": "Energium Key",
       "item.power.music_disc_call_of_the_past.desc": "bxkqq - Call of the Past",
+      "item.power.colors_battery": "Battery",
       "entity.power.shadow": "Shadow",
       "item.power.green_staff": "Green Staff",
       "gui.power.wheel_abilities_time.tooltip_acceleration_of_time_uses_30": "Acceleration of time, uses 40",
@@ -37389,6 +37883,10 @@
                       {
                         "name": "Shockwave",
                         "children": []
+                      },
+                      {
+                        "name": "Colors",
+                        "children": []
                       }
                     ]
                   }
@@ -37629,6 +38127,10 @@
           {
             "name": "Shockwave",
             "children": []
+          },
+          {
+            "name": "Colors",
+            "children": []
           }
         ]
       },
@@ -37848,6 +38350,10 @@
               },
               {
                 "name": "ShockwaveBattery",
+                "children": []
+              },
+              {
+                "name": "ColorsBattery",
                 "children": []
               }
             ]

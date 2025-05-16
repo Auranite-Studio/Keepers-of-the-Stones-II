@@ -48,17 +48,6 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_coming_element2",
-          "image": "coming_element.png",
-          "hoveredImage": "coming_element_highlight.png",
-          "x": 175,
-          "y": 95,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
           "name": "imagebutton_coming_element3",
           "image": "coming_element.png",
           "hoveredImage": "coming_element_highlight.png",
@@ -213,6 +202,37 @@
           "width": 24,
           "height": 24,
           "x": 148,
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_colors_element",
+          "image": "colors_element.png",
+          "hoveredImage": "colors_element_highlight.png",
+          "onClick": {
+            "name": "ColorsElementGet"
+          },
+          "displayCondition": {
+            "name": "ColorsStoneCheck"
+          },
+          "x": 175,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_colors",
+          "text": {
+            "fixedValue": "Colors"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 171,
           "y": 91,
           "locked": false
         }

@@ -251,6 +251,7 @@ public class PowerModVariables {
 		public double cpapi_ver = 21.0;
 		public boolean heat_stone = false;
 		public boolean shockwave_stone = false;
+		public boolean colors_stone = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -318,6 +319,7 @@ public class PowerModVariables {
 			cpapi_ver = nbt.getDouble("cpapi_ver");
 			heat_stone = nbt.getBoolean("heat_stone");
 			shockwave_stone = nbt.getBoolean("shockwave_stone");
+			colors_stone = nbt.getBoolean("colors_stone");
 		}
 
 		@Override
@@ -381,6 +383,7 @@ public class PowerModVariables {
 			nbt.putDouble("cpapi_ver", cpapi_ver);
 			nbt.putBoolean("heat_stone", heat_stone);
 			nbt.putBoolean("shockwave_stone", shockwave_stone);
+			nbt.putBoolean("colors_stone", colors_stone);
 			return nbt;
 		}
 
