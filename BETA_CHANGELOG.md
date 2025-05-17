@@ -6,10 +6,11 @@
 - The keeper's box can now hold more than 48 elements
 
 **API changes**
-- *N/A*
+- Colorful Powers API has been updated to 26
+- Added missing rune-related tags
 
 **Bugfixes**
-- [Bugfix] 
+- [Bugfix] Fixed a bug that caused the effects of red runes to not reset after death
 
 **Known issues**
 - *N/A*
