@@ -19,6 +19,7 @@ import net.minecraft.core.BlockPos;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerRuneAbilityProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
@@ -102,6 +103,10 @@ public record WheelAbilitiesFireButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 8) {
 
 			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 9) {
+
+			PowerRuneAbilityProcedure.execute(entity);
 		}
 	}
 

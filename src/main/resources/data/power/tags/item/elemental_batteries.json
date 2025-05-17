@@ -49,6 +49,8 @@
     "power:form_battery",
     "power:mind_battery",
     "power:golden_dust_battery",
-    "power:darkness_battery"
+    "power:darkness_battery",
+    "power:heat_battery",
+    "power:shockwave_battery"
   ]
 }

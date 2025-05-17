@@ -27,8 +27,10 @@ import com.esmods.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SoundBombProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SmokeMusketProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SmokeBombProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.ShockwaveGunProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowSphereEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowEntity;
+import com.esmods.keepersofthestonestwo.entity.RedMagnetEntity;
 import com.esmods.keepersofthestonestwo.entity.RainDropProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.PoisonousThornEntity;
 import com.esmods.keepersofthestonestwo.entity.PoisonPitEntity;
@@ -60,6 +62,7 @@ import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
 import com.esmods.keepersofthestonestwo.entity.CopperAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.BlueMagnetEntity;
 import com.esmods.keepersofthestonestwo.entity.BlueMagicFireballProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.BlackHoleEntity;
 import com.esmods.keepersofthestonestwo.entity.BallLightningProjectileEntity;
@@ -171,6 +174,12 @@ public class PowerModEntities {
 			EntityType.Builder.<ExampleMasterEntity>of(ExampleMasterEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<RedMagnetEntity>> RED_MAGNET = register("red_magnet",
+			EntityType.Builder.<RedMagnetEntity>of(RedMagnetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<BlueMagnetEntity>> BLUE_MAGNET = register("blue_magnet",
+			EntityType.Builder.<BlueMagnetEntity>of(BlueMagnetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ShockwaveGunProjectileEntity>> SHOCKWAVE_GUN_PROJECTILE = register("shockwave_gun_projectile",
+			EntityType.Builder.<ShockwaveGunProjectileEntity>of(ShockwaveGunProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.1f, 0.1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -190,6 +199,8 @@ public class PowerModEntities {
 		CursedSquireEntity.init(event);
 		CursedKeeperEntity.init(event);
 		ExampleMasterEntity.init(event);
+		RedMagnetEntity.init(event);
+		BlueMagnetEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -204,5 +215,7 @@ public class PowerModEntities {
 		event.put(CURSED_SQUIRE.get(), CursedSquireEntity.createAttributes().build());
 		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
 		event.put(EXAMPLE_MASTER.get(), ExampleMasterEntity.createAttributes().build());
+		event.put(RED_MAGNET.get(), RedMagnetEntity.createAttributes().build());
+		event.put(BLUE_MAGNET.get(), BlueMagnetEntity.createAttributes().build());
 	}
 }

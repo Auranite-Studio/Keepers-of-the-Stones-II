@@ -40,6 +40,9 @@
       },
       {
         "value": "CUSTOM:EnergiumArmor.boots"
+      },
+      {
+        "value": "CUSTOM:EnergiumShield"
       }
     ],
     "isTreasureEnchantment": false,

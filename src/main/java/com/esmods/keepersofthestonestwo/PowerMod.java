@@ -26,6 +26,7 @@ import java.util.Collection;
 import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.init.PowerModVillagerProfessions;
 import com.esmods.keepersofthestonestwo.init.PowerModTabs;
 import com.esmods.keepersofthestonestwo.init.PowerModSounds;
 import com.esmods.keepersofthestonestwo.init.PowerModPotions;
@@ -60,6 +61,7 @@ public class PowerMod {
 		PowerModMobEffects.REGISTRY.register(modEventBus);
 		PowerModMenus.REGISTRY.register(modEventBus);
 		PowerModParticleTypes.REGISTRY.register(modEventBus);
+		PowerModVillagerProfessions.PROFESSIONS.register(modEventBus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

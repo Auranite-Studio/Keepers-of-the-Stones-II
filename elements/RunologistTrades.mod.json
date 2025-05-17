@@ -1,0 +1,69 @@
+{
+  "_fv": 77,
+  "_type": "villagertrade",
+  "definition": {
+    "tradeEntries": [
+      {
+        "villagerProfession": {
+          "value": "CUSTOM:Runologist"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "CUSTOM:EmptyRune"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 32,
+            "offer": {
+              "value": "CUSTOM:ExtraStarPointsRune1"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 1,
+            "xp": 10,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:EmptyRune"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 32,
+            "offer": {
+              "value": "CUSTOM:ReducedStoneRechargeTimeRune1"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 1,
+            "xp": 10,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:EmptyRune"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 32,
+            "offer": {
+              "value": "CUSTOM:AdditionTimeMasterEffectRune1"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 1,
+            "xp": 10,
+            "priceMultiplier": 0.05
+          }
+        ]
+      }
+    ]
+  }
+}

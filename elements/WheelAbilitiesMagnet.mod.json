@@ -113,6 +113,38 @@
         }
       },
       {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_power_rune_ability",
+          "image": "power_rune_ability.png",
+          "hoveredImage": "power_rune_ability_highlight.png",
+          "onClick": {
+            "name": "PowerRuneAbility"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 129,
+          "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_rune_tooltip_render",
+          "text": {
+            "fixedValue": "",
+            "name": "RuneTooltipRender"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 140,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
         "type": "image",
         "data": {
           "image": "wheel_of_abilities.png",
@@ -192,7 +224,7 @@
         "data": {
           "name": "tooltip_negative_charge_uses_30",
           "text": {
-            "fixedValue": "Negative charge, uses 30"
+            "fixedValue": "Negative magnet, uses 50"
           },
           "width": 24,
           "height": 24,
@@ -206,7 +238,7 @@
         "data": {
           "name": "tooltip_positive_charge_uses_30",
           "text": {
-            "fixedValue": "Positive charge, uses 30"
+            "fixedValue": "Positive magnet, uses 50"
           },
           "width": 24,
           "height": 24,

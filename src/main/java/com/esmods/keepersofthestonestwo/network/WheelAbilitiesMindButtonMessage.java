@@ -22,6 +22,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMindMenu;
 import com.esmods.keepersofthestonestwo.procedures.RemoteControl3Procedure;
 import com.esmods.keepersofthestonestwo.procedures.RemoteControl2Procedure;
 import com.esmods.keepersofthestonestwo.procedures.RemoteControl1Procedure;
+import com.esmods.keepersofthestonestwo.procedures.PowerRuneAbilityProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
@@ -95,21 +96,25 @@ public record WheelAbilitiesMindButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 6) {
 
-			Attack181Procedure.execute(entity);
+			PowerRuneAbilityProcedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			Attack182Procedure.execute(entity);
+			Attack181Procedure.execute(entity);
 		}
 		if (buttonID == 8) {
 
-			RemoteControl1Procedure.execute(entity);
+			Attack182Procedure.execute(entity);
 		}
 		if (buttonID == 9) {
 
-			RemoteControl2Procedure.execute(entity);
+			RemoteControl1Procedure.execute(entity);
 		}
 		if (buttonID == 10) {
+
+			RemoteControl2Procedure.execute(entity);
+		}
+		if (buttonID == 11) {
 
 			RemoteControl3Procedure.execute(entity);
 		}

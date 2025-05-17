@@ -13,11 +13,14 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
 import java.util.HashMap;
+import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSunMenu;
+import com.esmods.keepersofthestonestwo.procedures.RuneTooltipRenderProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
@@ -38,6 +41,7 @@ public class WheelAbilitiesSunScreen extends AbstractContainerScreen<WheelAbilit
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
+	ImageButton imagebutton_power_rune_ability;
 	ImageButton imagebutton_sun_ray;
 	ImageButton imagebutton_sun_explosion;
 	ImageButton imagebutton_sun_healing;
@@ -57,6 +61,12 @@ public class WheelAbilitiesSunScreen extends AbstractContainerScreen<WheelAbilit
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 82 && mouseY < topPos + 106) {
+			String hoverText = RuneTooltipRenderProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+		}
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15"), mouseX, mouseY);
 		}
@@ -182,10 +192,25 @@ public class WheelAbilitiesSunScreen extends AbstractContainerScreen<WheelAbilit
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
+		imagebutton_power_rune_ability = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/power_rune_ability.png"), ResourceLocation.parse("power:textures/screens/power_rune_ability_highlight.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbilitiesSunButtonMessage(6, x, y, z));
+						WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 6, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_power_rune_ability", imagebutton_power_rune_ability);
+		this.addRenderableWidget(imagebutton_power_rune_ability);
 		imagebutton_sun_ray = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/sun_ray.png"), ResourceLocation.parse("power:textures/screens/sun_ray_highlight.png")), e -> {
 			if (PowerLockCheckProcedure.execute(entity)) {
-				PacketDistributor.sendToServer(new WheelAbilitiesSunButtonMessage(6, x, y, z));
-				WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 6, x, y, z);
+				PacketDistributor.sendToServer(new WheelAbilitiesSunButtonMessage(7, x, y, z));
+				WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		}) {
 			@Override
@@ -199,8 +224,8 @@ public class WheelAbilitiesSunScreen extends AbstractContainerScreen<WheelAbilit
 		imagebutton_sun_explosion = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/sun_explosion.png"), ResourceLocation.parse("power:textures/screens/sun_explosion_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesSunButtonMessage(7, x, y, z));
-						WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 7, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbilitiesSunButtonMessage(8, x, y, z));
+						WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
@@ -214,8 +239,8 @@ public class WheelAbilitiesSunScreen extends AbstractContainerScreen<WheelAbilit
 		imagebutton_sun_healing = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/sun_healing.png"), ResourceLocation.parse("power:textures/screens/sun_healing_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesSunButtonMessage(8, x, y, z));
-						WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 8, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbilitiesSunButtonMessage(9, x, y, z));
+						WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
 			@Override

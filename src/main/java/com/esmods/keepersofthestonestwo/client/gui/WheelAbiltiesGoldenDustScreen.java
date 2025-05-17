@@ -13,11 +13,14 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
 import java.util.HashMap;
+import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbiltiesGoldenDustMenu;
+import com.esmods.keepersofthestonestwo.procedures.RuneTooltipRenderProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
@@ -38,6 +41,7 @@ public class WheelAbiltiesGoldenDustScreen extends AbstractContainerScreen<Wheel
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
+	ImageButton imagebutton_power_rune_ability;
 	ImageButton imagebutton_golden_dust_attack;
 	ImageButton imagebutton_random_power;
 	ImageButton imagebutton_golden_dust_regeneration;
@@ -57,6 +61,12 @@ public class WheelAbiltiesGoldenDustScreen extends AbstractContainerScreen<Wheel
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 82 && mouseY < topPos + 106) {
+			String hoverText = RuneTooltipRenderProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+		}
 		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 24 && mouseY < topPos + 48) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilties_golden_dust.tooltip_golden_dust_attack_uses_15"), mouseX, mouseY);
 		}
@@ -182,8 +192,8 @@ public class WheelAbiltiesGoldenDustScreen extends AbstractContainerScreen<Wheel
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_golden_dust_attack = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
-				new WidgetSprites(ResourceLocation.parse("power:textures/screens/golden_dust_attack.png"), ResourceLocation.parse("power:textures/screens/golden_dust_attack_highlight.png")), e -> {
+		imagebutton_power_rune_ability = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/power_rune_ability.png"), ResourceLocation.parse("power:textures/screens/power_rune_ability_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbiltiesGoldenDustButtonMessage(6, x, y, z));
 						WheelAbiltiesGoldenDustButtonMessage.handleButtonAction(entity, 6, x, y, z);
@@ -195,13 +205,28 @@ public class WheelAbiltiesGoldenDustScreen extends AbstractContainerScreen<Wheel
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
+		guistate.put("button:imagebutton_power_rune_ability", imagebutton_power_rune_ability);
+		this.addRenderableWidget(imagebutton_power_rune_ability);
+		imagebutton_golden_dust_attack = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/golden_dust_attack.png"), ResourceLocation.parse("power:textures/screens/golden_dust_attack_highlight.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbiltiesGoldenDustButtonMessage(7, x, y, z));
+						WheelAbiltiesGoldenDustButtonMessage.handleButtonAction(entity, 7, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_golden_dust_attack", imagebutton_golden_dust_attack);
 		this.addRenderableWidget(imagebutton_golden_dust_attack);
 		imagebutton_random_power = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/random_power.png"), ResourceLocation.parse("power:textures/screens/random_power_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbiltiesGoldenDustButtonMessage(7, x, y, z));
-						WheelAbiltiesGoldenDustButtonMessage.handleButtonAction(entity, 7, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbiltiesGoldenDustButtonMessage(8, x, y, z));
+						WheelAbiltiesGoldenDustButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
@@ -215,8 +240,8 @@ public class WheelAbiltiesGoldenDustScreen extends AbstractContainerScreen<Wheel
 		imagebutton_golden_dust_regeneration = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/golden_dust_regeneration.png"), ResourceLocation.parse("power:textures/screens/golden_dust_regeneration_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbiltiesGoldenDustButtonMessage(8, x, y, z));
-						WheelAbiltiesGoldenDustButtonMessage.handleButtonAction(entity, 8, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbiltiesGoldenDustButtonMessage(9, x, y, z));
+						WheelAbiltiesGoldenDustButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
 			@Override

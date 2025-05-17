@@ -10,7 +10,7 @@
 | 1.20.6     |  NEOFORGE |  NSL    |
 | 1.20.4     |  NEOFORGE |  NSL    |
 | 1.20.2     |  NEOFORGE | Skipped |
-| 1.20.1     |   FORGE   |  LTS    |
+| 1.20.1     |   FORGE   |  NSL    |
 | 1.19.4     |   FORGE   | Skipped |
 | 1.19.2     |   FORGE   |  NSL    |
 

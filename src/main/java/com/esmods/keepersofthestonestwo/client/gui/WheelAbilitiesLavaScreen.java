@@ -13,11 +13,14 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
 import java.util.HashMap;
+import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLavaMenu;
+import com.esmods.keepersofthestonestwo.procedures.RuneTooltipRenderProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
@@ -38,6 +41,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
+	ImageButton imagebutton_power_rune_ability;
 	ImageButton imagebutton_lava_outburst;
 	ImageButton imagebutton_lava_attack;
 	ImageButton imagebutton_melting;
@@ -57,6 +61,12 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 82 && mouseY < topPos + 106) {
+			String hoverText = RuneTooltipRenderProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+		}
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10"), mouseX, mouseY);
 		}
@@ -182,8 +192,8 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_lava_outburst = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
-				new WidgetSprites(ResourceLocation.parse("power:textures/screens/lava_outburst.png"), ResourceLocation.parse("power:textures/screens/lava_outburst_highligh.png")), e -> {
+		imagebutton_power_rune_ability = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/power_rune_ability.png"), ResourceLocation.parse("power:textures/screens/power_rune_ability_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(6, x, y, z));
 						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 6, x, y, z);
@@ -195,13 +205,28 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
+		guistate.put("button:imagebutton_power_rune_ability", imagebutton_power_rune_ability);
+		this.addRenderableWidget(imagebutton_power_rune_ability);
+		imagebutton_lava_outburst = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/lava_outburst.png"), ResourceLocation.parse("power:textures/screens/lava_outburst_highligh.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(7, x, y, z));
+						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 7, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_lava_outburst", imagebutton_lava_outburst);
 		this.addRenderableWidget(imagebutton_lava_outburst);
 		imagebutton_lava_attack = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/lava_attack.png"), ResourceLocation.parse("power:textures/screens/lava_attack_highligh.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(7, x, y, z));
-						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 7, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(8, x, y, z));
+						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
@@ -214,8 +239,8 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		this.addRenderableWidget(imagebutton_lava_attack);
 		imagebutton_melting = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/melting.png"), ResourceLocation.parse("power:textures/screens/melting_highligh.png")), e -> {
 			if (PowerLockCheckProcedure.execute(entity)) {
-				PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(8, x, y, z));
-				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 8, x, y, z);
+				PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(9, x, y, z));
+				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 9, x, y, z);
 			}
 		}) {
 			@Override

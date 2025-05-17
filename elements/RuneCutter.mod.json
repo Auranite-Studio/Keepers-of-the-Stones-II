@@ -42,7 +42,11 @@
     "resistance": 235.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Items"
+      }
+    ],
     "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""

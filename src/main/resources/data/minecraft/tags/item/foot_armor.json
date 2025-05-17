@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "power:shockwave_armor_boots",
+    "power:heat_armor_boots",
     "power:filth_armor_boots",
     "power:horror_armor_boots",
     "power:chaos_armor_boots",
