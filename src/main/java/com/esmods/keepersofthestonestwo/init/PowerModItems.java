@@ -68,6 +68,10 @@ import com.esmods.keepersofthestonestwo.item.SmokeStoneItem;
 import com.esmods.keepersofthestonestwo.item.SmokeMusketItem;
 import com.esmods.keepersofthestonestwo.item.SmokeBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SmokeArmorItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveStoneItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveGunItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveBatteryItem;
+import com.esmods.keepersofthestonestwo.item.ShockwaveArmorItem;
 import com.esmods.keepersofthestonestwo.item.ShadowStoneItem;
 import com.esmods.keepersofthestonestwo.item.ShadowScytheItem;
 import com.esmods.keepersofthestonestwo.item.ShadowBatteryItem;
@@ -77,6 +81,9 @@ import com.esmods.keepersofthestonestwo.item.SandSaberItem;
 import com.esmods.keepersofthestonestwo.item.SandBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SandArmorItem;
 import com.esmods.keepersofthestonestwo.item.RightMetalGauntletItem;
+import com.esmods.keepersofthestonestwo.item.ReducedStoneRechargeTimeRune3Item;
+import com.esmods.keepersofthestonestwo.item.ReducedStoneRechargeTimeRune2Item;
+import com.esmods.keepersofthestonestwo.item.ReducedStoneRechargeTimeRune1Item;
 import com.esmods.keepersofthestonestwo.item.RawEnergiumItem;
 import com.esmods.keepersofthestonestwo.item.RawDepletedEnergiumItem;
 import com.esmods.keepersofthestonestwo.item.RawCopyriumItem;
@@ -157,6 +164,10 @@ import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
 import com.esmods.keepersofthestonestwo.item.IceArmorItem;
 import com.esmods.keepersofthestonestwo.item.HorrorArmorItem;
 import com.esmods.keepersofthestonestwo.item.HighspeedDaggerItem;
+import com.esmods.keepersofthestonestwo.item.HeatStoneItem;
+import com.esmods.keepersofthestonestwo.item.HeatKnifeItem;
+import com.esmods.keepersofthestonestwo.item.HeatBatteryItem;
+import com.esmods.keepersofthestonestwo.item.HeatArmorItem;
 import com.esmods.keepersofthestonestwo.item.GreenStaffItem;
 import com.esmods.keepersofthestonestwo.item.GravityStoneItem;
 import com.esmods.keepersofthestonestwo.item.GravityMaceItem;
@@ -195,6 +206,7 @@ import com.esmods.keepersofthestonestwo.item.EnergyArmorItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumUpgradeSmithingTemplateItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumSwordItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumShovelItem;
+import com.esmods.keepersofthestonestwo.item.EnergiumShieldItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumPickaxeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumKeyItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumIngotItem;
@@ -203,6 +215,7 @@ import com.esmods.keepersofthestonestwo.item.EnergiumDustItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumCoreItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumAxeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumArmorItem;
+import com.esmods.keepersofthestonestwo.item.EmptyRuneItem;
 import com.esmods.keepersofthestonestwo.item.EmptyCharacteristicsCardItem;
 import com.esmods.keepersofthestonestwo.item.EmptyBatteryItem;
 import com.esmods.keepersofthestonestwo.item.EarthStoneItem;
@@ -259,6 +272,9 @@ import com.esmods.keepersofthestonestwo.item.AirStoneItem;
 import com.esmods.keepersofthestonestwo.item.AirRapierItem;
 import com.esmods.keepersofthestonestwo.item.AirBatteryItem;
 import com.esmods.keepersofthestonestwo.item.AirArmorItem;
+import com.esmods.keepersofthestonestwo.item.AdditionTimeMasterEffectRune3Item;
+import com.esmods.keepersofthestonestwo.item.AdditionTimeMasterEffectRune2Item;
+import com.esmods.keepersofthestonestwo.item.AdditionTimeMasterEffectRune1Item;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class PowerModItems {
@@ -714,6 +730,28 @@ public class PowerModItems {
 	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_2 = register("extra_star_points_rune_2", ExtraStarPointsRune2Item::new);
 	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_3 = register("extra_star_points_rune_3", ExtraStarPointsRune3Item::new);
 	public static final DeferredItem<Item> MUSIC_HOPE = register("music_hope", MusicHopeItem::new);
+	public static final DeferredItem<Item> ENERGIUM_SHIELD = register("energium_shield", EnergiumShieldItem::new);
+	public static final DeferredItem<Item> EMPTY_RUNE = register("empty_rune", EmptyRuneItem::new);
+	public static final DeferredItem<Item> REDUCED_STONE_RECHARGE_TIME_RUNE_1 = register("reduced_stone_recharge_time_rune_1", ReducedStoneRechargeTimeRune1Item::new);
+	public static final DeferredItem<Item> REDUCED_STONE_RECHARGE_TIME_RUNE_2 = register("reduced_stone_recharge_time_rune_2", ReducedStoneRechargeTimeRune2Item::new);
+	public static final DeferredItem<Item> REDUCED_STONE_RECHARGE_TIME_RUNE_3 = register("reduced_stone_recharge_time_rune_3", ReducedStoneRechargeTimeRune3Item::new);
+	public static final DeferredItem<Item> ADDITION_TIME_MASTER_EFFECT_RUNE_1 = register("addition_time_master_effect_rune_1", AdditionTimeMasterEffectRune1Item::new);
+	public static final DeferredItem<Item> ADDITION_TIME_MASTER_EFFECT_RUNE_2 = register("addition_time_master_effect_rune_2", AdditionTimeMasterEffectRune2Item::new);
+	public static final DeferredItem<Item> ADDITION_TIME_MASTER_EFFECT_RUNE_3 = register("addition_time_master_effect_rune_3", AdditionTimeMasterEffectRune3Item::new);
+	public static final DeferredItem<Item> HEAT_STONE = register("heat_stone", HeatStoneItem::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_HELMET = register("heat_armor_helmet", HeatArmorItem.Helmet::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_CHESTPLATE = register("heat_armor_chestplate", HeatArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_LEGGINGS = register("heat_armor_leggings", HeatArmorItem.Leggings::new);
+	public static final DeferredItem<Item> HEAT_ARMOR_BOOTS = register("heat_armor_boots", HeatArmorItem.Boots::new);
+	public static final DeferredItem<Item> HEAT_KNIFE = register("heat_knife", HeatKnifeItem::new);
+	public static final DeferredItem<Item> HEAT_BATTERY = register("heat_battery", HeatBatteryItem::new);
+	public static final DeferredItem<Item> SHOCKWAVE_STONE = register("shockwave_stone", ShockwaveStoneItem::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_HELMET = register("shockwave_armor_helmet", ShockwaveArmorItem.Helmet::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_CHESTPLATE = register("shockwave_armor_chestplate", ShockwaveArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_LEGGINGS = register("shockwave_armor_leggings", ShockwaveArmorItem.Leggings::new);
+	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_BOOTS = register("shockwave_armor_boots", ShockwaveArmorItem.Boots::new);
+	public static final DeferredItem<Item> SHOCKWAVE_GUN = register("shockwave_gun", ShockwaveGunItem::new);
+	public static final DeferredItem<Item> SHOCKWAVE_BATTERY = register("shockwave_battery", ShockwaveBatteryItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -778,6 +816,8 @@ public class PowerModItems {
 			event.register(ResourceLocation.parse("power:darkness_stone/recharge"), DarknessStoneItem.RechargeProperty.MAP_CODEC);
 			event.register(ResourceLocation.parse("power:energy_stone/recharge"), EnergyStoneItem.RechargeProperty.MAP_CODEC);
 			event.register(ResourceLocation.parse("power:spirit_stone/recharge"), SpiritStoneItem.RechargeProperty.MAP_CODEC);
+			event.register(ResourceLocation.parse("power:heat_stone/rechage"), HeatStoneItem.RechageProperty.MAP_CODEC);
+			event.register(ResourceLocation.parse("power:shockwave_stone/rechage"), ShockwaveStoneItem.RechageProperty.MAP_CODEC);
 		}
 	}
 }

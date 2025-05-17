@@ -38,7 +38,7 @@ public class DropRunesAfterDeathProcedure {
 		ItemStack copySlot2 = ItemStack.EMPTY;
 		ItemStack copySlot3 = ItemStack.EMPTY;
 		if (entity instanceof Player) {
-			if (!world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY)) {
+			if (!(world instanceof ServerLevel _serverLevelGR1 && _serverLevelGR1.getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY))) {
 				if (!(ItemStack.EMPTY.getItem() == entity.getData(PowerModVariables.PLAYER_VARIABLES).blue_rune_slot.getItem())) {
 					copySlot = entity.getData(PowerModVariables.PLAYER_VARIABLES).blue_rune_slot.copy();
 					{

@@ -217,7 +217,7 @@ public class WheelAbilitiesBlueFlameScreen extends AbstractContainerScreen<Wheel
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (PowerLockCheckProcedure.execute(entity))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_blue_flamethrower", imagebutton_blue_flamethrower);

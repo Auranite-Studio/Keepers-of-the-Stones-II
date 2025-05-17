@@ -1,29 +1,38 @@
 
 package com.esmods.keepersofthestonestwo.item;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.component.BlocksAttacks;
 import net.minecraft.world.item.ShieldItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.component.DataComponents;
+
+import java.util.Optional;
+import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class EnergiumShieldItem extends ShieldItem {
-	public EnergiumShieldItem() {
-		super(new Item.Properties().durability(778));
+	public EnergiumShieldItem(Item.Properties properties) {
+		super(properties.component(DataComponents.BLOCKS_ATTACKS, createShieldBlockingComponent()).durability(778).repairable(TagKey.create(Registries.ITEM, ResourceLocation.parse("power:energium_shield_repair_items"))));
+	}
+
+	private static BlocksAttacks createShieldBlockingComponent() {
+		return new BlocksAttacks(1.2f, 0.5f, List.of(new BlocksAttacks.DamageReduction(90.0f, Optional.empty(), 0.0f, 1.0f)), new BlocksAttacks.ItemDamageFunction(4.0f, 1.0f, 1.0f), Optional.of(DamageTypeTags.BYPASSES_SHIELD),
+				Optional.of(SoundEvents.SHIELD_BLOCK), Optional.of(SoundEvents.SHIELD_BREAK));
 	}
 
 	@Override
-	public boolean isValidRepairItem(ItemStack itemstack, ItemStack repairitem) {
-		return Ingredient.of(new ItemStack(PowerModItems.ENERGIUM_INGOT.get())).test(repairitem);
-	}
-
-	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
+	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
+		super.inventoryTick(itemstack, world, entity, slot);
 		EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 	}
 }
