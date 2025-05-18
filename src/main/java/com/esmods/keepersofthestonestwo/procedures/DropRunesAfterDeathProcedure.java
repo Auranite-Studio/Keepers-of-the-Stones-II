@@ -136,7 +136,7 @@ public class DropRunesAfterDeathProcedure {
 						_vars.syncPlayerVariables(entity);
 					}
 					if (world instanceof ServerLevel _level) {
-						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, copySlot);
+						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, copySlot3);
 						entityToSpawn.setPickUpDelay(10);
 						_level.addFreshEntity(entityToSpawn);
 					}

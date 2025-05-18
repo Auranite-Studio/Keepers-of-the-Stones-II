@@ -140,6 +140,76 @@
           "y": 56,
           "locked": true
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "protection_rune.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "GreenRune1Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 39,
+          "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "spin_rune.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "GreenRune2Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 39,
+          "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dodging_rune.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "GreenRune3Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 39,
+          "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "invisibility_rune.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "GreenRune4Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 39,
+          "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "healing_rune.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "GreenRune5Check"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 39,
+          "y": 56,
+          "locked": true
+        }
       }
     ],
     "baseTexture": "",

@@ -33,6 +33,9 @@ public class AbilityKeyPressed2TickProcedure {
 			return;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).use_ability_key_var) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).ability_block == false && !(getEntityGameType(entity) == GameType.SPECTATOR)) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("rune_ability")) {
+					RuneAbilitiesUsingProcedure.execute(entity);
+				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("heat") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("heat")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("heat") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("heat")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("heat") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("heat")) {

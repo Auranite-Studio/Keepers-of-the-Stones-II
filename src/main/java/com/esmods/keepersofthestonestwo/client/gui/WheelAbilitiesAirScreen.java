@@ -70,7 +70,7 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points"), mouseX, mouseY);
 		}
 		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 82 && mouseY < topPos + 106) {
-			String hoverText = RuneTooltipRenderProcedure.execute();
+			String hoverText = RuneTooltipRenderProcedure.execute(entity);
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}

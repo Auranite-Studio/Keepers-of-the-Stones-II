@@ -19,7 +19,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 98,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -37,7 +37,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 107,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -55,7 +55,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 170,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -73,7 +73,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 179,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -91,7 +91,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 161,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -109,7 +109,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 152,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -127,7 +127,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 116,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -145,7 +145,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 125,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -163,7 +163,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 143,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -181,7 +181,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 62,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -198,7 +198,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 53,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -216,7 +216,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 80,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -234,7 +234,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 134,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -252,7 +252,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 71,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -270,7 +270,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 89,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -288,7 +288,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 188,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -306,7 +306,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 197,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -324,7 +324,7 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 206,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -342,7 +342,25 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 215,
-          "locked": false
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_rune_active_debug",
+          "text": {
+            "fixedValue": "",
+            "name": "RuneActiveDebug"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 224,
+          "locked": true
         }
       }
     ],

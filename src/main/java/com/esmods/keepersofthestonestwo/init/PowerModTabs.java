@@ -183,6 +183,11 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_1.get());
 				tabData.accept(PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_2.get());
 				tabData.accept(PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_3.get());
+				tabData.accept(PowerModItems.PROTECTION_RUNE.get());
+				tabData.accept(PowerModItems.SPIN_RUNE.get());
+				tabData.accept(PowerModItems.DODGING_RUNE.get());
+				tabData.accept(PowerModItems.INVISIBILITY_RUNE.get());
+				tabData.accept(PowerModItems.HEALING_RUNE.get());
 				tabData.accept(PowerModBlocks.CURSED_STONE.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS.get().asItem());
