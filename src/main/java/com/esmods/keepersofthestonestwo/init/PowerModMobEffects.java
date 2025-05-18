@@ -91,6 +91,7 @@ import com.esmods.keepersofthestonestwo.potion.SunMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StunMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StarRegenerationMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpiritMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.SpinMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpeedMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SoundMasterMobEffect;
@@ -228,6 +229,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> HEAT_MASTER = REGISTRY.register("heat_master", () -> new HeatMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SHOCKWAVE_MASTER = REGISTRY.register("shockwave_master", () -> new ShockwaveMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> PROTECTION = REGISTRY.register("protection", () -> new ProtectionMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> SPIN = REGISTRY.register("spin", () -> new SpinMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

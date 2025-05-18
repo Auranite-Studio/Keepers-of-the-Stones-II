@@ -33440,6 +33440,67 @@
         ]
       },
       "path": "~/Modules/RunesSystem/PowerRuneAbilities"
+    },
+    {
+      "name": "Tornado",
+      "type": "function",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/function/tornado.mcfunction"
+        ]
+      },
+      "path": "~/Modules/RunesSystem/PowerRuneAbilities"
+    },
+    {
+      "name": "SpinTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spin_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpinTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/RunesSystem/PowerRuneAbilities"
+    },
+    {
+      "name": "Spin",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spin",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/SpinMobEffect.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem/PowerRuneAbilities"
     }
   ],
   "variable_elements": [
@@ -35488,8 +35549,8 @@
     "ru_ru": {
       "item.power.ether_battery": "Батарея",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
-      "item.power.ether_stone": "Камень эфира",
       "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "Передача тёмной силы, расходует 80",
+      "item.power.ether_stone": "Камень эфира",
       "item.power.moon_battery": "Батарея",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
       "item.power.time_battery.description_0": "§aЗаряжена элементом:",
@@ -35508,8 +35569,8 @@
       "item.power.empty_rune.description_0": "§9Пустая",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 20",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
-      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "advancements.grant_your_power.title": "Даруй свою силу",
+      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "item.power.extra_star_points_rune_3": "Руна",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.cursed_keeper_spawn_egg": "Яйцо призыва проклятого хранителя",
@@ -35532,8 +35593,8 @@
       "block.power.amplifier_block": "Блок амплифера",
       "item.power.gravity_mace": "Гравитационная булава",
       "battery.desc.plants": "Зелень",
-      "item.power.music_armor_leggings": "Поножи мастера музыки",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
+      "item.power.music_armor_leggings": "Поножи мастера музыки",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Туманная невидимость, расходует 70",
       "item.power.music_battery": "Батарея",
       "item.power.darkness_battery": "Батарея",
@@ -35553,8 +35614,8 @@
       "item.power.invisibility_rune.description_4": " §9Делает невидимым",
       "item.power.animals_stone": "Камень животных",
       "item.power.light_battery": "Батарея",
-      "item.power.oceanic_trident": "Океанический трезубец",
       "item.minecraft.lingering_potion.effect.power_lock_potion": "Туманное зелье блокировки силы",
+      "item.power.oceanic_trident": "Океанический трезубец",
       "effect.power.tornado_master": "Мастер торнадо",
       "effect.power.warp": "Искажение",
       "item.keeper_book.name": "Книга хранителя",
@@ -35565,14 +35626,14 @@
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Батарея",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7Спецификация:",
-      "item.power.energium_axe": "Энергиумный топор",
       "item.power.addition_time_master_effect_rune_3.description_4": " §9+10 мин к эффекту мастера",
+      "item.power.energium_axe": "Энергиумный топор",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "Дымовая шашка, расходует 35",
       "item.power.addition_time_master_effect_rune_3.description_1": "§7Тип:",
       "item.power.addition_time_master_effect_rune_3.description_2": " §4Красный",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
-      "item.power.addition_time_master_effect_rune_3.description_0": "§9Доп. время эффекта мастера III",
       "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Замедление, расходует 70",
+      "item.power.addition_time_master_effect_rune_3.description_0": "§9Доп. время эффекта мастера III",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "block.power.cursed_stone_cracked_bricks_stairs": "Ступенки из проклятых потрескавшихся каменных кирпичей",
       "gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80": "Гипноз, расходует 80",
@@ -35589,8 +35650,8 @@
       "effect.power.horror_dark_master": "Т. Мастер Хоррора",
       "item.power.invisibility_rune.description_1": "§7Тип:",
       "item.power.invisibility_rune.description_2": "§aЗелёный",
-      "item.power.invisibility_rune.description_0": "§9Невидимость",
       "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Грибное насыщение, расходует 50",
+      "item.power.invisibility_rune.description_0": "§9Невидимость",
       "item.power.music_guitar": "Музыкальная гитара",
       "gui.power.keepers_box_gui_part_5.tooltip_poison": "Poison",
       "advancements.the_end_of_tyranny.descr": "Победите энергиумного голема",
@@ -35623,16 +35684,16 @@
       "gui.power.wheel_abilties_golden_dust.tooltip_random_power_uses_80": "Рандомная сила, расходует 80",
       "item.power.reduced_stone_recharge_time_rune_3": "Руна",
       "item.power.reduced_stone_recharge_time_rune_2": "Руна",
-      "item.power.spin_rune.description_1": "§7Тип:",
       "item.power.light_armor_chestplate": "Нагрудник мастера света",
+      "item.power.spin_rune.description_1": "§7Тип:",
       "item.power.spin_rune.description_0": "§9Вращение",
       "item.power.mist_armor_chestplate": "Нагрудник мастера тумана",
       "item.power.energium_hoe": "Энергиумная мотыга",
       "trim_material.power.copyrium_material": "Копириум",
       "item.power.spin_rune.description_4": " §9Создаёт торнадо вокруг",
       "item.power.spin_rune.description_3": "§7Спецификация:",
-      "item.power.spin_rune.description_2": "§aЗелёный",
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
+      "item.power.spin_rune.description_2": "§aЗелёный",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
       "item.power.empty_battery.description_0": "§cНе заряжена",
       "item.power.amber_staff": "Посох янтаря",
@@ -35652,8 +35713,8 @@
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "item.power.empty_characteristics_card.description_0": "§7Пустая",
       "item.power.smoke_stone": "Камень дыма",
-      "effect.power.air_master": "Мастер воздуха",
       "item.power.blue_flame_sword": "Меч синего пламени",
+      "effect.power.air_master": "Мастер воздуха",
       "effect.power.miniaturization": "Миниатюризация",
       "item.power.raw_depleted_energium": "Рудный обеднённый энергиум",
       "item.minecraft.potion.effect.power_lock_potion": "Зелье блокировки силы",
@@ -35842,6 +35903,7 @@
       "item.power.addition_time_master_effect_rune_2.description_0": "§9Доп. время эффекта мастера II",
       "item.power.addition_time_master_effect_rune_2.description_4": " §9+5 мин к эффекту мастера",
       "item.power.healing_rune": "Руна",
+      "effect.power.spin": "Spin",
       "item.power.mind_armor_chestplate": "Нагрудник мастера разума",
       "item.power.dodging_rune": "Руна",
       "effect.power.lightning_master": "Мастер молнии",
@@ -36244,6 +36306,7 @@
       "item.power.magnet_armor_chestplate": "Нагрудник мастера магнита",
       "gui.power.wheel_abilities_lava.tooltip_surface_melting_uses_75": "Расплавление поверхности, uses 75",
       "item.minecraft.tipped_arrow.effect.star_regeneration_potion": "Стрела звёздной регенерации",
+      "gui.power.wheel_abilities.tooltip.spin_rune": "Активация руны вращения, расходует 90",
       "item.power.crystal_knife": "Кристальный нож",
       "gui.power.wheel_abilities_tornado.tooltip_tornado_flight_uses_5": "Полёт торнадо, расходует 5",
       "item.power.light_sword": "Световой меч",
@@ -36352,7 +36415,7 @@
       "item.power.tornado_stone": "Камень торнадо",
       "item.power.smoke_armor_boots": "Ботинки мастера дыма",
       "item.power.creation_battery": "Батарея",
-      "gui.power.wheel_abilities.tooltip.protection_rune": "Активация руны защиты, расходует 85",
+      "gui.power.wheel_abilities.tooltip.protection_rune": "Активация руны защиты, расходует 90",
       "item.power.spirit_armor_helmet": "Шлем мастера духа",
       "item.power.technology_battery": "Батарея",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Ослепляющая вспышка, расходует 75",
@@ -36923,6 +36986,7 @@
       "item.power.addition_time_master_effect_rune_2.description_0": "§9Additional Master\u0027s Effect Time II",
       "item.power.addition_time_master_effect_rune_2.description_4": " §9+5 min of master effect",
       "item.power.healing_rune": "Rune",
+      "effect.power.spin": "Spin",
       "item.power.mind_armor_chestplate": "Mind Chestplate",
       "item.power.dodging_rune": "Rune",
       "effect.power.lightning_master": "Master of Lightning",
@@ -37324,6 +37388,7 @@
       "item.power.magnet_armor_chestplate": "Magnet Chestplate",
       "gui.power.wheel_abilities_lava.tooltip_surface_melting_uses_75": "Surface melting, uses 75",
       "item.minecraft.tipped_arrow.effect.star_regeneration_potion": "Arrow of Star Regeneration",
+      "gui.power.wheel_abilities.tooltip.spin_rune": "Activate rune of spin, uses 90",
       "item.power.crystal_knife": "Crystal Knife",
       "gui.power.wheel_abilities_tornado.tooltip_tornado_flight_uses_5": "Tornado flight, uses 5",
       "item.power.light_sword": "Light Sword",
@@ -37335,7 +37400,7 @@
       "item.power.mushrooms_battery.description_1": "§9Mushrooms",
       "item.power.ice_stone": "Ice Stone",
       "item.power.energy_armor_chestplate": "Energy Chestplate",
-      "effect.power.protection": "Technobarrier",
+      "effect.power.protection": "Protection",
       "item.power.mind_stone": "Mind Stone",
       "effect.power.thirst_dark_master": "Dark Master of Thirst",
       "item.power.gravity_armor_helmet": "Gravity Helmet",
@@ -37433,7 +37498,7 @@
       "item.power.tornado_stone": "Tornado Stone",
       "item.power.smoke_armor_boots": "Smoke Boots",
       "item.power.creation_battery": "Battery",
-      "gui.power.wheel_abilities.tooltip.protection_rune": "Activate rune of protection, uses 85",
+      "gui.power.wheel_abilities.tooltip.protection_rune": "Activate rune of protection, uses 90",
       "item.power.spirit_armor_helmet": "Spirit Helmet",
       "item.power.technology_battery": "Battery",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Blinding flash, uses 75",

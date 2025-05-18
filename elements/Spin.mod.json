@@ -2,8 +2,8 @@
   "_fv": 77,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Protection",
-    "icon": "protection_rune",
+    "effectName": "Spin",
+    "icon": "spin_rune",
     "color": {
       "value": -13382656,
       "falpha": 0.0
@@ -15,10 +15,10 @@
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "isCuredbyHoney": true,
+    "isCuredbyHoney": false,
     "modifiers": [],
     "onActiveTick": {
-      "name": "ActiveModProtection"
+      "name": "SpinTick"
     }
   }
 }
