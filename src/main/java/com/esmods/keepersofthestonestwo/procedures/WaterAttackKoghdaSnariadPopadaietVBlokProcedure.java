@@ -15,7 +15,7 @@ public class WaterAttackKoghdaSnariadPopadaietVBlokProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.SPLASH, x, y, z, 25, 1, 1, 1, 1);
 		if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.AIR && !((entity.level().dimension()) == Level.NETHER)) {
-			world.setBlock(BlockPos.containing(x, y + 1, z), Blocks.WATER.defaultBlockState(), 3);
+			world.setBlock(BlockPos.containing(x, y + 1, z), Blocks.AIR.defaultBlockState(), 3);
 		}
 	}
 }

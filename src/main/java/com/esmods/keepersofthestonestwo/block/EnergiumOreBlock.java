@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.procedures.EnergiumOreClickProcedure;
 
 public class EnergiumOreBlock extends Block {
 	public EnergiumOreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6.25f, 225f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(6.25f, 225f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

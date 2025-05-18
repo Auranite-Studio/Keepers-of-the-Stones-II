@@ -34771,6 +34771,9 @@
       "CUSTOM:ReducedStoneRechargeTimeRune2",
       "CUSTOM:AdditionTimeMasterEffectRune2"
     ],
+    "BLOCKS:minecraft:climbable": [
+      "~CUSTOM:CursedLadder"
+    ],
     "ENTITIES:minecraft:bosses": [
       "CUSTOM:EnergiumGolem",
       "CUSTOM:CursedKeeper"
@@ -38625,5 +38628,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500112320
+  "mcreatorVersion": 202500221100
 }

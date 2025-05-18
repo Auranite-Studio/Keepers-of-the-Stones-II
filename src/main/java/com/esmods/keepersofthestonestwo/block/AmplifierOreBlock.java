@@ -13,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class AmplifierOreBlock extends Block {
 	public AmplifierOreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6.75f, 5f).lightLevel(s -> 2).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(6.75f, 5f).lightLevel(s -> 2).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

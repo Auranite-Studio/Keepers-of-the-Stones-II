@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.procedures.EnergiumOreClickProcedure;
 
 public class DeepslateEnergiumOreBlock extends Block {
 	public DeepslateEnergiumOreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DEEPSLATE).strength(6.25f, 225f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).strength(6.25f, 225f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

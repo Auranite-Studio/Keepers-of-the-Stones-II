@@ -13,7 +13,6 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.stream.Collectors;
-import java.util.HashMap;
 import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -28,12 +27,13 @@ import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesEtherButtonMessage;
+import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
-public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbilitiesEtherMenu> {
-	private final static HashMap<String, Object> guistate = WheelAbilitiesEtherMenu.guistate;
+public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbilitiesEtherMenu> implements PowerModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_wheel_button_1;
 	ImageButton imagebutton_wheel_button_2;
 	ImageButton imagebutton_wheel_button_3;
@@ -54,6 +54,12 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		this.entity = container.entity;
 		this.imageWidth = 192;
 		this.imageHeight = 192;
+	}
+
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
 	}
 
 	@Override
@@ -82,9 +88,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -117,7 +121,6 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/wheel_button_2_highlight.png")), e -> {
@@ -132,7 +135,6 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/wheel_button_3_highlight.png")), e -> {
@@ -147,7 +149,6 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
@@ -162,7 +163,6 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
@@ -177,7 +177,6 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
@@ -192,7 +191,6 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_power_rune_ability = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/power_rune_ability.png"), ResourceLocation.parse("power:textures/screens/power_rune_ability_highlight.png")), e -> {
@@ -207,7 +205,6 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_power_rune_ability", imagebutton_power_rune_ability);
 		this.addRenderableWidget(imagebutton_power_rune_ability);
 		imagebutton_ethereal_ray = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/ethereal_ray.png"), ResourceLocation.parse("power:textures/screens/ethereal_ray_highlight.png")), e -> {
@@ -222,7 +219,6 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ethereal_ray", imagebutton_ethereal_ray);
 		this.addRenderableWidget(imagebutton_ethereal_ray);
 		imagebutton_ethereal_volley = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/ethereal_volley.png"), ResourceLocation.parse("power:textures/screens/ethereal_volley_highlight.png")), e -> {
@@ -237,7 +233,6 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ethereal_volley", imagebutton_ethereal_volley);
 		this.addRenderableWidget(imagebutton_ethereal_volley);
 		imagebutton_ethereal_aura = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/ethereal_aura.png"), ResourceLocation.parse("power:textures/screens/ethereal_aura_highlight.png")), e -> {
@@ -252,7 +247,6 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ethereal_aura", imagebutton_ethereal_aura);
 		this.addRenderableWidget(imagebutton_ethereal_aura);
 	}
 }

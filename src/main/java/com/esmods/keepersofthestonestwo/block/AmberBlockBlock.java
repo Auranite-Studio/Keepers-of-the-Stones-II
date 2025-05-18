@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class AmberBlockBlock extends Block {
 	public AmberBlockBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6f, 5f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(6f, 5f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
