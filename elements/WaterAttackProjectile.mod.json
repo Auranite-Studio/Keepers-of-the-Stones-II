@@ -3,7 +3,7 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "Blocks.FLOWING_WATER"
+      "value": "Items.WATER_BUCKET"
     },
     "showParticles": false,
     "actionSound": {
