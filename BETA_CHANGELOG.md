@@ -7,8 +7,11 @@
 **Improvemnts** 
 - The keeper's box can now hold more than 48 elements
 - Now the runologist can level up the runes
-- The ability to buy first-level runes from a runologist has been removed
+- The ability to buy first-level from a runologist has been removed
+- A empty rune can now be manifested by pressing RMB
 - The rune panel will now hide if there are no active runes
+- Enchanted books will now drop less frequently in energium vaults
+- Empty runes now drops instead of enchanted books in cursed vaults
 
 **API changes**
 - Colorful Powers API has been updated to 26

@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "empty_rune",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Rune",
@@ -30,7 +31,11 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§9Empty"
+        "§9Unknown",
+        "§7Type:",
+        " §eUnknown",
+        "§7Specifications:",
+        " §9Click the RMB to manifest rune"
       ]
     },
     "glowCondition": {
@@ -38,6 +43,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "EmptyRuneManifest"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

@@ -33592,6 +33592,33 @@
         ]
       },
       "path": "~/Achievements"
+    },
+    {
+      "name": "EmptyRuneManifest",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_rune_manifest",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EmptyRuneManifestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Runes"
     }
   ],
   "variable_elements": [
@@ -35660,7 +35687,7 @@
       "item.power.blue_flame_armor_boots": "Ботинки мастера синего пламени",
       "item.power.mushrooms_armor_leggings": "Поножи мастера грибов",
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Поток астральной энергии, расходует 10",
-      "item.power.empty_rune.description_0": "§9Пустая",
+      "item.power.empty_rune.description_0": "§9Неизвестно",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 20",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
@@ -35676,6 +35703,10 @@
       "item.power.extra_star_points_rune_1": "Руна",
       "item.power.extra_star_points_rune_2": "Руна",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 35",
+      "item.power.empty_rune.description_2": " §eНеизвестно",
+      "item.power.empty_rune.description_1": "§7Тип:",
+      "item.power.empty_rune.description_4": " §9Нажмите ПКМ для проявления руны",
+      "item.power.empty_rune.description_3": "§7Спецификация:",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Солнечный взрыв, расходует 45",
       "item.power.filth_armor_chestplate": "Нагрудник тёмного мастера скверны",
       "effect.power.shockwave_master": "Мастер импульса",
@@ -36749,7 +36780,7 @@
       "gui.power.keepers_box_gui_part_3.tooltip_form": "Form",
       "item.power.mushrooms_armor_leggings": "Mushrooms Leggings",
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
-      "item.power.empty_rune.description_0": "§9Empty",
+      "item.power.empty_rune.description_0": "§9Unknown",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 20",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
@@ -36765,6 +36796,10 @@
       "item.power.extra_star_points_rune_1": "Rune",
       "item.power.extra_star_points_rune_2": "Rune",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 35",
+      "item.power.empty_rune.description_2": " §eUnknown",
+      "item.power.empty_rune.description_1": "§7Type:",
+      "item.power.empty_rune.description_4": " §9Click the RMB to manifest rune",
+      "item.power.empty_rune.description_3": "§7Specifications:",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Sun explosion, uses 45",
       "item.power.filth_armor_chestplate": "Filth Chestplate",
       "effect.power.shockwave_master": "Master of Shockwave",
