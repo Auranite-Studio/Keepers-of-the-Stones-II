@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "star_extra_rune_2",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Rune",
@@ -30,7 +31,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§9Extra Star Points II",
+        "§9Star Points Amplifier II",
         "§7Type:",
         " §1Blue",
         "§7Specifications:",
