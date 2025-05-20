@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "invisibility_rune",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Rune",
@@ -34,7 +35,7 @@
         "§7Type:",
         "§aGreen",
         "§7Specifications:",
-        " §9Makes it invisible"
+        " §9Effect: Invisibility"
       ]
     },
     "glowCondition": {
