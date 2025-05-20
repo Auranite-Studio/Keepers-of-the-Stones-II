@@ -11,7 +11,7 @@ public class PowerRuneAbilityProcedure {
 			return;
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.ability = "power_rune_ability";
+			_vars.ability = "rune_ability";
 			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof Player _player)

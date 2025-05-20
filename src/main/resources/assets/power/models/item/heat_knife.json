@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/heat_knife",
+  "textures": {
+    "0": "power:block/heat_knife",
+    "particle": "power:item/heat_knife"
+  }
+}

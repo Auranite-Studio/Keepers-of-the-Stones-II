@@ -249,6 +249,8 @@ public class PowerModVariables {
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
 		public double cpapi_ver = 21.0;
+		public boolean heat_stone = false;
+		public boolean shockwave_stone = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -314,6 +316,8 @@ public class PowerModVariables {
 			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
 			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
 			cpapi_ver = nbt.getDouble("cpapi_ver");
+			heat_stone = nbt.getBoolean("heat_stone");
+			shockwave_stone = nbt.getBoolean("shockwave_stone");
 		}
 
 		@Override
@@ -375,6 +379,8 @@ public class PowerModVariables {
 			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
 			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
 			nbt.putDouble("cpapi_ver", cpapi_ver);
+			nbt.putBoolean("heat_stone", heat_stone);
+			nbt.putBoolean("shockwave_stone", shockwave_stone);
 			return nbt;
 		}
 

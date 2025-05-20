@@ -18,6 +18,7 @@ import com.esmods.keepersofthestonestwo.procedures.StarPointsRegTimerDebugProced
 import com.esmods.keepersofthestonestwo.procedures.StarPointsRecoveryMultiplierDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.StarPointsDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SelectedAttackDebugProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RuneActiveDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerRecordedDubugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ModVersionDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MergersNumberDebugProcedure;
@@ -107,6 +108,9 @@ public class DebugInfoOverlay {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					BaseDamageDebugProcedure.execute(entity), 6, 215, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					RuneActiveDebugProcedure.execute(entity), 6, 224, -1, false);
 		}
 	}
 }
