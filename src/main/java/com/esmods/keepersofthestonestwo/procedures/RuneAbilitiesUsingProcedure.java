@@ -38,5 +38,18 @@ public class RuneAbilitiesUsingProcedure {
 				}
 			}
 		}
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem() == PowerModItems.DODGING_RUNE.get()) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 90) {
+				if (!(entity instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(PowerModMobEffects.DODGING))) {
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.DODGING, 200, 0, false, false));
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 90;
+						_vars.syncPlayerVariables(entity);
+					}
+				}
+			}
+		}
 	}
 }

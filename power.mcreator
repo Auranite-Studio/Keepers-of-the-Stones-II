@@ -33501,6 +33501,45 @@
         ]
       },
       "path": "~/Modules/RunesSystem/PowerRuneAbilities"
+    },
+    {
+      "name": "Dodging",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dodging",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/DodgingMobEffect.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem/PowerRuneAbilities"
+    },
+    {
+      "name": "Autododging",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "autododging",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/Autododging.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem/PowerRuneAbilities"
+    },
+    {
+      "name": "AutoDodgeEffect",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "auto_dodge_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/AutoDodgeEffect.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem/PowerRuneAbilities"
     }
   ],
   "variable_elements": [
@@ -34411,6 +34450,11 @@
     }
   ],
   "tag_elements": {
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:MusicHope",
+      "~CUSTOM:MusicDiscAncientMood",
+      "~CUSTOM:MusicDiscCallOfThePast"
+    ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",
       "CUSTOM:EnergiumAxe",
@@ -34423,19 +34467,16 @@
       "CUSTOM:CreationHoe",
       "CUSTOM:CreationShovel"
     ],
-    "ITEMS:minecraft:music_discs": [
-      "~CUSTOM:MusicHope",
-      "~CUSTOM:MusicDiscAncientMood",
-      "~CUSTOM:MusicDiscCallOfThePast"
-    ],
     "BLOCKS:minecraft:stairs": [
       "~CUSTOM:CursedStoneCrackedBricksStairs",
       "~CUSTOM:PolishedCursedStoneStairs",
       "~CUSTOM:CursedStoneBricksStairs",
       "~CUSTOM:CursedStoneStairs"
     ],
-    "BIOMES:mod:cursed_biomes": [
-      "CUSTOM:CursedForest"
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:TechnoPickaxe",
+      "~CUSTOM:CreationPickaxe",
+      "~CUSTOM:EnergiumPickaxe"
     ],
     "ITEMS:mod:rune/green": [
       "CUSTOM:ProtectionRune",
@@ -34444,10 +34485,8 @@
       "CUSTOM:InvisibilityRune",
       "CUSTOM:HealingRune"
     ],
-    "ITEMS:minecraft:pickaxes": [
-      "~CUSTOM:TechnoPickaxe",
-      "~CUSTOM:CreationPickaxe",
-      "~CUSTOM:EnergiumPickaxe"
+    "BIOMES:mod:cursed_biomes": [
+      "CUSTOM:CursedForest"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:HeatKnife",
@@ -36410,6 +36449,7 @@
       "block.power.raw_copyrium_block": "Сырой копириумный блок",
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "item.power.techno_pickaxe": "Технокирка",
+      "effect.power.dodging": "Уклонение",
       "effect.power.lava_master": "Мастер лавы",
       "item.power.blood_armor_boots": "Ботинки мастера крови",
       "item.power.sun_armor_helmet": "Шлем мастера солнца",
@@ -36519,6 +36559,7 @@
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
       "effect.power.form_master": "Мастер формы",
       "item.power.energium_key": "Энергиумный ключ",
+      "gui.power.wheel_abilities.tooltip.dodging_rune": "Активация руны уклонения, расходует 90",
       "item.power.music_disc_call_of_the_past.desc": "bxkqq - Call of the Past",
       "entity.power.shadow": "Тень",
       "item.power.green_staff": "Зелёный посох",
@@ -37493,6 +37534,7 @@
       "block.power.raw_copyrium_block": "Block of Raw Copyrium",
       "item.power.rain_armor_boots": "Rain Boots",
       "item.power.techno_pickaxe": "Techno Pickaxe",
+      "effect.power.dodging": "Dodging",
       "effect.power.lava_master": "Master of Lava",
       "item.power.blood_armor_boots": "Blood Boots",
       "item.power.sun_armor_helmet": "Sun Helmet",
@@ -37602,6 +37644,7 @@
       "item.power.lava_armor_boots": "Lava Boots",
       "effect.power.form_master": "Master of Form ",
       "item.power.energium_key": "Energium Key",
+      "gui.power.wheel_abilities.tooltip.dodging_rune": "Activate rune of dodging, uses 90",
       "item.power.music_disc_call_of_the_past.desc": "bxkqq - Call of the Past",
       "entity.power.shadow": "Shadow",
       "item.power.green_staff": "Green Staff",

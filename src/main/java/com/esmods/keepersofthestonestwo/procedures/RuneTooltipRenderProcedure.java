@@ -15,6 +15,8 @@ public class RuneTooltipRenderProcedure {
 			active_rune = "gui.power.wheel_abilities.tooltip.protection_rune";
 		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem() == PowerModItems.SPIN_RUNE.get()) {
 			active_rune = "gui.power.wheel_abilities.tooltip.spin_rune";
+		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem() == PowerModItems.DODGING_RUNE.get()) {
+			active_rune = "gui.power.wheel_abilities.tooltip.dodging_rune";
 		} else {
 			active_rune = Component.translatable("gui.power.wheel_abilities.tooltip.rune_not_install").getString();
 		}
