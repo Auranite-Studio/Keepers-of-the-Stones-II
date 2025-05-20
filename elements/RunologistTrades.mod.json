@@ -10,54 +10,108 @@
         "entries": [
           {
             "price1": {
-              "value": "CUSTOM:EmptyRune"
-            },
-            "countPrice1": 1,
-            "price2": {
-              "value": "Items.EMERALD"
-            },
-            "countPrice2": 32,
-            "offer": {
               "value": "CUSTOM:ExtraStarPointsRune1"
             },
-            "countOffer": 1,
-            "level": 1,
-            "maxTrades": 1,
-            "xp": 10,
-            "priceMultiplier": 0.05
-          },
-          {
-            "price1": {
-              "value": "CUSTOM:EmptyRune"
-            },
             "countPrice1": 1,
             "price2": {
               "value": "Items.EMERALD"
             },
-            "countPrice2": 32,
+            "countPrice2": 48,
             "offer": {
+              "value": "CUSTOM:ExtraStarPointsRune2"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
               "value": "CUSTOM:ReducedStoneRechargeTimeRune1"
             },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 48,
+            "offer": {
+              "value": "CUSTOM:ReducedStoneRechargeTimeRune2"
+            },
             "countOffer": 1,
             "level": 1,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:AdditionTimeMasterEffectRune1"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 48,
+            "offer": {
+              "value": "CUSTOM:AdditionTimeMasterEffectRune2"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:ExtraStarPointsRune2"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 64,
+            "offer": {
+              "value": "CUSTOM:ExtraStarPointsRune3"
+            },
+            "countOffer": 1,
+            "level": 2,
             "maxTrades": 1,
             "xp": 10,
             "priceMultiplier": 0.05
           },
           {
             "price1": {
-              "value": "CUSTOM:EmptyRune"
+              "value": "CUSTOM:ReducedStoneRechargeTimeRune2"
             },
             "countPrice1": 1,
             "price2": {
               "value": "Items.EMERALD"
             },
-            "countPrice2": 32,
+            "countPrice2": 64,
             "offer": {
-              "value": "CUSTOM:AdditionTimeMasterEffectRune1"
+              "value": "CUSTOM:ReducedStoneRechargeTimeRune3"
             },
             "countOffer": 1,
-            "level": 1,
+            "level": 2,
+            "maxTrades": 1,
+            "xp": 10,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:AdditionTimeMasterEffectRune2"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 64,
+            "offer": {
+              "value": "CUSTOM:AdditionTimeMasterEffectRune3"
+            },
+            "countOffer": 1,
+            "level": 2,
             "maxTrades": 1,
             "xp": 10,
             "priceMultiplier": 0.05
