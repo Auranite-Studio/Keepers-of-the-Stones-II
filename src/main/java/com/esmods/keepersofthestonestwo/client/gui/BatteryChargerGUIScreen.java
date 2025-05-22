@@ -10,18 +10,17 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
 import com.esmods.keepersofthestonestwo.procedures.BatteryChargerProgressv2Procedure;
+import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
-public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChargerGUIMenu> {
-	private final static HashMap<String, Object> guistate = BatteryChargerGUIMenu.guistate;
+public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChargerGUIMenu> implements PowerModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 
 	public BatteryChargerGUIScreen(BatteryChargerGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -35,6 +34,12 @@ public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChar
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
@@ -43,12 +48,9 @@ public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChar
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
-
 		guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/battery_charger_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-
 		guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/battery_charger_progress.png"), this.leftPos + 38, this.topPos + 15, 0,
 				Mth.clamp((int) BatteryChargerProgressv2Procedure.execute(world, x, y, z) * 8, 0, 800), 100, 8, 100, 808);
-
 	}
 
 	@Override

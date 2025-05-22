@@ -14,7 +14,6 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.stream.Collectors;
-import java.util.HashMap;
 import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -29,12 +28,13 @@ import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesTeleportationButtonMessage;
+import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
-public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<WheelAbilitiesTeleportationMenu> {
-	private final static HashMap<String, Object> guistate = WheelAbilitiesTeleportationMenu.guistate;
+public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<WheelAbilitiesTeleportationMenu> implements PowerModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_wheel_button_1;
 	ImageButton imagebutton_wheel_button_2;
 	ImageButton imagebutton_wheel_button_3;
@@ -60,11 +60,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 82 && mouseY < topPos + 106) {
-			String hoverText = RuneTooltipRenderProcedure.execute();
+			String hoverText = RuneTooltipRenderProcedure.execute(entity);
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
@@ -83,9 +89,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
-
 		guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
-
 	}
 
 	@Override
@@ -117,7 +121,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/wheel_button_2_highlight.png")), e -> {
@@ -132,7 +135,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/wheel_button_3_highlight.png")), e -> {
@@ -147,7 +149,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
@@ -162,7 +163,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
@@ -177,7 +177,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
@@ -192,7 +191,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_power_rune_ability = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/power_rune_ability.png"), ResourceLocation.parse("power:textures/screens/power_rune_ability_highlight.png")), e -> {
@@ -207,7 +205,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_power_rune_ability", imagebutton_power_rune_ability);
 		this.addRenderableWidget(imagebutton_power_rune_ability);
 		imagebutton_creating_portals_blue = new ImageButton(this.leftPos + 72, this.topPos + 134, 23, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/creating_portals_blue.png"), ResourceLocation.parse("power:textures/screens/creating_portals_blue_highlight.png")), e -> {
@@ -222,7 +219,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_creating_portals_blue", imagebutton_creating_portals_blue);
 		this.addRenderableWidget(imagebutton_creating_portals_blue);
 		imagebutton_creating_portals_orange = new ImageButton(this.leftPos + 95, this.topPos + 134, 23, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/creating_portals_orange.png"), ResourceLocation.parse("power:textures/screens/creating_portals_orange_highlight.png")), e -> {
@@ -237,7 +233,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_creating_portals_orange", imagebutton_creating_portals_orange);
 		this.addRenderableWidget(imagebutton_creating_portals_orange);
 		imagebutton_checkpoint_create = new ImageButton(this.leftPos + 133, this.topPos + 73, 23, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/checkpoint_create.png"), ResourceLocation.parse("power:textures/screens/checkpoint_create_highlight.png")), e -> {
@@ -252,7 +247,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_checkpoint_create", imagebutton_checkpoint_create);
 		this.addRenderableWidget(imagebutton_checkpoint_create);
 		imagebutton_checkpoint_tp = new ImageButton(this.leftPos + 156, this.topPos + 73, 23, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/checkpoint_tp.png"), ResourceLocation.parse("power:textures/screens/checkpoint_tp_highlight.png")), e -> {
@@ -267,7 +261,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_checkpoint_tp", imagebutton_checkpoint_tp);
 		this.addRenderableWidget(imagebutton_checkpoint_tp);
 		imagebutton_teleportation_grabs = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/teleportation_grabs.png"), ResourceLocation.parse("power:textures/screens/teleportation_grabs_teleportation.png")), e -> {
@@ -282,7 +275,6 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_teleportation_grabs", imagebutton_teleportation_grabs);
 		this.addRenderableWidget(imagebutton_teleportation_grabs);
 	}
 }

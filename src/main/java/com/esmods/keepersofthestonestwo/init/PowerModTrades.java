@@ -17,9 +17,16 @@ public class PowerModTrades {
 	@SubscribeEvent
 	public static void registerTrades(VillagerTradesEvent event) {
 		if (event.getType().equals(PowerModVillagerProfessions.RUNOLOGIST.getKey())) {
-			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(PowerModItems.EMPTY_RUNE.get()), new ItemStack(Items.EMERALD, 32), new ItemStack(PowerModItems.EXTRA_STAR_POINTS_RUNE_1.get()), 1, 10, 0.05f));
-			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(PowerModItems.EMPTY_RUNE.get()), new ItemStack(Items.EMERALD, 32), new ItemStack(PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_1.get()), 1, 10, 0.05f));
-			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(PowerModItems.EMPTY_RUNE.get()), new ItemStack(Items.EMERALD, 32), new ItemStack(PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_1.get()), 1, 10, 0.05f));
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(PowerModItems.EXTRA_STAR_POINTS_RUNE_1.get()), new ItemStack(Items.EMERALD, 48), new ItemStack(PowerModItems.EXTRA_STAR_POINTS_RUNE_2.get()), 1, 5, 0.05f));
+			event.getTrades().get(1)
+					.add(new BasicItemListing(new ItemStack(PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_1.get()), new ItemStack(Items.EMERALD, 48), new ItemStack(PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_2.get()), 1, 5, 0.05f));
+			event.getTrades().get(1)
+					.add(new BasicItemListing(new ItemStack(PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_1.get()), new ItemStack(Items.EMERALD, 48), new ItemStack(PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_2.get()), 1, 5, 0.05f));
+			event.getTrades().get(2).add(new BasicItemListing(new ItemStack(PowerModItems.EXTRA_STAR_POINTS_RUNE_2.get()), new ItemStack(Items.EMERALD, 64), new ItemStack(PowerModItems.EXTRA_STAR_POINTS_RUNE_3.get()), 1, 10, 0.05f));
+			event.getTrades().get(2)
+					.add(new BasicItemListing(new ItemStack(PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_2.get()), new ItemStack(Items.EMERALD, 64), new ItemStack(PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_3.get()), 1, 10, 0.05f));
+			event.getTrades().get(2)
+					.add(new BasicItemListing(new ItemStack(PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_2.get()), new ItemStack(Items.EMERALD, 64), new ItemStack(PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_3.get()), 1, 10, 0.05f));
 		}
 	}
 }

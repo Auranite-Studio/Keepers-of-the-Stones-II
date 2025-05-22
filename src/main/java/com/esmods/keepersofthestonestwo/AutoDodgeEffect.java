@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.ARGB;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelAccessor;
@@ -50,7 +51,7 @@ public class AutoDodgeEffect {
 			level.playSound(null, player.getX(), player.getY(), player.getZ(),
 					net.minecraft.sounds.SoundEvents.ENDERMAN_TELEPORT, player.getSoundSource(), 1.0F, 1.0F);
 			
-			ParticleOptions particle = new DustParticleOptions(new Vector3f(0.0f, 1.0f, 0.0f), 1.0f); // RGB: зелёный
+			ParticleOptions particle = new DustParticleOptions(ARGB.color(0, 255, 0), 1); // RGB: зелёный
 
 			for (int i = 0; i < 20; i++) {
 				double offsetX = (rand.nextDouble() - 0.5) * 0.5;

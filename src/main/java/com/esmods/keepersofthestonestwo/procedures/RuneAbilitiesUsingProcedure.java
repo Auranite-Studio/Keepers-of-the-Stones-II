@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import org.joml.Vector3f;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -12,6 +10,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.util.ARGB;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.DustParticleOptions;
 
@@ -72,7 +71,7 @@ public class RuneAbilitiesUsingProcedure {
 					for (int index0 = 0; index0 < 60; index0++) {
 						for (int index1 = 0; index1 < (int) particleAmount; index1++) {
 							if (world instanceof ServerLevel)
-								((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(0 / 255.0F, 255 / 255.0F, 0 / 255.0F), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+								((ServerLevel) world).sendParticles((new DustParticleOptions(ARGB.color(0, 255, 0), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 						}
@@ -99,37 +98,25 @@ public class RuneAbilitiesUsingProcedure {
 					}
 					{
 						Entity _entity = entity;
-						if (_entity instanceof Player _player) {
-							_player.getInventory().armor.set(3, ItemStack.EMPTY);
-							_player.getInventory().setChanged();
-						} else if (_entity instanceof LivingEntity _living) {
+						if (_entity instanceof LivingEntity _living) {
 							_living.setItemSlot(EquipmentSlot.HEAD, ItemStack.EMPTY);
 						}
 					}
 					{
 						Entity _entity = entity;
-						if (_entity instanceof Player _player) {
-							_player.getInventory().armor.set(2, ItemStack.EMPTY);
-							_player.getInventory().setChanged();
-						} else if (_entity instanceof LivingEntity _living) {
+						if (_entity instanceof LivingEntity _living) {
 							_living.setItemSlot(EquipmentSlot.CHEST, ItemStack.EMPTY);
 						}
 					}
 					{
 						Entity _entity = entity;
-						if (_entity instanceof Player _player) {
-							_player.getInventory().armor.set(1, ItemStack.EMPTY);
-							_player.getInventory().setChanged();
-						} else if (_entity instanceof LivingEntity _living) {
+						if (_entity instanceof LivingEntity _living) {
 							_living.setItemSlot(EquipmentSlot.LEGS, ItemStack.EMPTY);
 						}
 					}
 					{
 						Entity _entity = entity;
-						if (_entity instanceof Player _player) {
-							_player.getInventory().armor.set(0, ItemStack.EMPTY);
-							_player.getInventory().setChanged();
-						} else if (_entity instanceof LivingEntity _living) {
+						if (_entity instanceof LivingEntity _living) {
 							_living.setItemSlot(EquipmentSlot.FEET, ItemStack.EMPTY);
 						}
 					}
@@ -160,7 +147,7 @@ public class RuneAbilitiesUsingProcedure {
 				for (int index2 = 0; index2 < 60; index2++) {
 					for (int index3 = 0; index3 < (int) particleAmount; index3++) {
 						if (world instanceof ServerLevel)
-							((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(0 / 255.0F, 255 / 255.0F, 0 / 255.0F), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+							((ServerLevel) world).sendParticles((new DustParticleOptions(ARGB.color(0, 255, 0), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 									(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 					}

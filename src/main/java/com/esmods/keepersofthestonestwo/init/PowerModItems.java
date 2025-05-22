@@ -53,6 +53,7 @@ import com.esmods.keepersofthestonestwo.item.SpiritStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpiritSickleItem;
 import com.esmods.keepersofthestonestwo.item.SpiritBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SpiritArmorItem;
+import com.esmods.keepersofthestonestwo.item.SpinRuneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SpeedArmorItem;
@@ -92,6 +93,7 @@ import com.esmods.keepersofthestonestwo.item.RainStoneItem;
 import com.esmods.keepersofthestonestwo.item.RainBowItem;
 import com.esmods.keepersofthestonestwo.item.RainBatteryItem;
 import com.esmods.keepersofthestonestwo.item.RainArmorItem;
+import com.esmods.keepersofthestonestwo.item.ProtectionRuneItem;
 import com.esmods.keepersofthestonestwo.item.PoisonStoneItem;
 import com.esmods.keepersofthestonestwo.item.PoisonBowItem;
 import com.esmods.keepersofthestonestwo.item.PoisonBatteryItem;
@@ -158,6 +160,7 @@ import com.esmods.keepersofthestonestwo.item.LavaHammerItem;
 import com.esmods.keepersofthestonestwo.item.LavaBatteryItem;
 import com.esmods.keepersofthestonestwo.item.LavaArmorItem;
 import com.esmods.keepersofthestonestwo.item.KeepersBookItem;
+import com.esmods.keepersofthestonestwo.item.InvisibilityRuneItem;
 import com.esmods.keepersofthestonestwo.item.IceStoneItem;
 import com.esmods.keepersofthestonestwo.item.IceSpearItem;
 import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
@@ -168,6 +171,7 @@ import com.esmods.keepersofthestonestwo.item.HeatStoneItem;
 import com.esmods.keepersofthestonestwo.item.HeatKnifeItem;
 import com.esmods.keepersofthestonestwo.item.HeatBatteryItem;
 import com.esmods.keepersofthestonestwo.item.HeatArmorItem;
+import com.esmods.keepersofthestonestwo.item.HealingRuneItem;
 import com.esmods.keepersofthestonestwo.item.GreenStaffItem;
 import com.esmods.keepersofthestonestwo.item.GravityStoneItem;
 import com.esmods.keepersofthestonestwo.item.GravityMaceItem;
@@ -222,6 +226,7 @@ import com.esmods.keepersofthestonestwo.item.EarthStoneItem;
 import com.esmods.keepersofthestonestwo.item.EarthHammerItem;
 import com.esmods.keepersofthestonestwo.item.EarthBatteryItem;
 import com.esmods.keepersofthestonestwo.item.EarthArmorItem;
+import com.esmods.keepersofthestonestwo.item.DodgingRuneItem;
 import com.esmods.keepersofthestonestwo.item.DestructionStoneItem;
 import com.esmods.keepersofthestonestwo.item.DestructionBroadswordItem;
 import com.esmods.keepersofthestonestwo.item.DestructionBatteryItem;
@@ -752,6 +757,11 @@ public class PowerModItems {
 	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_BOOTS = register("shockwave_armor_boots", ShockwaveArmorItem.Boots::new);
 	public static final DeferredItem<Item> SHOCKWAVE_GUN = register("shockwave_gun", ShockwaveGunItem::new);
 	public static final DeferredItem<Item> SHOCKWAVE_BATTERY = register("shockwave_battery", ShockwaveBatteryItem::new);
+	public static final DeferredItem<Item> PROTECTION_RUNE = register("protection_rune", ProtectionRuneItem::new);
+	public static final DeferredItem<Item> SPIN_RUNE = register("spin_rune", SpinRuneItem::new);
+	public static final DeferredItem<Item> DODGING_RUNE = register("dodging_rune", DodgingRuneItem::new);
+	public static final DeferredItem<Item> INVISIBILITY_RUNE = register("invisibility_rune", InvisibilityRuneItem::new);
+	public static final DeferredItem<Item> HEALING_RUNE = register("healing_rune", HealingRuneItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -760,7 +770,11 @@ public class PowerModItems {
 	}
 
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
-		return REGISTRY.registerItem(block.getId().getPath(), properties -> new BlockItem(block.get(), properties), new Item.Properties());
+		return block(block, new Item.Properties());
+	}
+
+	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block, Item.Properties properties) {
+		return REGISTRY.registerItem(block.getId().getPath(), prop -> new BlockItem(block.get(), prop), properties);
 	}
 
 	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

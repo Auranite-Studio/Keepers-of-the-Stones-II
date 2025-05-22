@@ -15,7 +15,7 @@ import com.esmods.keepersofthestonestwo.procedures.EnergiumBlockPowerLockProcedu
 
 public class RawEnergiumBlockBlock extends Block {
 	public RawEnergiumBlockBlock(BlockBehaviour.Properties properties) {
-		super(properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6.25f, 225f).requiresCorrectToolForDrops());
+		super(properties.sound(SoundType.STONE).strength(6.25f, 225f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
