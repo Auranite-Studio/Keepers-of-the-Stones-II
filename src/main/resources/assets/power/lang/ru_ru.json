@@ -164,6 +164,7 @@
   "gui.power.wheel_abilties_golden_dust.tooltip_golden_dust_regeneration_uses": "Регенерация золотой пыли, расходует 80",
   "advancements.keepers_of_the_stones_2.title": "Хранители Камней II",
   "item.power.moon_double_sided_spear": "Двухстороннее лунное копьё",
+  "gui.power.debug_info.label_debug_mode": "DEBUG_MODE",
   "block.power.raw_energium_block": "Блок рудного энергиума",
   "item.power.sound_armor_boots": "Ботинки мастера звука",
   "item.power.empty_characteristics_card.description_0": "§7Пустая",

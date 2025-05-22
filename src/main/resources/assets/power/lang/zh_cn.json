@@ -162,6 +162,7 @@
   "gui.power.wheel_abilties_golden_dust.tooltip_golden_dust_regeneration_uses": "金粉再生，使用80",
   "advancements.keepers_of_the_stones_2.title": "守护石II",
   "item.power.moon_double_sided_spear": "月亮双面枪",
+  "gui.power.debug_info.label_debug_mode": "DEBUG_MODE",
   "block.power.raw_energium_block": "原始能量块",
   "item.power.sound_armor_boots": "声音靴",
   "item.power.empty_characteristics_card.description_0": "§7空",
