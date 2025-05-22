@@ -119,7 +119,7 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<LightballProjectileEntity>> LIGHTBALL_PROJECTILE = register("lightball_projectile",
 			EntityType.Builder.<LightballProjectileEntity>of(LightballProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ShadowEntity>> SHADOW = register("shadow",
-			EntityType.Builder.<ShadowEntity>of(ShadowEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<ShadowEntity>of(ShadowEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().ridingOffset(-0.6f).sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ShadowSphereEntity>> SHADOW_SPHERE = register("shadow_sphere",
 			EntityType.Builder.<ShadowSphereEntity>of(ShadowSphereEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SphereNothingProjectileEntity>> SPHERE_NOTHING_PROJECTILE = register("sphere_nothing_projectile",
@@ -141,7 +141,7 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<PoisonBombEntity>> POISON_BOMB = register("poison_bomb",
 			EntityType.Builder.<PoisonBombEntity>of(PoisonBombEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PoisonPitEntity>> POISON_PIT = register("poison_pit",
-			EntityType.Builder.<PoisonPitEntity>of(PoisonPitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(4f, 0.2f));
+			EntityType.Builder.<PoisonPitEntity>of(PoisonPitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().ridingOffset(-0.6f).sized(4f, 0.2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MercuryBallProjectileEntity>> MERCURY_BALL_PROJECTILE = register("mercury_ball_projectile",
 			EntityType.Builder.<MercuryBallProjectileEntity>of(MercuryBallProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<NoteBombProjectileEntity>> NOTE_BOMB_PROJECTILE = register("note_bomb_projectile",
@@ -155,29 +155,45 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<SmokeBombProjectileEntity>> SMOKE_BOMB_PROJECTILE = register("smoke_bomb_projectile",
 			EntityType.Builder.<SmokeBombProjectileEntity>of(SmokeBombProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedKnightEntity>> CURSED_KNIGHT = register("cursed_knight",
-			EntityType.Builder.<CursedKnightEntity>of(CursedKnightEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2f));
+			EntityType.Builder.<CursedKnightEntity>of(CursedKnightEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(1f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BlackHoleEntity>> BLACK_HOLE = register("black_hole",
-			EntityType.Builder.<BlackHoleEntity>of(BlackHoleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.2f, 0.2f));
+			EntityType.Builder.<BlackHoleEntity>of(BlackHoleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(0.2f, 0.2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SpiritEntity>> SPIRIT = register("spirit",
 			EntityType.Builder.<SpiritEntity>of(SpiritEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3)
 
 					.sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TurretEntity>> TURRET = register("turret",
-			EntityType.Builder.<TurretEntity>of(TurretEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(48).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<TurretEntity>of(TurretEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(48).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EnergiumGolemEntity>> ENERGIUM_GOLEM = register("energium_golem",
-			EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(2.25f, 2f));
+			EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune()
+
+					.sized(2.25f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedSquireEntity>> CURSED_SQUIRE = register("cursed_squire",
-			EntityType.Builder.<CursedSquireEntity>of(CursedSquireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+			EntityType.Builder.<CursedSquireEntity>of(CursedSquireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune()
+
+					.sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper",
-			EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(256).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(256).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ExampleMasterEntity>> EXAMPLE_MASTER = register("example_master",
 			EntityType.Builder.<ExampleMasterEntity>of(ExampleMasterEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.6f, 2f));
+					.ridingOffset(-0.6f).sized(0.6f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<RedMagnetEntity>> RED_MAGNET = register("red_magnet",
-			EntityType.Builder.<RedMagnetEntity>of(RedMagnetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<RedMagnetEntity>of(RedMagnetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BlueMagnetEntity>> BLUE_MAGNET = register("blue_magnet",
-			EntityType.Builder.<BlueMagnetEntity>of(BlueMagnetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<BlueMagnetEntity>of(BlueMagnetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ShockwaveGunProjectileEntity>> SHOCKWAVE_GUN_PROJECTILE = register("shockwave_gun_projectile",
 			EntityType.Builder.<ShockwaveGunProjectileEntity>of(ShockwaveGunProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.1f, 0.1f));
 

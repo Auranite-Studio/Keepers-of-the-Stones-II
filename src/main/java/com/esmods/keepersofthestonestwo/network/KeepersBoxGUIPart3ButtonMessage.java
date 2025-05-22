@@ -16,9 +16,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import java.util.HashMap;
-
-import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart3Menu;
 import com.esmods.keepersofthestonestwo.procedures.VacuumElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpiritElementGetProcedure;
@@ -52,14 +49,7 @@ public record KeepersBoxGUIPart3ButtonMessage(int buttonID, int x, int y, int z)
 
 	public static void handleData(final KeepersBoxGUIPart3ButtonMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.enqueueWork(() -> {
-				Player entity = context.player();
-				int buttonID = message.buttonID;
-				int x = message.x;
-				int y = message.y;
-				int z = message.z;
-				handleButtonAction(entity, buttonID, x, y, z);
-			}).exceptionally(e -> {
+			context.enqueueWork(() -> handleButtonAction(context.player(), message.buttonID, message.x, message.y, message.z)).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
 				return null;
 			});
@@ -68,7 +58,6 @@ public record KeepersBoxGUIPart3ButtonMessage(int buttonID, int x, int y, int z)
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = KeepersBoxGUIPart3Menu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;

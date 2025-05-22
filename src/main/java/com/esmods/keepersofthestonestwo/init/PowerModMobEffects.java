@@ -91,6 +91,7 @@ import com.esmods.keepersofthestonestwo.potion.SunMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StunMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StarRegenerationMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpiritMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.SpinMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpeedMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SoundMasterMobEffect;
@@ -101,6 +102,7 @@ import com.esmods.keepersofthestonestwo.potion.ShadowMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SandMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.RedMagnetPowerMobEffect;
 import com.esmods.keepersofthestonestwo.potion.RainMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.ProtectionMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PoisonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
@@ -136,6 +138,7 @@ import com.esmods.keepersofthestonestwo.potion.ExplosionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EtherMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EnergyMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EarthMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.DodgingMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DarknessMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CurseMobEffect;
@@ -226,6 +229,9 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> CURSE = REGISTRY.register("curse", () -> new CurseMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> HEAT_MASTER = REGISTRY.register("heat_master", () -> new HeatMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SHOCKWAVE_MASTER = REGISTRY.register("shockwave_master", () -> new ShockwaveMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> PROTECTION = REGISTRY.register("protection", () -> new ProtectionMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> SPIN = REGISTRY.register("spin", () -> new SpinMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> DODGING = REGISTRY.register("dodging", () -> new DodgingMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

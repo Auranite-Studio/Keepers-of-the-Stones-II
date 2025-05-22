@@ -1,16 +1,18 @@
 
 **New features**
-- Added new elements - heat and shockwave
+- Added runes information to the keeper's book
+- Added new elements information to the keeper's book
+- Added Chinese (Simplified) language
 
 **Improvemnts** 
-- The keeper's box can now hold more than 48 elements
+- *N/A*
 
 **API changes**
-- Colorful Powers API has been updated to 26
-- Added missing rune-related tags
+- *N/A*
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that caused the effects of red runes to not reset after death
+- [Bugfix] Fixed a bug that caused star points to be wasted for nothing when using the second and third heat master abilities
+- [Bugfix] Fixed a bug that caused the tooltip to display incorrectly when using invisibility and healing runes
 
 **Known issues**
 - *N/A*
