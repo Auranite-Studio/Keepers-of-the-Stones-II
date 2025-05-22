@@ -2,6 +2,7 @@
 **New features**
 - Added runes information to the keeper's book
 - Added new elements information to the keeper's book
+- Added Chinese language
 
 **Improvemnts** 
 - *N/A*
