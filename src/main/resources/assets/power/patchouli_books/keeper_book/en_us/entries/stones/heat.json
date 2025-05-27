@@ -1,0 +1,27 @@
+{
+    "name": "Heat",
+    "icon": "power:textures/mob_effect/heat_master.png",
+    "category": "power:stones",
+    "sortnum": 49,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Differential beam - attacks entities with a beam attack.",
+                "$(li)",
+                "Overheating - ignites an entity near you.",
+                "$(li)",
+                "Thermal blast - explodes the entity next to you."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Heat",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:heat_knife\",count:1}],ArmorItems:[{id:\"power:heat_armor_boots\",count:1},{id:\"power:heat_armor_leggings\",count:1},{id:\"power:heat_armor_chestplate\",count:1},{id:\"power:heat_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

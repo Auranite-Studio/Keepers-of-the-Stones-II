@@ -31,7 +31,7 @@ public class IfActiveBarrierProcedure {
 	private static void execute(@Nullable Event event, DamageSource damagesource, Entity entity) {
 		if (damagesource == null || entity == null)
 			return;
-		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.TECHNOBARRIER)) {
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.TECHNOBARRIER) || entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PowerModMobEffects.PROTECTION)) {
 			if (!damagesource.is(DamageTypes.INDIRECT_MAGIC)) {
 				if (!damagesource.is(DamageTypes.FALL)) {
 					if (!damagesource.is(DamageTypes.FLY_INTO_WALL)) {

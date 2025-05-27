@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "enchantment",
   "definition": {
     "name": "Isolation",
@@ -40,6 +40,9 @@
       },
       {
         "value": "CUSTOM:EnergiumArmor.boots"
+      },
+      {
+        "value": "CUSTOM:EnergiumShield"
       }
     ],
     "isTreasureEnchantment": false,

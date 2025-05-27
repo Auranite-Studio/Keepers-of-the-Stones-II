@@ -1,0 +1,16 @@
+{
+  "_fv": 79,
+  "_type": "villagerprofession",
+  "definition": {
+    "displayName": "Runologist",
+    "pointOfInterest": {
+      "value": "CUSTOM:RuneCutter"
+    },
+    "actionSound": {
+      "value": "entity.villager.work_armorer"
+    },
+    "hat": "None",
+    "professionTextureFile": "runologist.png",
+    "zombifiedProfessionTextureFile": "zombified_runologist.png"
+  }
+}

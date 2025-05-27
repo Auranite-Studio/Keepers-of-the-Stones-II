@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.Block;
 
 public class AmplifierOreBlock extends Block {
 	public AmplifierOreBlock(BlockBehaviour.Properties properties) {
-		super(properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6.75f, 5f).lightLevel(s -> 2).requiresCorrectToolForDrops());
+		super(properties.sound(SoundType.STONE).strength(6.75f, 5f).lightLevel(s -> 2).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

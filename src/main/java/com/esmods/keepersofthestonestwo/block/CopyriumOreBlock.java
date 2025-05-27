@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Block;
 
 public class CopyriumOreBlock extends Block {
 	public CopyriumOreBlock(BlockBehaviour.Properties properties) {
-		super(properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(3f, 5f).requiresCorrectToolForDrops());
+		super(properties.sound(SoundType.STONE).strength(3f, 5f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

@@ -16,9 +16,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import java.util.HashMap;
-
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTeleportationMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerRuneAbilityProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
@@ -49,14 +47,7 @@ public record WheelAbilitiesTeleportationButtonMessage(int buttonID, int x, int 
 
 	public static void handleData(final WheelAbilitiesTeleportationButtonMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.enqueueWork(() -> {
-				Player entity = context.player();
-				int buttonID = message.buttonID;
-				int x = message.x;
-				int y = message.y;
-				int z = message.z;
-				handleButtonAction(entity, buttonID, x, y, z);
-			}).exceptionally(e -> {
+			context.enqueueWork(() -> handleButtonAction(context.player(), message.buttonID, message.x, message.y, message.z)).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
 				return null;
 			});
@@ -65,7 +56,6 @@ public record WheelAbilitiesTeleportationButtonMessage(int buttonID, int x, int 
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = WheelAbilitiesTeleportationMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
@@ -95,21 +85,25 @@ public record WheelAbilitiesTeleportationButtonMessage(int buttonID, int x, int 
 		}
 		if (buttonID == 6) {
 
-			CreatePortalBlueProcedure.execute(entity);
+			PowerRuneAbilityProcedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			CreatePortalOrangeProcedure.execute(entity);
+			CreatePortalBlueProcedure.execute(entity);
 		}
 		if (buttonID == 8) {
 
-			CheckpointCreateProcedure.execute(entity);
+			CreatePortalOrangeProcedure.execute(entity);
 		}
 		if (buttonID == 9) {
 
-			CheckpointTPProcedure.execute(entity);
+			CheckpointCreateProcedure.execute(entity);
 		}
 		if (buttonID == 10) {
+
+			CheckpointTPProcedure.execute(entity);
+		}
+		if (buttonID == 11) {
 
 			Attack113Procedure.execute(entity);
 		}

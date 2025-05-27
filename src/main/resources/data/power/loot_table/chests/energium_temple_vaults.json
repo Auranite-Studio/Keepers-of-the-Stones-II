@@ -91,7 +91,7 @@
         {
           "type": "minecraft:item",
           "name": "power:energium_upgrade_smithing_template",
-          "weight": 1,
+          "weight": 2,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -105,7 +105,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:book",
-          "weight": 2,
+          "weight": 1,
           "functions": [
             {
               "function": "minecraft:set_count",

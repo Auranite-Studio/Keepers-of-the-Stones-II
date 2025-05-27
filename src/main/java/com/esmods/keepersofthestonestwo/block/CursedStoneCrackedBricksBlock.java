@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Block;
 
 public class CursedStoneCrackedBricksBlock extends Block {
 	public CursedStoneCrackedBricksBlock(BlockBehaviour.Properties properties) {
-		super(properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.TUFF).strength(2.5f, 3f));
+		super(properties.sound(SoundType.TUFF).strength(2.5f, 3f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

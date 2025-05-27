@@ -112,6 +112,9 @@ public class PowerModVariables {
 			clone.jump_char = original.jump_char;
 			clone.rank = original.rank;
 			clone.mind_used = original.mind_used;
+			clone.blue_rune_slot = original.blue_rune_slot;
+			clone.red_rune_slot = original.red_rune_slot;
+			clone.green_rune_slot = original.green_rune_slot;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -140,6 +143,7 @@ public class PowerModVariables {
 				clone.master_effect_start = original.master_effect_start;
 				clone.level_up_status = original.level_up_status;
 				clone.mind_player_owner = original.mind_player_owner;
+				clone.rune_ovelay_display = original.rune_ovelay_display;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -233,6 +237,8 @@ public class PowerModVariables {
 				mapVariables.blue_portal_placed = false;
 				mapVariables.orange_portal_placed = false;
 				mapVariables.cpapi_ver = 21.0;
+				mapVariables.heat_stone = false;
+				mapVariables.shockwave_stone = false;
 				mapVariables.setDirty();
 			}
 		}
@@ -359,6 +365,8 @@ public class PowerModVariables {
 		public boolean blue_portal_placed;
 		public boolean orange_portal_placed;
 		public double cpapi_ver;
+		public boolean heat_stone;
+		public boolean shockwave_stone;
 		public static final Codec<MapVariables> CODEC = new Codec<MapVariables>() {
 			@Override
 			public <T> DataResult<Pair<MapVariables, T>> decode(DynamicOps<T> ops, T input) {
@@ -421,6 +429,8 @@ public class PowerModVariables {
 					Codec.BOOL.decode(ops, map.get("blue_portal_placed")).result().ifPresent(v -> builder.blue_portal_placed = v.getFirst());
 					Codec.BOOL.decode(ops, map.get("orange_portal_placed")).result().ifPresent(v -> builder.orange_portal_placed = v.getFirst());
 					Codec.DOUBLE.decode(ops, map.get("cpapi_ver")).result().ifPresent(v -> builder.cpapi_ver = v.getFirst());
+					Codec.BOOL.decode(ops, map.get("heat_stone")).result().ifPresent(v -> builder.heat_stone = v.getFirst());
+					Codec.BOOL.decode(ops, map.get("shockwave_stone")).result().ifPresent(v -> builder.shockwave_stone = v.getFirst());
 					return DataResult.success(Pair.of(builder.build(), ops.empty()));
 				});
 			}
@@ -485,6 +495,8 @@ public class PowerModVariables {
 				recordBuilder.add("blue_portal_placed", Codec.BOOL.encode(input.blue_portal_placed, ops, ops.empty()));
 				recordBuilder.add("orange_portal_placed", Codec.BOOL.encode(input.orange_portal_placed, ops, ops.empty()));
 				recordBuilder.add("cpapi_ver", Codec.DOUBLE.encode(input.cpapi_ver, ops, ops.empty()));
+				recordBuilder.add("heat_stone", Codec.BOOL.encode(input.heat_stone, ops, ops.empty()));
+				recordBuilder.add("shockwave_stone", Codec.BOOL.encode(input.shockwave_stone, ops, ops.empty()));
 				return recordBuilder.build(prefix);
 			}
 		};
@@ -547,18 +559,20 @@ public class PowerModVariables {
 			boolean blue_portal_placed = false;
 			boolean orange_portal_placed = false;
 			double cpapi_ver = 21.0;
+			boolean heat_stone = false;
+			boolean shockwave_stone = false;
 
 			MapVariables build() {
 				return new MapVariables(opX, opY, opZ, bpX, bpY, bpZ, fire_stone, air_stone, earth_stone, water_stone, ether_stone, ice_stone, lightning_stone, sound_stone, crystal_stone, lava_stone, rain_stone, tornado_stone, ocean_stone,
 						plants_stone, animals_stone, metal_stone, light_stone, shadow_stone, vacuum_stone, energy_stone, sun_stone, moon_stone, space_stone, time_stone, blood_stone, technology_stone, teleportation_stone, explosion_stone, amber_stone,
 						creation_stone, destruction_stone, mist_stone, sand_stone, speed_stone, poison_stone, magnet_stone, mushrooms_stone, mercury_stone, music_stone, plague_stone, blue_flame_stone, gravity_stone, smoke_stone, spirit_stone,
-						form_stone, mind_stone, golden_dust_stone, darkness_stone, blue_portal_placed, orange_portal_placed, cpapi_ver);
+						form_stone, mind_stone, golden_dust_stone, darkness_stone, blue_portal_placed, orange_portal_placed, cpapi_ver, heat_stone, shockwave_stone);
 			}
 		}
 
 		public static final SavedDataType<MapVariables> TYPE = new SavedDataType<>(DATA_NAME,
 				ctx -> new MapVariables(0, 0, 0, 0, 0, 0, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
-						false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, 0),
+						false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, 0, false, false),
 				ctx -> CODEC, DataFixTypes.LEVEL);
 
 		public MapVariables(double opX, double opY, double opZ, double bpX, double bpY, double bpZ, boolean fire_stone, boolean air_stone, boolean earth_stone, boolean water_stone, boolean ether_stone, boolean ice_stone, boolean lightning_stone,
@@ -566,7 +580,7 @@ public class PowerModVariables {
 				boolean shadow_stone, boolean vacuum_stone, boolean energy_stone, boolean sun_stone, boolean moon_stone, boolean space_stone, boolean time_stone, boolean blood_stone, boolean technology_stone, boolean teleportation_stone,
 				boolean explosion_stone, boolean amber_stone, boolean creation_stone, boolean destruction_stone, boolean mist_stone, boolean sand_stone, boolean speed_stone, boolean poison_stone, boolean magnet_stone, boolean mushrooms_stone,
 				boolean mercury_stone, boolean music_stone, boolean plague_stone, boolean blue_flame_stone, boolean gravity_stone, boolean smoke_stone, boolean spirit_stone, boolean form_stone, boolean mind_stone, boolean golden_dust_stone,
-				boolean darkness_stone, boolean blue_portal_placed, boolean orange_portal_placed, double cpapi_ver) {
+				boolean darkness_stone, boolean blue_portal_placed, boolean orange_portal_placed, double cpapi_ver, boolean heat_stone, boolean shockwave_stone) {
 			this.opX = opX;
 			this.opY = opY;
 			this.opZ = opZ;
@@ -624,6 +638,8 @@ public class PowerModVariables {
 			this.blue_portal_placed = blue_portal_placed;
 			this.orange_portal_placed = orange_portal_placed;
 			this.cpapi_ver = cpapi_ver;
+			this.heat_stone = heat_stone;
+			this.shockwave_stone = shockwave_stone;
 		}
 
 		public void syncData(LevelAccessor world) {
@@ -634,7 +650,7 @@ public class PowerModVariables {
 		}
 
 		static MapVariables clientSide = new MapVariables(0, 0, 0, 0, 0, 0, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
-				false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, 21.0);
+				false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, 21.0, false, false);
 
 		public static MapVariables get(LevelAccessor world) {
 			if (world instanceof ServerLevelAccessor serverLevelAcc) {
@@ -745,6 +761,10 @@ public class PowerModVariables {
 		public String rank = "D";
 		public String mind_player_owner = "\"\"";
 		public boolean mind_used = false;
+		public ItemStack blue_rune_slot = ItemStack.EMPTY;
+		public ItemStack red_rune_slot = ItemStack.EMPTY;
+		public ItemStack green_rune_slot = ItemStack.EMPTY;
+		public double rune_ovelay_display = 0;
 
 		private void putItemStack(CompoundTag nbt, String key, ItemStack stack, HolderLookup.Provider lookupProvider) {
 			if (!stack.isEmpty()) {
@@ -819,6 +839,10 @@ public class PowerModVariables {
 			nbt.putString("rank", rank);
 			nbt.putString("mind_player_owner", mind_player_owner);
 			nbt.putBoolean("mind_used", mind_used);
+			putItemStack(nbt, "blue_rune_slot", blue_rune_slot, lookupProvider);
+			putItemStack(nbt, "red_rune_slot", red_rune_slot, lookupProvider);
+			putItemStack(nbt, "green_rune_slot", green_rune_slot, lookupProvider);
+			nbt.putDouble("rune_ovelay_display", rune_ovelay_display);
 			return nbt;
 		}
 
@@ -879,6 +903,10 @@ public class PowerModVariables {
 			rank = nbt.getStringOr("rank", "D");
 			mind_player_owner = nbt.getStringOr("mind_player_owner", "\"\"");
 			mind_used = nbt.getBooleanOr("mind_used", false);
+			blue_rune_slot = getItemStack(nbt, "blue_rune_slot", lookupProvider);
+			red_rune_slot = getItemStack(nbt, "red_rune_slot", lookupProvider);
+			green_rune_slot = getItemStack(nbt, "green_rune_slot", lookupProvider);
+			rune_ovelay_display = nbt.getDoubleOr("rune_ovelay_display", 0);
 		}
 
 		public void syncPlayerVariables(Entity entity) {

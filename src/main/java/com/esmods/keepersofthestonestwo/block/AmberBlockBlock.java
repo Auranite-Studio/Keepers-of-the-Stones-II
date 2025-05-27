@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Block;
 
 public class AmberBlockBlock extends Block {
 	public AmberBlockBlock(BlockBehaviour.Properties properties) {
-		super(properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6f, 5f));
+		super(properties.sound(SoundType.STONE).strength(6f, 5f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

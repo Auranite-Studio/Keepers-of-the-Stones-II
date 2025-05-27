@@ -1,0 +1,27 @@
+{
+  "_fv": 79,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Heat",
+    "icon": "heat_master",
+    "color": {
+      "value": -59804,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredbyHoney": false,
+    "modifiers": [],
+    "onStarted": {
+      "name": "HeatMasterStart"
+    },
+    "onExpired": {
+      "name": "HeatMasterEnd"
+    }
+  }
+}

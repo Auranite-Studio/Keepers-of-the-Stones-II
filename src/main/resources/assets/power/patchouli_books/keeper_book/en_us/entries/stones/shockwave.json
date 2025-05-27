@@ -1,0 +1,27 @@
+{
+    "name": "Shockwave",
+    "icon": "power:textures/mob_effect/shockwave_master.png",
+    "category": "power:stones",
+    "sortnum": 50,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Shockwave strike - attacks entities with a beam attack and repels them very strongly.",
+                "$(li)",
+                "Shock wave - hits everyone within a 12 block radius.",
+                "$(li)",
+                "Shockwave push - a strong shock from the ground/air."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Shockwave",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:shockwave_gun\",count:1}],ArmorItems:[{id:\"power:shockwave_armor_boots\",count:1},{id:\"power:shockwave_armor_leggings\",count:1},{id:\"power:shockwave_armor_chestplate\",count:1},{id:\"power:shockwave_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}
