@@ -1,5 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
@@ -10,6 +11,6 @@ public class ShockwaveGunPriVystrielieSnariadomIzPriedmietaProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown(PowerModItems.SHOCKWAVE_GUN.get(), 60);
+			_player.getCooldowns().addCooldown(new ItemStack(PowerModItems.SHOCKWAVE_GUN.get()), 60);
 	}
 }

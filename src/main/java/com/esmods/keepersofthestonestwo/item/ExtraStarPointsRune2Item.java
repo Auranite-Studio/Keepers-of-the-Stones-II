@@ -10,7 +10,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 
@@ -19,8 +19,8 @@ import java.util.List;
 import com.esmods.keepersofthestonestwo.procedures.ExtraStarPointsRune2UseProcedure;
 
 public class ExtraStarPointsRune2Item extends Item {
-	public ExtraStarPointsRune2Item() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE));
+	public ExtraStarPointsRune2Item(Item.Properties properties) {
+		super(properties.rarity(Rarity.RARE).stacksTo(1));
 	}
 
 	@Override
@@ -35,9 +35,9 @@ public class ExtraStarPointsRune2Item extends Item {
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		ExtraStarPointsRune2UseProcedure.execute(entity, ar.getObject());
+	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
+		InteractionResult ar = super.use(world, entity, hand);
+		ExtraStarPointsRune2UseProcedure.execute(entity, entity.getItemInHand(hand));
 		return ar;
 	}
 }

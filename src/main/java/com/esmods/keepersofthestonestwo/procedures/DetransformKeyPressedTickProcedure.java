@@ -144,17 +144,17 @@ public class DetransformKeyPressedTickProcedure {
 					_entity.removeEffect(PowerModMobEffects.SHOCKWAVE_MASTER);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.detransform_anim_trigger = true;
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.active_power = false;
 					_vars.syncPlayerVariables(entity);
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = 0;
+					_vars.syncPlayerVariables(entity);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.detransform_anim_trigger = true;
 					_vars.syncPlayerVariables(entity);
 				}
 				{

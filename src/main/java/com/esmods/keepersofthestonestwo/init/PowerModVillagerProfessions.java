@@ -35,7 +35,7 @@ public class PowerModVillagerProfessions {
 	private static final Map<String, ProfessionPoiType> POI_TYPES = new HashMap<>();
 	public static final DeferredRegister<VillagerProfession> PROFESSIONS = DeferredRegister.create(Registries.VILLAGER_PROFESSION, PowerMod.MODID);
 	public static final DeferredHolder<VillagerProfession, VillagerProfession> RUNOLOGIST = registerProfession("runologist", () -> PowerModBlocks.RUNE_CUTTER.get(),
-			() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.villager.work_armorer")));
+			() -> BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.villager.work_armorer")));
 
 	private static DeferredHolder<VillagerProfession, VillagerProfession> registerProfession(String name, Supplier<Block> block, Supplier<SoundEvent> soundEvent) {
 		POI_TYPES.put(name, new ProfessionPoiType(block, null));

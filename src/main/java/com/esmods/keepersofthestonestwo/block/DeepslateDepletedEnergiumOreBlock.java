@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Block;
 
 public class DeepslateDepletedEnergiumOreBlock extends Block {
 	public DeepslateDepletedEnergiumOreBlock(BlockBehaviour.Properties properties) {
-		super(properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DEEPSLATE).strength(6.75f, 5f).requiresCorrectToolForDrops());
+		super(properties.sound(SoundType.DEEPSLATE).strength(6.75f, 5f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

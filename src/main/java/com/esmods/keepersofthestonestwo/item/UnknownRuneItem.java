@@ -10,7 +10,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 
@@ -19,8 +19,8 @@ import java.util.List;
 import com.esmods.keepersofthestonestwo.procedures.UnknownRuneManifestProcedure;
 
 public class UnknownRuneItem extends Item {
-	public UnknownRuneItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.RARE));
+	public UnknownRuneItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.RARE).stacksTo(64));
 	}
 
 	@Override
@@ -35,9 +35,9 @@ public class UnknownRuneItem extends Item {
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		UnknownRuneManifestProcedure.execute(world, entity, ar.getObject());
+	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
+		InteractionResult ar = super.use(world, entity, hand);
+		UnknownRuneManifestProcedure.execute(world, entity, entity.getItemInHand(hand));
 		return ar;
 	}
 }

@@ -10,7 +10,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 
@@ -19,8 +19,8 @@ import java.util.List;
 import com.esmods.keepersofthestonestwo.procedures.AdditionTimeMasterEffectRune1UseProcedure;
 
 public class AdditionTimeMasterEffectRune1Item extends Item {
-	public AdditionTimeMasterEffectRune1Item() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE));
+	public AdditionTimeMasterEffectRune1Item(Item.Properties properties) {
+		super(properties.rarity(Rarity.RARE).stacksTo(1));
 	}
 
 	@Override
@@ -35,9 +35,9 @@ public class AdditionTimeMasterEffectRune1Item extends Item {
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		AdditionTimeMasterEffectRune1UseProcedure.execute(entity, ar.getObject());
+	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
+		InteractionResult ar = super.use(world, entity, hand);
+		AdditionTimeMasterEffectRune1UseProcedure.execute(entity, entity.getItemInHand(hand));
 		return ar;
 	}
 }
