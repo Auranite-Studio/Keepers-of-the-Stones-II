@@ -27155,7 +27155,12 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderItemInCursedVaultProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/ItemsAndBlocks/Vaults/Cursed"
     },
