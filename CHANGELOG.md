@@ -7,6 +7,7 @@
 - Added empty rune
 - Added the energium shield
 - Added achievement - Runes of the Ancients
+- Added Chinese (Simplified) language
 
 **Improvemnts** 
 - Runes are no longer an experimental feature
