@@ -104,7 +104,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "power:empty_rune",
+          "name": "power:unknown_rune",
           "weight": 1,
           "functions": [
             {

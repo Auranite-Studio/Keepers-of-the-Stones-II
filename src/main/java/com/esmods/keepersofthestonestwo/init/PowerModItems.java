@@ -31,6 +31,7 @@ import com.esmods.keepersofthestonestwo.item.VacuumStoneItem;
 import com.esmods.keepersofthestonestwo.item.VacuumDaggerItem;
 import com.esmods.keepersofthestonestwo.item.VacuumBatteryItem;
 import com.esmods.keepersofthestonestwo.item.VacuumArmorItem;
+import com.esmods.keepersofthestonestwo.item.UnknownRuneItem;
 import com.esmods.keepersofthestonestwo.item.TornadoStoneItem;
 import com.esmods.keepersofthestonestwo.item.TornadoBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TornadoAxeItem;
@@ -221,7 +222,6 @@ import com.esmods.keepersofthestonestwo.item.EnergiumDustItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumCoreItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumAxeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumArmorItem;
-import com.esmods.keepersofthestonestwo.item.EmptyRuneItem;
 import com.esmods.keepersofthestonestwo.item.EmptyCharacteristicsCardItem;
 import com.esmods.keepersofthestonestwo.item.EmptyBatteryItem;
 import com.esmods.keepersofthestonestwo.item.EarthStoneItem;
@@ -738,7 +738,6 @@ public class PowerModItems {
 	public static final DeferredItem<Item> EXTRA_STAR_POINTS_RUNE_3 = REGISTRY.register("extra_star_points_rune_3", ExtraStarPointsRune3Item::new);
 	public static final DeferredItem<Item> MUSIC_HOPE = REGISTRY.register("music_hope", MusicHopeItem::new);
 	public static final DeferredItem<Item> ENERGIUM_SHIELD = REGISTRY.register("energium_shield", EnergiumShieldItem::new);
-	public static final DeferredItem<Item> EMPTY_RUNE = REGISTRY.register("empty_rune", EmptyRuneItem::new);
 	public static final DeferredItem<Item> REDUCED_STONE_RECHARGE_TIME_RUNE_1 = REGISTRY.register("reduced_stone_recharge_time_rune_1", ReducedStoneRechargeTimeRune1Item::new);
 	public static final DeferredItem<Item> REDUCED_STONE_RECHARGE_TIME_RUNE_2 = REGISTRY.register("reduced_stone_recharge_time_rune_2", ReducedStoneRechargeTimeRune2Item::new);
 	public static final DeferredItem<Item> REDUCED_STONE_RECHARGE_TIME_RUNE_3 = REGISTRY.register("reduced_stone_recharge_time_rune_3", ReducedStoneRechargeTimeRune3Item::new);
@@ -764,6 +763,7 @@ public class PowerModItems {
 	public static final DeferredItem<Item> DODGING_RUNE = REGISTRY.register("dodging_rune", DodgingRuneItem::new);
 	public static final DeferredItem<Item> INVISIBILITY_RUNE = REGISTRY.register("invisibility_rune", InvisibilityRuneItem::new);
 	public static final DeferredItem<Item> HEALING_RUNE = REGISTRY.register("healing_rune", HealingRuneItem::new);
+	public static final DeferredItem<Item> UNKNOWN_RUNE = REGISTRY.register("unknown_rune", UnknownRuneItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

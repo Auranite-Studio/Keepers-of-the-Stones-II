@@ -173,7 +173,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.RAW_COPYRIUM.get());
 				tabData.accept(PowerModItems.COPYRIUM_INGOT.get());
 				tabData.accept(PowerModItems.MUSIC_HOPE.get());
-				tabData.accept(PowerModItems.EMPTY_RUNE.get());
+				tabData.accept(PowerModItems.UNKNOWN_RUNE.get());
 				tabData.accept(PowerModItems.EXTRA_STAR_POINTS_RUNE_1.get());
 				tabData.accept(PowerModItems.EXTRA_STAR_POINTS_RUNE_2.get());
 				tabData.accept(PowerModItems.EXTRA_STAR_POINTS_RUNE_3.get());

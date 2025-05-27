@@ -1,8 +1,8 @@
 {
     "name": "Level & Rank System",
     "icon": "power:characteristics_card",
-    "category": "power:progression",
-    "sortnum": 3,
+    "category": "power:amplification",
+    "sortnum": 2,
     "pages": [
         {
             "type": "text",

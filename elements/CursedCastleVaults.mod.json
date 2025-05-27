@@ -112,7 +112,7 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:EmptyRune"
+              "value": "CUSTOM:UnknownRune"
             },
             "weight": 1,
             "minCount": 1,

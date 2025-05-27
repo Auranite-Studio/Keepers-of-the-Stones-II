@@ -1,10 +1,12 @@
 
 **New features**
+- Added new elements - heat and shockwave
 - Added runologist
 - Added runologist's house to villages
 - Added three types of runes - blue, red and green
 - Added empty rune
 - Added the energium shield
+- Added achievement - Runes of the Ancients
 
 **Improvemnts** 
 - Runes are no longer an experimental feature
@@ -13,8 +15,13 @@
 - Now Magnet Master can place two magnets of different polarities (blue - repels, red - attracts)
 - Master of Gravity no longer takes fall damage
 - Increased the chance to drop an energium upgrade smithing template from the energium vaults
+- Enchanted books will now drop less frequently in energium vaults
+- Empty runes now drops instead of enchanted books in cursed vaults
+- The keeper's box can now hold more than 48 elements
 
 **API changes**
+- Colorful Powers API has been updated to 26
+- Added missing rune-related tags
 - Warning will now be displayed when using the beta version of the mod
 
 **Bugfixes**
