@@ -35439,7 +35439,8 @@
       "CUSTOM:SpinRune",
       "CUSTOM:DodgingRune",
       "CUSTOM:InvisibilityRune",
-      "CUSTOM:HealingRune"
+      "CUSTOM:HealingRune",
+      "CUSTOM:UnknownRune"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:RuneCutter",
@@ -35976,7 +35977,13 @@
       "CUSTOM:ReducedStoneRechargeTimeRune3",
       "CUSTOM:AdditionTimeMasterEffectRune1",
       "CUSTOM:AdditionTimeMasterEffectRune2",
-      "CUSTOM:AdditionTimeMasterEffectRune3"
+      "CUSTOM:AdditionTimeMasterEffectRune3",
+      "CUSTOM:ProtectionRune",
+      "CUSTOM:SpinRune",
+      "CUSTOM:DodgingRune",
+      "CUSTOM:InvisibilityRune",
+      "CUSTOM:HealingRune",
+      "CUSTOM:UnknownRune"
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:CursedStoneCrackedBricksSlab",

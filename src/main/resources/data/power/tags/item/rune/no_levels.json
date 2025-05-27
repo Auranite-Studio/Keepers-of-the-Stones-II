@@ -5,6 +5,7 @@
     "power:spin_rune",
     "power:dodging_rune",
     "power:invisibility_rune",
-    "power:healing_rune"
+    "power:healing_rune",
+    "power:unknown_rune"
   ]
 }
