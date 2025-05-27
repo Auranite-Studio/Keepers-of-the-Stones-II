@@ -24,6 +24,7 @@
 - Colorful Powers API has been updated to 26
 - Added missing rune-related tags
 - Warning will now be displayed when using the beta version of the mod
+- Compatibility of add-ons developed for earlier versions of the mod (1.1.6-1.1.8) is preserved
 
 **Bugfixes**
 - [Bugfix] Fixed a bug that caused ores to not be mined with the silk touch enchantment
