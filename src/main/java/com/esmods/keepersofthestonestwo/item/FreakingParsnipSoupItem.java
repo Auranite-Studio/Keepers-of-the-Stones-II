@@ -2,7 +2,6 @@
 package com.esmods.keepersofthestonestwo.item;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -12,7 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class FreakingParsnipSoupItem extends Item {
 	public FreakingParsnipSoupItem(Item.Properties properties) {
-		super(properties.rarity(Rarity.COMMON).stacksTo(1).food((new FoodProperties.Builder()).nutrition(10).saturationModifier(0.8f).build()));
+		super(properties.stacksTo(1).food((new FoodProperties.Builder()).nutrition(10).saturationModifier(0.8f).build()));
 	}
 
 	@Override
