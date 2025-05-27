@@ -3,14 +3,15 @@
 ![Date](https://img.shields.io/github/release-date/Environment-Studios-Official/Keepers-of-the-Stones-II)
 | MC Version | Modloader | Support |
 |------------|-----------|---------|
+| 1.21.6     |  NEOFORGE | In-Dev  |
 | 1.21.5     |  NEOFORGE | Active  |
-| 1.21.4     |  NEOFORGE | Active  |
+| 1.21.4     |  NEOFORGE |  NSL    |
 | 1.21.3     |  NEOFORGE | Skipped |
 | 1.21.1     |  NEOFORGE | Active  |
 | 1.20.6     |  NEOFORGE |  NSL    |
 | 1.20.4     |  NEOFORGE |  NSL    |
 | 1.20.2     |  NEOFORGE | Skipped |
-| 1.20.1     |   FORGE   |  LTS    |
+| 1.20.1     |   FORGE   |  NSL    |
 | 1.19.4     |   FORGE   | Skipped |
 | 1.19.2     |   FORGE   |  NSL    |
 

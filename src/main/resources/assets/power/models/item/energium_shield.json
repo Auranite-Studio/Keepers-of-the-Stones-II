@@ -1,0 +1,15 @@
+{
+  "parent": "power:custom/power_shield",
+  "textures": {
+    "layer0": "power:block/energium_shield",
+    "particle": "power:item/energium_shield"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "power:item/energium_shield_0"
+    }
+  ]
+}

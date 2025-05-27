@@ -95,6 +95,9 @@ public class PowerModVariables {
 			clone.jump_char = original.jump_char;
 			clone.rank = original.rank;
 			clone.mind_used = original.mind_used;
+			clone.blue_rune_slot = original.blue_rune_slot;
+			clone.red_rune_slot = original.red_rune_slot;
+			clone.green_rune_slot = original.green_rune_slot;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -123,6 +126,7 @@ public class PowerModVariables {
 				clone.master_effect_start = original.master_effect_start;
 				clone.level_up_status = original.level_up_status;
 				clone.mind_player_owner = original.mind_player_owner;
+				clone.rune_ovelay_display = original.rune_ovelay_display;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -245,6 +249,8 @@ public class PowerModVariables {
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
 		public double cpapi_ver = 21.0;
+		public boolean heat_stone = false;
+		public boolean shockwave_stone = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -310,6 +316,8 @@ public class PowerModVariables {
 			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
 			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
 			cpapi_ver = nbt.getDouble("cpapi_ver");
+			heat_stone = nbt.getBoolean("heat_stone");
+			shockwave_stone = nbt.getBoolean("shockwave_stone");
 		}
 
 		@Override
@@ -371,6 +379,8 @@ public class PowerModVariables {
 			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
 			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
 			nbt.putDouble("cpapi_ver", cpapi_ver);
+			nbt.putBoolean("heat_stone", heat_stone);
+			nbt.putBoolean("shockwave_stone", shockwave_stone);
 			return nbt;
 		}
 
@@ -487,6 +497,10 @@ public class PowerModVariables {
 		public String rank = "D";
 		public String mind_player_owner = "\"\"";
 		public boolean mind_used = false;
+		public ItemStack blue_rune_slot = ItemStack.EMPTY;
+		public ItemStack red_rune_slot = ItemStack.EMPTY;
+		public ItemStack green_rune_slot = ItemStack.EMPTY;
+		public double rune_ovelay_display = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -546,6 +560,10 @@ public class PowerModVariables {
 			nbt.putString("rank", rank);
 			nbt.putString("mind_player_owner", mind_player_owner);
 			nbt.putBoolean("mind_used", mind_used);
+			nbt.put("blue_rune_slot", blue_rune_slot.saveOptional(lookupProvider));
+			nbt.put("red_rune_slot", red_rune_slot.saveOptional(lookupProvider));
+			nbt.put("green_rune_slot", green_rune_slot.saveOptional(lookupProvider));
+			nbt.putDouble("rune_ovelay_display", rune_ovelay_display);
 			return nbt;
 		}
 
@@ -606,6 +624,10 @@ public class PowerModVariables {
 			rank = nbt.getString("rank");
 			mind_player_owner = nbt.getString("mind_player_owner");
 			mind_used = nbt.getBoolean("mind_used");
+			blue_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("blue_rune_slot"));
+			red_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("red_rune_slot"));
+			green_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("green_rune_slot"));
+			rune_ovelay_display = nbt.getDouble("rune_ovelay_display");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

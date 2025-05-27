@@ -7,13 +7,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
@@ -31,12 +28,13 @@ import com.esmods.keepersofthestonestwo.procedures.FormStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DarknessStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart3ButtonMessage;
+import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
-public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBoxGUIPart3Menu> {
-	private final static HashMap<String, Object> guistate = KeepersBoxGUIPart3Menu.guistate;
+public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBoxGUIPart3Menu> implements PowerModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_keepers_box_button_up;
 	ImageButton imagebutton_keepers_box_button_down;
 	ImageButton imagebutton_light_element;
@@ -61,6 +59,12 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		this.entity = container.entity;
 		this.imageWidth = 267;
 		this.imageHeight = 188;
+	}
+
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
 	}
 
 	@Override
@@ -122,9 +126,7 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
-		guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/keepers_box_gui_part_3.png"), this.leftPos + 5, this.topPos + -34, 0, 0, 240, 260, 240, 260);
-
+		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/keepers_box_gui_part_3.png"), this.leftPos + 5, this.topPos + -34, 0, 0, 240, 260, 240, 260);
 		RenderSystem.disableBlend();
 	}
 
@@ -153,10 +155,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_keepers_box_button_up", imagebutton_keepers_box_button_up);
 		this.addRenderableWidget(imagebutton_keepers_box_button_up);
 		imagebutton_keepers_box_button_down = new ImageButton(this.leftPos + 209, this.topPos + 103, 18, 18,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/keepers_box_button_down.png"), ResourceLocation.parse("power:textures/screens/keepers_box_button_down_active.png")), e -> {
@@ -167,10 +168,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_keepers_box_button_down", imagebutton_keepers_box_button_down);
 		this.addRenderableWidget(imagebutton_keepers_box_button_down);
 		imagebutton_light_element = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/light_element.png"), ResourceLocation.parse("power:textures/screens/light_element_highlighted.png")), e -> {
@@ -182,10 +182,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (LightStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_light_element", imagebutton_light_element);
 		this.addRenderableWidget(imagebutton_light_element);
 		imagebutton_shadow_element = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/shadow_element.png"), ResourceLocation.parse("power:textures/screens/shadow_element_highlighted.png")), e -> {
@@ -197,10 +196,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (ShadowStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_shadow_element", imagebutton_shadow_element);
 		this.addRenderableWidget(imagebutton_shadow_element);
 		imagebutton_sun_element = new ImageButton(this.leftPos + 162, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/sun_element.png"), ResourceLocation.parse("power:textures/screens/sun_element_highlighted.png")), e -> {
@@ -212,10 +210,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (SunStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_sun_element", imagebutton_sun_element);
 		this.addRenderableWidget(imagebutton_sun_element);
 		imagebutton_space_element = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/space_element.png"), ResourceLocation.parse("power:textures/screens/space_element_highlighted.png")), e -> {
@@ -227,10 +224,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (SpaceStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_space_element", imagebutton_space_element);
 		this.addRenderableWidget(imagebutton_space_element);
 		imagebutton_moon_element = new ImageButton(this.leftPos + 162, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/moon_element.png"), ResourceLocation.parse("power:textures/screens/moon_element_highlighted.png")), e -> {
@@ -242,10 +238,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (MoonStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_moon_element", imagebutton_moon_element);
 		this.addRenderableWidget(imagebutton_moon_element);
 		imagebutton_vacuum_element = new ImageButton(this.leftPos + 184, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/vacuum_element.png"), ResourceLocation.parse("power:textures/screens/vacuum_element_highlighted.png")), e -> {
@@ -257,10 +252,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (VacuumStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_vacuum_element", imagebutton_vacuum_element);
 		this.addRenderableWidget(imagebutton_vacuum_element);
 		imagebutton_blood_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/blood_element.png"), ResourceLocation.parse("power:textures/screens/blood_element_highlighted.png")), e -> {
@@ -272,10 +266,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (BloodStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_blood_element", imagebutton_blood_element);
 		this.addRenderableWidget(imagebutton_blood_element);
 		imagebutton_spirit_element = new ImageButton(this.leftPos + 138, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/spirit_element.png"), ResourceLocation.parse("power:textures/screens/spirit_element_highlighted.png")), e -> {
@@ -287,10 +280,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (SpiritStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_spirit_element", imagebutton_spirit_element);
 		this.addRenderableWidget(imagebutton_spirit_element);
 		imagebutton_form_element = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/form_element.png"), ResourceLocation.parse("power:textures/screens/form_element_highlighted.png")), e -> {
@@ -302,10 +294,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (FormStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_form_element", imagebutton_form_element);
 		this.addRenderableWidget(imagebutton_form_element);
 		imagebutton_mind_element = new ImageButton(this.leftPos + 49, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/mind_element.png"), ResourceLocation.parse("power:textures/screens/mind_element_highlighted.png")), e -> {
@@ -317,10 +308,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (MindStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_mind_element", imagebutton_mind_element);
 		this.addRenderableWidget(imagebutton_mind_element);
 		imagebutton_golden_dust_element = new ImageButton(this.leftPos + 71, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/golden_dust_element.png"), ResourceLocation.parse("power:textures/screens/golden_dust_element_highlighted.png")), e -> {
@@ -332,10 +322,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GoldenDustStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_golden_dust_element", imagebutton_golden_dust_element);
 		this.addRenderableWidget(imagebutton_golden_dust_element);
 		imagebutton_darkness_element = new ImageButton(this.leftPos + 95, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/darkness_element.png"), ResourceLocation.parse("power:textures/screens/darkness_element_highlighted.png")), e -> {
@@ -347,10 +336,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (DarknessStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_darkness_element", imagebutton_darkness_element);
 		this.addRenderableWidget(imagebutton_darkness_element);
 	}
 }

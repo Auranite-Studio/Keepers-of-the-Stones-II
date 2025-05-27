@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "loottable",
   "definition": {
     "type": "Chest",
@@ -112,9 +112,9 @@
           {
             "type": "item",
             "item": {
-              "value": "Items.BOOK"
+              "value": "CUSTOM:UnknownRune"
             },
-            "weight": 2,
+            "weight": 1,
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 3,
