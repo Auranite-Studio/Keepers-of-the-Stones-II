@@ -30,4 +30,4 @@
 - [Bugfix] Fixed a bug that caused ores to not be mined with the silk touch enchantment
 
 **Known issues**
-- Temporarily disabled item renders for vaults and battery charger blocks (only 1.21.5)
+- *N/A*
