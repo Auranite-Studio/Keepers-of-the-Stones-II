@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraft.client.renderer.block.model.BakedQuad;
-import net.minecraft.client.renderer.block.model.BlockStateModel;
 import org.joml.Vector3f;
 import org.joml.Matrix4f;
 
@@ -30,6 +28,8 @@ import net.minecraft.client.renderer.entity.state.EntityRenderState;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
+import net.minecraft.client.renderer.block.model.BlockStateModel;
+import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.ModelBlockRenderer;
 import net.minecraft.client.renderer.block.BlockRenderDispatcher;
 import net.minecraft.client.renderer.Sheets;
@@ -43,8 +43,8 @@ import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
-import java.util.List;
 import java.util.Map;
+import java.util.List;
 import java.util.HashMap;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -128,7 +128,7 @@ public class RenderItemInCursedVaultProcedure {
 			float red = (color >> 16 & 255) / 255.0F;
 			float green = (color >> 8 & 255) / 255.0F;
 			float blue = (color & 255) / 255.0F;
-            {
+			{
 				renderer.renderModel(pose, bufferSource.getBuffer(Sheets.translucentItemSheet()), (BlockStateModel) blockState, red, green, blue, packedLight, OverlayTexture.NO_OVERLAY);
 			}
 		}
