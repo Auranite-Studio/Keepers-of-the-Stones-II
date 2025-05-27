@@ -3,10 +3,10 @@
 - *N/A*
 
 **Improvemnts** 
-- *N/A*
+- Changed the item inside the cursed vault to an unknown rune
 
 **API changes**
-- *N/A*
+- Adding missing runes to tags
 
 **Bugfixes**
 - [Bugfix] Fixed item rendering on some blocks (1.21.5 only)

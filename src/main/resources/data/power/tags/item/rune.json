@@ -9,6 +9,12 @@
     "power:reduced_stone_recharge_time_rune_3",
     "power:addition_time_master_effect_rune_1",
     "power:addition_time_master_effect_rune_2",
-    "power:addition_time_master_effect_rune_3"
+    "power:addition_time_master_effect_rune_3",
+    "power:protection_rune",
+    "power:spin_rune",
+    "power:dodging_rune",
+    "power:invisibility_rune",
+    "power:healing_rune",
+    "power:unknown_rune"
   ]
 }
