@@ -44,7 +44,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "EmptyRuneManifest"
+      "name": "UnknownRuneManifest"
     },
     "enableRanged": false,
     "shootConstantly": false,

@@ -5,7 +5,7 @@
 - Added Chinese (Simplified) language
 
 **Improvemnts** 
-- *N/A*
+- Removed empty rune, now an unknown rune in its place
 
 **API changes**
 - *N/A*

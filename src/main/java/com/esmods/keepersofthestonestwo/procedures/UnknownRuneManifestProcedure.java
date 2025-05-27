@@ -12,7 +12,7 @@ import net.minecraft.core.component.DataComponents;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-public class EmptyRuneManifestProcedure {
+public class UnknownRuneManifestProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
