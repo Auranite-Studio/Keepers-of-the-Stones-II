@@ -9,7 +9,7 @@
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] 
+- [Bugfix] Fixed item rendering on some blocks (1.21.5 only)
 
 **Known issues**
 - *N/A*
