@@ -3,8 +3,8 @@
   "values": [
     "power:protection_rune",
     "power:spin_rune",
-    "power:dodging_rune",
     "power:invisibility_rune",
-    "power:healing_rune"
+    "power:healing_rune",
+    "power:dodging_rune"
   ]
 }

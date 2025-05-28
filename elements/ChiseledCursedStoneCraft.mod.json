@@ -5,6 +5,7 @@
     "recipeType": "Stone cutting",
     "recipeRetstackSize": 1,
     "group": "",
+    "unlockingItems": [],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

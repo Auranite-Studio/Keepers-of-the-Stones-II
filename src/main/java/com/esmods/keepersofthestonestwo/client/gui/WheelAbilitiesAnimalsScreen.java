@@ -66,22 +66,28 @@ public class WheelAbilitiesAnimalsScreen extends AbstractContainerScreen<WheelAb
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 82 && mouseY < topPos + 106) {
 			String hoverText = RuneTooltipRenderProcedure.execute(entity);
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 85 && mouseY < topPos + 109) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 143 && mouseY < topPos + 167) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
