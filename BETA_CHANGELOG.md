@@ -3,6 +3,7 @@
 - *N/A*
 
 **Improvemnts** 
+- Now the runes can be removed by pressing SHIFT + U
 - Changed the item inside the cursed vault to an unknown rune
 
 **API changes**
