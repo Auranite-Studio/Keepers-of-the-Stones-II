@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "power:creation_hoe",
-    "power:energium_hoe"
+    "power:energium_hoe",
+    "power:creation_hoe"
   ]
 }

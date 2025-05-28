@@ -5,6 +5,7 @@
     "recipeType": "Smelting",
     "recipeRetstackSize": 1,
     "group": "",
+    "unlockingItems": [],
     "cookingBookCategory": "MISC",
     "xpReward": 0.575,
     "cookingTime": 200,
