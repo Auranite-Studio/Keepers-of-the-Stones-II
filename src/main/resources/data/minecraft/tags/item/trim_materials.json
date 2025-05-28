@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "power:depleted_energium_ingot",
-    "power:energium_ingot",
     "power:amplifier_drop",
+    "power:energium_ingot",
+    "power:depleted_energium_ingot",
     "power:copyrium_ingot"
   ]
 }

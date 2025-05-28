@@ -2,8 +2,8 @@
   "replace": false,
   "values": [
     "creeper",
-    "enderman",
     "cave_spider",
-    "wither_skeleton"
+    "wither_skeleton",
+    "enderman"
   ]
 }

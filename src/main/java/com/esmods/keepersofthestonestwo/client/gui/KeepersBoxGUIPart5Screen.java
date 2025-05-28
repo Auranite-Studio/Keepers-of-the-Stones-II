@@ -60,13 +60,17 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 43 && mouseX < leftPos + 67 && mouseY > topPos + 66 && mouseY < topPos + 90) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_5.tooltip_heat"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 65 && mouseY < topPos + 89) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_5.tooltip_shockwave"), mouseX, mouseY);
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
