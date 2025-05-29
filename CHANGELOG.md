@@ -3,6 +3,7 @@
 - Added new elements - heat and shockwave
 - Added runologist
 - Added runologist's house to villages
+- Added rune cutter
 - Added three types of runes - blue, red and green
 - Added unknown rune
 - Added the energium shield
@@ -10,7 +11,6 @@
 - Added Chinese (Simplified) language
 
 **Improvemnts** 
-- Runes are no longer an experimental feature
 - The fourth ability can be activated if the green rune is active
 - Redesigned the second and third abilities of the magnet element
 - Now Magnet Master can place two magnets of different polarities (blue - repels, red - attracts)
