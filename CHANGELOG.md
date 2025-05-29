@@ -4,7 +4,7 @@
 - Added runologist
 - Added runologist's house to villages
 - Added three types of runes - blue, red and green
-- Added empty rune
+- Added unknown rune
 - Added the energium shield
 - Added achievement - Runes of the Ancients
 - Added Chinese (Simplified) language
@@ -17,7 +17,7 @@
 - Master of Gravity no longer takes fall damage
 - Increased the chance to drop an energium upgrade smithing template from the energium vaults
 - Enchanted books will now drop less frequently in energium vaults
-- Empty runes now drops instead of enchanted books in cursed vaults
+- Unknown runes now drops instead of enchanted books in cursed vaults
 - The keeper's box can now hold more than 48 elements
 
 **API changes**

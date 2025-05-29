@@ -10,6 +10,7 @@
 - Adding missing runes to tags
 
 **Bugfixes**
+- [Bugfix] Fixed a bug that caused the keeper's book to not work
 - [Bugfix] Fixed item rendering on some blocks (1.21.5 only)
 
 **Known issues**

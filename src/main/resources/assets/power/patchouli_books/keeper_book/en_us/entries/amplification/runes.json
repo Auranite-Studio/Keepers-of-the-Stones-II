@@ -6,12 +6,12 @@
   "pages": [
     {
       "type": "text",
-      "text": "Runes are passive ability amplifiers. There are three types: blue, red, and green. A player can activate only one rune per type. Runes can be obtained from cursed vault as an empty rune.$(br)$(br)Green runes drop with a 15% chance (3% each).$(br)Blue runes drop with a 45% chance.$(br)Red runes drop with a 40% chance (20% each)."
+      "text": "Runes are passive ability amplifiers. There are three types: blue, red, and green. A player can activate only one rune per type. Runes can be obtained from cursed vault as an unknown rune.$(br)$(br)Green runes drop with a 15% chance (3% each).$(br)Blue runes drop with a 45% chance.$(br)Red runes drop with a 40% chance (20% each)."
     },
     {
       "type": "spotlight",
-      "title": "Empty Rune",
-      "item": "power:empty_rune",
+      "title": "Unknown Rune",
+      "item": "power:unknown_rune",
       "text": "Activated with right-click mouse button to obtain a random rune.$(br)Source: cursed vault."
     },
     {
