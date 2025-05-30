@@ -1,8 +1,8 @@
 {
   "item.power.ether_battery": "电池",
   "item.power.crystal_armor_chestplate": "水晶胸甲",
-  "item.power.ether_stone": "以太石",
   "gui.power.wheel_ability_darkness.tooltip_dark_power_transfer_uses_80": "暗能量转移，使用80",
+  "item.power.ether_stone": "以太石",
   "item.power.moon_battery": "电池",
   "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "复印电源，使用50",
   "item.power.time_battery.description_0": "§a 带电元素：",
@@ -1122,5 +1122,6 @@
   "item.power.blue_flame_armor_chestplate": "蓝色火焰胸甲",
   "item.power.cursed_stone_cracked_bricks_slab": "Cursed Stone Cracked Bricks Slab",
   "item.power.creation_pickaxe": "创世镐",
-  "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15"
+  "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15",
+  "item.power.energium_upgrade_smithing_template.description_1": ""
 }
