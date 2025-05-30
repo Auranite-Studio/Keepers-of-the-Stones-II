@@ -131,13 +131,15 @@ public class CursedVaultBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean isMoving) {
-		BlockEntity blockEntity = world.getBlockEntity(pos);
-		if (blockEntity instanceof CursedVaultBlockEntity be) {
-			Containers.dropContents(world, pos, be);
-			world.updateNeighbourForOutputSignal(pos, this);
+	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
+		if (state.getBlock() != newState.getBlock()) {
+			BlockEntity blockEntity = world.getBlockEntity(pos);
+			if (blockEntity instanceof CursedVaultBlockEntity be) {
+				Containers.dropContents(world, pos, be);
+				world.updateNeighbourForOutputSignal(pos, this);
+			}
+			super.onRemove(state, world, pos, newState, isMoving);
 		}
-		super.affectNeighborsAfterRemoval(state, world, pos, isMoving);
 	}
 
 	@Override

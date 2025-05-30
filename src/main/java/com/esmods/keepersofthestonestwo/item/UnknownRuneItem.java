@@ -20,7 +20,7 @@ import com.esmods.keepersofthestonestwo.procedures.UnknownRuneManifestProcedure;
 
 public class UnknownRuneItem extends Item {
 	public UnknownRuneItem(Item.Properties properties) {
-		super(properties.rarity(Rarity.RARE).stacksTo(64));
+		super(properties.rarity(Rarity.RARE));
 	}
 
 	@Override

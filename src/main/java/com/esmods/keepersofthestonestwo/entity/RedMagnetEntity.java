@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
-import net.minecraft.world.entity.projectile.AbstractThrownPotion;
+import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
@@ -62,7 +62,7 @@ public class RedMagnetEntity extends PathfinderMob {
 	}
 
 	@Override
-	public boolean causeFallDamage(double l, float d, DamageSource source) {
+	public boolean causeFallDamage(float l, float d, DamageSource source) {
 		return false;
 	}
 
@@ -74,7 +74,7 @@ public class RedMagnetEntity extends PathfinderMob {
 			return false;
 		if (damagesource.getDirectEntity() instanceof Player)
 			return false;
-		if (damagesource.getDirectEntity() instanceof AbstractThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
 			return false;
 		if (damagesource.is(DamageTypes.FALL))
 			return false;

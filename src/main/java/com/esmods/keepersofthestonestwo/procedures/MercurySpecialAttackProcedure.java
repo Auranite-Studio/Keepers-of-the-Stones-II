@@ -80,7 +80,7 @@ public class MercurySpecialAttackProcedure {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 120, 3, false, false));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(MobEffects.NAUSEA, 60, 2, false, false));
+									_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 60, 2, false, false));
 								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
 										(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
 							}
@@ -213,7 +213,7 @@ public class MercurySpecialAttackProcedure {
 								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
 										(float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.8));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(MobEffects.NAUSEA, 400, 4, false, false));
+									_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 400, 4, false, false));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 600, 3, false, false));
 							}

@@ -39,13 +39,13 @@ public class PurpleMushroomSpontannoNaStoronieKliientaProcedure {
 						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mushrooms") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mushrooms")
 						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mushrooms") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mushrooms"))) {
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.NAUSEA, 200, 4));
+						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 4));
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 2));
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 200, 4));
+						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 4));
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.MINING_FATIGUE, 200, 4));
+						_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 200, 4));
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 200, 4));
 				}

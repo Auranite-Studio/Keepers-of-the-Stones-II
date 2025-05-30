@@ -5,6 +5,7 @@ import org.joml.Matrix4f;
 
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
+import net.neoforged.neoforge.client.model.data.ModelData;
 import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -25,16 +26,16 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
 import net.minecraft.core.SectionPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.entity.state.EntityRenderState;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
-import net.minecraft.client.renderer.block.model.BlockStateModel;
-import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.ModelBlockRenderer;
 import net.minecraft.client.renderer.block.BlockRenderDispatcher;
 import net.minecraft.client.renderer.Sheets;
@@ -49,7 +50,6 @@ import net.minecraft.client.Minecraft;
 import javax.annotation.Nullable;
 
 import java.util.Map;
-import java.util.List;
 import java.util.HashMap;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -112,7 +112,7 @@ public class RenderItemOnBatteryChargerProcedure {
 				if (blockEntityRenderer != null) {
 					MultiBufferSource.BufferSource bufferSource = minecraft.renderBuffers().bufferSource();
 					blockEntity.setLevel(level);
-					blockEntityRenderer.render(blockEntity, 0.0F, poseStack, bufferSource, packedLight, OverlayTexture.NO_OVERLAY, new Vec3(blockPos));
+					blockEntityRenderer.render(blockEntity, 0.0F, poseStack, bufferSource, packedLight, OverlayTexture.NO_OVERLAY);
 				}
 			}
 		}
@@ -125,14 +125,15 @@ public class RenderItemOnBatteryChargerProcedure {
 			MultiBufferSource.BufferSource bufferSource = minecraft.renderBuffers().bufferSource();
 			BlockRenderDispatcher dispatcher = minecraft.getBlockRenderer();
 			ModelBlockRenderer renderer = dispatcher.getModelRenderer();
-			List<BakedQuad> bakedModel = (List<BakedQuad>) dispatcher.getBlockModel(blockState);
+			BakedModel bakedModel = dispatcher.getBlockModel(blockState);
+			ModelData modelData = bakedModel.getModelData(level, blockPos, blockState, ModelData.builder().build());
 			PoseStack.Pose pose = poseStack.last();
 			int color = minecraft.getBlockColors().getColor(blockState, level, blockPos);
 			float red = (color >> 16 & 255) / 255.0F;
 			float green = (color >> 8 & 255) / 255.0F;
 			float blue = (color & 255) / 255.0F;
-			{
-				renderer.renderModel(pose, bufferSource.getBuffer(Sheets.translucentItemSheet()), (BlockStateModel) blockState, red, green, blue, packedLight, OverlayTexture.NO_OVERLAY);
+			for (RenderType renderType : bakedModel.getRenderTypes(blockState, RandomSource.create(42L), modelData)) {
+				renderer.renderModel(pose, bufferSource.getBuffer(Sheets.translucentItemSheet()), blockState, bakedModel, red, green, blue, packedLight, OverlayTexture.NO_OVERLAY, modelData, renderType);
 			}
 		}
 	}
@@ -173,7 +174,7 @@ public class RenderItemOnBatteryChargerProcedure {
 		poseStack.popPose();
 	}
 
-	public static void renderItem(ItemStack itemStack, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean glowing, boolean b) {
+	public static void renderItem(ItemStack itemStack, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean flipping, boolean glowing) {
 		Minecraft minecraft = Minecraft.getInstance();
 		MultiBufferSource.BufferSource bufferSource = minecraft.renderBuffers().bufferSource();
 		ItemRenderer renderer = minecraft.getItemRenderer();
@@ -187,7 +188,7 @@ public class RenderItemOnBatteryChargerProcedure {
 		poseStack.mulPose(com.mojang.math.Axis.ZN.rotationDegrees(roll));
 		poseStack.scale(scale, scale, scale);
 		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-		renderer.renderStatic(null, itemStack, ItemDisplayContext.FIXED, poseStack, bufferSource, minecraft.level, packedLight, OverlayTexture.NO_OVERLAY, 0);
+		renderer.renderStatic(null, itemStack, ItemDisplayContext.FIXED, flipping, poseStack, bufferSource, minecraft.level, packedLight, OverlayTexture.NO_OVERLAY, 0);
 		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 		poseStack.popPose();
 	}
@@ -230,7 +231,14 @@ public class RenderItemOnBatteryChargerProcedure {
 			ClientLevel level = Minecraft.getInstance().level;
 			Entity entity = provider.getCamera().getEntity();
 			Vec3 pos = entity.getPosition(provider.getPartialTick().getGameTimeDeltaPartialTick(false));
+			RenderSystem.depthMask(true);
+			RenderSystem.enableDepthTest();
 			execute(provider, level);
+			RenderSystem.defaultBlendFunc();
+			RenderSystem.disableBlend();
+			RenderSystem.enableCull();
+			RenderSystem.enableDepthTest();
+			RenderSystem.depthMask(true);
 		}
 	}
 

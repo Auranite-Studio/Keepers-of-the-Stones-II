@@ -1,15 +1,14 @@
 
 package com.esmods.keepersofthestonestwo.item;
 
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.HoeItem;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
 
@@ -23,8 +22,8 @@ public class EnergiumHoeItem extends HoeItem {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-		super.inventoryTick(itemstack, world, entity, slot);
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
 		EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 	}
 }

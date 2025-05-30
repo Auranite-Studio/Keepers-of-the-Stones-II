@@ -7,7 +7,7 @@ import net.neoforged.neoforge.common.NeoForgeMod;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.AbstractThrownPotion;
+import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
@@ -134,7 +134,7 @@ public class CursedKeeperEntity extends Monster {
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
 			return false;
-		if (damagesource.getDirectEntity() instanceof AbstractThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
 			return false;
 		if (damagesource.is(DamageTypes.FALL))
 			return false;
@@ -186,17 +186,17 @@ public class CursedKeeperEntity extends Monster {
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Dataattack_anim_sync"))
-			this.entityData.set(DATA_attack_anim_sync, compound.getIntOr("Dataattack_anim_sync", 0));
+			this.entityData.set(DATA_attack_anim_sync, compound.getInt("Dataattack_anim_sync"));
 		if (compound.contains("Datastage_zero_anim_sync"))
-			this.entityData.set(DATA_stage_zero_anim_sync, compound.getBooleanOr("Datastage_zero_anim_sync", false));
+			this.entityData.set(DATA_stage_zero_anim_sync, compound.getBoolean("Datastage_zero_anim_sync"));
 		if (compound.contains("Datastage_one_anim_sync"))
-			this.entityData.set(DATA_stage_one_anim_sync, compound.getBooleanOr("Datastage_one_anim_sync", false));
+			this.entityData.set(DATA_stage_one_anim_sync, compound.getBoolean("Datastage_one_anim_sync"));
 		if (compound.contains("Datastage_two_anim_sync"))
-			this.entityData.set(DATA_stage_two_anim_sync, compound.getBooleanOr("Datastage_two_anim_sync", false));
+			this.entityData.set(DATA_stage_two_anim_sync, compound.getBoolean("Datastage_two_anim_sync"));
 		if (compound.contains("Dataaggro_anim_sync"))
-			this.entityData.set(DATA_aggro_anim_sync, compound.getBooleanOr("Dataaggro_anim_sync", false));
+			this.entityData.set(DATA_aggro_anim_sync, compound.getBoolean("Dataaggro_anim_sync"));
 		if (compound.contains("Datafall_anim_sync"))
-			this.entityData.set(DATA_fall_anim_sync, compound.getBooleanOr("Datafall_anim_sync", false));
+			this.entityData.set(DATA_fall_anim_sync, compound.getBoolean("Datafall_anim_sync"));
 	}
 
 	@Override

@@ -65,10 +65,10 @@ public class BlueMagicFireballItem extends Item {
 
 	private ItemStack findAmmo(Player player) {
 		ItemStack stack = ProjectileWeaponItem.getHeldProjectile(player, e -> e.getItem() == MagicFireballProjectileEntity.PROJECTILE_ITEM.getItem());
-		if (stack.isEmpty()) {
-			for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
-				ItemStack teststack = player.getInventory().getItem(i);
-				if (!teststack.isEmpty() && teststack.getItem() == MagicFireballProjectileEntity.PROJECTILE_ITEM.getItem()) {
+		if (stack == ItemStack.EMPTY) {
+			for (int i = 0; i < player.getInventory().items.size(); i++) {
+				ItemStack teststack = player.getInventory().items.get(i);
+				if (teststack != null && teststack.getItem() == MagicFireballProjectileEntity.PROJECTILE_ITEM.getItem()) {
 					stack = teststack;
 					break;
 				}

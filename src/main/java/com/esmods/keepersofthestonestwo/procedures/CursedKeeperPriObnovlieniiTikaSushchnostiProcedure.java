@@ -18,7 +18,7 @@ public class CursedKeeperPriObnovlieniiTikaSushchnostiProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!entity.getPersistentData().getBooleanOr("OnBattle", false)) {
+		if (!entity.getPersistentData().getBoolean("OnBattle")) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				entity.getPersistentData().putBoolean("OnBattle", true);
 				entity.getPersistentData().putString("State", "Idle");
@@ -28,35 +28,35 @@ public class CursedKeeperPriObnovlieniiTikaSushchnostiProcedure {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				entity.getPersistentData().putDouble("Patience", 0);
 			} else {
-				entity.getPersistentData().putDouble("Patience", (entity.getPersistentData().getDoubleOr("Patience", 0) + 1));
+				entity.getPersistentData().putDouble("Patience", (entity.getPersistentData().getDouble("Patience") + 1));
 			}
-			if ((entity.getPersistentData().getStringOr("State", "")).equals("Idle")) {
+			if ((entity.getPersistentData().getString("State")).equals("Idle")) {
 				if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 					entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
 							((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
 				}
 				CursedKeeperAttackDetectionProcedure.execute(world, x, y, z, entity);
 			}
-			if (!entity.getPersistentData().getBooleanOr("Phase", false)) {
-				if ((entity.getPersistentData().getStringOr("State", "")).equals("Summon")) {
+			if (!entity.getPersistentData().getBoolean("Phase")) {
+				if ((entity.getPersistentData().getString("State")).equals("Summon")) {
 					CursedKeeperSummonProcedure.execute(world, x, y, z, entity);
 				}
 			} else {
-				if ((entity.getPersistentData().getStringOr("State", "")).equals("Fire")) {
+				if ((entity.getPersistentData().getString("State")).equals("Fire")) {
 					CursedKeeperFireProcedure.execute(world, x, y, z, entity);
 				}
-				if ((entity.getPersistentData().getStringOr("State", "")).equals("Air")) {
+				if ((entity.getPersistentData().getString("State")).equals("Air")) {
 					CursedKeeperAirProcedure.execute(entity);
 				}
-				if ((entity.getPersistentData().getStringOr("State", "")).equals("Earth")) {
+				if ((entity.getPersistentData().getString("State")).equals("Earth")) {
 					CursedKeeperEarthProcedure.execute(world, x, y, z, entity);
 				}
-				if ((entity.getPersistentData().getStringOr("State", "")).equals("Water")) {
+				if ((entity.getPersistentData().getString("State")).equals("Water")) {
 					CursedKeeperWaterProcedure.execute(entity);
 				}
 			}
 		}
-		if (entity.getPersistentData().getDoubleOr("Patience", 0) == 100) {
+		if (entity.getPersistentData().getDouble("Patience") == 100) {
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putDouble("Patience", 0);
 			entity.getPersistentData().putBoolean("OnBattle", false);

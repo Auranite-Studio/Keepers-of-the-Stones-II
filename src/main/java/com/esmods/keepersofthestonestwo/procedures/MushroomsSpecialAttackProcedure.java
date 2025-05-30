@@ -78,13 +78,13 @@ public class MushroomsSpecialAttackProcedure {
 										|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mushrooms")
 										|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mushrooms"))) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-										_entity.addEffect(new MobEffectInstance(MobEffects.NAUSEA, 100, 4));
+										_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 4));
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 2));
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-										_entity.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 100, 4));
+										_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 4));
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-										_entity.addEffect(new MobEffectInstance(MobEffects.MINING_FATIGUE, 100, 4));
+										_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 100, 4));
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 100, 4));
 								}

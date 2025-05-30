@@ -31,15 +31,15 @@ public class CursedSquireBiteProcedure {
 		double Range = 0;
 		double ZPar = 0;
 		Range = 0.25;
-		if (entity.getPersistentData().getDoubleOr("IA", 0) == 0) {
+		if (entity.getPersistentData().getDouble("IA") == 0) {
 			if (entity instanceof CursedSquireEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(CursedSquireEntity.DATA_attack_anim_sync, 1);
 			entity.getPersistentData().putDouble("Look", (entity.getYRot()));
 		}
-		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDoubleOr("IA", 0) + 1));
+		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
 		{
 			Entity _ent = entity;
-			_ent.setYRot((float) entity.getPersistentData().getDoubleOr("Look", 0));
+			_ent.setYRot((float) entity.getPersistentData().getDouble("Look"));
 			_ent.setXRot(0);
 			_ent.setYBodyRot(_ent.getYRot());
 			_ent.setYHeadRot(_ent.getYRot());
@@ -50,7 +50,7 @@ public class CursedSquireBiteProcedure {
 				_entity.yHeadRotO = _entity.getYRot();
 			}
 		}
-		if (entity.getPersistentData().getDoubleOr("IA", 0) == 3) {
+		if (entity.getPersistentData().getDouble("IA") == 3) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("power:cursed_squire.attack")), SoundSource.NEUTRAL, 1, 1);
@@ -59,7 +59,7 @@ public class CursedSquireBiteProcedure {
 				}
 			}
 		}
-		if (entity.getPersistentData().getDoubleOr("IA", 0) > 6 && entity.getPersistentData().getDoubleOr("IA", 0) < 9) {
+		if (entity.getPersistentData().getDouble("IA") > 6 && entity.getPersistentData().getDouble("IA") < 9) {
 			for (int index0 = 0; index0 < 4; index0++) {
 				XPar = x + entity.getLookAngle().x * Range;
 				YPar = y + 1.75;
@@ -104,7 +104,7 @@ public class CursedSquireBiteProcedure {
 				Range = Range + 0.375;
 			}
 		}
-		if (entity.getPersistentData().getDoubleOr("IA", 0) == 12) {
+		if (entity.getPersistentData().getDouble("IA") == 12) {
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putString("State", "Idle");
 			if (entity instanceof CursedSquireEntity _datEntSetI)

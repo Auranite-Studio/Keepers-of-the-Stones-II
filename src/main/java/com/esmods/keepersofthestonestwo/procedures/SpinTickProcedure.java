@@ -24,7 +24,7 @@ public class SpinTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getPersistentData().getDoubleOr("spinTickDamage", 0) == 5) {
+		if (entity.getPersistentData().getDouble("spinTickDamage") == 5) {
 			entity.getPersistentData().putDouble("spinTickDamage", 0);
 			{
 				final Vec3 _center = new Vec3(x, y, z);
@@ -35,18 +35,18 @@ public class SpinTickProcedure {
 					}
 				}
 			}
-		} else if (entity.getPersistentData().getDoubleOr("spinTickDamage", 0) < 5) {
-			entity.getPersistentData().putDouble("spinTickDamage", (entity.getPersistentData().getDoubleOr("spinTickDamage", 0) + 1));
+		} else if (entity.getPersistentData().getDouble("spinTickDamage") < 5) {
+			entity.getPersistentData().putDouble("spinTickDamage", (entity.getPersistentData().getDouble("spinTickDamage") + 1));
 		}
-		if (entity.getPersistentData().getDoubleOr("spinEffectTickDamage", 0) == 3) {
+		if (entity.getPersistentData().getDouble("spinEffectTickDamage") == 3) {
 			if (world instanceof ServerLevel _level && _level.getServer() != null) {
 				Optional<CommandFunction<CommandSourceStack>> _fopt = _level.getServer().getFunctions().get(ResourceLocation.parse("power:tornado"));
 				if (_fopt.isPresent())
 					_level.getServer().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null));
 			}
 			entity.getPersistentData().putDouble("spinEffectTickDamage", 0);
-		} else if (entity.getPersistentData().getDoubleOr("spinEffectTickDamage", 0) < 3) {
-			entity.getPersistentData().putDouble("spinEffectTickDamage", (entity.getPersistentData().getDoubleOr("spinEffectTickDamage", 0) + 1));
+		} else if (entity.getPersistentData().getDouble("spinEffectTickDamage") < 3) {
+			entity.getPersistentData().putDouble("spinEffectTickDamage", (entity.getPersistentData().getDouble("spinEffectTickDamage") + 1));
 		}
 	}
 }

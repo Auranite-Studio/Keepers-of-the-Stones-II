@@ -134,7 +134,7 @@ public class PlagueSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("plague_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.INSTANT_HEALTH, 20, 4, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.HEAL, 20, 4, false, false));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.wither.shoot")), SoundSource.PLAYERS, 1, 1);

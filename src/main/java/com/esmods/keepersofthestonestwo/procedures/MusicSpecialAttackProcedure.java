@@ -175,7 +175,7 @@ public class MusicSpecialAttackProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.POISON);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.MINING_FATIGUE);
+					_entity.removeEffect(MobEffects.DIG_SLOWDOWN);
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.BLINDNESS);
 				if (entity instanceof LivingEntity _entity)

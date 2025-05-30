@@ -6,7 +6,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.animal.wolf.Wolf;
+import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;

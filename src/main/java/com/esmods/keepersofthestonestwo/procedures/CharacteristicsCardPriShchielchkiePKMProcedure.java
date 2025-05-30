@@ -30,7 +30,7 @@ public class CharacteristicsCardPriShchielchkiePKMProcedure {
 		if (entity == null)
 			return;
 		PowerMod.queueServerWork(1, () -> {
-			if ((entity.getPersistentData().getStringOr("ownerCard", "")).equals(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("owner", ""))) {
+			if ((entity.getPersistentData().getString("ownerCard")).equals(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("owner"))) {
 				{
 					final String _tagName = "name";
 					final String _tagValue = (entity.getDisplayName().getString());
@@ -84,7 +84,7 @@ public class CharacteristicsCardPriShchielchkiePKMProcedure {
 			}
 		});
 		PowerMod.queueServerWork(2, () -> {
-			if (!(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("owner", "")).equals("")
+			if (!(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("owner")).equals("")
 					&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == itemstack.getItem()) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {

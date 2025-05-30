@@ -2,7 +2,6 @@
 package com.esmods.keepersofthestonestwo.item;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -21,7 +20,7 @@ import com.esmods.keepersofthestonestwo.entity.ShockwaveGunProjectileEntity;
 
 public class ShockwaveGunItem extends Item {
 	public ShockwaveGunItem(Item.Properties properties) {
-		super(properties.rarity(Rarity.COMMON).stacksTo(64));
+		super(properties);
 	}
 
 	@Override

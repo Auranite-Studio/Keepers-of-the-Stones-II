@@ -6,17 +6,17 @@ import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
@@ -31,7 +31,7 @@ import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-public abstract class MistArmorItem extends Item {
+public abstract class MistArmorItem extends ArmorItem {
 	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(37, Map.of(ArmorType.BOOTS, 3, ArmorType.LEGGINGS, 6, ArmorType.CHESTPLATE, 8, ArmorType.HELMET, 3, ArmorType.BODY, 8), 1,
 			BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), 0f, 0f, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:mist_armor_repair_items")),
 			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("power:mist_armor")));
@@ -64,19 +64,19 @@ public abstract class MistArmorItem extends Item {
 		}, PowerModItems.MIST_ARMOR_BOOTS.get());
 	}
 
-	private MistArmorItem(Item.Properties properties) {
-		super(properties);
+	private MistArmorItem(ArmorType type, Item.Properties properties) {
+		super(ARMOR_MATERIAL, type, properties);
 	}
 
 	public static class Helmet extends MistArmorItem {
 		public Helmet(Item.Properties properties) {
-			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.HELMET));
+			super(ArmorType.HELMET, properties);
 		}
 
 		@Override
-		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-			super.inventoryTick(itemstack, world, entity, slot);
-			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
 				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
@@ -84,13 +84,13 @@ public abstract class MistArmorItem extends Item {
 
 	public static class Chestplate extends MistArmorItem {
 		public Chestplate(Item.Properties properties) {
-			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.CHESTPLATE));
+			super(ArmorType.CHESTPLATE, properties);
 		}
 
 		@Override
-		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-			super.inventoryTick(itemstack, world, entity, slot);
-			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
 				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
@@ -98,13 +98,13 @@ public abstract class MistArmorItem extends Item {
 
 	public static class Leggings extends MistArmorItem {
 		public Leggings(Item.Properties properties) {
-			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.LEGGINGS));
+			super(ArmorType.LEGGINGS, properties);
 		}
 
 		@Override
-		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-			super.inventoryTick(itemstack, world, entity, slot);
-			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
 				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}
@@ -112,13 +112,13 @@ public abstract class MistArmorItem extends Item {
 
 	public static class Boots extends MistArmorItem {
 		public Boots(Item.Properties properties) {
-			super(properties.humanoidArmor(ARMOR_MATERIAL, ArmorType.BOOTS));
+			super(ArmorType.BOOTS, properties);
 		}
 
 		@Override
-		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-			super.inventoryTick(itemstack, world, entity, slot);
-			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
 				RemoveForbiddenItemProcedure.execute(entity, itemstack);
 			}
 		}

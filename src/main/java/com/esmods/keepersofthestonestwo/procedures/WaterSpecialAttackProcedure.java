@@ -116,7 +116,7 @@ public class WaterSpecialAttackProcedure {
 					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 						if (entityiterator.isInWater()) {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.INSTANT_HEALTH, 20, 3, false, false));
+								_entity.addEffect(new MobEffectInstance(MobEffects.HEAL, 20, 3, false, false));
 							particleAmount = 8;
 							particleRadius = 2;
 							if (world instanceof Level _level) {

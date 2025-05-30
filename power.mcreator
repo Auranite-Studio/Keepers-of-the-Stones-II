@@ -30838,8 +30838,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKnightRenderer.java",
           "src/main/resources/data/power/neoforge/biome_modifier/cursed_knight_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKnightEntity.java",
-          "src/main/resources/assets/power/items/cursed_knight_spawn_egg.json",
-          "src/main/resources/assets/power/models/item/cursed_knight_spawn_egg.json"
+          "src/main/resources/assets/power/items/cursed_knight_spawn_egg.json"
         ]
       },
       "path": "~/Mobs/CursedKnight"
@@ -31035,7 +31034,6 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/EnergiumGolemRenderer.java",
-          "src/main/resources/assets/power/models/item/energium_golem_spawn_egg.json",
           "src/main/resources/assets/power/items/energium_golem_spawn_egg.json",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/EnergiumGolemEntity.java"
         ]
@@ -31113,7 +31111,6 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedSquireEntity.java",
           "src/main/resources/data/power/neoforge/biome_modifier/cursed_squire_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedSquireRenderer.java",
-          "src/main/resources/assets/power/models/item/cursed_squire_spawn_egg.json",
           "src/main/resources/assets/power/items/cursed_squire_spawn_egg.json"
         ]
       },
@@ -31148,7 +31145,6 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/items/cursed_keeper_spawn_egg.json",
-          "src/main/resources/assets/power/models/item/cursed_keeper_spawn_egg.json",
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKeeperRenderer.java",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKeeperEntity.java"
         ]
@@ -40541,7 +40537,7 @@
     "mcreatorDependencies": [
       "playeranimator"
     ],
-    "currentGenerator": "neoforge-1.21.5",
+    "currentGenerator": "neoforge-1.21.4",
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },

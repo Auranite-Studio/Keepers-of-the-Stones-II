@@ -17,7 +17,7 @@ public class EnergiumGolemAttackDetectionProcedure {
 		double Range = 0;
 		double Zpar = 0;
 		Range = 0.75;
-		if (entity.getPersistentData().getDoubleOr("IA", 0) > 25) {
+		if (entity.getPersistentData().getDouble("IA") > 25) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					Xpar = x + entity.getLookAngle().x * Range;
@@ -40,7 +40,7 @@ public class EnergiumGolemAttackDetectionProcedure {
 				}
 			}
 		} else {
-			entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDoubleOr("IA", 0) + 1));
+			entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
 		}
 	}
 }

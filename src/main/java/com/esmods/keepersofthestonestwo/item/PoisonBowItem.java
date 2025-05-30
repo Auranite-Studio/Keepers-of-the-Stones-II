@@ -9,7 +9,6 @@ import net.minecraft.world.item.BowItem;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
@@ -45,8 +44,8 @@ public class PoisonBowItem extends Item {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-		super.inventoryTick(itemstack, world, entity, slot);
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
 		RemoveForbiddenItemProcedure.execute(entity, itemstack);
 	}
 

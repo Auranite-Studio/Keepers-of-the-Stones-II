@@ -21,7 +21,7 @@ public class BallLightningProjectileKoghdaSnariadPopadaietVSushchnostProcedure {
 			_level.explode(null, x, y, z, 4, Level.ExplosionInteraction.MOB);
 		if (world instanceof ServerLevel _level) {
 			LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level, EntitySpawnReason.TRIGGERED);
-			entityToSpawn.snapTo(Vec3.atBottomCenterOf(BlockPos.containing(x, y, z)));;
+			entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(x, y, z)));;
 			_level.addFreshEntity(entityToSpawn);
 		}
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

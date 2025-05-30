@@ -1,27 +1,22 @@
-
 package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.neoforged.neoforge.network.PacketDistributor;
-import net.neoforged.neoforge.event.level.LevelEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.common.util.INBTSerializable;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
-import net.minecraft.world.level.saveddata.SavedDataType;
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.util.datafix.DataFixTypes;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -30,27 +25,15 @@ import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.nbt.NbtOps;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.HolderLookup;
 
 import java.util.function.Supplier;
 
-import com.mojang.serialization.RecordBuilder;
-import com.mojang.serialization.DynamicOps;
-import com.mojang.serialization.DataResult;
-import com.mojang.serialization.Codec;
-import com.mojang.datafixers.util.Pair;
-
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PowerModVariables {
-	public static void registerEventHandlers() {
-		NeoForge.EVENT_BUS.addListener(GameEventHandler::onWorldCreate);
-		NeoForge.EVENT_BUS.addListener(GameEventHandler::onWorldLoad);
-	}
-
 	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, PowerMod.MODID);
 	public static final Supplier<AttachmentType<PlayerVariables>> PLAYER_VARIABLES = ATTACHMENT_TYPES.register("player_variables", () -> AttachmentType.serializable(() -> new PlayerVariables()).build());
 
@@ -170,136 +153,37 @@ public class PowerModVariables {
 		}
 	}
 
-	public static class GameEventHandler {
-		@SubscribeEvent
-		public static void onWorldCreate(LevelEvent.CreateSpawnPosition event) {
-			if (!event.getLevel().isClientSide() && event.getLevel() instanceof ServerLevel level) {
-				// Инициализация WorldVariables только при создании мира
-				WorldVariables worldVariables = WorldVariables.get(level);
-				worldVariables.entity_rotation = 0;
-				worldVariables.setDirty();
-				// Инициализация MapVariables только при создании мира
-				MapVariables mapVariables = MapVariables.get(level);
-				mapVariables.opX = 0;
-				mapVariables.opY = 0;
-				mapVariables.opZ = 0;
-				mapVariables.bpX = 0;
-				mapVariables.bpY = 0;
-				mapVariables.bpZ = 0;
-				mapVariables.fire_stone = false;
-				mapVariables.air_stone = false;
-				mapVariables.earth_stone = false;
-				mapVariables.water_stone = false;
-				mapVariables.ether_stone = false;
-				mapVariables.ice_stone = false;
-				mapVariables.lightning_stone = false;
-				mapVariables.sound_stone = false;
-				mapVariables.crystal_stone = false;
-				mapVariables.lava_stone = false;
-				mapVariables.rain_stone = false;
-				mapVariables.tornado_stone = false;
-				mapVariables.ocean_stone = false;
-				mapVariables.plants_stone = false;
-				mapVariables.animals_stone = false;
-				mapVariables.metal_stone = false;
-				mapVariables.light_stone = false;
-				mapVariables.shadow_stone = false;
-				mapVariables.vacuum_stone = false;
-				mapVariables.energy_stone = false;
-				mapVariables.sun_stone = false;
-				mapVariables.moon_stone = false;
-				mapVariables.space_stone = false;
-				mapVariables.time_stone = false;
-				mapVariables.blood_stone = false;
-				mapVariables.technology_stone = false;
-				mapVariables.teleportation_stone = false;
-				mapVariables.explosion_stone = false;
-				mapVariables.amber_stone = false;
-				mapVariables.creation_stone = false;
-				mapVariables.destruction_stone = false;
-				mapVariables.mist_stone = false;
-				mapVariables.sand_stone = false;
-				mapVariables.speed_stone = false;
-				mapVariables.poison_stone = false;
-				mapVariables.magnet_stone = false;
-				mapVariables.mushrooms_stone = false;
-				mapVariables.mercury_stone = false;
-				mapVariables.music_stone = false;
-				mapVariables.plague_stone = false;
-				mapVariables.blue_flame_stone = false;
-				mapVariables.gravity_stone = false;
-				mapVariables.smoke_stone = false;
-				mapVariables.spirit_stone = false;
-				mapVariables.form_stone = false;
-				mapVariables.mind_stone = false;
-				mapVariables.golden_dust_stone = false;
-				mapVariables.darkness_stone = false;
-				mapVariables.blue_portal_placed = false;
-				mapVariables.orange_portal_placed = false;
-				mapVariables.cpapi_ver = 21.0;
-				mapVariables.heat_stone = false;
-				mapVariables.shockwave_stone = false;
-				mapVariables.setDirty();
-			}
-		}
-
-		@SubscribeEvent
-		public static void onWorldLoad(LevelEvent.Load event) {
-			// Только синхронизация при загрузке существующего мира
-			if (!event.getLevel().isClientSide() && event.getLevel() instanceof ServerLevel level) {
-				WorldVariables.get(level).setDirty();
-				MapVariables.get(level).setDirty();
-			}
-		}
-	}
-
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "power_worldvars";
-		public double entity_rotation;
-		public static final Codec<WorldVariables> CODEC = new Codec<WorldVariables>() {
-			@Override
-			public <T> DataResult<Pair<WorldVariables, T>> decode(DynamicOps<T> ops, T input) {
-				return ops.getMap(input).flatMap(map -> {
-					Builder builder = new Builder();
-					Codec.DOUBLE.decode(ops, map.get("entity_rotation")).result().ifPresent(v -> builder.entity_rotation = v.getFirst());
-					return DataResult.success(Pair.of(builder.build(), ops.empty()));
-				});
-			}
+		public double entity_rotation = 0;
 
-			@Override
-			public <T> DataResult<T> encode(WorldVariables input, DynamicOps<T> ops, T prefix) {
-				RecordBuilder<T> recordBuilder = ops.mapBuilder();
-				recordBuilder.add("entity_rotation", Codec.DOUBLE.encode(input.entity_rotation, ops, ops.empty()));
-				return recordBuilder.build(prefix);
-			}
-		};
-
-		private static class Builder {
-			double entity_rotation = 0;
-
-			WorldVariables build() {
-				return new WorldVariables(entity_rotation);
-			}
+		public static WorldVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
+			WorldVariables data = new WorldVariables();
+			data.read(tag, lookupProvider);
+			return data;
 		}
 
-		public static final SavedDataType<WorldVariables> TYPE = new SavedDataType<>(DATA_NAME, ctx -> new WorldVariables(0), ctx -> CODEC, DataFixTypes.LEVEL);
+		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+			entity_rotation = nbt.getDouble("entity_rotation");
+		}
 
-		public WorldVariables(double entity_rotation) {
-			this.entity_rotation = entity_rotation;
+		@Override
+		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+			nbt.putDouble("entity_rotation", entity_rotation);
+			return nbt;
 		}
 
 		public void syncData(LevelAccessor world) {
 			this.setDirty();
-			if (world instanceof ServerLevel level) {
+			if (world instanceof ServerLevel level)
 				PacketDistributor.sendToPlayersInDimension(level, new SavedDataSyncMessage(1, this));
-			}
 		}
 
-		static WorldVariables clientSide = new WorldVariables(0);
+		static WorldVariables clientSide = new WorldVariables();
 
 		public static WorldVariables get(LevelAccessor world) {
 			if (world instanceof ServerLevel level) {
-				return level.getDataStorage().computeIfAbsent(TYPE);
+				return level.getDataStorage().computeIfAbsent(new SavedData.Factory<>(WorldVariables::new, WorldVariables::load), DATA_NAME);
 			} else {
 				return clientSide;
 			}
@@ -308,353 +192,209 @@ public class PowerModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "power_mapvars";
-		public double opX;
-		public double opY;
-		public double opZ;
-		public double bpX;
-		public double bpY;
-		public double bpZ;
-		public boolean fire_stone;
-		public boolean air_stone;
-		public boolean earth_stone;
-		public boolean water_stone;
-		public boolean ether_stone;
-		public boolean ice_stone;
-		public boolean lightning_stone;
-		public boolean sound_stone;
-		public boolean crystal_stone;
-		public boolean lava_stone;
-		public boolean rain_stone;
-		public boolean tornado_stone;
-		public boolean ocean_stone;
-		public boolean plants_stone;
-		public boolean animals_stone;
-		public boolean metal_stone;
-		public boolean light_stone;
-		public boolean shadow_stone;
-		public boolean vacuum_stone;
-		public boolean energy_stone;
-		public boolean sun_stone;
-		public boolean moon_stone;
-		public boolean space_stone;
-		public boolean time_stone;
-		public boolean blood_stone;
-		public boolean technology_stone;
-		public boolean teleportation_stone;
-		public boolean explosion_stone;
-		public boolean amber_stone;
-		public boolean creation_stone;
-		public boolean destruction_stone;
-		public boolean mist_stone;
-		public boolean sand_stone;
-		public boolean speed_stone;
-		public boolean poison_stone;
-		public boolean magnet_stone;
-		public boolean mushrooms_stone;
-		public boolean mercury_stone;
-		public boolean music_stone;
-		public boolean plague_stone;
-		public boolean blue_flame_stone;
-		public boolean gravity_stone;
-		public boolean smoke_stone;
-		public boolean spirit_stone;
-		public boolean form_stone;
-		public boolean mind_stone;
-		public boolean golden_dust_stone;
-		public boolean darkness_stone;
-		public boolean blue_portal_placed;
-		public boolean orange_portal_placed;
-		public double cpapi_ver;
-		public boolean heat_stone;
-		public boolean shockwave_stone;
-		public static final Codec<MapVariables> CODEC = new Codec<MapVariables>() {
-			@Override
-			public <T> DataResult<Pair<MapVariables, T>> decode(DynamicOps<T> ops, T input) {
-				return ops.getMap(input).flatMap(map -> {
-					Builder builder = new Builder();
-					Codec.DOUBLE.decode(ops, map.get("opX")).result().ifPresent(v -> builder.opX = v.getFirst());
-					Codec.DOUBLE.decode(ops, map.get("opY")).result().ifPresent(v -> builder.opY = v.getFirst());
-					Codec.DOUBLE.decode(ops, map.get("opZ")).result().ifPresent(v -> builder.opZ = v.getFirst());
-					Codec.DOUBLE.decode(ops, map.get("bpX")).result().ifPresent(v -> builder.bpX = v.getFirst());
-					Codec.DOUBLE.decode(ops, map.get("bpY")).result().ifPresent(v -> builder.bpY = v.getFirst());
-					Codec.DOUBLE.decode(ops, map.get("bpZ")).result().ifPresent(v -> builder.bpZ = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("fire_stone")).result().ifPresent(v -> builder.fire_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("air_stone")).result().ifPresent(v -> builder.air_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("earth_stone")).result().ifPresent(v -> builder.earth_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("water_stone")).result().ifPresent(v -> builder.water_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("ether_stone")).result().ifPresent(v -> builder.ether_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("ice_stone")).result().ifPresent(v -> builder.ice_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("lightning_stone")).result().ifPresent(v -> builder.lightning_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("sound_stone")).result().ifPresent(v -> builder.sound_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("crystal_stone")).result().ifPresent(v -> builder.crystal_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("lava_stone")).result().ifPresent(v -> builder.lava_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("rain_stone")).result().ifPresent(v -> builder.rain_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("tornado_stone")).result().ifPresent(v -> builder.tornado_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("ocean_stone")).result().ifPresent(v -> builder.ocean_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("plants_stone")).result().ifPresent(v -> builder.plants_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("animals_stone")).result().ifPresent(v -> builder.animals_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("metal_stone")).result().ifPresent(v -> builder.metal_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("light_stone")).result().ifPresent(v -> builder.light_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("shadow_stone")).result().ifPresent(v -> builder.shadow_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("vacuum_stone")).result().ifPresent(v -> builder.vacuum_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("energy_stone")).result().ifPresent(v -> builder.energy_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("sun_stone")).result().ifPresent(v -> builder.sun_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("moon_stone")).result().ifPresent(v -> builder.moon_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("space_stone")).result().ifPresent(v -> builder.space_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("time_stone")).result().ifPresent(v -> builder.time_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("blood_stone")).result().ifPresent(v -> builder.blood_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("technology_stone")).result().ifPresent(v -> builder.technology_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("teleportation_stone")).result().ifPresent(v -> builder.teleportation_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("explosion_stone")).result().ifPresent(v -> builder.explosion_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("amber_stone")).result().ifPresent(v -> builder.amber_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("creation_stone")).result().ifPresent(v -> builder.creation_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("destruction_stone")).result().ifPresent(v -> builder.destruction_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("mist_stone")).result().ifPresent(v -> builder.mist_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("sand_stone")).result().ifPresent(v -> builder.sand_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("speed_stone")).result().ifPresent(v -> builder.speed_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("poison_stone")).result().ifPresent(v -> builder.poison_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("magnet_stone")).result().ifPresent(v -> builder.magnet_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("mushrooms_stone")).result().ifPresent(v -> builder.mushrooms_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("mercury_stone")).result().ifPresent(v -> builder.mercury_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("music_stone")).result().ifPresent(v -> builder.music_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("plague_stone")).result().ifPresent(v -> builder.plague_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("blue_flame_stone")).result().ifPresent(v -> builder.blue_flame_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("gravity_stone")).result().ifPresent(v -> builder.gravity_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("smoke_stone")).result().ifPresent(v -> builder.smoke_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("spirit_stone")).result().ifPresent(v -> builder.spirit_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("form_stone")).result().ifPresent(v -> builder.form_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("mind_stone")).result().ifPresent(v -> builder.mind_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("golden_dust_stone")).result().ifPresent(v -> builder.golden_dust_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("darkness_stone")).result().ifPresent(v -> builder.darkness_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("blue_portal_placed")).result().ifPresent(v -> builder.blue_portal_placed = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("orange_portal_placed")).result().ifPresent(v -> builder.orange_portal_placed = v.getFirst());
-					Codec.DOUBLE.decode(ops, map.get("cpapi_ver")).result().ifPresent(v -> builder.cpapi_ver = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("heat_stone")).result().ifPresent(v -> builder.heat_stone = v.getFirst());
-					Codec.BOOL.decode(ops, map.get("shockwave_stone")).result().ifPresent(v -> builder.shockwave_stone = v.getFirst());
-					return DataResult.success(Pair.of(builder.build(), ops.empty()));
-				});
-			}
+		public double opX = 0;
+		public double opY = 0;
+		public double opZ = 0;
+		public double bpX = 0;
+		public double bpY = 0;
+		public double bpZ = 0;
+		public boolean fire_stone = false;
+		public boolean air_stone = false;
+		public boolean earth_stone = false;
+		public boolean water_stone = false;
+		public boolean ether_stone = false;
+		public boolean ice_stone = false;
+		public boolean lightning_stone = false;
+		public boolean sound_stone = false;
+		public boolean crystal_stone = false;
+		public boolean lava_stone = false;
+		public boolean rain_stone = false;
+		public boolean tornado_stone = false;
+		public boolean ocean_stone = false;
+		public boolean plants_stone = false;
+		public boolean animals_stone = false;
+		public boolean metal_stone = false;
+		public boolean light_stone = false;
+		public boolean shadow_stone = false;
+		public boolean vacuum_stone = false;
+		public boolean energy_stone = false;
+		public boolean sun_stone = false;
+		public boolean moon_stone = false;
+		public boolean space_stone = false;
+		public boolean time_stone = false;
+		public boolean blood_stone = false;
+		public boolean technology_stone = false;
+		public boolean teleportation_stone = false;
+		public boolean explosion_stone = false;
+		public boolean amber_stone = false;
+		public boolean creation_stone = false;
+		public boolean destruction_stone = false;
+		public boolean mist_stone = false;
+		public boolean sand_stone = false;
+		public boolean speed_stone = false;
+		public boolean poison_stone = false;
+		public boolean magnet_stone = false;
+		public boolean mushrooms_stone = false;
+		public boolean mercury_stone = false;
+		public boolean music_stone = false;
+		public boolean plague_stone = false;
+		public boolean blue_flame_stone = false;
+		public boolean gravity_stone = false;
+		public boolean smoke_stone = false;
+		public boolean spirit_stone = false;
+		public boolean form_stone = false;
+		public boolean mind_stone = false;
+		public boolean golden_dust_stone = false;
+		public boolean darkness_stone = false;
+		public boolean blue_portal_placed = false;
+		public boolean orange_portal_placed = false;
+		public double cpapi_ver = 21.0;
+		public boolean heat_stone = false;
+		public boolean shockwave_stone = false;
 
-			@Override
-			public <T> DataResult<T> encode(MapVariables input, DynamicOps<T> ops, T prefix) {
-				RecordBuilder<T> recordBuilder = ops.mapBuilder();
-				recordBuilder.add("opX", Codec.DOUBLE.encode(input.opX, ops, ops.empty()));
-				recordBuilder.add("opY", Codec.DOUBLE.encode(input.opY, ops, ops.empty()));
-				recordBuilder.add("opZ", Codec.DOUBLE.encode(input.opZ, ops, ops.empty()));
-				recordBuilder.add("bpX", Codec.DOUBLE.encode(input.bpX, ops, ops.empty()));
-				recordBuilder.add("bpY", Codec.DOUBLE.encode(input.bpY, ops, ops.empty()));
-				recordBuilder.add("bpZ", Codec.DOUBLE.encode(input.bpZ, ops, ops.empty()));
-				recordBuilder.add("fire_stone", Codec.BOOL.encode(input.fire_stone, ops, ops.empty()));
-				recordBuilder.add("air_stone", Codec.BOOL.encode(input.air_stone, ops, ops.empty()));
-				recordBuilder.add("earth_stone", Codec.BOOL.encode(input.earth_stone, ops, ops.empty()));
-				recordBuilder.add("water_stone", Codec.BOOL.encode(input.water_stone, ops, ops.empty()));
-				recordBuilder.add("ether_stone", Codec.BOOL.encode(input.ether_stone, ops, ops.empty()));
-				recordBuilder.add("ice_stone", Codec.BOOL.encode(input.ice_stone, ops, ops.empty()));
-				recordBuilder.add("lightning_stone", Codec.BOOL.encode(input.lightning_stone, ops, ops.empty()));
-				recordBuilder.add("sound_stone", Codec.BOOL.encode(input.sound_stone, ops, ops.empty()));
-				recordBuilder.add("crystal_stone", Codec.BOOL.encode(input.crystal_stone, ops, ops.empty()));
-				recordBuilder.add("lava_stone", Codec.BOOL.encode(input.lava_stone, ops, ops.empty()));
-				recordBuilder.add("rain_stone", Codec.BOOL.encode(input.rain_stone, ops, ops.empty()));
-				recordBuilder.add("tornado_stone", Codec.BOOL.encode(input.tornado_stone, ops, ops.empty()));
-				recordBuilder.add("ocean_stone", Codec.BOOL.encode(input.ocean_stone, ops, ops.empty()));
-				recordBuilder.add("plants_stone", Codec.BOOL.encode(input.plants_stone, ops, ops.empty()));
-				recordBuilder.add("animals_stone", Codec.BOOL.encode(input.animals_stone, ops, ops.empty()));
-				recordBuilder.add("metal_stone", Codec.BOOL.encode(input.metal_stone, ops, ops.empty()));
-				recordBuilder.add("light_stone", Codec.BOOL.encode(input.light_stone, ops, ops.empty()));
-				recordBuilder.add("shadow_stone", Codec.BOOL.encode(input.shadow_stone, ops, ops.empty()));
-				recordBuilder.add("vacuum_stone", Codec.BOOL.encode(input.vacuum_stone, ops, ops.empty()));
-				recordBuilder.add("energy_stone", Codec.BOOL.encode(input.energy_stone, ops, ops.empty()));
-				recordBuilder.add("sun_stone", Codec.BOOL.encode(input.sun_stone, ops, ops.empty()));
-				recordBuilder.add("moon_stone", Codec.BOOL.encode(input.moon_stone, ops, ops.empty()));
-				recordBuilder.add("space_stone", Codec.BOOL.encode(input.space_stone, ops, ops.empty()));
-				recordBuilder.add("time_stone", Codec.BOOL.encode(input.time_stone, ops, ops.empty()));
-				recordBuilder.add("blood_stone", Codec.BOOL.encode(input.blood_stone, ops, ops.empty()));
-				recordBuilder.add("technology_stone", Codec.BOOL.encode(input.technology_stone, ops, ops.empty()));
-				recordBuilder.add("teleportation_stone", Codec.BOOL.encode(input.teleportation_stone, ops, ops.empty()));
-				recordBuilder.add("explosion_stone", Codec.BOOL.encode(input.explosion_stone, ops, ops.empty()));
-				recordBuilder.add("amber_stone", Codec.BOOL.encode(input.amber_stone, ops, ops.empty()));
-				recordBuilder.add("creation_stone", Codec.BOOL.encode(input.creation_stone, ops, ops.empty()));
-				recordBuilder.add("destruction_stone", Codec.BOOL.encode(input.destruction_stone, ops, ops.empty()));
-				recordBuilder.add("mist_stone", Codec.BOOL.encode(input.mist_stone, ops, ops.empty()));
-				recordBuilder.add("sand_stone", Codec.BOOL.encode(input.sand_stone, ops, ops.empty()));
-				recordBuilder.add("speed_stone", Codec.BOOL.encode(input.speed_stone, ops, ops.empty()));
-				recordBuilder.add("poison_stone", Codec.BOOL.encode(input.poison_stone, ops, ops.empty()));
-				recordBuilder.add("magnet_stone", Codec.BOOL.encode(input.magnet_stone, ops, ops.empty()));
-				recordBuilder.add("mushrooms_stone", Codec.BOOL.encode(input.mushrooms_stone, ops, ops.empty()));
-				recordBuilder.add("mercury_stone", Codec.BOOL.encode(input.mercury_stone, ops, ops.empty()));
-				recordBuilder.add("music_stone", Codec.BOOL.encode(input.music_stone, ops, ops.empty()));
-				recordBuilder.add("plague_stone", Codec.BOOL.encode(input.plague_stone, ops, ops.empty()));
-				recordBuilder.add("blue_flame_stone", Codec.BOOL.encode(input.blue_flame_stone, ops, ops.empty()));
-				recordBuilder.add("gravity_stone", Codec.BOOL.encode(input.gravity_stone, ops, ops.empty()));
-				recordBuilder.add("smoke_stone", Codec.BOOL.encode(input.smoke_stone, ops, ops.empty()));
-				recordBuilder.add("spirit_stone", Codec.BOOL.encode(input.spirit_stone, ops, ops.empty()));
-				recordBuilder.add("form_stone", Codec.BOOL.encode(input.form_stone, ops, ops.empty()));
-				recordBuilder.add("mind_stone", Codec.BOOL.encode(input.mind_stone, ops, ops.empty()));
-				recordBuilder.add("golden_dust_stone", Codec.BOOL.encode(input.golden_dust_stone, ops, ops.empty()));
-				recordBuilder.add("darkness_stone", Codec.BOOL.encode(input.darkness_stone, ops, ops.empty()));
-				recordBuilder.add("blue_portal_placed", Codec.BOOL.encode(input.blue_portal_placed, ops, ops.empty()));
-				recordBuilder.add("orange_portal_placed", Codec.BOOL.encode(input.orange_portal_placed, ops, ops.empty()));
-				recordBuilder.add("cpapi_ver", Codec.DOUBLE.encode(input.cpapi_ver, ops, ops.empty()));
-				recordBuilder.add("heat_stone", Codec.BOOL.encode(input.heat_stone, ops, ops.empty()));
-				recordBuilder.add("shockwave_stone", Codec.BOOL.encode(input.shockwave_stone, ops, ops.empty()));
-				return recordBuilder.build(prefix);
-			}
-		};
-
-		private static class Builder {
-			double opX = 0;
-			double opY = 0;
-			double opZ = 0;
-			double bpX = 0;
-			double bpY = 0;
-			double bpZ = 0;
-			boolean fire_stone = false;
-			boolean air_stone = false;
-			boolean earth_stone = false;
-			boolean water_stone = false;
-			boolean ether_stone = false;
-			boolean ice_stone = false;
-			boolean lightning_stone = false;
-			boolean sound_stone = false;
-			boolean crystal_stone = false;
-			boolean lava_stone = false;
-			boolean rain_stone = false;
-			boolean tornado_stone = false;
-			boolean ocean_stone = false;
-			boolean plants_stone = false;
-			boolean animals_stone = false;
-			boolean metal_stone = false;
-			boolean light_stone = false;
-			boolean shadow_stone = false;
-			boolean vacuum_stone = false;
-			boolean energy_stone = false;
-			boolean sun_stone = false;
-			boolean moon_stone = false;
-			boolean space_stone = false;
-			boolean time_stone = false;
-			boolean blood_stone = false;
-			boolean technology_stone = false;
-			boolean teleportation_stone = false;
-			boolean explosion_stone = false;
-			boolean amber_stone = false;
-			boolean creation_stone = false;
-			boolean destruction_stone = false;
-			boolean mist_stone = false;
-			boolean sand_stone = false;
-			boolean speed_stone = false;
-			boolean poison_stone = false;
-			boolean magnet_stone = false;
-			boolean mushrooms_stone = false;
-			boolean mercury_stone = false;
-			boolean music_stone = false;
-			boolean plague_stone = false;
-			boolean blue_flame_stone = false;
-			boolean gravity_stone = false;
-			boolean smoke_stone = false;
-			boolean spirit_stone = false;
-			boolean form_stone = false;
-			boolean mind_stone = false;
-			boolean golden_dust_stone = false;
-			boolean darkness_stone = false;
-			boolean blue_portal_placed = false;
-			boolean orange_portal_placed = false;
-			double cpapi_ver = 21.0;
-			boolean heat_stone = false;
-			boolean shockwave_stone = false;
-
-			MapVariables build() {
-				return new MapVariables(opX, opY, opZ, bpX, bpY, bpZ, fire_stone, air_stone, earth_stone, water_stone, ether_stone, ice_stone, lightning_stone, sound_stone, crystal_stone, lava_stone, rain_stone, tornado_stone, ocean_stone,
-						plants_stone, animals_stone, metal_stone, light_stone, shadow_stone, vacuum_stone, energy_stone, sun_stone, moon_stone, space_stone, time_stone, blood_stone, technology_stone, teleportation_stone, explosion_stone, amber_stone,
-						creation_stone, destruction_stone, mist_stone, sand_stone, speed_stone, poison_stone, magnet_stone, mushrooms_stone, mercury_stone, music_stone, plague_stone, blue_flame_stone, gravity_stone, smoke_stone, spirit_stone,
-						form_stone, mind_stone, golden_dust_stone, darkness_stone, blue_portal_placed, orange_portal_placed, cpapi_ver, heat_stone, shockwave_stone);
-			}
+		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
+			MapVariables data = new MapVariables();
+			data.read(tag, lookupProvider);
+			return data;
 		}
 
-		public static final SavedDataType<MapVariables> TYPE = new SavedDataType<>(DATA_NAME,
-				ctx -> new MapVariables(0, 0, 0, 0, 0, 0, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
-						false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, 0, false, false),
-				ctx -> CODEC, DataFixTypes.LEVEL);
+		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+			opX = nbt.getDouble("opX");
+			opY = nbt.getDouble("opY");
+			opZ = nbt.getDouble("opZ");
+			bpX = nbt.getDouble("bpX");
+			bpY = nbt.getDouble("bpY");
+			bpZ = nbt.getDouble("bpZ");
+			fire_stone = nbt.getBoolean("fire_stone");
+			air_stone = nbt.getBoolean("air_stone");
+			earth_stone = nbt.getBoolean("earth_stone");
+			water_stone = nbt.getBoolean("water_stone");
+			ether_stone = nbt.getBoolean("ether_stone");
+			ice_stone = nbt.getBoolean("ice_stone");
+			lightning_stone = nbt.getBoolean("lightning_stone");
+			sound_stone = nbt.getBoolean("sound_stone");
+			crystal_stone = nbt.getBoolean("crystal_stone");
+			lava_stone = nbt.getBoolean("lava_stone");
+			rain_stone = nbt.getBoolean("rain_stone");
+			tornado_stone = nbt.getBoolean("tornado_stone");
+			ocean_stone = nbt.getBoolean("ocean_stone");
+			plants_stone = nbt.getBoolean("plants_stone");
+			animals_stone = nbt.getBoolean("animals_stone");
+			metal_stone = nbt.getBoolean("metal_stone");
+			light_stone = nbt.getBoolean("light_stone");
+			shadow_stone = nbt.getBoolean("shadow_stone");
+			vacuum_stone = nbt.getBoolean("vacuum_stone");
+			energy_stone = nbt.getBoolean("energy_stone");
+			sun_stone = nbt.getBoolean("sun_stone");
+			moon_stone = nbt.getBoolean("moon_stone");
+			space_stone = nbt.getBoolean("space_stone");
+			time_stone = nbt.getBoolean("time_stone");
+			blood_stone = nbt.getBoolean("blood_stone");
+			technology_stone = nbt.getBoolean("technology_stone");
+			teleportation_stone = nbt.getBoolean("teleportation_stone");
+			explosion_stone = nbt.getBoolean("explosion_stone");
+			amber_stone = nbt.getBoolean("amber_stone");
+			creation_stone = nbt.getBoolean("creation_stone");
+			destruction_stone = nbt.getBoolean("destruction_stone");
+			mist_stone = nbt.getBoolean("mist_stone");
+			sand_stone = nbt.getBoolean("sand_stone");
+			speed_stone = nbt.getBoolean("speed_stone");
+			poison_stone = nbt.getBoolean("poison_stone");
+			magnet_stone = nbt.getBoolean("magnet_stone");
+			mushrooms_stone = nbt.getBoolean("mushrooms_stone");
+			mercury_stone = nbt.getBoolean("mercury_stone");
+			music_stone = nbt.getBoolean("music_stone");
+			plague_stone = nbt.getBoolean("plague_stone");
+			blue_flame_stone = nbt.getBoolean("blue_flame_stone");
+			gravity_stone = nbt.getBoolean("gravity_stone");
+			smoke_stone = nbt.getBoolean("smoke_stone");
+			spirit_stone = nbt.getBoolean("spirit_stone");
+			form_stone = nbt.getBoolean("form_stone");
+			mind_stone = nbt.getBoolean("mind_stone");
+			golden_dust_stone = nbt.getBoolean("golden_dust_stone");
+			darkness_stone = nbt.getBoolean("darkness_stone");
+			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
+			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
+			cpapi_ver = nbt.getDouble("cpapi_ver");
+			heat_stone = nbt.getBoolean("heat_stone");
+			shockwave_stone = nbt.getBoolean("shockwave_stone");
+		}
 
-		public MapVariables(double opX, double opY, double opZ, double bpX, double bpY, double bpZ, boolean fire_stone, boolean air_stone, boolean earth_stone, boolean water_stone, boolean ether_stone, boolean ice_stone, boolean lightning_stone,
-				boolean sound_stone, boolean crystal_stone, boolean lava_stone, boolean rain_stone, boolean tornado_stone, boolean ocean_stone, boolean plants_stone, boolean animals_stone, boolean metal_stone, boolean light_stone,
-				boolean shadow_stone, boolean vacuum_stone, boolean energy_stone, boolean sun_stone, boolean moon_stone, boolean space_stone, boolean time_stone, boolean blood_stone, boolean technology_stone, boolean teleportation_stone,
-				boolean explosion_stone, boolean amber_stone, boolean creation_stone, boolean destruction_stone, boolean mist_stone, boolean sand_stone, boolean speed_stone, boolean poison_stone, boolean magnet_stone, boolean mushrooms_stone,
-				boolean mercury_stone, boolean music_stone, boolean plague_stone, boolean blue_flame_stone, boolean gravity_stone, boolean smoke_stone, boolean spirit_stone, boolean form_stone, boolean mind_stone, boolean golden_dust_stone,
-				boolean darkness_stone, boolean blue_portal_placed, boolean orange_portal_placed, double cpapi_ver, boolean heat_stone, boolean shockwave_stone) {
-			this.opX = opX;
-			this.opY = opY;
-			this.opZ = opZ;
-			this.bpX = bpX;
-			this.bpY = bpY;
-			this.bpZ = bpZ;
-			this.fire_stone = fire_stone;
-			this.air_stone = air_stone;
-			this.earth_stone = earth_stone;
-			this.water_stone = water_stone;
-			this.ether_stone = ether_stone;
-			this.ice_stone = ice_stone;
-			this.lightning_stone = lightning_stone;
-			this.sound_stone = sound_stone;
-			this.crystal_stone = crystal_stone;
-			this.lava_stone = lava_stone;
-			this.rain_stone = rain_stone;
-			this.tornado_stone = tornado_stone;
-			this.ocean_stone = ocean_stone;
-			this.plants_stone = plants_stone;
-			this.animals_stone = animals_stone;
-			this.metal_stone = metal_stone;
-			this.light_stone = light_stone;
-			this.shadow_stone = shadow_stone;
-			this.vacuum_stone = vacuum_stone;
-			this.energy_stone = energy_stone;
-			this.sun_stone = sun_stone;
-			this.moon_stone = moon_stone;
-			this.space_stone = space_stone;
-			this.time_stone = time_stone;
-			this.blood_stone = blood_stone;
-			this.technology_stone = technology_stone;
-			this.teleportation_stone = teleportation_stone;
-			this.explosion_stone = explosion_stone;
-			this.amber_stone = amber_stone;
-			this.creation_stone = creation_stone;
-			this.destruction_stone = destruction_stone;
-			this.mist_stone = mist_stone;
-			this.sand_stone = sand_stone;
-			this.speed_stone = speed_stone;
-			this.poison_stone = poison_stone;
-			this.magnet_stone = magnet_stone;
-			this.mushrooms_stone = mushrooms_stone;
-			this.mercury_stone = mercury_stone;
-			this.music_stone = music_stone;
-			this.plague_stone = plague_stone;
-			this.blue_flame_stone = blue_flame_stone;
-			this.gravity_stone = gravity_stone;
-			this.smoke_stone = smoke_stone;
-			this.spirit_stone = spirit_stone;
-			this.form_stone = form_stone;
-			this.mind_stone = mind_stone;
-			this.golden_dust_stone = golden_dust_stone;
-			this.darkness_stone = darkness_stone;
-			this.blue_portal_placed = blue_portal_placed;
-			this.orange_portal_placed = orange_portal_placed;
-			this.cpapi_ver = cpapi_ver;
-			this.heat_stone = heat_stone;
-			this.shockwave_stone = shockwave_stone;
+		@Override
+		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+			nbt.putDouble("opX", opX);
+			nbt.putDouble("opY", opY);
+			nbt.putDouble("opZ", opZ);
+			nbt.putDouble("bpX", bpX);
+			nbt.putDouble("bpY", bpY);
+			nbt.putDouble("bpZ", bpZ);
+			nbt.putBoolean("fire_stone", fire_stone);
+			nbt.putBoolean("air_stone", air_stone);
+			nbt.putBoolean("earth_stone", earth_stone);
+			nbt.putBoolean("water_stone", water_stone);
+			nbt.putBoolean("ether_stone", ether_stone);
+			nbt.putBoolean("ice_stone", ice_stone);
+			nbt.putBoolean("lightning_stone", lightning_stone);
+			nbt.putBoolean("sound_stone", sound_stone);
+			nbt.putBoolean("crystal_stone", crystal_stone);
+			nbt.putBoolean("lava_stone", lava_stone);
+			nbt.putBoolean("rain_stone", rain_stone);
+			nbt.putBoolean("tornado_stone", tornado_stone);
+			nbt.putBoolean("ocean_stone", ocean_stone);
+			nbt.putBoolean("plants_stone", plants_stone);
+			nbt.putBoolean("animals_stone", animals_stone);
+			nbt.putBoolean("metal_stone", metal_stone);
+			nbt.putBoolean("light_stone", light_stone);
+			nbt.putBoolean("shadow_stone", shadow_stone);
+			nbt.putBoolean("vacuum_stone", vacuum_stone);
+			nbt.putBoolean("energy_stone", energy_stone);
+			nbt.putBoolean("sun_stone", sun_stone);
+			nbt.putBoolean("moon_stone", moon_stone);
+			nbt.putBoolean("space_stone", space_stone);
+			nbt.putBoolean("time_stone", time_stone);
+			nbt.putBoolean("blood_stone", blood_stone);
+			nbt.putBoolean("technology_stone", technology_stone);
+			nbt.putBoolean("teleportation_stone", teleportation_stone);
+			nbt.putBoolean("explosion_stone", explosion_stone);
+			nbt.putBoolean("amber_stone", amber_stone);
+			nbt.putBoolean("creation_stone", creation_stone);
+			nbt.putBoolean("destruction_stone", destruction_stone);
+			nbt.putBoolean("mist_stone", mist_stone);
+			nbt.putBoolean("sand_stone", sand_stone);
+			nbt.putBoolean("speed_stone", speed_stone);
+			nbt.putBoolean("poison_stone", poison_stone);
+			nbt.putBoolean("magnet_stone", magnet_stone);
+			nbt.putBoolean("mushrooms_stone", mushrooms_stone);
+			nbt.putBoolean("mercury_stone", mercury_stone);
+			nbt.putBoolean("music_stone", music_stone);
+			nbt.putBoolean("plague_stone", plague_stone);
+			nbt.putBoolean("blue_flame_stone", blue_flame_stone);
+			nbt.putBoolean("gravity_stone", gravity_stone);
+			nbt.putBoolean("smoke_stone", smoke_stone);
+			nbt.putBoolean("spirit_stone", spirit_stone);
+			nbt.putBoolean("form_stone", form_stone);
+			nbt.putBoolean("mind_stone", mind_stone);
+			nbt.putBoolean("golden_dust_stone", golden_dust_stone);
+			nbt.putBoolean("darkness_stone", darkness_stone);
+			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
+			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
+			nbt.putDouble("cpapi_ver", cpapi_ver);
+			nbt.putBoolean("heat_stone", heat_stone);
+			nbt.putBoolean("shockwave_stone", shockwave_stone);
+			return nbt;
 		}
 
 		public void syncData(LevelAccessor world) {
 			this.setDirty();
-			if (world instanceof Level && !world.isClientSide()) {
+			if (world instanceof Level && !world.isClientSide())
 				PacketDistributor.sendToAllPlayers(new SavedDataSyncMessage(0, this));
-			}
 		}
 
-		static MapVariables clientSide = new MapVariables(0, 0, 0, 0, 0, 0, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
-				false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, 21.0, false, false);
+		static MapVariables clientSide = new MapVariables();
 
 		public static MapVariables get(LevelAccessor world) {
 			if (world instanceof ServerLevelAccessor serverLevelAcc) {
-				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(TYPE);
+				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(new SavedData.Factory<>(MapVariables::new, MapVariables::load), DATA_NAME);
 			} else {
 				return clientSide;
 			}
@@ -663,24 +403,21 @@ public class PowerModVariables {
 
 	public record SavedDataSyncMessage(int dataType, SavedData data) implements CustomPacketPayload {
 		public static final Type<SavedDataSyncMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "saved_data_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, SavedDataSyncMessage> STREAM_CODEC = StreamCodec.of((buffer, message) -> {
+		public static final StreamCodec<RegistryFriendlyByteBuf, SavedDataSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, SavedDataSyncMessage message) -> {
 			buffer.writeInt(message.dataType);
-			if (message.data != null) {
-				CompoundTag tag = switch (message.dataType) {
-					case 0 -> (CompoundTag) MapVariables.CODEC.encodeStart(NbtOps.INSTANCE, (MapVariables) message.data).getOrThrow();
-					case 1 -> (CompoundTag) WorldVariables.CODEC.encodeStart(NbtOps.INSTANCE, (WorldVariables) message.data).getOrThrow();
-					default -> throw new IllegalArgumentException("Unknown data type");
-				};
-				buffer.writeNbt(tag);
-			}
-		}, buffer -> {
+			if (message.data != null)
+				buffer.writeNbt(message.data.save(new CompoundTag(), buffer.registryAccess()));
+		}, (RegistryFriendlyByteBuf buffer) -> {
 			int dataType = buffer.readInt();
 			CompoundTag nbt = buffer.readNbt();
-			SavedData data = switch (dataType) {
-				case 0 -> MapVariables.CODEC.parse(NbtOps.INSTANCE, nbt).getOrThrow();
-				case 1 -> WorldVariables.CODEC.parse(NbtOps.INSTANCE, nbt).getOrThrow();
-				default -> null;
-			};
+			SavedData data = null;
+			if (nbt != null) {
+				data = dataType == 0 ? new MapVariables() : new WorldVariables();
+				if (data instanceof MapVariables mapVariables)
+					mapVariables.read(nbt, buffer.registryAccess());
+				else if (data instanceof WorldVariables worldVariables)
+					worldVariables.read(nbt, buffer.registryAccess());
+			}
 			return new SavedDataSyncMessage(dataType, data);
 		});
 
@@ -692,11 +429,10 @@ public class PowerModVariables {
 		public static void handleData(final SavedDataSyncMessage message, final IPayloadContext context) {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
 				context.enqueueWork(() -> {
-					if (message.dataType == 0) {
-						MapVariables.clientSide = (MapVariables) message.data;
-					} else {
-						WorldVariables.clientSide = (WorldVariables) message.data;
-					}
+					if (message.dataType == 0)
+						MapVariables.clientSide.read(message.data.save(new CompoundTag(), context.player().registryAccess()), context.player().registryAccess());
+					else
+						WorldVariables.clientSide.read(message.data.save(new CompoundTag(), context.player().registryAccess()), context.player().registryAccess());
 				}).exceptionally(e -> {
 					context.connection().disconnect(Component.literal(e.getMessage()));
 					return null;
@@ -766,21 +502,6 @@ public class PowerModVariables {
 		public ItemStack green_rune_slot = ItemStack.EMPTY;
 		public double rune_ovelay_display = 0;
 
-		private void putItemStack(CompoundTag nbt, String key, ItemStack stack, HolderLookup.Provider lookupProvider) {
-			if (!stack.isEmpty()) {
-				nbt.put(key, stack.save(lookupProvider));
-			} else {
-				nbt.putBoolean(key + "_empty", true);
-			}
-		}
-
-		private ItemStack getItemStack(CompoundTag nbt, String key, HolderLookup.Provider lookupProvider) {
-			if (nbt.contains(key + "_empty")) {
-				return ItemStack.EMPTY;
-			}
-			return nbt.contains(key) ? ItemStack.parse(lookupProvider, nbt.getCompoundOrEmpty(key)).orElse(ItemStack.EMPTY) : ItemStack.EMPTY;
-		}
-
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
 			CompoundTag nbt = new CompoundTag();
@@ -819,10 +540,10 @@ public class PowerModVariables {
 			nbt.putBoolean("power_recorded", power_recorded);
 			nbt.putBoolean("debug", debug);
 			nbt.putBoolean("detransform_anim_trigger", detransform_anim_trigger);
-			putItemStack(nbt, "helmet", helmet, lookupProvider);
-			putItemStack(nbt, "chestplate", chestplate, lookupProvider);
-			putItemStack(nbt, "leggings", leggings, lookupProvider);
-			putItemStack(nbt, "boots", boots, lookupProvider);
+			nbt.put("helmet", helmet.saveOptional(lookupProvider));
+			nbt.put("chestplate", chestplate.saveOptional(lookupProvider));
+			nbt.put("leggings", leggings.saveOptional(lookupProvider));
+			nbt.put("boots", boots.saveOptional(lookupProvider));
 			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
 			nbt.putBoolean("transfered_power", transfered_power);
 			nbt.putBoolean("master_effect_end", master_effect_end);
@@ -839,74 +560,74 @@ public class PowerModVariables {
 			nbt.putString("rank", rank);
 			nbt.putString("mind_player_owner", mind_player_owner);
 			nbt.putBoolean("mind_used", mind_used);
-			putItemStack(nbt, "blue_rune_slot", blue_rune_slot, lookupProvider);
-			putItemStack(nbt, "red_rune_slot", red_rune_slot, lookupProvider);
-			putItemStack(nbt, "green_rune_slot", green_rune_slot, lookupProvider);
+			nbt.put("blue_rune_slot", blue_rune_slot.saveOptional(lookupProvider));
+			nbt.put("red_rune_slot", red_rune_slot.saveOptional(lookupProvider));
+			nbt.put("green_rune_slot", green_rune_slot.saveOptional(lookupProvider));
 			nbt.putDouble("rune_ovelay_display", rune_ovelay_display);
 			return nbt;
 		}
 
 		@Override
 		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
-			ability = nbt.getStringOr("ability", "0");
-			element_name_first = nbt.getStringOr("element_name_first", "0");
-			element_name_second = nbt.getStringOr("element_name_second", "0");
-			element_name_third = nbt.getStringOr("element_name_third", "0");
-			teleporting_effect = nbt.getDoubleOr("teleporting_effect", 0);
-			fake_element_name_first = nbt.getStringOr("fake_element_name_first", "0");
-			fake_element_name_second = nbt.getStringOr("fake_element_name_second", "0");
-			fake_element_name_third = nbt.getStringOr("fake_element_name_third", "0");
-			abilities_timer = nbt.getDoubleOr("abilities_timer", 0);
-			fake_element_name_first_timer = nbt.getDoubleOr("fake_element_name_first_timer", 0);
-			fake_element_name_second_timer = nbt.getDoubleOr("fake_element_name_second_timer", 0);
-			fake_element_name_third_timer = nbt.getDoubleOr("fake_element_name_third_timer", 0);
-			power = nbt.getDoubleOr("power", 0.0);
-			powerTimer = nbt.getDoubleOr("powerTimer", 0.0);
-			mergers = nbt.getDoubleOr("mergers", 0.0);
-			power_recovery_multiplier = nbt.getDoubleOr("power_recovery_multiplier", 1.0);
-			max_power = nbt.getDoubleOr("max_power", 100.0);
-			recharge_timer = nbt.getDoubleOr("recharge_timer", 300.0);
-			master_effect_duration = nbt.getDoubleOr("master_effect_duration", 600.0);
-			active_power = nbt.getBooleanOr("active_power", false);
-			selected = nbt.getBooleanOr("selected", false);
-			active_battery = nbt.getBooleanOr("active_battery", false);
-			ability_block = nbt.getBooleanOr("ability_block", false);
-			use_ability_key_var = nbt.getBooleanOr("use_ability_key_var", false);
-			detransf_key_var = nbt.getBooleanOr("detransf_key_var", false);
-			wheel_open_key_var = nbt.getBooleanOr("wheel_open_key_var", false);
-			second_wheel_open_var = nbt.getBooleanOr("second_wheel_open_var", false);
-			third_wheel_open_var = nbt.getBooleanOr("third_wheel_open_var", false);
-			first_fake_wheel_open_var = nbt.getBooleanOr("first_fake_wheel_open_var", false);
-			second_fake_wheel_open_var = nbt.getBooleanOr("second_fake_wheel_open_var", false);
-			third_fake_wheel_open_var = nbt.getBooleanOr("third_fake_wheel_open_var", false);
-			ability_using = nbt.getBooleanOr("ability_using", false);
-			power_recorded = nbt.getBooleanOr("power_recorded", false);
-			debug = nbt.getBooleanOr("debug", false);
-			detransform_anim_trigger = nbt.getBooleanOr("detransform_anim_trigger", false);
-			helmet = getItemStack(nbt, "helmet", lookupProvider);
-			chestplate = getItemStack(nbt, "chestplate", lookupProvider);
-			leggings = getItemStack(nbt, "leggings", lookupProvider);
-			boots = getItemStack(nbt, "boots", lookupProvider);
-			unlock_keepers_box = nbt.getBooleanOr("unlock_keepers_box", false);
-			transfered_power = nbt.getBooleanOr("transfered_power", false);
-			master_effect_end = nbt.getBooleanOr("master_effect_end", false);
-			master_effect_start = nbt.getBooleanOr("master_effect_start", false);
-			level = nbt.getDoubleOr("level", 1.0);
-			level_exp = nbt.getDoubleOr("level_exp", 0.0);
-			base_damage_by_lvl = nbt.getDoubleOr("base_damage_by_lvl", 6.0);
-			max_level_exp = nbt.getDoubleOr("max_level_exp", 100.0);
-			resistance_char = nbt.getDoubleOr("resistance_char", 0.0);
-			speed_char = nbt.getDoubleOr("speed_char", 1.0);
-			haste_char = nbt.getDoubleOr("haste_char", -1.0);
-			jump_char = nbt.getDoubleOr("jump_char", 1.0);
-			level_up_status = nbt.getBooleanOr("level_up_status", false);
-			rank = nbt.getStringOr("rank", "D");
-			mind_player_owner = nbt.getStringOr("mind_player_owner", "\"\"");
-			mind_used = nbt.getBooleanOr("mind_used", false);
-			blue_rune_slot = getItemStack(nbt, "blue_rune_slot", lookupProvider);
-			red_rune_slot = getItemStack(nbt, "red_rune_slot", lookupProvider);
-			green_rune_slot = getItemStack(nbt, "green_rune_slot", lookupProvider);
-			rune_ovelay_display = nbt.getDoubleOr("rune_ovelay_display", 0);
+			ability = nbt.getString("ability");
+			element_name_first = nbt.getString("element_name_first");
+			element_name_second = nbt.getString("element_name_second");
+			element_name_third = nbt.getString("element_name_third");
+			teleporting_effect = nbt.getDouble("teleporting_effect");
+			fake_element_name_first = nbt.getString("fake_element_name_first");
+			fake_element_name_second = nbt.getString("fake_element_name_second");
+			fake_element_name_third = nbt.getString("fake_element_name_third");
+			abilities_timer = nbt.getDouble("abilities_timer");
+			fake_element_name_first_timer = nbt.getDouble("fake_element_name_first_timer");
+			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
+			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
+			power = nbt.getDouble("power");
+			powerTimer = nbt.getDouble("powerTimer");
+			mergers = nbt.getDouble("mergers");
+			power_recovery_multiplier = nbt.getDouble("power_recovery_multiplier");
+			max_power = nbt.getDouble("max_power");
+			recharge_timer = nbt.getDouble("recharge_timer");
+			master_effect_duration = nbt.getDouble("master_effect_duration");
+			active_power = nbt.getBoolean("active_power");
+			selected = nbt.getBoolean("selected");
+			active_battery = nbt.getBoolean("active_battery");
+			ability_block = nbt.getBoolean("ability_block");
+			use_ability_key_var = nbt.getBoolean("use_ability_key_var");
+			detransf_key_var = nbt.getBoolean("detransf_key_var");
+			wheel_open_key_var = nbt.getBoolean("wheel_open_key_var");
+			second_wheel_open_var = nbt.getBoolean("second_wheel_open_var");
+			third_wheel_open_var = nbt.getBoolean("third_wheel_open_var");
+			first_fake_wheel_open_var = nbt.getBoolean("first_fake_wheel_open_var");
+			second_fake_wheel_open_var = nbt.getBoolean("second_fake_wheel_open_var");
+			third_fake_wheel_open_var = nbt.getBoolean("third_fake_wheel_open_var");
+			ability_using = nbt.getBoolean("ability_using");
+			power_recorded = nbt.getBoolean("power_recorded");
+			debug = nbt.getBoolean("debug");
+			detransform_anim_trigger = nbt.getBoolean("detransform_anim_trigger");
+			helmet = ItemStack.parseOptional(lookupProvider, nbt.getCompound("helmet"));
+			chestplate = ItemStack.parseOptional(lookupProvider, nbt.getCompound("chestplate"));
+			leggings = ItemStack.parseOptional(lookupProvider, nbt.getCompound("leggings"));
+			boots = ItemStack.parseOptional(lookupProvider, nbt.getCompound("boots"));
+			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
+			transfered_power = nbt.getBoolean("transfered_power");
+			master_effect_end = nbt.getBoolean("master_effect_end");
+			master_effect_start = nbt.getBoolean("master_effect_start");
+			level = nbt.getDouble("level");
+			level_exp = nbt.getDouble("level_exp");
+			base_damage_by_lvl = nbt.getDouble("base_damage_by_lvl");
+			max_level_exp = nbt.getDouble("max_level_exp");
+			resistance_char = nbt.getDouble("resistance_char");
+			speed_char = nbt.getDouble("speed_char");
+			haste_char = nbt.getDouble("haste_char");
+			jump_char = nbt.getDouble("jump_char");
+			level_up_status = nbt.getBoolean("level_up_status");
+			rank = nbt.getString("rank");
+			mind_player_owner = nbt.getString("mind_player_owner");
+			mind_used = nbt.getBoolean("mind_used");
+			blue_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("blue_rune_slot"));
+			red_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("red_rune_slot"));
+			green_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("green_rune_slot"));
+			rune_ovelay_display = nbt.getDouble("rune_ovelay_display");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

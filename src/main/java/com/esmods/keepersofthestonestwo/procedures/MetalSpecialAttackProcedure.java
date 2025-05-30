@@ -186,7 +186,7 @@ public class MetalSpecialAttackProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.IRON_SKIN, 300, 0, false, false));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 300, 2, false, false));
+						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 2, false, false));
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;

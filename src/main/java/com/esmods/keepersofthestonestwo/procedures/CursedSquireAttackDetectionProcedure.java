@@ -24,7 +24,7 @@ public class CursedSquireAttackDetectionProcedure {
 		double Range = 0;
 		double Zpar = 0;
 		Range = 0.75;
-		if (entity.getPersistentData().getDoubleOr("IA", 0) > 4) {
+		if (entity.getPersistentData().getDouble("IA") > 4) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					Xpar = x + entity.getLookAngle().x * Range;
@@ -45,7 +45,7 @@ public class CursedSquireAttackDetectionProcedure {
 				}
 			}
 		} else {
-			entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDoubleOr("IA", 0) + 1));
+			entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
 		}
 		if (!world.getEntitiesOfClass(Boat.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(1 / 2d), e -> true).isEmpty()) {
 			(findEntityInWorldRange(world, Boat.class, x, y, z, 1)).hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 1000);

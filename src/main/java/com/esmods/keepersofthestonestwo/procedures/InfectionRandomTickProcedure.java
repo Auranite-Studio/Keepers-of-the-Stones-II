@@ -17,7 +17,7 @@ public class InfectionRandomTickProcedure {
 		if (entity == null)
 			return;
 		double debaf_tick = 0;
-		if (entity.getPersistentData().getDoubleOr("debafTicking", 0) == 0) {
+		if (entity.getPersistentData().getDouble("debafTicking") == 0) {
 			if (Math.random() <= 0.1) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 1, false, false));
@@ -29,7 +29,7 @@ public class InfectionRandomTickProcedure {
 					_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 300, 1, false, false));
 			} else if (Math.random() <= 0.4) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 200, 1, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 1, false, false));
 			} else if (Math.random() <= 0.5) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 1, false, false));
@@ -46,7 +46,7 @@ public class InfectionRandomTickProcedure {
 			}
 			entity.getPersistentData().putDouble("debafTicking", 200);
 		} else {
-			entity.getPersistentData().putDouble("debafTicking", (entity.getPersistentData().getDoubleOr("debafTicking", 0) - 1));
+			entity.getPersistentData().putDouble("debafTicking", (entity.getPersistentData().getDouble("debafTicking") - 1));
 		}
 	}
 }

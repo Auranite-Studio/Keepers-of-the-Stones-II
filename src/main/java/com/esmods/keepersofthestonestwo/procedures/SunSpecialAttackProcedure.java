@@ -61,7 +61,7 @@ public class SunSpecialAttackProcedure {
 										(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 3));
-								if (world instanceof Level _lvl11 && _lvl11.isBrightOutside()) {
+								if (world instanceof Level _lvl11 && _lvl11.isDay()) {
 									entityiterator.igniteForSeconds(5);
 								}
 								{
