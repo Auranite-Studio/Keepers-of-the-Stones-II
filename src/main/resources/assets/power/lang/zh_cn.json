@@ -1071,5 +1071,6 @@
   "item.power.mist_stone": "雾石",
   "item.power.blue_flame_armor_chestplate": "蓝色火焰胸甲",
   "item.power.creation_pickaxe": "创世镐",
-  "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15"
+  "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15",
+  "item.power.energium_upgrade_smithing_template.description_1": ""
 }
