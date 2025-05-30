@@ -98,37 +98,25 @@ public class RuneAbilitiesUsingProcedure {
 					}
 					{
 						Entity _entity = entity;
-						if (_entity instanceof Player _player) {
-							_player.getInventory().armor.set(3, ItemStack.EMPTY);
-							_player.getInventory().setChanged();
-						} else if (_entity instanceof LivingEntity _living) {
+						if (_entity instanceof LivingEntity _living) {
 							_living.setItemSlot(EquipmentSlot.HEAD, ItemStack.EMPTY);
 						}
 					}
 					{
 						Entity _entity = entity;
-						if (_entity instanceof Player _player) {
-							_player.getInventory().armor.set(2, ItemStack.EMPTY);
-							_player.getInventory().setChanged();
-						} else if (_entity instanceof LivingEntity _living) {
+						if (_entity instanceof LivingEntity _living) {
 							_living.setItemSlot(EquipmentSlot.CHEST, ItemStack.EMPTY);
 						}
 					}
 					{
 						Entity _entity = entity;
-						if (_entity instanceof Player _player) {
-							_player.getInventory().armor.set(1, ItemStack.EMPTY);
-							_player.getInventory().setChanged();
-						} else if (_entity instanceof LivingEntity _living) {
+						if (_entity instanceof LivingEntity _living) {
 							_living.setItemSlot(EquipmentSlot.LEGS, ItemStack.EMPTY);
 						}
 					}
 					{
 						Entity _entity = entity;
-						if (_entity instanceof Player _player) {
-							_player.getInventory().armor.set(0, ItemStack.EMPTY);
-							_player.getInventory().setChanged();
-						} else if (_entity instanceof LivingEntity _living) {
+						if (_entity instanceof LivingEntity _living) {
 							_living.setItemSlot(EquipmentSlot.FEET, ItemStack.EMPTY);
 						}
 					}

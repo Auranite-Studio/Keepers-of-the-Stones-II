@@ -9,11 +9,11 @@ public class CurseTickEventProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getPersistentData().getDouble("curseTickDamage") == 60) {
+		if (entity.getPersistentData().getDoubleOr("curseTickDamage", 0) == 60) {
 			entity.getPersistentData().putDouble("curseTickDamage", 0);
 			entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC)), 3);
-		} else if (entity.getPersistentData().getDouble("curseTickDamage") < 60) {
-			entity.getPersistentData().putDouble("curseTickDamage", (entity.getPersistentData().getDouble("curseTickDamage") + 1));
+		} else if (entity.getPersistentData().getDoubleOr("curseTickDamage", 0) < 60) {
+			entity.getPersistentData().putDouble("curseTickDamage", (entity.getPersistentData().getDoubleOr("curseTickDamage", 0) + 1));
 		}
 	}
 }

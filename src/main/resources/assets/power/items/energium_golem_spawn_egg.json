@@ -1,16 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:item/template_spawn_egg",
-    "tints": [
-      {
-        "type": "minecraft:constant",
-        "value": -2242726
-      },
-      {
-        "type": "minecraft:constant",
-        "value": -8337805
-      }
-    ]
+    "model": "power:item/energium_golem_spawn_egg"
   }
 }

@@ -145,7 +145,7 @@ public class EnergiumVaultTickUpdateProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, -1);
 		return -1;
 	}
 
@@ -156,7 +156,7 @@ public class EnergiumVaultTickUpdateProcedure {
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getBoolean(tag);
+			return blockEntity.getPersistentData().getBooleanOr(tag, false);
 		return false;
 	}
 

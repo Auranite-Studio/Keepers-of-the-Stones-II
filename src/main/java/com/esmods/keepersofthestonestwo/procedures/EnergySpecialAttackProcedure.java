@@ -114,7 +114,7 @@ public class EnergySpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("energy_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300, 6, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.STRENGTH, 300, 6, false, false));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("power:electric_spark")), SoundSource.PLAYERS, (float) 0.1, 1);

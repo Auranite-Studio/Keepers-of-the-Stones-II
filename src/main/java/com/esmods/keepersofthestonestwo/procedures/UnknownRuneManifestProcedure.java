@@ -22,56 +22,63 @@ public class UnknownRuneManifestProcedure {
 				final double _tagValue = Math.random();
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 			}
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") >= 0 && itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") <= 0.02) {
+			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) >= 0 && itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) <= 0.02) {
 				itemstack.shrink(1);
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.PROTECTION_RUNE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") >= 0.03 && itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") <= 0.05) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) >= 0.03
+					&& itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) <= 0.05) {
 				itemstack.shrink(1);
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.SPIN_RUNE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") >= 0.06 && itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") <= 0.08) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) >= 0.06
+					&& itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) <= 0.08) {
 				itemstack.shrink(1);
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.DODGING_RUNE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") >= 0.09 && itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") <= 0.11) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) >= 0.09
+					&& itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) <= 0.11) {
 				itemstack.shrink(1);
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.INVISIBILITY_RUNE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") >= 0.12 && itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") <= 0.14) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) >= 0.12
+					&& itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) <= 0.14) {
 				itemstack.shrink(1);
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.HEALING_RUNE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") >= 0.15 && itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") <= 0.6) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) >= 0.15
+					&& itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) <= 0.6) {
 				itemstack.shrink(1);
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.EXTRA_STAR_POINTS_RUNE_1.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") >= 0.61 && itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") <= 0.8) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) >= 0.61
+					&& itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) <= 0.8) {
 				itemstack.shrink(1);
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_1.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") >= 0.81 && itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("randomRune") <= 1) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) >= 0.81
+					&& itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("randomRune", 0) <= 1) {
 				itemstack.shrink(1);
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_1.get()).copy();

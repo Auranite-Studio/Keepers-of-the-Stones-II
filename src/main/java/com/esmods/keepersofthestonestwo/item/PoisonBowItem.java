@@ -2,7 +2,6 @@
 package com.esmods.keepersofthestonestwo.item;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -10,6 +9,7 @@ import net.minecraft.world.item.BowItem;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
@@ -21,7 +21,7 @@ import com.esmods.keepersofthestonestwo.entity.PoisonDropProjectileEntity;
 
 public class PoisonBowItem extends Item {
 	public PoisonBowItem(Item.Properties properties) {
-		super(properties.rarity(Rarity.COMMON).stacksTo(1));
+		super(properties.stacksTo(1));
 	}
 
 	@Override
@@ -45,8 +45,8 @@ public class PoisonBowItem extends Item {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
+	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
+		super.inventoryTick(itemstack, world, entity, slot);
 		RemoveForbiddenItemProcedure.execute(entity, itemstack);
 	}
 

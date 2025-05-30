@@ -7,8 +7,8 @@ import net.minecraft.core.component.DataComponents;
 
 public class GetRechargeInfoProcedure {
 	public static String execute(ItemStack itemstack) {
-		return itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("rechargeStone") > 0
-				? "\u00A74" + Component.translatable("power.modinfo.recharge_stone").getString() + Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("rechargeStone") / 20)
+		return itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("rechargeStone", 0) > 0
+				? "\u00A74" + Component.translatable("power.modinfo.recharge_stone").getString() + Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("rechargeStone", 0) / 20)
 						+ Component.translatable("power.modinfo.recharge_stone.seconds").getString()
 				: "\u00A7a" + Component.translatable("power.modinfo.recharge_stone.done").getString();
 	}

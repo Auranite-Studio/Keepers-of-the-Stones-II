@@ -10,7 +10,7 @@ public class MercuryBallProjectileKoghdaSnariadPopadaietVSushchnostProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 4, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.NAUSEA, 200, 4, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 300, 3, false, false));
 	}

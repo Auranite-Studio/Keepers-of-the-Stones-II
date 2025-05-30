@@ -2,7 +2,6 @@
 package com.esmods.keepersofthestonestwo.item;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
@@ -19,7 +18,7 @@ import com.esmods.keepersofthestonestwo.entity.MagicFireballProjectileEntity;
 
 public class BlueMagicFireballItem extends Item {
 	public BlueMagicFireballItem(Item.Properties properties) {
-		super(properties.rarity(Rarity.COMMON).stacksTo(1));
+		super(properties.stacksTo(1));
 	}
 
 	@Override
@@ -66,10 +65,10 @@ public class BlueMagicFireballItem extends Item {
 
 	private ItemStack findAmmo(Player player) {
 		ItemStack stack = ProjectileWeaponItem.getHeldProjectile(player, e -> e.getItem() == MagicFireballProjectileEntity.PROJECTILE_ITEM.getItem());
-		if (stack == ItemStack.EMPTY) {
-			for (int i = 0; i < player.getInventory().items.size(); i++) {
-				ItemStack teststack = player.getInventory().items.get(i);
-				if (teststack != null && teststack.getItem() == MagicFireballProjectileEntity.PROJECTILE_ITEM.getItem()) {
+		if (stack.isEmpty()) {
+			for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
+				ItemStack teststack = player.getInventory().getItem(i);
+				if (!teststack.isEmpty() && teststack.getItem() == MagicFireballProjectileEntity.PROJECTILE_ITEM.getItem()) {
 					stack = teststack;
 					break;
 				}

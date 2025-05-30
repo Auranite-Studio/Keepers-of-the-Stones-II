@@ -36,7 +36,7 @@ public class AmberDestructionArmorProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getPersistentData().getBoolean("amberLayer")) {
+		if (entity.getPersistentData().getBooleanOr("amberLayer", false)) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
 			}

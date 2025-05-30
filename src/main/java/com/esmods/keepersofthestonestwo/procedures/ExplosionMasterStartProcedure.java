@@ -42,37 +42,25 @@ public class ExplosionMasterStartProcedure {
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 0) {
 			{
 				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(3, new ItemStack(PowerModItems.EXPLOSION_ARMOR_HELMET.get()));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				if (_entity instanceof LivingEntity _living) {
 					_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(PowerModItems.EXPLOSION_ARMOR_HELMET.get()));
 				}
 			}
 			{
 				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(2, new ItemStack(PowerModItems.EXPLOSION_ARMOR_CHESTPLATE.get()));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				if (_entity instanceof LivingEntity _living) {
 					_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(PowerModItems.EXPLOSION_ARMOR_CHESTPLATE.get()));
 				}
 			}
 			{
 				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(1, new ItemStack(PowerModItems.EXPLOSION_ARMOR_LEGGINGS.get()));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				if (_entity instanceof LivingEntity _living) {
 					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.EXPLOSION_ARMOR_LEGGINGS.get()));
 				}
 			}
 			{
 				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(0, new ItemStack(PowerModItems.EXPLOSION_ARMOR_BOOTS.get()));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				if (_entity instanceof LivingEntity _living) {
 					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(PowerModItems.EXPLOSION_ARMOR_BOOTS.get()));
 				}
 			}
@@ -92,19 +80,13 @@ public class ExplosionMasterStartProcedure {
 		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 1) {
 			{
 				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(1, new ItemStack(PowerModItems.EXPLOSION_ARMOR_LEGGINGS.get()));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				if (_entity instanceof LivingEntity _living) {
 					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.EXPLOSION_ARMOR_LEGGINGS.get()));
 				}
 			}
 			{
 				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(0, new ItemStack(PowerModItems.EXPLOSION_ARMOR_BOOTS.get()));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				if (_entity instanceof LivingEntity _living) {
 					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(PowerModItems.EXPLOSION_ARMOR_BOOTS.get()));
 				}
 			}
@@ -120,10 +102,7 @@ public class ExplosionMasterStartProcedure {
 		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 2) {
 			{
 				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(1, new ItemStack(PowerModItems.EXPLOSION_ARMOR_LEGGINGS.get()));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
+				if (_entity instanceof LivingEntity _living) {
 					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.EXPLOSION_ARMOR_LEGGINGS.get()));
 				}
 			}

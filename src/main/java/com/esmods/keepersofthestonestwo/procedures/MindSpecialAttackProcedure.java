@@ -75,7 +75,7 @@ public class MindSpecialAttackProcedure {
 								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
 										(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 4));
+									_entity.addEffect(new MobEffectInstance(MobEffects.NAUSEA, 200, 4));
 							}
 						}
 					}

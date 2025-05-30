@@ -32,11 +32,11 @@ public class EnhancedAbilitiesLegacyProcedure {
 		if (PowerConfigConfiguration.ENABLE_LEVELS.get() == false) {
 			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).ability_block && entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 2, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 60, 2, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, 2, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.SPEED, 60, 2, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 60, 2, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 60, 2, false, false));
 			}
 		}
 	}
