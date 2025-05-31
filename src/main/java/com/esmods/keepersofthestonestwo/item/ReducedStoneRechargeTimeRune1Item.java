@@ -37,7 +37,7 @@ public class ReducedStoneRechargeTimeRune1Item extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		ReducedStoneRechargeTimeRune1UseProcedure.execute(entity, ar.getObject());
+		ReducedStoneRechargeTimeRune1UseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return ar;
 	}
 }

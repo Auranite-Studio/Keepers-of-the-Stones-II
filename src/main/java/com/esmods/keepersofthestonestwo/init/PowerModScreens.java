@@ -131,4 +131,8 @@ public class PowerModScreens {
 		event.register(PowerModMenus.WHEEL_ABILITIES_SHOCKWAVE.get(), WheelAbilitiesShockwaveScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_COLORS.get(), WheelAbilitiesColorsScreen::new);
 	}
+
+	public interface ScreenAccessor {
+		void updateMenuState(int elementType, String name, Object elementState);
+	}
 }

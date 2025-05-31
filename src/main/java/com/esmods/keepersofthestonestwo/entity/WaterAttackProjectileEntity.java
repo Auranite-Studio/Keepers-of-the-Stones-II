@@ -37,7 +37,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class WaterAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.WATER);
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.AIR);
 	private int knockback = 0;
 
 	public WaterAttackProjectileEntity(EntityType<? extends WaterAttackProjectileEntity> type, Level world) {
@@ -64,7 +64,7 @@ public class WaterAttackProjectileEntity extends AbstractArrow implements ItemSu
 
 	@Override
 	protected ItemStack getDefaultPickupItem() {
-		return new ItemStack(Blocks.WATER);
+		return new ItemStack(Blocks.AIR);
 	}
 
 	@Override

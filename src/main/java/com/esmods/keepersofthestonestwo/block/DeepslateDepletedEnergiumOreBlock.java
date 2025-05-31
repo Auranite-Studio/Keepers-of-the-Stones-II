@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class DeepslateDepletedEnergiumOreBlock extends Block {
 	public DeepslateDepletedEnergiumOreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DEEPSLATE).strength(6.75f, 5f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).strength(6.75f, 5f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

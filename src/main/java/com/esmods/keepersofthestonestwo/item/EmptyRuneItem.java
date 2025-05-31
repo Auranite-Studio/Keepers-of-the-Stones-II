@@ -14,7 +14,7 @@ import java.util.List;
 
 public class EmptyRuneItem extends Item {
 	public EmptyRuneItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.RARE));
+		super(new Item.Properties().rarity(Rarity.RARE));
 	}
 
 	@Override

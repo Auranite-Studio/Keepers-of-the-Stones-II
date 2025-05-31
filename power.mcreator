@@ -31768,6 +31768,28 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/KBtoPart5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
       "path": "~/ItemsAndBlocks/KeepersBox/GUI"
@@ -32016,27 +32038,17 @@
       "locked_code": false,
       "registry_name": "reduced_stone_recharge_time_rune_1_use",
       "metadata": {
-        "files": [],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ReducedStoneRechargeTimeRune1UseProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       },
@@ -34392,56 +34404,6 @@
       "CUSTOM:EnergiumGolem",
       "CUSTOM:CursedKeeper"
     ],
-    "BLOCKS:minecraft:mineable/pickaxe": [
-      "~CUSTOM:RuneCutter",
-      "~CUSTOM:CursedStoneCrackedBricksWall",
-      "~CUSTOM:CursedStoneCrackedBricksStairs",
-      "~CUSTOM:CursedStoneCrackedBricksSlab",
-      "~CUSTOM:CursedStoneCrackedBricks",
-      "~CUSTOM:ChiseledCursedStone",
-      "~CUSTOM:DeepslateCopyriumOre",
-      "~CUSTOM:DeepslateAmplifierOre",
-      "~CUSTOM:DeepslateEnergiumOre",
-      "~CUSTOM:DeepslateDepletedEnergiumOre",
-      "~CUSTOM:RawEnergiumBlock",
-      "~CUSTOM:EnergiumOre",
-      "~CUSTOM:EnergiumVault",
-      "~CUSTOM:CursedLamp",
-      "~CUSTOM:CursedLadder",
-      "~CUSTOM:CursedVault",
-      "~CUSTOM:ElementalPowerGenerator",
-      "~CUSTOM:RawCopyriumBlock",
-      "~CUSTOM:CopyriumBlock",
-      "~CUSTOM:CopyriumOre",
-      "~CUSTOM:CursedLantern",
-      "~CUSTOM:CursedStonePillar",
-      "~CUSTOM:PolishedCursedStoneWall",
-      "~CUSTOM:PolishedCursedStoneSlab",
-      "~CUSTOM:PolishedCursedStoneStairs",
-      "~CUSTOM:PolishedCursedStone",
-      "~CUSTOM:CursedStoneBricksWall",
-      "~CUSTOM:CursedStoneWall",
-      "~CUSTOM:CursedStoneBricksSlab",
-      "~CUSTOM:CursedStoneBricksStairs",
-      "~CUSTOM:CursedStoneSlab",
-      "~CUSTOM:CursedStoneStairs",
-      "~CUSTOM:CursedStoneBricks",
-      "~CUSTOM:CursedStone",
-      "~CUSTOM:AmberBlock",
-      "~CUSTOM:OrangePortal",
-      "~CUSTOM:BluePortal",
-      "~CUSTOM:RawAmplifierBlock",
-      "~CUSTOM:RawDepletedEnergiumBlock",
-      "~CUSTOM:AmplifierBlock",
-      "~CUSTOM:AmplifierOre",
-      "~CUSTOM:EnergiumController",
-      "~CUSTOM:MoonBlock",
-      "~CUSTOM:KeepersBox",
-      "~CUSTOM:BatteryCharger",
-      "~CUSTOM:EnergiumBlock",
-      "~CUSTOM:DepletedEnergiumBlock",
-      "~CUSTOM:DepletedEnergiumOre"
-    ],
     "BIOMES:minecraft:is_overworld": [
       "CUSTOM:CursedForest"
     ],
@@ -34460,10 +34422,6 @@
       "EntityPhantom",
       "EntityBreeze",
       "EntityBlaze"
-    ],
-    "ENCHANTMENTS:minecraft:non_treasure": [
-      "~CUSTOM:Isolation",
-      "~CUSTOM:Revenge"
     ],
     "ENTITIES:mod:xp/2": [
       "EntityCreeper",
@@ -34498,84 +34456,16 @@
       "EntityStray",
       "EntitySilverfish"
     ],
-    "ITEMS:minecraft:music_discs": [
-      "~CUSTOM:MusicHope",
-      "~CUSTOM:MusicDiscAncientMood",
-      "~CUSTOM:MusicDiscCallOfThePast"
-    ],
     "ENTITIES:mod:cursed_mobs": [
       "CUSTOM:CursedKeeper",
       "CUSTOM:CursedKnight",
       "CUSTOM:CursedSquire"
-    ],
-    "BLOCKS:minecraft:stairs": [
-      "~CUSTOM:CursedStoneCrackedBricksStairs",
-      "~CUSTOM:PolishedCursedStoneStairs",
-      "~CUSTOM:CursedStoneBricksStairs",
-      "~CUSTOM:CursedStoneStairs"
     ],
     "BIOMES:minecraft:is_forest": [
       "CUSTOM:CursedForest"
     ],
     "BIOMES:mod:cursed_biomes": [
       "CUSTOM:CursedForest"
-    ],
-    "ITEMS:minecraft:pickaxes": [
-      "~CUSTOM:TechnoPickaxe",
-      "~CUSTOM:CreationPickaxe",
-      "~CUSTOM:EnergiumPickaxe"
-    ],
-    "ITEMS:minecraft:swords": [
-      "~CUSTOM:SpearBrash",
-      "~CUSTOM:HeatKnife",
-      "~CUSTOM:DarkSword",
-      "~CUSTOM:GoldenDustStaff",
-      "~CUSTOM:MindEpee",
-      "~CUSTOM:FormSai",
-      "~CUSTOM:SpiritSickle",
-      "~CUSTOM:GravityMace",
-      "~CUSTOM:BlueFlameSword",
-      "~CUSTOM:PlagueWalkingStick",
-      "~CUSTOM:MusicGuitar",
-      "~CUSTOM:MushroomsHammer",
-      "~CUSTOM:TeleportationBlade",
-      "~CUSTOM:MagnetClaws",
-      "~CUSTOM:HighspeedDagger",
-      "~CUSTOM:SandSaber",
-      "~CUSTOM:MistyFan",
-      "~CUSTOM:AmberStaff",
-      "~CUSTOM:ExplosionMace",
-      "~CUSTOM:BloodSickle",
-      "~CUSTOM:DestructionBroadsword",
-      "~CUSTOM:CreationSword",
-      "~CUSTOM:CreationStaff",
-      "~CUSTOM:TimeKhopesh",
-      "~CUSTOM:ConstellationSword",
-      "~CUSTOM:MoonDoubleSidedSpear",
-      "~CUSTOM:SolarBlade",
-      "~CUSTOM:EnergyStaff",
-      "~CUSTOM:EnergiumSword",
-      "~CUSTOM:VacuumDagger",
-      "~CUSTOM:ShadowScythe",
-      "~CUSTOM:LightSword",
-      "~CUSTOM:LeftMetalGauntlet",
-      "~CUSTOM:RightMetalGauntlet",
-      "~CUSTOM:AnimalsHalberd",
-      "~CUSTOM:GreenStaff",
-      "~CUSTOM:OceanicTrident",
-      "~CUSTOM:LavaHammer",
-      "~CUSTOM:CrystalKnife",
-      "~CUSTOM:SoundDagger",
-      "~CUSTOM:LightningFalchion",
-      "~CUSTOM:IceSpear",
-      "~CUSTOM:EtherGlaive",
-      "~CUSTOM:WaterKatana",
-      "~CUSTOM:EarthHammer",
-      "~CUSTOM:AirRapier",
-      "~CUSTOM:FireSword"
-    ],
-    "BLOCKS:minecraft:needs_stone_tool": [
-      "~CUSTOM:RuneCutter"
     ],
     "ITEMS:mod:elemental_stones": [
       "CUSTOM:FireStone",
@@ -34698,153 +34588,11 @@
       "CUSTOM:MusicDiscCallOfThePast",
       "CUSTOM:EnergiumUpgradeSmithingTemplate"
     ],
-    "ITEMS:minecraft:shovels": [
-      "~CUSTOM:CreationShovel",
-      "~CUSTOM:EnergiumShovel"
-    ],
-    "BLOCKS:minecraft:needs_diamond_tool": [
-      "~CUSTOM:DeepslateEnergiumOre",
-      "~CUSTOM:DeepslateDepletedEnergiumOre",
-      "~CUSTOM:RawEnergiumBlock",
-      "~CUSTOM:EnergiumOre",
-      "~CUSTOM:EnergiumVault",
-      "~CUSTOM:CursedVault",
-      "~CUSTOM:RawDepletedEnergiumBlock",
-      "~CUSTOM:EnergiumController",
-      "~CUSTOM:EnergiumBlock",
-      "~CUSTOM:DepletedEnergiumBlock",
-      "~CUSTOM:DepletedEnergiumOre"
-    ],
     "ITEMS:minecraft:trimmable_armor": [
       "CUSTOM:EnergiumArmor.helmet",
       "CUSTOM:EnergiumArmor.body",
       "CUSTOM:EnergiumArmor.legs",
       "CUSTOM:EnergiumArmor.boots"
-    ],
-    "ENTITIES:minecraft:undead": [
-      "~CUSTOM:Shadow"
-    ],
-    "ITEMS:minecraft:chest_armor": [
-      "~CUSTOM:ColorsArmor.body",
-      "~CUSTOM:ShockwaveArmor.body",
-      "~CUSTOM:HeatArmor.body",
-      "~CUSTOM:FilthArmor.body",
-      "~CUSTOM:HorrorArmor.body",
-      "~CUSTOM:ChaosArmor.body",
-      "~CUSTOM:ThirstArmor.body",
-      "~CUSTOM:DarknessArmor.body",
-      "~CUSTOM:GoldenDustArmor.body",
-      "~CUSTOM:MindArmor.body",
-      "~CUSTOM:FormArmor.body",
-      "~CUSTOM:SpiritArmor.body",
-      "~CUSTOM:SmokeArmor.body",
-      "~CUSTOM:GravityArmor.body",
-      "~CUSTOM:BlueFlameArmor.body",
-      "~CUSTOM:PlagueArmor.body",
-      "~CUSTOM:MusicArmor.body",
-      "~CUSTOM:MercuryArmor.body",
-      "~CUSTOM:MushroomsArmor.body",
-      "~CUSTOM:MagnetArmor.body",
-      "~CUSTOM:PoisonArmor.body",
-      "~CUSTOM:SpeedArmor.body",
-      "~CUSTOM:SandArmor.body",
-      "~CUSTOM:MistArmor.body",
-      "~CUSTOM:AmberArmor.body",
-      "~CUSTOM:ExplosionArmor.body",
-      "~CUSTOM:TeleportationArmor.body",
-      "~CUSTOM:TechnologyArmor.body",
-      "~CUSTOM:BloodArmor.body",
-      "~CUSTOM:DestructionArmor.body",
-      "~CUSTOM:CreationArmor.body",
-      "~CUSTOM:TimeArmor.body",
-      "~CUSTOM:SpaceArmor.body",
-      "~CUSTOM:MoonArmor.body",
-      "~CUSTOM:SunArmor.body",
-      "~CUSTOM:EnergyArmor.body",
-      "~CUSTOM:EnergiumArmor.body",
-      "~CUSTOM:VacuumArmor.body",
-      "~CUSTOM:ShadowArmor.body",
-      "~CUSTOM:LightArmor.body",
-      "~CUSTOM:MetalArmor.body",
-      "~CUSTOM:AnimalsArmor.body",
-      "~CUSTOM:PlantsArmor.body",
-      "~CUSTOM:OceanArmor.body",
-      "~CUSTOM:TornadoArmor.body",
-      "~CUSTOM:RainArmor.body",
-      "~CUSTOM:LavaArmor.body",
-      "~CUSTOM:CrystalArmor.body",
-      "~CUSTOM:SoundArmor.body",
-      "~CUSTOM:LightningArmor.body",
-      "~CUSTOM:IceArmor.body",
-      "~CUSTOM:EtherArmor.body",
-      "~CUSTOM:WaterArmor.body",
-      "~CUSTOM:EarthArmor.body",
-      "~CUSTOM:AirArmor.body",
-      "~CUSTOM:FireArmor.body"
-    ],
-    "BLOCKS:minecraft:walls": [
-      "~CUSTOM:CursedStoneCrackedBricksWall",
-      "~CUSTOM:PolishedCursedStoneWall",
-      "~CUSTOM:CursedStoneBricksWall",
-      "~CUSTOM:CursedStoneWall"
-    ],
-    "ITEMS:minecraft:leg_armor": [
-      "~CUSTOM:ColorsArmor.legs",
-      "~CUSTOM:ShockwaveArmor.legs",
-      "~CUSTOM:HeatArmor.legs",
-      "~CUSTOM:FilthArmor.legs",
-      "~CUSTOM:HorrorArmor.legs",
-      "~CUSTOM:ChaosArmor.legs",
-      "~CUSTOM:ThirstArmor.legs",
-      "~CUSTOM:DarknessArmor.legs",
-      "~CUSTOM:GoldenDustArmor.legs",
-      "~CUSTOM:MindArmor.legs",
-      "~CUSTOM:FormArmor.legs",
-      "~CUSTOM:SpiritArmor.legs",
-      "~CUSTOM:SmokeArmor.legs",
-      "~CUSTOM:GravityArmor.legs",
-      "~CUSTOM:BlueFlameArmor.legs",
-      "~CUSTOM:PlagueArmor.legs",
-      "~CUSTOM:MusicArmor.legs",
-      "~CUSTOM:MercuryArmor.legs",
-      "~CUSTOM:MushroomsArmor.legs",
-      "~CUSTOM:MagnetArmor.legs",
-      "~CUSTOM:PoisonArmor.legs",
-      "~CUSTOM:SpeedArmor.legs",
-      "~CUSTOM:SandArmor.legs",
-      "~CUSTOM:MistArmor.legs",
-      "~CUSTOM:AmberArmor.legs",
-      "~CUSTOM:ExplosionArmor.legs",
-      "~CUSTOM:TeleportationArmor.legs",
-      "~CUSTOM:TechnologyArmor.legs",
-      "~CUSTOM:BloodArmor.legs",
-      "~CUSTOM:DestructionArmor.legs",
-      "~CUSTOM:CreationArmor.legs",
-      "~CUSTOM:TimeArmor.legs",
-      "~CUSTOM:SpaceArmor.legs",
-      "~CUSTOM:MoonArmor.legs",
-      "~CUSTOM:SunArmor.legs",
-      "~CUSTOM:EnergyArmor.legs",
-      "~CUSTOM:EnergiumArmor.legs",
-      "~CUSTOM:VacuumArmor.legs",
-      "~CUSTOM:ShadowArmor.legs",
-      "~CUSTOM:LightArmor.legs",
-      "~CUSTOM:MetalArmor.legs",
-      "~CUSTOM:AnimalsArmor.legs",
-      "~CUSTOM:PlantsArmor.legs",
-      "~CUSTOM:OceanArmor.legs",
-      "~CUSTOM:TornadoArmor.legs",
-      "~CUSTOM:RainArmor.legs",
-      "~CUSTOM:LavaArmor.legs",
-      "~CUSTOM:CrystalArmor.legs",
-      "~CUSTOM:SoundArmor.legs",
-      "~CUSTOM:LightningArmor.legs",
-      "~CUSTOM:IceArmor.legs",
-      "~CUSTOM:EtherArmor.legs",
-      "~CUSTOM:WaterArmor.legs",
-      "~CUSTOM:EarthArmor.legs",
-      "~CUSTOM:AirArmor.legs",
-      "~CUSTOM:FireArmor.legs"
     ],
     "ITEMS:mod:passing_armor": [
       "Blocks.AIR",
@@ -35069,6 +34817,61 @@
       "CUSTOM:ColorsArmor.legs",
       "CUSTOM:ColorsArmor.boots"
     ],
+    "ENTITIES:minecraft:fall_damage_immune": [
+      "CUSTOM:EnergiumGolem"
+    ],
+    "BLOCKS:c:unbreakable": [
+      "Blocks.COMMAND_BLOCK",
+      "Blocks.REPEATING_COMMAND_BLOCK",
+      "Blocks.CHAIN_COMMAND_BLOCK",
+      "Blocks.STRUCTURE_BLOCK#4",
+      "Blocks.STRUCTURE_VOID",
+      "Blocks.STRUCTURE_BLOCK",
+      "Blocks.STRUCTURE_BLOCK#1",
+      "Blocks.STRUCTURE_BLOCK#2",
+      "Blocks.STRUCTURE_BLOCK#3",
+      "Blocks.BARRIER",
+      "Blocks.AIR",
+      "Blocks.CAVE_AIR",
+      "Blocks.END_PORTAL",
+      "Blocks.END_PORTAL_FRAME",
+      "Blocks.PORTAL",
+      "Blocks.BEDROCK"
+    ],
+    "BLOCKS:mod:keepers_boxes": [
+      "CUSTOM:KeepersBox"
+    ],
+    "ITEMS:mod:rune": [
+      "CUSTOM:ExtraStarPointsRune1",
+      "CUSTOM:ExtraStarPointsRune2",
+      "CUSTOM:ExtraStarPointsRune3"
+    ],
+    "ITEMS:minecraft:trim_materials": [
+      "CUSTOM:DepletedEnergiumIngot",
+      "CUSTOM:EnergiumIngot",
+      "CUSTOM:AmplifierDrop",
+      "CUSTOM:CopyriumIngot"
+    ],
+    "ENTITIES:mod:xp/5": [
+      "EntityElderGuardian",
+      "EntityShulker",
+      "CUSTOM:CursedKnight",
+      "CUSTOM:CursedSquire",
+      "EntityRavager",
+      "EntityPiglinBrute"
+    ],
+    "ENTITIES:mod:xp/50": [
+      "CUSTOM:CursedKeeper",
+      "CUSTOM:EnergiumGolem",
+      "EntityWither",
+      "EntityDragon",
+      "EntityWarden"
+    ],
+    "ENTITIES:mod:magnetic_entity": [
+      "CUSTOM:RedMagnet",
+      "CUSTOM:BlueMagnet",
+      "CUSTOM:BlackHole"
+    ],
     "ITEMS:minecraft:head_armor": [
       "~CUSTOM:ColorsArmor.helmet",
       "~CUSTOM:ShockwaveArmor.helmet",
@@ -35127,8 +34930,121 @@
       "~CUSTOM:AirArmor.helmet",
       "~CUSTOM:FireArmor.helmet"
     ],
-    "ENTITIES:minecraft:fall_damage_immune": [
-      "CUSTOM:EnergiumGolem"
+    "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:ColorsArmor.body",
+      "~CUSTOM:ShockwaveArmor.body",
+      "~CUSTOM:HeatArmor.body",
+      "~CUSTOM:FilthArmor.body",
+      "~CUSTOM:HorrorArmor.body",
+      "~CUSTOM:ChaosArmor.body",
+      "~CUSTOM:ThirstArmor.body",
+      "~CUSTOM:DarknessArmor.body",
+      "~CUSTOM:GoldenDustArmor.body",
+      "~CUSTOM:MindArmor.body",
+      "~CUSTOM:FormArmor.body",
+      "~CUSTOM:SpiritArmor.body",
+      "~CUSTOM:SmokeArmor.body",
+      "~CUSTOM:GravityArmor.body",
+      "~CUSTOM:BlueFlameArmor.body",
+      "~CUSTOM:PlagueArmor.body",
+      "~CUSTOM:MusicArmor.body",
+      "~CUSTOM:MercuryArmor.body",
+      "~CUSTOM:MushroomsArmor.body",
+      "~CUSTOM:MagnetArmor.body",
+      "~CUSTOM:PoisonArmor.body",
+      "~CUSTOM:SpeedArmor.body",
+      "~CUSTOM:SandArmor.body",
+      "~CUSTOM:MistArmor.body",
+      "~CUSTOM:AmberArmor.body",
+      "~CUSTOM:ExplosionArmor.body",
+      "~CUSTOM:TeleportationArmor.body",
+      "~CUSTOM:TechnologyArmor.body",
+      "~CUSTOM:BloodArmor.body",
+      "~CUSTOM:DestructionArmor.body",
+      "~CUSTOM:CreationArmor.body",
+      "~CUSTOM:TimeArmor.body",
+      "~CUSTOM:SpaceArmor.body",
+      "~CUSTOM:MoonArmor.body",
+      "~CUSTOM:SunArmor.body",
+      "~CUSTOM:EnergyArmor.body",
+      "~CUSTOM:EnergiumArmor.body",
+      "~CUSTOM:VacuumArmor.body",
+      "~CUSTOM:ShadowArmor.body",
+      "~CUSTOM:LightArmor.body",
+      "~CUSTOM:MetalArmor.body",
+      "~CUSTOM:AnimalsArmor.body",
+      "~CUSTOM:PlantsArmor.body",
+      "~CUSTOM:OceanArmor.body",
+      "~CUSTOM:TornadoArmor.body",
+      "~CUSTOM:RainArmor.body",
+      "~CUSTOM:LavaArmor.body",
+      "~CUSTOM:CrystalArmor.body",
+      "~CUSTOM:SoundArmor.body",
+      "~CUSTOM:LightningArmor.body",
+      "~CUSTOM:IceArmor.body",
+      "~CUSTOM:EtherArmor.body",
+      "~CUSTOM:WaterArmor.body",
+      "~CUSTOM:EarthArmor.body",
+      "~CUSTOM:AirArmor.body",
+      "~CUSTOM:FireArmor.body"
+    ],
+    "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:ColorsArmor.legs",
+      "~CUSTOM:ShockwaveArmor.legs",
+      "~CUSTOM:HeatArmor.legs",
+      "~CUSTOM:FilthArmor.legs",
+      "~CUSTOM:HorrorArmor.legs",
+      "~CUSTOM:ChaosArmor.legs",
+      "~CUSTOM:ThirstArmor.legs",
+      "~CUSTOM:DarknessArmor.legs",
+      "~CUSTOM:GoldenDustArmor.legs",
+      "~CUSTOM:MindArmor.legs",
+      "~CUSTOM:FormArmor.legs",
+      "~CUSTOM:SpiritArmor.legs",
+      "~CUSTOM:SmokeArmor.legs",
+      "~CUSTOM:GravityArmor.legs",
+      "~CUSTOM:BlueFlameArmor.legs",
+      "~CUSTOM:PlagueArmor.legs",
+      "~CUSTOM:MusicArmor.legs",
+      "~CUSTOM:MercuryArmor.legs",
+      "~CUSTOM:MushroomsArmor.legs",
+      "~CUSTOM:MagnetArmor.legs",
+      "~CUSTOM:PoisonArmor.legs",
+      "~CUSTOM:SpeedArmor.legs",
+      "~CUSTOM:SandArmor.legs",
+      "~CUSTOM:MistArmor.legs",
+      "~CUSTOM:AmberArmor.legs",
+      "~CUSTOM:ExplosionArmor.legs",
+      "~CUSTOM:TeleportationArmor.legs",
+      "~CUSTOM:TechnologyArmor.legs",
+      "~CUSTOM:BloodArmor.legs",
+      "~CUSTOM:DestructionArmor.legs",
+      "~CUSTOM:CreationArmor.legs",
+      "~CUSTOM:TimeArmor.legs",
+      "~CUSTOM:SpaceArmor.legs",
+      "~CUSTOM:MoonArmor.legs",
+      "~CUSTOM:SunArmor.legs",
+      "~CUSTOM:EnergyArmor.legs",
+      "~CUSTOM:EnergiumArmor.legs",
+      "~CUSTOM:VacuumArmor.legs",
+      "~CUSTOM:ShadowArmor.legs",
+      "~CUSTOM:LightArmor.legs",
+      "~CUSTOM:MetalArmor.legs",
+      "~CUSTOM:AnimalsArmor.legs",
+      "~CUSTOM:PlantsArmor.legs",
+      "~CUSTOM:OceanArmor.legs",
+      "~CUSTOM:TornadoArmor.legs",
+      "~CUSTOM:RainArmor.legs",
+      "~CUSTOM:LavaArmor.legs",
+      "~CUSTOM:CrystalArmor.legs",
+      "~CUSTOM:SoundArmor.legs",
+      "~CUSTOM:LightningArmor.legs",
+      "~CUSTOM:IceArmor.legs",
+      "~CUSTOM:EtherArmor.legs",
+      "~CUSTOM:WaterArmor.legs",
+      "~CUSTOM:EarthArmor.legs",
+      "~CUSTOM:AirArmor.legs",
+      "~CUSTOM:FireArmor.legs"
     ],
     "ITEMS:minecraft:foot_armor": [
       "~CUSTOM:ColorsArmor.boots",
@@ -35188,6 +35104,152 @@
       "~CUSTOM:AirArmor.boots",
       "~CUSTOM:FireArmor.boots"
     ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:SpearBrash",
+      "~CUSTOM:HeatKnife",
+      "~CUSTOM:DarkSword",
+      "~CUSTOM:GoldenDustStaff",
+      "~CUSTOM:MindEpee",
+      "~CUSTOM:FormSai",
+      "~CUSTOM:SpiritSickle",
+      "~CUSTOM:GravityMace",
+      "~CUSTOM:BlueFlameSword",
+      "~CUSTOM:PlagueWalkingStick",
+      "~CUSTOM:MusicGuitar",
+      "~CUSTOM:MushroomsHammer",
+      "~CUSTOM:TeleportationBlade",
+      "~CUSTOM:MagnetClaws",
+      "~CUSTOM:HighspeedDagger",
+      "~CUSTOM:SandSaber",
+      "~CUSTOM:MistyFan",
+      "~CUSTOM:AmberStaff",
+      "~CUSTOM:ExplosionMace",
+      "~CUSTOM:BloodSickle",
+      "~CUSTOM:DestructionBroadsword",
+      "~CUSTOM:CreationSword",
+      "~CUSTOM:CreationStaff",
+      "~CUSTOM:TimeKhopesh",
+      "~CUSTOM:ConstellationSword",
+      "~CUSTOM:MoonDoubleSidedSpear",
+      "~CUSTOM:SolarBlade",
+      "~CUSTOM:EnergyStaff",
+      "~CUSTOM:EnergiumSword",
+      "~CUSTOM:VacuumDagger",
+      "~CUSTOM:ShadowScythe",
+      "~CUSTOM:LightSword",
+      "~CUSTOM:LeftMetalGauntlet",
+      "~CUSTOM:RightMetalGauntlet",
+      "~CUSTOM:AnimalsHalberd",
+      "~CUSTOM:GreenStaff",
+      "~CUSTOM:OceanicTrident",
+      "~CUSTOM:LavaHammer",
+      "~CUSTOM:CrystalKnife",
+      "~CUSTOM:SoundDagger",
+      "~CUSTOM:LightningFalchion",
+      "~CUSTOM:IceSpear",
+      "~CUSTOM:EtherGlaive",
+      "~CUSTOM:WaterKatana",
+      "~CUSTOM:EarthHammer",
+      "~CUSTOM:AirRapier",
+      "~CUSTOM:FireSword"
+    ],
+    "ITEMS:minecraft:axes": [
+      "~CUSTOM:MercuryBattleAxe",
+      "~CUSTOM:CreationAxe",
+      "~CUSTOM:EnergiumAxe",
+      "~CUSTOM:TornadoAxe"
+    ],
+    "ENTITIES:minecraft:undead": [
+      "~CUSTOM:Shadow"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:RuneCutter",
+      "~CUSTOM:CursedStoneCrackedBricksWall",
+      "~CUSTOM:CursedStoneCrackedBricksStairs",
+      "~CUSTOM:CursedStoneCrackedBricksSlab",
+      "~CUSTOM:CursedStoneCrackedBricks",
+      "~CUSTOM:ChiseledCursedStone",
+      "~CUSTOM:DeepslateCopyriumOre",
+      "~CUSTOM:DeepslateAmplifierOre",
+      "~CUSTOM:DeepslateEnergiumOre",
+      "~CUSTOM:DeepslateDepletedEnergiumOre",
+      "~CUSTOM:RawEnergiumBlock",
+      "~CUSTOM:EnergiumOre",
+      "~CUSTOM:EnergiumVault",
+      "~CUSTOM:CursedLamp",
+      "~CUSTOM:CursedLadder",
+      "~CUSTOM:CursedVault",
+      "~CUSTOM:ElementalPowerGenerator",
+      "~CUSTOM:RawCopyriumBlock",
+      "~CUSTOM:CopyriumBlock",
+      "~CUSTOM:CopyriumOre",
+      "~CUSTOM:CursedLantern",
+      "~CUSTOM:CursedStonePillar",
+      "~CUSTOM:PolishedCursedStoneWall",
+      "~CUSTOM:PolishedCursedStoneSlab",
+      "~CUSTOM:PolishedCursedStoneStairs",
+      "~CUSTOM:PolishedCursedStone",
+      "~CUSTOM:CursedStoneBricksWall",
+      "~CUSTOM:CursedStoneWall",
+      "~CUSTOM:CursedStoneBricksSlab",
+      "~CUSTOM:CursedStoneBricksStairs",
+      "~CUSTOM:CursedStoneSlab",
+      "~CUSTOM:CursedStoneStairs",
+      "~CUSTOM:CursedStoneBricks",
+      "~CUSTOM:CursedStone",
+      "~CUSTOM:AmberBlock",
+      "~CUSTOM:OrangePortal",
+      "~CUSTOM:BluePortal",
+      "~CUSTOM:RawAmplifierBlock",
+      "~CUSTOM:RawDepletedEnergiumBlock",
+      "~CUSTOM:AmplifierBlock",
+      "~CUSTOM:AmplifierOre",
+      "~CUSTOM:EnergiumController",
+      "~CUSTOM:MoonBlock",
+      "~CUSTOM:KeepersBox",
+      "~CUSTOM:BatteryCharger",
+      "~CUSTOM:EnergiumBlock",
+      "~CUSTOM:DepletedEnergiumBlock",
+      "~CUSTOM:DepletedEnergiumOre"
+    ],
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:DeepslateEnergiumOre",
+      "~CUSTOM:DeepslateDepletedEnergiumOre",
+      "~CUSTOM:RawEnergiumBlock",
+      "~CUSTOM:EnergiumOre",
+      "~CUSTOM:EnergiumVault",
+      "~CUSTOM:CursedVault",
+      "~CUSTOM:RawDepletedEnergiumBlock",
+      "~CUSTOM:EnergiumController",
+      "~CUSTOM:EnergiumBlock",
+      "~CUSTOM:DepletedEnergiumBlock",
+      "~CUSTOM:DepletedEnergiumOre"
+    ],
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:TechnoPickaxe",
+      "~CUSTOM:CreationPickaxe",
+      "~CUSTOM:EnergiumPickaxe"
+    ],
+    "ITEMS:minecraft:shovels": [
+      "~CUSTOM:CreationShovel",
+      "~CUSTOM:EnergiumShovel"
+    ],
+    "ITEMS:minecraft:hoes": [
+      "~CUSTOM:CreationHoe",
+      "~CUSTOM:EnergiumHoe"
+    ],
+    "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:Isolation",
+      "~CUSTOM:Revenge"
+    ],
+    "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:Isolation",
+      "~CUSTOM:Revenge"
+    ],
+    "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:Isolation",
+      "~CUSTOM:Revenge"
+    ],
     "BLOCKS:minecraft:needs_iron_tool": [
       "~CUSTOM:DeepslateCopyriumOre",
       "~CUSTOM:DeepslateAmplifierOre",
@@ -35199,38 +35261,14 @@
       "~CUSTOM:AmplifierBlock",
       "~CUSTOM:AmplifierOre"
     ],
-    "BLOCKS:c:unbreakable": [
-      "Blocks.COMMAND_BLOCK",
-      "Blocks.REPEATING_COMMAND_BLOCK",
-      "Blocks.CHAIN_COMMAND_BLOCK",
-      "Blocks.STRUCTURE_BLOCK#4",
-      "Blocks.STRUCTURE_VOID",
-      "Blocks.STRUCTURE_BLOCK",
-      "Blocks.STRUCTURE_BLOCK#1",
-      "Blocks.STRUCTURE_BLOCK#2",
-      "Blocks.STRUCTURE_BLOCK#3",
-      "Blocks.BARRIER",
-      "Blocks.AIR",
-      "Blocks.CAVE_AIR",
-      "Blocks.END_PORTAL",
-      "Blocks.END_PORTAL_FRAME",
-      "Blocks.PORTAL",
-      "Blocks.BEDROCK"
-    ],
-    "BLOCKS:mod:keepers_boxes": [
-      "CUSTOM:KeepersBox"
-    ],
-    "ITEMS:minecraft:hoes": [
-      "~CUSTOM:CreationHoe",
-      "~CUSTOM:EnergiumHoe"
-    ],
     "ITEMS:minecraft:enchantable/durability": [
       "~CUSTOM:AmplifierRing"
     ],
-    "ITEMS:mod:rune": [
-      "CUSTOM:ExtraStarPointsRune1",
-      "CUSTOM:ExtraStarPointsRune2",
-      "CUSTOM:ExtraStarPointsRune3"
+    "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:CursedStoneCrackedBricksStairs",
+      "~CUSTOM:PolishedCursedStoneStairs",
+      "~CUSTOM:CursedStoneBricksStairs",
+      "~CUSTOM:CursedStoneStairs"
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:CursedStoneCrackedBricksSlab",
@@ -35238,48 +35276,25 @@
       "~CUSTOM:CursedStoneBricksSlab",
       "~CUSTOM:CursedStoneSlab"
     ],
-    "ENCHANTMENTS:minecraft:tradeable": [
-      "~CUSTOM:Isolation",
-      "~CUSTOM:Revenge"
+    "BLOCKS:minecraft:walls": [
+      "~CUSTOM:CursedStoneCrackedBricksWall",
+      "~CUSTOM:PolishedCursedStoneWall",
+      "~CUSTOM:CursedStoneBricksWall",
+      "~CUSTOM:CursedStoneWall"
     ],
-    "ITEMS:minecraft:axes": [
-      "~CUSTOM:MercuryBattleAxe",
-      "~CUSTOM:CreationAxe",
-      "~CUSTOM:EnergiumAxe",
-      "~CUSTOM:TornadoAxe"
-    ],
-    "ENCHANTMENTS:minecraft:on_random_loot": [
-      "~CUSTOM:Isolation",
-      "~CUSTOM:Revenge"
-    ],
-    "ITEMS:minecraft:trim_materials": [
-      "CUSTOM:DepletedEnergiumIngot",
-      "CUSTOM:EnergiumIngot",
-      "CUSTOM:AmplifierDrop",
-      "CUSTOM:CopyriumIngot"
-    ],
-    "ENTITIES:mod:xp/5": [
-      "EntityElderGuardian",
-      "EntityShulker",
-      "CUSTOM:CursedKnight",
-      "CUSTOM:CursedSquire",
-      "EntityRavager",
-      "EntityPiglinBrute"
-    ],
-    "ENTITIES:mod:xp/50": [
-      "CUSTOM:CursedKeeper",
-      "CUSTOM:EnergiumGolem",
-      "EntityWither",
-      "EntityDragon",
-      "EntityWarden"
+    "BLOCKS:minecraft:climbable": [
+      "~CUSTOM:CursedLadder"
     ],
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:PurpleMushroom"
     ],
-    "ENTITIES:mod:magnetic_entity": [
-      "CUSTOM:RedMagnet",
-      "CUSTOM:BlueMagnet",
-      "CUSTOM:BlackHole"
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:MusicHope",
+      "~CUSTOM:MusicDiscAncientMood",
+      "~CUSTOM:MusicDiscCallOfThePast"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:RuneCutter"
     ]
   },
   "tab_element_order": {
@@ -38551,5 +38566,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500112320
+  "mcreatorVersion": 202500222522
 }

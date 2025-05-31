@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class CursedStoneBlock extends Block {
 	public CursedStoneBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.TUFF).strength(2.5f, 3f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.TUFF).strength(2.5f, 3f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
