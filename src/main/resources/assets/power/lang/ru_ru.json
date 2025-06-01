@@ -1085,5 +1085,16 @@
   "item.power.mist_stone": "Камень тумана",
   "item.power.blue_flame_armor_chestplate": "Нагрудник мастера синего пламени",
   "item.power.creation_pickaxe": "Кирка созидания",
-  "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15"
+  "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15",
+  "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
+  "item.power.colors_stone": "Colors Stone",
+  "effect.power.colors_master": "Master of Colors",
+  "item.power.colors_armor_boots": "Colors Boots",
+  "item.power.colors_armor_helmet": "Colors Helmet",
+  "item.power.colors_armor_leggings": "Colors Leggings",
+  "item.power.colors_armor_chestplate": "Colors Chestplate",
+  "item.power.spear_brash": "Spear Brash",
+  "item.power.colors_battery": "Battery",
+  "item.power.colors_battery.description_1": "§9Colors",
+  "item.power.colors_battery.description_0": "§aCharged with element:"
 }

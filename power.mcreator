@@ -35517,6 +35517,7 @@
       "CUSTOM:BlackHole"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:ColorsArmor.helmet",
       "~CUSTOM:ShockwaveArmor.helmet",
       "~CUSTOM:HeatArmor.helmet",
       "~CUSTOM:FilthArmor.helmet",
@@ -35574,6 +35575,7 @@
       "~CUSTOM:FireArmor.helmet"
     ],
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:ColorsArmor.body",
       "~CUSTOM:ShockwaveArmor.body",
       "~CUSTOM:HeatArmor.body",
       "~CUSTOM:FilthArmor.body",
@@ -35631,6 +35633,7 @@
       "~CUSTOM:FireArmor.body"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:ColorsArmor.legs",
       "~CUSTOM:ShockwaveArmor.legs",
       "~CUSTOM:HeatArmor.legs",
       "~CUSTOM:FilthArmor.legs",
@@ -35746,6 +35749,7 @@
       "~CUSTOM:FireArmor.boots"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:SpearBrash",
       "~CUSTOM:HeatKnife",
       "~CUSTOM:DarkSword",
       "~CUSTOM:GoldenDustStaff",
@@ -37229,7 +37233,18 @@
       "item.power.mist_stone": "Камень тумана",
       "item.power.blue_flame_armor_chestplate": "Нагрудник мастера синего пламени",
       "item.power.creation_pickaxe": "Кирка созидания",
-      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15"
+      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15",
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
+      "item.power.colors_stone": "Colors Stone",
+      "effect.power.colors_master": "Master of Colors",
+      "item.power.colors_armor_boots": "Colors Boots",
+      "item.power.colors_armor_helmet": "Colors Helmet",
+      "item.power.colors_armor_leggings": "Colors Leggings",
+      "item.power.colors_armor_chestplate": "Colors Chestplate",
+      "item.power.spear_brash": "Spear Brash",
+      "item.power.colors_battery": "Battery",
+      "item.power.colors_battery.description_1": "§9Colors",
+      "item.power.colors_battery.description_0": "§aCharged with element:"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38318,7 +38333,18 @@
       "item.power.mist_stone": "Mist Stone",
       "item.power.blue_flame_armor_chestplate": "Blue Flame Chestplate",
       "item.power.creation_pickaxe": "Creation Pickaxe",
-      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15"
+      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15",
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
+      "item.power.colors_stone": "Colors Stone",
+      "effect.power.colors_master": "Master of Colors",
+      "item.power.colors_armor_boots": "Colors Boots",
+      "item.power.colors_armor_helmet": "Colors Helmet",
+      "item.power.colors_armor_leggings": "Colors Leggings",
+      "item.power.colors_armor_chestplate": "Colors Chestplate",
+      "item.power.spear_brash": "Spear Brash",
+      "item.power.colors_battery": "Battery",
+      "item.power.colors_battery.description_1": "§9Colors",
+      "item.power.colors_battery.description_0": "§aCharged with element:"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39394,7 +39420,18 @@
       "item.power.blue_flame_armor_chestplate": "蓝色火焰胸甲",
       "item.power.creation_pickaxe": "创世镐",
       "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15",
-      "item.power.energium_upgrade_smithing_template.description_1": ""
+      "item.power.energium_upgrade_smithing_template.description_1": "",
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
+      "item.power.colors_stone": "Colors Stone",
+      "effect.power.colors_master": "Master of Colors",
+      "item.power.colors_armor_boots": "Colors Boots",
+      "item.power.colors_armor_helmet": "Colors Helmet",
+      "item.power.colors_armor_leggings": "Colors Leggings",
+      "item.power.colors_armor_chestplate": "Colors Chestplate",
+      "item.power.spear_brash": "Spear Brash",
+      "item.power.colors_battery": "Battery",
+      "item.power.colors_battery.description_1": "§9Colors",
+      "item.power.colors_battery.description_0": "§aCharged with element:"
     }
   },
   "foldersRoot": {
