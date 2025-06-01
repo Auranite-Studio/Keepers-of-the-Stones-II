@@ -135,8 +135,4 @@ public class PowerModScreens {
 	public interface ScreenAccessor {
 		void updateMenuState(int elementType, String name, Object elementState);
 	}
-
-	public interface ScreenAccessor {
-		void updateMenuState(int elementType, String name, Object elementState);
-	}
 }

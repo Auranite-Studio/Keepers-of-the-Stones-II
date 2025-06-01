@@ -45,6 +45,7 @@
     "power:rain_battery",
     "power:plants_battery",
     "power:lava_battery",
+    "power:colors_battery",
     "power:shadow_battery",
     "power:speed_battery",
     "power:spirit_battery",

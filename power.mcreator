@@ -31137,7 +31137,7 @@
           "src/main/resources/assets/power/models/item/extra_star_points_rune_1.json"
         ]
       },
-      "path": "~/ItemsAndBlocks/Runes/ExtraStarPoints1"
+      "path": "~/ItemsAndBlocks/Runes/BlueRunes"
     },
     {
       "name": "ExtraStarPointsRune2",
@@ -31151,7 +31151,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/ExtraStarPointsRune2Item.java"
         ]
       },
-      "path": "~/ItemsAndBlocks/Runes/ExtraStarPoints2"
+      "path": "~/ItemsAndBlocks/Runes/BlueRunes"
     },
     {
       "name": "ExtraStarPointsRune3",
@@ -35062,7 +35062,8 @@
       "CUSTOM:GoldenDustBattery",
       "CUSTOM:DarknessBattery",
       "CUSTOM:HeatBattery",
-      "CUSTOM:ShockwaveBattery"
+      "CUSTOM:ShockwaveBattery",
+      "CUSTOM:ColorsBattery"
     ],
     "ITEMS:power:power_lock_items_not_tools": [
       "CUSTOM:EnergiumIngot",
@@ -35471,7 +35472,11 @@
       "CUSTOM:ShockwaveArmor.helmet",
       "CUSTOM:ShockwaveArmor.body",
       "CUSTOM:ShockwaveArmor.legs",
-      "CUSTOM:ShockwaveArmor.boots"
+      "CUSTOM:ShockwaveArmor.boots",
+      "CUSTOM:ColorsArmor.helmet",
+      "CUSTOM:ColorsArmor.body",
+      "CUSTOM:ColorsArmor.legs",
+      "CUSTOM:ColorsArmor.boots"
     ],
     "BLOCKS:mod:keepers_boxes": [
       "CUSTOM:KeepersBox"

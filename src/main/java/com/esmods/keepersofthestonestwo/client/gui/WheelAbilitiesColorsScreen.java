@@ -67,7 +67,7 @@ public class WheelAbilitiesColorsScreen extends AbstractContainerScreen<WheelAbi
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 85 && mouseY < topPos + 109) {
-			String hoverText = RuneTooltipRenderProcedure.execute();
+			String hoverText = RuneTooltipRenderProcedure.execute(entity);
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
