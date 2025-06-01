@@ -35516,44 +35516,6 @@
       "CUSTOM:BlueMagnet",
       "CUSTOM:BlackHole"
     ],
-    "BLOCKS:mod:keepers_boxes": [
-      "CUSTOM:KeepersBox"
-    ],
-    "ITEMS:mod:rune": [
-      "CUSTOM:ExtraStarPointsRune1",
-      "CUSTOM:ExtraStarPointsRune2",
-      "CUSTOM:ExtraStarPointsRune3",
-      "CUSTOM:ReducedStoneRechargeTimeRune1",
-      "CUSTOM:ReducedStoneRechargeTimeRune2",
-      "CUSTOM:ReducedStoneRechargeTimeRune3",
-      "CUSTOM:AdditionTimeMasterEffectRune1",
-      "CUSTOM:AdditionTimeMasterEffectRune2",
-      "CUSTOM:AdditionTimeMasterEffectRune3",
-      "CUSTOM:ProtectionRune",
-      "CUSTOM:SpinRune",
-      "CUSTOM:DodgingRune",
-      "CUSTOM:InvisibilityRune",
-      "CUSTOM:HealingRune",
-      "CUSTOM:UnknownRune"
-    ],
-    "ENTITIES:mod:xp/5": [
-      "EntityElderGuardian",
-      "EntityShulker",
-      "CUSTOM:CursedKnight",
-      "CUSTOM:CursedSquire",
-      "EntityRavager",
-      "EntityPiglinBrute"
-    ],
-    "ITEMS:mod:rune/blue": [
-      "CUSTOM:ExtraStarPointsRune1",
-      "CUSTOM:ExtraStarPointsRune2",
-      "CUSTOM:ExtraStarPointsRune3"
-    ],
-    "ENTITIES:mod:magnetic_entity": [
-      "CUSTOM:RedMagnet",
-      "CUSTOM:BlueMagnet",
-      "CUSTOM:BlackHole"
-    ],
     "ITEMS:minecraft:head_armor": [
       "~CUSTOM:ShockwaveArmor.helmet",
       "~CUSTOM:HeatArmor.helmet",
