@@ -67,7 +67,7 @@ public record KeepersBoxGUIPart4ButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 1) {
 
-			KBtoPart5Procedure.execute();
+			KBtoPart5Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
