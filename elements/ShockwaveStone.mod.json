@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "shockwave_stone",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {
       "rechage": {
         "name": "StoneGetRechargeState"

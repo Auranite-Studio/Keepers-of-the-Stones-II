@@ -79,7 +79,7 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 82 && mouseY < topPos + 106) {
-			String hoverText = RuneTooltipRenderProcedure.execute();
+			String hoverText = RuneTooltipRenderProcedure.execute(entity);
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}

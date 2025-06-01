@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "reduced_stone_recharge_time_rune_2",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Rune",
@@ -30,7 +31,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§9Reduced Stone Recharge II",
+        "§9Stone Recharge Reduction II",
         "§7Type:",
         " §4Red",
         "§7Specifications:",

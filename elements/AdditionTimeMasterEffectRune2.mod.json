@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "addition_time_master_effect_rune_2",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Rune",
@@ -30,7 +31,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§9Additional Master's Effect Time II",
+        "§9Master Effect Duration II",
         "§7Type:",
         " §4Red",
         "§7Specifications:",

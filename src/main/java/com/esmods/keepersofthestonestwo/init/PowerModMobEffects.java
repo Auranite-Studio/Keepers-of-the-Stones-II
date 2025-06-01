@@ -69,7 +69,6 @@ import com.esmods.keepersofthestonestwo.procedures.DestructionMasterEndProcedure
 import com.esmods.keepersofthestonestwo.procedures.DarknessMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CrystalMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreationMasterEndProcedure;
-import com.esmods.keepersofthestonestwo.procedures.ColorsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ChaosDarkMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BlueFlameMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodMasterEndProcedure;
@@ -92,6 +91,7 @@ import com.esmods.keepersofthestonestwo.potion.SunMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StunMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StarRegenerationMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpiritMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.SpinMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpeedMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SoundMasterMobEffect;
@@ -102,6 +102,7 @@ import com.esmods.keepersofthestonestwo.potion.ShadowMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SandMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.RedMagnetPowerMobEffect;
 import com.esmods.keepersofthestonestwo.potion.RainMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.ProtectionMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PoisonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
@@ -137,12 +138,12 @@ import com.esmods.keepersofthestonestwo.potion.ExplosionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EtherMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EnergyMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EarthMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.DodgingMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DarknessMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CurseMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
-import com.esmods.keepersofthestonestwo.potion.ColorsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ChaosDarkMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BlueMagnetPowerMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BlueFlameMasterMobEffect;
@@ -228,7 +229,9 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> CURSE = REGISTRY.register("curse", () -> new CurseMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> HEAT_MASTER = REGISTRY.register("heat_master", () -> new HeatMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SHOCKWAVE_MASTER = REGISTRY.register("shockwave_master", () -> new ShockwaveMasterMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> COLORS_MASTER = REGISTRY.register("colors_master", () -> new ColorsMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> PROTECTION = REGISTRY.register("protection", () -> new ProtectionMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> SPIN = REGISTRY.register("spin", () -> new SpinMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> DODGING = REGISTRY.register("dodging", () -> new DodgingMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -367,8 +370,6 @@ public class PowerModMobEffects {
 			HeatMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(SHOCKWAVE_MASTER)) {
 			ShockwaveMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(COLORS_MASTER)) {
-			ColorsMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

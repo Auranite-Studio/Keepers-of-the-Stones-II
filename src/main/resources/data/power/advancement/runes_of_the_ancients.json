@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "power:dodging_rune"
+    },
+    "title": {
+      "translate": "advancements.runes_of_the_ancients.title"
+    },
+    "description": {
+      "translate": "advancements.runes_of_the_ancients.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "runes_of_the_ancients_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "power:become_a_master"
+}

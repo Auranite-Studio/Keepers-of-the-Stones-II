@@ -9,10 +9,10 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -37,7 +37,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class WaterAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.AIR);
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Items.WATER_BUCKET);
 	private int knockback = 0;
 
 	public WaterAttackProjectileEntity(EntityType<? extends WaterAttackProjectileEntity> type, Level world) {
@@ -64,7 +64,7 @@ public class WaterAttackProjectileEntity extends AbstractArrow implements ItemSu
 
 	@Override
 	protected ItemStack getDefaultPickupItem() {
-		return new ItemStack(Blocks.AIR);
+		return new ItemStack(Items.WATER_BUCKET);
 	}
 
 	@Override

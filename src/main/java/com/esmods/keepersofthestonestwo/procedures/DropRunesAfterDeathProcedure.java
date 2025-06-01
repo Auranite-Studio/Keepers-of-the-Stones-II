@@ -35,6 +35,8 @@ public class DropRunesAfterDeathProcedure {
 		if (entity == null)
 			return;
 		ItemStack copySlot = ItemStack.EMPTY;
+		ItemStack copySlot2 = ItemStack.EMPTY;
+		ItemStack copySlot3 = ItemStack.EMPTY;
 		if (entity instanceof Player) {
 			if (!world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY)) {
 				if (!(ItemStack.EMPTY.getItem() == entity.getData(PowerModVariables.PLAYER_VARIABLES).blue_rune_slot.getItem())) {
@@ -72,48 +74,48 @@ public class DropRunesAfterDeathProcedure {
 					}
 				}
 				if (!(ItemStack.EMPTY.getItem() == entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.getItem())) {
-					copySlot = entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.copy();
+					copySlot2 = entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.copy();
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.red_rune_slot = ItemStack.EMPTY.copy();
 						_vars.syncPlayerVariables(entity);
 					}
-					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.getItem() == PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_1.get()) {
+					if (copySlot2.getItem() == PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_1.get()) {
 						{
 							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.recharge_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer + 30;
 							_vars.syncPlayerVariables(entity);
 						}
 					}
-					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.getItem() == PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_2.get()) {
+					if (copySlot2.getItem() == PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_2.get()) {
 						{
 							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.recharge_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer + 60;
 							_vars.syncPlayerVariables(entity);
 						}
 					}
-					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.getItem() == PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_3.get()) {
+					if (copySlot2.getItem() == PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_3.get()) {
 						{
 							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.recharge_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).recharge_timer + 180;
 							_vars.syncPlayerVariables(entity);
 						}
 					}
-					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.getItem() == PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_1.get()) {
+					if (copySlot2.getItem() == PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_1.get()) {
 						{
 							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.master_effect_duration = entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration - 180;
 							_vars.syncPlayerVariables(entity);
 						}
 					}
-					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.getItem() == PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_2.get()) {
+					if (copySlot2.getItem() == PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_2.get()) {
 						{
 							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.master_effect_duration = entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration - 300;
 							_vars.syncPlayerVariables(entity);
 						}
 					}
-					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.getItem() == PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_3.get()) {
+					if (copySlot2.getItem() == PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_3.get()) {
 						{
 							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.master_effect_duration = entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration - 600;
@@ -121,20 +123,20 @@ public class DropRunesAfterDeathProcedure {
 						}
 					}
 					if (world instanceof ServerLevel _level) {
-						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, copySlot);
+						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, copySlot2);
 						entityToSpawn.setPickUpDelay(10);
 						_level.addFreshEntity(entityToSpawn);
 					}
 				}
 				if (!(ItemStack.EMPTY.getItem() == entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem())) {
-					copySlot = entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.copy();
+					copySlot3 = entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.copy();
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.green_rune_slot = ItemStack.EMPTY.copy();
 						_vars.syncPlayerVariables(entity);
 					}
 					if (world instanceof ServerLevel _level) {
-						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, copySlot);
+						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, copySlot3);
 						entityToSpawn.setPickUpDelay(10);
 						_level.addFreshEntity(entityToSpawn);
 					}
