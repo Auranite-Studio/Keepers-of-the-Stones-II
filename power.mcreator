@@ -31587,38 +31587,6 @@
       "path": "~/Elements/Magnet"
     },
     {
-      "name": "BetaVersionCheckWarn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "beta_version_check_warn",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BetaVersionCheckWarnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
-      "name": "CheckingModVersionType",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "checking_mod_version_type",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/CheckingModVersionType.java"
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "MagnetSetTimer",
       "type": "procedure",
       "compiles": true,
@@ -33621,32 +33589,14 @@
       "path": "~/ItemsAndBlocks/Runes"
     },
     {
-      "name": "UpdateChecker",
+      "name": "ModUpdateManager",
       "type": "code",
       "compiles": true,
       "locked_code": true,
-      "registry_name": "update_checker",
+      "registry_name": "mod_update_manager",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/UpdateChecker.java"
-        ]
-      }
-    },
-    {
-      "name": "Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "check",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/com/esmods/keepersofthestonestwo/ModUpdateManager.java"
         ]
       }
     }
