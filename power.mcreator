@@ -34770,6 +34770,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "colors_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -35038,6 +35044,8 @@
       "CUSTOM:DarknessBattery",
       "CUSTOM:HeatBattery",
       "CUSTOM:ShockwaveBattery"
+      "CUSTOM:ShockwaveBattery",
+      "CUSTOM:ColorsBattery"
     ],
     "ITEMS:power:power_lock_items_not_tools": [
       "CUSTOM:EnergiumIngot",
@@ -35446,7 +35454,11 @@
       "CUSTOM:ShockwaveArmor.helmet",
       "CUSTOM:ShockwaveArmor.body",
       "CUSTOM:ShockwaveArmor.legs",
-      "CUSTOM:ShockwaveArmor.boots"
+      "CUSTOM:ShockwaveArmor.boots",
+      "CUSTOM:ColorsArmor.helmet",
+      "CUSTOM:ColorsArmor.body",
+      "CUSTOM:ColorsArmor.legs",
+      "CUSTOM:ColorsArmor.boots"
     ],
     "BLOCKS:mod:keepers_boxes": [
       "CUSTOM:KeepersBox"
@@ -35487,6 +35499,7 @@
       "CUSTOM:BlackHole"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:ColorsArmor.helmet",
       "~CUSTOM:ShockwaveArmor.helmet",
       "~CUSTOM:HeatArmor.helmet",
       "~CUSTOM:FilthArmor.helmet",
@@ -35544,6 +35557,7 @@
       "~CUSTOM:FireArmor.helmet"
     ],
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:ColorsArmor.body",
       "~CUSTOM:ShockwaveArmor.body",
       "~CUSTOM:HeatArmor.body",
       "~CUSTOM:FilthArmor.body",
@@ -35601,6 +35615,7 @@
       "~CUSTOM:FireArmor.body"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:ColorsArmor.legs",
       "~CUSTOM:ShockwaveArmor.legs",
       "~CUSTOM:HeatArmor.legs",
       "~CUSTOM:FilthArmor.legs",
@@ -35658,6 +35673,7 @@
       "~CUSTOM:FireArmor.legs"
     ],
     "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:ColorsArmor.boots",
       "~CUSTOM:ShockwaveArmor.boots",
       "~CUSTOM:HeatArmor.boots",
       "~CUSTOM:FilthArmor.boots",
@@ -39675,6 +39691,10 @@
                       {
                         "name": "Shockwave",
                         "children": []
+                      },
+                      {
+                        "name": "Colors",
+                        "children": []
                       }
                     ]
                   }
@@ -39915,6 +39935,10 @@
           {
             "name": "Shockwave",
             "children": []
+          },
+          {
+            "name": "Colors",
+            "children": []
           }
         ]
       },
@@ -40134,6 +40158,10 @@
               },
               {
                 "name": "ShockwaveBattery",
+                "children": []
+              },
+              {
+                "name": "ColorsBattery",
                 "children": []
               }
             ]
