@@ -33598,7 +33598,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/ModUpdateManager.java"
         ]
-      }
+      },
+      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [
