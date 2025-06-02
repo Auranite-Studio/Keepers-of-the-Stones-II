@@ -32091,38 +32091,6 @@
       "path": "~/Elements/Magnet"
     },
     {
-      "name": "BetaVersionCheckWarn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "beta_version_check_warn",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BetaVersionCheckWarnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
-      "name": "CheckingModVersionType",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "checking_mod_version_type",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/CheckingModVersionType.java"
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "MagnetSetTimer",
       "type": "procedure",
       "compiles": true,
@@ -34152,6 +34120,19 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Runes"
+    },
+    {
+      "name": "ModUpdateManager",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mod_update_manager",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ModUpdateManager.java"
+        ]
+      },
+      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [
@@ -36497,7 +36478,6 @@
       "effect.power.darkness_master": "Мастер Тьмы",
       "advancements.keepers_of_the_stones_2.descr": "Обновитесь до Хранители Камней II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
-      "power.modinfo.update_cpapi": "§eВерсия Colorful Powers API была обновлена до версии: ",
       "gui.power.keepers_box_gui_part_4.tooltip_plague": "Чума",
       "item.power.heat_armor_helmet": "Шлем мастера тепла",
       "item.power.unknown_rune": "Руна",
@@ -36620,7 +36600,6 @@
       "item.power.mushrooms_stone": "Камень грибов",
       "gui.power.characteristics_card_gui.label_7": "1",
       "item.power.poison_armor_leggings": "Поножи мастера яда",
-      "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r Этот мод устарел! (последняя версия: v",
       "item.power.ether_battery.description_0": "§aЗаряжена элементом:",
       "effect.power.heat_master": "Мастер тепла",
       "item.power.sand_armor_helmet": "Шлем мастера песка",
@@ -37024,7 +37003,6 @@
       "item.power.sound_armor_helmet": "Шлем мастера звука",
       "item.power.fire_battery.description_1": "§9Огонь",
       "item.power.right_metal_gauntlet": "Правая металлическая перчатка",
-      "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r Вы используете неофициальную версию мода!",
       "item.power.filth_armor_boots": "Ботинки тёмного мастера скверны",
       "item.power.golden_dust_armor_leggings": "Поножи мастера золотой пыли",
       "entity.power.turret": "Турель",
@@ -37230,7 +37208,6 @@
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Дождевая завеса, расходует 45",
       "item.power.smoke_armor_helmet": "Шлем мастера дыма",
       "item.power.music_disc_call_of_the_past": "Пластинка",
-      "power.modinfo.cpapi_check": "§9[CPAPI]§r Текущая версия Colorful Powers API: v",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10",
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Лавовый всплеск, uses 10",
       "item.power.heat_armor_leggings": "Поножи мастера тепла",
@@ -37366,6 +37343,8 @@
       "item.power.cursed_stone_cracked_bricks_wall": "Cursed Stone Cracked Bricks Wall",
       "item.power.freaking_parsnip_block": "Freaking Parsnip Block",
       "item.power.rune_cutter": "Rune Cutter"
+      "power.modupdater.new_release": "[Keepers of the Stones II] Доступна более новая версия: ",
+      "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -37636,7 +37615,6 @@
       "effect.power.darkness_master": "Master of Darkness",
       "advancements.keepers_of_the_stones_2.descr": "Upgrade to Keepers of the Stones II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
-      "power.modinfo.update_cpapi": "§eThe Colorful Powers API version has been updated to: ",
       "gui.power.keepers_box_gui_part_4.tooltip_plague": "Plague",
       "item.power.heat_armor_helmet": "Heat Helmet",
       "item.power.unknown_rune": "Rune",
@@ -37759,7 +37737,6 @@
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "gui.power.characteristics_card_gui.label_7": "1",
       "item.power.poison_armor_leggings": "Poison Leggings",
-      "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r This mod is out of date! (latest version: v",
       "item.power.ether_battery.description_0": "§aCharged with element:",
       "effect.power.heat_master": "Master of Heat",
       "item.power.sand_armor_helmet": "Sand Helmet",
@@ -38162,7 +38139,6 @@
       "item.power.sound_armor_helmet": "Sound Helmet",
       "item.power.fire_battery.description_1": "§9Fire",
       "item.power.right_metal_gauntlet": "Right Metal Gauntlet",
-      "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r You are using an unofficial version of the mod!",
       "item.power.filth_armor_boots": "Filth Boots",
       "item.power.golden_dust_armor_leggings": "Golden Dust Leggings",
       "entity.power.turret": "Turret",
@@ -38369,7 +38345,6 @@
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Rain curtain, uses 45",
       "item.power.smoke_armor_helmet": "Smoke Helmet",
       "item.power.music_disc_call_of_the_past": "Music Disc",
-      "power.modinfo.cpapi_check": "§9[CPAPI]§r The current version of the Colorful Powers API: v",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10",
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Lava outburst, uses 10",
       "item.power.heat_armor_leggings": "Heat Leggings",
@@ -38505,6 +38480,8 @@
       "item.power.cursed_stone_cracked_bricks_wall": "Cursed Stone Cracked Bricks Wall",
       "item.power.freaking_parsnip_block": "Freaking Parsnip Block",
       "item.power.rune_cutter": "Rune Cutter"
+      "power.modupdater.new_release": "[Keepers of the Stones II] A newer version is available: ",
+      "power.modupdater.click_event": " ➜ Click to view changes"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -38773,7 +38750,6 @@
       "effect.power.darkness_master": "黑暗大师",
       "advancements.keepers_of_the_stones_2.descr": "升级至《守护石 II》",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "冷冻射线，使用10",
-      "power.modinfo.update_cpapi": "§eColorful Powers API 版本已更新至：",
       "gui.power.keepers_box_gui_part_4.tooltip_plague": "瘟疫",
       "item.power.heat_armor_helmet": "隔热头盔",
       "item.power.unknown_rune": "Rune",
@@ -38895,7 +38871,6 @@
       "item.power.mushrooms_stone": "蘑菇石",
       "gui.power.characteristics_card_gui.label_7": "1",
       "item.power.poison_armor_leggings": "毒药护腿",
-      "power.modinfo.outdated_mod": "§9[守护石 II]§r 此模组已过期！（最新版本：v",
       "item.power.ether_battery.description_0": "§a 带电元素：",
       "effect.power.heat_master": "热能大师",
       "item.power.sand_armor_helmet": "沙盔",
@@ -39290,7 +39265,6 @@
       "item.power.sound_armor_helmet": "隔音头盔",
       "item.power.fire_battery.description_1": "§9火灾",
       "item.power.right_metal_gauntlet": "右金属手套",
-      "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r 您正在使用该模组的非官方版本！",
       "item.power.filth_armor_boots": "污秽之靴",
       "item.power.golden_dust_armor_leggings": "金尘护腿",
       "entity.power.turret": "炮塔",
@@ -39495,7 +39469,6 @@
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "雨帘，用途45",
       "item.power.smoke_armor_helmet": "烟雾头盔",
       "item.power.music_disc_call_of_the_past": "音乐光盘",
-      "power.modinfo.cpapi_check": "§9[CPAPI]§r Colorful Powers API 的当前版本：v",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "以太射线，使用10",
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "熔岩喷发，使用10",
       "item.power.heat_armor_leggings": "保暖紧身裤",
@@ -39631,6 +39604,8 @@
       "item.power.cursed_stone_cracked_bricks_wall": "Cursed Stone Cracked Bricks Wall",
       "item.power.freaking_parsnip_block": "Freaking Parsnip Block",
       "item.power.rune_cutter": "Rune Cutter"
+      "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
+      "power.modupdater.click_event": " ➜ 点击查看更改"
     }
   },
   "foldersRoot": {
