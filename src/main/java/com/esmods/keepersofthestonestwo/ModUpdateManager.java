@@ -16,8 +16,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent.PlayerLoggedInEven
 
 import javax.annotation.Nullable;
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import java.net.*;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.Map;
@@ -77,7 +76,7 @@ public class ModUpdateManager {
 		return gameVersions.contains(MINECRAFT_VERSION);
 	}
 
-	private static void sendUpdateMessage(ServerPlayer player, Version latest, String changelog) {
+	private static void sendUpdateMessage(ServerPlayer player, Version latest, String changelog) throws URISyntaxException {
 		MutableComponent message = Component.translatable("power.modupdater.new_release")
 				.withStyle(Style.EMPTY.withColor(TextColor.fromRgb(0x00FFAA)))
 				.append(Component.literal(latest.toString())
@@ -86,12 +85,9 @@ public class ModUpdateManager {
 						.withStyle(Style.EMPTY
 								.withColor(TextColor.fromRgb(0xAAAAAA))
 								.withUnderlined(true)
-								.withClickEvent(new ClickEvent(
-										ClickEvent.Action.OPEN_URL,
-										"https://modrinth.com/project/keepers-of-the-stones-2"
+								.withClickEvent(new ClickEvent.OpenUrl(new URI("https://modrinth.com/project/keepers-of-the-stones-2")
 								))
-								.withHoverEvent(new HoverEvent(
-										HoverEvent.Action.SHOW_TEXT,
+								.withHoverEvent(new HoverEvent.ShowText(
 										Component.literal("\nWhat's new:\n" + changelog)
 								))
 						)
