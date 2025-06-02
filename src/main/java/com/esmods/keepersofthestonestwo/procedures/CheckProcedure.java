@@ -7,14 +7,14 @@ import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.CheckingModVersionType;
+import com.esmods.keepersofthestonestwo.UpdateChecker;
 
 @EventBusSubscriber
-public class BetaVersionCheckWarnProcedure {
+public class CheckProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		execute(event, event.getEntity());
@@ -27,9 +27,8 @@ public class BetaVersionCheckWarnProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (CheckingModVersionType.VersionChannel.isInDevelopment()) {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((Component.translatable("chat.power.versioncheckwarn").getString())), false);
+		if (entity instanceof Player) {
+			UpdateChecker.checkForUpdates((ServerPlayer) entity);
 		}
 	}
 }

@@ -267,7 +267,6 @@
   "effect.power.darkness_master": "Master of Darkness",
   "advancements.keepers_of_the_stones_2.descr": "Upgrade to Keepers of the Stones II",
   "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
-  "power.modinfo.update_cpapi": "§eThe Colorful Powers API version has been updated to: ",
   "gui.power.keepers_box_gui_part_4.tooltip_plague": "Plague",
   "item.power.heat_armor_helmet": "Heat Helmet",
   "item.power.unknown_rune": "Rune",
@@ -390,7 +389,6 @@
   "item.power.mushrooms_stone": "Mushrooms Stone",
   "gui.power.characteristics_card_gui.label_7": "1",
   "item.power.poison_armor_leggings": "Poison Leggings",
-  "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r This mod is out of date! (latest version: v",
   "item.power.ether_battery.description_0": "§aCharged with element:",
   "effect.power.heat_master": "Master of Heat",
   "item.power.sand_armor_helmet": "Sand Helmet",
@@ -793,7 +791,6 @@
   "item.power.sound_armor_helmet": "Sound Helmet",
   "item.power.fire_battery.description_1": "§9Fire",
   "item.power.right_metal_gauntlet": "Right Metal Gauntlet",
-  "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r You are using an unofficial version of the mod!",
   "item.power.filth_armor_boots": "Filth Boots",
   "item.power.golden_dust_armor_leggings": "Golden Dust Leggings",
   "entity.power.turret": "Turret",
@@ -1000,7 +997,6 @@
   "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Rain curtain, uses 45",
   "item.power.smoke_armor_helmet": "Smoke Helmet",
   "item.power.music_disc_call_of_the_past": "Music Disc",
-  "power.modinfo.cpapi_check": "§9[CPAPI]§r The current version of the Colorful Powers API: v",
   "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10",
   "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Lava outburst, uses 10",
   "item.power.heat_armor_leggings": "Heat Leggings",
@@ -1085,5 +1081,7 @@
   "item.power.mist_stone": "Mist Stone",
   "item.power.blue_flame_armor_chestplate": "Blue Flame Chestplate",
   "item.power.creation_pickaxe": "Creation Pickaxe",
-  "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15"
+  "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15",
+  "power.modupdater.new_release": "[Keepers of the Stones II] A newer version is available: ",
+  "power.modupdater.click_event": " ➜ Click to view changes"
 }
