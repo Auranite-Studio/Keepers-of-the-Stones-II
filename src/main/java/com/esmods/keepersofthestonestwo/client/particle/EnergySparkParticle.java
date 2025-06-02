@@ -26,7 +26,8 @@ public class EnergySparkParticle extends TextureSheetParticle {
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			return new EnergySparkParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			EnergySparkParticle particle = new EnergySparkParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			return particle;
 		}
 	}
 
