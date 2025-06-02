@@ -26,7 +26,8 @@ public class ShockWavesParticleParticle extends TextureSheetParticle {
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			return new ShockWavesParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			ShockWavesParticleParticle particle = new ShockWavesParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			return particle;
 		}
 	}
 

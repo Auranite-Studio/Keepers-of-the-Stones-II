@@ -6,10 +6,18 @@ import net.neoforged.neoforgespi.language.IModInfo;
 import java.util.List;
 import java.util.regex.Pattern;
 
-    @Deprecated(since = "release", forRemoval = true)
 public class CheckingModVersionType {
 
-	public static boolean get() {
+	public enum VersionType {
+		RELEASE,
+		PRE_RELEASE,
+		RELEASE_CANDIDATE,
+		BETA,
+		CUSTOM_SUFFIX,
+		UNKNOWN
+	}
+
+	public static VersionType get() {
 		String version = "";
 		List<IModInfo> mods = ModList.get().getMods();
 
@@ -21,24 +29,31 @@ public class CheckingModVersionType {
 		}
 
 		if (version.isEmpty()) {
-			return false;
+			return VersionType.UNKNOWN;
 		}
 
-		String preReleasePattern = "^\\d+\\.\\d+\\.\\d+-pre\\d+$";
-		String releaseCandidatePattern = "^\\d+\\.\\d+\\.\\d+-rc\\d+$";
-		String betaPattern = "^\\d+\\.\\d+\\.\\d+\\.\\d+$";
-
-		String[] patterns = {
-				preReleasePattern,
-				releaseCandidatePattern,
-				betaPattern
-		};
-		for (String pattern : patterns) {
-			if (Pattern.matches(pattern, version)) {
-				return true;
-			}
+		if (Pattern.matches("^\\d+\\.\\d+\\.\\d+$", version)) {
+			return VersionType.RELEASE;
+		} else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-pre\\d+$", version)) {
+			return VersionType.PRE_RELEASE;
+		} else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-rc\\d+$", version)) {
+			return VersionType.RELEASE_CANDIDATE;
+		} else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+\\.\\d+$", version)) {
+			return VersionType.BETA;
+		} else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-[a-zA-Z0-9]+.*$", version)) {
+			return VersionType.CUSTOM_SUFFIX;
 		}
 
-		return false;
+		return VersionType.UNKNOWN;
+	}
+
+	public record VersionChannel() {
+
+		public static boolean isInDevelopment() {
+			VersionType type = get();
+			return type == VersionType.BETA
+					|| type == VersionType.PRE_RELEASE
+					|| type == VersionType.RELEASE_CANDIDATE;
+		}
 	}
 }
