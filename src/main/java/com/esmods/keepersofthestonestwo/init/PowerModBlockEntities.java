@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import com.esmods.keepersofthestonestwo.block.entity.RuneCutterBlockEntity;
 import com.esmods.keepersofthestonestwo.block.entity.KeepersBoxBlockEntity;
 import com.esmods.keepersofthestonestwo.block.entity.EnergiumVaultBlockEntity;
 import com.esmods.keepersofthestonestwo.block.entity.ElementalPowerGeneratorBlockEntity;
@@ -32,6 +33,7 @@ public class PowerModBlockEntities {
 			ElementalPowerGeneratorBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CursedVaultBlockEntity>> CURSED_VAULT = register("cursed_vault", PowerModBlocks.CURSED_VAULT, CursedVaultBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EnergiumVaultBlockEntity>> ENERGIUM_VAULT = register("energium_vault", PowerModBlocks.ENERGIUM_VAULT, EnergiumVaultBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<RuneCutterBlockEntity>> RUNE_CUTTER = register("rune_cutter", PowerModBlocks.RUNE_CUTTER, RuneCutterBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -46,5 +48,6 @@ public class PowerModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ELEMENTAL_POWER_GENERATOR.get(), (blockEntity, side) -> blockEntity.getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, CURSED_VAULT.get(), (blockEntity, side) -> blockEntity.getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ENERGIUM_VAULT.get(), (blockEntity, side) -> blockEntity.getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, RUNE_CUTTER.get(), (blockEntity, side) -> blockEntity.getItemHandler());
 	}
 }

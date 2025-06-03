@@ -31104,6 +31104,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/block/rune_cutter.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/RuneCutterBlockEntity.java",
           "src/main/resources/assets/power/blockstates/rune_cutter.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/RuneCutterBlock.java",
           "src/main/resources/assets/power/models/item/rune_cutter.json",
@@ -33600,6 +33601,20 @@
         ]
       },
       "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "RuneCutterGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/RuneCutterGUIScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/RuneCutterGUIMenu.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
     }
   ],
   "variable_elements": [

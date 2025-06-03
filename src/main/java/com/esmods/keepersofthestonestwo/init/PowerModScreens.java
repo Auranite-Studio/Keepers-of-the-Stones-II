@@ -59,6 +59,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesBloodScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAnimalsScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAmberScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAirScreen;
+import com.esmods.keepersofthestonestwo.client.gui.RuneCutterGUIScreen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart5Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart4Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart3Screen;
@@ -128,6 +129,7 @@ public class PowerModScreens {
 		event.register(PowerModMenus.KEEPERS_BOX_GUI_PART_5.get(), KeepersBoxGUIPart5Screen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_HEAT.get(), WheelAbilitiesHeatScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_SHOCKWAVE.get(), WheelAbilitiesShockwaveScreen::new);
+		event.register(PowerModMenus.RUNE_CUTTER_GUI.get(), RuneCutterGUIScreen::new);
 	}
 
 	public interface ScreenAccessor {
