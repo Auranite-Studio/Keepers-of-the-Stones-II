@@ -232,7 +232,6 @@ public class ModUpdateManager {
 		return "0.0.0";
 	}
 
-	// === Beta Warning Procedure ===
 
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerLoggedInEvent event) {
@@ -250,7 +249,6 @@ public class ModUpdateManager {
 		}
 	}
 
-	// === Beta Warning Method ===
 	@SubscribeEvent
 	public static void onPlayerLogin_BetaWarning(PlayerLoggedInEvent event) {
 		executeBetaWarning(event, event.getEntity());
@@ -264,12 +262,11 @@ public class ModUpdateManager {
 		if (entity == null) return;
 		if (isInDevelopment()) {
 			if (entity instanceof Player _player && !_player.level().isClientSide()) {
-				_player.displayClientMessage(Component.literal(Component.translatable("chat.power.versioncheckwarn").getString()), false);
+				_player.displayClientMessage(Component.literal(Component.translatable("power.modupdater.beta_detect").getString()), false);
 			}
 		}
 	}
 
-	// === isInDevelopment logic ===
 	public static boolean isInDevelopment() {
 		VersionType type = getVersionType(getCurrentVersion());
 		return type == VersionType.BETA ||

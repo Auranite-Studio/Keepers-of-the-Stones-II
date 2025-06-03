@@ -948,7 +948,7 @@
   "item.power.plague_stone": "Камень чумы",
   "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Пронзание кристаллом, расходует 40",
   "gui.power.wheel_abilities_plague.tooltip_plague_wind_uses_15": "Чумной ветер, расходует 15",
-  "chat.power.versioncheckwarn": "§cВнимание! Вы используете бета-версию мода Keepers of the Stones II, что может привести к нестабильной работе или повреждению вашего игрового мира. Будьте осторожны!",
+  "power.modupdater.beta_detect": "§cВнимание! Вы используете бета-версию мода Keepers of the Stones II, что может привести к нестабильной работе или повреждению вашего игрового мира. Будьте осторожны!",
   "item.power.technology_armor_chestplate": "Нагрудник мастера технологий",
   "item.power.vacuum_armor_boots": "Ботинки мастера пустоты",
   "item.power.creation_armor_leggings": "Поножи мастера созидания",

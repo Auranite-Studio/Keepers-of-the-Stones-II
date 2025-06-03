@@ -935,7 +935,7 @@
   "item.power.plague_stone": "瘟疫石",
   "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "水晶穿孔，使用40",
   "gui.power.wheel_abilities_plague.tooltip_plague_wind_uses_15": "瘟疫之风，使用15",
-  "chat.power.versioncheckwarn": "§c警告！您正在使用 Keepers of the Stones II 模组的测试版，这可能会导致游戏运行不稳定或损坏您的游戏世界。请小心！",
+  "power.modupdater.beta_detect": "§c警告！您正在使用 Keepers of the Stones II 模组的测试版，这可能会导致游戏运行不稳定或损坏您的游戏世界。请小心！",
   "item.power.technology_armor_chestplate": "科技胸甲",
   "item.power.vacuum_armor_boots": "真空靴",
   "item.power.creation_armor_leggings": "创造紧身裤",
