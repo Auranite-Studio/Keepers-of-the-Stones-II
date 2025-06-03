@@ -948,7 +948,7 @@
   "item.power.plague_stone": "Plague Stone",
   "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Crystal piercing, uses 40",
   "gui.power.wheel_abilities_plague.tooltip_plague_wind_uses_15": "Plague wind, uses 15",
-  "chat.power.versioncheckwarn": "§cWarning! You are using a beta version of the Keepers of the Stones II mod, which may cause unstable operation or damage to your game world. Be careful!",
+  "power.modupdater.beta_detect": "§cWarning! You are using a beta version of the Keepers of the Stones II mod, which may cause unstable operation or damage to your game world. Be careful!",
   "item.power.technology_armor_chestplate": "Technology Chestplate",
   "item.power.vacuum_armor_boots": "Vacuum Boots",
   "item.power.creation_armor_leggings": "Creation Leggings",
