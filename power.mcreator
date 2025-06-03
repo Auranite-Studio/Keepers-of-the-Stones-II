@@ -33610,8 +33610,165 @@
       "registry_name": "rune_cutter_gui",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/RuneCutterGUISlotMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/RuneCutterGUIScreen.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/RuneCutterGUIMenu.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RuneCutterPriObnovlieniiTika",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_pri_obnovlienii_tika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneCutterPriObnovlieniiTikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RemoveWhenRuneIsCutted",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_when_rune_is_cutted",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RemoveWhenRuneIsCuttedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "DropUnusedRunesFromBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drop_unused_runes_from_block",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DropUnusedRunesFromBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RuneCutterValidRecipe",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_valid_recipe",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneCutterValidRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RuneCutterUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_update",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneCutterUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
       "path": "~/ItemsAndBlocks/RuneCutter"

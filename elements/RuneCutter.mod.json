@@ -64,7 +64,7 @@
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "lightOpacity": 15,
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -120,7 +120,7 @@
     "openGUIOnRightClick": true,
     "inventorySize": 3,
     "inventoryStackSize": 1,
-    "inventoryDropWhenDestroyed": true,
+    "inventoryDropWhenDestroyed": false,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [
       2
@@ -137,6 +137,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "RuneCutterUpdate"
+    },
+    "onTickUpdate": {
+      "name": "RuneCutterPriObnovlieniiTika"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [],

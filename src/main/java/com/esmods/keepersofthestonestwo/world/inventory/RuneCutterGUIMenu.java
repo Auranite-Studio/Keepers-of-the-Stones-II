@@ -1,6 +1,7 @@
 
 package com.esmods.keepersofthestonestwo.world.inventory;
 
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -29,6 +30,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
+import com.esmods.keepersofthestonestwo.network.RuneCutterGUISlotMessage;
 import com.esmods.keepersofthestonestwo.init.PowerModMenus;
 
 public class RuneCutterGUIMenu extends AbstractContainerMenu implements PowerModMenus.MenuAccessor {
@@ -116,6 +118,12 @@ public class RuneCutterGUIMenu extends AbstractContainerMenu implements PowerMod
 			private final int slot = 2;
 			private int x = RuneCutterGUIMenu.this.x;
 			private int y = RuneCutterGUIMenu.this.y;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(2, 1, 0);
+			}
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -239,17 +247,28 @@ public class RuneCutterGUIMenu extends AbstractContainerMenu implements PowerMod
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
+					if (j == 2)
+						continue;
 					playerIn.drop(internal.getStackInSlot(j), false);
 					if (internal instanceof IItemHandlerModifiable ihm)
 						ihm.setStackInSlot(j, ItemStack.EMPTY);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
+					if (i == 2)
+						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.getStackInSlot(i));
 					if (internal instanceof IItemHandlerModifiable ihm)
 						ihm.setStackInSlot(i, ItemStack.EMPTY);
 				}
 			}
+		}
+	}
+
+	private void slotChanged(int slotid, int ctype, int meta) {
+		if (this.world != null && this.world.isClientSide()) {
+			PacketDistributor.sendToServer(new RuneCutterGUISlotMessage(slotid, x, y, z, ctype, meta));
+			RuneCutterGUISlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}
 

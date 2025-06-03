@@ -11,6 +11,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.RuneCutterGUIMenu;
+import com.esmods.keepersofthestonestwo.procedures.RuneCutterValidRecipeProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
 public class RuneCutterGUIScreen extends AbstractContainerScreen<RuneCutterGUIMenu> implements PowerModScreens.ScreenAccessor {
@@ -48,7 +49,9 @@ public class RuneCutterGUIScreen extends AbstractContainerScreen<RuneCutterGUIMe
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rune_cutter_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rune_cutter_gui_arrow.png"), this.leftPos + 77, this.topPos + 29, 0, 0, 20, 23, 20, 23);
+		if (RuneCutterValidRecipeProcedure.execute(world, x, y, z)) {
+			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rune_cutter_gui_arrow.png"), this.leftPos + 77, this.topPos + 29, 0, 0, 20, 23, 20, 23);
+		}
 		RenderSystem.disableBlend();
 	}
 

@@ -65,7 +65,10 @@
           "disablePickup": {
             "fixedValue": false
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "RemoveWhenRuneIsCutted"
+          },
           "x": 205,
           "y": 91,
           "locked": false
@@ -76,9 +79,12 @@
         "data": {
           "image": "rune_cutter_gui_arrow.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "RuneCutterValidRecipe"
+          },
           "x": 203,
           "y": 66,
-          "locked": false
+          "locked": true
         }
       }
     ],
