@@ -108,7 +108,7 @@ public class ModUpdateManager {
 	}
 
 	private static List<VersionData> fetchVersionsFromModrinth() throws IOException {
-		URL url = new URL("https://api.modrinth.com/v2/project/"  + PROJECT_ID + "/version");
+		URL url = new URL("https://api.modrinth.com/v2/project/" + PROJECT_ID + "/version");
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 		connection.setRequestMethod("GET");
 		StringBuilder response = new StringBuilder();
@@ -284,7 +284,7 @@ public class ModUpdateManager {
 
 	private static void executeBetaWarning(@Nullable Event event, Entity entity) {
 		if (entity == null) return;
-		if (isInDevelopment()) {
+		if (isInDevelopment() && isCustomVersion()) {
 			if (entity instanceof Player _player && !_player.level().isClientSide()) {
 				_player.displayClientMessage(Component.literal(Component.translatable("power.modupdater.beta_detect").getString()), false);
 			}
@@ -296,5 +296,11 @@ public class ModUpdateManager {
 		return type == VersionType.BETA ||
 				type == VersionType.PRE_RELEASE ||
 				type == VersionType.RELEASE_CANDIDATE;
+	}
+
+	public static boolean isCustomVersion() {
+		VersionType type = getVersionType(getCurrentVersion());
+		return type == VersionType.CUSTOM_SUFFIX ||
+				type == VersionType.UNKNOWN;
 	}
 }
