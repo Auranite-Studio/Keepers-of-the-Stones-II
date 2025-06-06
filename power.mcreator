@@ -33590,19 +33590,6 @@
       "path": "~/ItemsAndBlocks/Runes"
     },
     {
-      "name": "ModUpdateManager",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "mod_update_manager",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/ModUpdateManager.java"
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "RuneCutterGUI",
       "type": "gui",
       "compiles": true,
@@ -33772,6 +33759,19 @@
         ]
       },
       "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "ModVersionManager",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mod_version_manager",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ModVersionManager.java"
+        ]
+      },
+      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [

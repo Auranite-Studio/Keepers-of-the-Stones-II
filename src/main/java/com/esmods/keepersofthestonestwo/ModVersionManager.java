@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 import java.util.Map;
 
 @EventBusSubscriber
-public class ModUpdateManager {
+public class ModVersionManager {
 
 	// === UpdateChecker Fields and Methods ===
 	private static final String PROJECT_ID = "keepers-of-the-stones-2";
