@@ -3,10 +3,8 @@ package com.esmods.keepersofthestonestwo;
 import com.google.gson.*;
 import net.minecraft.network.chat.*;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
 import net.neoforged.bus.api.Event;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforgespi.language.IModInfo;
@@ -52,9 +50,11 @@ public class ModUpdateManager {
 				if (!isMinecraftVersionSupported(data.gameVersions)) continue;
 				VersionType type = getVersionType(data.versionNumber);
 				Version version = new Version(data.versionNumber, type);
+
 				if (current.type == VersionType.RELEASE && version.type != VersionType.RELEASE) {
 					continue;
 				}
+
 				if (version.compareTo(current) > 0) {
 					if (latest == null || version.compareTo(latest) > 0) {
 						latest = version;
@@ -151,21 +151,36 @@ public class ModUpdateManager {
 
 		@Override
 		public int compareTo(Version o) {
+			String baseThis = truncateToThreeParts(this.raw);
+			String baseOther = truncateToThreeParts(o.raw);
+
+			int versionComparison = compareVersionStrings(baseThis, baseOther);
+			if (versionComparison != 0) {
+				return versionComparison;
+			}
+
 			int priorityThis = VERSION_PRIORITY.getOrDefault(this.type, 999);
 			int priorityOther = VERSION_PRIORITY.getOrDefault(o.type, 999);
-			if (priorityThis != priorityOther) {
-				return Integer.compare(priorityThis, priorityOther);
+
+			return Integer.compare(priorityOther, priorityThis);
+		}
+
+		private String truncateToThreeParts(String version) {
+			String baseVersion = version.split("-")[0]; // Убираем суффиксы
+			String[] parts = baseVersion.split("\\.");
+			if (parts.length >= 3) {
+				return parts[0] + "." + parts[1] + "." + parts[2];
 			}
-			return compareVersionStrings(this.raw, o.raw);
+			return baseVersion;
 		}
 
 		private int compareVersionStrings(String v1, String v2) {
-			String[] parts1 = v1.split("\\.");
-			String[] parts2 = v2.split("\\.");
+			int[] parts1 = parseVersionParts(v1);
+			int[] parts2 = parseVersionParts(v2);
 			int length = Math.max(parts1.length, parts2.length);
 			for (int i = 0; i < length; i++) {
-				int num1 = i < parts1.length ? parseInt(parts1[i]) : 0;
-				int num2 = i < parts2.length ? parseInt(parts2[i]) : 0;
+				int num1 = i < parts1.length ? parts1[i] : 0;
+				int num2 = i < parts2.length ? parts2[i] : 0;
 				if (num1 != num2) {
 					return Integer.compare(num1, num2);
 				}
@@ -173,12 +188,18 @@ public class ModUpdateManager {
 			return 0;
 		}
 
-		private int parseInt(String s) {
-			try {
-				return Integer.parseInt(s.replaceAll("\\D+", ""));
-			} catch (NumberFormatException ignored) {
-				return 0;
+		private int[] parseVersionParts(String version) {
+			String baseVersion = version.split("-")[0]; // Отделяем основную часть
+			String[] parts = baseVersion.split("\\.");
+			int[] result = new int[parts.length];
+			for (int i = 0; i < parts.length; i++) {
+				try {
+					result[i] = Integer.parseInt(parts[i]);
+				} catch (NumberFormatException ignored) {
+					result[i] = 0;
+				}
 			}
+			return result;
 		}
 
 		public VersionType getVersionType() {
@@ -201,17 +222,28 @@ public class ModUpdateManager {
 	}
 
 	private static VersionType getVersionType(String version) {
+		// RELEASE: x.x.x
 		if (Pattern.matches("^\\d+\\.\\d+\\.\\d+$", version)) {
 			return VersionType.RELEASE;
-		} else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-pre\\d+$", version)) {
-			return VersionType.PRE_RELEASE;
-		} else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-rc\\d+$", version)) {
+		}
+		// RELEASE_CANDIDATE: x.x.x-rcN
+		else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-rc\\d+$", version)) {
 			return VersionType.RELEASE_CANDIDATE;
-		} else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+\\.\\d+$", version)) {
+		}
+		// PRE_RELEASE: x.x.x-preN
+		else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-pre\\d+$", version)) {
+			return VersionType.PRE_RELEASE;
+		}
+		// BETA: x.x.x.x
+		else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+\\.\\d+$", version)) {
 			return VersionType.BETA;
-		} else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-[a-zA-Z0-9]+.*$", version)) {
+		}
+		// CUSTOM_SUFFIX: x.x.x-suffix
+		else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-[a-zA-Z0-9]+.*$", version)) {
 			return VersionType.CUSTOM_SUFFIX;
-		} else {
+		}
+		// UNKNOWN
+		else {
 			return VersionType.UNKNOWN;
 		}
 	}
@@ -239,27 +271,15 @@ public class ModUpdateManager {
 
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerLoggedInEvent event) {
-		execute(event, event.getEntity());
+		executeCheckForUpdates(event, event.getEntity());
+		executeBetaWarning(event, event.getEntity());
 	}
 
-	public static void execute(Entity entity) {
-		execute(null, entity);
-	}
-
-	private static void execute(@Nullable Event event, Entity entity) {
+	private static void executeCheckForUpdates(@Nullable Event event, Entity entity) {
 		if (entity == null) return;
 		if (entity instanceof Player) {
 			checkForUpdates((ServerPlayer) entity);
 		}
-	}
-
-	@SubscribeEvent
-	public static void onPlayerLogin_BetaWarning(PlayerLoggedInEvent event) {
-		executeBetaWarning(event, event.getEntity());
-	}
-
-	public static void executeBetaWarning(Entity entity) {
-		executeBetaWarning(null, entity);
 	}
 
 	private static void executeBetaWarning(@Nullable Event event, Entity entity) {
