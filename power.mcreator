@@ -31603,6 +31603,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/block/rune_cutter.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/RuneCutterBlockEntity.java",
           "src/main/resources/assets/power/blockstates/rune_cutter.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/RuneCutterBlock.java",
           "src/main/resources/assets/power/items/rune_cutter.json",
@@ -34122,14 +34123,185 @@
       "path": "~/ItemsAndBlocks/Runes"
     },
     {
-      "name": "ModUpdateManager",
+      "name": "RuneCutterGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/RuneCutterGUISlotMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/RuneCutterGUIScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/RuneCutterGUIMenu.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RuneCutterPriObnovlieniiTika",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_pri_obnovlienii_tika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneCutterPriObnovlieniiTikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RemoveWhenRuneIsCutted",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_when_rune_is_cutted",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RemoveWhenRuneIsCuttedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "DropUnusedRunesFromBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drop_unused_runes_from_block",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DropUnusedRunesFromBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RuneCutterValidRecipe",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_valid_recipe",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneCutterValidRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RuneCutterUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_update",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneCutterUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "ModVersionManager",
       "type": "code",
       "compiles": true,
       "locked_code": true,
-      "registry_name": "mod_update_manager",
+      "registry_name": "mod_version_manager",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/ModUpdateManager.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/ModVersionManager.java"
         ]
       },
       "path": "~/Modules/BasicModule"
@@ -40496,7 +40668,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.2.0.5",
+    "version": "1.2.0-pre1",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
