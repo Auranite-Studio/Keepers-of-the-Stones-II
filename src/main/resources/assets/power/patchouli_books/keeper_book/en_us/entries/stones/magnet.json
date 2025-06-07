@@ -1,0 +1,27 @@
+{
+    "name": "Magnet",
+    "icon": "power:textures/mob_effect/magnet_master.png",
+    "category": "power:stones",
+    "sortnum": 36,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Magnetic field wave - attacks entities with a beam attack.",
+                "$(li)",
+                "Negative magnet - spawn blue magnet which repels entities.",
+                "$(li)",
+                "Positive magnet - spawn red magnet which attracts entities."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Magnet",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:magnet_claws\",count:1}],ArmorItems:[{id:\"power:magnet_armor_boots\",count:1},{id:\"power:magnet_armor_leggings\",count:1},{id:\"power:magnet_armor_chestplate\",count:1},{id:\"power:magnet_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

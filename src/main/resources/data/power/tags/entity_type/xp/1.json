@@ -1,18 +1,18 @@
 {
   "replace": false,
   "values": [
-    "zombie",
-    "zombie_villager",
-    "zombified_piglin",
+    "stray",
+    "slime",
+    "skeleton",
+    "endermite",
+    "bogged",
+    "vex",
     "drowned",
     "husk",
-    "vex",
-    "slime",
-    "endermite",
-    "spider",
-    "skeleton",
-    "bogged",
-    "stray",
-    "silverfish"
+    "zombie_villager",
+    "silverfish",
+    "zombie",
+    "zombified_piglin",
+    "spider"
   ]
 }

@@ -1,0 +1,27 @@
+{
+    "name": "Mercury",
+    "icon": "power:textures/mob_effect/mercury_master.png",
+    "category": "power:stones",
+    "sortnum": 38,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Liquid mercury - attacks entities with a beam attack, dealing a some negative effect to them.",
+                "$(li)",
+                "Mercury ball - spreads mercury when smashed against a block.",
+                "$(li)",
+                "Mercury condition - in warm biomes deals radial damage, in cold biomes shoots balls in all directions."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Mercury",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:mercury_battle_axe\",count:1}],ArmorItems:[{id:\"power:mercury_armor_boots\",count:1},{id:\"power:mercury_armor_leggings\",count:1},{id:\"power:mercury_armor_chestplate\",count:1},{id:\"power:mercury_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

@@ -1,15 +1,21 @@
+
 **New features**
 - *N/A*
 
 **Improvemnts** 
-- *N/A*
+- In the rune cutter, it is now possible to improve runes that have levels
+- Now the runes can be removed by pressing SHIFT + U
+- Changed the item inside the cursed vault to an unknown rune
+- The runologist's got new deals
+- Now, when crafting energium dust, the player gets it in the amount of 4 pieces instead of 1
 
 **API changes**
-- *N/A*
+- Completely redesigned the version checking system to now include checking for updates from the Modrinth website
+- Adding missing runes to tags
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that caused the characteristic card to print the rank of the player who has it in his hand
-- [Bugfix] Fixed a bug that caused a poison pit to not always poison the creatures inside it
+- [Bugfix] Fixed a bug that caused the keeper's book to not work
+- [Bugfix] Fixed item rendering on some blocks (1.21.5 only)
 
 **Known issues**
 - *N/A*

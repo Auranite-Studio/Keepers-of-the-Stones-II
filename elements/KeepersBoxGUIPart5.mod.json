@@ -1,0 +1,229 @@
+{
+  "_fv": 79,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 267,
+    "height": 188,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "keepers_box_gui_part_5.png",
+          "use1Xscale": false,
+          "x": 85,
+          "y": -8,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_button_up",
+          "image": "keepers_box_button_up.png",
+          "hoveredImage": "keepers_box_button_up_active.png",
+          "onClick": {
+            "name": "KBtoPart4"
+          },
+          "x": 289,
+          "y": 96,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_button_down_locked",
+          "image": "keepers_box_button_down_locked.png",
+          "hoveredImage": "",
+          "x": 289,
+          "y": 129,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element2",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 175,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element3",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 218,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element4",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 242,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element5",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 264,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element6",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 264,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element7",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 242,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element8",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 218,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element9",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 175,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element10",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 151,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_coming_element11",
+          "image": "coming_element.png",
+          "hoveredImage": "coming_element_highlight.png",
+          "x": 129,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_heat_element",
+          "image": "heat_element.png",
+          "hoveredImage": "heat_element_highlight.png",
+          "onClick": {
+            "name": "HeatElementGet"
+          },
+          "displayCondition": {
+            "name": "HeatStoneCheck"
+          },
+          "x": 129,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_heat",
+          "text": {
+            "fixedValue": "Heat"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 123,
+          "y": 92,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_shockwave_element",
+          "image": "shockwave_element.png",
+          "hoveredImage": "shockwave_element_highlight.png",
+          "onClick": {
+            "name": "ShockwaveElementGet"
+          },
+          "displayCondition": {
+            "name": "ShockwaveStoneCheck"
+          },
+          "x": 151,
+          "y": 95,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_shockwave",
+          "text": {
+            "fixedValue": "Shockwave"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 148,
+          "y": 91,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

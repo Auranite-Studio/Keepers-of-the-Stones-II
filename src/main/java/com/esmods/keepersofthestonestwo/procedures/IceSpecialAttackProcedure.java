@@ -83,7 +83,7 @@ public class IceSpecialAttackProcedure {
 											.getY(),
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getZ())))
-									.getBlock() == Blocks.WATER) {
+									.getBlock() == Blocks.AIR) {
 						world.setBlock(new BlockPos(
 								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
 								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY(),
@@ -97,7 +97,7 @@ public class IceSpecialAttackProcedure {
 											.getY(),
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getZ())))
-							.getBlock() == Blocks.LAVA
+							.getBlock() == Blocks.AIR
 							|| (world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getX(),
@@ -182,6 +182,8 @@ public class IceSpecialAttackProcedure {
 									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.player.hurt_freeze")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles(ParticleTypes.SNOWFLAKE, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 50, 1, 2, 1, 0);
 						}
 					}
 				}

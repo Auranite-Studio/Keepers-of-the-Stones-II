@@ -104,8 +104,8 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:book",
-          "weight": 2,
+          "name": "power:unknown_rune",
+          "weight": 1,
           "functions": [
             {
               "function": "minecraft:set_count",

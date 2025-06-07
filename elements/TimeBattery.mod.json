@@ -1,9 +1,9 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "space_battery",
+    "texture": "time_battery",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "TimeBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Time"
+      ]
     },
     "glowCondition": {
       "fixedValue": false
@@ -57,7 +59,12 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
-    "musicDiscAnalogOutput": 0
+    "musicDiscAnalogOutput": 0,
+    "providedBannerPatterns": []
   }
 }

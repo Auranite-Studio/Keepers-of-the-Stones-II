@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -29,8 +29,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "MistBatteryDesc"
+      "fixedValue": [
+        "§aCharged with element:",
+        "§9Mist"
+      ]
     },
     "glowCondition": {
       "fixedValue": false
@@ -58,6 +60,7 @@
     "animation": "none",
     "isMusicDisc": false,
     "musicDiscLengthInTicks": 0,
-    "musicDiscAnalogOutput": 0
+    "musicDiscAnalogOutput": 0,
+    "providedBannerPatterns": []
   }
 }

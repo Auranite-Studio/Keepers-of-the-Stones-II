@@ -1,0 +1,41 @@
+{
+    "name": "Ancient сurse",
+    "icon": "power:cursed_key",
+    "category": "power:progression",
+    "sortnum": 2,
+    "pages": [
+        {
+            "type": "text",
+            "text": "The second stage requires defeating the Cursed Keeper. You must craft a full Energium Armor set to enter the Cursed Forest biome without fatal curse effects."
+        },
+        {
+            "type": "spotlight",
+            "title": "Cursed Forest Biome",
+            "item": "power:freaking_parsnip",
+            "text": "Accessible only with $(l)full Energium Armor$(). Contains Cursed Knights and Squires. The Cursed Castle spawns at biome center."
+        },
+        {
+            "type": "entity",
+            "entity": "power:cursed_keeper",
+            "scale": 0.75,
+            "title": "Cursed Keeper",
+            "text": "Stats:$(br)- 700 HP$(br)- Phase-based mechanics"
+        },
+        {
+            "type": "text",
+            "text": "Combat Phases:$(br2)$(l)Phase 1 (Invulnerable):$()$(br)- Summons 3 waves of Cursed Knights/Squires$(br2)$(l)Phase 2 (Vulnerable):$()$(br)- Flamethrower$(br)- Air shield (invincibility)$(br)- Stalagmite piercing$(br)- Water healing (increase chance below 350 HP)"
+        },
+        {
+            "type": "spotlight",
+            "title": "Rewards",
+            "item": "power:luck_coin",
+            "text": "Drops:$(br)1 Luck Coin$(br)8 Cursed Keys$(br2)Unlocks the Keeper's Box on castle's 3rd floor with permanent elemental stone choice."
+        },
+        {
+            "type": "spotlight",
+            "title": "Cursed Vaults",
+            "item": "power:cursed_vault",
+            "text": "Use 8 Cursed Keys to open vaults in the castle. Contains rare exclusive resources."
+        }
+    ]
+}

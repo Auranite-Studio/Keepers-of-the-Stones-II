@@ -6,7 +6,6 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
@@ -18,13 +17,12 @@ import net.minecraft.client.Minecraft;
 
 import java.util.List;
 
-import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardWritingCharsProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardPriShchielchkiePKMProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CharacteristicsCardDopolnitielnaiaInformatsiiaProcedure;
 
 public class CharacteristicsCardItem extends Item {
 	public CharacteristicsCardItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties());
 	}
 
 	@Override
@@ -45,11 +43,5 @@ public class CharacteristicsCardItem extends Item {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		CharacteristicsCardPriShchielchkiePKMProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
-	}
-
-	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
-		CharacteristicsCardWritingCharsProcedure.execute(world, entity, itemstack);
 	}
 }

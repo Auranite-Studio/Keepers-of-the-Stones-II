@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "projectile",
   "definition": {
     "projectileItem": {
@@ -10,13 +10,14 @@
       "value": "entity.firework.shoot"
     },
     "igniteFire": false,
+    "disableGravity": false,
     "power": 2.0,
     "damage": 36.0,
     "knockback": 5,
     "entityModel": "Modelatomic_rocket",
     "customModelTexture": "atomic_rocket.png",
-    "modelWidth": 0.5,
-    "modelHeight": 0.5,
+    "modelWidth": 1.0,
+    "modelHeight": 1.0,
     "onHitsBlock": {
       "name": "AtomicRocketExplosion"
     },

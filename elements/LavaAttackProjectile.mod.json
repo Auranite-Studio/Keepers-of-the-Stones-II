@@ -1,15 +1,16 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "Blocks.FLOWING_LAVA"
+      "value": "Items.LAVA_BUCKET"
     },
     "showParticles": false,
     "actionSound": {
       "value": "entity.arrow.shoot"
     },
     "igniteFire": false,
+    "disableGravity": false,
     "power": 0.8,
     "damage": 5.0,
     "knockback": 5,

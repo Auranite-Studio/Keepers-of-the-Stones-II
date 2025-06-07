@@ -1,0 +1,42 @@
+{
+    "name": "Tyranny of the golem",
+    "icon": "power:energium_key",
+    "category": "power:progression",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "text",
+            "text": "The first major milestone requires defeating the Energium Golem. This powerful boss guards ancient secrets in Energium Temples found in desert and mesa biomes."
+        },
+        {
+            "type": "spotlight",
+            "title": "Energium Temple",
+            "item": "power:energium_block",
+            "text": "Temples generate in deserts/mesas.$(br2)The golem awaits on the $(l)second floor$()."
+        },
+        {
+            "type": "entity",
+            "entity": "power:energium_golem",
+            "scale": 0.70,
+            "offset": 1,
+            "title": "Energium Golem",
+            "text":"Stats:$(br)- 500 HP$(br)- Immune to knockback and ranged weapons"
+        },
+        {
+            "type": "text",
+            "text": "Drops:$(br)11 Energium Keys$(br)1 Energium Core$(br)Combat Mechanics:$(br2)Melee:$(br)- Powerful punches with extreme knockback$(br2)Ranged:$(br)- Shoots energy from the core"
+        },
+        {
+            "type": "spotlight",
+            "title": "Energium Vaults",
+            "item": "power:energium_vault",
+            "text": "Use 11 keys from the golem to open vaults in temple's secret rooms. Contains smithing templates and some rare resources."
+        },
+        {
+            "type": "crafting",
+            "title": "Core Utilization",
+            "recipe": "power:energium_controller_recipe",
+            "text": "Energium Core is essential for crafting the Energium Controller.$(br2)When activated with Redstone, blocks all power-based effects within a 48-block radius."
+        }
+    ]
+}

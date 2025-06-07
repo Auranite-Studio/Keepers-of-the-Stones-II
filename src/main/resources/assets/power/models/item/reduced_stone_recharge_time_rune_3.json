@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "power:item/reduced_stone_recharge_time_rune_3"
+  }
+}

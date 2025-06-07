@@ -1,0 +1,27 @@
+{
+    "name": "Tornado",
+    "icon": "power:textures/mob_effect/tornado_master.png",
+    "category": "power:stones",
+    "sortnum": 12,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Mini-tornado - shoots a small tornado, dealing good damage to entities",
+                "$(li)",
+                "Tornado Capture - allows you to capture the nearest entity in a tornado and lift it up, thus dealing fall damage.",
+                "$(li)",
+                "Tornado Flight - allows the tornado master to rise into the air using vortices."
+            ]
+        },
+        {
+            "type": "patchouli:entity",
+            "name": "Master of Tornado",
+            "border": true,
+            "scale": 0.75,
+            "entity": "power:example_master{HandItems:[{id:\"power:tornado_axe\",count:1}],ArmorItems:[{id:\"power:tornado_armor_boots\",count:1},{id:\"power:tornado_armor_leggings\",count:1},{id:\"power:tornado_armor_chestplate\",count:1},{id:\"power:tornado_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+        }
+    ]
+}

@@ -4,9 +4,11 @@ package com.esmods.keepersofthestonestwo.entity;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -17,12 +19,15 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
@@ -85,6 +90,43 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 		}
 	}
 
+	@Nullable
+	@Override
+	protected EntityHitResult findHitEntity(Vec3 projectilePosition, Vec3 deltaPosition) {
+		double d0 = Double.MAX_VALUE;
+		Entity entity = null;
+		AABB lookupBox = this.getBoundingBox();
+		for (Entity entity1 : this.level().getEntities(this, lookupBox, this::canHitEntity)) {
+			if (entity1 == this.getOwner())
+				continue;
+			AABB aabb = entity1.getBoundingBox();
+			if (aabb.intersects(lookupBox)) {
+				double d1 = projectilePosition.distanceToSqr(projectilePosition);
+				if (d1 < d0) {
+					entity = entity1;
+					d0 = d1;
+				}
+			}
+		}
+		return entity == null ? null : new EntityHitResult(entity);
+	}
+
+	private Direction determineHitDirection(AABB entityBox, AABB blockBox) {
+		double dx = entityBox.getCenter().x - blockBox.getCenter().x;
+		double dy = entityBox.getCenter().y - blockBox.getCenter().y;
+		double dz = entityBox.getCenter().z - blockBox.getCenter().z;
+		double absDx = Math.abs(dx);
+		double absDy = Math.abs(dy);
+		double absDz = Math.abs(dz);
+		if (absDy > absDx && absDy > absDz) {
+			return dy > 0 ? Direction.DOWN : Direction.UP;
+		} else if (absDx > absDz) {
+			return dx > 0 ? Direction.WEST : Direction.EAST;
+		} else {
+			return dz > 0 ? Direction.NORTH : Direction.SOUTH;
+		}
+	}
+
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
@@ -100,6 +142,18 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void tick() {
 		super.tick();
+		if (!this.isNoPhysics()) {
+			for (VoxelShape collision : this.level().getBlockCollisions(this, this.getBoundingBox())) {
+				for (AABB blockAABB : collision.toAabbs()) {
+					if (this.getBoundingBox().intersects(blockAABB)) {
+						BlockPos blockPos = new BlockPos((int) blockAABB.minX, (int) blockAABB.minY, (int) blockAABB.minZ);
+						Vec3 intersectionPoint = new Vec3((blockAABB.minX + blockAABB.maxX) / 2, (blockAABB.minY + blockAABB.maxY) / 2, (blockAABB.minZ + blockAABB.maxZ) / 2);
+						Direction hitDirection = determineHitDirection(this.getBoundingBox(), blockAABB);
+						this.hitTargetOrDeflectSelf(new BlockHitResult(intersectionPoint, hitDirection, blockPos, false));
+					}
+				}
+			}
+		}
 		AtomicRocketKazhdyiTikPriPoliotieSnariadaProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 		if (this.inGround)
 			this.discard();

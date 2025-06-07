@@ -29,7 +29,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.HolderLookup;
 
 import java.util.function.Supplier;
-import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -86,7 +85,6 @@ public class PowerModVariables {
 			clone.leggings = original.leggings;
 			clone.boots = original.boots;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
-			clone.hypnotized = original.hypnotized;
 			clone.level = original.level;
 			clone.level_exp = original.level_exp;
 			clone.base_damage_by_lvl = original.base_damage_by_lvl;
@@ -96,6 +94,10 @@ public class PowerModVariables {
 			clone.haste_char = original.haste_char;
 			clone.jump_char = original.jump_char;
 			clone.rank = original.rank;
+			clone.mind_used = original.mind_used;
+			clone.blue_rune_slot = original.blue_rune_slot;
+			clone.red_rune_slot = original.red_rune_slot;
+			clone.green_rune_slot = original.green_rune_slot;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -122,11 +124,9 @@ public class PowerModVariables {
 				clone.transfered_power = original.transfered_power;
 				clone.master_effect_end = original.master_effect_end;
 				clone.master_effect_start = original.master_effect_start;
-				clone.is_not_stone = original.is_not_stone;
-				clone.attribute_is_ready = original.attribute_is_ready;
 				clone.level_up_status = original.level_up_status;
-				clone.cursed_fog = original.cursed_fog;
-				clone.fog_distance = original.fog_distance;
+				clone.mind_player_owner = original.mind_player_owner;
+				clone.rune_ovelay_display = original.rune_ovelay_display;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -249,6 +249,8 @@ public class PowerModVariables {
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
 		public double cpapi_ver = 21.0;
+		public boolean heat_stone = false;
+		public boolean shockwave_stone = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -314,6 +316,8 @@ public class PowerModVariables {
 			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
 			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
 			cpapi_ver = nbt.getDouble("cpapi_ver");
+			heat_stone = nbt.getBoolean("heat_stone");
+			shockwave_stone = nbt.getBoolean("shockwave_stone");
 		}
 
 		@Override
@@ -375,6 +379,8 @@ public class PowerModVariables {
 			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
 			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
 			nbt.putDouble("cpapi_ver", cpapi_ver);
+			nbt.putBoolean("heat_stone", heat_stone);
+			nbt.putBoolean("shockwave_stone", shockwave_stone);
 			return nbt;
 		}
 
@@ -477,23 +483,24 @@ public class PowerModVariables {
 		public ItemStack boots = ItemStack.EMPTY;
 		public boolean unlock_keepers_box = false;
 		public boolean transfered_power = false;
-		public boolean hypnotized = false;
 		public boolean master_effect_end = false;
 		public boolean master_effect_start = false;
 		public double level = 1.0;
 		public double level_exp = 0.0;
 		public double base_damage_by_lvl = 6.0;
 		public double max_level_exp = 100.0;
-		public boolean is_not_stone = false;
-		public boolean attribute_is_ready = false;
 		public double resistance_char = 0.0;
 		public double speed_char = 1.0;
 		public double haste_char = -1.0;
 		public double jump_char = 1.0;
 		public boolean level_up_status = false;
 		public String rank = "D";
-		public boolean cursed_fog = false;
-		public double fog_distance = 100.0;
+		public String mind_player_owner = "\"\"";
+		public boolean mind_used = false;
+		public ItemStack blue_rune_slot = ItemStack.EMPTY;
+		public ItemStack red_rune_slot = ItemStack.EMPTY;
+		public ItemStack green_rune_slot = ItemStack.EMPTY;
+		public double rune_ovelay_display = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -539,23 +546,24 @@ public class PowerModVariables {
 			nbt.put("boots", boots.saveOptional(lookupProvider));
 			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
 			nbt.putBoolean("transfered_power", transfered_power);
-			nbt.putBoolean("hypnotized", hypnotized);
 			nbt.putBoolean("master_effect_end", master_effect_end);
 			nbt.putBoolean("master_effect_start", master_effect_start);
 			nbt.putDouble("level", level);
 			nbt.putDouble("level_exp", level_exp);
 			nbt.putDouble("base_damage_by_lvl", base_damage_by_lvl);
 			nbt.putDouble("max_level_exp", max_level_exp);
-			nbt.putBoolean("is_not_stone", is_not_stone);
-			nbt.putBoolean("attribute_is_ready", attribute_is_ready);
 			nbt.putDouble("resistance_char", resistance_char);
 			nbt.putDouble("speed_char", speed_char);
 			nbt.putDouble("haste_char", haste_char);
 			nbt.putDouble("jump_char", jump_char);
 			nbt.putBoolean("level_up_status", level_up_status);
 			nbt.putString("rank", rank);
-			nbt.putBoolean("cursed_fog", cursed_fog);
-			nbt.putDouble("fog_distance", fog_distance);
+			nbt.putString("mind_player_owner", mind_player_owner);
+			nbt.putBoolean("mind_used", mind_used);
+			nbt.put("blue_rune_slot", blue_rune_slot.saveOptional(lookupProvider));
+			nbt.put("red_rune_slot", red_rune_slot.saveOptional(lookupProvider));
+			nbt.put("green_rune_slot", green_rune_slot.saveOptional(lookupProvider));
+			nbt.putDouble("rune_ovelay_display", rune_ovelay_display);
 			return nbt;
 		}
 
@@ -602,46 +610,40 @@ public class PowerModVariables {
 			boots = ItemStack.parseOptional(lookupProvider, nbt.getCompound("boots"));
 			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
 			transfered_power = nbt.getBoolean("transfered_power");
-			hypnotized = nbt.getBoolean("hypnotized");
 			master_effect_end = nbt.getBoolean("master_effect_end");
 			master_effect_start = nbt.getBoolean("master_effect_start");
 			level = nbt.getDouble("level");
 			level_exp = nbt.getDouble("level_exp");
 			base_damage_by_lvl = nbt.getDouble("base_damage_by_lvl");
 			max_level_exp = nbt.getDouble("max_level_exp");
-			is_not_stone = nbt.getBoolean("is_not_stone");
-			attribute_is_ready = nbt.getBoolean("attribute_is_ready");
 			resistance_char = nbt.getDouble("resistance_char");
 			speed_char = nbt.getDouble("speed_char");
 			haste_char = nbt.getDouble("haste_char");
 			jump_char = nbt.getDouble("jump_char");
 			level_up_status = nbt.getBoolean("level_up_status");
 			rank = nbt.getString("rank");
-			cursed_fog = nbt.getBoolean("cursed_fog");
-			fog_distance = nbt.getDouble("fog_distance");
+			mind_player_owner = nbt.getString("mind_player_owner");
+			mind_used = nbt.getBoolean("mind_used");
+			blue_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("blue_rune_slot"));
+			red_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("red_rune_slot"));
+			green_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("green_rune_slot"));
+			rune_ovelay_display = nbt.getDouble("rune_ovelay_display");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
-			if (!entity.level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(entity.level().players())) {
-					if (entityiterator instanceof ServerPlayer serverPlayer)
-						PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this, entity.getId()));
-				}
-			}
+			if (entity instanceof ServerPlayer serverPlayer)
+				PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this));
 		}
 	}
 
-	public record PlayerVariablesSyncMessage(PlayerVariables data, int target) implements CustomPacketPayload {
+	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
 		public static final Type<PlayerVariablesSyncMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "player_variables_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> {
-			buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess()));
-			buffer.writeInt(message.target()); // Write the entity ID to the buffer
-		}, (RegistryFriendlyByteBuf buffer) -> {
-			var nbt = buffer.readNbt();
-			PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables(), buffer.readInt());
-			message.data.deserializeNBT(buffer.registryAccess(), nbt);
-			return message;
-		});
+		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec
+				.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess())), (RegistryFriendlyByteBuf buffer) -> {
+					PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables());
+					message.data.deserializeNBT(buffer.registryAccess(), buffer.readNbt());
+					return message;
+				});
 
 		@Override
 		public Type<PlayerVariablesSyncMessage> type() {
@@ -650,11 +652,10 @@ public class PowerModVariables {
 
 		public static void handleData(final PlayerVariablesSyncMessage message, final IPayloadContext context) {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
-				context.enqueueWork(() -> context.player().level().getEntity(message.target()).getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess())))
-						.exceptionally(e -> {
-							context.connection().disconnect(Component.literal(e.getMessage()));
-							return null;
-						});
+				context.enqueueWork(() -> context.player().getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess()))).exceptionally(e -> {
+					context.connection().disconnect(Component.literal(e.getMessage()));
+					return null;
+				});
 			}
 		}
 	}

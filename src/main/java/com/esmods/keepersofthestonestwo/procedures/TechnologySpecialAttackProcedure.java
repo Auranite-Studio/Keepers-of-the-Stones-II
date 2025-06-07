@@ -68,12 +68,14 @@ public class TechnologySpecialAttackProcedure {
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("technology_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 60) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TECHNOBARRIER, 300, 0, false, false));
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 60;
-					_vars.syncPlayerVariables(entity);
+				if (!(entity instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(PowerModMobEffects.PROTECTION))) {
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TECHNOBARRIER, 300, 0, false, false));
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 60;
+						_vars.syncPlayerVariables(entity);
+					}
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("technology_ability_3")) {

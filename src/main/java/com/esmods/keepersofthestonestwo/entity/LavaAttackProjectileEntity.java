@@ -4,14 +4,15 @@ package com.esmods.keepersofthestonestwo.entity;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -25,6 +26,8 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
@@ -34,7 +37,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class LavaAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.LAVA);
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Items.LAVA_BUCKET);
 	private int knockback = 0;
 
 	public LavaAttackProjectileEntity(EntityType<? extends LavaAttackProjectileEntity> type, Level world) {
@@ -61,7 +64,7 @@ public class LavaAttackProjectileEntity extends AbstractArrow implements ItemSup
 
 	@Override
 	protected ItemStack getDefaultPickupItem() {
-		return new ItemStack(Blocks.LAVA);
+		return new ItemStack(Items.LAVA_BUCKET);
 	}
 
 	@Override
@@ -108,6 +111,22 @@ public class LavaAttackProjectileEntity extends AbstractArrow implements ItemSup
 		return entity == null ? null : new EntityHitResult(entity);
 	}
 
+	private Direction determineHitDirection(AABB entityBox, AABB blockBox) {
+		double dx = entityBox.getCenter().x - blockBox.getCenter().x;
+		double dy = entityBox.getCenter().y - blockBox.getCenter().y;
+		double dz = entityBox.getCenter().z - blockBox.getCenter().z;
+		double absDx = Math.abs(dx);
+		double absDy = Math.abs(dy);
+		double absDz = Math.abs(dz);
+		if (absDy > absDx && absDy > absDz) {
+			return dy > 0 ? Direction.DOWN : Direction.UP;
+		} else if (absDx > absDz) {
+			return dx > 0 ? Direction.WEST : Direction.EAST;
+		} else {
+			return dz > 0 ? Direction.NORTH : Direction.SOUTH;
+		}
+	}
+
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
@@ -123,6 +142,18 @@ public class LavaAttackProjectileEntity extends AbstractArrow implements ItemSup
 	@Override
 	public void tick() {
 		super.tick();
+		if (!this.isNoPhysics()) {
+			for (VoxelShape collision : this.level().getBlockCollisions(this, this.getBoundingBox())) {
+				for (AABB blockAABB : collision.toAabbs()) {
+					if (this.getBoundingBox().intersects(blockAABB)) {
+						BlockPos blockPos = new BlockPos((int) blockAABB.minX, (int) blockAABB.minY, (int) blockAABB.minZ);
+						Vec3 intersectionPoint = new Vec3((blockAABB.minX + blockAABB.maxX) / 2, (blockAABB.minY + blockAABB.maxY) / 2, (blockAABB.minZ + blockAABB.maxZ) / 2);
+						Direction hitDirection = determineHitDirection(this.getBoundingBox(), blockAABB);
+						this.hitTargetOrDeflectSelf(new BlockHitResult(intersectionPoint, hitDirection, blockPos, false));
+					}
+				}
+			}
+		}
 		if (this.inGround)
 			this.discard();
 	}

@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Gigantization",
@@ -7,6 +7,9 @@
     "color": {
       "value": -26113,
       "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
     },
     "isInstant": false,
     "mobEffectCategory": "NEUTRAL",
@@ -47,6 +50,13 @@
           "value": "BLOCK_REACH"
         },
         "amount": 45.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "JUMP_STRENGTH"
+        },
+        "amount": 1.0,
         "operation": "ADD_VALUE"
       }
     ]

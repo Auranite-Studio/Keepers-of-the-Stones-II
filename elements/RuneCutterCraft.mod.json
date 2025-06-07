@@ -1,10 +1,11 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
+    "unlockingItems": [],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,
@@ -12,22 +13,22 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "PowerModItems.COPYRIUM_INGOT"
+        "value": "CUSTOM:CopyriumIngot"
       },
       {
-        "value": "PowerModItems.COPYRIUM_INGOT"
+        "value": "CUSTOM:CopyriumIngot"
       },
       {
-        "value": "PowerModItems.COPYRIUM_INGOT"
+        "value": "CUSTOM:CopyriumIngot"
       },
       {
-        "value": "PowerModItems.COPYRIUM_INGOT"
+        "value": "CUSTOM:CopyriumIngot"
       },
       {
         "value": "Blocks.COBBLED_DEEPSLATE"
       },
       {
-        "value": "PowerModItems.COPYRIUM_INGOT"
+        "value": "CUSTOM:CopyriumIngot"
       },
       {
         "value": "Blocks.COBBLED_DEEPSLATE"

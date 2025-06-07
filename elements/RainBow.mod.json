@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "item",
   "definition": {
     "renderType": 1,
@@ -33,7 +33,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onItemInInventoryTick": {
-      "name": "RainBowKazhdyiTikVInvientarie"
+      "name": "RemoveForbiddenItem"
     },
     "enableRanged": true,
     "shootConstantly": false,
@@ -52,7 +52,12 @@
     "isAlwaysEdible": false,
     "animation": "bow",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
-    "musicDiscAnalogOutput": 0
+    "musicDiscAnalogOutput": 0,
+    "providedBannerPatterns": []
   }
 }
