@@ -3,13 +3,13 @@
 - *N/A*
 
 **Improvemnts** 
+- In the rune cutter, it is now possible to improve runes that have levels
 - Now the runes can be removed by pressing SHIFT + U
 - Changed the item inside the cursed vault to an unknown rune
 - The runologist's got new deals
 - Now, when crafting energium dust, the player gets it in the amount of 4 pieces instead of 1
 
 **API changes**
-- In the rune cutter, it is now possible to improve runes that are leveled up
 - Completely redesigned the version checking system to now include checking for updates from the Modrinth website
 - Adding missing runes to tags
 
