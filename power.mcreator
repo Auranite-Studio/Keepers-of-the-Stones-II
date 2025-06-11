@@ -32461,41 +32461,6 @@
       "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
     },
     {
-      "name": "AbilityKeyPressed2Tick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ability_key_pressed_2_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AbilityKeyPressed2TickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
-    },
-    {
       "name": "HeatBatteryUse",
       "type": "procedure",
       "compiles": true,
@@ -33772,6 +33737,76 @@
         ]
       },
       "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "AbilitiesCheck1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abilities_check_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AbilitiesCheck1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
+    },
+    {
+      "name": "AbilitiesCheck2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abilities_check_2",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AbilitiesCheck2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
     }
   ],
   "variable_elements": [
