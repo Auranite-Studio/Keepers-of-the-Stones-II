@@ -5,6 +5,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -46,13 +47,10 @@ public class RuneCutterGUIScreen extends AbstractContainerScreen<RuneCutterGUIMe
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rune_cutter_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/rune_cutter_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 		if (RuneCutterValidRecipeProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rune_cutter_gui_arrow.png"), this.leftPos + 77, this.topPos + 29, 0, 0, 20, 23, 20, 23);
+			guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/rune_cutter_gui_arrow.png"), this.leftPos + 77, this.topPos + 29, 0, 0, 20, 23, 20, 23);
 		}
-		RenderSystem.disableBlend();
 	}
 
 	@Override
