@@ -22,7 +22,7 @@
 
 **API changes**
 - Colorful Powers API has been updated to 26
-- Added missing rune-related tags
+- Added new rune-related tags
 - Added a warning about using beta versions of the mod, and if Modrinth has a newer version
 - Compatibility of add-ons developed for earlier versions of the mod (1.1.6-1.1.8) is preserved
 
