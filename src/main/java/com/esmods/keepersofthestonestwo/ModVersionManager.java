@@ -166,7 +166,7 @@ public class ModVersionManager {
 		}
 
 		private String truncateToThreeParts(String version) {
-			String baseVersion = version.split("-")[0]; // Убираем суффиксы
+			String baseVersion = version.split("-")[0];
 			String[] parts = baseVersion.split("\\.");
 			if (parts.length >= 3) {
 				return parts[0] + "." + parts[1] + "." + parts[2];
@@ -189,7 +189,7 @@ public class ModVersionManager {
 		}
 
 		private int[] parseVersionParts(String version) {
-			String baseVersion = version.split("-")[0]; // Отделяем основную часть
+			String baseVersion = version.split("-")[0];
 			String[] parts = baseVersion.split("\\.");
 			int[] result = new int[parts.length];
 			for (int i = 0; i < parts.length; i++) {
