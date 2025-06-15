@@ -2,7 +2,6 @@
 package com.esmods.keepersofthestonestwo.item;
 
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
 
@@ -10,7 +9,7 @@ import com.esmods.keepersofthestonestwo.procedures.CursedKeyOpenVaultProcedure;
 
 public class CursedKeyItem extends Item {
 	public CursedKeyItem(Item.Properties properties) {
-		super(properties.rarity(Rarity.COMMON).stacksTo(16));
+		super(properties.stacksTo(16));
 	}
 
 	@Override

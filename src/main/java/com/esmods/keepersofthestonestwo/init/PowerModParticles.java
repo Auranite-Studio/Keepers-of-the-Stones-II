@@ -17,9 +17,11 @@ import com.esmods.keepersofthestonestwo.client.particle.TeleportationParticlePar
 import com.esmods.keepersofthestonestwo.client.particle.TechnobarrierParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.SunParticlesParticle;
 import com.esmods.keepersofthestonestwo.client.particle.StarParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.ShockWavesParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.RunesOfDestructionParticle;
 import com.esmods.keepersofthestonestwo.client.particle.RunesOfCreationParticle;
 import com.esmods.keepersofthestonestwo.client.particle.RedMagnetParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.ProtectionParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.PoisonParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.PlagueParticleTwoParticle;
 import com.esmods.keepersofthestonestwo.client.particle.PlagueParticleThreeParticle;
@@ -76,5 +78,7 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.FEATHER_PARTICLE.get(), FeatherParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.MIND_REACTION_PARTICLE.get(), MindReactionParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.LIGHTNING_PARTICLE.get(), LightningParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.SHOCK_WAVES_PARTICLE.get(), ShockWavesParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.PROTECTION_PARTICLE.get(), ProtectionParticleParticle::provider);
 	}
 }

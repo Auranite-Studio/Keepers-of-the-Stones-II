@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -49,6 +49,7 @@
     },
     "musicDiscDescription": "bxkqq - Call of the Past",
     "musicDiscLengthInTicks": 2960,
-    "musicDiscAnalogOutput": 8
+    "musicDiscAnalogOutput": 8,
+    "providedBannerPatterns": []
   }
 }

@@ -9,6 +9,8 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.model.HumanoidModel;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+
 import com.esmods.keepersofthestonestwo.entity.ShadowEntity;
 
 public class ShadowRenderer extends HumanoidMobRenderer<ShadowEntity, HumanoidRenderState, HumanoidModel<HumanoidRenderState>> {
@@ -33,5 +35,10 @@ public class ShadowRenderer extends HumanoidMobRenderer<ShadowEntity, HumanoidRe
 	@Override
 	public ResourceLocation getTextureLocation(HumanoidRenderState state) {
 		return ResourceLocation.parse("power:textures/entities/shadow.png");
+	}
+
+	@Override
+	protected void scale(HumanoidRenderState state, PoseStack poseStack) {
+		poseStack.scale(entity.getAgeScale(), entity.getAgeScale(), entity.getAgeScale());
 	}
 }

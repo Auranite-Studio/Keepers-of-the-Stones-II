@@ -26,7 +26,8 @@ public class EnergiumGolemCoreAttackParticleParticle extends TextureSheetParticl
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			return new EnergiumGolemCoreAttackParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			EnergiumGolemCoreAttackParticleParticle particle = new EnergiumGolemCoreAttackParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			return particle;
 		}
 	}
 

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aaa",
+    " a "
+  ],
+  "key": {
+    "a": "power:depleted_energium_ingot",
+    "b": "power:energium_ingot"
+  },
+  "result": {
+    "id": "power:energium_shield",
+    "count": 1
+  }
+}

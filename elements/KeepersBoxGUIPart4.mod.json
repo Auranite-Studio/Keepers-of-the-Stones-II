@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -38,8 +38,11 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_button_down_locked",
-          "image": "keepers_box_button_down_locked.png",
-          "hoveredImage": "",
+          "image": "keepers_box_button_down.png",
+          "hoveredImage": "keepers_box_button_down_active.png",
+          "onClick": {
+            "name": "KBtoPart5"
+          },
           "x": 289,
           "y": 129,
           "locked": false
@@ -295,7 +298,7 @@
           "displayCondition": {
             "name": "SandStoneCheck"
           },
-          "x": 243,
+          "x": 242,
           "y": 132,
           "locked": false
         }
