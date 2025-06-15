@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -51,6 +50,7 @@ public record RuneCutterGUISlotMessage(int slotID, int x, int y, int z, int chan
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (slot == 2 && changeType == 1) {
+			int amount = meta;
 
 			RemoveWhenRuneIsCuttedProcedure.execute(world, x, y, z);
 		}

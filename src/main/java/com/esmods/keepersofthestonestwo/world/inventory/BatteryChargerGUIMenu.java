@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.world.inventory;
 
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
@@ -164,12 +163,14 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Powe
 				}
 				return ItemStack.EMPTY;
 			}
-			if (itemstack1.getCount() == 0)
-				slot.set(ItemStack.EMPTY);
-			else
+			if (itemstack1.isEmpty()) {
+				slot.setByPlayer(ItemStack.EMPTY);
+			} else {
 				slot.setChanged();
-			if (itemstack1.getCount() == itemstack.getCount())
+			}
+			if (itemstack1.getCount() == itemstack.getCount()) {
 				return ItemStack.EMPTY;
+			}
 			slot.onTake(playerIn, itemstack1);
 		}
 		return itemstack;

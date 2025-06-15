@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.recipe.brewing;
 
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;

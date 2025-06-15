@@ -39111,6 +39111,41 @@
       "power.modupdater.click_event": " ➜ 点击查看更改"
     }
   },
+  "metadata": {
+    "files": [
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/resources/power.mixins.json",
+      "src/main/java/com/esmods/keepersofthestonestwo/PowerMod.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/PowerModVariables.java",
+      "src/main/resources/assets/power/sounds.json",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModConfigs.java",
+      "src/main/resources/data/minecraft/tags/item/trim_materials.json",
+      "src/main/resources/assets/minecraft/atlases/armor_trims.json",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBiomes.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/NoiseGeneratorSettingsMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModPotions.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/MenuStateUpdateMessage.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModScreens.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModMenus.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModKeyMappings.java",
+      "src/main/resources/data/minecraft/tags/point_of_interest_type/acquirable_job_site.json",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModVillagerProfessions.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTrades.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModParticles.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModParticleTypes.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModMobEffects.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBlocks.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBlockEntities.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModItems.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntityRenderers.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntities.java"
+    ]
+  },
   "foldersRoot": {
     "name": "~",
     "children": [
@@ -40023,5 +40058,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500222522
+  "mcreatorVersion": 202500225101
 }

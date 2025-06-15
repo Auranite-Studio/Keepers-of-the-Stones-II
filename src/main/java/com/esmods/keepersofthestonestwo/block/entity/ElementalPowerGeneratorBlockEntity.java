@@ -1,7 +1,4 @@
-
 package com.esmods.keepersofthestonestwo.block.entity;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -26,8 +23,7 @@ import java.util.stream.IntStream;
 import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
 
 public class ElementalPowerGeneratorBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(1, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(1, ItemStack.EMPTY);
 
 	public ElementalPowerGeneratorBlockEntity(BlockPos position, BlockState state) {
 		super(PowerModBlockEntities.ELEMENTAL_POWER_GENERATOR.get(), position, state);
@@ -120,9 +116,5 @@ public class ElementalPowerGeneratorBlockEntity extends RandomizableContainerBlo
 	@Override
 	public boolean canTakeItemThroughFace(int index, ItemStack itemstack, Direction direction) {
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

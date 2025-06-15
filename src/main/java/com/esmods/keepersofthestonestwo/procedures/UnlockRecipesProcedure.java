@@ -32,7 +32,7 @@ public class UnlockRecipesProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.DEPLETED_ENERGIUM_INGOT.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModItems.DEPLETED_ENERGIUM_INGOT.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:empty_battery_recipe")));
 			if (entity instanceof ServerPlayer _serverPlayer)
@@ -40,11 +40,11 @@ public class UnlockRecipesProcedure {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:battery_charger_recipe")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:depleted_energium_block_ore_recipe")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.ENERGIUM_INGOT.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModItems.ENERGIUM_INGOT.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:energium_ore_block_recipe")));
 			if (entity instanceof ServerPlayer _serverPlayer)
@@ -66,35 +66,35 @@ public class UnlockRecipesProcedure {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:energium_armor_boots_recipe")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.ENERGIUM_BLOCK.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModBlocks.ENERGIUM_BLOCK.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:energium_block_ore_recipe")));
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:energium_controller_recipe")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.ENERGIUM_UPGRADE_SMITHING_TEMPLATE.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModItems.ENERGIUM_UPGRADE_SMITHING_TEMPLATE.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:duplicate_energium_upgrade_smithing_template")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.ENERGIUM_CORE.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModItems.ENERGIUM_CORE.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:energium_controller_recipe")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:raw_depleted_energium_craft")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:raw_depleted_energium_block_craft")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.AMPLIFIER_BLOCK.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModBlocks.AMPLIFIER_BLOCK.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:amplifier_drop_from_block")));
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:cursed_lamp_craft")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.AMPLIFIER_DROP.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModItems.AMPLIFIER_DROP.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:amplifier_block_recipe")));
 			if (entity instanceof ServerPlayer _serverPlayer)
@@ -104,23 +104,23 @@ public class UnlockRecipesProcedure {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:cursed_lantern_craft")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.RAW_AMPLIFIER_BLOCK.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModBlocks.RAW_AMPLIFIER_BLOCK.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:raw_amplifier_craft")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.RAW_AMPLIFIER.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModItems.RAW_AMPLIFIER.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:raw_amplifier_block_craft")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.RAW_COPYRIUM.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModItems.RAW_COPYRIUM.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:raw_copyrium_block_craft")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.RAW_COPYRIUM_BLOCK.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModBlocks.RAW_COPYRIUM_BLOCK.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:raw_copyrium_from_block_craft")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.COPYRIUM_INGOT.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModItems.COPYRIUM_INGOT.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:copyrium_ore_block_recipe")));
 			if (entity instanceof ServerPlayer _serverPlayer)
@@ -128,23 +128,29 @@ public class UnlockRecipesProcedure {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:characteristics_card_craft")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.COPYRIUM_BLOCK.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModBlocks.COPYRIUM_BLOCK.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:copyrium_block_ore_recipe")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.CURSED_STONE.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModBlocks.CURSED_STONE.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:cursed_ladder_craft")));
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:cursed_lantern_craft")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.CURSED_STONE_BRICKS.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModBlocks.CURSED_STONE_BRICKS.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:cursed_lamp_craft")));
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.FREAKING_PARSNIP.get())) : false) {
+		if (hasEntityInInventory(entity, new ItemStack(PowerModItems.FREAKING_PARSNIP.get()))) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:freaking_parsnip_soup_craft")));
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

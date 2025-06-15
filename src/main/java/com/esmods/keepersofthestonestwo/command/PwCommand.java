@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.command;
 
 import org.checkerframework.checker.units.qual.s;
