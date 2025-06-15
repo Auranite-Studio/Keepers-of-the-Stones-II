@@ -36,13 +36,13 @@ public class ElementalPowerGeneratorBlock extends Block implements EntityBlock {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 
 	public ElementalPowerGeneratorBlock(BlockBehaviour.Properties properties) {
-		super(properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.METAL).strength(5f).lightLevel(s -> (new Object() {
+		super(properties.sound(SoundType.METAL).strength(5f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 7;
 				return 0;
 			}
-		}.getLightLevel())).requiresCorrectToolForDrops());
+		}.getLightLevel())).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

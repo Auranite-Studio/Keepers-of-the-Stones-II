@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -49,6 +49,7 @@
     },
     "musicDiscDescription": "bxkqq - Ancient Mood",
     "musicDiscLengthInTicks": 4060,
-    "musicDiscAnalogOutput": 9
+    "musicDiscAnalogOutput": 9,
+    "providedBannerPatterns": []
   }
 }

@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Blocks;
 
 public class CursedStoneStairsBlock extends StairBlock {
 	public CursedStoneStairsBlock(BlockBehaviour.Properties properties) {
-		super(Blocks.AIR.defaultBlockState(), properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.TUFF).strength(2.5f, 3f).dynamicShape());
+		super(Blocks.AIR.defaultBlockState(), properties.sound(SoundType.TUFF).strength(2.5f, 3f).dynamicShape().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

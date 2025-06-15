@@ -5,7 +5,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.network.chat.Component;
@@ -14,7 +13,7 @@ import java.util.List;
 
 public class EnergiumUpgradeSmithingTemplateItem extends Item {
 	public EnergiumUpgradeSmithingTemplateItem(Item.Properties properties) {
-		super(properties.rarity(Rarity.COMMON).stacksTo(64));
+		super(properties);
 	}
 
 	@Override

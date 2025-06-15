@@ -1,0 +1,14 @@
+package com.esmods.keepersofthestonestwo.procedures;
+
+import net.minecraft.world.entity.Entity;
+
+import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.init.PowerModItems;
+
+public class RedRune5CheckProcedure {
+	public static boolean execute(Entity entity) {
+		if (entity == null)
+			return false;
+		return entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.getItem() == PowerModItems.ADDITION_TIME_MASTER_EFFECT_RUNE_2.get();
+	}
+}

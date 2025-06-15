@@ -8,6 +8,6 @@ import net.minecraft.world.level.block.SoundType;
 
 public class PolishedCursedStoneWallBlock extends WallBlock {
 	public PolishedCursedStoneWallBlock(BlockBehaviour.Properties properties) {
-		super(properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.TUFF).strength(2.5f, 3f).dynamicShape().forceSolidOn());
+		super(properties.sound(SoundType.TUFF).strength(2.5f, 3f).dynamicShape().instrument(NoteBlockInstrument.BASEDRUM).forceSolidOn());
 	}
 }

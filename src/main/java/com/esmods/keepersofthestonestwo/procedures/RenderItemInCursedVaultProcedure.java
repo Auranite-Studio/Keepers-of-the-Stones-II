@@ -263,8 +263,8 @@ public class RenderItemInCursedVaultProcedure {
 								if (((world.getBlockState(new BlockPos(positionx, positiony, positionz))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip9
 										? (world.getBlockState(new BlockPos(positionx, positiony, positionz))).getValue(_getip9)
 										: -1) == 1) {
-									renderItem(new ItemStack(PowerModItems.AMPLIFIER_RING.get()), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), (float) PowerModVariables.WorldVariables.get(world).entity_rotation, -30, 0, (float) 0.4,
-											false, true);
+									renderItem(new ItemStack(PowerModItems.UNKNOWN_RUNE.get()), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), (float) PowerModVariables.WorldVariables.get(world).entity_rotation, -30, 0, (float) 0.4, false,
+											true);
 								}
 							}
 						}

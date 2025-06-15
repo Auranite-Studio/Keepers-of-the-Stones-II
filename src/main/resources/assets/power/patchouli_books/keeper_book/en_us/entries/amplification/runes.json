@@ -1,0 +1,70 @@
+{
+  "name": "Runes",
+  "icon": "power:dodging_rune",
+  "category": "power:amplification",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Runes are passive ability amplifiers. There are three types: blue, red, and green. A player can activate only one rune per type. Runes can be obtained from cursed vault as an unknown rune.$(br)$(br)Green runes drop with a 15% chance (3% each).$(br)Blue runes drop with a 45% chance.$(br)Red runes drop with a 40% chance (20% each)."
+    },
+    {
+      "type": "spotlight",
+      "title": "Unknown Rune",
+      "item": "power:unknown_rune",
+      "text": "Activated with right-click mouse button to obtain a random rune.$(br)Source: cursed vault."
+    },
+    {
+      "type": "spotlight",
+      "title": "Star Points Ampl. Rune",
+      "item": "power:extra_star_points_rune_3",
+      "text": "Amplifies star points:$(br)- I: +10$(br)- II: +15$(br)- III: +20$(br)Type: Blue$(br)Upgradable via runelogist."
+    },
+    {
+      "type": "spotlight",
+      "title": "Master Ef. Dur. Rune",
+      "item": "power:addition_time_master_effect_rune_3",
+      "text": "Extends master effect duration:$(br)- I: +2 min 30 sec$(br)- II: +5 min$(br)- III: +10 min$(br)Type: Red$(br)Upgradable via runelogist."
+    },
+    {
+      "type": "spotlight",
+      "title": "Stone Rech. Red. Rune",
+      "item": "power:reduced_stone_recharge_time_rune_3",
+      "text": "Reduces stone recharge time:$(br)- I: -30 sec$(br)- II: -1 min$(br)- III: -2 min 30 sec$(br)Type: Red$(br)Upgradable via runelogist."
+    },
+    {
+      "type": "spotlight",
+      "title": "Protection Rune",
+      "item": "power:protection_rune",
+      "text": "Creates a spherical shield.$(br)Type: Green$(br)No levels."
+    },
+    {
+      "type": "spotlight",
+      "title": "Spin Rune",
+      "item": "power:spin_rune",
+      "text": "Generates a tornado around the player that deals damage.$(br)Type: Green$(br)No levels."
+    },
+    {
+      "type": "spotlight",
+      "title": "Dodging Rune",
+      "item": "power:dodging_rune",
+      "text": "Automatically dodges attacks.$(br)Type: Green$(br)No levels."
+    },
+    {
+      "type": "spotlight",
+      "title": "Invisibility Rune",
+      "item": "power:invisibility_rune",
+      "text": "Makes the player fully invisible.$(br)Type: Green$(br)No levels."
+    },
+    {
+      "type": "spotlight",
+      "title": "Healing Rune",
+      "item": "power:healing_rune",
+      "text": "Triggers a regeneration effect.$(br)Type: Green$(br)No levels."
+    },
+    {
+      "type": "text",
+      "text": "Rune Upgrades$(br)$(br)Upgrade blue and red runes via a new villager profession: runelogist. To do this:$(br)- Collect runes from cursed vault.$(br)- Trade them with the runelogist to reach maximum level."
+    }
+  ]
+}

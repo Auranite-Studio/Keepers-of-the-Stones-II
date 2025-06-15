@@ -1,15 +1,20 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "star_extra_booster",
+    "texture": "star_extra_rune_2",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Rune",
-    "rarity": "COMMON",
-    "creativeTabs": [],
+    "rarity": "RARE",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Items"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -26,10 +31,11 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§9Extra Star Points II",
-        "",
-        "§1§o+15 to the max. number of star points",
-        "§c§oIncompatible with similar runes"
+        "§9Star Points Amplifier II",
+        "§7Type:",
+        " §1Blue",
+        "§7Specifications:",
+        " §9+15 to the max. number of star points"
       ]
     },
     "glowCondition": {
@@ -37,6 +43,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "ExtraStarPointsRune2Use"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
@@ -59,6 +68,7 @@
     },
     "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
-    "musicDiscAnalogOutput": 0
+    "musicDiscAnalogOutput": 0,
+    "providedBannerPatterns": []
   }
 }

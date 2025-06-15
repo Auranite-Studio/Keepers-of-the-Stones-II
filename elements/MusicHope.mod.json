@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -58,6 +58,7 @@
     },
     "musicDiscDescription": "bxkqq - Hope",
     "musicDiscLengthInTicks": 4740,
-    "musicDiscAnalogOutput": 12
+    "musicDiscAnalogOutput": 12,
+    "providedBannerPatterns": []
   }
 }

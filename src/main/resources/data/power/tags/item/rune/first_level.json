@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "power:reduced_stone_recharge_time_rune_1",
+    "power:extra_star_points_rune_1",
+    "power:addition_time_master_effect_rune_1"
+  ]
+}

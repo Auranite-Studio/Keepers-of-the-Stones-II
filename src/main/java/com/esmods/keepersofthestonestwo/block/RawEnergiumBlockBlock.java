@@ -4,7 +4,6 @@ package com.esmods.keepersofthestonestwo.block;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.util.RandomSource;
@@ -15,7 +14,7 @@ import com.esmods.keepersofthestonestwo.procedures.EnergiumBlockPowerLockProcedu
 
 public class RawEnergiumBlockBlock extends Block {
 	public RawEnergiumBlockBlock(BlockBehaviour.Properties properties) {
-		super(properties.instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6.25f, 225f).requiresCorrectToolForDrops());
+		super(properties.strength(6.25f, 225f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
