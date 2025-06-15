@@ -7,6 +7,8 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HierarchicalModel;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+
 import com.esmods.keepersofthestonestwo.entity.SpiritEntity;
 import com.esmods.keepersofthestonestwo.client.model.animations.spiritAnimation;
 import com.esmods.keepersofthestonestwo.client.model.Modelspirit;
@@ -14,6 +16,11 @@ import com.esmods.keepersofthestonestwo.client.model.Modelspirit;
 public class SpiritRenderer extends MobRenderer<SpiritEntity, Modelspirit<SpiritEntity>> {
 	public SpiritRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modelspirit.LAYER_LOCATION)), 0.5f);
+	}
+
+	@Override
+	protected void scale(SpiritEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(entity.getAgeScale(), entity.getAgeScale(), entity.getAgeScale());
 	}
 
 	@Override

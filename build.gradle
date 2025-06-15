@@ -1,15 +1,15 @@
 plugins {
     id 'eclipse'
-    id 'net.neoforged.moddev' version '2.0.78'
+    id 'net.neoforged.moddev' version '2.0.89'
 }
 
-version = '1.1.7'
+version = '1.2.0'
 base.archivesName = "Keepers-of-the-Stones-II"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
-    version = "21.1.92"
+    version = "21.1.173"
 
     runs {
         client {

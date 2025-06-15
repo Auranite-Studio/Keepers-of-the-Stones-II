@@ -40,4 +40,5 @@ public class PowerModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> ELECTRICITY = REGISTRY.register("electricity", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "electricity")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> POWER_LEVEL_UP = REGISTRY.register("power.level_up", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "power.level_up")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> RECORD_HOPE = REGISTRY.register("record.hope", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "record.hope")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SHOCKWAVE_IMPACT = REGISTRY.register("shockwave_impact", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "shockwave_impact")));
 }

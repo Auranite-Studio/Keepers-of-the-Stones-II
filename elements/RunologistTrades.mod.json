@@ -1,0 +1,303 @@
+{
+  "_fv": 79,
+  "_type": "villagertrade",
+  "definition": {
+    "tradeEntries": [
+      {
+        "villagerProfession": {
+          "value": "CUSTOM:Runologist"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "CUSTOM:ExtraStarPointsRune1"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 48,
+            "offer": {
+              "value": "CUSTOM:ExtraStarPointsRune2"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:ReducedStoneRechargeTimeRune1"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 48,
+            "offer": {
+              "value": "CUSTOM:ReducedStoneRechargeTimeRune2"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:AdditionTimeMasterEffectRune1"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 48,
+            "offer": {
+              "value": "CUSTOM:AdditionTimeMasterEffectRune2"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:ExtraStarPointsRune2"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 64,
+            "offer": {
+              "value": "CUSTOM:ExtraStarPointsRune3"
+            },
+            "countOffer": 1,
+            "level": 2,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:ReducedStoneRechargeTimeRune2"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 64,
+            "offer": {
+              "value": "CUSTOM:ReducedStoneRechargeTimeRune3"
+            },
+            "countOffer": 1,
+            "level": 2,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:AdditionTimeMasterEffectRune2"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 64,
+            "offer": {
+              "value": "CUSTOM:AdditionTimeMasterEffectRune3"
+            },
+            "countOffer": 1,
+            "level": 2,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:RawAmplifier"
+            },
+            "countPrice1": 2,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 14,
+            "offer": {
+              "value": "CUSTOM:AmplifierRing"
+            },
+            "countOffer": 1,
+            "level": 5,
+            "maxTrades": 3,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:EnergiumDust"
+            },
+            "countPrice1": 16,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "Items.EMERALD"
+            },
+            "countOffer": 28,
+            "level": 2,
+            "maxTrades": 3,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:UnknownRune"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 52,
+            "offer": {
+              "value": "CUSTOM:ProtectionRune"
+            },
+            "countOffer": 1,
+            "level": 4,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:UnknownRune"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 52,
+            "offer": {
+              "value": "CUSTOM:InvisibilityRune"
+            },
+            "countOffer": 1,
+            "level": 4,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "Items.PAPER"
+            },
+            "countPrice1": 3,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 14,
+            "offer": {
+              "value": "CUSTOM:EmptyCharacteristicsCard"
+            },
+            "countOffer": 1,
+            "level": 3,
+            "maxTrades": 3,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:UnknownRune"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 52,
+            "offer": {
+              "value": "CUSTOM:SpinRune"
+            },
+            "countOffer": 1,
+            "level": 5,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:UnknownRune"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 52,
+            "offer": {
+              "value": "CUSTOM:DodgingRune"
+            },
+            "countOffer": 1,
+            "level": 5,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:UnknownRune"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 52,
+            "offer": {
+              "value": "CUSTOM:HealingRune"
+            },
+            "countOffer": 1,
+            "level": 5,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:FreakingParsnip"
+            },
+            "countPrice1": 3,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 5,
+            "offer": {
+              "value": "CUSTOM:FreakingParsnipSoup"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 3,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:EnergiumUpgradeSmithingTemplate"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice2": 45,
+            "offer": {
+              "value": "CUSTOM:EnergiumUpgradeSmithingTemplate"
+            },
+            "countOffer": 2,
+            "level": 4,
+            "maxTrades": 3,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          }
+        ]
+      }
+    ]
+  }
+}

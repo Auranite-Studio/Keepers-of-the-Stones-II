@@ -13,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class DeepslateAmplifierOreBlock extends Block {
 	public DeepslateAmplifierOreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.DEEPSLATE).strength(6.75f, 5f).lightLevel(s -> 2).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).strength(6.75f, 5f).lightLevel(s -> 2).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

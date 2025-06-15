@@ -1,0 +1,14 @@
+package com.esmods.keepersofthestonestwo.procedures;
+
+import net.minecraft.world.entity.Entity;
+
+import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.init.PowerModItems;
+
+public class GreenRune5CheckProcedure {
+	public static boolean execute(Entity entity) {
+		if (entity == null)
+			return false;
+		return entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem() == PowerModItems.HEALING_RUNE.get();
+	}
+}

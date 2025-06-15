@@ -9,7 +9,8 @@
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] 
+- [Bugfix] Fixed a bug that caused the heat and shockwave stone abilities to not work
+- [Bugfix] Fixed a bug that caused green rune abilities to not work
 
 **Known issues**
 - *N/A*
