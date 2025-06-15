@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.block;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
