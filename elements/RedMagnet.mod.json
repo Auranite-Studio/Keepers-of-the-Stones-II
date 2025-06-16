@@ -151,6 +151,8 @@
       4,
       4,
       2
-    ]
+    ],
+    "sensitiveToVibration": false,
+    "vibrationalEvents": []
   }
 }

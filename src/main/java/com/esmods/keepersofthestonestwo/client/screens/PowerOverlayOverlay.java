@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.client.screens;
 
 import org.checkerframework.checker.units.qual.h;

@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.block;
 
 import net.minecraft.world.level.material.Fluids;
@@ -13,6 +12,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.LevelReader;
@@ -49,14 +49,7 @@ public class CursedStonePillarBlock extends Block implements SimpleWaterloggedBl
 
 	@Override
 	public BlockState rotate(BlockState state, Rotation rot) {
-		if (rot == Rotation.CLOCKWISE_90 || rot == Rotation.COUNTERCLOCKWISE_90) {
-			if (state.getValue(AXIS) == Direction.Axis.X) {
-				return state.setValue(AXIS, Direction.Axis.Z);
-			} else if (state.getValue(AXIS) == Direction.Axis.Z) {
-				return state.setValue(AXIS, Direction.Axis.X);
-			}
-		}
-		return state;
+		return RotatedPillarBlock.rotatePillar(state, rot);
 	}
 
 	@Override

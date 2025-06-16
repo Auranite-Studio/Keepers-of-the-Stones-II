@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.item;
 
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;

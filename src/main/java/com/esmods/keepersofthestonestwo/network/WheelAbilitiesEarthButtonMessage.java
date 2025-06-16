@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
