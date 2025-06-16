@@ -39836,6 +39836,7 @@
       "src/main/java/com/esmods/keepersofthestonestwo/network/MenuStateUpdateMessage.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModScreens.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModMenus.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/item/LegacyOverrideSelectItemModel.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModKeyMappings.java",
       "src/main/resources/data/minecraft/tags/point_of_interest_type/acquirable_job_site.json",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModVillagerProfessions.java",

@@ -63,7 +63,7 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     side="BOTH"
 
 [[mixins]]
-    config = "power.mixins.json"
+    config = "power.mixin.json"
 
 # Start of user code block custom mixins
 # End of user code block custom mixins

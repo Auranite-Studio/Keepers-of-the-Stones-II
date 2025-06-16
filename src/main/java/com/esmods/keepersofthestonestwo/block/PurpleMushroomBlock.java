@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.block;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -33,7 +32,7 @@ public class PurpleMushroomBlock extends Block implements SimpleWaterloggedBlock
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public PurpleMushroomBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.FUNGUS).strength(1f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(properties.sound(SoundType.FUNGUS).strength(1f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).replaceable());
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
@@ -86,11 +85,6 @@ public class PurpleMushroomBlock extends Block implements SimpleWaterloggedBlock
 			scheduledTickAccess.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
 		}
 		return !state.canSurvive(world, currentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, world, scheduledTickAccess, currentPos, facing, facingPos, facingState, random);
-	}
-
-	@Override
-	public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
-		return context.getItemInHand().getItem() != this.asItem();
 	}
 
 	@Override
