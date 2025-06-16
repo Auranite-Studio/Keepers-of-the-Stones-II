@@ -1,8 +1,13 @@
 {
   "required": true,
-  "package": "com.esmods.keepersofthestonestwo.mixins",
+  "package": "com.esmods.keepersofthestonestwo.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "NoiseGeneratorSettingsMixin"
+  ],
   "client": [],
-  "minVersion": "0.8"
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8.4"
 }

@@ -18,7 +18,7 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 [[dependencies.power]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.173,)"
+    versionRange="[21.1.176,)"
     ordering="AFTER"
     side="BOTH"
 
