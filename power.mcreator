@@ -23748,44 +23748,6 @@
       "path": "~/TrimsMaterials"
     },
     {
-      "name": "StunStopSound",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stun_stop_sound",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunStopSoundProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Sound"
-    },
-    {
-      "name": "StunSoundTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stun_sound_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunSoundTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Sound"
-    },
-    {
       "name": "SoundPassiveProtection",
       "type": "procedure",
       "compiles": true,
@@ -33771,6 +33733,25 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
+    },
+    {
+      "name": "StunSoundStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stun_sound_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunSoundStartProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Sound"
     }
   ],
   "variable_elements": [
