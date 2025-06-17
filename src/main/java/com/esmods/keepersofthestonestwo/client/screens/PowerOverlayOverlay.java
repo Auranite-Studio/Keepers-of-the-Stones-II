@@ -11,11 +11,8 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.Minecraft;
-
-import java.util.function.Function;
 
 import com.esmods.keepersofthestonestwo.procedures.GetStarPointsProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetActiveProcedure;
@@ -38,7 +35,7 @@ public class PowerOverlayOverlay {
 			z = entity.getZ();
 		}
 		if (GetActiveProcedure.execute(entity)) {
-			event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/star_points_overlay.png"), 2, 28, 0, 0, 59, 20, 59, 20);
+			event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/star_points_overlay.png"), 2, 28, 0, 0, 59, 20, 59, 20);
 
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 

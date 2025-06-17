@@ -9,13 +9,11 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.client.renderer.FogRenderer;
+import net.minecraft.client.renderer.fog.FogRenderer;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
-
-import com.mojang.blaze3d.shaders.FogShape;
 
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 

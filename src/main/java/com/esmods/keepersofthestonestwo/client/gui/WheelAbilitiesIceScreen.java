@@ -5,17 +5,19 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner;
+import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.stream.Collectors;
-import java.util.function.Function;
+import java.util.List;
 import java.util.Arrays;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesIceMenu;
@@ -75,15 +77,18 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10"), mouseX, mouseY);
+			ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10"));
+			guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 143 && mouseX < leftPos + 167 && mouseY > topPos + 84 && mouseY < topPos + 108) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30"), mouseX, mouseY);
+			ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30"));
+			guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60"), mouseX, mouseY);
+			ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60"));
+			guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -92,7 +97,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
-		guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 	}
 
 	@Override
@@ -121,7 +126,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GetWheelTwoOrFirstFakeProcedure.execute(entity))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_wheel_button_1);
@@ -135,7 +140,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GetWheelTwoProcedure.execute(entity))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_wheel_button_2);
@@ -149,7 +154,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GetWheelThreeProcedure.execute(entity))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_wheel_button_3);
@@ -163,7 +168,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GetFakeWheelOneProcedure.execute(entity))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
@@ -177,7 +182,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GetFakeWheelTwoProcedure.execute(entity))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
@@ -191,7 +196,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GetFakeWheelThirdProcedure.execute(entity))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
@@ -205,7 +210,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (PowerLockCheckProcedure.execute(entity))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_power_rune_ability);
@@ -219,7 +224,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (PowerLockCheckProcedure.execute(entity))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_freezing_ray);
@@ -233,7 +238,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (PowerLockCheckProcedure.execute(entity))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_ice_attack);
@@ -247,7 +252,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (PowerLockCheckProcedure.execute(entity))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_ice_trap);

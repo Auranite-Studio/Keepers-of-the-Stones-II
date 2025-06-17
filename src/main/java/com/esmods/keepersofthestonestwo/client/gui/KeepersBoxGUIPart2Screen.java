@@ -5,16 +5,18 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.gui.screens.inventory.tooltip.DefaultTooltipPositioner;
+import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.function.Function;
+import java.util.List;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart2Menu;
 import com.esmods.keepersofthestonestwo.procedures.TornadoStoneCheckProcedure;
@@ -75,62 +77,74 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		boolean customTooltipShown = false;
 		if (CreationStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 44 && mouseX < leftPos + 68 && mouseY > topPos + 64 && mouseY < topPos + 88) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_creation"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_creation"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (TimeStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 91 && mouseX < leftPos + 115 && mouseY > topPos + 65 && mouseY < topPos + 89) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_time"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_time"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (SoundStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 65 && mouseY < topPos + 89) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_sound"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_sound"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (AirStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 182 && mouseX < leftPos + 206 && mouseY > topPos + 64 && mouseY < topPos + 88) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_air"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_air"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (TornadoStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 181 && mouseX < leftPos + 205 && mouseY > topPos + 101 && mouseY < topPos + 125) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_tornado"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_tornado"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (DestructionStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 43 && mouseX < leftPos + 67 && mouseY > topPos + 101 && mouseY < topPos + 125) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_creation1"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_creation1"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (TechnologyStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 65 && mouseY < topPos + 89) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_technology"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_technology"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (TeleportationStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 67 && mouseX < leftPos + 91 && mouseY > topPos + 102 && mouseY < topPos + 126) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_teleportation"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_teleportation"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (MistStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 158 && mouseX < leftPos + 182 && mouseY > topPos + 65 && mouseY < topPos + 89) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_mist"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_mist"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (SpeedStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 91 && mouseX < leftPos + 115 && mouseY > topPos + 102 && mouseY < topPos + 126) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_speed"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_speed"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (MusicStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 102 && mouseY < topPos + 126) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_music"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_music"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (SmokeStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 158 && mouseX < leftPos + 182 && mouseY > topPos + 102 && mouseY < topPos + 126) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_smoke"), mouseX, mouseY);
+				ClientTooltipComponent clienttooltipcomponent = ClientTooltipComponent.create((FormattedCharSequence) Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_smoke"));
+				guiGraphics.renderTooltip(font, List.of(clienttooltipcomponent), mouseX, mouseY, DefaultTooltipPositioner.INSTANCE, null);
 				customTooltipShown = true;
 			}
 		if (!customTooltipShown)
@@ -139,7 +153,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
-		guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/keepers_box_gui_part_2.png"), this.leftPos + 5, this.topPos + -34, 0, 0, 240, 260, 240, 260);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/keepers_box_gui_part_2.png"), this.leftPos + 5, this.topPos + -34, 0, 0, 240, 260, 240, 260);
 	}
 
 	@Override
@@ -167,7 +181,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_keepers_box_button_up);
@@ -180,7 +194,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_keepers_box_button_down);
@@ -194,7 +208,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (CreationStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_creation_element);
@@ -208,7 +222,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (TimeStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_time_element);
@@ -222,7 +236,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (SoundStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_sound_element);
@@ -236,7 +250,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (AirStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_air_element);
@@ -250,7 +264,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (TornadoStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_tornado_element);
@@ -264,7 +278,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (DestructionStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_destruction_element);
@@ -278,7 +292,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (TechnologyStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_technology_element);
@@ -292,7 +306,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (TeleportationStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_teleportation_element);
@@ -306,7 +320,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (MistStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_mist_element);
@@ -320,7 +334,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (SpeedStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_speed_element_highlighted);
@@ -334,7 +348,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (MusicStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_music_element);
@@ -348,7 +362,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (SmokeStoneCheckProcedure.execute(world))
-					guiGraphics.blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_smoke_element);

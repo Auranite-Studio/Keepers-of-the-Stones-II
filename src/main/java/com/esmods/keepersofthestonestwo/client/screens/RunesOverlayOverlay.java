@@ -11,11 +11,8 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.Minecraft;
-
-import java.util.function.Function;
 
 import com.esmods.keepersofthestonestwo.procedures.RedRune6CheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RedRune5CheckProcedure;
@@ -51,49 +48,49 @@ public class RunesOverlayOverlay {
 			z = entity.getZ();
 		}
 		if (GetRunesProcedure.execute(entity)) {
-			event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/runes_inventory.png"), 2, 50, 0, 0, 59, 26, 59, 26);
+			event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/runes_inventory.png"), 2, 50, 0, 0, 59, 26, 59, 26);
 
 			if (BlueRune1CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/star_extra_rune_1.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/star_extra_rune_1.png"), 7, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (BlueRune2CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/star_extra_rune_2.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/star_extra_rune_2.png"), 7, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (BlueRune3CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/star_extra_rune_3.png"), 7, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/star_extra_rune_3.png"), 7, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (RedRune1CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/reduced_stone_recharge_time_rune_1.png"), 23, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/reduced_stone_recharge_time_rune_1.png"), 23, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (RedRune2CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/reduced_stone_recharge_time_rune_2.png"), 23, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/reduced_stone_recharge_time_rune_2.png"), 23, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (RedRune3CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/reduced_stone_recharge_time_rune_3.png"), 23, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/reduced_stone_recharge_time_rune_3.png"), 23, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (RedRune4CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/addition_time_master_effect_rune_1.png"), 23, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/addition_time_master_effect_rune_1.png"), 23, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (RedRune5CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/addition_time_master_effect_rune_2.png"), 23, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/addition_time_master_effect_rune_2.png"), 23, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (RedRune6CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/addition_time_master_effect_rune_3.png"), 23, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/addition_time_master_effect_rune_3.png"), 23, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (GreenRune1CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/protection_rune.png"), 39, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/protection_rune.png"), 39, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (GreenRune2CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/spin_rune.png"), 39, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/spin_rune.png"), 39, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (GreenRune3CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/dodging_rune.png"), 39, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/dodging_rune.png"), 39, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (GreenRune4CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/invisibility_rune.png"), 39, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/invisibility_rune.png"), 39, 56, 0, 0, 16, 16, 16, 16);
 			}
 			if (GreenRune5CheckProcedure.execute(entity)) {
-				event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/healing_rune.png"), 39, 56, 0, 0, 16, 16, 16, 16);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/healing_rune.png"), 39, 56, 0, 0, 16, 16, 16, 16);
 			}
 		}
 	}
