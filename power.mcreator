@@ -3203,7 +3203,7 @@
     {
       "name": "WheelAbilitiesLava",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_lava",
       "metadata": {
@@ -9337,7 +9337,7 @@
     {
       "name": "KeepersBox",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "keepers_box",
       "metadata": {
@@ -9680,7 +9680,7 @@
     {
       "name": "WheelAbilitiesSun",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_sun",
       "metadata": {
@@ -10808,7 +10808,7 @@
     {
       "name": "WheelAbilitiesTime",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_time",
       "metadata": {
@@ -19971,7 +19971,7 @@
     {
       "name": "WheelAbilitiesSpeed",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_speed",
       "metadata": {
@@ -21676,7 +21676,7 @@
     {
       "name": "EnergiumVault",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "energium_vault",
       "metadata": {
@@ -23058,7 +23058,7 @@
     {
       "name": "WheelAbilitiesMercury",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_mercury",
       "metadata": {
@@ -23936,7 +23936,7 @@
     {
       "name": "WheelAbilitiesMusic",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_music",
       "metadata": {
@@ -26152,7 +26152,7 @@
     {
       "name": "WheelAbilitiesSmoke",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_smoke",
       "metadata": {
@@ -29254,7 +29254,7 @@
     {
       "name": "WheelAbilityDarkness",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_ability_darkness",
       "metadata": {
@@ -30830,7 +30830,7 @@
     {
       "name": "CursedKnight",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "cursed_knight",
       "metadata": {
@@ -30847,7 +30847,7 @@
     {
       "name": "BlackHole",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "black_hole",
       "metadata": {
@@ -30861,7 +30861,7 @@
     {
       "name": "Spirit",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "spirit",
       "metadata": {
@@ -30875,7 +30875,7 @@
     {
       "name": "Turret",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "turret",
       "metadata": {
@@ -31029,7 +31029,7 @@
     {
       "name": "EnergiumGolem",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "energium_golem",
       "metadata": {
@@ -31142,7 +31142,7 @@
     {
       "name": "CursedKeeper",
       "type": "livingentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "cursed_keeper",
       "metadata": {
