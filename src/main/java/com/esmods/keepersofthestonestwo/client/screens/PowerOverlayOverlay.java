@@ -12,9 +12,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.Minecraft;
 
-import com.mojang.blaze3d.systems.RenderSystem;
+import java.util.function.Function;
 
 import com.esmods.keepersofthestonestwo.procedures.GetStarPointsProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetActiveProcedure;
@@ -36,14 +37,12 @@ public class PowerOverlayOverlay {
 			y = entity.getY();
 			z = entity.getZ();
 		}
-		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (GetActiveProcedure.execute(entity)) {
-			event.getGuiGraphics().blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/star_points_overlay.png"), 2, 28, 0, 0, 59, 20, 59, 20);
+			event.getGuiGraphics().blit((Function<ResourceLocation, RenderType>) RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/star_points_overlay.png"), 2, 28, 0, 0, 59, 20, 59, 20);
 
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					GetStarPointsProcedure.execute(entity), 31, 35, -1, false);
 		}
-		RenderSystem.setShaderColor(1, 1, 1, 1);
 	}
 }
