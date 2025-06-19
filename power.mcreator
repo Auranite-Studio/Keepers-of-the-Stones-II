@@ -748,10 +748,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -15350,10 +15346,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -15373,10 +15365,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -17736,10 +17724,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -22555,20 +22539,6 @@
       "path": "~/Elements/Mushrooms"
     },
     {
-      "name": "EnergiumGolemBreaksBlocks",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_golem_breaks_blocks",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemBreaksBlocksProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Mobs/EnergiumGolem"
-    },
-    {
       "name": "BasicCursedTrees",
       "type": "feature",
       "compiles": true,
@@ -24164,44 +24134,6 @@
         ]
       },
       "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "StunStopSound",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stun_stop_sound",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunStopSoundProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Sound"
-    },
-    {
-      "name": "StunSoundTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stun_sound_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunSoundTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundPassiveProtection",
@@ -29858,10 +29790,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -29975,10 +29903,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -29998,10 +29922,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -30021,10 +29941,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -30149,10 +30065,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -31801,6 +31713,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -34340,6 +34256,25 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
+    },
+    {
+      "name": "StunSoundStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stun_sound_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunSoundStartProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Sound"
     }
   ],
   "variable_elements": [
@@ -40739,7 +40674,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",

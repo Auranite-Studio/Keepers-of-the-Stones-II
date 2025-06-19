@@ -23,7 +23,6 @@ import com.esmods.keepersofthestonestwo.procedures.ThirstDarkMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TeleportationMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TechnologyMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunMasterEndProcedure;
-import com.esmods.keepersofthestonestwo.procedures.StunStopSoundProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpiritMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpeedMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceMasterEndProcedure;
@@ -281,8 +280,6 @@ public class PowerModMobEffects {
 			AnimalsMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(METAL_MASTER)) {
 			MetalMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(STUN)) {
-			StunStopSoundProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(IRON_SKIN)) {
 			IronSkinEffectEndProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(LIGHT_MASTER)) {

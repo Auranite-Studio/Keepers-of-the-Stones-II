@@ -8,6 +8,8 @@ import net.minecraft.world.entity.Entity;
 
 import java.util.Comparator;
 
+import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
+
 public class EnergiumGolemAttackDetectionProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -17,7 +19,7 @@ public class EnergiumGolemAttackDetectionProcedure {
 		double Range = 0;
 		double Zpar = 0;
 		Range = 0.75;
-		if (entity.getPersistentData().getDoubleOr("IA", 0) > 25) {
+		if ((entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_IA) : 0) > 25) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					Xpar = x + entity.getLookAngle().x * Range;
@@ -28,11 +30,14 @@ public class EnergiumGolemAttackDetectionProcedure {
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(0.75 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (entityiterator == (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)) {
 								if (Range <= 5.5) {
-									entity.getPersistentData().putString("State", "Hands");
+									if (entity instanceof EnergiumGolemEntity _datEntSetS)
+										_datEntSetS.getEntityData().set(EnergiumGolemEntity.DATA_State, "Hands");
 								} else if (Range > 5.5) {
-									entity.getPersistentData().putString("State", "Core");
+									if (entity instanceof EnergiumGolemEntity _datEntSetS)
+										_datEntSetS.getEntityData().set(EnergiumGolemEntity.DATA_State, "Core");
 								}
-								entity.getPersistentData().putDouble("IA", 0);
+								if (entity instanceof EnergiumGolemEntity _datEntSetI)
+									_datEntSetI.getEntityData().set(EnergiumGolemEntity.DATA_IA, 0);
 							}
 						}
 					}
@@ -40,7 +45,8 @@ public class EnergiumGolemAttackDetectionProcedure {
 				}
 			}
 		} else {
-			entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDoubleOr("IA", 0) + 1));
+			if (entity instanceof EnergiumGolemEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(EnergiumGolemEntity.DATA_IA, (int) ((entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_IA) : 0) + 1));
 		}
 	}
 }

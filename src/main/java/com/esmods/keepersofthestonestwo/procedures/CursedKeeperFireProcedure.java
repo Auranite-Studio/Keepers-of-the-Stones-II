@@ -38,27 +38,30 @@ public class CursedKeeperFireProcedure {
 		double ZPar = 0;
 		Range = 1;
 		particles = 3;
-		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDoubleOr("IA", 0) + 1));
-		if (entity.getPersistentData().getDoubleOr("IA", 0) == 15) {
+		if (entity instanceof CursedKeeperEntity _datEntSetI)
+			_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_IA, (int) ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) + 1));
+		if ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) == 15) {
 			if (entity instanceof CursedKeeperEntity _datEntSetL)
 				_datEntSetL.getEntityData().set(CursedKeeperEntity.DATA_stage_two_anim_sync, false);
 			if (entity instanceof CursedKeeperEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 2);
 		}
-		if (entity.getPersistentData().getDoubleOr("IA", 0) > 19 && entity.getPersistentData().getDoubleOr("IA", 0) < 30) {
-			entity.getPersistentData().putDouble("BreathRange", (entity.getPersistentData().getDoubleOr("BreathRange", 0) + 1));
+		if ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) > 19 && (entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) < 30) {
+			if (entity instanceof CursedKeeperEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_BreathRange, (int) ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_BreathRange) : 0) + 1));
 		}
-		if (entity.getPersistentData().getDoubleOr("IA", 0) > 35 && entity.getPersistentData().getDoubleOr("IA", 0) < 62) {
-			if (entity.getPersistentData().getDoubleOr("IA", 0) > 35 && entity.getPersistentData().getDoubleOr("IA", 0) < 37) {
+		if ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) > 35 && (entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) < 62) {
+			if ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) > 35
+					&& (entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) < 37) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("item.firecharge.use")), SoundSource.HOSTILE, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.HOSTILE, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("item.firecharge.use")), SoundSource.HOSTILE, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.HOSTILE, 1, 1, false);
 					}
 				}
 			}
-			for (int index0 = 0; index0 < (int) entity.getPersistentData().getDoubleOr("BreathRange", 0); index0++) {
+			for (int index0 = 0; index0 < (int) (entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_BreathRange) : 0); index0++) {
 				for (int index1 = 0; index1 < (int) particles; index1++) {
 					XPar = x + Math.cos(((Math.PI * 0.5) / particles) * loop + Math.toRadians(entity.getYRot() + 75)) * Range;
 					YPar = y + 1.5;
@@ -83,9 +86,9 @@ public class CursedKeeperFireProcedure {
 										}
 										if (world instanceof Level _level) {
 											if (!_level.isClientSide()) {
-												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("item.shield.block")), SoundSource.PLAYERS, 1, 1);
+												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.shield.block")), SoundSource.PLAYERS, 1, 1);
 											} else {
-												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("item.shield.block")), SoundSource.PLAYERS, 1, 1, false);
+												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.shield.block")), SoundSource.PLAYERS, 1, 1, false);
 											}
 										}
 									} else if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == Items.SHIELD) {
@@ -95,9 +98,9 @@ public class CursedKeeperFireProcedure {
 										}
 										if (world instanceof Level _level) {
 											if (!_level.isClientSide()) {
-												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("item.shield.block")), SoundSource.PLAYERS, 1, 1);
+												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.shield.block")), SoundSource.PLAYERS, 1, 1);
 											} else {
-												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("item.shield.block")), SoundSource.PLAYERS, 1, 1, false);
+												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.shield.block")), SoundSource.PLAYERS, 1, 1, false);
 											}
 										}
 									}
@@ -112,10 +115,13 @@ public class CursedKeeperFireProcedure {
 				loop = 0;
 			}
 		}
-		if (entity.getPersistentData().getDoubleOr("IA", 0) == 70) {
-			entity.getPersistentData().putDouble("BreathRange", 0);
-			entity.getPersistentData().putDouble("IA", 0);
-			entity.getPersistentData().putString("State", "Idle");
+		if ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) == 70) {
+			if (entity instanceof CursedKeeperEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_BreathRange, 0);
+			if (entity instanceof CursedKeeperEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_IA, 0);
+			if (entity instanceof CursedKeeperEntity _datEntSetS)
+				_datEntSetS.getEntityData().set(CursedKeeperEntity.DATA_State, "Idle");
 			if (entity instanceof CursedKeeperEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_attack_anim_sync, 0);
 			if (entity instanceof CursedKeeperEntity _datEntSetL)
