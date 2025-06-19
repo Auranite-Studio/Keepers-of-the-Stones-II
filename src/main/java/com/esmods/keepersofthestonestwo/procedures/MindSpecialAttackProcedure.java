@@ -130,18 +130,7 @@ public class MindSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("remote_control_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 25) {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
-					if (!(entity == entityiterator) && new Object() {
-						Entity getEntity(String uuid) {
-							Entity _uuidentity = null;
-							if (world instanceof ServerLevel _server) {
-								try {
-									_uuidentity = _server.getEntity(UUID.fromString(uuid));
-								} catch (IllegalArgumentException e) {
-								}
-							}
-							return _uuidentity;
-						}
-					}.getEntity(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner) == entity) {
+					if (!(entity == entityiterator) && entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("X: " + entityiterator.getX() + "Y: " + entityiterator.getY() + "Z: " + entityiterator.getZ())), false);
 					}
@@ -162,18 +151,7 @@ public class MindSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("remote_control_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 25) {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
-					if (!(entity == entityiterator) && new Object() {
-						Entity getEntity(String uuid) {
-							Entity _uuidentity = null;
-							if (world instanceof ServerLevel _server) {
-								try {
-									_uuidentity = _server.getEntity(UUID.fromString(uuid));
-								} catch (IllegalArgumentException e) {
-								}
-							}
-							return _uuidentity;
-						}
-					}.getEntity(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner) == entity) {
+					if (!(entity == entityiterator) && entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 500);
 					}
 				}
@@ -193,18 +171,7 @@ public class MindSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("remote_control_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 25) {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
-					if (!(entity == entityiterator) && new Object() {
-						Entity getEntity(String uuid) {
-							Entity _uuidentity = null;
-							if (world instanceof ServerLevel _server) {
-								try {
-									_uuidentity = _server.getEntity(UUID.fromString(uuid));
-								} catch (IllegalArgumentException e) {
-								}
-							}
-							return _uuidentity;
-						}
-					}.getEntity(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner) == entity) {
+					if (!(entity == entityiterator) && entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						{
 							PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.mind_player_owner = "";
@@ -231,5 +198,16 @@ public class MindSpecialAttackProcedure {
 				}
 			}
 		}
+	}
+
+	public static Entity entityFromStringUUID(String uuid, Level world) {
+		Entity _uuidentity = null;
+		if (world instanceof ServerLevel _server) {
+			try {
+				_uuidentity = _server.getEntity(UUID.fromString(uuid));
+			} catch (Exception e) {
+			}
+		}
+		return _uuidentity;
 	}
 }

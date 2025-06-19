@@ -24,6 +24,7 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -91,21 +92,21 @@ public class CursedKnightEntity extends Monster {
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:cursed_knight.walk")), 0.15f, 1);
+		this.playSound(BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("power:cursed_knight.walk")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:cursed_knight.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("power:cursed_knight.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:cursed_knight.death"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("power:cursed_knight.death"));
 	}
 
 	@Override
-	public boolean hurt(DamageSource damagesource, float amount) {
+	public boolean hurtServer(ServerLevel level, DamageSource damagesource, float amount) {
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
@@ -114,7 +115,7 @@ public class CursedKnightEntity extends Monster {
 			return false;
 		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
 			return false;
-		return super.hurt(damagesource, amount);
+		return super.hurtServer(level, damagesource, amount);
 	}
 
 	@Override
@@ -137,17 +138,17 @@ public class CursedKnightEntity extends Monster {
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Dataattack_anim_sync"))
-			this.entityData.set(DATA_attack_anim_sync, compound.getInt("Dataattack_anim_sync"));
+			this.entityData.set(DATA_attack_anim_sync, compound.getIntOr("Dataattack_anim_sync", 0));
 		if (compound.contains("DataState"))
-			this.entityData.set(DATA_State, compound.getString("DataState"));
+			this.entityData.set(DATA_State, compound.getStringOr("DataState", ""));
 		if (compound.contains("DataOnBattle"))
-			this.entityData.set(DATA_OnBattle, compound.getBoolean("DataOnBattle"));
+			this.entityData.set(DATA_OnBattle, compound.getBooleanOr("DataOnBattle", false));
 		if (compound.contains("DataIA"))
-			this.entityData.set(DATA_IA, compound.getInt("DataIA"));
+			this.entityData.set(DATA_IA, compound.getIntOr("DataIA", 0));
 		if (compound.contains("DataPatience"))
-			this.entityData.set(DATA_Patience, compound.getInt("DataPatience"));
+			this.entityData.set(DATA_Patience, compound.getIntOr("DataPatience", 0));
 		if (compound.contains("DataLook"))
-			this.entityData.set(DATA_Look, compound.getInt("DataLook"));
+			this.entityData.set(DATA_Look, compound.getIntOr("DataLook", 0));
 	}
 
 	@Override

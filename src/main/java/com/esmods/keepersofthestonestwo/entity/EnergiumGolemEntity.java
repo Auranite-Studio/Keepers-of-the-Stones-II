@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.entity.projectile.AbstractThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
@@ -106,31 +106,31 @@ public class EnergiumGolemEntity extends Monster {
 
 	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(PowerModItems.ENERGIUM_CORE.get()));
+		this.spawnAtLocation(serverLevel, new ItemStack(PowerModItems.ENERGIUM_CORE.get()));
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.iron_golem.step")), 0.15f, 1);
+		this.playSound(BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.iron_golem.step")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.iron_golem.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.iron_golem.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.iron_golem.death"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.iron_golem.death"));
 	}
 
 	@Override
-	public boolean hurt(DamageSource damagesource, float amount) {
+	public boolean hurtServer(ServerLevel level, DamageSource damagesource, float amount) {
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
 			return false;
-		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
+		if (damagesource.getDirectEntity() instanceof AbstractThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
 			return false;
 		if (damagesource.is(DamageTypes.FALL))
 			return false;
@@ -148,7 +148,7 @@ public class EnergiumGolemEntity extends Monster {
 			return false;
 		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
 			return false;
-		return super.hurt(damagesource, amount);
+		return super.hurtServer(level, damagesource, amount);
 	}
 
 	@Override
@@ -183,19 +183,19 @@ public class EnergiumGolemEntity extends Monster {
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Dataattack_anim_sync"))
-			this.entityData.set(DATA_attack_anim_sync, compound.getInt("Dataattack_anim_sync"));
+			this.entityData.set(DATA_attack_anim_sync, compound.getIntOr("Dataattack_anim_sync", 0));
 		if (compound.contains("DataIA"))
-			this.entityData.set(DATA_IA, compound.getInt("DataIA"));
+			this.entityData.set(DATA_IA, compound.getIntOr("DataIA", 0));
 		if (compound.contains("DataState"))
-			this.entityData.set(DATA_State, compound.getString("DataState"));
+			this.entityData.set(DATA_State, compound.getStringOr("DataState", ""));
 		if (compound.contains("DataPatience"))
-			this.entityData.set(DATA_Patience, compound.getInt("DataPatience"));
+			this.entityData.set(DATA_Patience, compound.getIntOr("DataPatience", 0));
 		if (compound.contains("DataLook"))
-			this.entityData.set(DATA_Look, compound.getInt("DataLook"));
+			this.entityData.set(DATA_Look, compound.getIntOr("DataLook", 0));
 		if (compound.contains("DataOnBattle"))
-			this.entityData.set(DATA_OnBattle, compound.getBoolean("DataOnBattle"));
+			this.entityData.set(DATA_OnBattle, compound.getBooleanOr("DataOnBattle", false));
 		if (compound.contains("DataBreathRange"))
-			this.entityData.set(DATA_BreathRange, compound.getInt("DataBreathRange"));
+			this.entityData.set(DATA_BreathRange, compound.getIntOr("DataBreathRange", 0));
 	}
 
 	@Override
@@ -230,8 +230,8 @@ public class EnergiumGolemEntity extends Monster {
 	}
 
 	@Override
-	public void customServerAiStep() {
-		super.customServerAiStep();
+	public void customServerAiStep(ServerLevel serverLevel) {
+		super.customServerAiStep(serverLevel);
 		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 

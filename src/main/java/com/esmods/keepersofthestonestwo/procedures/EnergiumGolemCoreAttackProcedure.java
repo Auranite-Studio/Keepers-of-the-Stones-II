@@ -70,9 +70,9 @@ public class EnergiumGolemCoreAttackProcedure {
 					&& (entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_IA) : 0) < 26) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1, false);
 					}
 				}
 			}
@@ -96,7 +96,8 @@ public class EnergiumGolemCoreAttackProcedure {
 							}
 						}
 					}
-					if (!(world.getBlockState(BlockPos.containing(XPar, YPar, ZPar))).is(BlockTags.create(ResourceLocation.parse("c:unbreakable"))) && world.getLevelData().getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING) == true) {
+					if (!(world.getBlockState(BlockPos.containing(XPar, YPar, ZPar))).is(BlockTags.create(ResourceLocation.parse("c:unbreakable")))
+							&& (world instanceof ServerLevel _serverLevelGR29 && _serverLevelGR29.getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING)) == true) {
 						world.destroyBlock(BlockPos.containing(XPar, YPar, ZPar), false);
 					}
 					loop = loop + 1;

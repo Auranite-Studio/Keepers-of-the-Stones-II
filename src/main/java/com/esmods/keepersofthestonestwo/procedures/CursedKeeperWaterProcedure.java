@@ -21,7 +21,7 @@ public class CursedKeeperWaterProcedure {
 		double particles = 0;
 		double ZPar = 0;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 5, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 3, 5, false, false));
 		if (entity instanceof CursedKeeperEntity _datEntSetI)
 			_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_IA, (int) ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) + 1));
 		if ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) == 15) {

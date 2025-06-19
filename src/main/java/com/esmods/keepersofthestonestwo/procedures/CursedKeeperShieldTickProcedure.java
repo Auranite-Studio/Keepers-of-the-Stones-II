@@ -65,7 +65,7 @@ public class CursedKeeperShieldTickProcedure {
 						{
 							final Vec3 _center = new Vec3(x, (y + 1), z);
 							for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
-								if (!entity.getPersistentData().getBoolean("barrier")) {
+								if (!entity.getPersistentData().getBooleanOr("barrier", false)) {
 									if (!(entityiterator == entity)) {
 										entityiterator.setDeltaMovement(new Vec3((1.5 * entity.getDeltaMovement().x()), (1.5 * entity.getDeltaMovement().y()), (1.5 * entity.getLookAngle().z)));
 									}
