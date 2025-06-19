@@ -39,7 +39,7 @@ public class CursedKeeperShieldTickProcedure {
 		double timer = 0;
 		if (entity instanceof CursedKeeperEntity) {
 			if ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_windShield) : 0) > 0) {
-				if (timer > 40) {
+				if (timer > 0) {
 					timer = timer - 1;
 				} else if (timer == 0) {
 					{

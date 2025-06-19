@@ -38,10 +38,10 @@ public class CursedKeeperAttackDetectionProcedure {
 									if (Math.random() < (7) / ((float) 10)) {
 										if (entity instanceof CursedKeeperEntity _datEntSetS)
 											_datEntSetS.getEntityData().set(CursedKeeperEntity.DATA_State, "Fire");
-									} else if (Math.random() < (4) / ((float) 10)) {
+									} else if (Math.random() < (3) / ((float) 10)) {
 										if (entity instanceof CursedKeeperEntity _datEntSetS)
 											_datEntSetS.getEntityData().set(CursedKeeperEntity.DATA_State, "Air");
-									} else if (Math.random() < (5) / ((float) 10)) {
+									} else if (Math.random() < (3) / ((float) 10)) {
 										if (entity instanceof CursedKeeperEntity _datEntSetS)
 											_datEntSetS.getEntityData().set(CursedKeeperEntity.DATA_State, "Earth");
 									} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 350 ? Math.random() < (3) / ((float) 10) : Math.random() < (6) / ((float) 10)) {
