@@ -14,6 +14,8 @@ import net.minecraft.world.damagesource.DamageSource;
 import java.util.Random;
 import java.util.Comparator;
 
+import com.esmods.keepersofthestonestwo.entity.CursedSquireEntity;
+
 public class CursedSquireAttackDetectionProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -24,7 +26,7 @@ public class CursedSquireAttackDetectionProcedure {
 		double Range = 0;
 		double Zpar = 0;
 		Range = 0.75;
-		if (entity.getPersistentData().getDouble("IA") > 4) {
+		if ((entity instanceof CursedSquireEntity _datEntI ? _datEntI.getEntityData().get(CursedSquireEntity.DATA_IA) : 0) > 4) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					Xpar = x + entity.getLookAngle().x * Range;
@@ -35,9 +37,11 @@ public class CursedSquireAttackDetectionProcedure {
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(0.75 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (entityiterator == (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)) {
 								if (Range <= 1.5) {
-									entity.getPersistentData().putString("State", "Bite");
+									if (entity instanceof CursedSquireEntity _datEntSetS)
+										_datEntSetS.getEntityData().set(CursedSquireEntity.DATA_State, "Bite");
 								}
-								entity.getPersistentData().putDouble("IA", 0);
+								if (entity instanceof CursedSquireEntity _datEntSetI)
+									_datEntSetI.getEntityData().set(CursedSquireEntity.DATA_IA, 0);
 							}
 						}
 					}
@@ -45,7 +49,8 @@ public class CursedSquireAttackDetectionProcedure {
 				}
 			}
 		} else {
-			entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
+			if (entity instanceof CursedSquireEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedSquireEntity.DATA_IA, (int) ((entity instanceof CursedSquireEntity _datEntI ? _datEntI.getEntityData().get(CursedSquireEntity.DATA_IA) : 0) + 1));
 		}
 		if (!world.getEntitiesOfClass(Boat.class, new AABB(Vec3.ZERO, Vec3.ZERO).move(new Vec3(x, y, z)).inflate(1 / 2d), e -> true).isEmpty()) {
 			(findEntityInWorldRange(world, Boat.class, x, y, z, 1)).hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 1000);

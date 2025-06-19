@@ -22165,20 +22165,6 @@
       "path": "~/Elements/Mushrooms"
     },
     {
-      "name": "EnergiumGolemBreaksBlocks",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_golem_breaks_blocks",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemBreaksBlocksProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Mobs/EnergiumGolem"
-    },
-    {
       "name": "BasicCursedTrees",
       "type": "feature",
       "compiles": true,
@@ -31223,6 +31209,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },

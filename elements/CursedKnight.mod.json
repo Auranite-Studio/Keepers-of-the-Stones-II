@@ -171,6 +171,37 @@
         "name": "attack_anim_sync",
         "type": "integer",
         "value": 0
+      },
+      {
+        "name": "State",
+        "type": "string",
+        "value": ""
+      },
+      {
+        "name": "OnBattle",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "IA",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Patience",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Look",
+        "type": "integer",
+        "value": 0
       }
     ],
     "onMobTickUpdate": {
@@ -211,6 +242,9 @@
       2
     ],
     "sensitiveToVibration": false,
-    "vibrationalEvents": []
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    }
   }
 }

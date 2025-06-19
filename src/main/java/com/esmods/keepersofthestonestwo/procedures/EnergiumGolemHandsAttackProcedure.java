@@ -29,15 +29,17 @@ public class EnergiumGolemHandsAttackProcedure {
 		double ZPar = 0;
 		Entity energium_golem = null;
 		Range = 0.25;
-		if (entity.getPersistentData().getDouble("IA") == 0) {
+		if ((entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_IA) : 0) == 0) {
 			if (entity instanceof EnergiumGolemEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(EnergiumGolemEntity.DATA_attack_anim_sync, 1);
-			entity.getPersistentData().putDouble("Look", (entity.getYRot()));
+			if (entity instanceof EnergiumGolemEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(EnergiumGolemEntity.DATA_Look, (int) entity.getYRot());
 		}
-		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
+		if (entity instanceof EnergiumGolemEntity _datEntSetI)
+			_datEntSetI.getEntityData().set(EnergiumGolemEntity.DATA_IA, (int) ((entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_IA) : 0) + 1));
 		{
 			Entity _ent = entity;
-			_ent.setYRot((float) entity.getPersistentData().getDouble("Look"));
+			_ent.setYRot((float) (entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_Look) : 0));
 			_ent.setXRot(0);
 			_ent.setYBodyRot(_ent.getYRot());
 			_ent.setYHeadRot(_ent.getYRot());
@@ -48,7 +50,7 @@ public class EnergiumGolemHandsAttackProcedure {
 				_entity.yHeadRotO = _entity.getYRot();
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") < 7) {
+		if ((entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_IA) : 0) < 7) {
 			for (int index0 = 0; index0 < 4; index0++) {
 				Range = Range + 1;
 				XPar = x + entity.getLookAngle().x * Range;
@@ -57,8 +59,10 @@ public class EnergiumGolemHandsAttackProcedure {
 				Range = Range + 1;
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") > 7 && entity.getPersistentData().getDouble("IA") < 20) {
-			if (entity.getPersistentData().getDouble("IA") > 7 && entity.getPersistentData().getDouble("IA") < 9) {
+		if ((entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_IA) : 0) > 7
+				&& (entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_IA) : 0) < 20) {
+			if ((entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_IA) : 0) > 7
+					&& (entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_IA) : 0) < 9) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.HOSTILE, 1, 1);
@@ -85,9 +89,11 @@ public class EnergiumGolemHandsAttackProcedure {
 				Range = Range + 1;
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") == 27) {
-			entity.getPersistentData().putDouble("IA", 0);
-			entity.getPersistentData().putString("State", "Idle");
+		if ((entity instanceof EnergiumGolemEntity _datEntI ? _datEntI.getEntityData().get(EnergiumGolemEntity.DATA_IA) : 0) == 27) {
+			if (entity instanceof EnergiumGolemEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(EnergiumGolemEntity.DATA_IA, 0);
+			if (entity instanceof EnergiumGolemEntity _datEntSetS)
+				_datEntSetS.getEntityData().set(EnergiumGolemEntity.DATA_State, "Idle");
 			if (entity instanceof EnergiumGolemEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(EnergiumGolemEntity.DATA_attack_anim_sync, 0);
 		}
