@@ -38,7 +38,7 @@ public class CursedKeeperShieldTickProcedure {
 		double b = 0;
 		double timer = 0;
 		if (entity instanceof CursedKeeperEntity) {
-			if (entity.getPersistentData().getDouble("windShield") > 0) {
+			if ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_windShield) : 0) > 0) {
 				if (timer > 40) {
 					timer = timer - 1;
 				} else if (timer == 0) {
@@ -65,7 +65,7 @@ public class CursedKeeperShieldTickProcedure {
 						{
 							final Vec3 _center = new Vec3(x, (y + 1), z);
 							for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
-								if (entity.getPersistentData().getBoolean("barrier") != true) {
+								if (!entity.getPersistentData().getBoolean("barrier")) {
 									if (!(entityiterator == entity)) {
 										entityiterator.setDeltaMovement(new Vec3((1.5 * entity.getDeltaMovement().x()), (1.5 * entity.getDeltaMovement().y()), (1.5 * entity.getLookAngle().z)));
 									}
@@ -74,7 +74,8 @@ public class CursedKeeperShieldTickProcedure {
 						}
 					}
 					timer = 40;
-					entity.getPersistentData().putDouble("windShield", (entity.getPersistentData().getDouble("windShield") - 1));
+					if (entity instanceof CursedKeeperEntity _datEntSetI)
+						_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_windShield, (int) ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_windShield) : 0) - 1));
 				}
 			}
 		}

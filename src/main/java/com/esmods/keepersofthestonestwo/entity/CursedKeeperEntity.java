@@ -59,6 +59,15 @@ public class CursedKeeperEntity extends Monster {
 	public static final EntityDataAccessor<Boolean> DATA_stage_two_anim_sync = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<Boolean> DATA_aggro_anim_sync = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<Boolean> DATA_fall_anim_sync = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Integer> DATA_IA = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<String> DATA_State = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Boolean> DATA_Phase = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Integer> DATA_Wave = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_Patience = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Boolean> DATA_OnBattle = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Integer> DATA_Look = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_windShield = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_BreathRange = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.INT);
 	public final AnimationState animationState0 = new AnimationState();
 	public final AnimationState animationState1 = new AnimationState();
 	public final AnimationState animationState2 = new AnimationState();
@@ -89,6 +98,15 @@ public class CursedKeeperEntity extends Monster {
 		builder.define(DATA_stage_two_anim_sync, false);
 		builder.define(DATA_aggro_anim_sync, false);
 		builder.define(DATA_fall_anim_sync, false);
+		builder.define(DATA_IA, 0);
+		builder.define(DATA_State, "");
+		builder.define(DATA_Phase, false);
+		builder.define(DATA_Wave, 0);
+		builder.define(DATA_Patience, 0);
+		builder.define(DATA_OnBattle, false);
+		builder.define(DATA_Look, 0);
+		builder.define(DATA_windShield, 0);
+		builder.define(DATA_BreathRange, 0);
 	}
 
 	@Override
@@ -179,6 +197,15 @@ public class CursedKeeperEntity extends Monster {
 		compound.putBoolean("Datastage_two_anim_sync", this.entityData.get(DATA_stage_two_anim_sync));
 		compound.putBoolean("Dataaggro_anim_sync", this.entityData.get(DATA_aggro_anim_sync));
 		compound.putBoolean("Datafall_anim_sync", this.entityData.get(DATA_fall_anim_sync));
+		compound.putInt("DataIA", this.entityData.get(DATA_IA));
+		compound.putString("DataState", this.entityData.get(DATA_State));
+		compound.putBoolean("DataPhase", this.entityData.get(DATA_Phase));
+		compound.putInt("DataWave", this.entityData.get(DATA_Wave));
+		compound.putInt("DataPatience", this.entityData.get(DATA_Patience));
+		compound.putBoolean("DataOnBattle", this.entityData.get(DATA_OnBattle));
+		compound.putInt("DataLook", this.entityData.get(DATA_Look));
+		compound.putInt("DatawindShield", this.entityData.get(DATA_windShield));
+		compound.putInt("DataBreathRange", this.entityData.get(DATA_BreathRange));
 	}
 
 	@Override
@@ -196,6 +223,24 @@ public class CursedKeeperEntity extends Monster {
 			this.entityData.set(DATA_aggro_anim_sync, compound.getBoolean("Dataaggro_anim_sync"));
 		if (compound.contains("Datafall_anim_sync"))
 			this.entityData.set(DATA_fall_anim_sync, compound.getBoolean("Datafall_anim_sync"));
+		if (compound.contains("DataIA"))
+			this.entityData.set(DATA_IA, compound.getInt("DataIA"));
+		if (compound.contains("DataState"))
+			this.entityData.set(DATA_State, compound.getString("DataState"));
+		if (compound.contains("DataPhase"))
+			this.entityData.set(DATA_Phase, compound.getBoolean("DataPhase"));
+		if (compound.contains("DataWave"))
+			this.entityData.set(DATA_Wave, compound.getInt("DataWave"));
+		if (compound.contains("DataPatience"))
+			this.entityData.set(DATA_Patience, compound.getInt("DataPatience"));
+		if (compound.contains("DataOnBattle"))
+			this.entityData.set(DATA_OnBattle, compound.getBoolean("DataOnBattle"));
+		if (compound.contains("DataLook"))
+			this.entityData.set(DATA_Look, compound.getInt("DataLook"));
+		if (compound.contains("DatawindShield"))
+			this.entityData.set(DATA_windShield, compound.getInt("DatawindShield"));
+		if (compound.contains("DataBreathRange"))
+			this.entityData.set(DATA_BreathRange, compound.getInt("DataBreathRange"));
 	}
 
 	@Override

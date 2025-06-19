@@ -67,7 +67,7 @@ public class OceanicTridentItem extends SwordItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		RemoveForbiddenItemProcedure.execute(entity, itemstack);
+		RemoveForbiddenItemProcedure.execute(world, entity, itemstack);
 	}
 
 	@Override
