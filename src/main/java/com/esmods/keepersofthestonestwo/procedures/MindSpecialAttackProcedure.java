@@ -131,17 +131,17 @@ public class MindSpecialAttackProcedure {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 25) {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
 					if (!(entity == entityiterator) && new Object() {
-						Entity getEntity(String uuid) {
+						Entity entityFromStringUUID(String uuid, Level world) {
 							Entity _uuidentity = null;
 							if (world instanceof ServerLevel _server) {
 								try {
 									_uuidentity = _server.getEntity(UUID.fromString(uuid));
-								} catch (IllegalArgumentException e) {
+								} catch (Exception e) {
 								}
 							}
 							return _uuidentity;
 						}
-					}.getEntity(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner) == entity) {
+					}.entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("X: " + entityiterator.getX() + "Y: " + entityiterator.getY() + "Z: " + entityiterator.getZ())), false);
 					}
@@ -163,17 +163,17 @@ public class MindSpecialAttackProcedure {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 25) {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
 					if (!(entity == entityiterator) && new Object() {
-						Entity getEntity(String uuid) {
+						Entity entityFromStringUUID(String uuid, Level world) {
 							Entity _uuidentity = null;
 							if (world instanceof ServerLevel _server) {
 								try {
 									_uuidentity = _server.getEntity(UUID.fromString(uuid));
-								} catch (IllegalArgumentException e) {
+								} catch (Exception e) {
 								}
 							}
 							return _uuidentity;
 						}
-					}.getEntity(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner) == entity) {
+					}.entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 500);
 					}
 				}
@@ -194,17 +194,17 @@ public class MindSpecialAttackProcedure {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 25) {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
 					if (!(entity == entityiterator) && new Object() {
-						Entity getEntity(String uuid) {
+						Entity entityFromStringUUID(String uuid, Level world) {
 							Entity _uuidentity = null;
 							if (world instanceof ServerLevel _server) {
 								try {
 									_uuidentity = _server.getEntity(UUID.fromString(uuid));
-								} catch (IllegalArgumentException e) {
+								} catch (Exception e) {
 								}
 							}
 							return _uuidentity;
 						}
-					}.getEntity(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner) == entity) {
+					}.entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						{
 							PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.mind_player_owner = "";
