@@ -1,5 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.arguments.EntityArgument;
@@ -85,6 +86,21 @@ public class PwResetProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.recharge_timer = 300;
+					_vars.syncPlayerVariables(entityiterator);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.blue_rune_slot = ItemStack.EMPTY.copy();
+					_vars.syncPlayerVariables(entityiterator);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.red_rune_slot = ItemStack.EMPTY.copy();
+					_vars.syncPlayerVariables(entityiterator);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.green_rune_slot = ItemStack.EMPTY.copy();
 					_vars.syncPlayerVariables(entityiterator);
 				}
 				{
