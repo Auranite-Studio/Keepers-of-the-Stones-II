@@ -13,6 +13,7 @@
 
 **Bugfixes**
 - [Bugfix] Fixed a bug that could cause the cursed keeper to misbehave in battle
+- [Bugfix] Fixes to the localization of runes in some languages
 
 **Known issues**
 - *N/A*
