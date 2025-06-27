@@ -115,12 +115,20 @@
     "raidCelebrationSound": {
       "value": ""
     },
-    "entityDataEntries": [],
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "time",
+        "type": "integer",
+        "value": 0
+      }
+    ],
     "onMobTickUpdate": {
       "name": "RedMagnetPriObnovlieniiTikaSushchnosti"
     },
     "onInitialSpawn": {
-      "name": "MagnetSetTimer"
+      "name": "RedMagnetSetTimer"
     },
     "hasAI": false,
     "aiBase": "(none)",
@@ -153,6 +161,9 @@
       2
     ],
     "sensitiveToVibration": false,
-    "vibrationalEvents": []
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    }
   }
 }

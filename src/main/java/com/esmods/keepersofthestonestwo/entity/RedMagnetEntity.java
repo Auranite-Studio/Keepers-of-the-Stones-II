@@ -28,21 +28,33 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
+import com.esmods.keepersofthestonestwo.procedures.RedMagnetSetTimerProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RedMagnetPriObnovlieniiTikaSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MagnetSetTimerProcedure;
 
 public class RedMagnetEntity extends PathfinderMob {
+	public static final EntityDataAccessor<Integer> DATA_time = SynchedEntityData.defineId(RedMagnetEntity.class, EntityDataSerializers.INT);
+
 	public RedMagnetEntity(EntityType<RedMagnetEntity> type, Level world) {
 		super(type, world);
 		xpReward = 100000;
 		setNoAi(true);
 		setPersistenceRequired();
 		this.moveControl = new FlyingMoveControl(this, 10, true);
+	}
+
+	@Override
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(DATA_time, 0);
 	}
 
 	@Override
@@ -109,8 +121,21 @@ public class RedMagnetEntity extends PathfinderMob {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, EntitySpawnReason reason, @Nullable SpawnGroupData livingdata) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
-		MagnetSetTimerProcedure.execute(this);
+		RedMagnetSetTimerProcedure.execute(this);
 		return retval;
+	}
+
+	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putInt("Datatime", this.entityData.get(DATA_time));
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("Datatime"))
+			this.entityData.set(DATA_time, compound.getInt("Datatime"));
 	}
 
 	@Override
