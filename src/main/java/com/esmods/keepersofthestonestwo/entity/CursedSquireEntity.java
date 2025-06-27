@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
@@ -43,6 +42,11 @@ import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 public class CursedSquireEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_attack_anim_sync = SynchedEntityData.defineId(CursedSquireEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Boolean> DATA_OnBattle = SynchedEntityData.defineId(CursedSquireEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> DATA_State = SynchedEntityData.defineId(CursedSquireEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> DATA_IA = SynchedEntityData.defineId(CursedSquireEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_Patience = SynchedEntityData.defineId(CursedSquireEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_Look = SynchedEntityData.defineId(CursedSquireEntity.class, EntityDataSerializers.INT);
 	public final AnimationState animationState0 = new AnimationState();
 	public final AnimationState animationState1 = new AnimationState();
 	public final AnimationState animationState2 = new AnimationState();
@@ -59,6 +63,11 @@ public class CursedSquireEntity extends Monster {
 	protected void defineSynchedData(SynchedEntityData.Builder builder) {
 		super.defineSynchedData(builder);
 		builder.define(DATA_attack_anim_sync, 0);
+		builder.define(DATA_OnBattle, false);
+		builder.define(DATA_State, "");
+		builder.define(DATA_IA, 0);
+		builder.define(DATA_Patience, 0);
+		builder.define(DATA_Look, 0);
 	}
 
 	@Override
@@ -121,6 +130,11 @@ public class CursedSquireEntity extends Monster {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
+		compound.putBoolean("DataOnBattle", this.entityData.get(DATA_OnBattle));
+		compound.putString("DataState", this.entityData.get(DATA_State));
+		compound.putInt("DataIA", this.entityData.get(DATA_IA));
+		compound.putInt("DataPatience", this.entityData.get(DATA_Patience));
+		compound.putInt("DataLook", this.entityData.get(DATA_Look));
 	}
 
 	@Override
@@ -128,6 +142,16 @@ public class CursedSquireEntity extends Monster {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Dataattack_anim_sync"))
 			this.entityData.set(DATA_attack_anim_sync, compound.getInt("Dataattack_anim_sync"));
+		if (compound.contains("DataOnBattle"))
+			this.entityData.set(DATA_OnBattle, compound.getBoolean("DataOnBattle"));
+		if (compound.contains("DataState"))
+			this.entityData.set(DATA_State, compound.getString("DataState"));
+		if (compound.contains("DataIA"))
+			this.entityData.set(DATA_IA, compound.getInt("DataIA"));
+		if (compound.contains("DataPatience"))
+			this.entityData.set(DATA_Patience, compound.getInt("DataPatience"));
+		if (compound.contains("DataLook"))
+			this.entityData.set(DATA_Look, compound.getInt("DataLook"));
 	}
 
 	@Override

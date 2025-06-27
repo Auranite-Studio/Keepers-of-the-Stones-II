@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.command;
 
 import org.checkerframework.checker.units.qual.s;
@@ -48,7 +47,7 @@ public class PwCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					PowerScaleSetProcedure.execute(arguments, entity);
+					PowerScaleSetProcedure.execute(arguments);
 					return 0;
 				}))))).then(Commands.literal("max_points").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -62,7 +61,7 @@ public class PwCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					MaxPowerScaleSetProcedure.execute(arguments, entity);
+					MaxPowerScaleSetProcedure.execute(arguments);
 					return 0;
 				}))))).then(Commands.literal("multiplier").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("multiplier", DoubleArgumentType.doubleArg(0, 10)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -76,7 +75,7 @@ public class PwCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					PowerRecoveryMultiplierSetProcedure.execute(arguments, entity);
+					PowerRecoveryMultiplierSetProcedure.execute(arguments);
 					return 0;
 				}))))).then(Commands.literal("master_effect_duration").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("seconds", DoubleArgumentType.doubleArg(1)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -90,7 +89,7 @@ public class PwCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					MasterEffectDurationSetProcedure.execute(arguments, entity);
+					MasterEffectDurationSetProcedure.execute(arguments);
 					return 0;
 				}))))).then(Commands.literal("recharge_time").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("seconds", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -104,7 +103,7 @@ public class PwCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					RechargeStoneTimeSetProcedure.execute(arguments, entity);
+					RechargeStoneTimeSetProcedure.execute(arguments);
 					return 0;
 				}))))).then(Commands.literal("fake_element").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(
 						Commands.argument("element_order", DoubleArgumentType.doubleArg(1, 3)).then(Commands.argument("element_name", StringArgumentType.word()).then(Commands.argument("time", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
@@ -119,7 +118,7 @@ public class PwCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							FakeElementSetProcedure.execute(arguments, entity);
+							FakeElementSetProcedure.execute(arguments);
 							return 0;
 						})))))))
 				.then(Commands.literal("unlock_box").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("unlock_logic", BoolArgumentType.bool()).executes(arguments -> {
@@ -134,7 +133,7 @@ public class PwCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					UnlockKeepersBoxProcedure.execute(arguments, entity);
+					UnlockKeepersBoxProcedure.execute(arguments);
 					return 0;
 				})))).then(Commands.literal("levelup").then(Commands.argument("players", EntityArgument.players()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -148,7 +147,7 @@ public class PwCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					LevelUpSetProcedure.execute(arguments, entity);
+					LevelUpSetProcedure.execute(arguments);
 					return 0;
 				}))).then(Commands.literal("reset").then(Commands.argument("players", EntityArgument.players()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -162,7 +161,7 @@ public class PwCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					PwResetProcedure.execute(arguments, entity);
+					PwResetProcedure.execute(arguments);
 					return 0;
 				}))).then(Commands.literal("debug").then(Commands.literal("set").then(Commands.argument("debug_logic", BoolArgumentType.bool()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();

@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -6,6 +5,7 @@ package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -43,11 +43,11 @@ public class PowerModBlockEntities {
 
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, BATTERY_CHARGER.get(), (blockEntity, side) -> blockEntity.getItemHandler());
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, KEEPERS_BOX.get(), (blockEntity, side) -> blockEntity.getItemHandler());
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ELEMENTAL_POWER_GENERATOR.get(), (blockEntity, side) -> blockEntity.getItemHandler());
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, CURSED_VAULT.get(), (blockEntity, side) -> blockEntity.getItemHandler());
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ENERGIUM_VAULT.get(), (blockEntity, side) -> blockEntity.getItemHandler());
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, RUNE_CUTTER.get(), (blockEntity, side) -> blockEntity.getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, BATTERY_CHARGER.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, KEEPERS_BOX.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ELEMENTAL_POWER_GENERATOR.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, CURSED_VAULT.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ENERGIUM_VAULT.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, RUNE_CUTTER.get(), SidedInvWrapper::new);
 	}
 }

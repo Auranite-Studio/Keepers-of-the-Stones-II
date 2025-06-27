@@ -42,18 +42,22 @@ public class ConverterModuleProcedure {
 				return 0;
 			}
 		}.convert(new Object() {
-			String getValue(String modid) {
+			String getModInfo(String modid, int type) {
 				String val = "";
 				List<IModInfo> mods = ModList.get().getMods();
 				for (IModInfo mod : mods) {
 					if (mod.getModId().equals(modid.toLowerCase())) {
-						val = mod.getVersion().toString();
+						if (type == 0) {
+							val = mod.getVersion().toString();
+						} else {
+							val = mod.getDisplayName();
+						}
 						break;
 					}
 				}
 				return val;
 			}
-		}.getValue("cpapi"))) {
+		}.getModInfo("cpapi", 0))) {
 			PowerModVariables.MapVariables.get(world).cpapi_ver = new Object() {
 				double convert(String s) {
 					try {
@@ -63,18 +67,22 @@ public class ConverterModuleProcedure {
 					return 0;
 				}
 			}.convert(new Object() {
-				String getValue(String modid) {
+				String getModInfo(String modid, int type) {
 					String val = "";
 					List<IModInfo> mods = ModList.get().getMods();
 					for (IModInfo mod : mods) {
 						if (mod.getModId().equals(modid.toLowerCase())) {
-							val = mod.getVersion().toString();
+							if (type == 0) {
+								val = mod.getVersion().toString();
+							} else {
+								val = mod.getDisplayName();
+							}
 							break;
 						}
 					}
 					return val;
 				}
-			}.getValue("cpapi"));
+			}.getModInfo("cpapi", 0));
 			PowerModVariables.MapVariables.get(world).syncData(world);
 		}
 		if (PowerConfigConfiguration.ENABLE_LEVELS.get() == true) {
