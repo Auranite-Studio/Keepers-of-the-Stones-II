@@ -35,6 +35,6 @@ public class MoonDoubleSidedSpearItem extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
 		super.inventoryTick(itemstack, world, entity, slot);
-		RemoveForbiddenItemProcedure.execute(entity, itemstack);
+		RemoveForbiddenItemProcedure.execute(world, entity, itemstack);
 	}
 }

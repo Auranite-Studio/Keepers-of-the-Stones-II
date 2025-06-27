@@ -748,10 +748,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -15350,10 +15346,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -15373,10 +15365,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -17736,10 +17724,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -22555,20 +22539,6 @@
       "path": "~/Elements/Mushrooms"
     },
     {
-      "name": "EnergiumGolemBreaksBlocks",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_golem_breaks_blocks",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemBreaksBlocksProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Mobs/EnergiumGolem"
-    },
-    {
       "name": "BasicCursedTrees",
       "type": "feature",
       "compiles": true,
@@ -24164,44 +24134,6 @@
         ]
       },
       "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "StunStopSound",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stun_stop_sound",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunStopSoundProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Sound"
-    },
-    {
-      "name": "StunSoundTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stun_sound_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunSoundTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundPassiveProtection",
@@ -29858,10 +29790,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -29975,10 +29903,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -29998,10 +29922,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -30021,10 +29941,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -30149,10 +30065,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -31801,6 +31713,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -32086,25 +32002,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Magnet"
-    },
-    {
-      "name": "MagnetSetTimer",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "magnet_set_timer",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetSetTimerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -34340,6 +34237,63 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
+    },
+    {
+      "name": "StunSoundStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stun_sound_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunSoundStartProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "BlueMagnetSetTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_magnet_set_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueMagnetSetTimerProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "RedMagnetSetTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_magnet_set_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedMagnetSetTimerProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Magnet"
     }
   ],
   "variable_elements": [
@@ -37655,7 +37609,7 @@
       "entity.power.spirit": "Spirit",
       "effect.power.horror_dark_master": "Dark Master of Horror",
       "item.power.invisibility_rune.description_1": "§7Type:",
-      "item.power.invisibility_rune.description_2": "§aGreen",
+      "item.power.invisibility_rune.description_2": " §aGreen",
       "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Mushroom saturation, uses 50",
       "item.power.invisibility_rune.description_0": "§9Invisibility",
       "item.power.music_guitar": "Music Guitar",
@@ -37699,7 +37653,7 @@
       "item.power.spin_rune.description_4": " §9Effect: Spin",
       "item.power.spin_rune.description_3": "§7Specifications:",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
-      "item.power.spin_rune.description_2": "§aGreen",
+      "item.power.spin_rune.description_2": " §aGreen",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "item.power.empty_battery.description_0": "§cNot charged",
       "item.power.amber_staff": "Amber Staff",
@@ -37730,7 +37684,7 @@
       "item.power.protection_rune.description_3": "§7Specifications:",
       "item.power.protection_rune.description_4": " §9Effect: Protection",
       "item.power.protection_rune.description_1": "§7Type:",
-      "item.power.protection_rune.description_2": "§aGreen",
+      "item.power.protection_rune.description_2": " §aGreen",
       "death.attack.elemental_powers": "%1$s died by elemental power",
       "item.power.music_stone": "Music Stone",
       "item.power.protection_rune.description_0": "§9Protection",
@@ -38163,7 +38117,7 @@
       "item.power.healing_rune.description_4": " §9Effect: Regeneration",
       "item.power.healing_rune.description_3": "§7Specifications:",
       "item.power.ocean_armor_boots": "Ocean Boots",
-      "item.power.healing_rune.description_2": "§aGreen",
+      "item.power.healing_rune.description_2": " §aGreen",
       "item.power.healing_rune.description_1": "§7Type:",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
       "item.power.healing_rune.description_0": "§9Healing",
@@ -38610,7 +38564,7 @@
       "effect.power.technology_master": "Master of Technologies",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.speed_armor_chestplate": "Speed Chestplate",
-      "item.power.dodging_rune.description_2": "§aGreen",
+      "item.power.dodging_rune.description_2": " §aGreen",
       "item.power.dodging_rune.description_3": "§7Specifications:",
       "effect.power.light_master": "Master of Light",
       "item.power.dodging_rune.description_0": "§9Dodging",
@@ -38959,7 +38913,7 @@
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "冷冻射线，使用10",
       "gui.power.keepers_box_gui_part_4.tooltip_plague": "瘟疫",
       "item.power.heat_armor_helmet": "隔热头盔",
-      "item.power.unknown_rune": "Rune",
+      "item.power.unknown_rune": "符文",
       "item.power.mist_battery.description_0": "§a 带电元素：",
       "item.power.mist_battery.description_1": "§9雾",
       "item.power.ice_armor_helmet": "冰盔",
@@ -39081,14 +39035,14 @@
       "item.power.ether_battery.description_0": "§a 带电元素：",
       "effect.power.heat_master": "热能大师",
       "item.power.sand_armor_helmet": "沙盔",
-      "item.power.unknown_rune.description_4": " §9Click the RMB to manifest rune",
+      "item.power.unknown_rune.description_4": "§9将人民币兑换成符文",
       "gui.power.characteristics_card_gui.label_1": "1",
       "effect.power.smoke_intangibility": "烟雾无形",
-      "item.power.unknown_rune.description_2": " §eUnknown",
-      "item.power.unknown_rune.description_3": "§7Specifications:",
+      "item.power.unknown_rune.description_2": "§e未知",
+      "item.power.unknown_rune.description_3": "§7规格:",
       "item.power.plants_battery.description_0": "§a 带电元素：",
-      "item.power.unknown_rune.description_0": "§9Unknown",
-      "item.power.unknown_rune.description_1": "§7Type:",
+      "item.power.unknown_rune.description_0": "§9不知道",
+      "item.power.unknown_rune.description_1": "§7类型:",
       "item.power.plants_battery.description_1": "§9植物",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "昆虫侵袭，使用10",
       "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "真空",
@@ -40733,13 +40687,17 @@
       {
         "name": "ProfessionsAndTrades",
         "children": []
+      },
+      {
+        "name": "Mixins",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -40761,5 +40719,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500225101
+  "mcreatorVersion": 202500226300
 }
