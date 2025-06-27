@@ -17,6 +17,7 @@ import net.minecraft.client.Minecraft;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.entity.BlackHoleEntity;
 
 public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -31,8 +32,9 @@ public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 		playerPosX = entity.getX();
 		playerPosY = entity.getY();
 		playerPosZ = entity.getZ();
-		if (entity.getPersistentData().getDoubleOr("time", 0) > 0) {
-			entity.getPersistentData().putDouble("time", (entity.getPersistentData().getDoubleOr("time", 0) - 1));
+		if ((entity instanceof BlackHoleEntity _datEntI ? _datEntI.getEntityData().get(BlackHoleEntity.DATA_time) : 0) > 0) {
+			if (entity instanceof BlackHoleEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(BlackHoleEntity.DATA_time, (int) ((entity instanceof BlackHoleEntity _datEntI ? _datEntI.getEntityData().get(BlackHoleEntity.DATA_time) : 0) - 1));
 		} else {
 			if (!entity.level().isClientSide())
 				entity.discard();

@@ -135,7 +135,7 @@ public class RedMagnetEntity extends PathfinderMob {
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Datatime"))
-			this.entityData.set(DATA_time, compound.getInt("Datatime"));
+			this.entityData.set(DATA_time, compound.getIntOr("Datatime", 0));
 	}
 
 	@Override
