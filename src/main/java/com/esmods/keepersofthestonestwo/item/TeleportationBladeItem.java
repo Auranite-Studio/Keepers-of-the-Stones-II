@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.item;
 
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
@@ -38,7 +37,7 @@ public class TeleportationBladeItem extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
 		super.inventoryTick(itemstack, world, entity, slot);
-		RemoveForbiddenItemProcedure.execute(entity, itemstack);
+		RemoveForbiddenItemProcedure.execute(world, entity, itemstack);
 	}
 
 	@Override

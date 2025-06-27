@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
@@ -51,6 +50,12 @@ import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class EnergiumGolemEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_attack_anim_sync = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_IA = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<String> DATA_State = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> DATA_Patience = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_Look = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Boolean> DATA_OnBattle = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Integer> DATA_BreathRange = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
 	public final AnimationState animationState0 = new AnimationState();
 	public final AnimationState animationState1 = new AnimationState();
 	public final AnimationState animationState2 = new AnimationState();
@@ -70,6 +75,12 @@ public class EnergiumGolemEntity extends Monster {
 	protected void defineSynchedData(SynchedEntityData.Builder builder) {
 		super.defineSynchedData(builder);
 		builder.define(DATA_attack_anim_sync, 0);
+		builder.define(DATA_IA, 0);
+		builder.define(DATA_State, "");
+		builder.define(DATA_Patience, 0);
+		builder.define(DATA_Look, 0);
+		builder.define(DATA_OnBattle, false);
+		builder.define(DATA_BreathRange, 0);
 	}
 
 	@Override
@@ -160,6 +171,12 @@ public class EnergiumGolemEntity extends Monster {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
+		compound.putInt("DataIA", this.entityData.get(DATA_IA));
+		compound.putString("DataState", this.entityData.get(DATA_State));
+		compound.putInt("DataPatience", this.entityData.get(DATA_Patience));
+		compound.putInt("DataLook", this.entityData.get(DATA_Look));
+		compound.putBoolean("DataOnBattle", this.entityData.get(DATA_OnBattle));
+		compound.putInt("DataBreathRange", this.entityData.get(DATA_BreathRange));
 	}
 
 	@Override
@@ -167,6 +184,18 @@ public class EnergiumGolemEntity extends Monster {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Dataattack_anim_sync"))
 			this.entityData.set(DATA_attack_anim_sync, compound.getIntOr("Dataattack_anim_sync", 0));
+		if (compound.contains("DataIA"))
+			this.entityData.set(DATA_IA, compound.getIntOr("DataIA", 0));
+		if (compound.contains("DataState"))
+			this.entityData.set(DATA_State, compound.getStringOr("DataState", ""));
+		if (compound.contains("DataPatience"))
+			this.entityData.set(DATA_Patience, compound.getIntOr("DataPatience", 0));
+		if (compound.contains("DataLook"))
+			this.entityData.set(DATA_Look, compound.getIntOr("DataLook", 0));
+		if (compound.contains("DataOnBattle"))
+			this.entityData.set(DATA_OnBattle, compound.getBooleanOr("DataOnBattle", false));
+		if (compound.contains("DataBreathRange"))
+			this.entityData.set(DATA_BreathRange, compound.getIntOr("DataBreathRange", 0));
 	}
 
 	@Override

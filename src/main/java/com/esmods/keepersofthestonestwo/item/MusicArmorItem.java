@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.item;
 
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
@@ -77,7 +76,7 @@ public abstract class MusicArmorItem extends Item {
 		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
 			super.inventoryTick(itemstack, world, entity, slot);
 			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
-				RemoveForbiddenItemProcedure.execute(entity, itemstack);
+				RemoveForbiddenItemProcedure.execute(world, entity, itemstack);
 			}
 		}
 	}
@@ -91,7 +90,7 @@ public abstract class MusicArmorItem extends Item {
 		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
 			super.inventoryTick(itemstack, world, entity, slot);
 			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
-				RemoveForbiddenItemProcedure.execute(entity, itemstack);
+				RemoveForbiddenItemProcedure.execute(world, entity, itemstack);
 			}
 		}
 	}
@@ -105,7 +104,7 @@ public abstract class MusicArmorItem extends Item {
 		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
 			super.inventoryTick(itemstack, world, entity, slot);
 			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
-				RemoveForbiddenItemProcedure.execute(entity, itemstack);
+				RemoveForbiddenItemProcedure.execute(world, entity, itemstack);
 			}
 		}
 	}
@@ -119,7 +118,7 @@ public abstract class MusicArmorItem extends Item {
 		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
 			super.inventoryTick(itemstack, world, entity, slot);
 			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
-				RemoveForbiddenItemProcedure.execute(entity, itemstack);
+				RemoveForbiddenItemProcedure.execute(world, entity, itemstack);
 			}
 		}
 	}

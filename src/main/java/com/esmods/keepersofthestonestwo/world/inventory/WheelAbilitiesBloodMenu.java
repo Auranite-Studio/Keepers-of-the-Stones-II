@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.world.inventory;
 
 import net.neoforged.neoforge.items.ItemStackHandler;

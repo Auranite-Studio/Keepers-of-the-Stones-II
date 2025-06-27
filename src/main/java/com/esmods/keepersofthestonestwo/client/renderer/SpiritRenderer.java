@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
