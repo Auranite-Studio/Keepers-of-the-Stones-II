@@ -31504,25 +31504,6 @@
       "path": "~/Elements/Magnet"
     },
     {
-      "name": "MagnetSetTimer",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "magnet_set_timer",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetSetTimerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Magnet"
-    },
-    {
       "name": "GravityPassiveProtection",
       "type": "procedure",
       "compiles": true,
@@ -33742,6 +33723,44 @@
         ]
       },
       "path": "~/Elements/Sound"
+    },
+    {
+      "name": "BlueMagnetSetTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_magnet_set_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueMagnetSetTimerProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "RedMagnetSetTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_magnet_set_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedMagnetSetTimerProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Magnet"
     }
   ],
   "variable_elements": [
