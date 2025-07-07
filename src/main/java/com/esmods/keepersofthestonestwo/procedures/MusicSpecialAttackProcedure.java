@@ -84,9 +84,9 @@ public class MusicSpecialAttackProcedure {
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				{
@@ -99,9 +99,9 @@ public class MusicSpecialAttackProcedure {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				if (world instanceof ServerLevel projectileLevel) {
@@ -172,9 +172,9 @@ public class MusicSpecialAttackProcedure {
 				particleRadius = 2;
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				for (int index1 = 0; index1 < 60; index1++) {
@@ -196,7 +196,7 @@ public class MusicSpecialAttackProcedure {
 							if (entityiterator instanceof LivingEntity _entity)
 								_entity.removeEffect(MobEffects.POISON);
 							if (entityiterator instanceof LivingEntity _entity)
-								_entity.removeEffect(MobEffects.DIG_SLOWDOWN);
+								_entity.removeEffect(MobEffects.MINING_FATIGUE);
 							if (entityiterator instanceof LivingEntity _entity)
 								_entity.removeEffect(MobEffects.BLINDNESS);
 							if (entityiterator instanceof LivingEntity _entity)
@@ -215,9 +215,9 @@ public class MusicSpecialAttackProcedure {
 				particleRadius = 2;
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				for (int index3 = 0; index3 < 60; index3++) {
@@ -235,7 +235,7 @@ public class MusicSpecialAttackProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.POISON);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.DIG_SLOWDOWN);
+					_entity.removeEffect(MobEffects.MINING_FATIGUE);
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.BLINDNESS);
 				if (entity instanceof LivingEntity _entity)
