@@ -13,7 +13,8 @@
                 "$(li)",
                 "Explosion of notes - shoots note bombs in different directions.",
                 "$(li)",
-                "Musical relaxation - when SHIFT is pressed, it imposes positive and removes negative effects within a radius of 5 blocks, otherwise it imposes on the player himself."
+                "Musical relaxation - imposes positive effects and removes some negative
+ones from the target player, provided that they press SHIFT otherwise."
             ]
         },
         {
