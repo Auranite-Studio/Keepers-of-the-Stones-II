@@ -1,3 +1,4 @@
+NOTE: Starting with mod version 1.2.2, the mod will no longer be updated for drops, the next target version is 1.22. Currently, support will continue only for 1.21.1.
 
 **New features**
 - *N/A*
