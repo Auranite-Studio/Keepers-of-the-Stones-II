@@ -6,9 +6,9 @@ name: RELEASE
 on:
   push:
     branches:
-      - "1.21.6-release"
+      - "1.21.7-release"
 env:                                              
-  MINECRAFT_VERSION: 1.21.6                      
+  MINECRAFT_VERSION: 1.21.7                      
   JAVA_VERSION: 21      
   VERSION: 1.2.1
   RELEASE_NAME: Keepers of the Stones II 1.2.1

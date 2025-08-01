@@ -34767,12 +34767,8 @@
       "Blocks.COMMAND_BLOCK",
       "Blocks.REPEATING_COMMAND_BLOCK",
       "Blocks.CHAIN_COMMAND_BLOCK",
-      "Blocks.STRUCTURE_BLOCK#4",
       "Blocks.STRUCTURE_VOID",
       "Blocks.STRUCTURE_BLOCK",
-      "Blocks.STRUCTURE_BLOCK#1",
-      "Blocks.STRUCTURE_BLOCK#2",
-      "Blocks.STRUCTURE_BLOCK#3",
       "Blocks.BARRIER",
       "Blocks.AIR",
       "Blocks.CAVE_AIR",
@@ -39992,7 +39988,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -40016,5 +40012,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500226300
+  "mcreatorVersion": 202500228120
 }
