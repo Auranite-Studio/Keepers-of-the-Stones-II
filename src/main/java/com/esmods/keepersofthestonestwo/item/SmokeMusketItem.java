@@ -73,6 +73,5 @@ public class SmokeMusketItem extends Item {
 	}
 
 	private ItemStack findAmmo(Player player) {
-		return new ItemStack(SmokeMusketProjectileEntity.PROJECTILE_ITEM.getItem());
 	}
 }

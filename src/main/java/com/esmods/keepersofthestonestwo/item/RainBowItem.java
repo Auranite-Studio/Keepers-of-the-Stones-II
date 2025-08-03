@@ -75,6 +75,5 @@ public class RainBowItem extends Item {
 	}
 
 	private ItemStack findAmmo(Player player) {
-		return new ItemStack(RainDropProjectileEntity.PROJECTILE_ITEM.getItem());
 	}
 }

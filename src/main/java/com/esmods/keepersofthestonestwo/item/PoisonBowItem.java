@@ -75,6 +75,5 @@ public class PoisonBowItem extends Item {
 	}
 
 	private ItemStack findAmmo(Player player) {
-		return new ItemStack(PoisonDropProjectileEntity.PROJECTILE_ITEM.getItem());
 	}
 }

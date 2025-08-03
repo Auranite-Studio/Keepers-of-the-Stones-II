@@ -73,6 +73,5 @@ public class ShockwaveGunItem extends Item {
 	}
 
 	private ItemStack findAmmo(Player player) {
-		return new ItemStack(ShockwaveGunProjectileEntity.PROJECTILE_ITEM.getItem());
 	}
 }
