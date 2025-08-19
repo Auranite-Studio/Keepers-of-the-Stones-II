@@ -40006,7 +40006,6 @@
       "cpapi"
     ],
     "mcreatorDependencies": [
-      "curios_api",
       "playeranimator"
     ],
     "currentGenerator": "neoforge-1.21.1",
