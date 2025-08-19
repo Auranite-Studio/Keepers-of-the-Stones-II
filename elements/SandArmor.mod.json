@@ -14,7 +14,7 @@
       "name": "RemoveForbiddenItem"
     },
     "onBodyTick": {
-      "name": "ReturnStoneAfterDead"
+      "name": "RemoveForbiddenItem"
     },
     "onLeggingsTick": {
       "name": "RemoveForbiddenItem"
