@@ -48,6 +48,7 @@
       "value": -1,
       "falpha": 0.0
     },
+    "spawnEggTexture": "",
     "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -169,6 +170,9 @@
       2
     ],
     "sensitiveToVibration": false,
-    "vibrationalEvents": []
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    }
   }
 }

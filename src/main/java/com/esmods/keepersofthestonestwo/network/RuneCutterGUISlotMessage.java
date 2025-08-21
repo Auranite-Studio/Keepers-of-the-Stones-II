@@ -18,7 +18,7 @@ import net.minecraft.core.BlockPos;
 import com.esmods.keepersofthestonestwo.procedures.RemoveWhenRuneIsCuttedProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record RuneCutterGUISlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
 
 	public static final Type<RuneCutterGUISlotMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "rune_cutter_gui_slots"));

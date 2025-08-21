@@ -27,7 +27,7 @@ import com.esmods.keepersofthestonestwo.procedures.Attack162Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack161Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record WheelAbilitiesBlueFlameButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<WheelAbilitiesBlueFlameButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "wheel_abilities_blue_flame_buttons"));

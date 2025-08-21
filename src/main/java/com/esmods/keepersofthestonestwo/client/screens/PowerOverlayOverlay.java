@@ -20,7 +20,7 @@ import com.mojang.blaze3d.platform.GlStateManager;
 import com.esmods.keepersofthestonestwo.procedures.GetStarPointsProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetActiveProcedure;
 
-@EventBusSubscriber({Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class PowerOverlayOverlay {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {

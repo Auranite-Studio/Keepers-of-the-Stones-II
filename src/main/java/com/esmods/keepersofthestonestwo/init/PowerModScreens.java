@@ -67,7 +67,7 @@ import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart1Screen;
 import com.esmods.keepersofthestonestwo.client.gui.CharacteristicsCardGUIScreen;
 import com.esmods.keepersofthestonestwo.client.gui.BatteryChargerGUIScreen;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(Dist.CLIENT)
 public class PowerModScreens {
 	@SubscribeEvent
 	public static void clientLoad(RegisterMenuScreensEvent event) {
