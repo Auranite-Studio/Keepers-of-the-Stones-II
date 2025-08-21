@@ -1,8 +1,5 @@
 package com.esmods.keepersofthestonestwo.entity;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
@@ -30,7 +27,6 @@ import com.esmods.keepersofthestonestwo.procedures.DestructionBallProjectileKogh
 import com.esmods.keepersofthestonestwo.procedures.DestructionBallProjectileKazhdyiTikPriPoliotieSnariadaProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class DestructionBallProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.BEDROCK);
 	private int knockback = 0;
@@ -52,7 +48,6 @@ public class DestructionBallProjectileEntity extends AbstractArrow implements It
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
 		return PROJECTILE_ITEM;
 	}

@@ -12,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
@@ -36,8 +37,8 @@ public class RuneOfTheAncientsGetProcedure {
 			for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
 				ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
 				if (itemstackiterator.is(ItemTags.create(ResourceLocation.parse("power:rune/green")))) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("power:runes_of_the_ancients"));
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+						AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("power:runes_of_the_ancients"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {

@@ -18,23 +18,17 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 [[dependencies.power]]
     modId="neoforge"
     type="required"
-    versionRange="[21.5.75,)"
+    versionRange="[21.8.31,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.power]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21.5]"
+    versionRange="[1.21.8]"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.power]]
-    modId="playeranimator"
-    type="required"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 
 [[dependencies.power]]
     modId="bettercombat"
@@ -44,12 +38,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     side="BOTH"
 [[dependencies.power]]
     modId="patchouli"
-    type="optional"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
-    modId="playeranimator"
     type="optional"
     versionRange="[0,)"
     ordering="NONE"

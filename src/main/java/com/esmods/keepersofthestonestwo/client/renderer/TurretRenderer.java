@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.animation.KeyframeAnimation;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
@@ -45,9 +46,13 @@ public class TurretRenderer extends MobRenderer<TurretEntity, LivingEntityRender
 
 	private static final class AnimatedModel extends Modelturret {
 		private TurretEntity entity = null;
+		private final KeyframeAnimation keyframeAnimation0;
+		private final KeyframeAnimation keyframeAnimation1;
 
 		public AnimatedModel(ModelPart root) {
 			super(root);
+			this.keyframeAnimation0 = turretAnimation.walk.bake(root);
+			this.keyframeAnimation1 = turretAnimation.idle.bake(root);
 		}
 
 		public void setEntity(TurretEntity entity) {
@@ -57,8 +62,8 @@ public class TurretRenderer extends MobRenderer<TurretEntity, LivingEntityRender
 		@Override
 		public void setupAnim(LivingEntityRenderState state) {
 			this.root().getAllParts().forEach(ModelPart::resetPose);
-			this.animate(entity.animationState0, turretAnimation.walk, state.ageInTicks, 1f);
-			this.animate(entity.animationState1, turretAnimation.idle, state.ageInTicks, 1f);
+			this.keyframeAnimation0.apply(entity.animationState0, state.ageInTicks, 1f);
+			this.keyframeAnimation1.apply(entity.animationState1, state.ageInTicks, 1f);
 			super.setupAnim(state);
 		}
 	}

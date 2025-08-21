@@ -1,8 +1,5 @@
 package com.esmods.keepersofthestonestwo.entity;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.level.block.Blocks;
@@ -28,7 +25,6 @@ import com.esmods.keepersofthestonestwo.procedures.ShadowSphereKazhdyiTikPriPoli
 import com.esmods.keepersofthestonestwo.procedures.LightballProjectileKoghdaSnariadPopadaietVSushchnostProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class ShadowSphereEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.LIGHT);
 	private int knockback = 0;
@@ -50,7 +46,6 @@ public class ShadowSphereEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
 		return PROJECTILE_ITEM;
 	}

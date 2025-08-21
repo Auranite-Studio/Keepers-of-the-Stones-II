@@ -1022,7 +1022,6 @@
   "item.power.energium_upgrade_smithing_template.description_4": "§7Материалы:",
   "item.power.energium_upgrade_smithing_template.description_3": " §9Обеднённому энергиуму ",
   "item.power.energium_upgrade_smithing_template.description_2": "§7Применяется к: ",
-  "item.power.energium_upgrade_smithing_template.description_1": "",
   "item.power.air_armor_helmet": "Шлем мастера воздуха",
   "gui.power.wheel_abilities_speed.tooltip_acceleration_uses_45": "Ускорение, расходует 45",
   "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
@@ -1133,5 +1132,6 @@
   "item.power.freaking_parsnip_block": "Freaking Parsnip Block",
   "item.power.rune_cutter": "Rune Cutter",
   "power.modupdater.new_release": "[Keepers of the Stones II] Доступна более новая версия: ",
-  "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения"
+  "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения",
+  "entity.villager.power.runologist": "Runologist"
 }

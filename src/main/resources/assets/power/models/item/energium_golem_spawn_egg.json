@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "power:item/energium_golem_spawn_egg"
+    "layer0": "power:item/energium_golem_spawn_egg_generated"
   }
 }

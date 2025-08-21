@@ -9,7 +9,6 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.client.event.RegisterRangeSelectItemModelPropertyEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
@@ -776,10 +775,9 @@ public class PowerModItems {
 		return REGISTRY.registerItem(block.getId().getPath(), prop -> new BlockItem(block.get(), prop), properties);
 	}
 
-	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+	@EventBusSubscriber(Dist.CLIENT)
 	public static class ItemsClientSideHandler {
 		@SubscribeEvent
-		@OnlyIn(Dist.CLIENT)
 		public static void registerItemModelProperties(RegisterRangeSelectItemModelPropertyEvent event) {
 			event.register(ResourceLocation.parse("power:fire_stone/recharge"), FireStoneItem.RechargeProperty.MAP_CODEC);
 			event.register(ResourceLocation.parse("power:air_stone/recharge"), AirStoneItem.RechargeProperty.MAP_CODEC);

@@ -35,29 +35,17 @@ public class ChaosDarkMasterStartProcedure {
 			_vars.syncPlayerVariables(entity);
 		}
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 0) {
-			{
-				Entity _entity = entity;
-				if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(PowerModItems.CHAOS_ARMOR_HELMET.get()));
-				}
+			if (entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(PowerModItems.CHAOS_ARMOR_HELMET.get()));
 			}
-			{
-				Entity _entity = entity;
-				if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(PowerModItems.CHAOS_ARMOR_CHESTPLATE.get()));
-				}
+			if (entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(PowerModItems.CHAOS_ARMOR_CHESTPLATE.get()));
 			}
-			{
-				Entity _entity = entity;
-				if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.CHAOS_ARMOR_LEGGINGS.get()));
-				}
+			if (entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.CHAOS_ARMOR_LEGGINGS.get()));
 			}
-			{
-				Entity _entity = entity;
-				if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(PowerModItems.CHAOS_ARMOR_BOOTS.get()));
-				}
+			if (entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(PowerModItems.CHAOS_ARMOR_BOOTS.get()));
 			}
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.BINDING_CURSE), 1);
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.VANISHING_CURSE), 1);
@@ -73,17 +61,11 @@ public class ChaosDarkMasterStartProcedure {
 				_vars.syncPlayerVariables(entity);
 			}
 		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 1) {
-			{
-				Entity _entity = entity;
-				if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.CHAOS_ARMOR_LEGGINGS.get()));
-				}
+			if (entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.CHAOS_ARMOR_LEGGINGS.get()));
 			}
-			{
-				Entity _entity = entity;
-				if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(PowerModItems.CHAOS_ARMOR_BOOTS.get()));
-				}
+			if (entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(PowerModItems.CHAOS_ARMOR_BOOTS.get()));
 			}
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.BINDING_CURSE), 1);
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.VANISHING_CURSE), 1);
@@ -95,11 +77,8 @@ public class ChaosDarkMasterStartProcedure {
 				_vars.syncPlayerVariables(entity);
 			}
 		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 2) {
-			{
-				Entity _entity = entity;
-				if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.CHAOS_ARMOR_LEGGINGS.get()));
-				}
+			if (entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.CHAOS_ARMOR_LEGGINGS.get()));
 			}
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.BINDING_CURSE), 1);
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.VANISHING_CURSE), 1);

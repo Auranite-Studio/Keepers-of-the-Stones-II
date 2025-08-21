@@ -3,6 +3,8 @@ package com.esmods.keepersofthestonestwo.entity;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
+import net.minecraft.world.level.storage.ValueOutput;
+import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.ItemStack;
@@ -33,7 +35,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import com.esmods.keepersofthestonestwo.procedures.CursedKeeperWalkProcedure;
@@ -189,58 +190,43 @@ public class CursedKeeperEntity extends Monster {
 	}
 
 	@Override
-	public void addAdditionalSaveData(CompoundTag compound) {
-		super.addAdditionalSaveData(compound);
-		compound.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
-		compound.putBoolean("Datastage_zero_anim_sync", this.entityData.get(DATA_stage_zero_anim_sync));
-		compound.putBoolean("Datastage_one_anim_sync", this.entityData.get(DATA_stage_one_anim_sync));
-		compound.putBoolean("Datastage_two_anim_sync", this.entityData.get(DATA_stage_two_anim_sync));
-		compound.putBoolean("Dataaggro_anim_sync", this.entityData.get(DATA_aggro_anim_sync));
-		compound.putBoolean("Datafall_anim_sync", this.entityData.get(DATA_fall_anim_sync));
-		compound.putInt("DataIA", this.entityData.get(DATA_IA));
-		compound.putString("DataState", this.entityData.get(DATA_State));
-		compound.putBoolean("DataPhase", this.entityData.get(DATA_Phase));
-		compound.putInt("DataWave", this.entityData.get(DATA_Wave));
-		compound.putInt("DataPatience", this.entityData.get(DATA_Patience));
-		compound.putBoolean("DataOnBattle", this.entityData.get(DATA_OnBattle));
-		compound.putInt("DataLook", this.entityData.get(DATA_Look));
-		compound.putInt("DatawindShield", this.entityData.get(DATA_windShield));
-		compound.putInt("DataBreathRange", this.entityData.get(DATA_BreathRange));
+	public void addAdditionalSaveData(ValueOutput valueOutput) {
+		super.addAdditionalSaveData(valueOutput);
+		valueOutput.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
+		valueOutput.putBoolean("Datastage_zero_anim_sync", this.entityData.get(DATA_stage_zero_anim_sync));
+		valueOutput.putBoolean("Datastage_one_anim_sync", this.entityData.get(DATA_stage_one_anim_sync));
+		valueOutput.putBoolean("Datastage_two_anim_sync", this.entityData.get(DATA_stage_two_anim_sync));
+		valueOutput.putBoolean("Dataaggro_anim_sync", this.entityData.get(DATA_aggro_anim_sync));
+		valueOutput.putBoolean("Datafall_anim_sync", this.entityData.get(DATA_fall_anim_sync));
+		valueOutput.putInt("DataIA", this.entityData.get(DATA_IA));
+		valueOutput.putString("DataState", this.entityData.get(DATA_State));
+		valueOutput.putBoolean("DataPhase", this.entityData.get(DATA_Phase));
+		valueOutput.putInt("DataWave", this.entityData.get(DATA_Wave));
+		valueOutput.putInt("DataPatience", this.entityData.get(DATA_Patience));
+		valueOutput.putBoolean("DataOnBattle", this.entityData.get(DATA_OnBattle));
+		valueOutput.putInt("DataLook", this.entityData.get(DATA_Look));
+		valueOutput.putInt("DatawindShield", this.entityData.get(DATA_windShield));
+		valueOutput.putInt("DataBreathRange", this.entityData.get(DATA_BreathRange));
 	}
 
 	@Override
-	public void readAdditionalSaveData(CompoundTag compound) {
-		super.readAdditionalSaveData(compound);
-		if (compound.contains("Dataattack_anim_sync"))
-			this.entityData.set(DATA_attack_anim_sync, compound.getIntOr("Dataattack_anim_sync", 0));
-		if (compound.contains("Datastage_zero_anim_sync"))
-			this.entityData.set(DATA_stage_zero_anim_sync, compound.getBooleanOr("Datastage_zero_anim_sync", false));
-		if (compound.contains("Datastage_one_anim_sync"))
-			this.entityData.set(DATA_stage_one_anim_sync, compound.getBooleanOr("Datastage_one_anim_sync", false));
-		if (compound.contains("Datastage_two_anim_sync"))
-			this.entityData.set(DATA_stage_two_anim_sync, compound.getBooleanOr("Datastage_two_anim_sync", false));
-		if (compound.contains("Dataaggro_anim_sync"))
-			this.entityData.set(DATA_aggro_anim_sync, compound.getBooleanOr("Dataaggro_anim_sync", false));
-		if (compound.contains("Datafall_anim_sync"))
-			this.entityData.set(DATA_fall_anim_sync, compound.getBooleanOr("Datafall_anim_sync", false));
-		if (compound.contains("DataIA"))
-			this.entityData.set(DATA_IA, compound.getIntOr("DataIA", 0));
-		if (compound.contains("DataState"))
-			this.entityData.set(DATA_State, compound.getStringOr("DataState", ""));
-		if (compound.contains("DataPhase"))
-			this.entityData.set(DATA_Phase, compound.getBooleanOr("DataPhase", false));
-		if (compound.contains("DataWave"))
-			this.entityData.set(DATA_Wave, compound.getIntOr("DataWave", 0));
-		if (compound.contains("DataPatience"))
-			this.entityData.set(DATA_Patience, compound.getIntOr("DataPatience", 0));
-		if (compound.contains("DataOnBattle"))
-			this.entityData.set(DATA_OnBattle, compound.getBooleanOr("DataOnBattle", false));
-		if (compound.contains("DataLook"))
-			this.entityData.set(DATA_Look, compound.getIntOr("DataLook", 0));
-		if (compound.contains("DatawindShield"))
-			this.entityData.set(DATA_windShield, compound.getIntOr("DatawindShield", 0));
-		if (compound.contains("DataBreathRange"))
-			this.entityData.set(DATA_BreathRange, compound.getIntOr("DataBreathRange", 0));
+	public void readAdditionalSaveData(ValueInput valueInput) {
+		super.readAdditionalSaveData(valueInput);
+		this.entityData.set(DATA_attack_anim_sync, valueInput.getIntOr("Dataattack_anim_sync", 0));
+		this.entityData.set(DATA_stage_zero_anim_sync, valueInput.getBooleanOr("Datastage_zero_anim_sync", false));
+		this.entityData.set(DATA_stage_one_anim_sync, valueInput.getBooleanOr("Datastage_one_anim_sync", false));
+		this.entityData.set(DATA_stage_two_anim_sync, valueInput.getBooleanOr("Datastage_two_anim_sync", false));
+		this.entityData.set(DATA_aggro_anim_sync, valueInput.getBooleanOr("Dataaggro_anim_sync", false));
+		this.entityData.set(DATA_fall_anim_sync, valueInput.getBooleanOr("Datafall_anim_sync", false));
+		this.entityData.set(DATA_IA, valueInput.getIntOr("DataIA", 0));
+		this.entityData.set(DATA_State, valueInput.getStringOr("DataState", ""));
+		this.entityData.set(DATA_Phase, valueInput.getBooleanOr("DataPhase", false));
+		this.entityData.set(DATA_Wave, valueInput.getIntOr("DataWave", 0));
+		this.entityData.set(DATA_Patience, valueInput.getIntOr("DataPatience", 0));
+		this.entityData.set(DATA_OnBattle, valueInput.getBooleanOr("DataOnBattle", false));
+		this.entityData.set(DATA_Look, valueInput.getIntOr("DataLook", 0));
+		this.entityData.set(DATA_windShield, valueInput.getIntOr("DatawindShield", 0));
+		this.entityData.set(DATA_BreathRange, valueInput.getIntOr("DataBreathRange", 0));
 	}
 
 	@Override

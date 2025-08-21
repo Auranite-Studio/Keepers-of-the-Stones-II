@@ -1,19 +1,17 @@
 package com.esmods.keepersofthestonestwo.client.gui;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
 import com.esmods.keepersofthestonestwo.procedures.WaterStoneCheckProcedure;
@@ -74,62 +72,62 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		boolean customTooltipShown = false;
 		if (FireStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 45 && mouseX < leftPos + 69 && mouseY > topPos + 65 && mouseY < topPos + 89) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_fire"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_fire"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (LavaStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 92 && mouseX < leftPos + 116 && mouseY > topPos + 65 && mouseY < topPos + 89) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_lava"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_lava"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (EnergyStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 158 && mouseX < leftPos + 182 && mouseY > topPos + 65 && mouseY < topPos + 89) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_energy"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_energy"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (RainStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 102 && mouseY < topPos + 126) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_rain"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_rain"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (LightningStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 159 && mouseX < leftPos + 183 && mouseY > topPos + 102 && mouseY < topPos + 126) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_lightning"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_lightning"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (WaterStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 44 && mouseX < leftPos + 68 && mouseY > topPos + 101 && mouseY < topPos + 125) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_water"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_water"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (OceanStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 102 && mouseY < topPos + 126) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_ocean"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_ocean"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (IceStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 92 && mouseX < leftPos + 116 && mouseY > topPos + 102 && mouseY < topPos + 126) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_ice"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_ice"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (ExplosionStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 65 && mouseY < topPos + 89) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_explosion"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_explosion"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (MagnetStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 183 && mouseX < leftPos + 207 && mouseY > topPos + 103 && mouseY < topPos + 127) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_magnet"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_magnet"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (BlueFlameStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 65 && mouseY < topPos + 89) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_blue_flame"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_blue_flame"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (GravityStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 182 && mouseX < leftPos + 206 && mouseY > topPos + 64 && mouseY < topPos + 88) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_gravity"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_gravity"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (!customTooltipShown)
@@ -137,9 +135,8 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		guiGraphics.blit(RenderType::guiTextured, ResourceLocation.parse("power:textures/screens/keepers_box_gui_part_1.png"), this.leftPos + 5, this.topPos + -34, 0, 0, 240, 260, 240, 260);
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("power:textures/screens/keepers_box_gui_part_1.png"), this.leftPos + 5, this.topPos + -34, 0, 0, 240, 260, 240, 260);
 	}
 
 	@Override
@@ -160,14 +157,16 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		super.init();
 		imagebutton_keepers_box_button_down = new ImageButton(this.leftPos + 209, this.topPos + 103, 18, 18,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/keepers_box_button_down.png"), ResourceLocation.parse("power:textures/screens/keepers_box_button_down_active.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(0, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(0, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_keepers_box_button_down);
@@ -175,176 +174,224 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/keepers_box_button_up_locked.png"), ResourceLocation.parse("power:textures/screens/keepers_box_button_up_locked.png")), e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_keepers_box_button_up_locked);
 		imagebutton_fire_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fire_element.png"), ResourceLocation.parse("power:textures/screens/fire_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (FireStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(2, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(2, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (FireStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_fire_element);
 		imagebutton_lava_element = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/lava_element.png"), ResourceLocation.parse("power:textures/screens/lava_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (LavaStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(3, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(3, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (LavaStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_lava_element);
 		imagebutton_energy_element = new ImageButton(this.leftPos + 162, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/energy_element.png"), ResourceLocation.parse("power:textures/screens/energy_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (EnergyStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(4, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(4, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (EnergyStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_energy_element);
 		imagebutton_rain_element = new ImageButton(this.leftPos + 138, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/rain_element.png"), ResourceLocation.parse("power:textures/screens/rain_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (RainStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(5, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(5, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (RainStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_rain_element);
 		imagebutton_lightning_element = new ImageButton(this.leftPos + 162, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/lightning_element.png"), ResourceLocation.parse("power:textures/screens/lightning_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (LightningStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(6, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(6, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (LightningStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_lightning_element);
 		imagebutton_water_element = new ImageButton(this.leftPos + 49, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/water_element.png"), ResourceLocation.parse("power:textures/screens/water_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (WaterStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(7, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(7, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (WaterStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_water_element);
 		imagebutton_ocean_element = new ImageButton(this.leftPos + 71, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/ocean_element.png"), ResourceLocation.parse("power:textures/screens/ocean_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (OceanStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(8, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(8, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (OceanStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_ocean_element);
 		imagebutton_ice_element = new ImageButton(this.leftPos + 95, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/ice_element.png"), ResourceLocation.parse("power:textures/screens/ice_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (IceStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(9, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(9, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (IceStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_ice_element);
 		imagebutton_explosion_element = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/explosion_element.png"), ResourceLocation.parse("power:textures/screens/explosion_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (ExplosionStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(10, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(10, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (ExplosionStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_explosion_element);
 		imagebutton_magnet_element = new ImageButton(this.leftPos + 184, this.topPos + 106, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/magnet_element.png"), ResourceLocation.parse("power:textures/screens/magnet_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (MagnetStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(11, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(11, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 11, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (MagnetStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_magnet_element);
 		imagebutton_blue_flame_element = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/blue_flame_element.png"), ResourceLocation.parse("power:textures/screens/blue_flame_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (BlueFlameStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(12, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(12, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 12, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (BlueFlameStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_blue_flame_element);
 		imagebutton_gravity_element = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/gravity_element.png"), ResourceLocation.parse("power:textures/screens/gravity_element_highlighted.png")), e -> {
+					int x = KeepersBoxGUIPart1Screen.this.x;
+					int y = KeepersBoxGUIPart1Screen.this.y;
 					if (GravityStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(13, x, y, z));
+						ClientPacketDistributor.sendToServer(new KeepersBoxGUIPart1ButtonMessage(13, x, y, z));
 						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 13, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart1Screen.this.x;
+				int y = KeepersBoxGUIPart1Screen.this.y;
 				if (GravityStoneCheckProcedure.execute(world))
-					guiGraphics.blit(RenderType::guiTextured, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_gravity_element);

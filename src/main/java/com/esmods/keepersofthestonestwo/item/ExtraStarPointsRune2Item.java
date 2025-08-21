@@ -1,8 +1,5 @@
 package com.esmods.keepersofthestonestwo.item;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
@@ -24,14 +21,13 @@ public class ExtraStarPointsRune2Item extends Item {
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, display, list, flag);
-		list.accept(Component.translatable("item.power.extra_star_points_rune_2.description_0"));
-		list.accept(Component.translatable("item.power.extra_star_points_rune_2.description_1"));
-		list.accept(Component.translatable("item.power.extra_star_points_rune_2.description_2"));
-		list.accept(Component.translatable("item.power.extra_star_points_rune_2.description_3"));
-		list.accept(Component.translatable("item.power.extra_star_points_rune_2.description_4"));
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		componentConsumer.accept(Component.translatable("item.power.extra_star_points_rune_2.description_0"));
+		componentConsumer.accept(Component.translatable("item.power.extra_star_points_rune_2.description_1"));
+		componentConsumer.accept(Component.translatable("item.power.extra_star_points_rune_2.description_2"));
+		componentConsumer.accept(Component.translatable("item.power.extra_star_points_rune_2.description_3"));
+		componentConsumer.accept(Component.translatable("item.power.extra_star_points_rune_2.description_4"));
 	}
 
 	@Override

@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.animation.KeyframeAnimation;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
@@ -45,9 +46,11 @@ public class SpiritRenderer extends MobRenderer<SpiritEntity, LivingEntityRender
 
 	private static final class AnimatedModel extends Modelspirit {
 		private SpiritEntity entity = null;
+		private final KeyframeAnimation keyframeAnimation0;
 
 		public AnimatedModel(ModelPart root) {
 			super(root);
+			this.keyframeAnimation0 = spiritAnimation.idle.bake(root);
 		}
 
 		public void setEntity(SpiritEntity entity) {
@@ -57,7 +60,7 @@ public class SpiritRenderer extends MobRenderer<SpiritEntity, LivingEntityRender
 		@Override
 		public void setupAnim(LivingEntityRenderState state) {
 			this.root().getAllParts().forEach(ModelPart::resetPose);
-			this.animate(entity.animationState0, spiritAnimation.idle, state.ageInTicks, 1f);
+			this.keyframeAnimation0.apply(entity.animationState0, state.ageInTicks, 1f);
 			super.setupAnim(state);
 		}
 	}

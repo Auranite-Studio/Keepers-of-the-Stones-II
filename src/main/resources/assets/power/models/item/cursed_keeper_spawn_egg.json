@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "power:item/cursed_keeper_spawn_egg"
+    "layer0": "power:item/cursed_keeper_spawn_egg_generated"
   }
 }

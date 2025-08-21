@@ -1,10 +1,5 @@
 package com.esmods.keepersofthestonestwo.item;
 
-import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
-
 import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.ArmorMaterial;
@@ -20,48 +15,17 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.client.resources.model.EquipmentClientInfo;
+
+import javax.annotation.Nullable;
 
 import java.util.Map;
 
-import com.google.common.collect.Iterables;
-
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public abstract class EnergiumArmorItem extends Item {
 	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(34, Map.of(ArmorType.BOOTS, 4, ArmorType.LEGGINGS, 13, ArmorType.CHESTPLATE, 10, ArmorType.HELMET, 4, ArmorType.BODY, 10), 20,
 			BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), 0f, 0f, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:energium_armor_repair_items")),
 			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("power:energium_armor")));
-
-	@SubscribeEvent
-	public static void registerItemExtensions(RegisterClientExtensionsEvent event) {
-		event.registerItem(new IClientItemExtensions() {
-			@Override
-			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
-				return ResourceLocation.parse("power:textures/models/armor/energium_layer_1.png");
-			}
-		}, PowerModItems.ENERGIUM_ARMOR_HELMET.get());
-		event.registerItem(new IClientItemExtensions() {
-			@Override
-			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
-				return ResourceLocation.parse("power:textures/models/armor/energium_layer_1.png");
-			}
-		}, PowerModItems.ENERGIUM_ARMOR_CHESTPLATE.get());
-		event.registerItem(new IClientItemExtensions() {
-			@Override
-			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
-				return ResourceLocation.parse("power:textures/models/armor/energium_layer_2.png");
-			}
-		}, PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get());
-		event.registerItem(new IClientItemExtensions() {
-			@Override
-			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
-				return ResourceLocation.parse("power:textures/models/armor/energium_layer_1.png");
-			}
-		}, PowerModItems.ENERGIUM_ARMOR_BOOTS.get());
-	}
 
 	private EnergiumArmorItem(Item.Properties properties) {
 		super(properties);
@@ -73,9 +37,9 @@ public abstract class EnergiumArmorItem extends Item {
 		}
 
 		@Override
-		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-			super.inventoryTick(itemstack, world, entity, slot);
-			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+			super.inventoryTick(itemstack, world, entity, equipmentSlot);
+			if (entity instanceof Player player && (equipmentSlot != null && equipmentSlot.getType() == EquipmentSlot.Type.HUMANOID_ARMOR)) {
 				EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 			}
 		}
@@ -87,9 +51,9 @@ public abstract class EnergiumArmorItem extends Item {
 		}
 
 		@Override
-		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-			super.inventoryTick(itemstack, world, entity, slot);
-			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+			super.inventoryTick(itemstack, world, entity, equipmentSlot);
+			if (entity instanceof Player player && (equipmentSlot != null && equipmentSlot.getType() == EquipmentSlot.Type.HUMANOID_ARMOR)) {
 				EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 			}
 		}
@@ -101,9 +65,9 @@ public abstract class EnergiumArmorItem extends Item {
 		}
 
 		@Override
-		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-			super.inventoryTick(itemstack, world, entity, slot);
-			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+			super.inventoryTick(itemstack, world, entity, equipmentSlot);
+			if (entity instanceof Player player && (equipmentSlot != null && equipmentSlot.getType() == EquipmentSlot.Type.HUMANOID_ARMOR)) {
 				EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 			}
 		}
@@ -115,9 +79,9 @@ public abstract class EnergiumArmorItem extends Item {
 		}
 
 		@Override
-		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-			super.inventoryTick(itemstack, world, entity, slot);
-			if (entity instanceof Player player && !Iterables.contains(player.getInventory().getNonEquipmentItems(), itemstack)) {
+		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+			super.inventoryTick(itemstack, world, entity, equipmentSlot);
+			if (entity instanceof Player player && (equipmentSlot != null && equipmentSlot.getType() == EquipmentSlot.Type.HUMANOID_ARMOR)) {
 				EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 			}
 		}

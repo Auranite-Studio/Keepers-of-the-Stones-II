@@ -160,8 +160,8 @@ public class LevelUpProcedure {
 					_vars.rank = "S";
 					_vars.syncPlayerVariables(entity);
 				}
-				if (entity instanceof ServerPlayer _player) {
-					AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("power:unbreakable_diamond"));
+				if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+					AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("power:unbreakable_diamond"));
 					if (_adv != null) {
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {

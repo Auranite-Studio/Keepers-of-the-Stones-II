@@ -29,11 +29,8 @@ public class ReturnArmorAfterDeadProcedure {
 		if (entity == null)
 			return;
 		if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).helmet.getItem() == ItemStack.EMPTY.getItem())) {
-			{
-				Entity _entity = entity;
-				if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.HEAD, entity.getData(PowerModVariables.PLAYER_VARIABLES).helmet);
-				}
+			if (entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.HEAD, entity.getData(PowerModVariables.PLAYER_VARIABLES).helmet);
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
@@ -42,11 +39,8 @@ public class ReturnArmorAfterDeadProcedure {
 			}
 		}
 		if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate.getItem() == ItemStack.EMPTY.getItem())) {
-			{
-				Entity _entity = entity;
-				if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.CHEST, entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate);
-				}
+			if (entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.CHEST, entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate);
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
@@ -55,11 +49,8 @@ public class ReturnArmorAfterDeadProcedure {
 			}
 		}
 		if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings.getItem() == ItemStack.EMPTY.getItem())) {
-			{
-				Entity _entity = entity;
-				if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.LEGS, entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings);
-				}
+			if (entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.LEGS, entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings);
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
@@ -68,11 +59,8 @@ public class ReturnArmorAfterDeadProcedure {
 			}
 		}
 		if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).boots.getItem() == ItemStack.EMPTY.getItem())) {
-			{
-				Entity _entity = entity;
-				if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.FEET, entity.getData(PowerModVariables.PLAYER_VARIABLES).boots);
-				}
+			if (entity instanceof LivingEntity _living) {
+				_living.setItemSlot(EquipmentSlot.FEET, entity.getData(PowerModVariables.PLAYER_VARIABLES).boots);
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

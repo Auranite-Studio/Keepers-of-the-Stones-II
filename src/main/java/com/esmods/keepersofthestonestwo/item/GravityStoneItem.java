@@ -1,8 +1,5 @@
 package com.esmods.keepersofthestonestwo.item;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
@@ -18,7 +15,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty;
 import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
@@ -30,6 +26,7 @@ import com.esmods.keepersofthestonestwo.procedures.StoneGetRechargeStateProcedur
 import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GravityStoneUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
+import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class GravityStoneItem extends Item {
 	public GravityStoneItem(Item.Properties properties) {
@@ -37,14 +34,13 @@ public class GravityStoneItem extends Item {
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, display, list, flag);
-		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PowerMod.clientPlayer();
 		String hoverText = GetRechargeInfoProcedure.execute(itemstack);
 		if (hoverText != null) {
 			for (String line : hoverText.split("\n")) {
-				list.accept(Component.literal(line));
+				componentConsumer.accept(Component.literal(line));
 			}
 		}
 	}
@@ -57,8 +53,8 @@ public class GravityStoneItem extends Item {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-		super.inventoryTick(itemstack, world, entity, slot);
+	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+		super.inventoryTick(itemstack, world, entity, equipmentSlot);
 		RechargeStoneTickEventProcedure.execute(itemstack);
 	}
 

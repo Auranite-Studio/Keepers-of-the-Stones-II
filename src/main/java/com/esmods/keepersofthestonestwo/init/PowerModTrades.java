@@ -10,12 +10,15 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 
 @EventBusSubscriber
 public class PowerModTrades {
 	@SubscribeEvent
 	public static void registerTrades(VillagerTradesEvent event) {
-		if (event.getType().equals(PowerModVillagerProfessions.RUNOLOGIST.getKey())) {
+		if (event.getType() == ResourceKey.create(Registries.VILLAGER_PROFESSION, ResourceLocation.parse("power:runologist"))) {
 			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(PowerModItems.EXTRA_STAR_POINTS_RUNE_1.get()), new ItemStack(Items.EMERALD, 48), new ItemStack(PowerModItems.EXTRA_STAR_POINTS_RUNE_2.get()), 1, 5, 0.05f));
 			event.getTrades().get(1)
 					.add(new BasicItemListing(new ItemStack(PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_1.get()), new ItemStack(Items.EMERALD, 48), new ItemStack(PowerModItems.REDUCED_STONE_RECHARGE_TIME_RUNE_2.get()), 1, 5, 0.05f));

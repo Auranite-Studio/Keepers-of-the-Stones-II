@@ -27,7 +27,7 @@ import com.esmods.keepersofthestonestwo.procedures.Attack190Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack189Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record WheelAbilityDarknessButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<WheelAbilityDarknessButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "wheel_ability_darkness_buttons"));

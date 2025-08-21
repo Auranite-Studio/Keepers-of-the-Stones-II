@@ -1,11 +1,11 @@
 package com.esmods.keepersofthestonestwo.world.inventory;
 
-import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -268,7 +268,7 @@ public class RuneCutterGUIMenu extends AbstractContainerMenu implements PowerMod
 
 	private void slotChanged(int slotid, int ctype, int meta) {
 		if (this.world != null && this.world.isClientSide()) {
-			PacketDistributor.sendToServer(new RuneCutterGUISlotMessage(slotid, x, y, z, ctype, meta));
+			ClientPacketDistributor.sendToServer(new RuneCutterGUISlotMessage(slotid, x, y, z, ctype, meta));
 			RuneCutterGUISlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}
