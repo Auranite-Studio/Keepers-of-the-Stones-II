@@ -103,6 +103,7 @@
       "value": -8337805,
       "falpha": 0.0
     },
+    "spawnEggTexture": "energium_golem_spawn_egg",
     "creativeTabs": [
       {
         "value": "CUSTOM:Mobs"
