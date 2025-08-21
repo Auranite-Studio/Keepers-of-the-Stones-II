@@ -10,7 +10,7 @@ on:
       - "1.21.1-devhotfix"
       - "1.21.4-dev"
       - "1.21.5-dev"
-      - "1.21.7-dev"
+      - "1.21.8-dev"
 
 jobs:
   build:
