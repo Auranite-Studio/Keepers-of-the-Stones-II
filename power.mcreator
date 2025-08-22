@@ -40727,7 +40727,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.2.3.1",
+    "version": "1.2.3.2",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -40742,7 +40742,9 @@
     "dependants": [
       "cpapi"
     ],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "playeranimator"
+    ],
     "currentGenerator": "neoforge-1.21.8",
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"

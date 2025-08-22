@@ -1,0 +1,11 @@
+repositories {
+ maven {
+     url = 'https://maven.kosmx.dev/'
+ }
+}
+
+ dependencies {
+   implementation 'dev.kosmx.player-anim:player-animation-lib-forge:2.0.2+1.21.7'
+ }
+
+
