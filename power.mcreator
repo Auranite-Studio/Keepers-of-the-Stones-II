@@ -40734,7 +40734,9 @@
     "license": "GNU General Public License version 3 (GPLv3)",
     "serverSideOnly": false,
     "modPicture": "logo",
-    "requiredMods": [],
+    "requiredMods": [
+      "playeranimator"
+    ],
     "dependencies": [
       "bettercombat",
       "patchouli"
