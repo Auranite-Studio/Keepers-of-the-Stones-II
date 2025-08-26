@@ -17,7 +17,7 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import com.esmods.keepersofthestonestwo.procedures.WheelOpenKeyPressedProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record AbilityWheelOpeningkeyMessage(int eventType, int pressedms) implements CustomPacketPayload {
 	public static final Type<AbilityWheelOpeningkeyMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "key_ability_wheel_openingkey"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, AbilityWheelOpeningkeyMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, AbilityWheelOpeningkeyMessage message) -> {

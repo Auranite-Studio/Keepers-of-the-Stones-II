@@ -19,7 +19,7 @@ import com.esmods.keepersofthestonestwo.network.DetransformationKeyMessage;
 import com.esmods.keepersofthestonestwo.network.AbilityWheelOpeningkeyMessage;
 import com.esmods.keepersofthestonestwo.network.AbilityUsingKeyMessage;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class PowerModKeyMappings {
 	public static final KeyMapping DETRANSFORMATION_KEY = new KeyMapping("key.power.detransformation_key", GLFW.GLFW_KEY_U, "key.categories.power2") {
 		private boolean isDownOld = false;
@@ -68,7 +68,7 @@ public class PowerModKeyMappings {
 		event.register(ABILITY_USING_KEY);
 	}
 
-	@EventBusSubscriber({Dist.CLIENT})
+	@EventBusSubscriber(Dist.CLIENT)
 	public static class KeyEventListener {
 		@SubscribeEvent
 		public static void onClientTick(ClientTickEvent.Post event) {

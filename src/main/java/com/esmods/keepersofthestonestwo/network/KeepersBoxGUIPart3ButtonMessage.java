@@ -31,7 +31,7 @@ import com.esmods.keepersofthestonestwo.procedures.DarknessElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record KeepersBoxGUIPart3ButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<KeepersBoxGUIPart3ButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "keepers_box_gui_part_3_buttons"));

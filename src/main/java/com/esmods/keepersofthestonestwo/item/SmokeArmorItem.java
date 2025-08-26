@@ -26,7 +26,7 @@ import com.google.common.collect.Iterables;
 
 import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public abstract class SmokeArmorItem extends ArmorItem {
 	public static Holder<ArmorMaterial> ARMOR_MATERIAL = null;
 

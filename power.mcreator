@@ -36836,7 +36836,6 @@
       "item.power.energium_upgrade_smithing_template.description_4": "§7Материалы:",
       "item.power.energium_upgrade_smithing_template.description_3": " §9Обеднённому энергиуму ",
       "item.power.energium_upgrade_smithing_template.description_2": "§7Применяется к: ",
-      "item.power.energium_upgrade_smithing_template.description_1": "",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "gui.power.wheel_abilities_speed.tooltip_acceleration_uses_45": "Ускорение, расходует 45",
       "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
@@ -37923,7 +37922,6 @@
       "item.power.energium_upgrade_smithing_template.description_4": "§7Ingredients:",
       "item.power.energium_upgrade_smithing_template.description_3": " §9Depleted Energium",
       "item.power.energium_upgrade_smithing_template.description_2": "§7Applies to:",
-      "item.power.energium_upgrade_smithing_template.description_1": "",
       "item.power.air_armor_helmet": "Air Helmet",
       "gui.power.wheel_abilities_speed.tooltip_acceleration_uses_45": "Acceleration, uses 45",
       "item.power.ether_armor_chestplate": "Ether Chestplate",
@@ -39056,7 +39054,6 @@
       "item.power.blue_flame_armor_chestplate": "蓝色火焰胸甲",
       "item.power.creation_pickaxe": "创世镐",
       "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15",
-      "item.power.energium_upgrade_smithing_template.description_1": "",
       "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
       "power.modupdater.click_event": " ➜ 点击查看更改"
     }
@@ -39988,7 +39985,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -40012,5 +40009,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500228120
+  "mcreatorVersion": 202500334500
 }

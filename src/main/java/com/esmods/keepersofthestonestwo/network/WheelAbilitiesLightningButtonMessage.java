@@ -27,7 +27,7 @@ import com.esmods.keepersofthestonestwo.procedures.Attack26Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack25Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record WheelAbilitiesLightningButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<WheelAbilitiesLightningButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "wheel_abilities_lightning_buttons"));
