@@ -16,10 +16,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.component.DataComponents;
 
+import javax.annotation.Nullable;
+
 import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class HeatKnifeItem extends Item {
 	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 0, 4f, 0, 2, TagKey.create(Registries.ITEM, ResourceLocation.parse("power:heat_knife_repair_items")));
 
@@ -33,8 +35,8 @@ public class HeatKnifeItem extends Item {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-		super.inventoryTick(itemstack, world, entity, slot);
+	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+		super.inventoryTick(itemstack, world, entity, equipmentSlot);
 		RemoveForbiddenItemProcedure.execute(world, entity, itemstack);
 	}
 }

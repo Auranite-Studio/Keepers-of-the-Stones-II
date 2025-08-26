@@ -14,6 +14,8 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 
+import javax.annotation.Nullable;
+
 import com.esmods.keepersofthestonestwo.procedures.SmokeMusketPriVystrielieSnariadomIzPriedmietaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 import com.esmods.keepersofthestonestwo.entity.SmokeMusketProjectileEntity;
@@ -44,8 +46,8 @@ public class SmokeMusketItem extends Item {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-		super.inventoryTick(itemstack, world, entity, slot);
+	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+		super.inventoryTick(itemstack, world, entity, equipmentSlot);
 		RemoveForbiddenItemProcedure.execute(world, entity, itemstack);
 	}
 

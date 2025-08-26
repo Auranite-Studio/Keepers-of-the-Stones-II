@@ -6,7 +6,6 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
-import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
@@ -28,7 +27,7 @@ import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(modid = "power", bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(Dist.CLIENT)
 public class AnimationsModuleSetupProcedure {
 	@SubscribeEvent
 	public static void onClientSetup(FMLClientSetupEvent event) {
@@ -39,7 +38,7 @@ public class AnimationsModuleSetupProcedure {
 		});
 	}
 
-	@EventBusSubscriber(modid = "power", bus = EventBusSubscriber.Bus.MOD)
+	@EventBusSubscriber
 	public static record PowerModAnimationMessage(String animation, int target, boolean override) implements CustomPacketPayload {
 
 		public static final Type<PowerModAnimationMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "animations_module_setup"));
@@ -74,7 +73,6 @@ public class AnimationsModuleSetupProcedure {
 		}
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	public static void setAnimationClientside(Player player, String anim, boolean override) {
 		if (player instanceof net.minecraft.client.player.AbstractClientPlayer player_) {
 			var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player_).get(ResourceLocation.fromNamespaceAndPath("power", "player_animation"));

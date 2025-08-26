@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import com.esmods.keepersofthestonestwo.procedures.ActiveModProtectionProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class ProtectionMobEffect extends MobEffect {
 	public ProtectionMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13382656);

@@ -1,8 +1,5 @@
 package com.esmods.keepersofthestonestwo.block;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -84,7 +81,6 @@ public class BatteryChargerBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
 	public void animateTick(BlockState blockstate, Level world, BlockPos pos, RandomSource random) {
 		super.animateTick(blockstate, world, pos, random);
 		BatteryChargerClientTickProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
@@ -128,13 +124,8 @@ public class BatteryChargerBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean isMoving) {
-		BlockEntity blockEntity = world.getBlockEntity(pos);
-		if (blockEntity instanceof BatteryChargerBlockEntity be) {
-			Containers.dropContents(world, pos, be);
-			world.updateNeighbourForOutputSignal(pos, this);
-		}
-		super.affectNeighborsAfterRemoval(state, world, pos, isMoving);
+	protected void affectNeighborsAfterRemoval(BlockState blockstate, ServerLevel world, BlockPos blockpos, boolean flag) {
+		Containers.updateNeighboursAfterDestroy(blockstate, world, blockpos);
 	}
 
 	@Override

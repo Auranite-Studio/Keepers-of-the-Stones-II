@@ -1,8 +1,5 @@
 package com.esmods.keepersofthestonestwo.entity;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.EntityHitResult;
@@ -33,7 +30,6 @@ import javax.annotation.Nullable;
 import com.esmods.keepersofthestonestwo.procedures.CopperAttackProjectileKoghdaSnariadPopadaietVBlokProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class CopperAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.COPPER_BLOCK);
 	private int knockback = 0;
@@ -55,7 +51,6 @@ public class CopperAttackProjectileEntity extends AbstractArrow implements ItemS
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
 		return PROJECTILE_ITEM;
 	}

@@ -2,6 +2,8 @@ package com.esmods.keepersofthestonestwo.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
+import net.minecraft.world.level.storage.ValueOutput;
+import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -30,7 +32,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
@@ -128,31 +129,25 @@ public class CursedSquireEntity extends Monster {
 	}
 
 	@Override
-	public void addAdditionalSaveData(CompoundTag compound) {
-		super.addAdditionalSaveData(compound);
-		compound.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
-		compound.putBoolean("DataOnBattle", this.entityData.get(DATA_OnBattle));
-		compound.putString("DataState", this.entityData.get(DATA_State));
-		compound.putInt("DataIA", this.entityData.get(DATA_IA));
-		compound.putInt("DataPatience", this.entityData.get(DATA_Patience));
-		compound.putInt("DataLook", this.entityData.get(DATA_Look));
+	public void addAdditionalSaveData(ValueOutput valueOutput) {
+		super.addAdditionalSaveData(valueOutput);
+		valueOutput.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
+		valueOutput.putBoolean("DataOnBattle", this.entityData.get(DATA_OnBattle));
+		valueOutput.putString("DataState", this.entityData.get(DATA_State));
+		valueOutput.putInt("DataIA", this.entityData.get(DATA_IA));
+		valueOutput.putInt("DataPatience", this.entityData.get(DATA_Patience));
+		valueOutput.putInt("DataLook", this.entityData.get(DATA_Look));
 	}
 
 	@Override
-	public void readAdditionalSaveData(CompoundTag compound) {
-		super.readAdditionalSaveData(compound);
-		if (compound.contains("Dataattack_anim_sync"))
-			this.entityData.set(DATA_attack_anim_sync, compound.getIntOr("Dataattack_anim_sync", 0));
-		if (compound.contains("DataOnBattle"))
-			this.entityData.set(DATA_OnBattle, compound.getBooleanOr("DataOnBattle", false));
-		if (compound.contains("DataState"))
-			this.entityData.set(DATA_State, compound.getStringOr("DataState", ""));
-		if (compound.contains("DataIA"))
-			this.entityData.set(DATA_IA, compound.getIntOr("DataIA", 0));
-		if (compound.contains("DataPatience"))
-			this.entityData.set(DATA_Patience, compound.getIntOr("DataPatience", 0));
-		if (compound.contains("DataLook"))
-			this.entityData.set(DATA_Look, compound.getIntOr("DataLook", 0));
+	public void readAdditionalSaveData(ValueInput valueInput) {
+		super.readAdditionalSaveData(valueInput);
+		this.entityData.set(DATA_attack_anim_sync, valueInput.getIntOr("Dataattack_anim_sync", 0));
+		this.entityData.set(DATA_OnBattle, valueInput.getBooleanOr("DataOnBattle", false));
+		this.entityData.set(DATA_State, valueInput.getStringOr("DataState", ""));
+		this.entityData.set(DATA_IA, valueInput.getIntOr("DataIA", 0));
+		this.entityData.set(DATA_Patience, valueInput.getIntOr("DataPatience", 0));
+		this.entityData.set(DATA_Look, valueInput.getIntOr("DataLook", 0));
 	}
 
 	@Override

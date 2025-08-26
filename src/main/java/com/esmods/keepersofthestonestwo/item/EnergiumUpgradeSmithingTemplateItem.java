@@ -1,8 +1,5 @@
 package com.esmods.keepersofthestonestwo.item;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
@@ -17,14 +14,13 @@ public class EnergiumUpgradeSmithingTemplateItem extends Item {
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, display, list, flag);
-		list.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_0"));
-		list.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_1"));
-		list.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_2"));
-		list.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_3"));
-		list.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_4"));
-		list.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_5"));
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		componentConsumer.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_0"));
+		componentConsumer.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_1"));
+		componentConsumer.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_2"));
+		componentConsumer.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_3"));
+		componentConsumer.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_4"));
+		componentConsumer.accept(Component.translatable("item.power.energium_upgrade_smithing_template.description_5"));
 	}
 }

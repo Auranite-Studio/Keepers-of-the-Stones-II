@@ -1,8 +1,5 @@
 package com.esmods.keepersofthestonestwo.client.particle;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.client.particle.TextureSheetParticle;
 import net.minecraft.client.particle.SpriteSet;
@@ -11,7 +8,6 @@ import net.minecraft.client.particle.ParticleProvider;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 
-@OnlyIn(Dist.CLIENT)
 public class PoisonParticleParticle extends TextureSheetParticle {
 	public static PoisonParticleParticleProvider provider(SpriteSet spriteSet) {
 		return new PoisonParticleParticleProvider(spriteSet);
@@ -25,8 +21,7 @@ public class PoisonParticleParticle extends TextureSheetParticle {
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			PoisonParticleParticle particle = new PoisonParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
-			return particle;
+			return new PoisonParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
 		}
 	}
 

@@ -1,8 +1,5 @@
 package com.esmods.keepersofthestonestwo.entity;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.EntityHitResult;
@@ -34,7 +31,6 @@ import com.esmods.keepersofthestonestwo.procedures.AtomicRocketKazhdyiTikPriPoli
 import com.esmods.keepersofthestonestwo.procedures.AtomicRocketExplosionProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.TNT);
 	private int knockback = 0;
@@ -56,7 +52,6 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
 		return PROJECTILE_ITEM;
 	}

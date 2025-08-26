@@ -7,6 +7,8 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
+import javax.annotation.Nullable;
+
 import com.esmods.keepersofthestonestwo.procedures.LuckCoinInInventoryProcedure;
 
 public class LuckCoinItem extends Item {
@@ -15,8 +17,8 @@ public class LuckCoinItem extends Item {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, EquipmentSlot slot) {
-		super.inventoryTick(itemstack, world, entity, slot);
+	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+		super.inventoryTick(itemstack, world, entity, equipmentSlot);
 		LuckCoinInInventoryProcedure.execute(entity);
 	}
 }

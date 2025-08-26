@@ -169,6 +169,7 @@
       "value": -7256744,
       "falpha": 0.0
     },
+    "spawnEggTexture": "cursed_keeper_spawn_egg",
     "creativeTabs": [
       {
         "value": "CUSTOM:Mobs"

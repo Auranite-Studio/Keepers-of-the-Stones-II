@@ -1,20 +1,15 @@
-
 **New features**
 - *N/A*
 
 **Improvemnts** 
-- The stun effect will no longer constantly emit sound
-- Stun effect now lowers the player's stats
-- Admins now see the results of the pw command
-- The 'reset' argument of the 'pw' command now deletes runes without returning them to the player's inventory
-- Improved AI of mobs
+- Mod ported to NeoForge 1.21.8
 
 **API changes**
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that could cause the cursed keeper to misbehave in battle
-- [Bugfix] Fixes to the localization of runes in some languages
+- [Bugfix] Fixed a bug that caused the sand master's armor to not fully disappear when the stone was deactivated
 
 **Known issues**
-- *N/A*
+- Temporarily disabled item renders for vaults and battery charger blocks (only 1.21.8)
+- Temporarily there is no fog from the curse effect (only 1.21.8)

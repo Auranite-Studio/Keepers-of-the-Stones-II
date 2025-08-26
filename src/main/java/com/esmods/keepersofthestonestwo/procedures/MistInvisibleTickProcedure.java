@@ -37,29 +37,17 @@ public class MistInvisibleTickProcedure {
 			}
 		} else {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).ability_using) {
-				{
-					Entity _entity = entity;
-					if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.HEAD, entity.getData(PowerModVariables.PLAYER_VARIABLES).helmet);
-					}
+				if (entity instanceof LivingEntity _living) {
+					_living.setItemSlot(EquipmentSlot.HEAD, entity.getData(PowerModVariables.PLAYER_VARIABLES).helmet);
 				}
-				{
-					Entity _entity = entity;
-					if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.CHEST, entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate);
-					}
+				if (entity instanceof LivingEntity _living) {
+					_living.setItemSlot(EquipmentSlot.CHEST, entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate);
 				}
-				{
-					Entity _entity = entity;
-					if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.LEGS, entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings);
-					}
+				if (entity instanceof LivingEntity _living) {
+					_living.setItemSlot(EquipmentSlot.LEGS, entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings);
 				}
-				{
-					Entity _entity = entity;
-					if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.FEET, entity.getData(PowerModVariables.PLAYER_VARIABLES).boots);
-					}
+				if (entity instanceof LivingEntity _living) {
+					_living.setItemSlot(EquipmentSlot.FEET, entity.getData(PowerModVariables.PLAYER_VARIABLES).boots);
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

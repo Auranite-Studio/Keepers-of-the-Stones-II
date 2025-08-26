@@ -34,7 +34,7 @@ import com.esmods.keepersofthestonestwo.procedures.ActivePowerDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ActiveBatteryDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AbilityBlockedDebugProcedure;
 
-@EventBusSubscriber({Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class DebugInfoOverlay {
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void eventHandler(RenderGuiEvent.Pre event) {

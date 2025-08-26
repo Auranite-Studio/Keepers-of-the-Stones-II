@@ -1,8 +1,5 @@
 package com.esmods.keepersofthestonestwo.entity;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
@@ -29,7 +26,6 @@ import com.esmods.keepersofthestonestwo.procedures.MercuryBallProjectileKoghdaSn
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class MercuryBallProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(PowerModItems.MERCURY_BALL.get());
 	private int knockback = 0;
@@ -51,7 +47,6 @@ public class MercuryBallProjectileEntity extends AbstractArrow implements ItemSu
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
 		return PROJECTILE_ITEM;
 	}

@@ -3,7 +3,6 @@ package com.esmods.keepersofthestonestwo.client.renderer.item;
 import net.neoforged.neoforge.client.event.RegisterItemModelsEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.item.ItemStack;
@@ -30,7 +29,7 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.Codec;
 import com.mojang.datafixers.util.Either;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(Dist.CLIENT)
 public class LegacyOverrideSelectItemModel implements ItemModel {
 	private final ModelOverride[] overrides;
 	private final ItemModel[] models;
@@ -54,7 +53,6 @@ public class LegacyOverrideSelectItemModel implements ItemModel {
 		model.update(renderState, itemStack, modelResolver, displayContext, level, entity, seed);
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	public record FloatEntry(RangeSelectItemModelProperty property, float value) implements PredicateEntry {
 		public static final Codec<LegacyOverrideSelectItemModel.FloatEntry> CODEC = RecordCodecBuilder.create(instance -> instance
 				.group(RangeSelectItemModelProperties.MAP_CODEC.fieldOf("property").forGetter(LegacyOverrideSelectItemModel.FloatEntry::property), Codec.FLOAT.fieldOf("value").forGetter(LegacyOverrideSelectItemModel.FloatEntry::value))
@@ -66,7 +64,6 @@ public class LegacyOverrideSelectItemModel implements ItemModel {
 		}
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	public record BoolEntry(ConditionalItemModelProperty property, boolean value) implements PredicateEntry {
 		public static final Codec<LegacyOverrideSelectItemModel.BoolEntry> CODEC = RecordCodecBuilder.create(instance -> instance
 				.group(ConditionalItemModelProperties.MAP_CODEC.fieldOf("property").forGetter(LegacyOverrideSelectItemModel.BoolEntry::property), Codec.BOOL.fieldOf("value").forGetter(LegacyOverrideSelectItemModel.BoolEntry::value))
@@ -78,7 +75,6 @@ public class LegacyOverrideSelectItemModel implements ItemModel {
 		}
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	public interface PredicateEntry {
 		Codec<LegacyOverrideSelectItemModel.PredicateEntry> CODEC = Codec.either(LegacyOverrideSelectItemModel.FloatEntry.CODEC, LegacyOverrideSelectItemModel.BoolEntry.CODEC).xmap(Either::unwrap, predicate -> {
 			if (predicate instanceof LegacyOverrideSelectItemModel.FloatEntry floatPredicate)
@@ -91,7 +87,6 @@ public class LegacyOverrideSelectItemModel implements ItemModel {
 		boolean test(ItemStack itemStack, @Nullable ClientLevel level, @Nullable LivingEntity entity, int seed, ItemDisplayContext displayContext);
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	public record ModelOverride(List<PredicateEntry> predicate, ItemModel.Unbaked model) {
 		public static final Codec<LegacyOverrideSelectItemModel.ModelOverride> CODEC = RecordCodecBuilder
 				.create(instance -> instance.group(LegacyOverrideSelectItemModel.PredicateEntry.CODEC.listOf().fieldOf("predicate").forGetter(LegacyOverrideSelectItemModel.ModelOverride::predicate),
@@ -105,7 +100,6 @@ public class LegacyOverrideSelectItemModel implements ItemModel {
 		}
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	public record Unbaked(List<LegacyOverrideSelectItemModel.ModelOverride> overrides, ItemModel.Unbaked fallback) implements ItemModel.Unbaked {
 		public static final MapCodec<LegacyOverrideSelectItemModel.Unbaked> MAP_CODEC = RecordCodecBuilder
 				.mapCodec(instance -> instance.group(LegacyOverrideSelectItemModel.ModelOverride.CODEC.listOf().fieldOf("overrides").forGetter(LegacyOverrideSelectItemModel.Unbaked::overrides),
@@ -132,7 +126,6 @@ public class LegacyOverrideSelectItemModel implements ItemModel {
 	}
 
 	@SubscribeEvent
-	@OnlyIn(Dist.CLIENT)
 	public static void registerItemModelTypes(RegisterItemModelsEvent event) {
 		event.register(ResourceLocation.parse("power:legacy_overrides"), LegacyOverrideSelectItemModel.Unbaked.MAP_CODEC);
 	}

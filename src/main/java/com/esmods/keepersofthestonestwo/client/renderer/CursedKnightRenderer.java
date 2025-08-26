@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.animation.KeyframeAnimation;
 
 import com.esmods.keepersofthestonestwo.entity.CursedKnightEntity;
 import com.esmods.keepersofthestonestwo.client.model.animations.cursed_knightAnimation;
@@ -38,9 +39,17 @@ public class CursedKnightRenderer extends MobRenderer<CursedKnightEntity, Living
 
 	private static final class AnimatedModel extends Modelcursed_knight {
 		private CursedKnightEntity entity = null;
+		private final KeyframeAnimation keyframeAnimation0;
+		private final KeyframeAnimation keyframeAnimation1;
+		private final KeyframeAnimation keyframeAnimation2;
+		private final KeyframeAnimation keyframeAnimation3;
 
 		public AnimatedModel(ModelPart root) {
 			super(root);
+			this.keyframeAnimation0 = cursed_knightAnimation.walk.bake(root);
+			this.keyframeAnimation1 = cursed_knightAnimation.idle.bake(root);
+			this.keyframeAnimation2 = cursed_knightAnimation.sprint.bake(root);
+			this.keyframeAnimation3 = cursed_knightAnimation.attack.bake(root);
 		}
 
 		public void setEntity(CursedKnightEntity entity) {
@@ -50,10 +59,10 @@ public class CursedKnightRenderer extends MobRenderer<CursedKnightEntity, Living
 		@Override
 		public void setupAnim(LivingEntityRenderState state) {
 			this.root().getAllParts().forEach(ModelPart::resetPose);
-			this.animate(entity.animationState0, cursed_knightAnimation.walk, state.ageInTicks, 1f);
-			this.animate(entity.animationState1, cursed_knightAnimation.idle, state.ageInTicks, 1f);
-			this.animate(entity.animationState2, cursed_knightAnimation.sprint, state.ageInTicks, 1f);
-			this.animate(entity.animationState3, cursed_knightAnimation.attack, state.ageInTicks, 1f);
+			this.keyframeAnimation0.apply(entity.animationState0, state.ageInTicks, 1f);
+			this.keyframeAnimation1.apply(entity.animationState1, state.ageInTicks, 1f);
+			this.keyframeAnimation2.apply(entity.animationState2, state.ageInTicks, 1f);
+			this.keyframeAnimation3.apply(entity.animationState3, state.ageInTicks, 1f);
 			super.setupAnim(state);
 		}
 	}

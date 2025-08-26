@@ -3,6 +3,8 @@ package com.esmods.keepersofthestonestwo.entity;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
+import net.minecraft.world.level.storage.ValueOutput;
+import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
@@ -34,7 +36,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
@@ -168,34 +169,27 @@ public class EnergiumGolemEntity extends Monster {
 	}
 
 	@Override
-	public void addAdditionalSaveData(CompoundTag compound) {
-		super.addAdditionalSaveData(compound);
-		compound.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
-		compound.putInt("DataIA", this.entityData.get(DATA_IA));
-		compound.putString("DataState", this.entityData.get(DATA_State));
-		compound.putInt("DataPatience", this.entityData.get(DATA_Patience));
-		compound.putInt("DataLook", this.entityData.get(DATA_Look));
-		compound.putBoolean("DataOnBattle", this.entityData.get(DATA_OnBattle));
-		compound.putInt("DataBreathRange", this.entityData.get(DATA_BreathRange));
+	public void addAdditionalSaveData(ValueOutput valueOutput) {
+		super.addAdditionalSaveData(valueOutput);
+		valueOutput.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
+		valueOutput.putInt("DataIA", this.entityData.get(DATA_IA));
+		valueOutput.putString("DataState", this.entityData.get(DATA_State));
+		valueOutput.putInt("DataPatience", this.entityData.get(DATA_Patience));
+		valueOutput.putInt("DataLook", this.entityData.get(DATA_Look));
+		valueOutput.putBoolean("DataOnBattle", this.entityData.get(DATA_OnBattle));
+		valueOutput.putInt("DataBreathRange", this.entityData.get(DATA_BreathRange));
 	}
 
 	@Override
-	public void readAdditionalSaveData(CompoundTag compound) {
-		super.readAdditionalSaveData(compound);
-		if (compound.contains("Dataattack_anim_sync"))
-			this.entityData.set(DATA_attack_anim_sync, compound.getIntOr("Dataattack_anim_sync", 0));
-		if (compound.contains("DataIA"))
-			this.entityData.set(DATA_IA, compound.getIntOr("DataIA", 0));
-		if (compound.contains("DataState"))
-			this.entityData.set(DATA_State, compound.getStringOr("DataState", ""));
-		if (compound.contains("DataPatience"))
-			this.entityData.set(DATA_Patience, compound.getIntOr("DataPatience", 0));
-		if (compound.contains("DataLook"))
-			this.entityData.set(DATA_Look, compound.getIntOr("DataLook", 0));
-		if (compound.contains("DataOnBattle"))
-			this.entityData.set(DATA_OnBattle, compound.getBooleanOr("DataOnBattle", false));
-		if (compound.contains("DataBreathRange"))
-			this.entityData.set(DATA_BreathRange, compound.getIntOr("DataBreathRange", 0));
+	public void readAdditionalSaveData(ValueInput valueInput) {
+		super.readAdditionalSaveData(valueInput);
+		this.entityData.set(DATA_attack_anim_sync, valueInput.getIntOr("Dataattack_anim_sync", 0));
+		this.entityData.set(DATA_IA, valueInput.getIntOr("DataIA", 0));
+		this.entityData.set(DATA_State, valueInput.getStringOr("DataState", ""));
+		this.entityData.set(DATA_Patience, valueInput.getIntOr("DataPatience", 0));
+		this.entityData.set(DATA_Look, valueInput.getIntOr("DataLook", 0));
+		this.entityData.set(DATA_OnBattle, valueInput.getBooleanOr("DataOnBattle", false));
+		this.entityData.set(DATA_BreathRange, valueInput.getIntOr("DataBreathRange", 0));
 	}
 
 	@Override

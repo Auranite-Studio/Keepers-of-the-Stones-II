@@ -81,6 +81,7 @@
       "value": -9817013,
       "falpha": 0.0
     },
+    "spawnEggTexture": "cursed_squire_spawn_egg",
     "creativeTabs": [
       {
         "value": "CUSTOM:Mobs"

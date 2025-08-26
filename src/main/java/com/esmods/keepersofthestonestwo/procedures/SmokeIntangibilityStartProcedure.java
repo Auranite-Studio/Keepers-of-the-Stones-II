@@ -31,29 +31,17 @@ public class SmokeIntangibilityStartProcedure {
 			_vars.boots = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).copy();
 			_vars.syncPlayerVariables(entity);
 		}
-		{
-			Entity _entity = entity;
-			if (_entity instanceof LivingEntity _living) {
-				_living.setItemSlot(EquipmentSlot.HEAD, ItemStack.EMPTY);
-			}
+		if (entity instanceof LivingEntity _living) {
+			_living.setItemSlot(EquipmentSlot.HEAD, ItemStack.EMPTY);
 		}
-		{
-			Entity _entity = entity;
-			if (_entity instanceof LivingEntity _living) {
-				_living.setItemSlot(EquipmentSlot.CHEST, ItemStack.EMPTY);
-			}
+		if (entity instanceof LivingEntity _living) {
+			_living.setItemSlot(EquipmentSlot.CHEST, ItemStack.EMPTY);
 		}
-		{
-			Entity _entity = entity;
-			if (_entity instanceof LivingEntity _living) {
-				_living.setItemSlot(EquipmentSlot.LEGS, ItemStack.EMPTY);
-			}
+		if (entity instanceof LivingEntity _living) {
+			_living.setItemSlot(EquipmentSlot.LEGS, ItemStack.EMPTY);
 		}
-		{
-			Entity _entity = entity;
-			if (_entity instanceof LivingEntity _living) {
-				_living.setItemSlot(EquipmentSlot.FEET, ItemStack.EMPTY);
-			}
+		if (entity instanceof LivingEntity _living) {
+			_living.setItemSlot(EquipmentSlot.FEET, ItemStack.EMPTY);
 		}
 	}
 }

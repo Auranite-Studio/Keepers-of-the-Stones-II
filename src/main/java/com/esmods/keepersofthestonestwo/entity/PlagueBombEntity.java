@@ -1,8 +1,5 @@
 package com.esmods.keepersofthestonestwo.entity;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
@@ -28,7 +25,6 @@ import javax.annotation.Nullable;
 import com.esmods.keepersofthestonestwo.procedures.PlagueBombDetonateProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class PlagueBombEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.WITHER_ROSE);
 	private int knockback = 0;
@@ -50,7 +46,6 @@ public class PlagueBombEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
 		return PROJECTILE_ITEM;
 	}
