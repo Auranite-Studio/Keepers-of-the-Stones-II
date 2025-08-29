@@ -5,7 +5,17 @@
     "recipeType": "Crafting",
     "recipeRetstackSize": 4,
     "group": "",
-    "unlockingItems": [],
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:CursedStoneBricks"
+      },
+      {
+        "value": "CUSTOM:AmplifierBlock"
+      },
+      {
+        "value": "Blocks.STAINED_GLASS_PANE#0"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

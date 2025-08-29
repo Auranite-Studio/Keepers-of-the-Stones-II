@@ -9,7 +9,8 @@
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] 
+- [Bugfix] Fixed a bug that allowed duplicating energium ingots
+
 
 **Known issues**
 - *N/A*

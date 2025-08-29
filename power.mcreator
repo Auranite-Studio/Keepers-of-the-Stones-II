@@ -12174,6 +12174,7 @@
       "registry_name": "raw_amplifier_to_drop_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_amplifier_to_drop_recipe.json",
           "src/main/resources/data/power/recipe/raw_amplifier_to_drop_recipe.json"
         ]
       },
@@ -12187,7 +12188,8 @@
       "registry_name": "amplifier_ore_blasting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_ore_blasting.json"
+          "src/main/resources/data/power/recipe/amplifier_ore_blasting.json",
+          "src/main/resources/data/power/advancement/recipes/amplifier_ore_blasting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -12200,6 +12202,7 @@
       "registry_name": "raw_amplifier_blasting",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_amplifier_blasting.json",
           "src/main/resources/data/power/recipe/raw_amplifier_blasting.json"
         ]
       },
@@ -13478,7 +13481,8 @@
       "registry_name": "amplifier_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_block_recipe.json"
+          "src/main/resources/data/power/recipe/amplifier_block_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/amplifier_block_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -13491,7 +13495,8 @@
       "registry_name": "amplifier_drop_from_block",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_drop_from_block.json"
+          "src/main/resources/data/power/recipe/amplifier_drop_from_block.json",
+          "src/main/resources/data/power/advancement/recipes/amplifier_drop_from_block.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -14031,7 +14036,8 @@
       "registry_name": "raw_depleted_energium_block_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_depleted_energium_block_craft.json"
+          "src/main/resources/data/power/recipe/raw_depleted_energium_block_craft.json",
+          "src/main/resources/data/power/advancement/recipes/raw_depleted_energium_block_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -14044,6 +14050,7 @@
       "registry_name": "raw_depleted_energium_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_depleted_energium_craft.json",
           "src/main/resources/data/power/recipe/raw_depleted_energium_craft.json"
         ]
       },
@@ -14074,6 +14081,7 @@
       "registry_name": "raw_amplifier_block_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_amplifier_block_craft.json",
           "src/main/resources/data/power/recipe/raw_amplifier_block_craft.json"
         ]
       },
@@ -14087,6 +14095,7 @@
       "registry_name": "raw_amplifier_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_amplifier_craft.json",
           "src/main/resources/data/power/recipe/raw_amplifier_craft.json"
         ]
       },
@@ -17958,6 +17967,7 @@
       "registry_name": "amplifier_ring_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/amplifier_ring_craft.json",
           "src/main/resources/data/power/recipe/amplifier_ring_craft.json"
         ]
       },
@@ -18177,7 +18187,8 @@
       "registry_name": "cursed_lantern_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_lantern_craft.json"
+          "src/main/resources/data/power/recipe/cursed_lantern_craft.json",
+          "src/main/resources/data/power/advancement/recipes/cursed_lantern_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -18284,7 +18295,8 @@
       "registry_name": "copyrium_ore_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/copyrium_ore_block_recipe.json"
+          "src/main/resources/data/power/recipe/copyrium_ore_block_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/copyrium_ore_block_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -18297,7 +18309,8 @@
       "registry_name": "copyrium_block_ore_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/copyrium_block_ore_recipe.json"
+          "src/main/resources/data/power/recipe/copyrium_block_ore_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/copyrium_block_ore_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -18310,6 +18323,7 @@
       "registry_name": "copyrium_ore_smelting",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/copyrium_ore_smelting.json",
           "src/main/resources/data/power/recipe/copyrium_ore_smelting.json"
         ]
       },
@@ -18385,6 +18399,7 @@
       "registry_name": "raw_copyrium_smelting",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_copyrium_smelting.json",
           "src/main/resources/data/power/recipe/raw_copyrium_smelting.json"
         ]
       },
@@ -18398,7 +18413,8 @@
       "registry_name": "copyrium_ore_blasting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/copyrium_ore_blasting.json"
+          "src/main/resources/data/power/recipe/copyrium_ore_blasting.json",
+          "src/main/resources/data/power/advancement/recipes/copyrium_ore_blasting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -18411,7 +18427,8 @@
       "registry_name": "raw_copyrium_blasting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_copyrium_blasting.json"
+          "src/main/resources/data/power/recipe/raw_copyrium_blasting.json",
+          "src/main/resources/data/power/advancement/recipes/raw_copyrium_blasting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -20796,7 +20813,8 @@
       "registry_name": "cursed_ladder_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_ladder_craft.json"
+          "src/main/resources/data/power/recipe/cursed_ladder_craft.json",
+          "src/main/resources/data/power/advancement/recipes/cursed_ladder_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -20826,7 +20844,8 @@
       "registry_name": "cursed_lamp_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_lamp_craft.json"
+          "src/main/resources/data/power/recipe/cursed_lamp_craft.json",
+          "src/main/resources/data/power/advancement/recipes/cursed_lamp_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -20915,6 +20934,7 @@
       "registry_name": "elemental_power_generator_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/elemental_power_generator_craft.json",
           "src/main/resources/data/power/recipe/elemental_power_generator_craft.json"
         ]
       },
@@ -22383,6 +22403,7 @@
       "registry_name": "raw_copyrium_block_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_copyrium_block_craft.json",
           "src/main/resources/data/power/recipe/raw_copyrium_block_craft.json"
         ]
       },
@@ -22396,7 +22417,8 @@
       "registry_name": "raw_copyrium_from_block_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_copyrium_from_block_craft.json"
+          "src/main/resources/data/power/recipe/raw_copyrium_from_block_craft.json",
+          "src/main/resources/data/power/advancement/recipes/raw_copyrium_from_block_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -22469,7 +22491,8 @@
       "registry_name": "energium_ore_to_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_ore_to_ingot.json"
+          "src/main/resources/data/power/recipe/energium_ore_to_ingot.json",
+          "src/main/resources/data/power/advancement/recipes/energium_ore_to_ingot.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -22482,6 +22505,7 @@
       "registry_name": "raw_energium_to_ingot",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_energium_to_ingot.json",
           "src/main/resources/data/power/recipe/raw_energium_to_ingot.json"
         ]
       },
@@ -22533,20 +22557,8 @@
       "registry_name": "energium_dust_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_dust_recipe.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Energium"
-    },
-    {
-      "name": "EnergiumDustToIngot",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_dust_to_ingot",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/recipe/energium_dust_to_ingot.json"
+          "src/main/resources/data/power/recipe/energium_dust_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_dust_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -23850,6 +23862,7 @@
       "registry_name": "freaking_parsnip_soup_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/freaking_parsnip_soup_craft.json",
           "src/main/resources/data/power/recipe/freaking_parsnip_soup_craft.json"
         ]
       },
@@ -28819,6 +28832,7 @@
       "registry_name": "raw_energium_block_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_energium_block_craft.json",
           "src/main/resources/data/power/recipe/raw_energium_block_craft.json"
         ]
       },
@@ -30144,7 +30158,8 @@
       "registry_name": "characteristics_card_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/characteristics_card_craft.json"
+          "src/main/resources/data/power/recipe/characteristics_card_craft.json",
+          "src/main/resources/data/power/advancement/recipes/characteristics_card_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CharacteristicsCard"
@@ -30985,7 +31000,8 @@
       "registry_name": "rune_cutter_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/rune_cutter_craft.json"
+          "src/main/resources/data/power/recipe/rune_cutter_craft.json",
+          "src/main/resources/data/power/advancement/recipes/rune_cutter_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/RuneCutter"
@@ -31501,7 +31517,8 @@
       "registry_name": "energium_shield_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_shield_craft.json"
+          "src/main/resources/data/power/recipe/energium_shield_craft.json",
+          "src/main/resources/data/power/advancement/recipes/energium_shield_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -39023,8 +39040,6 @@
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModConfigs.java",
-      "src/main/resources/data/minecraft/tags/item/trim_materials.json",
-      "src/main/resources/assets/minecraft/atlases/armor_trims.json",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBiomes.java",
       "src/main/java/com/esmods/keepersofthestonestwo/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModPotions.java",
