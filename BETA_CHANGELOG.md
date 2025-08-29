@@ -3,7 +3,7 @@
 - *N/A*
 
 **Improvemnts** 
-- *N/A*
+- Added sound when crafting a rune in rune cutter
 
 **API changes**
 - *N/A*
