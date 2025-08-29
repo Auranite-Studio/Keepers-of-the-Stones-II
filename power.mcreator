@@ -7697,7 +7697,8 @@
       "registry_name": "depleted_energium_ore_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/depleted_energium_ore_block_recipe.json"
+          "src/main/resources/data/power/recipe/depleted_energium_ore_block_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/depleted_energium_ore_block_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -7710,6 +7711,7 @@
       "registry_name": "depleted_energium_block_ore_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/depleted_energium_block_ore_recipe.json",
           "src/main/resources/data/power/recipe/depleted_energium_block_ore_recipe.json"
         ]
       },
@@ -7723,6 +7725,7 @@
       "registry_name": "depleted_energium_ore_smelting",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/depleted_energium_ore_smelting.json",
           "src/main/resources/data/power/recipe/depleted_energium_ore_smelting.json"
         ]
       },
@@ -7750,7 +7753,8 @@
       "registry_name": "raw_depleted_energium_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_depleted_energium_recipe.json"
+          "src/main/resources/data/power/recipe/raw_depleted_energium_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/raw_depleted_energium_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8154,7 +8158,8 @@
       "registry_name": "battery_charger_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/battery_charger_recipe.json"
+          "src/main/resources/data/power/recipe/battery_charger_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/battery_charger_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/BatteryCharger"
@@ -8167,7 +8172,8 @@
       "registry_name": "empty_battery_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/empty_battery_recipe.json"
+          "src/main/resources/data/power/recipe/empty_battery_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/empty_battery_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/EmptyBattery"
@@ -8320,6 +8326,7 @@
       "registry_name": "energium_block_ore_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/energium_block_ore_recipe.json",
           "src/main/resources/data/power/recipe/energium_block_ore_recipe.json"
         ]
       },
@@ -8333,6 +8340,7 @@
       "registry_name": "energium_ore_block_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/energium_ore_block_recipe.json",
           "src/main/resources/data/power/recipe/energium_ore_block_recipe.json"
         ]
       },
@@ -8346,7 +8354,8 @@
       "registry_name": "depleted_energium_ore_blasting_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/depleted_energium_ore_blasting_recipe.json"
+          "src/main/resources/data/power/recipe/depleted_energium_ore_blasting_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/depleted_energium_ore_blasting_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8359,6 +8368,7 @@
       "registry_name": "raw_depleted_energium_blasting_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_depleted_energium_blasting_recipe.json",
           "src/main/resources/data/power/recipe/raw_depleted_energium_blasting_recipe.json"
         ]
       },
@@ -8372,7 +8382,8 @@
       "registry_name": "energium_ingot_cleaning_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_ingot_cleaning_recipe.json"
+          "src/main/resources/data/power/recipe/energium_ingot_cleaning_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_ingot_cleaning_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8441,7 +8452,8 @@
       "registry_name": "duplicate_energium_upgrade_smithing_template",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/duplicate_energium_upgrade_smithing_template.json"
+          "src/main/resources/data/power/recipe/duplicate_energium_upgrade_smithing_template.json",
+          "src/main/resources/data/power/advancement/recipes/duplicate_energium_upgrade_smithing_template.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8524,7 +8536,8 @@
       "registry_name": "energium_pickaxe_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_pickaxe_recipe.json"
+          "src/main/resources/data/power/recipe/energium_pickaxe_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_pickaxe_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8537,6 +8550,7 @@
       "registry_name": "energium_axe_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/energium_axe_recipe.json",
           "src/main/resources/data/power/recipe/energium_axe_recipe.json"
         ]
       },
@@ -8550,7 +8564,8 @@
       "registry_name": "energium_sword_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_sword_recipe.json"
+          "src/main/resources/data/power/recipe/energium_sword_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_sword_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8563,7 +8578,8 @@
       "registry_name": "energium_shovel_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_shovel_recipe.json"
+          "src/main/resources/data/power/recipe/energium_shovel_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_shovel_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8576,6 +8592,7 @@
       "registry_name": "energium_hoe_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/energium_hoe_recipe.json",
           "src/main/resources/data/power/recipe/energium_hoe_recipe.json"
         ]
       },
@@ -8606,6 +8623,7 @@
       "registry_name": "energium_armor_helmet_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/energium_armor_helmet_recipe.json",
           "src/main/resources/data/power/recipe/energium_armor_helmet_recipe.json"
         ]
       },
@@ -8632,7 +8650,8 @@
       "registry_name": "energium_armor_leggings_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_armor_leggings_recipe.json"
+          "src/main/resources/data/power/recipe/energium_armor_leggings_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_armor_leggings_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8645,7 +8664,8 @@
       "registry_name": "energium_armor_boots_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_armor_boots_recipe.json"
+          "src/main/resources/data/power/recipe/energium_armor_boots_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_armor_boots_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -11166,7 +11186,8 @@
       "registry_name": "energium_controller_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_controller_recipe.json"
+          "src/main/resources/data/power/recipe/energium_controller_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_controller_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -12097,7 +12118,8 @@
       "registry_name": "amplifier_ore_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_ore_smelting.json"
+          "src/main/resources/data/power/recipe/amplifier_ore_smelting.json",
+          "src/main/resources/data/power/advancement/recipes/amplifier_ore_smelting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
