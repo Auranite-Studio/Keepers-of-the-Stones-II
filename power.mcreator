@@ -8638,7 +8638,8 @@
       "registry_name": "energium_armor_chestplate_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_armor_chestplate_recipe.json"
+          "src/main/resources/data/power/recipe/energium_armor_chestplate_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_armor_chestplate_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -23680,58 +23681,6 @@
         ]
       },
       "path": "~/Commands"
-    },
-    {
-      "name": "DepletedEnergiumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "depleted_energium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/depleted_energium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "EnergiumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/energium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "AmplifierMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amplifier_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/amplifier_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "CopyriumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "copyrium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/copyrium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
     },
     {
       "name": "SoundPassiveProtection",
@@ -39963,10 +39912,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "TrimsMaterials",
-        "children": []
       },
       {
         "name": "Configs",
