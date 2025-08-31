@@ -7,10 +7,10 @@
     "group": "",
     "unlockingItems": [
       {
-        "value": "CUSTOM:DepletedEnergiumIngot"
+        "value": "CUSTOM:EnergiumIngot"
       },
       {
-        "value": "CUSTOM:EnergiumIngot"
+        "value": "Blocks.PLANKS"
       }
     ],
     "cookingBookCategory": "MISC",
@@ -20,28 +20,28 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:DepletedEnergiumIngot"
+        "value": "Blocks.PLANKS"
       },
       {
         "value": "CUSTOM:EnergiumIngot"
       },
       {
-        "value": "CUSTOM:DepletedEnergiumIngot"
+        "value": "Blocks.PLANKS"
       },
       {
-        "value": "CUSTOM:DepletedEnergiumIngot"
+        "value": "Blocks.PLANKS"
       },
       {
-        "value": "CUSTOM:DepletedEnergiumIngot"
+        "value": "Blocks.PLANKS"
       },
       {
-        "value": "CUSTOM:DepletedEnergiumIngot"
+        "value": "Blocks.PLANKS"
       },
       {
         "value": ""
       },
       {
-        "value": "CUSTOM:DepletedEnergiumIngot"
+        "value": "Blocks.PLANKS"
       },
       {
         "value": ""

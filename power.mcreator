@@ -27493,6 +27493,7 @@
       "registry_name": "raw_energium_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_energium_craft.json",
           "src/main/resources/data/power/recipe/raw_energium_craft.json"
         ]
       },
@@ -39937,10 +39938,6 @@
       },
       {
         "name": "ProfessionsAndTrades",
-        "children": []
-      },
-      {
-        "name": "Mixins",
         "children": []
       }
     ]

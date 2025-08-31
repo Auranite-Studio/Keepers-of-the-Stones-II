@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": "power:depleted_energium_ingot"
+            "items": "power:energium_ingot"
           }
         ]
       },
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": "power:energium_ingot"
+            "items": "#minecraft:planks"
           }
         ]
       },
