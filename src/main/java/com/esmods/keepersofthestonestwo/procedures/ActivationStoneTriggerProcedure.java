@@ -12,7 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-public class SendClientPackageActivationStoneVFXProcedure {
+public class ActivationStoneTriggerProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
@@ -24,11 +24,11 @@ public class SendClientPackageActivationStoneVFXProcedure {
 			}
 		}
 		if (world.isClientSide()) {
-			AnimationsModuleSetupProcedure.setAnimationClientside((Player) entity, "animation.player.transformation", false);
+			SetupAnimationsProcedure.setAnimationClientside((Player) entity, "animation.player.transformation", false);
 		}
 		if (!world.isClientSide()) {
 			if (entity instanceof Player)
-				PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new AnimationsModuleSetupProcedure.PowerModAnimationMessage("animation.player.transformation", entity.getId(), false));
+				PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new SetupAnimationsProcedure.PowerModAnimationMessage("animation.player.transformation", entity.getId(), false));
 		}
 	}
 }

@@ -31,7 +31,7 @@ import dev.kosmx.playerAnim.api.firstPerson.FirstPersonConfiguration;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber(modid = "power", bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class AnimationsModuleSetupProcedure {
+public class SetupAnimationsProcedure {
 	@SubscribeEvent
 	public static void onClientSetup(FMLClientSetupEvent event) {
 		PlayerAnimationAccess.REGISTER_ANIMATION_EVENT.register((player, animationStack) -> {
@@ -44,7 +44,7 @@ public class AnimationsModuleSetupProcedure {
 	@EventBusSubscriber(modid = "power", bus = EventBusSubscriber.Bus.MOD)
 	public static record PowerModAnimationMessage(String animation, int target, boolean override) implements CustomPacketPayload {
 
-		public static final Type<PowerModAnimationMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "animations_module_setup"));
+		public static final Type<PowerModAnimationMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "setup_animations"));
 		public static final StreamCodec<RegistryFriendlyByteBuf, PowerModAnimationMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PowerModAnimationMessage message) -> {
 			buffer.writeUtf(message.animation);
 			buffer.writeInt(message.target);
