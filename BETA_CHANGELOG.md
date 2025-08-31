@@ -8,7 +8,7 @@
 
 
 **API changes**
-- Colorful Powers API has been updated to 26
+- Colorful Powers API has been updated to 27
 - Rename 'SendClientPackageActivationStoneVFXProcedure' class to 'ActivationStoneTriggerProcedure'
 
 **Bugfixes**
