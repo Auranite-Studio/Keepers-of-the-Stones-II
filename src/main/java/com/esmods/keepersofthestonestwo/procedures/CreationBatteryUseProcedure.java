@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class CreationBatteryUseProcedure {
-	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("power:passing_armor")))
@@ -45,6 +45,7 @@ public class CreationBatteryUseProcedure {
 					_vars.power = 500;
 					_vars.syncPlayerVariables(entity);
 				}
+				ActivationStoneTriggerProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}

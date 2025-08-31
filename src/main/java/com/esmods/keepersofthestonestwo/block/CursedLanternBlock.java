@@ -39,7 +39,7 @@ public class CursedLanternBlock extends Block implements SimpleWaterloggedBlock 
 					return 13;
 				return 13;
 			}
-		}.getLightLevel())).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		}.getLightLevel())).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape());
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 

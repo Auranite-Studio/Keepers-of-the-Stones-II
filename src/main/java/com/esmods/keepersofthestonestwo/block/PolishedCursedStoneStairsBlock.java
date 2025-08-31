@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.Blocks;
 
 public class PolishedCursedStoneStairsBlock extends StairBlock {
 	public PolishedCursedStoneStairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.TUFF).strength(2.5f, 3f).dynamicShape().instrument(NoteBlockInstrument.BASEDRUM));
+		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.TUFF).strength(2.5f, 3f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
