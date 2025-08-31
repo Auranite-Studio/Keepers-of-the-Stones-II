@@ -8,7 +8,8 @@
 
 
 **API changes**
-- *N/A*
+- Colorful Powers API has been updated to 26
+- Rename 'SendClientPackageActivationStoneVFXProcedure' class to 'ActivationStoneTriggerProcedure'
 
 **Bugfixes**
 - [Bugfix] Fixed a bug that allowed duplicating energium ingots
