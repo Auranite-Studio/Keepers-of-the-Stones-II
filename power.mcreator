@@ -22,7 +22,7 @@
     {
       "name": "FireStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "fire_stone",
       "metadata": {
@@ -37,7 +37,7 @@
     {
       "name": "AirStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "air_stone",
       "metadata": {
@@ -52,7 +52,7 @@
     {
       "name": "EarthStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "earth_stone",
       "metadata": {
@@ -93,7 +93,7 @@
     {
       "name": "EtherStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ether_stone",
       "metadata": {
@@ -1857,7 +1857,7 @@
     {
       "name": "IceStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ice_stone",
       "metadata": {
@@ -2087,7 +2087,7 @@
     {
       "name": "LightningStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_stone",
       "metadata": {
@@ -2747,7 +2747,7 @@
     {
       "name": "CrystalStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_stone",
       "metadata": {
@@ -2979,7 +2979,7 @@
     {
       "name": "LavaStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lava_stone",
       "metadata": {
@@ -3297,7 +3297,7 @@
     {
       "name": "AnimalsStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "animals_stone",
       "metadata": {
@@ -3312,7 +3312,7 @@
     {
       "name": "MetalStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "metal_stone",
       "metadata": {
@@ -3327,7 +3327,7 @@
     {
       "name": "LightStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "light_stone",
       "metadata": {
@@ -3432,7 +3432,7 @@
     {
       "name": "BloodStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blood_stone",
       "metadata": {
@@ -3477,7 +3477,7 @@
     {
       "name": "ExplosionStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "explosion_stone",
       "metadata": {
@@ -3492,7 +3492,7 @@
     {
       "name": "AmberStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amber_stone",
       "metadata": {
@@ -3507,7 +3507,7 @@
     {
       "name": "CreationStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "creation_stone",
       "metadata": {
@@ -3522,7 +3522,7 @@
     {
       "name": "DestructionStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "destruction_stone",
       "metadata": {
@@ -3597,7 +3597,7 @@
     {
       "name": "MagnetStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "magnet_stone",
       "metadata": {
@@ -3627,7 +3627,7 @@
     {
       "name": "MercuryStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mercury_stone",
       "metadata": {
@@ -3672,7 +3672,7 @@
     {
       "name": "BlueFlameStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blue_flame_stone",
       "metadata": {
@@ -3687,7 +3687,7 @@
     {
       "name": "GravityStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "gravity_stone",
       "metadata": {
@@ -3717,7 +3717,7 @@
     {
       "name": "FormStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "form_stone",
       "metadata": {
@@ -3747,7 +3747,7 @@
     {
       "name": "GoldenDustStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "golden_dust_stone",
       "metadata": {
@@ -3762,7 +3762,7 @@
     {
       "name": "DarknessStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "darkness_stone",
       "metadata": {
@@ -3777,7 +3777,7 @@
     {
       "name": "EnergyStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energy_stone",
       "metadata": {
@@ -6054,7 +6054,7 @@
     {
       "name": "FireBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "fire_battery",
       "metadata": {
@@ -6107,7 +6107,7 @@
     {
       "name": "AirBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "air_battery",
       "metadata": {
@@ -6160,7 +6160,7 @@
     {
       "name": "EarthBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "earth_battery",
       "metadata": {
@@ -6266,7 +6266,7 @@
     {
       "name": "EtherBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ether_battery",
       "metadata": {
@@ -6319,7 +6319,7 @@
     {
       "name": "IceBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ice_battery",
       "metadata": {
@@ -6372,7 +6372,7 @@
     {
       "name": "LightningBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_battery",
       "metadata": {
@@ -6519,7 +6519,7 @@
     {
       "name": "CrystalBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_battery",
       "metadata": {
@@ -6572,7 +6572,7 @@
     {
       "name": "LavaBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lava_battery",
       "metadata": {
@@ -6837,7 +6837,7 @@
     {
       "name": "AnimalsBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "animals_battery",
       "metadata": {
@@ -6890,7 +6890,7 @@
     {
       "name": "MetalBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "metal_battery",
       "metadata": {
@@ -7173,7 +7173,7 @@
     {
       "name": "LightBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "light_battery",
       "metadata": {
@@ -9030,7 +9030,7 @@
     {
       "name": "EnergyBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energy_battery",
       "metadata": {
@@ -11081,7 +11081,7 @@
     {
       "name": "CreationBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "creation_battery",
       "metadata": {
@@ -12580,7 +12580,7 @@
     {
       "name": "DestructionBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "destruction_battery",
       "metadata": {
@@ -13946,7 +13946,7 @@
     {
       "name": "BloodBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blood_battery",
       "metadata": {
@@ -16419,7 +16419,7 @@
     {
       "name": "ExplosionBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "explosion_battery",
       "metadata": {
@@ -17146,7 +17146,7 @@
     {
       "name": "AmberBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amber_battery",
       "metadata": {
@@ -20688,7 +20688,7 @@
     {
       "name": "MagnetBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "magnet_battery",
       "metadata": {
@@ -22776,7 +22776,7 @@
     {
       "name": "MercuryBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mercury_battery",
       "metadata": {
@@ -24669,7 +24669,7 @@
     {
       "name": "BlueFlameBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blue_flame_battery",
       "metadata": {
@@ -25141,7 +25141,7 @@
     {
       "name": "GravityBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "gravity_battery",
       "metadata": {
@@ -27293,7 +27293,7 @@
     {
       "name": "FormBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "form_battery",
       "metadata": {
@@ -28210,7 +28210,7 @@
     {
       "name": "GoldenDustBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "golden_dust_battery",
       "metadata": {
@@ -28699,7 +28699,7 @@
     {
       "name": "DarknessBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "darkness_battery",
       "metadata": {
@@ -31923,7 +31923,7 @@
     {
       "name": "HeatStone",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "heat_stone",
       "metadata": {
@@ -31982,7 +31982,7 @@
     {
       "name": "HeatBattery",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "heat_battery",
       "metadata": {
