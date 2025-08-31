@@ -18,7 +18,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class SpaceStoneUseProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("power:passing_armor")))
@@ -43,7 +43,6 @@ public class SpaceStoneUseProcedure {
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power;
 					_vars.syncPlayerVariables(entity);
 				}
-				SendClientPackageActivationStoneVFXProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}
