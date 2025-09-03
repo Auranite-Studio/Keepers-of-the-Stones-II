@@ -3,7 +3,7 @@
 ![Date](https://img.shields.io/github/release-date/Environment-Studios-Official/Keepers-of-the-Stones-II)
 | MC Version | Modloader | Support |
 |------------|-----------|---------|
-| 1.21.2+    |  NEOFORGE | Dropped |
+| 1.21.8     |  NEOFORGE | Active  |
 | 1.21.1     |  NEOFORGE | Active  |
 | 1.20.6     |  NEOFORGE | Dropped |
 | 1.20.4     |  NEOFORGE | Dropped |
