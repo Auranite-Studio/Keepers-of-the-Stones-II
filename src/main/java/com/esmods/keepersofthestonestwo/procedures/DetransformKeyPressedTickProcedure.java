@@ -5,9 +5,6 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
-import net.minecraft.world.scores.PlayerTeam;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -21,14 +18,14 @@ import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 public class DetransformKeyPressedTickProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(PlayerTickEvent.Post event) {
-		execute(event, event.getEntity().level(), event.getEntity());
+		execute(event, event.getEntity());
 	}
 
-	public static void execute(LevelAccessor world, Entity entity) {
-		execute(null, world, entity);
+	public static void execute(Entity entity) {
+		execute(null, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
+	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
 		ItemStack copySlot = ItemStack.EMPTY;
@@ -207,11 +204,6 @@ public class DetransformKeyPressedTickProcedure {
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.ability = "0";
 					_vars.syncPlayerVariables(entity);
-				}
-				if (world instanceof Level _level) {
-					PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
-					if (_pt != null)
-						_level.getScoreboard().removePlayerTeam(_pt);
 				}
 			}
 			{

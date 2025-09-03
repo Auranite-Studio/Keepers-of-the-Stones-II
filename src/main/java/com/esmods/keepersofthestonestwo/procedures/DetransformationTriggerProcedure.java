@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
 @EventBusSubscriber
-public class DetransformAnimationStartProcedure {
+public class DetransformationTriggerProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(PlayerTickEvent.Post event) {
 		execute(event, event.getEntity().level(), event.getEntity());
@@ -31,11 +31,11 @@ public class DetransformAnimationStartProcedure {
 			return;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).detransform_anim_trigger) {
 			if (world.isClientSide()) {
-				AnimationsModuleSetupProcedure.setAnimationClientside((Player) entity, "animation.player.detransformation", false);
+				SetupAnimationsProcedure.setAnimationClientside((Player) entity, "animation.player.detransformation", false);
 			}
 			if (!world.isClientSide()) {
 				if (entity instanceof Player)
-					PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new AnimationsModuleSetupProcedure.PowerModAnimationMessage("animation.player.detransformation", entity.getId(), false));
+					PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new SetupAnimationsProcedure.PowerModAnimationMessage("animation.player.detransformation", entity.getId(), false));
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
