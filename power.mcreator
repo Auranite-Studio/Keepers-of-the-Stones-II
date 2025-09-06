@@ -30146,7 +30146,6 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKnightRenderer.java",
-          "src/main/resources/data/power/neoforge/biome_modifier/cursed_knight_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKnightEntity.java",
           "src/main/resources/assets/power/models/item/cursed_knight_spawn_egg.json"
         ]
@@ -30419,7 +30418,6 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedSquireEntity.java",
-          "src/main/resources/data/power/neoforge/biome_modifier/cursed_squire_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedSquireRenderer.java",
           "src/main/resources/assets/power/models/item/cursed_squire_spawn_egg.json"
         ]
@@ -33727,6 +33725,29 @@
         ]
       },
       "path": "~/Modules/SVFXModule"
+    },
+    {
+      "name": "CursedWorld",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_world",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedWorldPortalBlock.java",
+          "src/main/resources/data/power/dimension_type/cursed_world.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/dimension/CursedWorldDimension.java",
+          "src/main/resources/assets/power/models/block/cursed_world_portal_ew.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/teleporter/CursedWorldTeleporter.java",
+          "src/main/resources/data/power/dimension/cursed_world.json",
+          "src/main/resources/assets/power/blockstates/cursed_world_portal.json",
+          "src/main/resources/assets/power/models/block/cursed_world_portal_ns.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/CursedWorldItem.java",
+          "src/main/resources/assets/power/models/item/cursed_world.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/teleporter/CursedWorldPortalShape.java"
+        ]
+      },
+      "path": "~/Dimensions"
     }
   ],
   "variable_elements": [
@@ -35572,6 +35593,11 @@
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
       "~CUSTOM:RuneCutter"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.STONE#0",
+      "~Blocks.DIRT#0",
+      "~Blocks.GRASS"
     ]
   },
   "tab_element_order": {
@@ -35853,7 +35879,7 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "item.power.amplifier_ring": "Амплиферовое кольцо",
-      "effect.power.curse": "Curse",
+      "effect.power.curse": "Проклятие",
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Батарея",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7Спецификация:",
@@ -36862,7 +36888,8 @@
       "item.power.creation_pickaxe": "Кирка созидания",
       "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15",
       "power.modupdater.new_release": "[Keepers of the Stones II] Доступна более новая версия: ",
-      "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения"
+      "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения",
+      "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -37948,7 +37975,8 @@
       "item.power.creation_pickaxe": "Creation Pickaxe",
       "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15",
       "power.modupdater.new_release": "[Keepers of the Stones II] A newer version is available: ",
-      "power.modupdater.click_event": " ➜ Click to view changes"
+      "power.modupdater.click_event": " ➜ Click to view changes",
+      "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39021,7 +39049,8 @@
       "item.power.creation_pickaxe": "创世镐",
       "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15",
       "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
-      "power.modupdater.click_event": " ➜ 点击查看更改"
+      "power.modupdater.click_event": " ➜ 点击查看更改",
+      "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
     }
   },
   "metadata": {
@@ -39029,7 +39058,6 @@
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
       "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/resources/power.mixins.json",
       "src/main/java/com/esmods/keepersofthestonestwo/PowerMod.java",
       "src/main/resources/pack.mcmeta",
       "src/main/java/com/esmods/keepersofthestonestwo/network/PowerModVariables.java",
@@ -39037,8 +39065,6 @@
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModConfigs.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBiomes.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModPotions.java",
       "src/main/java/com/esmods/keepersofthestonestwo/network/MenuStateUpdateMessage.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModScreens.java",
@@ -39938,6 +39964,10 @@
       },
       {
         "name": "ProfessionsAndTrades",
+        "children": []
+      },
+      {
+        "name": "Dimensions",
         "children": []
       }
     ]

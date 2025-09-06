@@ -73,7 +73,7 @@
   "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
   "item.power.ether_armor_boots": "Ботинки мастера эфира",
   "item.power.amplifier_ring": "Амплиферовое кольцо",
-  "effect.power.curse": "Curse",
+  "effect.power.curse": "Проклятие",
   "subtitles.cursed_knight.attack": "",
   "item.power.spirit_battery": "Батарея",
   "item.power.addition_time_master_effect_rune_3.description_3": "§7Спецификация:",
@@ -1082,5 +1082,6 @@
   "item.power.creation_pickaxe": "Кирка созидания",
   "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15",
   "power.modupdater.new_release": "[Keepers of the Stones II] Доступна более новая версия: ",
-  "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения"
+  "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения",
+  "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
 }

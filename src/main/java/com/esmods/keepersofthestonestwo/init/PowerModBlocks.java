@@ -33,6 +33,7 @@ import com.esmods.keepersofthestonestwo.block.DeepslateEnergiumOreBlock;
 import com.esmods.keepersofthestonestwo.block.DeepslateDepletedEnergiumOreBlock;
 import com.esmods.keepersofthestonestwo.block.DeepslateCopyriumOreBlock;
 import com.esmods.keepersofthestonestwo.block.DeepslateAmplifierOreBlock;
+import com.esmods.keepersofthestonestwo.block.CursedWorldPortalBlock;
 import com.esmods.keepersofthestonestwo.block.CursedVaultBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneWallBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneStairsBlock;
@@ -112,6 +113,7 @@ public class PowerModBlocks {
 	public static final DeferredBlock<Block> CURSED_STONE_CRACKED_BRICKS_WALL = REGISTRY.register("cursed_stone_cracked_bricks_wall", CursedStoneCrackedBricksWallBlock::new);
 	public static final DeferredBlock<Block> FREAKING_PARSNIP_BLOCK = REGISTRY.register("freaking_parsnip_block", FreakingParsnipBlockBlock::new);
 	public static final DeferredBlock<Block> RUNE_CUTTER = REGISTRY.register("rune_cutter", RuneCutterBlock::new);
+	public static final DeferredBlock<Block> CURSED_WORLD_PORTAL = REGISTRY.register("cursed_world_portal", CursedWorldPortalBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

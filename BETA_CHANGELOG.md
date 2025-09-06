@@ -1,6 +1,7 @@
 
 **New features**
-- *N/A*
+- Added new dimension - Cursed world
+- The cursed forest has been moved to a new dimension - cursed world
 
 **Improvemnts** 
 - Added sound when crafting a rune in rune cutter

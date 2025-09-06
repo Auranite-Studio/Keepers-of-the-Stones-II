@@ -1069,5 +1069,6 @@
   "item.power.creation_pickaxe": "创世镐",
   "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15",
   "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
-  "power.modupdater.click_event": " ➜ 点击查看更改"
+  "power.modupdater.click_event": " ➜ 点击查看更改",
+  "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
 }

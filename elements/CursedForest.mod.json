@@ -56,7 +56,7 @@
     "particlesProbability": 1.0,
     "rainingPossibility": 0.0,
     "temperature": 2.0,
-    "spawnBiome": true,
+    "spawnBiome": false,
     "spawnInCaves": false,
     "spawnBiomeNether": false,
     "genTemperature": {
@@ -122,6 +122,25 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:CursedKnight"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 2,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:CursedSquire"
+        },
+        "minGroup": 2,
+        "maxGroup": 4,
+        "weight": 4,
+        "spawnType": "monster"
+      }
+    ]
   }
 }
