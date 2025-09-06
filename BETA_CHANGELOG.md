@@ -1,12 +1,14 @@
 
 **New features**
-- Added new dimension - Cursed world
+- Added new dimension - cursed world
 - The cursed forest has been moved to a new dimension - cursed world
 
 **Improvemnts** 
 - Added sound when crafting a rune in rune cutter
 - Changed energium shield crafting recipe (now requires planks instead of depleted energium ingots)
 - The stun effect now stops the player completely and slows down the use of weapons
+- The Curse effect no longer creates a fog effect
+- The curse effect stops working when you exit the cursed world
 
 
 **API changes**

@@ -30,7 +30,7 @@
     },
     "sunHeightAffectsFog": false,
     "canRespawnHere": false,
-    "hasFog": false,
+    "hasFog": true,
     "ambientLight": 0.1,
     "doesWaterVaporize": false,
     "hasFixedTime": true,

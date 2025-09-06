@@ -30820,29 +30820,6 @@
       "path": "~/Biomes/CursedForest"
     },
     {
-      "name": "RenderFogByCurse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_fog_by_curse",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderFogByCurseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "end",
-            "type": "number"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
       "name": "CurseTickEvent",
       "type": "procedure",
       "compiles": true,
@@ -30860,25 +30837,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
-      "name": "CalculateFogColorByCurse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "calculate_fog_color_by_curse",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CalculateFogColorByCurseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },

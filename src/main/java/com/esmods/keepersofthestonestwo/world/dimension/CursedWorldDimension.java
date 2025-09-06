@@ -22,7 +22,7 @@ public class CursedWorldDimension {
 
 				@Override
 				public boolean isFoggyAt(int x, int y) {
-					return false;
+					return true;
 				}
 			};
 			event.register(ResourceLocation.parse("power:cursed_world"), customEffect);
