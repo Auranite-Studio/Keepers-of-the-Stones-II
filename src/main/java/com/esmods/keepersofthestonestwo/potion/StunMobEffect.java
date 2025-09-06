@@ -14,9 +14,10 @@ public class StunMobEffect extends MobEffect {
 	public StunMobEffect() {
 		super(MobEffectCategory.HARMFUL, -10066330);
 		this.addAttributeModifier(Attributes.ARMOR, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.stun_0"), -0.2, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
-		this.addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.stun_1"), -0.15, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
+		this.addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.stun_1"), -99.99, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
 		this.addAttributeModifier(Attributes.ATTACK_DAMAGE, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.stun_2"), -0.9, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
 		this.addAttributeModifier(Attributes.ATTACK_SPEED, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.stun_3"), -0.3, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
+		this.addAttributeModifier(Attributes.JUMP_STRENGTH, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.stun_4"), -99.99, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
 	}
 
 	@Override

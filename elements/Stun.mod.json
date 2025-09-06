@@ -28,7 +28,7 @@
         "attribute": {
           "value": "MOVEMENT_SPEED"
         },
-        "amount": -0.15000000000000002,
+        "amount": -99.99,
         "operation": "ADD_MULTIPLIED_TOTAL"
       },
       {
@@ -43,6 +43,13 @@
           "value": "ATTACK_SPEED"
         },
         "amount": -0.3,
+        "operation": "ADD_MULTIPLIED_TOTAL"
+      },
+      {
+        "attribute": {
+          "value": "JUMP_STRENGTH"
+        },
+        "amount": -99.99,
         "operation": "ADD_MULTIPLIED_TOTAL"
       }
     ],

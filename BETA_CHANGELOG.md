@@ -5,6 +5,7 @@
 **Improvemnts** 
 - Added sound when crafting a rune in rune cutter
 - Changed energium shield crafting recipe (now requires planks instead of depleted energium ingots)
+- The stun effect now stops the player completely and slows down the use of weapons
 
 
 **API changes**
