@@ -18,6 +18,7 @@
 
 **Bugfixes**
 - [Bugfix] Fixed a bug that allowed duplicating energium ingots
+- [Bugfix] Fixed incorrect version checking 
 - [Bugfix] Fixed unlocking of some recipes
 
 
