@@ -122,25 +122,6 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "spawnEntries": [
-      {
-        "entity": {
-          "value": "CUSTOM:CursedKnight"
-        },
-        "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 2,
-        "spawnType": "monster"
-      },
-      {
-        "entity": {
-          "value": "CUSTOM:CursedSquire"
-        },
-        "minGroup": 2,
-        "maxGroup": 4,
-        "weight": 4,
-        "spawnType": "monster"
-      }
-    ]
+    "spawnEntries": []
   }
 }

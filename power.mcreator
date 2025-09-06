@@ -30146,6 +30146,7 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKnightRenderer.java",
+          "src/main/resources/data/power/neoforge/biome_modifier/cursed_knight_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKnightEntity.java",
           "src/main/resources/assets/power/models/item/cursed_knight_spawn_egg.json"
         ]
@@ -30418,6 +30419,7 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedSquireEntity.java",
+          "src/main/resources/data/power/neoforge/biome_modifier/cursed_squire_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedSquireRenderer.java",
           "src/main/resources/assets/power/models/item/cursed_squire_spawn_egg.json"
         ]
@@ -30817,7 +30819,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/CurseMobEffect.java"
         ]
       },
-      "path": "~/Biomes/CursedForest"
+      "path": "~/Dimensions/CursedWorld"
     },
     {
       "name": "CurseTickEvent",
@@ -30840,7 +30842,7 @@
           }
         ]
       },
-      "path": "~/Biomes/CursedForest"
+      "path": "~/Dimensions/CursedWorld"
     },
     {
       "name": "UnbreakableDiamond",
@@ -33705,7 +33707,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/world/teleporter/CursedWorldPortalShape.java"
         ]
       },
-      "path": "~/Dimensions"
+      "path": "~/Dimensions/CursedWorld"
     }
   ],
   "variable_elements": [
@@ -39926,7 +39928,12 @@
       },
       {
         "name": "Dimensions",
-        "children": []
+        "children": [
+          {
+            "name": "CursedWorld",
+            "children": []
+          }
+        ]
       }
     ]
   },
