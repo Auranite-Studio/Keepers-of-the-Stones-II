@@ -3,8 +3,8 @@
   "biomes": "power:cursed_forest",
   "spawners": {
     "type": "power:cursed_squire",
-    "weight": 2,
-    "minCount": 1,
-    "maxCount": 1
+    "weight": 10,
+    "minCount": 2,
+    "maxCount": 4
   }
 }

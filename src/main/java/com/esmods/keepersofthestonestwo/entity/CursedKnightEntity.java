@@ -22,7 +22,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -55,7 +54,6 @@ public class CursedKnightEntity extends Monster {
 		super(type, world);
 		xpReward = 50;
 		setNoAi(false);
-		setPersistenceRequired();
 	}
 
 	@Override
@@ -82,11 +80,6 @@ public class CursedKnightEntity extends Monster {
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override
@@ -168,9 +161,7 @@ public class CursedKnightEntity extends Monster {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(PowerModEntities.CURSED_KNIGHT.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
-				RegisterSpawnPlacementsEvent.Operation.REPLACE);
+		event.register(PowerModEntities.CURSED_KNIGHT.get(), SpawnPlacementTypes.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

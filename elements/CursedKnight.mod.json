@@ -222,11 +222,11 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
-    "doesDespawnWhenIdle": false,
-    "spawningProbability": 1,
-    "mobSpawningType": "monster",
+    "doesDespawnWhenIdle": true,
+    "spawningProbability": 10,
+    "mobSpawningType": "ambient",
     "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 2,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:CursedForest"
