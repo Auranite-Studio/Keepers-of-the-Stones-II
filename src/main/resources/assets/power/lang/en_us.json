@@ -1083,5 +1083,5 @@
   "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15",
   "power.modupdater.new_release": "[Keepers of the Stones II] A newer version is available: ",
   "power.modupdater.click_event": " ➜ Click to view changes",
-  "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
+  "biome.power.cursed_plains": "Cursed Plains"
 }

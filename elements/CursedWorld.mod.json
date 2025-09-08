@@ -5,6 +5,9 @@
     "biomesInDimension": [
       {
         "value": "CUSTOM:CursedForest"
+      },
+      {
+        "value": "CUSTOM:CursedPlains"
       }
     ],
     "worldGenType": "Normal world gen",
@@ -31,14 +34,14 @@
     "sunHeightAffectsFog": false,
     "canRespawnHere": false,
     "hasFog": true,
-    "ambientLight": 0.1,
+    "ambientLight": 0.0,
     "doesWaterVaporize": false,
     "hasFixedTime": true,
     "fixedTimeValue": 6000,
     "coordinateScale": 1.0,
     "infiniburnTag": "minecraft:infiniburn_overworld",
     "bedWorks": true,
-    "hasSkyLight": false,
+    "hasSkyLight": true,
     "imitateOverworldBehaviour": true,
     "piglinSafe": false,
     "hasRaids": true,
@@ -55,7 +58,7 @@
     "portalSound": {
       "value": "block.portal.ambient"
     },
-    "enableIgniter": true,
+    "enableIgniter": false,
     "igniterName": "[TEST 1] Cursed World Portal Igniter",
     "igniterRarity": "COMMON",
     "specialInformation": {
