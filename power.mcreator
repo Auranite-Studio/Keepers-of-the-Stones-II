@@ -33702,6 +33702,8 @@
           "src/main/resources/data/power/dimension/cursed_world.json",
           "src/main/resources/assets/power/blockstates/cursed_world_portal.json",
           "src/main/resources/assets/power/models/block/cursed_world_portal_ns.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/CursedWorldItem.java",
+          "src/main/resources/assets/power/models/item/cursed_world.json",
           "src/main/java/com/esmods/keepersofthestonestwo/world/teleporter/CursedWorldPortalShape.java"
         ]
       },
@@ -35765,6 +35767,7 @@
       "CursedLantern",
       "CursedVault",
       "CursedKey",
+      "CursedWorld",
       "MusicDiscAncientMood",
       "FreakingParsnip",
       "FreakingParsnipSoup",
@@ -36864,7 +36867,8 @@
       "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15",
       "power.modupdater.new_release": "[Keepers of the Stones II] Доступна более новая версия: ",
       "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения",
-      "biome.power.cursed_plains": "Проклятые равнины"
+      "biome.power.cursed_plains": "Проклятые равнины",
+      "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -37951,7 +37955,8 @@
       "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15",
       "power.modupdater.new_release": "[Keepers of the Stones II] A newer version is available: ",
       "power.modupdater.click_event": " ➜ Click to view changes",
-      "biome.power.cursed_plains": "Cursed Plains"
+      "biome.power.cursed_plains": "Cursed Plains",
+      "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39025,7 +39030,8 @@
       "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15",
       "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
       "power.modupdater.click_event": " ➜ 点击查看更改",
-      "biome.power.cursed_plains": "Cursed Forest"
+      "biome.power.cursed_plains": "被诅咒的平原",
+      "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
     }
   },
   "metadata": {

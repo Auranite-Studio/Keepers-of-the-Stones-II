@@ -58,7 +58,7 @@
     "portalSound": {
       "value": "block.portal.ambient"
     },
-    "enableIgniter": false,
+    "enableIgniter": true,
     "igniterName": "[TEST 1] Cursed World Portal Igniter",
     "igniterRarity": "COMMON",
     "specialInformation": {
@@ -66,10 +66,10 @@
     },
     "creativeTabs": [
       {
-        "value": "TOOLS"
+        "value": "CUSTOM:Items"
       }
     ],
-    "texture": "minecraft:flint_and_steel",
+    "texture": "minecraft:barrier",
     "portalTexture": "cursed_world_portal",
     "enablePortal": true
   }

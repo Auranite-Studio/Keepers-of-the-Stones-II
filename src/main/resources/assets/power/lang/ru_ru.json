@@ -1083,5 +1083,6 @@
   "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15",
   "power.modupdater.new_release": "[Keepers of the Stones II] Доступна более новая версия: ",
   "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения",
-  "biome.power.cursed_plains": "Проклятые равнины"
+  "biome.power.cursed_plains": "Проклятые равнины",
+  "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
 }
