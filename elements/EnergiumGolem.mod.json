@@ -103,6 +103,7 @@
       "value": -8337805,
       "falpha": 0.0
     },
+    "spawnEggTexture": "",
     "creativeTabs": [
       {
         "value": "CUSTOM:Mobs"
@@ -169,7 +170,7 @@
     "immuneToWither": true,
     "immuneToDragonBreath": true,
     "mobDrop": {
-      "value": "CUSTOM:EnergiumCore"
+      "value": ""
     },
     "livingSound": {
       "value": ""

@@ -33721,6 +33721,19 @@
         ]
       },
       "path": "~/Biomes"
+    },
+    {
+      "name": "EnergiumGolemLootTable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_table/entities/energium_golem.json"
+        ]
+      },
+      "path": "~/Mobs/EnergiumGolem"
     }
   ],
   "variable_elements": [
