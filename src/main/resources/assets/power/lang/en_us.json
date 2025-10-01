@@ -1086,5 +1086,6 @@
   "biome.power.cursed_plains": "Cursed Plains",
   "item.power.cursed_world": "Enchanted Flint",
   "item.power.cursed_world.description_1": " §9Cursed World",
-  "item.power.cursed_world.description_0": "§7World:"
+  "item.power.cursed_world.description_0": "§7World:",
+  "item.power.energium_upgrade_smithing_template.description_1": ""
 }

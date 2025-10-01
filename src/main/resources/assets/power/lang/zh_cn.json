@@ -1073,5 +1073,6 @@
   "biome.power.cursed_plains": "被诅咒的平原",
   "item.power.cursed_world": "魔法火石",
   "item.power.cursed_world.description_1": " §9被诅咒的世界",
-  "item.power.cursed_world.description_0": "§7世界:"
+  "item.power.cursed_world.description_0": "§7世界:",
+  "item.power.energium_upgrade_smithing_template.description_1": ""
 }
