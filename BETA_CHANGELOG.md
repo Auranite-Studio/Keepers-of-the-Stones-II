@@ -1,6 +1,7 @@
 
 **New features**
 - Added new dimension - cursed world
+- Added enchanted flint
 - The cursed forest has been moved to a new dimension - cursed world
 
 **Improvemnts** 
