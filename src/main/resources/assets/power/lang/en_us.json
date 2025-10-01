@@ -1084,5 +1084,7 @@
   "power.modupdater.new_release": "[Keepers of the Stones II] A newer version is available: ",
   "power.modupdater.click_event": " ➜ Click to view changes",
   "biome.power.cursed_plains": "Cursed Plains",
-  "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
+  "item.power.cursed_world": "Enchanted Flint",
+  "item.power.cursed_world.description_1": " §9Cursed World",
+  "item.power.cursed_world.description_0": "§7World:"
 }

@@ -210,12 +210,12 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.CURSED_LANTERN.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_VAULT.get().asItem());
 				tabData.accept(PowerModItems.CURSED_KEY.get());
-				tabData.accept(PowerModItems.CURSED_WORLD.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP.get());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP_SOUP.get());
 				tabData.accept(PowerModItems.EMPTY_CHARACTERISTICS_CARD.get());
 				tabData.accept(PowerModItems.CHARACTERISTICS_CARD.get());
+				tabData.accept(PowerModItems.CURSED_WORLD.get());
 			}).withTabsBefore(BATTERIES.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOBS = REGISTRY.register("mobs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {

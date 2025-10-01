@@ -49,7 +49,7 @@
     "maxMonsterSpawnLightLimit": 7,
     "monsterSpawnBlockLightLimit": 0,
     "portalFrame": {
-      "value": "CUSTOM:CursedStoneBricks"
+      "value": "CUSTOM:CursedStone"
     },
     "portalParticles": {
       "value": "PORTAL"
@@ -59,17 +59,20 @@
       "value": "block.portal.ambient"
     },
     "enableIgniter": true,
-    "igniterName": "[TEST 1] Cursed World Portal Igniter",
-    "igniterRarity": "COMMON",
+    "igniterName": "Enchanted Flint",
+    "igniterRarity": "EPIC",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7World:",
+        " §9Cursed World"
+      ]
     },
     "creativeTabs": [
       {
         "value": "CUSTOM:Items"
       }
     ],
-    "texture": "minecraft:barrier",
+    "texture": "cursed_flint_and_steel",
     "portalTexture": "cursed_world_portal",
     "enablePortal": true
   }

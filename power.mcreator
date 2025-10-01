@@ -35767,12 +35767,12 @@
       "CursedLantern",
       "CursedVault",
       "CursedKey",
-      "CursedWorld",
       "MusicDiscAncientMood",
       "FreakingParsnip",
       "FreakingParsnipSoup",
       "EmptyCharacteristicsCard",
-      "CharacteristicsCard"
+      "CharacteristicsCard",
+      "CursedWorld"
     ],
     "CUSTOM:Mobs": [
       "EnergiumGolem",
@@ -36619,7 +36619,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Время",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_ball_uses_35": "Ртутный шарик, расходует 35",
       "item.power.water_katana": "Водная катана",
-      "advancements.energized_gold.title": "Energized gold",
+      "advancements.energized_gold.title": "Золото с энергией",
       "item.power.darkness_armor_helmet": "Шлем мастера тьмы",
       "effect.power.time_slowing": "Замедление времени",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 70",
@@ -36868,7 +36868,9 @@
       "power.modupdater.new_release": "[Keepers of the Stones II] Доступна более новая версия: ",
       "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения",
       "biome.power.cursed_plains": "Проклятые равнины",
-      "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
+      "item.power.cursed_world": "Зачарованное огниво",
+      "item.power.cursed_world.description_1": " §9Проклятый мир",
+      "item.power.cursed_world.description_0": "§7Мир:"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -37956,7 +37958,9 @@
       "power.modupdater.new_release": "[Keepers of the Stones II] A newer version is available: ",
       "power.modupdater.click_event": " ➜ Click to view changes",
       "biome.power.cursed_plains": "Cursed Plains",
-      "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
+      "item.power.cursed_world": "Enchanted Flint",
+      "item.power.cursed_world.description_1": " §9Cursed World",
+      "item.power.cursed_world.description_0": "§7World:"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -38949,7 +38953,7 @@
       "item.power.heat_armor_leggings": "保暖紧身裤",
       "item.power.shadow_battery.description_0": "§a 带电元素：",
       "item.power.shadow_battery.description_1": "§9阴影",
-      "item.power.time_khopesh": "时间 Khopesh",
+      "item.power.time_khopesh": "时间 霍佩什",
       "item.power.metal_battery.description_1": "§9金属",
       "item.power.metal_battery.description_0": "§a 带电元素：",
       "item.power.air_armor_chestplate": "空气胸甲",
@@ -39031,7 +39035,9 @@
       "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
       "power.modupdater.click_event": " ➜ 点击查看更改",
       "biome.power.cursed_plains": "被诅咒的平原",
-      "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
+      "item.power.cursed_world": "魔法火石",
+      "item.power.cursed_world.description_1": " §9被诅咒的世界",
+      "item.power.cursed_world.description_0": "§7世界:"
     }
   },
   "metadata": {
@@ -39353,6 +39359,10 @@
           },
           {
             "name": "SVFXModule",
+            "children": []
+          },
+          {
+            "name": "SkillsAndAmpl",
             "children": []
           }
         ]

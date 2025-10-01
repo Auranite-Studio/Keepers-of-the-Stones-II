@@ -835,7 +835,7 @@
   "gui.power.keepers_box_gui_part_2.tooltip_time": "Время",
   "gui.power.wheel_abilities_mercury.tooltip_mercury_ball_uses_35": "Ртутный шарик, расходует 35",
   "item.power.water_katana": "Водная катана",
-  "advancements.energized_gold.title": "Energized gold",
+  "advancements.energized_gold.title": "Золото с энергией",
   "item.power.darkness_armor_helmet": "Шлем мастера тьмы",
   "effect.power.time_slowing": "Замедление времени",
   "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 70",
@@ -1084,5 +1084,7 @@
   "power.modupdater.new_release": "[Keepers of the Stones II] Доступна более новая версия: ",
   "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения",
   "biome.power.cursed_plains": "Проклятые равнины",
-  "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
+  "item.power.cursed_world": "Зачарованное огниво",
+  "item.power.cursed_world.description_1": " §9Проклятый мир",
+  "item.power.cursed_world.description_0": "§7Мир:"
 }

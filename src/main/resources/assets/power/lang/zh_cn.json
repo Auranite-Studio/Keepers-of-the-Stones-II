@@ -989,7 +989,7 @@
   "item.power.heat_armor_leggings": "保暖紧身裤",
   "item.power.shadow_battery.description_0": "§a 带电元素：",
   "item.power.shadow_battery.description_1": "§9阴影",
-  "item.power.time_khopesh": "时间 Khopesh",
+  "item.power.time_khopesh": "时间 霍佩什",
   "item.power.metal_battery.description_1": "§9金属",
   "item.power.metal_battery.description_0": "§a 带电元素：",
   "item.power.air_armor_chestplate": "空气胸甲",
@@ -1071,5 +1071,7 @@
   "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
   "power.modupdater.click_event": " ➜ 点击查看更改",
   "biome.power.cursed_plains": "被诅咒的平原",
-  "item.power.cursed_world": "[TEST 1] Cursed World Portal Igniter"
+  "item.power.cursed_world": "魔法火石",
+  "item.power.cursed_world.description_1": " §9被诅咒的世界",
+  "item.power.cursed_world.description_0": "§7世界:"
 }
