@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -28,7 +27,7 @@ import com.esmods.keepersofthestonestwo.procedures.Attack18Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack17Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record WheelAbilitiesEtherButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<WheelAbilitiesEtherButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "wheel_abilities_ether_buttons"));

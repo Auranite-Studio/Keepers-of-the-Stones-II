@@ -5,6 +5,11 @@
     "recipeType": "Blasting",
     "recipeRetstackSize": 1,
     "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:RawAmplifier"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.575,
     "cookingTime": 100,

@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.item;
 
 import net.neoforged.neoforge.registries.RegisterEvent;
@@ -28,7 +27,7 @@ import com.google.common.collect.Iterables;
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public abstract class EnergiumArmorItem extends ArmorItem {
 	public static Holder<ArmorMaterial> ARMOR_MATERIAL = null;
 

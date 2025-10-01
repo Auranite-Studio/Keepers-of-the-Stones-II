@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
-    "guardian",
+    "phantom",
     "ghast",
+    "blaze",
+    "breeze",
     "piglin",
-    "zoglin",
-    "hoglin",
-    "pillager",
-    "evoker",
     "vindicator",
     "illusioner",
+    "hoglin",
+    "evoker",
+    "zoglin",
+    "pillager",
+    "guardian",
     "witch",
-    "magma_cube",
-    "phantom",
-    "breeze",
-    "blaze"
+    "magma_cube"
   ]
 }

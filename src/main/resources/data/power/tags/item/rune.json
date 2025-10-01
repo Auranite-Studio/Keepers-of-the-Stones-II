@@ -1,14 +1,20 @@
 {
   "replace": false,
   "values": [
-    "power:extra_star_points_rune_1",
-    "power:extra_star_points_rune_2",
+    "power:addition_time_master_effect_rune_2",
+    "power:addition_time_master_effect_rune_1",
+    "power:protection_rune",
+    "power:invisibility_rune",
+    "power:healing_rune",
+    "power:addition_time_master_effect_rune_3",
     "power:extra_star_points_rune_3",
-    "power:reduced_stone_recharge_time_rune_1",
+    "power:unknown_rune",
+    "power:extra_star_points_rune_2",
     "power:reduced_stone_recharge_time_rune_2",
     "power:reduced_stone_recharge_time_rune_3",
-    "power:addition_time_master_effect_rune_1",
-    "power:addition_time_master_effect_rune_2",
-    "power:addition_time_master_effect_rune_3"
+    "power:reduced_stone_recharge_time_rune_1",
+    "power:extra_star_points_rune_1",
+    "power:spin_rune",
+    "power:dodging_rune"
   ]
 }

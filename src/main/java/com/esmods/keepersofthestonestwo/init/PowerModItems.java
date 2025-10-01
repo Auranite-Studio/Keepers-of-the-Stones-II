@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -238,6 +237,7 @@ import com.esmods.keepersofthestonestwo.item.DarknessStoneItem;
 import com.esmods.keepersofthestonestwo.item.DarknessBatteryItem;
 import com.esmods.keepersofthestonestwo.item.DarknessArmorItem;
 import com.esmods.keepersofthestonestwo.item.DarkSwordItem;
+import com.esmods.keepersofthestonestwo.item.CursedWorldItem;
 import com.esmods.keepersofthestonestwo.item.CursedKeyItem;
 import com.esmods.keepersofthestonestwo.item.CrystalStoneItem;
 import com.esmods.keepersofthestonestwo.item.CrystalKnifeItem;
@@ -764,6 +764,7 @@ public class PowerModItems {
 	public static final DeferredItem<Item> INVISIBILITY_RUNE = REGISTRY.register("invisibility_rune", InvisibilityRuneItem::new);
 	public static final DeferredItem<Item> HEALING_RUNE = REGISTRY.register("healing_rune", HealingRuneItem::new);
 	public static final DeferredItem<Item> UNKNOWN_RUNE = REGISTRY.register("unknown_rune", UnknownRuneItem::new);
+	public static final DeferredItem<Item> CURSED_WORLD = REGISTRY.register("cursed_world", CursedWorldItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -775,7 +776,7 @@ public class PowerModItems {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), properties));
 	}
 
-	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+	@EventBusSubscriber(Dist.CLIENT)
 	public static class ItemsClientSideHandler {
 		@SubscribeEvent
 		@OnlyIn(Dist.CLIENT)

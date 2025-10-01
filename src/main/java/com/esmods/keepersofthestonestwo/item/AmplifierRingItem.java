@@ -1,8 +1,6 @@
-
 package com.esmods.keepersofthestonestwo.item;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
@@ -13,7 +11,7 @@ import com.esmods.keepersofthestonestwo.procedures.AmplifierRingUseProcedure;
 
 public class AmplifierRingItem extends Item {
 	public AmplifierRingItem() {
-		super(new Item.Properties().durability(3).rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(3));
 	}
 
 	@Override

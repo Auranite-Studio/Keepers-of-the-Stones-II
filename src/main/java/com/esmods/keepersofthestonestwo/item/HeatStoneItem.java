@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -7,7 +6,6 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
@@ -25,7 +23,7 @@ import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
 
 public class HeatStoneItem extends Item {
 	public HeatStoneItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1));
 	}
 
 	@Override

@@ -5,6 +5,11 @@
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:RawAmplifier"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

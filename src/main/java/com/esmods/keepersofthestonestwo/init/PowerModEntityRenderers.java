@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -60,7 +59,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.AtomicRocketRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.AmethystClusterAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.AmethystAttackProjectileRenderer;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(Dist.CLIENT)
 public class PowerModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {

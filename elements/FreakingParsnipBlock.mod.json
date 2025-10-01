@@ -126,6 +126,7 @@
     },
     "offsetType": "XZ",
     "aiPathNodeType": "DEFAULT",
+    "ignitedByLava": false,
     "flammability": 100,
     "fireSpreadSpeed": 60,
     "jumpFactor": 1.0,

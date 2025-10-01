@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -69,7 +68,7 @@ import com.esmods.keepersofthestonestwo.entity.AmethystClusterAttackProjectileEn
 import com.esmods.keepersofthestonestwo.entity.AmethystAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PowerModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, PowerMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<MagicFireballProjectileEntity>> MAGIC_FIREBALL_PROJECTILE = register("magic_fireball_projectile",
@@ -153,13 +152,13 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<SmokeBombProjectileEntity>> SMOKE_BOMB_PROJECTILE = register("smoke_bomb_projectile",
 			EntityType.Builder.<SmokeBombProjectileEntity>of(SmokeBombProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedKnightEntity>> CURSED_KNIGHT = register("cursed_knight",
-			EntityType.Builder.<CursedKnightEntity>of(CursedKnightEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+			EntityType.Builder.<CursedKnightEntity>of(CursedKnightEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
 
 					.sized(1f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BlackHoleEntity>> BLACK_HOLE = register("black_hole",
 			EntityType.Builder.<BlackHoleEntity>of(BlackHoleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
 
-					.sized(0.2f, 0.2f));
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SpiritEntity>> SPIRIT = register("spirit",
 			EntityType.Builder.<SpiritEntity>of(SpiritEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3)
 
@@ -173,7 +172,7 @@ public class PowerModEntities {
 
 					.sized(2.25f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedSquireEntity>> CURSED_SQUIRE = register("cursed_squire",
-			EntityType.Builder.<CursedSquireEntity>of(CursedSquireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune()
+			EntityType.Builder.<CursedSquireEntity>of(CursedSquireEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune()
 
 					.sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper",

@@ -56,11 +56,11 @@
     "particlesProbability": 1.0,
     "rainingPossibility": 0.0,
     "temperature": 2.0,
-    "spawnBiome": true,
+    "spawnBiome": false,
     "spawnInCaves": false,
     "spawnBiomeNether": false,
     "genTemperature": {
-      "min": -0.15,
+      "min": -0.45,
       "max": 0.2
     },
     "genHumidity": {
@@ -69,15 +69,15 @@
     },
     "genContinentalness": {
       "min": -0.11,
-      "max": 0.03
+      "max": 0.3
     },
     "genErosion": {
-      "min": -0.375,
-      "max": 0.2225
+      "min": -0.7799,
+      "max": -0.375
     },
     "genWeirdness": {
       "min": -1.0,
-      "max": 1.0
+      "max": -0.9333
     },
     "treesPerChunk": 0,
     "vanillaTreeType": "Default",

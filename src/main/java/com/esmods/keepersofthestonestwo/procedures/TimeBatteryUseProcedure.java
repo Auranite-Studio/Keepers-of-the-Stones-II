@@ -45,7 +45,7 @@ public class TimeBatteryUseProcedure {
 					_vars.power = 500;
 					_vars.syncPlayerVariables(entity);
 				}
-				SendClientPackageActivationStoneVFXProcedure.execute(world, x, y, z, entity);
+				ActivationStoneTriggerProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}

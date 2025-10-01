@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -32,7 +31,7 @@ import com.esmods.keepersofthestonestwo.procedures.AnimalsElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AmberElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record KeepersBoxGUIPart4ButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<KeepersBoxGUIPart4ButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "keepers_box_gui_part_4_buttons"));

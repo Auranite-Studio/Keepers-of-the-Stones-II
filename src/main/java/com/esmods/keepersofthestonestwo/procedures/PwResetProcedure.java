@@ -1,6 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.arguments.EntityArgument;
@@ -13,9 +13,7 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
 public class PwResetProcedure {
-	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
-		if (entity == null)
-			return;
+	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
 				if (PowerConfigConfiguration.ENABLE_LEVELS.get() == true) {
@@ -90,8 +88,26 @@ public class PwResetProcedure {
 					_vars.recharge_timer = 300;
 					_vars.syncPlayerVariables(entityiterator);
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("All values are reset for " + entityiterator.getDisplayName().getString())), false);
+				{
+					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.blue_rune_slot = ItemStack.EMPTY.copy();
+					_vars.syncPlayerVariables(entityiterator);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.red_rune_slot = ItemStack.EMPTY.copy();
+					_vars.syncPlayerVariables(entityiterator);
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.green_rune_slot = ItemStack.EMPTY.copy();
+					_vars.syncPlayerVariables(entityiterator);
+				}
+				{
+					final String _success = ("All values are reset for " + entityiterator.getDisplayName().getString());
+					final boolean _informAdmins = true;
+					arguments.getSource().sendSuccess(() -> Component.literal(_success), _informAdmins);
+				}
 			}
 		} catch (CommandSyntaxException e) {
 			e.printStackTrace();

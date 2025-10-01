@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
@@ -7,6 +6,8 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HierarchicalModel;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+
 import com.esmods.keepersofthestonestwo.entity.TurretEntity;
 import com.esmods.keepersofthestonestwo.client.model.animations.turretAnimation;
 import com.esmods.keepersofthestonestwo.client.model.Modelturret;
@@ -14,6 +15,11 @@ import com.esmods.keepersofthestonestwo.client.model.Modelturret;
 public class TurretRenderer extends MobRenderer<TurretEntity, Modelturret<TurretEntity>> {
 	public TurretRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modelturret.LAYER_LOCATION)), 0.5f);
+	}
+
+	@Override
+	protected void scale(TurretEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(entity.getAgeScale(), entity.getAgeScale(), entity.getAgeScale());
 	}
 
 	@Override

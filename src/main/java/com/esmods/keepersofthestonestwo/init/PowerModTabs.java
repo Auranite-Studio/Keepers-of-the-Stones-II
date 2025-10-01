@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -216,6 +215,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.FREAKING_PARSNIP_SOUP.get());
 				tabData.accept(PowerModItems.EMPTY_CHARACTERISTICS_CARD.get());
 				tabData.accept(PowerModItems.CHARACTERISTICS_CARD.get());
+				tabData.accept(PowerModItems.CURSED_WORLD.get());
 			}).withTabsBefore(BATTERIES.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOBS = REGISTRY.register("mobs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {

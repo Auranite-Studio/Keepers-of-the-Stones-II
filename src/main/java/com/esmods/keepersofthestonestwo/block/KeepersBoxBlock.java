@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.block;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -15,7 +14,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Blocks;
@@ -41,8 +39,7 @@ public class KeepersBoxBlock extends Block implements SimpleWaterloggedBlock, En
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public KeepersBoxBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(2.5f, 5000f).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false)
-				.instrument(NoteBlockInstrument.BASEDRUM));
+		super(BlockBehaviour.Properties.of().strength(2.5f, 5000f).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
@@ -131,7 +128,7 @@ public class KeepersBoxBlock extends Block implements SimpleWaterloggedBlock, En
 	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
 	}
 
 	@Override

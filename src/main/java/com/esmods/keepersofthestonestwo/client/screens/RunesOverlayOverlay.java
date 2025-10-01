@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.client.screens;
 
 import org.checkerframework.checker.units.qual.h;
@@ -34,7 +33,7 @@ import com.esmods.keepersofthestonestwo.procedures.BlueRune3CheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BlueRune2CheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BlueRune1CheckProcedure;
 
-@EventBusSubscriber({Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class RunesOverlayOverlay {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {

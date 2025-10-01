@@ -284,6 +284,63 @@
         "name": "fall_anim_sync",
         "type": "logic",
         "value": false
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "IA",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "name": "State",
+        "type": "string",
+        "value": ""
+      },
+      {
+        "name": "Phase",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Wave",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Patience",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "name": "OnBattle",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Look",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "windShield",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "BreathRange",
+        "type": "integer",
+        "value": 0
       }
     ],
     "whenMobDies": {
@@ -321,6 +378,11 @@
       4,
       4,
       2
-    ]
+    ],
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    }
   }
 }

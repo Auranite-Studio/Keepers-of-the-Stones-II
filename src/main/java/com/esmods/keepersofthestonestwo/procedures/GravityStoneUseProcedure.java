@@ -43,7 +43,7 @@ public class GravityStoneUseProcedure {
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power;
 					_vars.syncPlayerVariables(entity);
 				}
-				SendClientPackageActivationStoneVFXProcedure.execute(world, x, y, z, entity);
+				ActivationStoneTriggerProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}

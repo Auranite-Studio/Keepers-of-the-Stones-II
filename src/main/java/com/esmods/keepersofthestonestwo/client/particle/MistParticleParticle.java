@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.client.particle;
 
 import net.neoforged.api.distmarker.OnlyIn;

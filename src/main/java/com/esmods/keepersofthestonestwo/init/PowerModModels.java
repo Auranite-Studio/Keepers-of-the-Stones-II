@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -35,7 +34,7 @@ import com.esmods.keepersofthestonestwo.client.model.Modelblack_hole;
 import com.esmods.keepersofthestonestwo.client.model.Modelatomic_rocket;
 import com.esmods.keepersofthestonestwo.client.model.ModelCrossed;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class PowerModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {

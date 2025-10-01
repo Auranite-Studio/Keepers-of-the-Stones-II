@@ -726,10 +726,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -7701,7 +7697,8 @@
       "registry_name": "depleted_energium_ore_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/depleted_energium_ore_block_recipe.json"
+          "src/main/resources/data/power/recipe/depleted_energium_ore_block_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/depleted_energium_ore_block_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -7714,6 +7711,7 @@
       "registry_name": "depleted_energium_block_ore_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/depleted_energium_block_ore_recipe.json",
           "src/main/resources/data/power/recipe/depleted_energium_block_ore_recipe.json"
         ]
       },
@@ -7727,6 +7725,7 @@
       "registry_name": "depleted_energium_ore_smelting",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/depleted_energium_ore_smelting.json",
           "src/main/resources/data/power/recipe/depleted_energium_ore_smelting.json"
         ]
       },
@@ -7754,7 +7753,8 @@
       "registry_name": "raw_depleted_energium_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_depleted_energium_recipe.json"
+          "src/main/resources/data/power/recipe/raw_depleted_energium_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/raw_depleted_energium_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8158,7 +8158,8 @@
       "registry_name": "battery_charger_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/battery_charger_recipe.json"
+          "src/main/resources/data/power/recipe/battery_charger_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/battery_charger_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/BatteryCharger"
@@ -8171,29 +8172,11 @@
       "registry_name": "empty_battery_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/empty_battery_recipe.json"
+          "src/main/resources/data/power/recipe/empty_battery_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/empty_battery_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/EmptyBattery"
-    },
-    {
-      "name": "UnlockRecipes",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "unlock_recipes",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/UnlockRecipesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
     },
     {
       "name": "BatteryChargerClientTick",
@@ -8343,6 +8326,7 @@
       "registry_name": "energium_block_ore_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/energium_block_ore_recipe.json",
           "src/main/resources/data/power/recipe/energium_block_ore_recipe.json"
         ]
       },
@@ -8356,6 +8340,7 @@
       "registry_name": "energium_ore_block_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/energium_ore_block_recipe.json",
           "src/main/resources/data/power/recipe/energium_ore_block_recipe.json"
         ]
       },
@@ -8369,7 +8354,8 @@
       "registry_name": "depleted_energium_ore_blasting_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/depleted_energium_ore_blasting_recipe.json"
+          "src/main/resources/data/power/recipe/depleted_energium_ore_blasting_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/depleted_energium_ore_blasting_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8382,6 +8368,7 @@
       "registry_name": "raw_depleted_energium_blasting_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_depleted_energium_blasting_recipe.json",
           "src/main/resources/data/power/recipe/raw_depleted_energium_blasting_recipe.json"
         ]
       },
@@ -8395,7 +8382,8 @@
       "registry_name": "energium_ingot_cleaning_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_ingot_cleaning_recipe.json"
+          "src/main/resources/data/power/recipe/energium_ingot_cleaning_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_ingot_cleaning_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8464,7 +8452,8 @@
       "registry_name": "duplicate_energium_upgrade_smithing_template",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/duplicate_energium_upgrade_smithing_template.json"
+          "src/main/resources/data/power/recipe/duplicate_energium_upgrade_smithing_template.json",
+          "src/main/resources/data/power/advancement/recipes/duplicate_energium_upgrade_smithing_template.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8547,7 +8536,8 @@
       "registry_name": "energium_pickaxe_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_pickaxe_recipe.json"
+          "src/main/resources/data/power/recipe/energium_pickaxe_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_pickaxe_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8560,6 +8550,7 @@
       "registry_name": "energium_axe_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/energium_axe_recipe.json",
           "src/main/resources/data/power/recipe/energium_axe_recipe.json"
         ]
       },
@@ -8573,7 +8564,8 @@
       "registry_name": "energium_sword_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_sword_recipe.json"
+          "src/main/resources/data/power/recipe/energium_sword_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_sword_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8586,7 +8578,8 @@
       "registry_name": "energium_shovel_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_shovel_recipe.json"
+          "src/main/resources/data/power/recipe/energium_shovel_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_shovel_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8599,6 +8592,7 @@
       "registry_name": "energium_hoe_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/energium_hoe_recipe.json",
           "src/main/resources/data/power/recipe/energium_hoe_recipe.json"
         ]
       },
@@ -8629,6 +8623,7 @@
       "registry_name": "energium_armor_helmet_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/energium_armor_helmet_recipe.json",
           "src/main/resources/data/power/recipe/energium_armor_helmet_recipe.json"
         ]
       },
@@ -8642,7 +8637,8 @@
       "registry_name": "energium_armor_chestplate_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_armor_chestplate_recipe.json"
+          "src/main/resources/data/power/recipe/energium_armor_chestplate_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_armor_chestplate_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8655,7 +8651,8 @@
       "registry_name": "energium_armor_leggings_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_armor_leggings_recipe.json"
+          "src/main/resources/data/power/recipe/energium_armor_leggings_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_armor_leggings_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -8668,7 +8665,8 @@
       "registry_name": "energium_armor_boots_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_armor_boots_recipe.json"
+          "src/main/resources/data/power/recipe/energium_armor_boots_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_armor_boots_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -11189,7 +11187,8 @@
       "registry_name": "energium_controller_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_controller_recipe.json"
+          "src/main/resources/data/power/recipe/energium_controller_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_controller_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -12120,7 +12119,8 @@
       "registry_name": "amplifier_ore_smelting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_ore_smelting.json"
+          "src/main/resources/data/power/recipe/amplifier_ore_smelting.json",
+          "src/main/resources/data/power/advancement/recipes/amplifier_ore_smelting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -12174,6 +12174,7 @@
       "registry_name": "raw_amplifier_to_drop_recipe",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_amplifier_to_drop_recipe.json",
           "src/main/resources/data/power/recipe/raw_amplifier_to_drop_recipe.json"
         ]
       },
@@ -12187,7 +12188,8 @@
       "registry_name": "amplifier_ore_blasting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_ore_blasting.json"
+          "src/main/resources/data/power/recipe/amplifier_ore_blasting.json",
+          "src/main/resources/data/power/advancement/recipes/amplifier_ore_blasting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -12200,6 +12202,7 @@
       "registry_name": "raw_amplifier_blasting",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_amplifier_blasting.json",
           "src/main/resources/data/power/recipe/raw_amplifier_blasting.json"
         ]
       },
@@ -12723,10 +12726,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -13478,7 +13477,8 @@
       "registry_name": "amplifier_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_block_recipe.json"
+          "src/main/resources/data/power/recipe/amplifier_block_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/amplifier_block_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -13491,7 +13491,8 @@
       "registry_name": "amplifier_drop_from_block",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/amplifier_drop_from_block.json"
+          "src/main/resources/data/power/recipe/amplifier_drop_from_block.json",
+          "src/main/resources/data/power/advancement/recipes/amplifier_drop_from_block.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -14031,7 +14032,8 @@
       "registry_name": "raw_depleted_energium_block_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_depleted_energium_block_craft.json"
+          "src/main/resources/data/power/recipe/raw_depleted_energium_block_craft.json",
+          "src/main/resources/data/power/advancement/recipes/raw_depleted_energium_block_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -14044,6 +14046,7 @@
       "registry_name": "raw_depleted_energium_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_depleted_energium_craft.json",
           "src/main/resources/data/power/recipe/raw_depleted_energium_craft.json"
         ]
       },
@@ -14074,6 +14077,7 @@
       "registry_name": "raw_amplifier_block_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_amplifier_block_craft.json",
           "src/main/resources/data/power/recipe/raw_amplifier_block_craft.json"
         ]
       },
@@ -14087,6 +14091,7 @@
       "registry_name": "raw_amplifier_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_amplifier_craft.json",
           "src/main/resources/data/power/recipe/raw_amplifier_craft.json"
         ]
       },
@@ -15077,10 +15082,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -15100,10 +15101,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -17435,10 +17432,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -17970,6 +17963,7 @@
       "registry_name": "amplifier_ring_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/amplifier_ring_craft.json",
           "src/main/resources/data/power/recipe/amplifier_ring_craft.json"
         ]
       },
@@ -18189,7 +18183,8 @@
       "registry_name": "cursed_lantern_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_lantern_craft.json"
+          "src/main/resources/data/power/recipe/cursed_lantern_craft.json",
+          "src/main/resources/data/power/advancement/recipes/cursed_lantern_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -18296,7 +18291,8 @@
       "registry_name": "copyrium_ore_block_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/copyrium_ore_block_recipe.json"
+          "src/main/resources/data/power/recipe/copyrium_ore_block_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/copyrium_ore_block_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -18309,7 +18305,8 @@
       "registry_name": "copyrium_block_ore_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/copyrium_block_ore_recipe.json"
+          "src/main/resources/data/power/recipe/copyrium_block_ore_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/copyrium_block_ore_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -18322,6 +18319,7 @@
       "registry_name": "copyrium_ore_smelting",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/copyrium_ore_smelting.json",
           "src/main/resources/data/power/recipe/copyrium_ore_smelting.json"
         ]
       },
@@ -18397,6 +18395,7 @@
       "registry_name": "raw_copyrium_smelting",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_copyrium_smelting.json",
           "src/main/resources/data/power/recipe/raw_copyrium_smelting.json"
         ]
       },
@@ -18410,7 +18409,8 @@
       "registry_name": "copyrium_ore_blasting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/copyrium_ore_blasting.json"
+          "src/main/resources/data/power/recipe/copyrium_ore_blasting.json",
+          "src/main/resources/data/power/advancement/recipes/copyrium_ore_blasting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -18423,7 +18423,8 @@
       "registry_name": "raw_copyrium_blasting",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_copyrium_blasting.json"
+          "src/main/resources/data/power/recipe/raw_copyrium_blasting.json",
+          "src/main/resources/data/power/advancement/recipes/raw_copyrium_blasting.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -20808,7 +20809,8 @@
       "registry_name": "cursed_ladder_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_ladder_craft.json"
+          "src/main/resources/data/power/recipe/cursed_ladder_craft.json",
+          "src/main/resources/data/power/advancement/recipes/cursed_ladder_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -20838,7 +20840,8 @@
       "registry_name": "cursed_lamp_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/cursed_lamp_craft.json"
+          "src/main/resources/data/power/recipe/cursed_lamp_craft.json",
+          "src/main/resources/data/power/advancement/recipes/cursed_lamp_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -20927,6 +20930,7 @@
       "registry_name": "elemental_power_generator_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/elemental_power_generator_craft.json",
           "src/main/resources/data/power/recipe/elemental_power_generator_craft.json"
         ]
       },
@@ -21561,7 +21565,7 @@
           "src/main/resources/data/power/worldgen/biome/cursed_forest.json"
         ]
       },
-      "path": "~/Biomes/CursedForest"
+      "path": "~/Biomes"
     },
     {
       "name": "PlayerWitheringInCursedForest",
@@ -21596,7 +21600,7 @@
           }
         ]
       },
-      "path": "~/Biomes/CursedForest"
+      "path": "~/Biomes"
     },
     {
       "name": "RedMagnetPowerTick",
@@ -21683,7 +21687,7 @@
           "src/main/resources/data/power/worldgen/configured_feature/big_cursed_trees.json"
         ]
       },
-      "path": "~/Biomes/CursedForest"
+      "path": "~/Biomes"
     },
     {
       "name": "LetsBailThisPlaceIsdead",
@@ -22181,20 +22185,6 @@
       "path": "~/Elements/Mushrooms"
     },
     {
-      "name": "EnergiumGolemBreaksBlocks",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_golem_breaks_blocks",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemBreaksBlocksProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Mobs/EnergiumGolem"
-    },
-    {
       "name": "BasicCursedTrees",
       "type": "feature",
       "compiles": true,
@@ -22207,7 +22197,7 @@
           "src/main/resources/data/power/worldgen/configured_feature/basic_cursed_trees.json"
         ]
       },
-      "path": "~/Biomes/CursedForest"
+      "path": "~/Biomes"
     },
     {
       "name": "CursedCastle",
@@ -22409,6 +22399,7 @@
       "registry_name": "raw_copyrium_block_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_copyrium_block_craft.json",
           "src/main/resources/data/power/recipe/raw_copyrium_block_craft.json"
         ]
       },
@@ -22422,24 +22413,11 @@
       "registry_name": "raw_copyrium_from_block_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/raw_copyrium_from_block_craft.json"
+          "src/main/resources/data/power/recipe/raw_copyrium_from_block_craft.json",
+          "src/main/resources/data/power/advancement/recipes/raw_copyrium_from_block_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
-    },
-    {
-      "name": "AnimationsModuleSetup",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "animations_module_setup",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AnimationsModuleSetupProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Modules/BasicModule"
     },
     {
       "name": "RawEnergium",
@@ -22495,7 +22473,8 @@
       "registry_name": "energium_ore_to_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_ore_to_ingot.json"
+          "src/main/resources/data/power/recipe/energium_ore_to_ingot.json",
+          "src/main/resources/data/power/advancement/recipes/energium_ore_to_ingot.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -22508,6 +22487,7 @@
       "registry_name": "raw_energium_to_ingot",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_energium_to_ingot.json",
           "src/main/resources/data/power/recipe/raw_energium_to_ingot.json"
         ]
       },
@@ -22559,20 +22539,8 @@
       "registry_name": "energium_dust_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_dust_recipe.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Energium"
-    },
-    {
-      "name": "EnergiumDustToIngot",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_dust_to_ingot",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/recipe/energium_dust_to_ingot.json"
+          "src/main/resources/data/power/recipe/energium_dust_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_dust_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -23712,96 +23680,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "DepletedEnergiumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "depleted_energium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/depleted_energium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "EnergiumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/energium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "AmplifierMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amplifier_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/amplifier_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "CopyriumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "copyrium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/copyrium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "StunStopSound",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stun_stop_sound",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunStopSoundProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Sound"
-    },
-    {
-      "name": "StunSoundTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stun_sound_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunSoundTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Sound"
-    },
-    {
       "name": "SoundPassiveProtection",
       "type": "procedure",
       "compiles": true,
@@ -23966,6 +23844,7 @@
       "registry_name": "freaking_parsnip_soup_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/freaking_parsnip_soup_craft.json",
           "src/main/resources/data/power/recipe/freaking_parsnip_soup_craft.json"
         ]
       },
@@ -25363,41 +25242,6 @@
       "path": "~/Modules/VFXEngineModule"
     },
     {
-      "name": "SendClientPackageActivationStoneVFX",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "send_client_package_activation_stone_vfx",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SendClientPackageActivationStoneVFXProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/CPAPIExecuterModule"
-    },
-    {
       "name": "GravityMace",
       "type": "tool",
       "compiles": true,
@@ -25805,29 +25649,6 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Smoke"
-    },
-    {
-      "name": "DetransformAnimationStart",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "detransform_animation_start",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DetransformAnimationStartProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/KeyBindsModule/DetransformationKey"
     },
     {
       "name": "SmokeIntangibility",
@@ -27596,6 +27417,7 @@
       "registry_name": "raw_energium_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_energium_craft.json",
           "src/main/resources/data/power/recipe/raw_energium_craft.json"
         ]
       },
@@ -28935,6 +28757,7 @@
       "registry_name": "raw_energium_block_craft",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/advancement/recipes/raw_energium_block_craft.json",
           "src/main/resources/data/power/recipe/raw_energium_block_craft.json"
         ]
       },
@@ -29368,10 +29191,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -29485,10 +29304,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -29508,10 +29323,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -29531,10 +29342,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -29561,7 +29368,7 @@
           }
         ]
       },
-      "path": "~/Modules/CPAPIExecuterModule"
+      "path": "~/Modules/HandlersModule"
     },
     {
       "name": "MasterEffectEndControl",
@@ -29584,7 +29391,7 @@
           }
         ]
       },
-      "path": "~/Modules/CPAPIExecuterModule"
+      "path": "~/Modules/HandlersModule"
     },
     {
       "name": "LevelCalculating",
@@ -29659,10 +29466,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -30280,7 +30083,8 @@
       "registry_name": "characteristics_card_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/characteristics_card_craft.json"
+          "src/main/resources/data/power/recipe/characteristics_card_craft.json",
+          "src/main/resources/data/power/advancement/recipes/characteristics_card_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CharacteristicsCard"
@@ -31015,30 +30819,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/CurseMobEffect.java"
         ]
       },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
-      "name": "RenderFogByCurse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_fog_by_curse",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderFogByCurseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "end",
-            "type": "number"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
+      "path": "~/Dimensions/CursedWorld"
     },
     {
       "name": "CurseTickEvent",
@@ -31061,26 +30842,7 @@
           }
         ]
       },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
-      "name": "CalculateFogColorByCurse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "calculate_fog_color_by_curse",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CalculateFogColorByCurseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
+      "path": "~/Dimensions/CursedWorld"
     },
     {
       "name": "UnbreakableDiamond",
@@ -31104,6 +30866,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/block/rune_cutter.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/RuneCutterBlockEntity.java",
           "src/main/resources/assets/power/blockstates/rune_cutter.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/RuneCutterBlock.java",
           "src/main/resources/assets/power/models/item/rune_cutter.json",
@@ -31120,7 +30883,8 @@
       "registry_name": "rune_cutter_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/rune_cutter_craft.json"
+          "src/main/resources/data/power/recipe/rune_cutter_craft.json",
+          "src/main/resources/data/power/advancement/recipes/rune_cutter_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/RuneCutter"
@@ -31296,6 +31060,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -31587,57 +31355,6 @@
       "path": "~/Elements/Magnet"
     },
     {
-      "name": "BetaVersionCheckWarn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "beta_version_check_warn",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BetaVersionCheckWarnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
-      "name": "CheckingModVersionType",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "checking_mod_version_type",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/CheckingModVersionType.java"
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
-      "name": "MagnetSetTimer",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "magnet_set_timer",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetSetTimerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Magnet"
-    },
-    {
       "name": "GravityPassiveProtection",
       "type": "procedure",
       "compiles": true,
@@ -31683,7 +31400,8 @@
       "registry_name": "energium_shield_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_shield_craft.json"
+          "src/main/resources/data/power/recipe/energium_shield_craft.json",
+          "src/main/resources/data/power/advancement/recipes/energium_shield_craft.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -32490,41 +32208,6 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
-    },
-    {
-      "name": "AbilityKeyPressed2Tick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ability_key_pressed_2_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AbilityKeyPressed2TickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
     },
     {
       "name": "HeatBatteryUse",
@@ -33619,6 +33302,438 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Runes"
+    },
+    {
+      "name": "RuneCutterGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/RuneCutterGUISlotMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/RuneCutterGUIScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/RuneCutterGUIMenu.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RuneCutterPriObnovlieniiTika",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_pri_obnovlienii_tika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneCutterPriObnovlieniiTikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RemoveWhenRuneIsCutted",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_when_rune_is_cutted",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RemoveWhenRuneIsCuttedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "DropUnusedRunesFromBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drop_unused_runes_from_block",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DropUnusedRunesFromBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RuneCutterValidRecipe",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_valid_recipe",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneCutterValidRecipeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "RuneCutterUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_cutter_update",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneCutterUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/RuneCutter"
+    },
+    {
+      "name": "ModVersionManager",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mod_version_manager",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ModVersionManager.java"
+        ]
+      },
+      "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "AbilitiesCheck1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abilities_check_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AbilitiesCheck1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
+    },
+    {
+      "name": "AbilitiesCheck2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abilities_check_2",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AbilitiesCheck2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
+    },
+    {
+      "name": "StunSoundStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stun_sound_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunSoundStartProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "BlueMagnetSetTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_magnet_set_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueMagnetSetTimerProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "RedMagnetSetTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_magnet_set_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedMagnetSetTimerProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "SetupAnimations",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setup_animations",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SetupAnimationsProcedure.java"
+        ]
+      },
+      "path": "~/Modules/SVFXModule"
+    },
+    {
+      "name": "DetransformationTrigger",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detransformation_trigger",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DetransformationTriggerProcedure.java"
+        ]
+      },
+      "path": "~/Modules/SVFXModule"
+    },
+    {
+      "name": "ActivationStoneTrigger",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "activation_stone_trigger",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ActivationStoneTriggerProcedure.java"
+        ]
+      },
+      "path": "~/Modules/SVFXModule"
+    },
+    {
+      "name": "CursedWorld",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_world",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedWorldPortalBlock.java",
+          "src/main/resources/data/power/dimension_type/cursed_world.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/dimension/CursedWorldDimension.java",
+          "src/main/resources/assets/power/models/block/cursed_world_portal_ew.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/teleporter/CursedWorldTeleporter.java",
+          "src/main/resources/data/power/dimension/cursed_world.json",
+          "src/main/resources/assets/power/blockstates/cursed_world_portal.json",
+          "src/main/resources/assets/power/models/block/cursed_world_portal_ns.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/CursedWorldItem.java",
+          "src/main/resources/assets/power/models/item/cursed_world.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/teleporter/CursedWorldPortalShape.java"
+        ]
+      },
+      "path": "~/Dimensions/CursedWorld"
+    },
+    {
+      "name": "CursedPlains",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_plains",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/worldgen/biome/cursed_plains.json"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "EnergiumGolemLootTable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_table/entities/energium_golem.json"
+        ]
+      },
+      "path": "~/Mobs/EnergiumGolem"
     }
   ],
   "variable_elements": [
@@ -34541,17 +34656,6 @@
       "CUSTOM:CreationHoe",
       "CUSTOM:CreationShovel"
     ],
-    "ITEMS:minecraft:music_discs": [
-      "~CUSTOM:MusicHope",
-      "~CUSTOM:MusicDiscAncientMood",
-      "~CUSTOM:MusicDiscCallOfThePast"
-    ],
-    "BLOCKS:minecraft:stairs": [
-      "~CUSTOM:CursedStoneCrackedBricksStairs",
-      "~CUSTOM:PolishedCursedStoneStairs",
-      "~CUSTOM:CursedStoneBricksStairs",
-      "~CUSTOM:CursedStoneStairs"
-    ],
     "BIOMES:mod:cursed_biomes": [
       "CUSTOM:CursedForest"
     ],
@@ -34561,59 +34665,6 @@
       "CUSTOM:DodgingRune",
       "CUSTOM:InvisibilityRune",
       "CUSTOM:HealingRune"
-    ],
-    "ITEMS:minecraft:pickaxes": [
-      "~CUSTOM:TechnoPickaxe",
-      "~CUSTOM:CreationPickaxe",
-      "~CUSTOM:EnergiumPickaxe"
-    ],
-    "ITEMS:minecraft:swords": [
-      "~CUSTOM:HeatKnife",
-      "~CUSTOM:DarkSword",
-      "~CUSTOM:GoldenDustStaff",
-      "~CUSTOM:MindEpee",
-      "~CUSTOM:FormSai",
-      "~CUSTOM:SpiritSickle",
-      "~CUSTOM:GravityMace",
-      "~CUSTOM:BlueFlameSword",
-      "~CUSTOM:PlagueWalkingStick",
-      "~CUSTOM:MusicGuitar",
-      "~CUSTOM:MushroomsHammer",
-      "~CUSTOM:TeleportationBlade",
-      "~CUSTOM:MagnetClaws",
-      "~CUSTOM:HighspeedDagger",
-      "~CUSTOM:SandSaber",
-      "~CUSTOM:MistyFan",
-      "~CUSTOM:AmberStaff",
-      "~CUSTOM:ExplosionMace",
-      "~CUSTOM:BloodSickle",
-      "~CUSTOM:DestructionBroadsword",
-      "~CUSTOM:CreationSword",
-      "~CUSTOM:CreationStaff",
-      "~CUSTOM:TimeKhopesh",
-      "~CUSTOM:ConstellationSword",
-      "~CUSTOM:MoonDoubleSidedSpear",
-      "~CUSTOM:SolarBlade",
-      "~CUSTOM:EnergyStaff",
-      "~CUSTOM:EnergiumSword",
-      "~CUSTOM:VacuumDagger",
-      "~CUSTOM:ShadowScythe",
-      "~CUSTOM:LightSword",
-      "~CUSTOM:LeftMetalGauntlet",
-      "~CUSTOM:RightMetalGauntlet",
-      "~CUSTOM:AnimalsHalberd",
-      "~CUSTOM:GreenStaff",
-      "~CUSTOM:OceanicTrident",
-      "~CUSTOM:LavaHammer",
-      "~CUSTOM:CrystalKnife",
-      "~CUSTOM:SoundDagger",
-      "~CUSTOM:LightningFalchion",
-      "~CUSTOM:IceSpear",
-      "~CUSTOM:EtherGlaive",
-      "~CUSTOM:WaterKatana",
-      "~CUSTOM:EarthHammer",
-      "~CUSTOM:AirRapier",
-      "~CUSTOM:FireSword"
     ],
     "ITEMS:mod:elemental_batteries": [
       "CUSTOM:FireBattery",
@@ -34682,166 +34733,15 @@
       "CUSTOM:MusicDiscCallOfThePast",
       "CUSTOM:EnergiumUpgradeSmithingTemplate"
     ],
-    "BLOCKS:minecraft:needs_diamond_tool": [
-      "~CUSTOM:DeepslateEnergiumOre",
-      "~CUSTOM:DeepslateDepletedEnergiumOre",
-      "~CUSTOM:RawEnergiumBlock",
-      "~CUSTOM:EnergiumOre",
-      "~CUSTOM:EnergiumVault",
-      "~CUSTOM:CursedVault",
-      "~CUSTOM:RawDepletedEnergiumBlock",
-      "~CUSTOM:EnergiumController",
-      "~CUSTOM:EnergiumBlock",
-      "~CUSTOM:DepletedEnergiumBlock",
-      "~CUSTOM:DepletedEnergiumOre"
-    ],
-    "ENTITIES:minecraft:undead": [
-      "~CUSTOM:Shadow"
-    ],
-    "ITEMS:minecraft:chest_armor": [
-      "~CUSTOM:ShockwaveArmor.body",
-      "~CUSTOM:HeatArmor.body",
-      "~CUSTOM:FilthArmor.body",
-      "~CUSTOM:HorrorArmor.body",
-      "~CUSTOM:ChaosArmor.body",
-      "~CUSTOM:ThirstArmor.body",
-      "~CUSTOM:DarknessArmor.body",
-      "~CUSTOM:GoldenDustArmor.body",
-      "~CUSTOM:MindArmor.body",
-      "~CUSTOM:FormArmor.body",
-      "~CUSTOM:SpiritArmor.body",
-      "~CUSTOM:SmokeArmor.body",
-      "~CUSTOM:GravityArmor.body",
-      "~CUSTOM:BlueFlameArmor.body",
-      "~CUSTOM:PlagueArmor.body",
-      "~CUSTOM:MusicArmor.body",
-      "~CUSTOM:MercuryArmor.body",
-      "~CUSTOM:MushroomsArmor.body",
-      "~CUSTOM:MagnetArmor.body",
-      "~CUSTOM:PoisonArmor.body",
-      "~CUSTOM:SpeedArmor.body",
-      "~CUSTOM:SandArmor.body",
-      "~CUSTOM:MistArmor.body",
-      "~CUSTOM:AmberArmor.body",
-      "~CUSTOM:ExplosionArmor.body",
-      "~CUSTOM:TeleportationArmor.body",
-      "~CUSTOM:TechnologyArmor.body",
-      "~CUSTOM:BloodArmor.body",
-      "~CUSTOM:DestructionArmor.body",
-      "~CUSTOM:CreationArmor.body",
-      "~CUSTOM:TimeArmor.body",
-      "~CUSTOM:SpaceArmor.body",
-      "~CUSTOM:MoonArmor.body",
-      "~CUSTOM:SunArmor.body",
-      "~CUSTOM:EnergyArmor.body",
-      "~CUSTOM:EnergiumArmor.body",
-      "~CUSTOM:VacuumArmor.body",
-      "~CUSTOM:ShadowArmor.body",
-      "~CUSTOM:LightArmor.body",
-      "~CUSTOM:MetalArmor.body",
-      "~CUSTOM:AnimalsArmor.body",
-      "~CUSTOM:PlantsArmor.body",
-      "~CUSTOM:OceanArmor.body",
-      "~CUSTOM:TornadoArmor.body",
-      "~CUSTOM:RainArmor.body",
-      "~CUSTOM:LavaArmor.body",
-      "~CUSTOM:CrystalArmor.body",
-      "~CUSTOM:SoundArmor.body",
-      "~CUSTOM:LightningArmor.body",
-      "~CUSTOM:IceArmor.body",
-      "~CUSTOM:EtherArmor.body",
-      "~CUSTOM:WaterArmor.body",
-      "~CUSTOM:EarthArmor.body",
-      "~CUSTOM:AirArmor.body",
-      "~CUSTOM:FireArmor.body"
-    ],
-    "BLOCKS:minecraft:walls": [
-      "~CUSTOM:CursedStoneCrackedBricksWall",
-      "~CUSTOM:PolishedCursedStoneWall",
-      "~CUSTOM:CursedStoneBricksWall",
-      "~CUSTOM:CursedStoneWall"
-    ],
-    "ITEMS:minecraft:head_armor": [
-      "~CUSTOM:ShockwaveArmor.helmet",
-      "~CUSTOM:HeatArmor.helmet",
-      "~CUSTOM:FilthArmor.helmet",
-      "~CUSTOM:HorrorArmor.helmet",
-      "~CUSTOM:ChaosArmor.helmet",
-      "~CUSTOM:ThirstArmor.helmet",
-      "~CUSTOM:DarknessArmor.helmet",
-      "~CUSTOM:GoldenDustArmor.helmet",
-      "~CUSTOM:MindArmor.helmet",
-      "~CUSTOM:FormArmor.helmet",
-      "~CUSTOM:SpiritArmor.helmet",
-      "~CUSTOM:SmokeArmor.helmet",
-      "~CUSTOM:GravityArmor.helmet",
-      "~CUSTOM:BlueFlameArmor.helmet",
-      "~CUSTOM:PlagueArmor.helmet",
-      "~CUSTOM:MusicArmor.helmet",
-      "~CUSTOM:MercuryArmor.helmet",
-      "~CUSTOM:MushroomsArmor.helmet",
-      "~CUSTOM:MagnetArmor.helmet",
-      "~CUSTOM:PoisonArmor.helmet",
-      "~CUSTOM:SpeedArmor.helmet",
-      "~CUSTOM:SandArmor.helmet",
-      "~CUSTOM:MistArmor.helmet",
-      "~CUSTOM:AmberArmor.helmet",
-      "~CUSTOM:ExplosionArmor.helmet",
-      "~CUSTOM:TeleportationArmor.helmet",
-      "~CUSTOM:TechnologyArmor.helmet",
-      "~CUSTOM:BloodArmor.helmet",
-      "~CUSTOM:DestructionArmor.helmet",
-      "~CUSTOM:CreationArmor.helmet",
-      "~CUSTOM:TimeArmor.helmet",
-      "~CUSTOM:SpaceArmor.helmet",
-      "~CUSTOM:MoonArmor.helmet",
-      "~CUSTOM:SunArmor.helmet",
-      "~CUSTOM:EnergyArmor.helmet",
-      "~CUSTOM:EnergiumArmor.helmet",
-      "~CUSTOM:VacuumArmor.helmet",
-      "~CUSTOM:ShadowArmor.helmet",
-      "~CUSTOM:LightArmor.helmet",
-      "~CUSTOM:MetalArmor.helmet",
-      "~CUSTOM:AnimalsArmor.helmet",
-      "~CUSTOM:PlantsArmor.helmet",
-      "~CUSTOM:OceanArmor.helmet",
-      "~CUSTOM:TornadoArmor.helmet",
-      "~CUSTOM:RainArmor.helmet",
-      "~CUSTOM:LavaArmor.helmet",
-      "~CUSTOM:CrystalArmor.helmet",
-      "~CUSTOM:SoundArmor.helmet",
-      "~CUSTOM:LightningArmor.helmet",
-      "~CUSTOM:IceArmor.helmet",
-      "~CUSTOM:EtherArmor.helmet",
-      "~CUSTOM:WaterArmor.helmet",
-      "~CUSTOM:EarthArmor.helmet",
-      "~CUSTOM:AirArmor.helmet",
-      "~CUSTOM:FireArmor.helmet"
-    ],
     "ENTITIES:minecraft:fall_damage_immune": [
       "CUSTOM:EnergiumGolem"
-    ],
-    "BLOCKS:minecraft:needs_iron_tool": [
-      "~CUSTOM:DeepslateCopyriumOre",
-      "~CUSTOM:DeepslateAmplifierOre",
-      "~CUSTOM:ElementalPowerGenerator",
-      "~CUSTOM:RawCopyriumBlock",
-      "~CUSTOM:CopyriumBlock",
-      "~CUSTOM:CopyriumOre",
-      "~CUSTOM:RawAmplifierBlock",
-      "~CUSTOM:AmplifierBlock",
-      "~CUSTOM:AmplifierOre"
     ],
     "BLOCKS:c:unbreakable": [
       "Blocks.COMMAND_BLOCK",
       "Blocks.REPEATING_COMMAND_BLOCK",
       "Blocks.CHAIN_COMMAND_BLOCK",
-      "Blocks.STRUCTURE_BLOCK#4",
       "Blocks.STRUCTURE_VOID",
       "Blocks.STRUCTURE_BLOCK",
-      "Blocks.STRUCTURE_BLOCK#1",
-      "Blocks.STRUCTURE_BLOCK#2",
-      "Blocks.STRUCTURE_BLOCK#3",
       "Blocks.BARRIER",
       "Blocks.AIR",
       "Blocks.CAVE_AIR",
@@ -34850,9 +34750,6 @@
       "Blocks.PORTAL",
       "Blocks.BEDROCK"
     ],
-    "ITEMS:minecraft:enchantable/durability": [
-      "~CUSTOM:AmplifierRing"
-    ],
     "ITEMS:mod:rune/red": [
       "CUSTOM:ReducedStoneRechargeTimeRune1",
       "CUSTOM:ReducedStoneRechargeTimeRune2",
@@ -34860,16 +34757,6 @@
       "CUSTOM:AdditionTimeMasterEffectRune1",
       "CUSTOM:AdditionTimeMasterEffectRune2",
       "CUSTOM:AdditionTimeMasterEffectRune3"
-    ],
-    "ENCHANTMENTS:minecraft:tradeable": [
-      "~CUSTOM:Isolation",
-      "~CUSTOM:Revenge"
-    ],
-    "ITEMS:minecraft:axes": [
-      "~CUSTOM:MercuryBattleAxe",
-      "~CUSTOM:CreationAxe",
-      "~CUSTOM:EnergiumAxe",
-      "~CUSTOM:TornadoAxe"
     ],
     "ENTITIES:mod:xp/50": [
       "CUSTOM:CursedKeeper",
@@ -34889,9 +34776,6 @@
       "CUSTOM:ReducedStoneRechargeTimeRune2",
       "CUSTOM:AdditionTimeMasterEffectRune2"
     ],
-    "BLOCKS:minecraft:climbable": [
-      "~CUSTOM:CursedLadder"
-    ],
     "ENTITIES:minecraft:bosses": [
       "CUSTOM:EnergiumGolem",
       "CUSTOM:CursedKeeper"
@@ -34901,57 +34785,8 @@
       "CUSTOM:SpinRune",
       "CUSTOM:DodgingRune",
       "CUSTOM:InvisibilityRune",
-      "CUSTOM:HealingRune"
-    ],
-    "BLOCKS:minecraft:mineable/pickaxe": [
-      "~CUSTOM:RuneCutter",
-      "~CUSTOM:CursedStoneCrackedBricksWall",
-      "~CUSTOM:CursedStoneCrackedBricksStairs",
-      "~CUSTOM:CursedStoneCrackedBricksSlab",
-      "~CUSTOM:CursedStoneCrackedBricks",
-      "~CUSTOM:ChiseledCursedStone",
-      "~CUSTOM:DeepslateCopyriumOre",
-      "~CUSTOM:DeepslateAmplifierOre",
-      "~CUSTOM:DeepslateEnergiumOre",
-      "~CUSTOM:DeepslateDepletedEnergiumOre",
-      "~CUSTOM:RawEnergiumBlock",
-      "~CUSTOM:EnergiumOre",
-      "~CUSTOM:EnergiumVault",
-      "~CUSTOM:CursedLamp",
-      "~CUSTOM:CursedLadder",
-      "~CUSTOM:CursedVault",
-      "~CUSTOM:ElementalPowerGenerator",
-      "~CUSTOM:RawCopyriumBlock",
-      "~CUSTOM:CopyriumBlock",
-      "~CUSTOM:CopyriumOre",
-      "~CUSTOM:CursedLantern",
-      "~CUSTOM:CursedStonePillar",
-      "~CUSTOM:PolishedCursedStoneWall",
-      "~CUSTOM:PolishedCursedStoneSlab",
-      "~CUSTOM:PolishedCursedStoneStairs",
-      "~CUSTOM:PolishedCursedStone",
-      "~CUSTOM:CursedStoneBricksWall",
-      "~CUSTOM:CursedStoneWall",
-      "~CUSTOM:CursedStoneBricksSlab",
-      "~CUSTOM:CursedStoneBricksStairs",
-      "~CUSTOM:CursedStoneSlab",
-      "~CUSTOM:CursedStoneStairs",
-      "~CUSTOM:CursedStoneBricks",
-      "~CUSTOM:CursedStone",
-      "~CUSTOM:AmberBlock",
-      "~CUSTOM:OrangePortal",
-      "~CUSTOM:BluePortal",
-      "~CUSTOM:RawAmplifierBlock",
-      "~CUSTOM:RawDepletedEnergiumBlock",
-      "~CUSTOM:AmplifierBlock",
-      "~CUSTOM:AmplifierOre",
-      "~CUSTOM:EnergiumController",
-      "~CUSTOM:MoonBlock",
-      "~CUSTOM:KeepersBox",
-      "~CUSTOM:BatteryCharger",
-      "~CUSTOM:EnergiumBlock",
-      "~CUSTOM:DepletedEnergiumBlock",
-      "~CUSTOM:DepletedEnergiumOre"
+      "CUSTOM:HealingRune",
+      "CUSTOM:UnknownRune"
     ],
     "BIOMES:minecraft:is_overworld": [
       "CUSTOM:CursedForest"
@@ -34971,10 +34806,6 @@
       "EntityPhantom",
       "EntityBreeze",
       "EntityBlaze"
-    ],
-    "ENCHANTMENTS:minecraft:non_treasure": [
-      "~CUSTOM:Isolation",
-      "~CUSTOM:Revenge"
     ],
     "ENTITIES:mod:xp/2": [
       "EntityCreeper",
@@ -35004,9 +34835,6 @@
     ],
     "BIOMES:minecraft:is_forest": [
       "CUSTOM:CursedForest"
-    ],
-    "BLOCKS:minecraft:needs_stone_tool": [
-      "~CUSTOM:RuneCutter"
     ],
     "ITEMS:mod:elemental_stones": [
       "CUSTOM:FireStone",
@@ -35060,10 +34888,6 @@
       "CUSTOM:HeatStone",
       "CUSTOM:ShockwaveStone"
     ],
-    "ITEMS:minecraft:shovels": [
-      "~CUSTOM:CreationShovel",
-      "~CUSTOM:EnergiumShovel"
-    ],
     "ITEMS:mod:rune/third_level": [
       "CUSTOM:ExtraStarPointsRune3",
       "CUSTOM:ReducedStoneRechargeTimeRune3",
@@ -35079,63 +34903,6 @@
       "CUSTOM:EnergiumArmor.body",
       "CUSTOM:EnergiumArmor.legs",
       "CUSTOM:EnergiumArmor.boots"
-    ],
-    "ITEMS:minecraft:leg_armor": [
-      "~CUSTOM:ShockwaveArmor.legs",
-      "~CUSTOM:HeatArmor.legs",
-      "~CUSTOM:FilthArmor.legs",
-      "~CUSTOM:HorrorArmor.legs",
-      "~CUSTOM:ChaosArmor.legs",
-      "~CUSTOM:ThirstArmor.legs",
-      "~CUSTOM:DarknessArmor.legs",
-      "~CUSTOM:GoldenDustArmor.legs",
-      "~CUSTOM:MindArmor.legs",
-      "~CUSTOM:FormArmor.legs",
-      "~CUSTOM:SpiritArmor.legs",
-      "~CUSTOM:SmokeArmor.legs",
-      "~CUSTOM:GravityArmor.legs",
-      "~CUSTOM:BlueFlameArmor.legs",
-      "~CUSTOM:PlagueArmor.legs",
-      "~CUSTOM:MusicArmor.legs",
-      "~CUSTOM:MercuryArmor.legs",
-      "~CUSTOM:MushroomsArmor.legs",
-      "~CUSTOM:MagnetArmor.legs",
-      "~CUSTOM:PoisonArmor.legs",
-      "~CUSTOM:SpeedArmor.legs",
-      "~CUSTOM:SandArmor.legs",
-      "~CUSTOM:MistArmor.legs",
-      "~CUSTOM:AmberArmor.legs",
-      "~CUSTOM:ExplosionArmor.legs",
-      "~CUSTOM:TeleportationArmor.legs",
-      "~CUSTOM:TechnologyArmor.legs",
-      "~CUSTOM:BloodArmor.legs",
-      "~CUSTOM:DestructionArmor.legs",
-      "~CUSTOM:CreationArmor.legs",
-      "~CUSTOM:TimeArmor.legs",
-      "~CUSTOM:SpaceArmor.legs",
-      "~CUSTOM:MoonArmor.legs",
-      "~CUSTOM:SunArmor.legs",
-      "~CUSTOM:EnergyArmor.legs",
-      "~CUSTOM:EnergiumArmor.legs",
-      "~CUSTOM:VacuumArmor.legs",
-      "~CUSTOM:ShadowArmor.legs",
-      "~CUSTOM:LightArmor.legs",
-      "~CUSTOM:MetalArmor.legs",
-      "~CUSTOM:AnimalsArmor.legs",
-      "~CUSTOM:PlantsArmor.legs",
-      "~CUSTOM:OceanArmor.legs",
-      "~CUSTOM:TornadoArmor.legs",
-      "~CUSTOM:RainArmor.legs",
-      "~CUSTOM:LavaArmor.legs",
-      "~CUSTOM:CrystalArmor.legs",
-      "~CUSTOM:SoundArmor.legs",
-      "~CUSTOM:LightningArmor.legs",
-      "~CUSTOM:IceArmor.legs",
-      "~CUSTOM:EtherArmor.legs",
-      "~CUSTOM:WaterArmor.legs",
-      "~CUSTOM:EarthArmor.legs",
-      "~CUSTOM:AirArmor.legs",
-      "~CUSTOM:FireArmor.legs"
     ],
     "ITEMS:mod:passing_armor": [
       "Blocks.AIR",
@@ -35356,6 +35123,215 @@
       "CUSTOM:ShockwaveArmor.legs",
       "CUSTOM:ShockwaveArmor.boots"
     ],
+    "BLOCKS:mod:keepers_boxes": [
+      "CUSTOM:KeepersBox"
+    ],
+    "ITEMS:mod:rune": [
+      "CUSTOM:ExtraStarPointsRune1",
+      "CUSTOM:ExtraStarPointsRune2",
+      "CUSTOM:ExtraStarPointsRune3",
+      "CUSTOM:ReducedStoneRechargeTimeRune1",
+      "CUSTOM:ReducedStoneRechargeTimeRune2",
+      "CUSTOM:ReducedStoneRechargeTimeRune3",
+      "CUSTOM:AdditionTimeMasterEffectRune1",
+      "CUSTOM:AdditionTimeMasterEffectRune2",
+      "CUSTOM:AdditionTimeMasterEffectRune3",
+      "CUSTOM:ProtectionRune",
+      "CUSTOM:SpinRune",
+      "CUSTOM:DodgingRune",
+      "CUSTOM:InvisibilityRune",
+      "CUSTOM:HealingRune",
+      "CUSTOM:UnknownRune"
+    ],
+    "ENTITIES:mod:xp/5": [
+      "EntityElderGuardian",
+      "EntityShulker",
+      "CUSTOM:CursedKnight",
+      "CUSTOM:CursedSquire",
+      "EntityRavager",
+      "EntityPiglinBrute"
+    ],
+    "ITEMS:mod:rune/blue": [
+      "CUSTOM:ExtraStarPointsRune1",
+      "CUSTOM:ExtraStarPointsRune2",
+      "CUSTOM:ExtraStarPointsRune3"
+    ],
+    "ENTITIES:mod:magnetic_entity": [
+      "CUSTOM:RedMagnet",
+      "CUSTOM:BlueMagnet",
+      "CUSTOM:BlackHole"
+    ],
+    "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:ShockwaveArmor.helmet",
+      "~CUSTOM:HeatArmor.helmet",
+      "~CUSTOM:FilthArmor.helmet",
+      "~CUSTOM:HorrorArmor.helmet",
+      "~CUSTOM:ChaosArmor.helmet",
+      "~CUSTOM:ThirstArmor.helmet",
+      "~CUSTOM:DarknessArmor.helmet",
+      "~CUSTOM:GoldenDustArmor.helmet",
+      "~CUSTOM:MindArmor.helmet",
+      "~CUSTOM:FormArmor.helmet",
+      "~CUSTOM:SpiritArmor.helmet",
+      "~CUSTOM:SmokeArmor.helmet",
+      "~CUSTOM:GravityArmor.helmet",
+      "~CUSTOM:BlueFlameArmor.helmet",
+      "~CUSTOM:PlagueArmor.helmet",
+      "~CUSTOM:MusicArmor.helmet",
+      "~CUSTOM:MercuryArmor.helmet",
+      "~CUSTOM:MushroomsArmor.helmet",
+      "~CUSTOM:MagnetArmor.helmet",
+      "~CUSTOM:PoisonArmor.helmet",
+      "~CUSTOM:SpeedArmor.helmet",
+      "~CUSTOM:SandArmor.helmet",
+      "~CUSTOM:MistArmor.helmet",
+      "~CUSTOM:AmberArmor.helmet",
+      "~CUSTOM:ExplosionArmor.helmet",
+      "~CUSTOM:TeleportationArmor.helmet",
+      "~CUSTOM:TechnologyArmor.helmet",
+      "~CUSTOM:BloodArmor.helmet",
+      "~CUSTOM:DestructionArmor.helmet",
+      "~CUSTOM:CreationArmor.helmet",
+      "~CUSTOM:TimeArmor.helmet",
+      "~CUSTOM:SpaceArmor.helmet",
+      "~CUSTOM:MoonArmor.helmet",
+      "~CUSTOM:SunArmor.helmet",
+      "~CUSTOM:EnergyArmor.helmet",
+      "~CUSTOM:EnergiumArmor.helmet",
+      "~CUSTOM:VacuumArmor.helmet",
+      "~CUSTOM:ShadowArmor.helmet",
+      "~CUSTOM:LightArmor.helmet",
+      "~CUSTOM:MetalArmor.helmet",
+      "~CUSTOM:AnimalsArmor.helmet",
+      "~CUSTOM:PlantsArmor.helmet",
+      "~CUSTOM:OceanArmor.helmet",
+      "~CUSTOM:TornadoArmor.helmet",
+      "~CUSTOM:RainArmor.helmet",
+      "~CUSTOM:LavaArmor.helmet",
+      "~CUSTOM:CrystalArmor.helmet",
+      "~CUSTOM:SoundArmor.helmet",
+      "~CUSTOM:LightningArmor.helmet",
+      "~CUSTOM:IceArmor.helmet",
+      "~CUSTOM:EtherArmor.helmet",
+      "~CUSTOM:WaterArmor.helmet",
+      "~CUSTOM:EarthArmor.helmet",
+      "~CUSTOM:AirArmor.helmet",
+      "~CUSTOM:FireArmor.helmet"
+    ],
+    "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:ShockwaveArmor.body",
+      "~CUSTOM:HeatArmor.body",
+      "~CUSTOM:FilthArmor.body",
+      "~CUSTOM:HorrorArmor.body",
+      "~CUSTOM:ChaosArmor.body",
+      "~CUSTOM:ThirstArmor.body",
+      "~CUSTOM:DarknessArmor.body",
+      "~CUSTOM:GoldenDustArmor.body",
+      "~CUSTOM:MindArmor.body",
+      "~CUSTOM:FormArmor.body",
+      "~CUSTOM:SpiritArmor.body",
+      "~CUSTOM:SmokeArmor.body",
+      "~CUSTOM:GravityArmor.body",
+      "~CUSTOM:BlueFlameArmor.body",
+      "~CUSTOM:PlagueArmor.body",
+      "~CUSTOM:MusicArmor.body",
+      "~CUSTOM:MercuryArmor.body",
+      "~CUSTOM:MushroomsArmor.body",
+      "~CUSTOM:MagnetArmor.body",
+      "~CUSTOM:PoisonArmor.body",
+      "~CUSTOM:SpeedArmor.body",
+      "~CUSTOM:SandArmor.body",
+      "~CUSTOM:MistArmor.body",
+      "~CUSTOM:AmberArmor.body",
+      "~CUSTOM:ExplosionArmor.body",
+      "~CUSTOM:TeleportationArmor.body",
+      "~CUSTOM:TechnologyArmor.body",
+      "~CUSTOM:BloodArmor.body",
+      "~CUSTOM:DestructionArmor.body",
+      "~CUSTOM:CreationArmor.body",
+      "~CUSTOM:TimeArmor.body",
+      "~CUSTOM:SpaceArmor.body",
+      "~CUSTOM:MoonArmor.body",
+      "~CUSTOM:SunArmor.body",
+      "~CUSTOM:EnergyArmor.body",
+      "~CUSTOM:EnergiumArmor.body",
+      "~CUSTOM:VacuumArmor.body",
+      "~CUSTOM:ShadowArmor.body",
+      "~CUSTOM:LightArmor.body",
+      "~CUSTOM:MetalArmor.body",
+      "~CUSTOM:AnimalsArmor.body",
+      "~CUSTOM:PlantsArmor.body",
+      "~CUSTOM:OceanArmor.body",
+      "~CUSTOM:TornadoArmor.body",
+      "~CUSTOM:RainArmor.body",
+      "~CUSTOM:LavaArmor.body",
+      "~CUSTOM:CrystalArmor.body",
+      "~CUSTOM:SoundArmor.body",
+      "~CUSTOM:LightningArmor.body",
+      "~CUSTOM:IceArmor.body",
+      "~CUSTOM:EtherArmor.body",
+      "~CUSTOM:WaterArmor.body",
+      "~CUSTOM:EarthArmor.body",
+      "~CUSTOM:AirArmor.body",
+      "~CUSTOM:FireArmor.body"
+    ],
+    "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:ShockwaveArmor.legs",
+      "~CUSTOM:HeatArmor.legs",
+      "~CUSTOM:FilthArmor.legs",
+      "~CUSTOM:HorrorArmor.legs",
+      "~CUSTOM:ChaosArmor.legs",
+      "~CUSTOM:ThirstArmor.legs",
+      "~CUSTOM:DarknessArmor.legs",
+      "~CUSTOM:GoldenDustArmor.legs",
+      "~CUSTOM:MindArmor.legs",
+      "~CUSTOM:FormArmor.legs",
+      "~CUSTOM:SpiritArmor.legs",
+      "~CUSTOM:SmokeArmor.legs",
+      "~CUSTOM:GravityArmor.legs",
+      "~CUSTOM:BlueFlameArmor.legs",
+      "~CUSTOM:PlagueArmor.legs",
+      "~CUSTOM:MusicArmor.legs",
+      "~CUSTOM:MercuryArmor.legs",
+      "~CUSTOM:MushroomsArmor.legs",
+      "~CUSTOM:MagnetArmor.legs",
+      "~CUSTOM:PoisonArmor.legs",
+      "~CUSTOM:SpeedArmor.legs",
+      "~CUSTOM:SandArmor.legs",
+      "~CUSTOM:MistArmor.legs",
+      "~CUSTOM:AmberArmor.legs",
+      "~CUSTOM:ExplosionArmor.legs",
+      "~CUSTOM:TeleportationArmor.legs",
+      "~CUSTOM:TechnologyArmor.legs",
+      "~CUSTOM:BloodArmor.legs",
+      "~CUSTOM:DestructionArmor.legs",
+      "~CUSTOM:CreationArmor.legs",
+      "~CUSTOM:TimeArmor.legs",
+      "~CUSTOM:SpaceArmor.legs",
+      "~CUSTOM:MoonArmor.legs",
+      "~CUSTOM:SunArmor.legs",
+      "~CUSTOM:EnergyArmor.legs",
+      "~CUSTOM:EnergiumArmor.legs",
+      "~CUSTOM:VacuumArmor.legs",
+      "~CUSTOM:ShadowArmor.legs",
+      "~CUSTOM:LightArmor.legs",
+      "~CUSTOM:MetalArmor.legs",
+      "~CUSTOM:AnimalsArmor.legs",
+      "~CUSTOM:PlantsArmor.legs",
+      "~CUSTOM:OceanArmor.legs",
+      "~CUSTOM:TornadoArmor.legs",
+      "~CUSTOM:RainArmor.legs",
+      "~CUSTOM:LavaArmor.legs",
+      "~CUSTOM:CrystalArmor.legs",
+      "~CUSTOM:SoundArmor.legs",
+      "~CUSTOM:LightningArmor.legs",
+      "~CUSTOM:IceArmor.legs",
+      "~CUSTOM:EtherArmor.legs",
+      "~CUSTOM:WaterArmor.legs",
+      "~CUSTOM:EarthArmor.legs",
+      "~CUSTOM:AirArmor.legs",
+      "~CUSTOM:FireArmor.legs"
+    ],
     "ITEMS:minecraft:foot_armor": [
       "~CUSTOM:ShockwaveArmor.boots",
       "~CUSTOM:HeatArmor.boots",
@@ -35413,23 +35389,170 @@
       "~CUSTOM:AirArmor.boots",
       "~CUSTOM:FireArmor.boots"
     ],
-    "BLOCKS:mod:keepers_boxes": [
-      "CUSTOM:KeepersBox"
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:HeatKnife",
+      "~CUSTOM:DarkSword",
+      "~CUSTOM:GoldenDustStaff",
+      "~CUSTOM:MindEpee",
+      "~CUSTOM:FormSai",
+      "~CUSTOM:SpiritSickle",
+      "~CUSTOM:GravityMace",
+      "~CUSTOM:BlueFlameSword",
+      "~CUSTOM:PlagueWalkingStick",
+      "~CUSTOM:MusicGuitar",
+      "~CUSTOM:MushroomsHammer",
+      "~CUSTOM:TeleportationBlade",
+      "~CUSTOM:MagnetClaws",
+      "~CUSTOM:HighspeedDagger",
+      "~CUSTOM:SandSaber",
+      "~CUSTOM:MistyFan",
+      "~CUSTOM:AmberStaff",
+      "~CUSTOM:ExplosionMace",
+      "~CUSTOM:BloodSickle",
+      "~CUSTOM:DestructionBroadsword",
+      "~CUSTOM:CreationSword",
+      "~CUSTOM:CreationStaff",
+      "~CUSTOM:TimeKhopesh",
+      "~CUSTOM:ConstellationSword",
+      "~CUSTOM:MoonDoubleSidedSpear",
+      "~CUSTOM:SolarBlade",
+      "~CUSTOM:EnergyStaff",
+      "~CUSTOM:EnergiumSword",
+      "~CUSTOM:VacuumDagger",
+      "~CUSTOM:ShadowScythe",
+      "~CUSTOM:LightSword",
+      "~CUSTOM:LeftMetalGauntlet",
+      "~CUSTOM:RightMetalGauntlet",
+      "~CUSTOM:AnimalsHalberd",
+      "~CUSTOM:GreenStaff",
+      "~CUSTOM:OceanicTrident",
+      "~CUSTOM:LavaHammer",
+      "~CUSTOM:CrystalKnife",
+      "~CUSTOM:SoundDagger",
+      "~CUSTOM:LightningFalchion",
+      "~CUSTOM:IceSpear",
+      "~CUSTOM:EtherGlaive",
+      "~CUSTOM:WaterKatana",
+      "~CUSTOM:EarthHammer",
+      "~CUSTOM:AirRapier",
+      "~CUSTOM:FireSword"
+    ],
+    "ITEMS:minecraft:axes": [
+      "~CUSTOM:MercuryBattleAxe",
+      "~CUSTOM:CreationAxe",
+      "~CUSTOM:EnergiumAxe",
+      "~CUSTOM:TornadoAxe"
+    ],
+    "ENTITIES:minecraft:undead": [
+      "~CUSTOM:Shadow"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:RuneCutter",
+      "~CUSTOM:CursedStoneCrackedBricksWall",
+      "~CUSTOM:CursedStoneCrackedBricksStairs",
+      "~CUSTOM:CursedStoneCrackedBricksSlab",
+      "~CUSTOM:CursedStoneCrackedBricks",
+      "~CUSTOM:ChiseledCursedStone",
+      "~CUSTOM:DeepslateCopyriumOre",
+      "~CUSTOM:DeepslateAmplifierOre",
+      "~CUSTOM:DeepslateEnergiumOre",
+      "~CUSTOM:DeepslateDepletedEnergiumOre",
+      "~CUSTOM:RawEnergiumBlock",
+      "~CUSTOM:EnergiumOre",
+      "~CUSTOM:EnergiumVault",
+      "~CUSTOM:CursedLamp",
+      "~CUSTOM:CursedLadder",
+      "~CUSTOM:CursedVault",
+      "~CUSTOM:ElementalPowerGenerator",
+      "~CUSTOM:RawCopyriumBlock",
+      "~CUSTOM:CopyriumBlock",
+      "~CUSTOM:CopyriumOre",
+      "~CUSTOM:CursedLantern",
+      "~CUSTOM:CursedStonePillar",
+      "~CUSTOM:PolishedCursedStoneWall",
+      "~CUSTOM:PolishedCursedStoneSlab",
+      "~CUSTOM:PolishedCursedStoneStairs",
+      "~CUSTOM:PolishedCursedStone",
+      "~CUSTOM:CursedStoneBricksWall",
+      "~CUSTOM:CursedStoneWall",
+      "~CUSTOM:CursedStoneBricksSlab",
+      "~CUSTOM:CursedStoneBricksStairs",
+      "~CUSTOM:CursedStoneSlab",
+      "~CUSTOM:CursedStoneStairs",
+      "~CUSTOM:CursedStoneBricks",
+      "~CUSTOM:CursedStone",
+      "~CUSTOM:AmberBlock",
+      "~CUSTOM:OrangePortal",
+      "~CUSTOM:BluePortal",
+      "~CUSTOM:RawAmplifierBlock",
+      "~CUSTOM:RawDepletedEnergiumBlock",
+      "~CUSTOM:AmplifierBlock",
+      "~CUSTOM:AmplifierOre",
+      "~CUSTOM:EnergiumController",
+      "~CUSTOM:MoonBlock",
+      "~CUSTOM:KeepersBox",
+      "~CUSTOM:BatteryCharger",
+      "~CUSTOM:EnergiumBlock",
+      "~CUSTOM:DepletedEnergiumBlock",
+      "~CUSTOM:DepletedEnergiumOre"
+    ],
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:DeepslateEnergiumOre",
+      "~CUSTOM:DeepslateDepletedEnergiumOre",
+      "~CUSTOM:RawEnergiumBlock",
+      "~CUSTOM:EnergiumOre",
+      "~CUSTOM:EnergiumVault",
+      "~CUSTOM:CursedVault",
+      "~CUSTOM:RawDepletedEnergiumBlock",
+      "~CUSTOM:EnergiumController",
+      "~CUSTOM:EnergiumBlock",
+      "~CUSTOM:DepletedEnergiumBlock",
+      "~CUSTOM:DepletedEnergiumOre"
+    ],
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:TechnoPickaxe",
+      "~CUSTOM:CreationPickaxe",
+      "~CUSTOM:EnergiumPickaxe"
+    ],
+    "ITEMS:minecraft:shovels": [
+      "~CUSTOM:CreationShovel",
+      "~CUSTOM:EnergiumShovel"
     ],
     "ITEMS:minecraft:hoes": [
       "~CUSTOM:CreationHoe",
       "~CUSTOM:EnergiumHoe"
     ],
-    "ITEMS:mod:rune": [
-      "CUSTOM:ExtraStarPointsRune1",
-      "CUSTOM:ExtraStarPointsRune2",
-      "CUSTOM:ExtraStarPointsRune3",
-      "CUSTOM:ReducedStoneRechargeTimeRune1",
-      "CUSTOM:ReducedStoneRechargeTimeRune2",
-      "CUSTOM:ReducedStoneRechargeTimeRune3",
-      "CUSTOM:AdditionTimeMasterEffectRune1",
-      "CUSTOM:AdditionTimeMasterEffectRune2",
-      "CUSTOM:AdditionTimeMasterEffectRune3"
+    "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:Isolation",
+      "~CUSTOM:Revenge"
+    ],
+    "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:Isolation",
+      "~CUSTOM:Revenge"
+    ],
+    "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:Isolation",
+      "~CUSTOM:Revenge"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:DeepslateCopyriumOre",
+      "~CUSTOM:DeepslateAmplifierOre",
+      "~CUSTOM:ElementalPowerGenerator",
+      "~CUSTOM:RawCopyriumBlock",
+      "~CUSTOM:CopyriumBlock",
+      "~CUSTOM:CopyriumOre",
+      "~CUSTOM:RawAmplifierBlock",
+      "~CUSTOM:AmplifierBlock",
+      "~CUSTOM:AmplifierOre"
+    ],
+    "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:AmplifierRing"
+    ],
+    "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:CursedStoneCrackedBricksStairs",
+      "~CUSTOM:PolishedCursedStoneStairs",
+      "~CUSTOM:CursedStoneBricksStairs",
+      "~CUSTOM:CursedStoneStairs"
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:CursedStoneCrackedBricksSlab",
@@ -35437,30 +35560,34 @@
       "~CUSTOM:CursedStoneBricksSlab",
       "~CUSTOM:CursedStoneSlab"
     ],
-    "ENCHANTMENTS:minecraft:on_random_loot": [
-      "~CUSTOM:Isolation",
-      "~CUSTOM:Revenge"
+    "BLOCKS:minecraft:walls": [
+      "~CUSTOM:CursedStoneCrackedBricksWall",
+      "~CUSTOM:PolishedCursedStoneWall",
+      "~CUSTOM:CursedStoneBricksWall",
+      "~CUSTOM:CursedStoneWall"
     ],
-    "ENTITIES:mod:xp/5": [
-      "EntityElderGuardian",
-      "EntityShulker",
-      "CUSTOM:CursedKnight",
-      "CUSTOM:CursedSquire",
-      "EntityRavager",
-      "EntityPiglinBrute"
-    ],
-    "ITEMS:mod:rune/blue": [
-      "CUSTOM:ExtraStarPointsRune1",
-      "CUSTOM:ExtraStarPointsRune2",
-      "CUSTOM:ExtraStarPointsRune3"
+    "BLOCKS:minecraft:climbable": [
+      "~CUSTOM:CursedLadder"
     ],
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:PurpleMushroom"
     ],
-    "ENTITIES:mod:magnetic_entity": [
-      "CUSTOM:RedMagnet",
-      "CUSTOM:BlueMagnet",
-      "CUSTOM:BlackHole"
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:MusicHope",
+      "~CUSTOM:MusicDiscAncientMood",
+      "~CUSTOM:MusicDiscCallOfThePast"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:RuneCutter"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.GRAVEL",
+      "~Blocks.STONE#0",
+      "~Blocks.DIRT#0",
+      "~Blocks.GRASS"
+    ],
+    "BIOMES:minecraft:has_structure/ruined_portal_standard": [
+      "~CUSTOM:CursedPlains"
     ]
   },
   "tab_element_order": {
@@ -35657,7 +35784,8 @@
       "FreakingParsnip",
       "FreakingParsnipSoup",
       "EmptyCharacteristicsCard",
-      "CharacteristicsCard"
+      "CharacteristicsCard",
+      "CursedWorld"
     ],
     "CUSTOM:Mobs": [
       "EnergiumGolem",
@@ -35689,8 +35817,8 @@
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Поток астральной энергии, расходует 10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 20",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
-      "advancements.grant_your_power.title": "Даруй свою силу",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
+      "advancements.grant_your_power.title": "Даруй свою силу",
       "item.power.extra_star_points_rune_3": "Руна",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.cursed_keeper_spawn_egg": "Яйцо призыва проклятого хранителя",
@@ -35713,8 +35841,8 @@
       "block.power.amplifier_block": "Блок амплифера",
       "item.power.gravity_mace": "Гравитационная булава",
       "battery.desc.plants": "Зелень",
-      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "item.power.music_armor_leggings": "Поножи мастера музыки",
+      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Туманная невидимость, расходует 70",
       "item.power.music_battery": "Батарея",
       "item.power.darkness_battery": "Батарея",
@@ -35734,26 +35862,26 @@
       "item.power.invisibility_rune.description_4": " §9Эффект: Невидимость",
       "item.power.animals_stone": "Камень животных",
       "item.power.light_battery": "Батарея",
-      "item.minecraft.lingering_potion.effect.power_lock_potion": "Туманное зелье блокировки силы",
       "item.power.oceanic_trident": "Океанический трезубец",
+      "item.minecraft.lingering_potion.effect.power_lock_potion": "Туманное зелье блокировки силы",
       "effect.power.tornado_master": "Мастер торнадо",
       "effect.power.warp": "Искажение",
       "item.keeper_book.name": "Книга хранителя",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "item.power.amplifier_ring": "Амплиферовое кольцо",
-      "effect.power.curse": "Curse",
+      "effect.power.curse": "Проклятие",
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Батарея",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7Спецификация:",
-      "item.power.addition_time_master_effect_rune_3.description_4": " §9+10 мин к эффекту мастера",
       "item.power.energium_axe": "Энергиумный топор",
+      "item.power.addition_time_master_effect_rune_3.description_4": " §9+10 мин к эффекту мастера",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "Дымовая шашка, расходует 35",
       "item.power.addition_time_master_effect_rune_3.description_1": "§7Тип:",
       "item.power.addition_time_master_effect_rune_3.description_2": " §4Красный",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
-      "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Замедление, расходует 70",
       "item.power.addition_time_master_effect_rune_3.description_0": "§9Доп. время эффекта мастера III",
+      "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Замедление, расходует 70",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "block.power.cursed_stone_cracked_bricks_stairs": "Ступенки из проклятых потрескавшихся каменных кирпичей",
       "gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80": "Гипноз, расходует 80",
@@ -35770,8 +35898,8 @@
       "effect.power.horror_dark_master": "Т. Мастер Хоррора",
       "item.power.invisibility_rune.description_1": "§7Тип:",
       "item.power.invisibility_rune.description_2": "§aЗелёный",
-      "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Грибное насыщение, расходует 50",
       "item.power.invisibility_rune.description_0": "§9Невидимость",
+      "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Грибное насыщение, расходует 50",
       "item.power.music_guitar": "Музыкальная гитара",
       "gui.power.keepers_box_gui_part_5.tooltip_poison": "Poison",
       "advancements.the_end_of_tyranny.descr": "Победите энергиумного голема",
@@ -35804,16 +35932,16 @@
       "gui.power.wheel_abilties_golden_dust.tooltip_random_power_uses_80": "Рандомная сила, расходует 80",
       "item.power.reduced_stone_recharge_time_rune_3": "Руна",
       "item.power.reduced_stone_recharge_time_rune_2": "Руна",
-      "item.power.light_armor_chestplate": "Нагрудник мастера света",
       "item.power.spin_rune.description_1": "§7Тип:",
+      "item.power.light_armor_chestplate": "Нагрудник мастера света",
       "item.power.spin_rune.description_0": "§9Вращение",
       "item.power.mist_armor_chestplate": "Нагрудник мастера тумана",
       "item.power.energium_hoe": "Энергиумная мотыга",
       "trim_material.power.copyrium_material": "Копириум",
       "item.power.spin_rune.description_4": " §9Эффект: Вращение",
       "item.power.spin_rune.description_3": "§7Спецификация:",
-      "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
       "item.power.spin_rune.description_2": "§aЗелёный",
+      "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
       "item.power.empty_battery.description_0": "§cНе заряжена",
       "item.power.amber_staff": "Посох янтаря",
@@ -35936,7 +36064,6 @@
       "effect.power.darkness_master": "Мастер Тьмы",
       "advancements.keepers_of_the_stones_2.descr": "Обновитесь до Хранители Камней II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
-      "power.modinfo.update_cpapi": "§eВерсия Colorful Powers API была обновлена до версии: ",
       "gui.power.keepers_box_gui_part_4.tooltip_plague": "Чума",
       "item.power.heat_armor_helmet": "Шлем мастера тепла",
       "item.power.unknown_rune": "Руна",
@@ -36059,7 +36186,6 @@
       "item.power.mushrooms_stone": "Камень грибов",
       "gui.power.characteristics_card_gui.label_7": "1",
       "item.power.poison_armor_leggings": "Поножи мастера яда",
-      "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r Этот мод устарел! (последняя версия: v",
       "item.power.ether_battery.description_0": "§aЗаряжена элементом:",
       "effect.power.heat_master": "Мастер тепла",
       "item.power.sand_armor_helmet": "Шлем мастера песка",
@@ -36463,7 +36589,6 @@
       "item.power.sound_armor_helmet": "Шлем мастера звука",
       "item.power.fire_battery.description_1": "§9Огонь",
       "item.power.right_metal_gauntlet": "Правая металлическая перчатка",
-      "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r Вы используете неофициальную версию мода!",
       "item.power.filth_armor_boots": "Ботинки тёмного мастера скверны",
       "item.power.golden_dust_armor_leggings": "Поножи мастера золотой пыли",
       "entity.power.turret": "Турель",
@@ -36507,7 +36632,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Время",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_ball_uses_35": "Ртутный шарик, расходует 35",
       "item.power.water_katana": "Водная катана",
-      "advancements.energized_gold.title": "Energized gold",
+      "advancements.energized_gold.title": "Золото с энергией",
       "item.power.darkness_armor_helmet": "Шлем мастера тьмы",
       "effect.power.time_slowing": "Замедление времени",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 70",
@@ -36620,7 +36745,7 @@
       "item.power.plague_stone": "Камень чумы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Пронзание кристаллом, расходует 40",
       "gui.power.wheel_abilities_plague.tooltip_plague_wind_uses_15": "Чумной ветер, расходует 15",
-      "chat.power.versioncheckwarn": "§cВнимание! Вы используете бета-версию мода Keepers of the Stones II, что может привести к нестабильной работе или повреждению вашего игрового мира. Будьте осторожны!",
+      "power.modupdater.beta_detect": "§cВнимание! Вы используете бета-версию мода Keepers of the Stones II, что может привести к нестабильной работе или повреждению вашего игрового мира. Будьте осторожны!",
       "item.power.technology_armor_chestplate": "Нагрудник мастера технологий",
       "item.power.vacuum_armor_boots": "Ботинки мастера пустоты",
       "item.power.creation_armor_leggings": "Поножи мастера созидания",
@@ -36669,7 +36794,6 @@
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Дождевая завеса, расходует 45",
       "item.power.smoke_armor_helmet": "Шлем мастера дыма",
       "item.power.music_disc_call_of_the_past": "Пластинка",
-      "power.modinfo.cpapi_check": "§9[CPAPI]§r Текущая версия Colorful Powers API: v",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10",
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Лавовый всплеск, uses 10",
       "item.power.heat_armor_leggings": "Поножи мастера тепла",
@@ -36695,7 +36819,6 @@
       "item.power.energium_upgrade_smithing_template.description_4": "§7Материалы:",
       "item.power.energium_upgrade_smithing_template.description_3": " §9Обеднённому энергиуму ",
       "item.power.energium_upgrade_smithing_template.description_2": "§7Применяется к: ",
-      "item.power.energium_upgrade_smithing_template.description_1": "",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "gui.power.wheel_abilities_speed.tooltip_acceleration_uses_45": "Ускорение, расходует 45",
       "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
@@ -36754,7 +36877,14 @@
       "item.power.mist_stone": "Камень тумана",
       "item.power.blue_flame_armor_chestplate": "Нагрудник мастера синего пламени",
       "item.power.creation_pickaxe": "Кирка созидания",
-      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15"
+      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15",
+      "power.modupdater.new_release": "[Keepers of the Stones II] Доступна более новая версия: ",
+      "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения",
+      "biome.power.cursed_plains": "Проклятые равнины",
+      "item.power.cursed_world": "Зачарованное огниво",
+      "item.power.cursed_world.description_1": " §9Проклятый мир",
+      "item.power.cursed_world.description_0": "§7Мир:",
+      "item.power.energium_upgrade_smithing_template.description_1": ""
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -36778,8 +36908,8 @@
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 20",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
-      "advancements.grant_your_power.title": "Grant your power",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
+      "advancements.grant_your_power.title": "Grant your power",
       "item.power.extra_star_points_rune_3": "Rune",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
@@ -36802,8 +36932,8 @@
       "item.power.gravity_mace": "Gravity Mace",
       "block.power.amplifier_block": "Amplifier Block",
       "battery.desc.plants": "Plants",
-      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "item.power.music_armor_leggings": "Music Leggings",
+      "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
       "item.power.music_battery": "Battery",
       "item.power.darkness_battery": "Battery",
@@ -36823,8 +36953,8 @@
       "item.power.invisibility_rune.description_4": " §9Effect: Invisibility",
       "item.power.animals_stone": "Animals Stone",
       "item.power.light_battery": "Battery",
-      "item.power.oceanic_trident": "Oceanic Trident",
       "item.minecraft.lingering_potion.effect.power_lock_potion": "Lingering Potion of Power Lock",
+      "item.power.oceanic_trident": "Oceanic Trident",
       "effect.power.tornado_master": "Master of Tornado",
       "effect.power.warp": "Warp",
       "item.keeper_book.name": "The Keeper\u0027s Book",
@@ -36835,14 +36965,14 @@
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Battery",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7Specifications:",
-      "item.power.energium_axe": "Energium Axe",
       "item.power.addition_time_master_effect_rune_3.description_4": " §9+10 min of master effect",
+      "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "Smoke bomb, uses 35",
       "item.power.addition_time_master_effect_rune_3.description_1": "§7Type:",
       "item.power.addition_time_master_effect_rune_3.description_2": " §4Red",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
-      "item.power.addition_time_master_effect_rune_3.description_0": "§9Master Effect Duration III",
       "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Deceleration, uses 70",
+      "item.power.addition_time_master_effect_rune_3.description_0": "§9Master Effect Duration III",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "block.power.cursed_stone_cracked_bricks_stairs": "Cursed Stone Cracked Bricks",
       "gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80": "Hypnosis, uses 80",
@@ -36858,9 +36988,9 @@
       "entity.power.spirit": "Spirit",
       "effect.power.horror_dark_master": "Dark Master of Horror",
       "item.power.invisibility_rune.description_1": "§7Type:",
-      "item.power.invisibility_rune.description_2": "§aGreen",
-      "item.power.invisibility_rune.description_0": "§9Invisibility",
+      "item.power.invisibility_rune.description_2": " §aGreen",
       "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Mushroom saturation, uses 50",
+      "item.power.invisibility_rune.description_0": "§9Invisibility",
       "item.power.music_guitar": "Music Guitar",
       "gui.power.keepers_box_gui_part_5.tooltip_poison": "Poison",
       "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
@@ -36893,16 +37023,16 @@
       "gui.power.wheel_abilties_golden_dust.tooltip_random_power_uses_80": "Random power, uses 80",
       "item.power.reduced_stone_recharge_time_rune_3": "Rune",
       "item.power.reduced_stone_recharge_time_rune_2": "Rune",
-      "item.power.spin_rune.description_1": "§7Type:",
       "item.power.light_armor_chestplate": "Light Chestplate",
+      "item.power.spin_rune.description_1": "§7Type:",
       "item.power.spin_rune.description_0": "§9Spin",
       "item.power.mist_armor_chestplate": "Mist Chestplate",
       "item.power.energium_hoe": "Energium Hoe",
       "trim_material.power.copyrium_material": "Copyrium",
       "item.power.spin_rune.description_4": " §9Effect: Spin",
       "item.power.spin_rune.description_3": "§7Specifications:",
-      "item.power.spin_rune.description_2": "§aGreen",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
+      "item.power.spin_rune.description_2": " §aGreen",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "item.power.empty_battery.description_0": "§cNot charged",
       "item.power.amber_staff": "Amber Staff",
@@ -36933,7 +37063,7 @@
       "item.power.protection_rune.description_3": "§7Specifications:",
       "item.power.protection_rune.description_4": " §9Effect: Protection",
       "item.power.protection_rune.description_1": "§7Type:",
-      "item.power.protection_rune.description_2": "§aGreen",
+      "item.power.protection_rune.description_2": " §aGreen",
       "death.attack.elemental_powers": "%1$s died by elemental power",
       "item.power.music_stone": "Music Stone",
       "item.power.protection_rune.description_0": "§9Protection",
@@ -37025,7 +37155,6 @@
       "effect.power.darkness_master": "Master of Darkness",
       "advancements.keepers_of_the_stones_2.descr": "Upgrade to Keepers of the Stones II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
-      "power.modinfo.update_cpapi": "§eThe Colorful Powers API version has been updated to: ",
       "gui.power.keepers_box_gui_part_4.tooltip_plague": "Plague",
       "item.power.heat_armor_helmet": "Heat Helmet",
       "item.power.unknown_rune": "Rune",
@@ -37148,7 +37277,6 @@
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "gui.power.characteristics_card_gui.label_7": "1",
       "item.power.poison_armor_leggings": "Poison Leggings",
-      "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r This mod is out of date! (latest version: v",
       "item.power.ether_battery.description_0": "§aCharged with element:",
       "effect.power.heat_master": "Master of Heat",
       "item.power.sand_armor_helmet": "Sand Helmet",
@@ -37368,7 +37496,7 @@
       "item.power.healing_rune.description_4": " §9Effect: Regeneration",
       "item.power.healing_rune.description_3": "§7Specifications:",
       "item.power.ocean_armor_boots": "Ocean Boots",
-      "item.power.healing_rune.description_2": "§aGreen",
+      "item.power.healing_rune.description_2": " §aGreen",
       "item.power.healing_rune.description_1": "§7Type:",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
       "item.power.healing_rune.description_0": "§9Healing",
@@ -37551,7 +37679,6 @@
       "item.power.sound_armor_helmet": "Sound Helmet",
       "item.power.fire_battery.description_1": "§9Fire",
       "item.power.right_metal_gauntlet": "Right Metal Gauntlet",
-      "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r You are using an unofficial version of the mod!",
       "item.power.filth_armor_boots": "Filth Boots",
       "item.power.golden_dust_armor_leggings": "Golden Dust Leggings",
       "entity.power.turret": "Turret",
@@ -37709,7 +37836,7 @@
       "item.power.plague_stone": "Plague Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Crystal piercing, uses 40",
       "gui.power.wheel_abilities_plague.tooltip_plague_wind_uses_15": "Plague wind, uses 15",
-      "chat.power.versioncheckwarn": "§cWarning! You are using a beta version of the Keepers of the Stones II mod, which may cause unstable operation or damage to your game world. Be careful!",
+      "power.modupdater.beta_detect": "§cWarning! You are using a beta version of the Keepers of the Stones II mod, which may cause unstable operation or damage to your game world. Be careful!",
       "item.power.technology_armor_chestplate": "Technology Chestplate",
       "item.power.vacuum_armor_boots": "Vacuum Boots",
       "item.power.creation_armor_leggings": "Creation Leggings",
@@ -37758,7 +37885,6 @@
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Rain curtain, uses 45",
       "item.power.smoke_armor_helmet": "Smoke Helmet",
       "item.power.music_disc_call_of_the_past": "Music Disc",
-      "power.modinfo.cpapi_check": "§9[CPAPI]§r The current version of the Colorful Powers API: v",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10",
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Lava outburst, uses 10",
       "item.power.heat_armor_leggings": "Heat Leggings",
@@ -37784,7 +37910,6 @@
       "item.power.energium_upgrade_smithing_template.description_4": "§7Ingredients:",
       "item.power.energium_upgrade_smithing_template.description_3": " §9Depleted Energium",
       "item.power.energium_upgrade_smithing_template.description_2": "§7Applies to:",
-      "item.power.energium_upgrade_smithing_template.description_1": "",
       "item.power.air_armor_helmet": "Air Helmet",
       "gui.power.wheel_abilities_speed.tooltip_acceleration_uses_45": "Acceleration, uses 45",
       "item.power.ether_armor_chestplate": "Ether Chestplate",
@@ -37817,7 +37942,7 @@
       "effect.power.technology_master": "Master of Technologies",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.speed_armor_chestplate": "Speed Chestplate",
-      "item.power.dodging_rune.description_2": "§aGreen",
+      "item.power.dodging_rune.description_2": " §aGreen",
       "item.power.dodging_rune.description_3": "§7Specifications:",
       "effect.power.light_master": "Master of Light",
       "item.power.dodging_rune.description_0": "§9Dodging",
@@ -37843,7 +37968,14 @@
       "item.power.mist_stone": "Mist Stone",
       "item.power.blue_flame_armor_chestplate": "Blue Flame Chestplate",
       "item.power.creation_pickaxe": "Creation Pickaxe",
-      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15"
+      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15",
+      "power.modupdater.new_release": "[Keepers of the Stones II] A newer version is available: ",
+      "power.modupdater.click_event": " ➜ Click to view changes",
+      "biome.power.cursed_plains": "Cursed Plains",
+      "item.power.cursed_world": "Enchanted Flint",
+      "item.power.cursed_world.description_1": " §9Cursed World",
+      "item.power.cursed_world.description_0": "§7World:",
+      "item.power.energium_upgrade_smithing_template.description_1": ""
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -37867,8 +37999,8 @@
       "gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10": "流动星体能量，使用10",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "输血，使用20",
       "item.power.mushrooms_armor_boots": "蘑菇靴",
-      "gui.power.keepers_box_gui_part_2.tooltip_technology": "技术",
       "advancements.grant_your_power.title": "赋予你力量",
+      "gui.power.keepers_box_gui_part_2.tooltip_technology": "技术",
       "item.power.extra_star_points_rune_3": "符文",
       "item.power.space_armor_boots": "太空靴",
       "item.power.cursed_keeper_spawn_egg": "诅咒守护者刷怪蛋",
@@ -37890,8 +38022,8 @@
       "item.power.gravity_mace": "重力钉头锤",
       "block.power.amplifier_block": "放大器模块",
       "battery.desc.plants": "植物",
-      "item.power.music_armor_leggings": "音乐紧身裤",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "陨石，用途45",
+      "item.power.music_armor_leggings": "音乐紧身裤",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "迷雾隐形，使用70",
       "item.power.music_battery": "电池",
       "item.power.darkness_battery": "电池",
@@ -37922,14 +38054,14 @@
       "effect.power.curse": "诅咒",
       "item.power.spirit_battery": "电池",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7规格：",
-      "item.power.addition_time_master_effect_rune_3.description_4": "§9+10分钟主效应",
       "item.power.energium_axe": "能量斧",
+      "item.power.addition_time_master_effect_rune_3.description_4": "§9+10分钟主效应",
       "gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35": "烟雾弹，使用35",
       "item.power.addition_time_master_effect_rune_3.description_1": "§7类型：",
       "item.power.addition_time_master_effect_rune_3.description_2": "§4红色",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "阴影球，使用35",
-      "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "减速，采用70",
       "item.power.addition_time_master_effect_rune_3.description_0": "§9主效果持续时间III",
+      "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "减速，采用70",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "月光，使用15",
       "block.power.cursed_stone_cracked_bricks_stairs": "诅咒石碎砖",
       "gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80": "催眠，使用80",
@@ -37946,8 +38078,8 @@
       "effect.power.horror_dark_master": "黑暗恐怖大师",
       "item.power.invisibility_rune.description_1": "§7类型：",
       "item.power.invisibility_rune.description_2": "§a绿色",
-      "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "蘑菇饱和，使用50",
       "item.power.invisibility_rune.description_0": "§9隐形",
+      "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "蘑菇饱和，使用50",
       "item.power.music_guitar": "音乐吉他",
       "gui.power.keepers_box_gui_part_5.tooltip_poison": "毒",
       "advancements.the_end_of_tyranny.descr": "击败能量傀儡",
@@ -37980,16 +38112,16 @@
       "gui.power.wheel_abilties_golden_dust.tooltip_random_power_uses_80": "随机电源，使用80",
       "item.power.reduced_stone_recharge_time_rune_3": "符文",
       "item.power.reduced_stone_recharge_time_rune_2": "符文",
-      "item.power.light_armor_chestplate": "轻型胸甲",
       "item.power.spin_rune.description_1": "§7类型：",
+      "item.power.light_armor_chestplate": "轻型胸甲",
       "item.power.spin_rune.description_0": "§9旋转",
       "item.power.mist_armor_chestplate": "迷雾胸甲",
       "item.power.energium_hoe": "能量锄",
       "trim_material.power.copyrium_material": "版权",
       "item.power.spin_rune.description_4": "§9效果：旋转",
       "item.power.spin_rune.description_3": "§7规格：",
-      "item.power.plants_armor_chestplate": "植物胸甲",
       "item.power.spin_rune.description_2": "§a绿色",
+      "item.power.plants_armor_chestplate": "植物胸甲",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "海洋风暴，使用35",
       "item.power.empty_battery.description_0": "§c不收费",
       "item.power.amber_staff": "琥珀法杖",
@@ -38009,8 +38141,8 @@
       "item.power.sound_armor_boots": "声音靴",
       "item.power.empty_characteristics_card.description_0": "§7空",
       "item.power.smoke_stone": "烟石",
-      "item.power.blue_flame_sword": "蓝焰剑",
       "effect.power.air_master": "空中霸主",
+      "item.power.blue_flame_sword": "蓝焰剑",
       "effect.power.miniaturization": "小型化",
       "item.power.raw_depleted_energium": "原始耗尽能量",
       "item.minecraft.potion.effect.power_lock_potion": "能量锁药水",
@@ -38112,10 +38244,9 @@
       "effect.power.darkness_master": "黑暗大师",
       "advancements.keepers_of_the_stones_2.descr": "升级至《守护石 II》",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "冷冻射线，使用10",
-      "power.modinfo.update_cpapi": "§eColorful Powers API 版本已更新至：",
       "gui.power.keepers_box_gui_part_4.tooltip_plague": "瘟疫",
       "item.power.heat_armor_helmet": "隔热头盔",
-      "item.power.unknown_rune": "Rune",
+      "item.power.unknown_rune": "符文",
       "item.power.mist_battery.description_0": "§a 带电元素：",
       "item.power.mist_battery.description_1": "§9雾",
       "item.power.ice_armor_helmet": "冰盔",
@@ -38234,18 +38365,17 @@
       "item.power.mushrooms_stone": "蘑菇石",
       "gui.power.characteristics_card_gui.label_7": "1",
       "item.power.poison_armor_leggings": "毒药护腿",
-      "power.modinfo.outdated_mod": "§9[守护石 II]§r 此模组已过期！（最新版本：v",
       "item.power.ether_battery.description_0": "§a 带电元素：",
       "effect.power.heat_master": "热能大师",
       "item.power.sand_armor_helmet": "沙盔",
-      "item.power.unknown_rune.description_4": " §9Click the RMB to manifest rune",
+      "item.power.unknown_rune.description_4": "§9将人民币兑换成符文",
       "gui.power.characteristics_card_gui.label_1": "1",
       "effect.power.smoke_intangibility": "烟雾无形",
-      "item.power.unknown_rune.description_2": " §eUnknown",
-      "item.power.unknown_rune.description_3": "§7Specifications:",
+      "item.power.unknown_rune.description_2": "§e未知",
+      "item.power.unknown_rune.description_3": "§7规格:",
       "item.power.plants_battery.description_0": "§a 带电元素：",
-      "item.power.unknown_rune.description_0": "§9Unknown",
-      "item.power.unknown_rune.description_1": "§7Type:",
+      "item.power.unknown_rune.description_0": "§9不知道",
+      "item.power.unknown_rune.description_1": "§7类型:",
       "item.power.plants_battery.description_1": "§9植物",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "昆虫侵袭，使用10",
       "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "真空",
@@ -38629,7 +38759,6 @@
       "item.power.sound_armor_helmet": "隔音头盔",
       "item.power.fire_battery.description_1": "§9火灾",
       "item.power.right_metal_gauntlet": "右金属手套",
-      "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r 您正在使用该模组的非官方版本！",
       "item.power.filth_armor_boots": "污秽之靴",
       "item.power.golden_dust_armor_leggings": "金尘护腿",
       "entity.power.turret": "炮塔",
@@ -38785,7 +38914,7 @@
       "item.power.plague_stone": "瘟疫石",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "水晶穿孔，使用40",
       "gui.power.wheel_abilities_plague.tooltip_plague_wind_uses_15": "瘟疫之风，使用15",
-      "chat.power.versioncheckwarn": "§c警告！您正在使用 Keepers of the Stones II 模组的测试版，这可能会导致游戏运行不稳定或损坏您的游戏世界。请小心！",
+      "power.modupdater.beta_detect": "§c警告！您正在使用 Keepers of the Stones II 模组的测试版，这可能会导致游戏运行不稳定或损坏您的游戏世界。请小心！",
       "item.power.technology_armor_chestplate": "科技胸甲",
       "item.power.vacuum_armor_boots": "真空靴",
       "item.power.creation_armor_leggings": "创造紧身裤",
@@ -38834,13 +38963,12 @@
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "雨帘，用途45",
       "item.power.smoke_armor_helmet": "烟雾头盔",
       "item.power.music_disc_call_of_the_past": "音乐光盘",
-      "power.modinfo.cpapi_check": "§9[CPAPI]§r Colorful Powers API 的当前版本：v",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "以太射线，使用10",
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "熔岩喷发，使用10",
       "item.power.heat_armor_leggings": "保暖紧身裤",
       "item.power.shadow_battery.description_0": "§a 带电元素：",
       "item.power.shadow_battery.description_1": "§9阴影",
-      "item.power.time_khopesh": "时间 Khopesh",
+      "item.power.time_khopesh": "时间 霍佩什",
       "item.power.metal_battery.description_1": "§9金属",
       "item.power.metal_battery.description_0": "§a 带电元素：",
       "item.power.air_armor_chestplate": "空气胸甲",
@@ -38918,8 +39046,45 @@
       "item.power.mist_stone": "雾石",
       "item.power.blue_flame_armor_chestplate": "蓝色火焰胸甲",
       "item.power.creation_pickaxe": "创世镐",
-      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15"
+      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15",
+      "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
+      "power.modupdater.click_event": " ➜ 点击查看更改",
+      "biome.power.cursed_plains": "被诅咒的平原",
+      "item.power.cursed_world": "魔法火石",
+      "item.power.cursed_world.description_1": " §9被诅咒的世界",
+      "item.power.cursed_world.description_0": "§7世界:",
+      "item.power.energium_upgrade_smithing_template.description_1": ""
     }
+  },
+  "metadata": {
+    "files": [
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/com/esmods/keepersofthestonestwo/PowerMod.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/PowerModVariables.java",
+      "src/main/resources/assets/power/sounds.json",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModConfigs.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModPotions.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/MenuStateUpdateMessage.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModScreens.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModMenus.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModKeyMappings.java",
+      "src/main/resources/data/minecraft/tags/point_of_interest_type/acquirable_job_site.json",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModVillagerProfessions.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTrades.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModParticles.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModParticleTypes.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModMobEffects.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBlocks.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBlockEntities.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModItems.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntityRenderers.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntities.java"
+    ]
   },
   "foldersRoot": {
     "name": "~",
@@ -38952,7 +39117,7 @@
             "children": []
           },
           {
-            "name": "CPAPIExecuterModule",
+            "name": "HandlersModule",
             "children": []
           },
           {
@@ -39207,6 +39372,14 @@
                 ]
               }
             ]
+          },
+          {
+            "name": "SVFXModule",
+            "children": []
+          },
+          {
+            "name": "SkillsAndAmpl",
+            "children": []
           }
         ]
       },
@@ -39232,12 +39405,7 @@
       },
       {
         "name": "Biomes",
-        "children": [
-          {
-            "name": "CursedForest",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "name": "Elements",
@@ -39793,23 +39961,28 @@
         ]
       },
       {
-        "name": "TrimsMaterials",
-        "children": []
-      },
-      {
         "name": "Configs",
         "children": []
       },
       {
         "name": "ProfessionsAndTrades",
         "children": []
+      },
+      {
+        "name": "Dimensions",
+        "children": [
+          {
+            "name": "CursedWorld",
+            "children": []
+          }
+        ]
       }
     ]
   },
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.2.0.4",
+    "version": "1.3.0.1",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -39833,5 +40006,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500221219
+  "mcreatorVersion": 202500334500
 }

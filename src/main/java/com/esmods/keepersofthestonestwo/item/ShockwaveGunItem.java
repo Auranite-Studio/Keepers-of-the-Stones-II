@@ -1,9 +1,7 @@
-
 package com.esmods.keepersofthestonestwo.item;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -21,7 +19,7 @@ import com.esmods.keepersofthestonestwo.entity.ShockwaveGunProjectileEntity;
 
 public class ShockwaveGunItem extends Item {
 	public ShockwaveGunItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties());
 	}
 
 	@Override
@@ -47,7 +45,7 @@ public class ShockwaveGunItem extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		RemoveForbiddenItemProcedure.execute(entity, itemstack);
+		RemoveForbiddenItemProcedure.execute(world, entity, itemstack);
 	}
 
 	@Override

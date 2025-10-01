@@ -1,18 +1,26 @@
-
 **New features**
-- Added runes information to the keeper's book
-- Added new elements information to the keeper's book
-- Added Chinese (Simplified) language
+- Added new dimension - cursed world
+- Added enchanted flint
+- The cursed forest has been moved to a new dimension - cursed world
 
 **Improvemnts** 
-- Removed empty rune, now an unknown rune in its place
+- Added sound when crafting a rune in rune cutter
+- Changed energium shield crafting recipe (now requires planks instead of depleted energium ingots)
+- The stun effect now stops the player completely and slows down the use of weapons
+- The Curse effect no longer creates a fog effect
+- The curse effect stops working when you exit the cursed world
+
 
 **API changes**
-- *N/A*
+- Colorful Powers API has been updated to 27.0
+- Rename 'SendClientPackageActivationStoneVFXProcedure' class to 'ActivationStoneTriggerProcedure'
+- Some add-ons designed for earlier versions of the mod (1.2.0-1.2.3) may not work on this version
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that caused star points to be wasted for nothing when using the second and third heat master abilities
-- [Bugfix] Fixed a bug that caused the tooltip to display incorrectly when using invisibility and healing runes
+- [Bugfix] Fixed a bug that allowed duplicating energium ingots
+- [Bugfix] Fixed incorrect version checking 
+- [Bugfix] Fixed unlocking of some recipes
+
 
 **Known issues**
 - *N/A*
