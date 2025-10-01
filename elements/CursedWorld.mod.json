@@ -49,7 +49,7 @@
     "maxMonsterSpawnLightLimit": 7,
     "monsterSpawnBlockLightLimit": 0,
     "portalFrame": {
-      "value": "CUSTOM:CursedStone"
+      "value": "Blocks.OBSIDIAN"
     },
     "portalParticles": {
       "value": "PORTAL"
