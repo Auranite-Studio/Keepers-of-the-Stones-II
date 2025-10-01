@@ -1,4 +1,3 @@
-
 **New features**
 - Added new dimension - cursed world
 - Added enchanted flint
