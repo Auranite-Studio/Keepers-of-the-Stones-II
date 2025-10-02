@@ -1,16 +1,20 @@
-
 **New features**
-- *N/A*
 
-**Improvemnts** 
-- Reduced damage from curse effect by half (from 6 to 3 HP)
+* *N/A*
+
+**Improvemnts**
+
+* *N/A*
 
 **API changes**
-- *N/A*
+
+* *N/A*
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that caused player characteristics to sometimes not be recorded in the characteristic card
-- [Bugfix] Fixed incorrect battery texture charged with the power of the element of time
+
+* \[Bugfix] Fixed a bug that caused ores to not be mined with the silk touch enchantment
+* \[Bugfix] Fixed a bug that caused the sand master's armor to not fully disappear when the stone was deactivated
 
 **Known issues**
-- Temporarily disabled item renders for vaults and battery charger blocks (only 1.21.5)
+
+* *N/A*
