@@ -26361,7 +26361,11 @@
         ],
         "dependencies": [
           {
-            "name": "sourceentity",
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
             "type": "entity"
           }
         ]
@@ -33418,6 +33422,31 @@
         ]
       },
       "path": "~/Mobs/EnergiumGolem"
+    },
+    {
+      "name": "FirePassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "fire_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/FirePassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "AirPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "air_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/AirPassiveSkills.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -39063,6 +39092,10 @@
           },
           {
             "name": "SkillsAndAmpl",
+            "children": []
+          },
+          {
+            "name": "ElementalPassiveSkills",
             "children": []
           }
         ]
