@@ -343,41 +343,6 @@
       "path": "~/Elements/Fire"
     },
     {
-      "name": "FirePassiveProtection",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fire_passive_protection",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FirePassiveProtectionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Fire"
-    },
-    {
       "name": "GetActive",
       "type": "procedure",
       "compiles": true,
@@ -1755,41 +1720,6 @@
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/WaterAttackKoghdaSnariadPopadaietVSushchnostProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Water"
-    },
-    {
-      "name": "WaterPassiveWaterBreath",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "water_passive_water_breath",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WaterPassiveWaterBreathProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -4295,41 +4225,6 @@
       "path": "~/Elements/Lava"
     },
     {
-      "name": "LavaPassiveProtection",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lava_passive_protection",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LavaPassiveProtectionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Lava"
-    },
-    {
       "name": "StunPriNalozhieniiEffiekta",
       "type": "procedure",
       "compiles": true,
@@ -5193,25 +5088,6 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/item/OceanicTridentItem.java",
           "src/main/resources/assets/power/models/item/oceanic_trident.json"
-        ]
-      },
-      "path": "~/Elements/Ocean"
-    },
-    {
-      "name": "OceanPassiveConduit",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ocean_passive_conduit",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/OceanPassiveConduitProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/Elements/Ocean"
@@ -10313,25 +10189,6 @@
         "files": [
           "src/main/resources/assets/power/particles/star_particle.json",
           "src/main/java/com/esmods/keepersofthestonestwo/client/particle/StarParticleParticle.java"
-        ]
-      },
-      "path": "~/Elements/Space"
-    },
-    {
-      "name": "SpacePassiveAbIlity",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "space_passive_ab_ility",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpacePassiveAbIlityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/Elements/Space"
@@ -20229,41 +20086,6 @@
       "path": "~/Elements/Poison"
     },
     {
-      "name": "PoisonImmunePassiveAbility",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "poison_immune_passive_ability",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonImmunePassiveAbilityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Poison"
-    },
-    {
       "name": "PoisonBomb",
       "type": "projectile",
       "compiles": true,
@@ -23680,44 +23502,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "SoundPassiveProtection",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sound_passive_protection",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SoundPassiveProtectionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Sound"
-    },
-    {
-      "name": "MusicPassiveProtection",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "music_passive_protection",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MusicPassiveProtectionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Music"
-    },
-    {
       "name": "MusicGuitar",
       "type": "tool",
       "compiles": true,
@@ -24316,25 +24100,6 @@
       "path": "~/Elements/Plague"
     },
     {
-      "name": "PlaguePassiveProtection",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "plague_passive_protection",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlaguePassiveProtectionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Plague"
-    },
-    {
       "name": "PlagueBombDetonate",
       "type": "procedure",
       "compiles": true,
@@ -24791,41 +24556,6 @@
         "files": [
           "src/main/resources/assets/power/models/item/blue_flame_sword.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/BlueFlameSwordItem.java"
-        ]
-      },
-      "path": "~/Elements/BlueFlame"
-    },
-    {
-      "name": "BlueFlamePassiveProtection",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_flame_passive_protection",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueFlamePassiveProtectionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
         ]
       },
       "path": "~/Elements/BlueFlame"
@@ -25750,29 +25480,6 @@
         ]
       },
       "path": "~/Elements/Smoke"
-    },
-    {
-      "name": "ExplosionPassiveProtection",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "explosion_passive_protection",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExplosionPassiveProtectionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Explosion"
     },
     {
       "name": "CursedKnightAttackDetection",
@@ -31353,29 +31060,6 @@
         ]
       },
       "path": "~/Elements/Magnet"
-    },
-    {
-      "name": "GravityPassiveProtection",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gravity_passive_protection",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityPassiveProtectionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Gravity"
     },
     {
       "name": "EnergiumShield",
