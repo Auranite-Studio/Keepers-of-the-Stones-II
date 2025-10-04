@@ -33485,7 +33485,21 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/EtherPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "IcePassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ice_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/IcePassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     }
   ],
   "variable_elements": [
