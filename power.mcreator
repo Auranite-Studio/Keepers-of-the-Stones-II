@@ -33472,8 +33472,7 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/WaterPassiveSkills.java"
         ]
-      },
-      "path": "~/Modules/BasicModule"
+      }
     },
     {
       "name": "EtherPassiveSkills",
