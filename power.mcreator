@@ -33500,6 +33500,42 @@
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "LightningPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lightning_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/LightningPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "SoundPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "sound_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/SoundPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "CrystalPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "crystal_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/CrystalPassiveSkills.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
