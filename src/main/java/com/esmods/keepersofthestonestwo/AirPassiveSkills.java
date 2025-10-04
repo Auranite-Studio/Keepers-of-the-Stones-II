@@ -25,7 +25,7 @@ public class AirPassiveSkills {
 		if (!event.getSource().is(DamageTypes.FALL)) return;
 
 		boolean hasAirMaster = player.hasEffect(PowerModMobEffects.AIR_MASTER);
-		boolean isHighEnough = player.getBlockY() >= 64;
+		boolean isHighEnough = player.getBlockY() >= 96;
 
 		if (hasAirMaster && isHighEnough) {
 			float originalDamage = event.getAmount();
@@ -43,7 +43,7 @@ public class AirPassiveSkills {
 
 		if (player.level().isClientSide()) return;
 
-		if (!player.hasEffect(PowerModMobEffects.AIR_MASTER) || player.getBlockY() < 64) {
+		if (!player.hasEffect(PowerModMobEffects.AIR_MASTER) || player.getBlockY() < 96) {
 			return;
 		}
 

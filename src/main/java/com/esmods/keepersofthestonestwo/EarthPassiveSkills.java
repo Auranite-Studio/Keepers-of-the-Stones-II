@@ -24,7 +24,7 @@ public class EarthPassiveSkills {
 		if (!(entity instanceof Player player)) return;
 		if (player.level().isClientSide()) return;
 		if (!player.hasEffect(PowerModMobEffects.EARTH_MASTER)) return;
-		if (player.getBlockY() >= 96) return;
+		if (player.getBlockY() >= 64) return;
 
 		DamageSource source = event.getSource();
 		if (source.getEntity() instanceof LivingEntity) {
@@ -44,9 +44,9 @@ public class EarthPassiveSkills {
 		if (!(source.getEntity() instanceof Player player)) return;
 		if (player.level().isClientSide()) return;
 		if (!player.hasEffect(PowerModMobEffects.EARTH_MASTER)) return;
-		if (player.getBlockY() >= 96) return;
+		if (player.getBlockY() >= 64) return;
 
-		if (RANDOM.nextFloat() < 0.25f) {
+		if (RANDOM.nextFloat() < 0.125f) {
 			float originalDamage = event.getOriginalDamage();
 			float critDamage = originalDamage * 2.0f;
 			event.setNewDamage(critDamage);

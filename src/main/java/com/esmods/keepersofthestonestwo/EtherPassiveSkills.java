@@ -36,12 +36,12 @@ public class EtherPassiveSkills {
         if (currentPower < prevPower) {
             long currentTime = player.level().getGameTime();
 
-            player.getPersistentData().putLong(DAMAGE_BOOST_EXPIRE_TICK, currentTime + 400);
+            player.getPersistentData().putLong(DAMAGE_BOOST_EXPIRE_TICK, currentTime + 100);
 
             long lastStarRegen = player.getPersistentData().getLong(LAST_STAR_REGEN_KEY);
-            if (currentTime - lastStarRegen >= 2400) {
+            if (currentTime - lastStarRegen >= 600) {
                 if (player.getRandom().nextFloat() < 0.5f) {
-                    player.addEffect(new MobEffectInstance(PowerModMobEffects.STAR_REGENERATION, 400, 1, false, false));
+                    player.addEffect(new MobEffectInstance(PowerModMobEffects.STAR_REGENERATION, 200, 1, false, false));
                     player.getPersistentData().putLong(LAST_STAR_REGEN_KEY, currentTime);
                 }
             }

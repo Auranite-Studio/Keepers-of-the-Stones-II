@@ -1,5 +1,5 @@
 **New features**
-- Reworked passive skills for all elements (5/50)
+- Reworked passive skills for all elements (6/50)
 
 **Improvemnts** 
 - 

@@ -29,13 +29,13 @@ public class WaterPassiveSkills {
 		DamageSource source = event.getSource();
 		if (!(source.getEntity() instanceof LivingEntity)) return;
 
-		if (RANDOM.nextFloat() < 0.2f) { // 20% шанс
+		if (RANDOM.nextFloat() < 0.15f) {
 			if (RANDOM.nextBoolean()) {
 				float reducedDamage = event.getOriginalDamage() * 0.25f;
 				event.setNewDamage(reducedDamage);
 			} else {
 				float maxHealth = player.getMaxHealth();
-				float healAmount = maxHealth * 0.2f;
+				float healAmount = maxHealth * 0.4f;
 				player.heal(healAmount);
 			}
 		}
