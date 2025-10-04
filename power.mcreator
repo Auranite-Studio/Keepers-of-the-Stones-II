@@ -33446,6 +33446,45 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/AirPassiveSkills.java"
         ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "EarthPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "earth_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/EarthPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "WaterPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "water_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/WaterPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "EtherPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ether_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/EtherPassiveSkills.java"
+        ]
       }
     }
   ],
