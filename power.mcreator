@@ -33511,7 +33511,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/LightningPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "SoundPassiveSkills",
@@ -33523,7 +33524,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/SoundPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "CrystalPassiveSkills",
@@ -33535,7 +33537,60 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/CrystalPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "LavaPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lava_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/LavaPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "RainPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "rain_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/RainPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "TornadoPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tornado_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/TornadoPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "Dash",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dash",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/DashMobEffect.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     }
   ],
   "variable_elements": [
@@ -36686,7 +36741,8 @@
       "item.power.cursed_world": "Зачарованное огниво",
       "item.power.cursed_world.description_1": " §9Проклятый мир",
       "item.power.cursed_world.description_0": "§7Мир:",
-      "item.power.energium_upgrade_smithing_template.description_1": ""
+      "item.power.energium_upgrade_smithing_template.description_1": "",
+      "effect.power.dash": "Dash"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -37777,7 +37833,8 @@
       "item.power.cursed_world": "Enchanted Flint",
       "item.power.cursed_world.description_1": " §9Cursed World",
       "item.power.cursed_world.description_0": "§7World:",
-      "item.power.energium_upgrade_smithing_template.description_1": ""
+      "item.power.energium_upgrade_smithing_template.description_1": "",
+      "effect.power.dash": "Dash"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -38855,7 +38912,8 @@
       "item.power.cursed_world": "魔法火石",
       "item.power.cursed_world.description_1": " §9被诅咒的世界",
       "item.power.cursed_world.description_0": "§7世界:",
-      "item.power.energium_upgrade_smithing_template.description_1": ""
+      "item.power.energium_upgrade_smithing_template.description_1": "",
+      "effect.power.dash": "Dash"
     }
   },
   "metadata": {

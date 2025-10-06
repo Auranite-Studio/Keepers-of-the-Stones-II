@@ -138,6 +138,7 @@ import com.esmods.keepersofthestonestwo.potion.EnergyMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EarthMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DodgingMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.DashMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DarknessMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CurseMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
@@ -230,6 +231,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> PROTECTION = REGISTRY.register("protection", () -> new ProtectionMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SPIN = REGISTRY.register("spin", () -> new SpinMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> DODGING = REGISTRY.register("dodging", () -> new DodgingMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> DASH = REGISTRY.register("dash", () -> new DashMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

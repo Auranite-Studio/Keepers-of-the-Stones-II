@@ -64,7 +64,7 @@ public class FirePassiveSkills {
         if (source.getEntity() instanceof ServerPlayer attacker) {
             if (hasFireMasterCondition(attacker)) {
                 float original = event.getOriginalDamage();
-                event.setNewDamage(original * 1.2f); // +20%
+                event.setNewDamage(original * 1.2f);
             }
         }
     }
