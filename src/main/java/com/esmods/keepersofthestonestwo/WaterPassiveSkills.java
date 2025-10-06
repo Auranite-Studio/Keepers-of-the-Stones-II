@@ -48,7 +48,7 @@ public class WaterPassiveSkills {
 		if (!player.hasEffect(PowerModMobEffects.WATER_MASTER)) return;
 
 
-		if (isWaterNearby(player, 5)) {
+		if (isWaterNearby(player, 8)) {
 			if (!player.hasEffect(MobEffects.WATER_BREATHING)) {
 				player.addEffect(new net.minecraft.world.effect.MobEffectInstance(
 						MobEffects.WATER_BREATHING,

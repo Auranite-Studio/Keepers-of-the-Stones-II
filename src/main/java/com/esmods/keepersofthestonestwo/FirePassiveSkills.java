@@ -39,7 +39,7 @@ public class FirePassiveSkills {
         }
 
         BlockPos center = player.blockPosition();
-        int range = 5;
+        int range = 8;
 
         for (int x = -range; x <= range; x++) {
             for (int y = -range; y <= range; y++) {
