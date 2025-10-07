@@ -19,7 +19,7 @@ import java.util.Random;
 public class LavaPassiveSkills {
 
     private static final Random RANDOM = new Random();
-    private static final int LAVA_CHECK_RADIUS = 8;
+    private static final int LAVA_CHECK_RADIUS = 16;
 
     private static boolean isLavaMasterConditionMet(Player player) {
         if (player.level().dimension().location().getPath().equals("the_nether")) {

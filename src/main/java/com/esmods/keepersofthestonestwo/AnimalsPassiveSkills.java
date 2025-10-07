@@ -15,7 +15,7 @@ public class AnimalsPassiveSkills {
 	private static boolean hasTamedMobNearby(Player player) {
 		return !player.level().getEntitiesOfClass(
 				TamableAnimal.class,
-				player.getBoundingBox().inflate(8.0, 8.0, 8.0), // радиус 8 блоков по всем осям
+				player.getBoundingBox().inflate(16.0, 16.0, 16.0),
 				entity -> entity.isTame() && entity.getOwner() == player
 		).isEmpty();
 	}

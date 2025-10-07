@@ -31,7 +31,7 @@ public class CrystalPassiveSkills {
 	 * Проверяет, есть ли в радиусе 10 блоков от игрока хотя бы один аметистовый блок.
 	 */
 	private static boolean hasAmethystNearby(ServerLevel level, BlockPos center) {
-		int radius = 8;
+		int radius = 16;
 		for (int x = -radius; x <= radius; x++) {
 			for (int y = -radius; y <= radius; y++) {
 				for (int z = -radius; z <= radius; z++) {

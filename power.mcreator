@@ -4254,7 +4254,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/StunMobEffect.java"
         ]
       },
-      "path": "~/Elements/Sound"
+      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
     },
     {
       "name": "SoundBombProjectile",
@@ -33590,7 +33590,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/DashMobEffect.java"
         ]
       },
-      "path": "~/Modules/ElementalPassiveSkills"
+      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
     },
     {
       "name": "OceanPassiveSkills",
@@ -33627,6 +33627,45 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/AnimalsPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "MetalPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "metal_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/MetalPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "LightPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "light_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/LightPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "ShadowPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "shadow_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ShadowPassiveSkills.java"
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills"
@@ -39282,7 +39321,12 @@
           },
           {
             "name": "ElementalPassiveSkills",
-            "children": []
+            "children": [
+              {
+                "name": "PassiveEffects",
+                "children": []
+              }
+            ]
           }
         ]
       },
