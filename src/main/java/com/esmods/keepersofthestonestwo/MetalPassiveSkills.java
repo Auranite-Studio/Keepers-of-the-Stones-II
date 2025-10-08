@@ -29,13 +29,15 @@ public class MetalPassiveSkills {
 			Blocks.DEEPSLATE_COPPER_ORE,
 			Blocks.GOLD_ORE,
 			Blocks.DEEPSLATE_GOLD_ORE,
+			Blocks.ANCIENT_DEBRIS,
 			Blocks.NETHER_GOLD_ORE,
 			Blocks.RAW_IRON_BLOCK,
 			Blocks.RAW_COPPER_BLOCK,
 			Blocks.RAW_GOLD_BLOCK,
 			Blocks.IRON_BLOCK,
 			Blocks.COPPER_BLOCK,
-			Blocks.GOLD_BLOCK
+			Blocks.GOLD_BLOCK,
+			Blocks.NETHERITE_BLOCK
 	);
 
 	private static final Map<UUID, Boolean> nearMetalCache = new HashMap<>();

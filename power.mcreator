@@ -33693,7 +33693,47 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/EnergyPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "SunPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "sun_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/SunPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "MoonPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "moon_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/MoonPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "SpacePassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "space_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/SpacePassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     }
   ],
   "variable_elements": [

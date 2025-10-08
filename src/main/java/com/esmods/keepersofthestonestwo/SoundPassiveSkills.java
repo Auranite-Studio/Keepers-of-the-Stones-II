@@ -33,7 +33,7 @@ public class SoundPassiveSkills {
         if (!(player.level() instanceof net.minecraft.server.level.ServerLevel)) return false;
 
         BlockPos center = player.blockPosition();
-        int radius = 3; // 7x7x7 = 343 блоков — можно настроить
+        int radius = 4;
         int totalBlocks = 0;
         int airBlocks = 0;
 
