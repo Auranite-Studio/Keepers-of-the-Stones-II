@@ -12090,7 +12090,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/ImmortalityMobEffect.java"
         ]
       },
-      "path": "~/Elements/Creation"
+      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
     },
     {
       "name": "ImmortalityProtection",
@@ -13307,7 +13307,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/LethalityMobEffect.java"
         ]
       },
-      "path": "~/Elements/Destruction"
+      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
     },
     {
       "name": "AmplifierBlock",
@@ -33669,6 +33669,31 @@
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "VacuumPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "vacuum_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/VacuumPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "EnergyPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "energy_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/EnergyPassiveSkills.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
