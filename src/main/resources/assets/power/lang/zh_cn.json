@@ -1075,5 +1075,6 @@
   "item.power.cursed_world.description_1": " §9被诅咒的世界",
   "item.power.cursed_world.description_0": "§7世界:",
   "item.power.energium_upgrade_smithing_template.description_1": "",
-  "effect.power.dash": "Dash"
+  "effect.power.dash": "那个混蛋",
+  "effect.power.countdown": "倒计时"
 }

@@ -33734,6 +33734,58 @@
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "Countdown",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "countdown",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/CountdownMobEffect.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
+    },
+    {
+      "name": "TimePassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "time_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/TimePassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "CreationPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "creation_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/CreationPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "DestructionPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "destruction_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/DestructionPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     }
   ],
   "variable_elements": [
@@ -36885,7 +36937,8 @@
       "item.power.cursed_world.description_1": " §9Проклятый мир",
       "item.power.cursed_world.description_0": "§7Мир:",
       "item.power.energium_upgrade_smithing_template.description_1": "",
-      "effect.power.dash": "Dash"
+      "effect.power.dash": "Рывок",
+      "effect.power.countdown": "Таймер"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -37977,7 +38030,8 @@
       "item.power.cursed_world.description_1": " §9Cursed World",
       "item.power.cursed_world.description_0": "§7World:",
       "item.power.energium_upgrade_smithing_template.description_1": "",
-      "effect.power.dash": "Dash"
+      "effect.power.dash": "Dash",
+      "effect.power.countdown": "Countdown"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39056,7 +39110,8 @@
       "item.power.cursed_world.description_1": " §9被诅咒的世界",
       "item.power.cursed_world.description_0": "§7世界:",
       "item.power.energium_upgrade_smithing_template.description_1": "",
-      "effect.power.dash": "Dash"
+      "effect.power.dash": "那个混蛋",
+      "effect.power.countdown": "倒计时"
     }
   },
   "metadata": {
