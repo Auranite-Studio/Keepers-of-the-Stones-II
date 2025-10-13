@@ -33786,6 +33786,67 @@
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "BloodPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blood_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/BloodPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "TechnologyPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "technology_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/TechnologyPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "TeleportationPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "teleportation_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/TeleportationPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "ExplosionPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "explosion_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ExplosionPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "AmberPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "amber_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/AmberPassiveSkills.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
