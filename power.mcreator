@@ -22536,19 +22536,6 @@
       "path": "~/ItemsAndBlocks/Energium"
     },
     {
-      "name": "EnergiumDustToIngot",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_dust_to_ingot",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/recipe/energium_dust_to_ingot.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Energium"
-    },
-    {
       "name": "RawEnergiumBlock",
       "type": "block",
       "compiles": true,
