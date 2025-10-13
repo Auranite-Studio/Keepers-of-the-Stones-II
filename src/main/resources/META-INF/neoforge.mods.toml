@@ -4,7 +4,7 @@ license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.2.3"
+version="1.2.4"
 displayName="Keepers of the Stones II"
 displayURL="https://modrinth.com/mod/keepers-of-the-stones-2"
 logoFile="logo.png"
@@ -15,10 +15,16 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
+[[mixins]]
+    config = "power.mixins.json"
+
+# Start of user code block custom mixins
+# End of user code block custom mixins
+
 [[dependencies.power]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.176,)"
+    versionRange="[21.1.190,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -61,13 +67,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
-
-[[mixins]]
-    config = "power.mixins.json"
-
-# Start of user code block custom mixins
-# End of user code block custom mixins
-
 
 # Start of user code block dependencies configuration
 # End of user code block dependencies configuration

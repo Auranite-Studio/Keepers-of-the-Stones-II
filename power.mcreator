@@ -8638,7 +8638,8 @@
       "registry_name": "energium_armor_chestplate_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/recipe/energium_armor_chestplate_recipe.json"
+          "src/main/resources/data/power/recipe/energium_armor_chestplate_recipe.json",
+          "src/main/resources/data/power/advancement/recipes/energium_armor_chestplate_recipe.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -22535,19 +22536,6 @@
       "path": "~/ItemsAndBlocks/Energium"
     },
     {
-      "name": "EnergiumDustToIngot",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_dust_to_ingot",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/recipe/energium_dust_to_ingot.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Energium"
-    },
-    {
       "name": "RawEnergiumBlock",
       "type": "block",
       "compiles": true,
@@ -23680,58 +23668,6 @@
         ]
       },
       "path": "~/Commands"
-    },
-    {
-      "name": "DepletedEnergiumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "depleted_energium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/depleted_energium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "EnergiumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/energium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "AmplifierMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amplifier_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/amplifier_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "CopyriumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "copyrium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/copyrium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
     },
     {
       "name": "SoundPassiveProtection",
@@ -39071,8 +39007,6 @@
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModConfigs.java",
-      "src/main/resources/data/minecraft/tags/item/trim_materials.json",
-      "src/main/resources/assets/minecraft/atlases/armor_trims.json",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBiomes.java",
       "src/main/java/com/esmods/keepersofthestonestwo/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModPotions.java",
@@ -39965,10 +39899,6 @@
         ]
       },
       {
-        "name": "TrimsMaterials",
-        "children": []
-      },
-      {
         "name": "Configs",
         "children": []
       },
@@ -39985,7 +39915,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",

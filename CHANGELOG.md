@@ -8,7 +8,8 @@
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that caused the sand master's armor to not fully disappear when the stone was deactivated
+- [Bugfix] Fixed a bug that allowed duplicating energium ingots
+- [Bugfix] Fixed incorrect version checking
 
 **Known issues**
 - *N/A*
