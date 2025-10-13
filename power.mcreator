@@ -39007,8 +39007,6 @@
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModConfigs.java",
-      "src/main/resources/data/minecraft/tags/item/trim_materials.json",
-      "src/main/resources/assets/minecraft/atlases/armor_trims.json",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBiomes.java",
       "src/main/java/com/esmods/keepersofthestonestwo/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModPotions.java",
@@ -39917,7 +39915,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
