@@ -63,7 +63,6 @@ jobs:
             embedded-dependency@0.3.0(embedded)
             conflicting-dependency(conflicting)
             incompatible-dependency(incompatible)
-            playeranimator(required){modrinth:gedNE4y2}{curseforge:658587}#(ignore:github)
             patchouli(recommended){modrinth:nU0bVIaL}{curseforge:306770}#(ignore:github)
             better-combat(recommended){modrinth:5sy6g3kz}{curseforge:639842}#(ignore:github)
           modrinth-featured: false
