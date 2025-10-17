@@ -33789,7 +33789,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/TechnologyPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "TeleportationPassiveSkills",
@@ -33801,7 +33802,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/TeleportationPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "ExplosionPassiveSkills",
@@ -33813,7 +33815,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/ExplosionPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "AmberPassiveSkills",
@@ -33825,7 +33828,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/AmberPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "MistPassiveSkills",
@@ -33837,7 +33841,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/MistPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "SandPassiveSkills",
@@ -33849,7 +33854,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/SandPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "SpeedPassiveSkills",
@@ -33861,7 +33867,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/SpeedPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "PoisonPassiveSkills",
@@ -33872,6 +33879,71 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/PoisonPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "MagnetPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "magnet_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/MagnetPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "MushroomsPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mushrooms_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/MushroomsPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "MercuryPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mercury_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/MercuryPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "MusicPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "music_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/MusicPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "PlaguePassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "plague_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/PlaguePassiveSkills.java"
         ]
       }
     }
@@ -35728,6 +35800,11 @@
     ],
     "BIOMES:minecraft:has_structure/ruined_portal_standard": [
       "~CUSTOM:CursedPlains"
+    ],
+    "ITEMS:c:music_discs": [
+      "CUSTOM:MusicDiscCallOfThePast",
+      "CUSTOM:MusicDiscAncientMood",
+      "CUSTOM:MusicHope"
     ]
   },
   "tab_element_order": {
