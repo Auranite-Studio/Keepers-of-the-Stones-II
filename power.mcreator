@@ -18684,7 +18684,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/MistMobEffect.java"
         ]
       },
-      "path": "~/Elements/Mist"
+      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
     },
     {
       "name": "MistEffectRenderTick",
@@ -19831,28 +19831,7 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonSpecialAttackProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
     },
@@ -33845,6 +33824,54 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/AmberPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "MistPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mist_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/MistPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "SandPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "sand_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/SandPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "SpeedPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "speed_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/SpeedPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "PoisonPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "poison_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/PoisonPassiveSkills.java"
         ]
       }
     }
