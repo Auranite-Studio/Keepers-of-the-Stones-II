@@ -33282,20 +33282,6 @@
       "path": "~/Elements/Magnet"
     },
     {
-      "name": "SetupAnimations",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "setup_animations",
-      "metadata": {
-        "dependencies": [],
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SetupAnimationsProcedure.java"
-        ]
-      },
-      "path": "~/Modules/SVFXModule"
-    },
-    {
       "name": "DetransformationTrigger",
       "type": "procedure",
       "compiles": true,
@@ -33306,10 +33292,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ],
         "files": [
@@ -39334,9 +39316,15 @@
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
       "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/LoadPlayerAnimationMessage.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationMixin.java",
       "src/main/java/com/esmods/keepersofthestonestwo/PowerMod.java",
-      "src/main/resources/pack.mcmeta",
       "src/main/java/com/esmods/keepersofthestonestwo/network/PowerModVariables.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/PlayPlayerAnimationMessage.java",
+      "src/main/resources/power.mixins.json",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/PowerModPlayerAnimationAPI.java",
+      "src/main/resources/pack.mcmeta",
       "src/main/resources/assets/power/sounds.json",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java",
@@ -40271,9 +40259,7 @@
     "license": "GNU General Public License version 3 (GPLv3)",
     "serverSideOnly": false,
     "modPicture": "logo",
-    "requiredMods": [
-      "playeranimator"
-    ],
+    "requiredMods": [],
     "dependencies": [
       "bettercombat",
       "patchouli"
@@ -40281,9 +40267,7 @@
     "dependants": [
       "cpapi"
     ],
-    "mcreatorDependencies": [
-      "playeranimator"
-    ],
+    "mcreatorDependencies": [],
     "currentGenerator": "neoforge-1.21.1",
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"

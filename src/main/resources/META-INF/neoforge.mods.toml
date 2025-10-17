@@ -15,6 +15,8 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
+[[mixins]]
+    config = "power.mixins.json"
 
 # Start of user code block custom mixins
 # End of user code block custom mixins
@@ -33,12 +35,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.power]]
-    modId="playeranimator"
-    type="required"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 
 [[dependencies.power]]
     modId="bettercombat"
@@ -48,12 +44,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     side="BOTH"
 [[dependencies.power]]
     modId="patchouli"
-    type="optional"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
-    modId="playeranimator"
     type="optional"
     versionRange="[0,)"
     ordering="NONE"

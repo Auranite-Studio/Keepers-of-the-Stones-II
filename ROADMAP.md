@@ -11,5 +11,9 @@ v1.3.0:
 - Ally mark:
 1. Adding ally marks as new allies mechanics
 2. Rework some support abilities
+- Player animations rework:
+1. The playerAnimator mod is no longer required to trigger player animations.
+- New element:
+1. Adding new element - Colors
 v1.4.0:
 ???

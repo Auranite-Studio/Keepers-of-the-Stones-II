@@ -6,36 +6,39 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.nbt.CompoundTag;
 
 import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.network.PlayPlayerAnimationMessage;
 
 @EventBusSubscriber
 public class DetransformationTriggerProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(PlayerTickEvent.Post event) {
-		execute(event, event.getEntity().level(), event.getEntity());
+		execute(event, event.getEntity());
 	}
 
-	public static void execute(LevelAccessor world, Entity entity) {
-		execute(null, world, entity);
+	public static void execute(Entity entity) {
+		execute(null, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
+	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).detransform_anim_trigger) {
-			if (world.isClientSide()) {
-				SetupAnimationsProcedure.setAnimationClientside((Player) entity, "animation.player.detransformation", false);
-			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player)
-					PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new SetupAnimationsProcedure.PowerModAnimationMessage("animation.player.detransformation", entity.getId(), false));
+			if (entity instanceof Player) {
+				if (entity.level().isClientSide()) {
+					CompoundTag data = entity.getPersistentData();
+					data.putString("PlayerCurrentAnimation", "animation.player.detransformation");
+					data.putBoolean("OverrideCurrentAnimation", false);
+				} else {
+					PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new PlayPlayerAnimationMessage(entity.getId(), "animation.player.detransformation", false));
+				}
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
