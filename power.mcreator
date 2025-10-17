@@ -33945,7 +33945,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/PlaguePassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     }
   ],
   "variable_elements": [
