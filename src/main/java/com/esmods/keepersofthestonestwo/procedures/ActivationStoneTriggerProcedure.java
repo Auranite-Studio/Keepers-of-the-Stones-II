@@ -29,10 +29,10 @@ public class ActivationStoneTriggerProcedure {
 		if (entity instanceof Player) {
 			if (entity.level().isClientSide()) {
 				CompoundTag data = entity.getPersistentData();
-				data.putString("PlayerCurrentAnimation", "animation.player.transformation");
+				data.putString("PlayerCurrentAnimation", "power:animation.player.transformation");
 				data.putBoolean("OverrideCurrentAnimation", false);
 			} else {
-				PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new PlayPlayerAnimationMessage(entity.getId(), "animation.player.transformation", false));
+				PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new PlayPlayerAnimationMessage(entity.getId(), "power:animation.player.transformation", false));
 			}
 		}
 	}

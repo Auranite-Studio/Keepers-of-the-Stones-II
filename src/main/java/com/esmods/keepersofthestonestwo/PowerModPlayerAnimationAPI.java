@@ -181,9 +181,11 @@ public class PowerModPlayerAnimationAPI {
 					class Output implements PackResources.ResourceOutput {
 						private List<JsonObject> jsonObjects;
 						private PackResources packResources;
+						private List<String> namespaces;
 
-						public Output(List<JsonObject> jsonObjects) {
+						public Output(List<JsonObject> jsonObjects, List<String> namespaces) {
 							this.jsonObjects = jsonObjects;
+							this.namespaces = namespaces;
 						}
 
 						public void setPackResources(PackResources packResources) {
@@ -196,12 +198,14 @@ public class PowerModPlayerAnimationAPI {
 								JsonObject jsonObject = new com.google.gson.Gson()
 										.fromJson(new java.io.BufferedReader(new java.io.InputStreamReader(ioSupplier.get(), java.nio.charset.StandardCharsets.UTF_8)).lines().collect(Collectors.joining("\n")), JsonObject.class);
 								this.jsonObjects.add(jsonObject);
+								this.namespaces.add(resourceLocation.getNamespace());
 							} catch (Exception e) {
 							}
 						}
 					}
 					List<JsonObject> jsons = new ArrayList<>();
-					Output output = new Output(jsons);
+					List<String> namespaces = new ArrayList<>();
+					Output output = new Output(jsons, namespaces);
 					ResourceManager rm = level.getServer().getResourceManager();
 					rm.listPacks().forEach(resource -> {
 						for (String namespace : resource.getNamespaces(PackType.SERVER_DATA)) {
@@ -209,12 +213,12 @@ public class PowerModPlayerAnimationAPI {
 							resource.listResources(PackType.SERVER_DATA, namespace, "bedrock_animations", output);
 						}
 					});
-					sendAnimationsInBatches(player, jsons);
+					sendAnimationsInBatches(player, jsons, namespaces);
 				}
 			}
 		}
 
-		private static void sendAnimationsInBatches(ServerPlayer player, List<JsonObject> jsons) {
+		private static void sendAnimationsInBatches(ServerPlayer player, List<JsonObject> jsons, List<String> namespaces) {
 			final int MAX_CHARS = 30000; // Safety buffer below 32767
 			final int ANIMATIONS_WRAPPER_OVERHEAD = "{\"animations\":{}}".length();
 			JsonObject currentBatch = new JsonObject();
@@ -222,12 +226,13 @@ public class PowerModPlayerAnimationAPI {
 			currentBatch.add("animations", animationsObject);
 			int currentSize = ANIMATIONS_WRAPPER_OVERHEAD;
 			int animationCount = 0;
+			int namespaceIndex = 0;
 			for (JsonObject animationJson : jsons) {
 				// Extract the animations from each JSON
 				JsonObject sourceAnimations = animationJson.getAsJsonObject("animations");
 				if (sourceAnimations != null) {
 					for (Map.Entry<String, JsonElement> entry : sourceAnimations.entrySet()) {
-						String animationName = entry.getKey();
+						String animationName = namespaces.get(namespaceIndex) + ":" + entry.getKey();
 						JsonElement animationData = entry.getValue();
 						// Calculate size this animation would add
 						String animationString = "\"" + animationName + "\":" + animationData.toString();
@@ -246,6 +251,7 @@ public class PowerModPlayerAnimationAPI {
 						animationCount++;
 					}
 				}
+				namespaceIndex++;
 			}
 			// Send final batch if it has any animations
 			if (animationCount > 0) {

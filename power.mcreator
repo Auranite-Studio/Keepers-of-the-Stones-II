@@ -19831,7 +19831,28 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonSpecialAttackProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
     },
@@ -26340,11 +26361,7 @@
         ],
         "dependencies": [
           {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -33953,7 +33970,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/GravityPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "SmokePassiveSkills",
@@ -33965,7 +33983,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/SmokePassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "SpiritPassiveSkills",
@@ -33977,7 +33996,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/SpiritPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     }
   ],
   "variable_elements": [
@@ -35825,7 +35845,6 @@
       "~CUSTOM:RuneCutter"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.GRAVEL",
       "~Blocks.STONE#0",
       "~Blocks.DIRT#0",
       "~Blocks.GRASS"
@@ -37133,7 +37152,6 @@
       "item.power.cursed_world": "Зачарованное огниво",
       "item.power.cursed_world.description_1": " §9Проклятый мир",
       "item.power.cursed_world.description_0": "§7Мир:",
-      "item.power.energium_upgrade_smithing_template.description_1": "",
       "effect.power.dash": "Рывок",
       "effect.power.countdown": "Таймер"
     },
@@ -38226,7 +38244,6 @@
       "item.power.cursed_world": "Enchanted Flint",
       "item.power.cursed_world.description_1": " §9Cursed World",
       "item.power.cursed_world.description_0": "§7World:",
-      "item.power.energium_upgrade_smithing_template.description_1": "",
       "effect.power.dash": "Dash",
       "effect.power.countdown": "Countdown"
     },
@@ -39306,7 +39323,6 @@
       "item.power.cursed_world": "魔法火石",
       "item.power.cursed_world.description_1": " §9被诅咒的世界",
       "item.power.cursed_world.description_0": "§7世界:",
-      "item.power.energium_upgrade_smithing_template.description_1": "",
       "effect.power.dash": "那个混蛋",
       "effect.power.countdown": "倒计时"
     }
