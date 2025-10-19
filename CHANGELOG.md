@@ -22,7 +22,6 @@
 - Some add-ons designed for earlier versions of the mod (1.2.0-1.2.4) may not work on this version
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that allowed duplicating energium ingots
 - [Bugfix] Fixed incorrect version checking 
 - [Bugfix] Fixed unlocking of some recipes
 

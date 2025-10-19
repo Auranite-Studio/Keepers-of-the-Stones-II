@@ -152,32 +152,21 @@ public class ModVersionManager {
 
 		@Override
 		public int compareTo(Version o) {
-			String baseThis = truncateToThreeParts(this.raw);
-			String baseOther = truncateToThreeParts(o.raw);
-
-			int versionComparison = compareVersionStrings(baseThis, baseOther);
+			int versionComparison = compareVersionStrings(this.raw, o.raw);
 			if (versionComparison != 0) {
 				return versionComparison;
 			}
 
 			int priorityThis = VERSION_PRIORITY.getOrDefault(this.type, 999);
 			int priorityOther = VERSION_PRIORITY.getOrDefault(o.type, 999);
-
-			return Integer.compare(priorityOther, priorityThis);
-		}
-
-		private String truncateToThreeParts(String version) {
-			String baseVersion = version.split("-")[0];
-			String[] parts = baseVersion.split("\\.");
-			if (parts.length >= 3) {
-				return parts[0] + "." + parts[1] + "." + parts[2];
-			}
-			return baseVersion;
+			return Integer.compare(priorityThis, priorityOther);
 		}
 
 		private int compareVersionStrings(String v1, String v2) {
-			int[] parts1 = parseVersionParts(v1);
-			int[] parts2 = parseVersionParts(v2);
+			String base1 = v1.split("-")[0];
+			String base2 = v2.split("-")[0];
+			int[] parts1 = parseVersionParts(base1);
+			int[] parts2 = parseVersionParts(base2);
 			int length = Math.max(parts1.length, parts2.length);
 			for (int i = 0; i < length; i++) {
 				int num1 = i < parts1.length ? parts1[i] : 0;
@@ -190,8 +179,7 @@ public class ModVersionManager {
 		}
 
 		private int[] parseVersionParts(String version) {
-			String baseVersion = version.split("-")[0];
-			String[] parts = baseVersion.split("\\.");
+			String[] parts = version.split("\\.");
 			int[] result = new int[parts.length];
 			for (int i = 0; i < parts.length; i++) {
 				try {
@@ -242,7 +230,7 @@ public class ModVersionManager {
 			return VersionType.BETA;
 		}
 		// CUSTOM_SUFFIX: x.x.x-suffix
-		else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-[a-zA-Z0-9]+.*$", version)) {
+		else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-[a-zA-Z0-9].*$", version)) {
 			return VersionType.CUSTOM_SUFFIX;
 		}
 		// UNKNOWN
@@ -271,7 +259,6 @@ public class ModVersionManager {
 		return "0.0.0";
 	}
 
-
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerLoggedInEvent event) {
 		executeCheckForUpdates(event, event.getEntity());
@@ -280,8 +267,8 @@ public class ModVersionManager {
 
 	private static void executeCheckForUpdates(@Nullable Event event, Entity entity) {
 		if (entity == null) return;
-		if (entity instanceof Player) {
-			checkForUpdates((ServerPlayer) entity);
+		if (entity instanceof ServerPlayer serverPlayer) {
+			checkForUpdates(serverPlayer);
 		}
 	}
 
