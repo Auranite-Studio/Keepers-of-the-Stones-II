@@ -47,7 +47,7 @@
             "type": "spotlight",
             "title": "Energium Armor",
             "item": "power:energium_armor_helmet,power:energium_armor_chestplate,power:energium_armor_leggings,power:energium_armor_boots",
-            "text": "A full armor set grants:$(br2)$(l)Suppression Aura$() — Blocks elemental power within 4 blocks.$(br2)$(l)Curse Immunity$() — Neutralizes all effects of the Cursed Forest biome."
+            "text": "A full armor set grants:$(br2)$(l)Suppression Aura$() — Blocks elemental power within 4 blocks.$(br2)$(l)Curse Immunity$() — Neutralizes all effects of the Cursed World"
         },
         {
             "type": "text",

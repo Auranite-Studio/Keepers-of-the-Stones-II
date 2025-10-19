@@ -34048,7 +34048,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/GoldenDustPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "DarknessPassiveSkills",
@@ -34060,7 +34061,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/DarknessPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "HeatPassiveSkills",
@@ -34072,7 +34074,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/HeatPassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "ShockwavePassiveSkills",
@@ -34084,7 +34087,8 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/ShockwavePassiveSkills.java"
         ]
-      }
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     }
   ],
   "variable_elements": [
@@ -36435,7 +36439,7 @@
       "item.power.raw_amplifier": "Рудный амплифер",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Ядовитый шип, расходует 35",
       "effect.power.blood_master": "Мастер крови",
-      "advancements.lets_bail_this_place_isdead.descr": "Найдите биом - проклятый лес",
+      "advancements.lets_bail_this_place_isdead.descr": "Войдите в проклятый мир",
       "block.power.cursed_stone_stairs": "Ступеньки из проклятого камня",
       "gui.power.wheel_abilities_heat.tooltip_overheating_uses_35": "Перегрев, расходует 35",
       "effect.power.stun": "Оглушение",
@@ -37528,7 +37532,7 @@
       "item.power.raw_amplifier": "Raw Amplifier",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Poisonous thorn, uses 35",
       "effect.power.blood_master": "Master of Blood",
-      "advancements.lets_bail_this_place_isdead.descr": "Find the biome - the cursed forest",
+      "advancements.lets_bail_this_place_isdead.descr": "Enter the cursed world",
       "block.power.cursed_stone_stairs": " Cursed Stone Stairs",
       "gui.power.wheel_abilities_heat.tooltip_overheating_uses_35": "Overheating, uses 35",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
@@ -38619,7 +38623,7 @@
       "item.power.raw_amplifier": "原始放大器",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "毒刺，用途35",
       "effect.power.blood_master": "血之大师",
-      "advancements.lets_bail_this_place_isdead.descr": "找到生物群系——诅咒森林",
+      "advancements.lets_bail_this_place_isdead.descr": "进入被诅咒的世界",
       "block.power.cursed_stone_stairs": "诅咒石阶",
       "gui.power.wheel_abilities_heat.tooltip_overheating_uses_35": "过热，使用35",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "声音轰鸣，使用80",
@@ -39742,10 +39746,6 @@
           },
           {
             "name": "SVFXModule",
-            "children": []
-          },
-          {
-            "name": "SkillsAndAmpl",
             "children": []
           },
           {
