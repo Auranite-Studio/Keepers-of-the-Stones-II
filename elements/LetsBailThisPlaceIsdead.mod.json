@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Let's bail, this place is dead",
-    "achievementDescription": "Find the biome - the cursed forest",
+    "achievementDescription": "Enter the cursed world",
     "achievementIcon": {
       "value": "CUSTOM:CursedStone"
     },
