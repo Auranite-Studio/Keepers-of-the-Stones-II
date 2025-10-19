@@ -144,6 +144,7 @@ import com.esmods.keepersofthestonestwo.potion.CurseMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CountdownMobEffect;
+import com.esmods.keepersofthestonestwo.potion.ClearingMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ChaosDarkMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BlueMagnetPowerMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BlueFlameMasterMobEffect;
@@ -234,6 +235,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> DODGING = REGISTRY.register("dodging", () -> new DodgingMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> DASH = REGISTRY.register("dash", () -> new DashMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> COUNTDOWN = REGISTRY.register("countdown", () -> new CountdownMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> CLEARING = REGISTRY.register("clearing", () -> new ClearingMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

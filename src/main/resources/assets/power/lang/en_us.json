@@ -1088,5 +1088,6 @@
   "item.power.cursed_world.description_1": " §9Cursed World",
   "item.power.cursed_world.description_0": "§7World:",
   "effect.power.dash": "Dash",
-  "effect.power.countdown": "Countdown"
+  "effect.power.countdown": "Countdown",
+  "effect.power.clearing": "Clearing"
 }

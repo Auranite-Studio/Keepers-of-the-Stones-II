@@ -33998,6 +33998,93 @@
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "Clearing",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clearing",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/ClearingMobEffect.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
+    },
+    {
+      "name": "FormPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "form_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/FormPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "MindPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mind_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/MindPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "GoldenDustPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "golden_dust_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/GoldenDustPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "DarknessPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "darkness_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/DarknessPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "HeatPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "heat_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/HeatPassiveSkills.java"
+        ]
+      }
+    },
+    {
+      "name": "ShockwavePassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "shockwave_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ShockwavePassiveSkills.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -37153,7 +37240,8 @@
       "item.power.cursed_world.description_1": " §9Проклятый мир",
       "item.power.cursed_world.description_0": "§7Мир:",
       "effect.power.dash": "Рывок",
-      "effect.power.countdown": "Таймер"
+      "effect.power.countdown": "Таймер",
+      "effect.power.clearing": "Очищение"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38245,7 +38333,8 @@
       "item.power.cursed_world.description_1": " §9Cursed World",
       "item.power.cursed_world.description_0": "§7World:",
       "effect.power.dash": "Dash",
-      "effect.power.countdown": "Countdown"
+      "effect.power.countdown": "Countdown",
+      "effect.power.clearing": "Clearing"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39324,7 +39413,8 @@
       "item.power.cursed_world.description_1": " §9被诅咒的世界",
       "item.power.cursed_world.description_0": "§7世界:",
       "effect.power.dash": "那个混蛋",
-      "effect.power.countdown": "倒计时"
+      "effect.power.countdown": "倒计时",
+      "effect.power.clearing": "结算"
     }
   },
   "metadata": {

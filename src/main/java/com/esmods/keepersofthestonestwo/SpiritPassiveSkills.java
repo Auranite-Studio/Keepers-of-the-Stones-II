@@ -1,46 +1,72 @@
-/*
- * The code of this mod element is always locked.
- *
- * You can register new events in this class too.
- *
- * If you want to make a plain independent class, create it using
- * Project Browser -> New... and make sure to make the class
- * outside com.esmods.keepersofthestonestwo as this package is managed by MCreator.
- *
- * If you change workspace package, modid or prefix, you will need
- * to manually adapt this file to these changes or remake it.
- *
- * This class will be added in the mod root package.
-*/
 package com.esmods.keepersofthestonestwo;
 
-import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
+import net.minecraft.core.Holder;
+import net.minecraft.tags.EntityTypeTags;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 
 @EventBusSubscriber
 public class SpiritPassiveSkills {
-	public SpiritPassiveSkills() {
+
+	private static final int BONUS_DURATION = 8 * 20;
+	private static final int CLEARING_DURATION = 60 * 20;
+
+	private static boolean isActive(Player player) {
+		return !player.level().isClientSide() &&
+				player.hasEffect(PowerModMobEffects.SPIRIT_MASTER) &&
+				player.hasEffect(PowerModMobEffects.CLEARING);
 	}
 
 	@SubscribeEvent
-	public static void init(FMLCommonSetupEvent event) {
-		new SpiritPassiveSkills();
+	public static void onPlayerAttack(LivingDamageEvent.Pre event) {
+		if (!(event.getSource().getEntity() instanceof Player attacker)) return;
+		if (!isActive(attacker)) return;
+		event.setNewDamage(event.getOriginalDamage() * 1.2f);
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
-	public static void clientLoad(FMLClientSetupEvent event) {
+	public static void onPlayerTakeDamage(LivingDamageEvent.Pre event) {
+		if (!(event.getEntity() instanceof Player player)) return;
+		if (!isActive(player)) return;
+
+		if (player.getRandom().nextFloat() < 0.25f) {
+			Holder<MobEffect>[] effects = (Holder<MobEffect>[]) new Holder<?>[]{
+					MobEffects.REGENERATION,
+					PowerModMobEffects.STAR_REGENERATION,
+					MobEffects.DAMAGE_BOOST
+			};
+			Holder<MobEffect> chosen = effects[player.getRandom().nextInt(effects.length)];
+
+			player.addEffect(new MobEffectInstance(chosen, BONUS_DURATION, 0, false, true));
+		}
 	}
 
-	@EventBusSubscriber
-	private static class SpiritPassiveSkillsForgeBusEvents {
-		@SubscribeEvent
-		public static void serverLoad(ServerStartingEvent event) {
+	@SubscribeEvent
+	public static void onUndeadKill(LivingDeathEvent event) {
+		LivingEntity killed = event.getEntity();
+		if (killed.level().isClientSide()) return;
+
+		if (!killed.getType().is(EntityTypeTags.UNDEAD)) return;
+
+		var source = event.getSource().getEntity();
+		if (!(source instanceof Player player)) return;
+
+		if (player.hasEffect(PowerModMobEffects.SPIRIT_MASTER)) {
+			player.addEffect(new MobEffectInstance(
+					PowerModMobEffects.CLEARING,
+					CLEARING_DURATION,
+					0,
+					false,
+					true
+			));
 		}
 	}
 }
