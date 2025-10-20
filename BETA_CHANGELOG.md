@@ -2,7 +2,7 @@
 - 
 
 **Improvemnts** 
-- 
+- Renamed effect "Clearing" to "Purification" 
 
 **API changes**
 - *N/A*
