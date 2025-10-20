@@ -59,6 +59,7 @@ import com.esmods.keepersofthestonestwo.item.SpinRuneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SpeedArmorItem;
+import com.esmods.keepersofthestonestwo.item.SpearBrashItem;
 import com.esmods.keepersofthestonestwo.item.SpaceStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpaceBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SpaceArmorItem;
@@ -254,6 +255,8 @@ import com.esmods.keepersofthestonestwo.item.CreationAxeItem;
 import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.CopyriumIngotItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
+import com.esmods.keepersofthestonestwo.item.ColorsStoneItem;
+import com.esmods.keepersofthestonestwo.item.ColorsArmorItem;
 import com.esmods.keepersofthestonestwo.item.CharacteristicsCardItem;
 import com.esmods.keepersofthestonestwo.item.ChaosArmorItem;
 import com.esmods.keepersofthestonestwo.item.BlueMagicFireballItem;
@@ -765,6 +768,12 @@ public class PowerModItems {
 	public static final DeferredItem<Item> HEALING_RUNE = REGISTRY.register("healing_rune", HealingRuneItem::new);
 	public static final DeferredItem<Item> UNKNOWN_RUNE = REGISTRY.register("unknown_rune", UnknownRuneItem::new);
 	public static final DeferredItem<Item> CURSED_WORLD = REGISTRY.register("cursed_world", CursedWorldItem::new);
+	public static final DeferredItem<Item> COLORS_STONE = REGISTRY.register("colors_stone", ColorsStoneItem::new);
+	public static final DeferredItem<Item> COLORS_ARMOR_HELMET = REGISTRY.register("colors_armor_helmet", ColorsArmorItem.Helmet::new);
+	public static final DeferredItem<Item> COLORS_ARMOR_CHESTPLATE = REGISTRY.register("colors_armor_chestplate", ColorsArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> COLORS_ARMOR_LEGGINGS = REGISTRY.register("colors_armor_leggings", ColorsArmorItem.Leggings::new);
+	public static final DeferredItem<Item> COLORS_ARMOR_BOOTS = REGISTRY.register("colors_armor_boots", ColorsArmorItem.Boots::new);
+	public static final DeferredItem<Item> SPEAR_BRASH = REGISTRY.register("spear_brash", SpearBrashItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -834,6 +843,7 @@ public class PowerModItems {
 				ItemProperties.register(ENERGIUM_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(HEAT_STONE.get(), ResourceLocation.parse("power:heat_stone_rechage"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 				ItemProperties.register(SHOCKWAVE_STONE.get(), ResourceLocation.parse("power:shockwave_stone_rechage"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+				ItemProperties.register(COLORS_STONE.get(), ResourceLocation.parse("power:colors_stone_rechage"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 			});
 		}
 	}

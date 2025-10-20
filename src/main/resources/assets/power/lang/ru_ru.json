@@ -1089,5 +1089,12 @@
   "item.power.cursed_world.description_0": "§7Мир:",
   "effect.power.dash": "Рывок",
   "effect.power.countdown": "Таймер",
-  "effect.power.purification": "Очищение"
+  "effect.power.purification": "Очищение",
+  "item.power.colors_stone": "Colors Stone",
+  "item.power.spear_brash": "Spear Brash",
+  "item.power.colors_armor_boots": "Colors Boots",
+  "item.power.colors_armor_helmet": "Colors Helmet",
+  "item.power.colors_armor_leggings": "Colors Leggings",
+  "item.power.colors_armor_chestplate": "Colors Chestplate",
+  "effect.power.colors_master": "Master of Colors"
 }

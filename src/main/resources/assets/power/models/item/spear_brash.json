@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/spear_brush",
+  "textures": {
+    "0": "power:block/spear_brush",
+    "particle": "power:item/spear_brush"
+  }
+}

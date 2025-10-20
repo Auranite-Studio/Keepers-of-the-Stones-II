@@ -1076,5 +1076,12 @@
   "item.power.cursed_world.description_0": "§7世界:",
   "effect.power.dash": "那个混蛋",
   "effect.power.countdown": "倒计时",
-  "effect.power.purification": "净化;净化"
+  "effect.power.purification": "净化;净化",
+  "item.power.colors_stone": "Colors Stone",
+  "item.power.spear_brash": "Spear Brash",
+  "item.power.colors_armor_boots": "Colors Boots",
+  "item.power.colors_armor_helmet": "Colors Helmet",
+  "item.power.colors_armor_leggings": "Colors Leggings",
+  "item.power.colors_armor_chestplate": "Colors Chestplate",
+  "effect.power.colors_master": "Master of Colors"
 }

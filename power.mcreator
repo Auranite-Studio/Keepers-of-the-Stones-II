@@ -34089,6 +34089,242 @@
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
+    },
+    {
+      "name": "ColorsStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/colors_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ColorsStoneItem.java",
+          "src/main/resources/assets/power/models/item/colors_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsMaster",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/ColorsMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/colors_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/colors_armor_boots.json",
+          "src/main/resources/assets/power/models/item/colors_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/colors_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ColorsArmorItem.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "SpearBrash",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spear_brash",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpearBrashItem.java",
+          "src/main/resources/assets/power/models/item/spear_brash.json"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "WhiteBombKazhdyiTikPriPoliotieSnariada",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_bomb_kazhdyi_tik_pri_poliotie_snariada",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WhiteBombKazhdyiTikPriPoliotieSnariadaProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "WhiteBomb",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_bomb",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/WhiteBombEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/WhiteBombRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsElementGet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_element_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsElementGetProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsStoneUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsStoneUseProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsMasterStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsMasterStartProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsMasterEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsMasterEndProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
     }
   ],
   "variable_elements": [
@@ -34805,6 +35041,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "colors_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -35241,7 +35483,8 @@
       "CUSTOM:SpiritStone",
       "CUSTOM:GoldenDustStone",
       "CUSTOM:HeatStone",
-      "CUSTOM:ShockwaveStone"
+      "CUSTOM:ShockwaveStone",
+      "CUSTOM:ColorsStone"
     ],
     "ITEMS:mod:rune/third_level": [
       "CUSTOM:ExtraStarPointsRune3",
@@ -35476,7 +35719,11 @@
       "CUSTOM:ShockwaveArmor.helmet",
       "CUSTOM:ShockwaveArmor.body",
       "CUSTOM:ShockwaveArmor.legs",
-      "CUSTOM:ShockwaveArmor.boots"
+      "CUSTOM:ShockwaveArmor.boots",
+      "CUSTOM:ColorsArmor.helmet",
+      "CUSTOM:ColorsArmor.body",
+      "CUSTOM:ColorsArmor.legs",
+      "CUSTOM:ColorsArmor.boots"
     ],
     "BLOCKS:mod:keepers_boxes": [
       "CUSTOM:KeepersBox"
@@ -35517,6 +35764,7 @@
       "CUSTOM:BlackHole"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:ColorsArmor.helmet",
       "~CUSTOM:ShockwaveArmor.helmet",
       "~CUSTOM:HeatArmor.helmet",
       "~CUSTOM:FilthArmor.helmet",
@@ -35574,6 +35822,7 @@
       "~CUSTOM:FireArmor.helmet"
     ],
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:ColorsArmor.body",
       "~CUSTOM:ShockwaveArmor.body",
       "~CUSTOM:HeatArmor.body",
       "~CUSTOM:FilthArmor.body",
@@ -35631,6 +35880,7 @@
       "~CUSTOM:FireArmor.body"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:ColorsArmor.legs",
       "~CUSTOM:ShockwaveArmor.legs",
       "~CUSTOM:HeatArmor.legs",
       "~CUSTOM:FilthArmor.legs",
@@ -35688,6 +35938,7 @@
       "~CUSTOM:FireArmor.legs"
     ],
     "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:ColorsArmor.boots",
       "~CUSTOM:ShockwaveArmor.boots",
       "~CUSTOM:HeatArmor.boots",
       "~CUSTOM:FilthArmor.boots",
@@ -35745,6 +35996,7 @@
       "~CUSTOM:FireArmor.boots"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:SpearBrash",
       "~CUSTOM:HeatKnife",
       "~CUSTOM:DarkSword",
       "~CUSTOM:GoldenDustStaff",
@@ -35999,6 +36251,7 @@
       "MindStone",
       "HeatStone",
       "ShockwaveStone",
+      "ColorsStone",
       "GoldenDustStone",
       "DarknessStone"
     ],
@@ -37245,7 +37498,14 @@
       "item.power.cursed_world.description_0": "§7Мир:",
       "effect.power.dash": "Рывок",
       "effect.power.countdown": "Таймер",
-      "effect.power.purification": "Очищение"
+      "effect.power.purification": "Очищение",
+      "item.power.colors_stone": "Colors Stone",
+      "item.power.spear_brash": "Spear Brash",
+      "item.power.colors_armor_boots": "Colors Boots",
+      "item.power.colors_armor_helmet": "Colors Helmet",
+      "item.power.colors_armor_leggings": "Colors Leggings",
+      "item.power.colors_armor_chestplate": "Colors Chestplate",
+      "effect.power.colors_master": "Master of Colors"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38338,7 +38598,14 @@
       "item.power.cursed_world.description_0": "§7World:",
       "effect.power.dash": "Dash",
       "effect.power.countdown": "Countdown",
-      "effect.power.purification": "Purification"
+      "effect.power.purification": "Purification",
+      "item.power.colors_stone": "Colors Stone",
+      "item.power.spear_brash": "Spear Brash",
+      "item.power.colors_armor_boots": "Colors Boots",
+      "item.power.colors_armor_helmet": "Colors Helmet",
+      "item.power.colors_armor_leggings": "Colors Leggings",
+      "item.power.colors_armor_chestplate": "Colors Chestplate",
+      "effect.power.colors_master": "Master of Colors"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39418,7 +39685,14 @@
       "item.power.cursed_world.description_0": "§7世界:",
       "effect.power.dash": "那个混蛋",
       "effect.power.countdown": "倒计时",
-      "effect.power.purification": "净化;净化"
+      "effect.power.purification": "净化;净化",
+      "item.power.colors_stone": "Colors Stone",
+      "item.power.spear_brash": "Spear Brash",
+      "item.power.colors_armor_boots": "Colors Boots",
+      "item.power.colors_armor_helmet": "Colors Helmet",
+      "item.power.colors_armor_leggings": "Colors Leggings",
+      "item.power.colors_armor_chestplate": "Colors Chestplate",
+      "effect.power.colors_master": "Master of Colors"
     }
   },
   "metadata": {
@@ -39460,6 +39734,10 @@
   "foldersRoot": {
     "name": "~",
     "children": [
+      {
+        "name": "Configs",
+        "children": []
+      },
       {
         "name": "Modules",
         "children": [
@@ -39985,6 +40263,10 @@
           {
             "name": "Shockwave",
             "children": []
+          },
+          {
+            "name": "Colors",
+            "children": []
           }
         ]
       },
@@ -40335,10 +40617,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Configs",
-        "children": []
       },
       {
         "name": "ProfessionsAndTrades",
