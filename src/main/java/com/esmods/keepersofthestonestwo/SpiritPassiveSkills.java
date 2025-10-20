@@ -22,7 +22,7 @@ public class SpiritPassiveSkills {
 	private static boolean isActive(Player player) {
 		return !player.level().isClientSide() &&
 				player.hasEffect(PowerModMobEffects.SPIRIT_MASTER) &&
-				player.hasEffect(PowerModMobEffects.CLEARING);
+				player.hasEffect(PowerModMobEffects.PURIFICATION);
 	}
 
 	@SubscribeEvent
@@ -61,7 +61,7 @@ public class SpiritPassiveSkills {
 
 		if (player.hasEffect(PowerModMobEffects.SPIRIT_MASTER)) {
 			player.addEffect(new MobEffectInstance(
-					PowerModMobEffects.CLEARING,
+					PowerModMobEffects.PURIFICATION,
 					CLEARING_DURATION,
 					0,
 					false,

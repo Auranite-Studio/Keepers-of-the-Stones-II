@@ -34000,19 +34000,6 @@
       "path": "~/Modules/ElementalPassiveSkills"
     },
     {
-      "name": "Clearing",
-      "type": "potioneffect",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "clearing",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/potion/ClearingMobEffect.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
-    },
-    {
       "name": "FormPassiveSkills",
       "type": "code",
       "compiles": true,
@@ -34089,6 +34076,19 @@
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "Purification",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purification",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/PurificationMobEffect.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
     }
   ],
   "variable_elements": [
@@ -37245,7 +37245,7 @@
       "item.power.cursed_world.description_0": "§7Мир:",
       "effect.power.dash": "Рывок",
       "effect.power.countdown": "Таймер",
-      "effect.power.clearing": "Очищение"
+      "effect.power.purification": "Очищение"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38338,7 +38338,7 @@
       "item.power.cursed_world.description_0": "§7World:",
       "effect.power.dash": "Dash",
       "effect.power.countdown": "Countdown",
-      "effect.power.clearing": "Clearing"
+      "effect.power.purification": "Purification"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39418,7 +39418,7 @@
       "item.power.cursed_world.description_0": "§7世界:",
       "effect.power.dash": "那个混蛋",
       "effect.power.countdown": "倒计时",
-      "effect.power.clearing": "结算"
+      "effect.power.purification": "净化;净化"
     }
   },
   "metadata": {
