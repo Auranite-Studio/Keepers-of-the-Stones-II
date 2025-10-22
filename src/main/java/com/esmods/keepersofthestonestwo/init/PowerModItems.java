@@ -256,6 +256,7 @@ import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.CopyriumIngotItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
 import com.esmods.keepersofthestonestwo.item.ColorsStoneItem;
+import com.esmods.keepersofthestonestwo.item.ColorsBatteryItem;
 import com.esmods.keepersofthestonestwo.item.ColorsArmorItem;
 import com.esmods.keepersofthestonestwo.item.CharacteristicsCardItem;
 import com.esmods.keepersofthestonestwo.item.ChaosArmorItem;
@@ -774,6 +775,7 @@ public class PowerModItems {
 	public static final DeferredItem<Item> COLORS_ARMOR_LEGGINGS = REGISTRY.register("colors_armor_leggings", ColorsArmorItem.Leggings::new);
 	public static final DeferredItem<Item> COLORS_ARMOR_BOOTS = REGISTRY.register("colors_armor_boots", ColorsArmorItem.Boots::new);
 	public static final DeferredItem<Item> SPEAR_BRASH = REGISTRY.register("spear_brash", SpearBrashItem::new);
+	public static final DeferredItem<Item> COLORS_BATTERY = REGISTRY.register("colors_battery", ColorsBatteryItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -22,5 +22,10 @@ public class AbilitiesCheck2Procedure {
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("shockwave") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("shockwave")) {
 			ShockwaveSpecialAttackProcedure.execute(world, x, y, z, entity);
 		}
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("colors") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("colors")
+				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("colors") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("colors")
+				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("colors") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("colors")) {
+			ColorsSpecialAttackProcedure.execute(world, x, y, z, entity);
+		}
 	}
 }

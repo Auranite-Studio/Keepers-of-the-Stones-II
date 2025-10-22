@@ -1,5 +1,5 @@
 **New features**
-- 
+- Added new element - colors
 
 **Improvemnts** 
 - Renamed effect "Clearing" to "Purification" 

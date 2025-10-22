@@ -34325,6 +34325,186 @@
         ]
       },
       "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsSpecialAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_special_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsSpecialAttackProcedure.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesColors",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_colors",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesColorsScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesColorsMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesColorsButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "Attack201",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_201",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack201Procedure.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "Attack202",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_202",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack202Procedure.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "Attack203",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_203",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack203Procedure.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "ColorsBattery",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/colors_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ColorsBatteryItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/ColorsBattery"
+    },
+    {
+      "name": "ColorsBatteryUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsBatteryUseProcedure.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/ColorsBattery"
+    },
+    {
+      "name": "ColorsStoneCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsStoneCheckProcedure.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     }
   ],
   "variable_elements": [
@@ -36306,7 +36486,8 @@
       "HeatBattery",
       "ShockwaveBattery",
       "GoldenDustBattery",
-      "DarknessBattery"
+      "DarknessBattery",
+      "ColorsBattery"
     ],
     "CUSTOM:Items": [
       "LuckCoin",
@@ -37499,13 +37680,20 @@
       "effect.power.dash": "Рывок",
       "effect.power.countdown": "Таймер",
       "effect.power.purification": "Очищение",
-      "item.power.colors_stone": "Colors Stone",
+      "item.power.colors_stone": "Камень красок",
       "item.power.spear_brash": "Spear Brash",
-      "item.power.colors_armor_boots": "Colors Boots",
-      "item.power.colors_armor_helmet": "Colors Helmet",
-      "item.power.colors_armor_leggings": "Colors Leggings",
-      "item.power.colors_armor_chestplate": "Colors Chestplate",
-      "effect.power.colors_master": "Master of Colors"
+      "item.power.colors_armor_boots": "Ботинки мастера красок",
+      "item.power.colors_armor_helmet": "Шлем мастера красок",
+      "item.power.colors_armor_leggings": "Поножи мастера красок",
+      "item.power.colors_armor_chestplate": "Нагрудник мастера красок",
+      "effect.power.colors_master": "Мастер красок",
+      "gui.power.wheel_abilities_colors.tooltip_colored_aura_uses_70": "Аура красок, расходует 70",
+      "gui.power.wheel_abilities_colors.tooltip_white_bomb_uses_40": "Белая бомба, расходует 40",
+      "gui.power.wheel_abilities_colors.tooltip_color_ray_uses_10": "Луч красок, расходует 10",
+      "item.power.colors_battery": "Батарея",
+      "item.power.colors_battery.description_1": "§9Краски",
+      "item.power.colors_battery.description_0": "§aЗаряжена элементом:",
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Краски"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38605,7 +38793,14 @@
       "item.power.colors_armor_helmet": "Colors Helmet",
       "item.power.colors_armor_leggings": "Colors Leggings",
       "item.power.colors_armor_chestplate": "Colors Chestplate",
-      "effect.power.colors_master": "Master of Colors"
+      "effect.power.colors_master": "Master of Colors",
+      "gui.power.wheel_abilities_colors.tooltip_colored_aura_uses_70": "Colored aura, uses 70",
+      "gui.power.wheel_abilities_colors.tooltip_white_bomb_uses_40": "White bomb, uses 40",
+      "gui.power.wheel_abilities_colors.tooltip_color_ray_uses_10": "Color ray, uses 10",
+      "item.power.colors_battery": "Battery",
+      "item.power.colors_battery.description_1": "§9Colors",
+      "item.power.colors_battery.description_0": "§aCharged with element:",
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39686,13 +39881,20 @@
       "effect.power.dash": "那个混蛋",
       "effect.power.countdown": "倒计时",
       "effect.power.purification": "净化;净化",
-      "item.power.colors_stone": "Colors Stone",
+      "item.power.colors_stone": "颜色石",
       "item.power.spear_brash": "Spear Brash",
-      "item.power.colors_armor_boots": "Colors Boots",
-      "item.power.colors_armor_helmet": "Colors Helmet",
-      "item.power.colors_armor_leggings": "Colors Leggings",
-      "item.power.colors_armor_chestplate": "Colors Chestplate",
-      "effect.power.colors_master": "Master of Colors"
+      "item.power.colors_armor_boots": "颜色靴子",
+      "item.power.colors_armor_helmet": "颜色头盔",
+      "item.power.colors_armor_leggings": "颜色紧身裤",
+      "item.power.colors_armor_chestplate": "颜色胸板",
+      "effect.power.colors_master": "色彩大师",
+      "gui.power.wheel_abilities_colors.tooltip_colored_aura_uses_70": "彩色光环，使用 70",
+      "gui.power.wheel_abilities_colors.tooltip_white_bomb_uses_40": "白色炸弹，使用 40",
+      "gui.power.wheel_abilities_colors.tooltip_color_ray_uses_10": "彩色射线，使用 10",
+      "item.power.colors_battery": "电池",
+      "item.power.colors_battery.description_1": "§9颜色",
+      "item.power.colors_battery.description_0": "§a带电元素:",
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色"
     }
   },
   "metadata": {
@@ -39747,10 +39949,6 @@
           },
           {
             "name": "RechargeStoneModule",
-            "children": []
-          },
-          {
-            "name": "ConvertersModule",
             "children": []
           },
           {
@@ -40015,6 +40213,10 @@
                       {
                         "name": "Shockwave",
                         "children": []
+                      },
+                      {
+                        "name": "Colors",
+                        "children": []
                       }
                     ]
                   }
@@ -40034,6 +40236,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "ConvertersModule",
+            "children": []
           }
         ]
       },
@@ -40486,6 +40692,10 @@
               },
               {
                 "name": "ShockwaveBattery",
+                "children": []
+              },
+              {
+                "name": "ColorsBattery",
                 "children": []
               }
             ]

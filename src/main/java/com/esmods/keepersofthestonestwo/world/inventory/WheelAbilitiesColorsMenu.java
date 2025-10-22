@@ -22,11 +22,11 @@ import java.util.Collections;
 
 import com.esmods.keepersofthestonestwo.init.PowerModMenus;
 
-public class KeepersBoxGUIPart5Menu extends AbstractContainerMenu implements PowerModMenus.MenuAccessor {
+public class WheelAbilitiesColorsMenu extends AbstractContainerMenu implements PowerModMenus.MenuAccessor {
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 18)
+			if (!this.containsKey(key) && this.size() >= 15)
 				return null;
 			return super.put(key, value);
 		}
@@ -42,8 +42,8 @@ public class KeepersBoxGUIPart5Menu extends AbstractContainerMenu implements Pow
 	private Entity boundEntity = null;
 	private BlockEntity boundBlockEntity = null;
 
-	public KeepersBoxGUIPart5Menu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(PowerModMenus.KEEPERS_BOX_GUI_PART_5.get(), id);
+	public WheelAbilitiesColorsMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(PowerModMenus.WHEEL_ABILITIES_COLORS.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(0);
