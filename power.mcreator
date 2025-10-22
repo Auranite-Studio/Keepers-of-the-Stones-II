@@ -34136,20 +34136,6 @@
       "path": "~/Elements/Colors"
     },
     {
-      "name": "SpearBrash",
-      "type": "tool",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spear_brash",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SpearBrashItem.java",
-          "src/main/resources/assets/power/models/item/spear_brash.json"
-        ]
-      },
-      "path": "~/Elements/Colors"
-    },
-    {
       "name": "WhiteBombKazhdyiTikPriPoliotieSnariada",
       "type": "procedure",
       "compiles": true,
@@ -34505,6 +34491,20 @@
         ]
       },
       "path": "~/ItemsAndBlocks/KeepersBox/GUI"
+    },
+    {
+      "name": "SpearBrush",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spear_brush",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpearBrushItem.java",
+          "src/main/resources/assets/power/models/item/spear_brush.json"
+        ]
+      },
+      "path": "~/Elements/Colors"
     }
   ],
   "variable_elements": [
@@ -36176,7 +36176,7 @@
       "~CUSTOM:FireArmor.boots"
     ],
     "ITEMS:minecraft:swords": [
-      "~CUSTOM:SpearBrash",
+      "~CUSTOM:SpearBrush",
       "~CUSTOM:HeatKnife",
       "~CUSTOM:DarkSword",
       "~CUSTOM:GoldenDustStaff",
@@ -37681,7 +37681,6 @@
       "effect.power.countdown": "Таймер",
       "effect.power.purification": "Очищение",
       "item.power.colors_stone": "Камень красок",
-      "item.power.spear_brash": "Spear Brash",
       "item.power.colors_armor_boots": "Ботинки мастера красок",
       "item.power.colors_armor_helmet": "Шлем мастера красок",
       "item.power.colors_armor_leggings": "Поножи мастера красок",
@@ -37693,7 +37692,8 @@
       "item.power.colors_battery": "Батарея",
       "item.power.colors_battery.description_1": "§9Краски",
       "item.power.colors_battery.description_0": "§aЗаряжена элементом:",
-      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Краски"
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Краски",
+      "item.power.spear_brush": "Кисть-копьё"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38788,7 +38788,6 @@
       "effect.power.countdown": "Countdown",
       "effect.power.purification": "Purification",
       "item.power.colors_stone": "Colors Stone",
-      "item.power.spear_brash": "Spear Brash",
       "item.power.colors_armor_boots": "Colors Boots",
       "item.power.colors_armor_helmet": "Colors Helmet",
       "item.power.colors_armor_leggings": "Colors Leggings",
@@ -38800,7 +38799,8 @@
       "item.power.colors_battery": "Battery",
       "item.power.colors_battery.description_1": "§9Colors",
       "item.power.colors_battery.description_0": "§aCharged with element:",
-      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors"
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
+      "item.power.spear_brush": "Spear Brush"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39882,7 +39882,6 @@
       "effect.power.countdown": "倒计时",
       "effect.power.purification": "净化;净化",
       "item.power.colors_stone": "颜色石",
-      "item.power.spear_brash": "Spear Brash",
       "item.power.colors_armor_boots": "颜色靴子",
       "item.power.colors_armor_helmet": "颜色头盔",
       "item.power.colors_armor_leggings": "颜色紧身裤",
@@ -39894,7 +39893,8 @@
       "item.power.colors_battery": "电池",
       "item.power.colors_battery.description_1": "§9颜色",
       "item.power.colors_battery.description_0": "§a带电元素:",
-      "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色"
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色",
+      "item.power.spear_brush": "矛刷"
     }
   },
   "metadata": {

@@ -1078,7 +1078,6 @@
   "effect.power.countdown": "倒计时",
   "effect.power.purification": "净化;净化",
   "item.power.colors_stone": "颜色石",
-  "item.power.spear_brash": "Spear Brash",
   "item.power.colors_armor_boots": "颜色靴子",
   "item.power.colors_armor_helmet": "颜色头盔",
   "item.power.colors_armor_leggings": "颜色紧身裤",
@@ -1090,5 +1089,6 @@
   "item.power.colors_battery": "电池",
   "item.power.colors_battery.description_1": "§9颜色",
   "item.power.colors_battery.description_0": "§a带电元素:",
-  "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色"
+  "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色",
+  "item.power.spear_brush": "矛刷"
 }

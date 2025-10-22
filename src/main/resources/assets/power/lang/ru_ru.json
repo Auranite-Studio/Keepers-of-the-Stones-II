@@ -1091,7 +1091,6 @@
   "effect.power.countdown": "Таймер",
   "effect.power.purification": "Очищение",
   "item.power.colors_stone": "Камень красок",
-  "item.power.spear_brash": "Spear Brash",
   "item.power.colors_armor_boots": "Ботинки мастера красок",
   "item.power.colors_armor_helmet": "Шлем мастера красок",
   "item.power.colors_armor_leggings": "Поножи мастера красок",
@@ -1103,5 +1102,6 @@
   "item.power.colors_battery": "Батарея",
   "item.power.colors_battery.description_1": "§9Краски",
   "item.power.colors_battery.description_0": "§aЗаряжена элементом:",
-  "gui.power.keepers_box_gui_part_5.tooltip_colors": "Краски"
+  "gui.power.keepers_box_gui_part_5.tooltip_colors": "Краски",
+  "item.power.spear_brush": "Кисть-копьё"
 }

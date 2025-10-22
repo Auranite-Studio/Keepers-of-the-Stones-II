@@ -20,7 +20,7 @@ import com.esmods.keepersofthestonestwo.procedures.RemoveForbiddenItemProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 @EventBusSubscriber
-public class SpearBrashItem extends SwordItem {
+public class SpearBrushItem extends SwordItem {
 	private static final Tier TOOL_TIER = new Tier() {
 		@Override
 		public int getUses() {
@@ -53,13 +53,13 @@ public class SpearBrashItem extends SwordItem {
 		}
 	};
 
-	public SpearBrashItem() {
+	public SpearBrushItem() {
 		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 10.25f, -2.8f)));
 	}
 
 	@SubscribeEvent
 	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
-		event.modify(PowerModItems.SPEAR_BRASH.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
+		event.modify(PowerModItems.SPEAR_BRUSH.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 
 	@Override
