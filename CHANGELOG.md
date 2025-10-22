@@ -8,8 +8,8 @@
 - *N/A*
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that allowed duplicating energium ingots
-- [Bugfix] Fixed incorrect version checking
+- [Bugfix] Fixed a bug that could cause shockwave and heat stones to be lost upon death.
+
 
 **Known issues**
 - *N/A*
