@@ -36,14 +36,15 @@ public class DetransformationTriggerProcedure {
 					CompoundTag data = entity.getPersistentData();
 					data.putString("PlayerCurrentAnimation", "power:animation.player.detransformation");
 					data.putBoolean("OverrideCurrentAnimation", false);
+					data.putBoolean("FirstPersonAnimation", true);
 				} else {
-					PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new PlayPlayerAnimationMessage(entity.getId(), "power:animation.player.detransformation", false));
+					PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new PlayPlayerAnimationMessage(entity.getId(), "power:animation.player.detransformation", false, true));
 				}
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.detransform_anim_trigger = false;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 	}

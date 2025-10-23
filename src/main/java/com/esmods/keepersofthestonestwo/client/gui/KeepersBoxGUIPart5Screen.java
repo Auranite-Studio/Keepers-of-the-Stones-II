@@ -26,20 +26,20 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_keepers_box_button_up;
-	ImageButton imagebutton_keepers_box_button_down_locked;
-	ImageButton imagebutton_coming_element3;
-	ImageButton imagebutton_coming_element4;
-	ImageButton imagebutton_coming_element5;
-	ImageButton imagebutton_coming_element6;
-	ImageButton imagebutton_coming_element7;
-	ImageButton imagebutton_coming_element8;
-	ImageButton imagebutton_coming_element9;
-	ImageButton imagebutton_coming_element10;
-	ImageButton imagebutton_coming_element11;
-	ImageButton imagebutton_heat_element;
-	ImageButton imagebutton_shockwave_element;
-	ImageButton imagebutton_colors_element;
+	private ImageButton imagebutton_keepers_box_button_up;
+	private ImageButton imagebutton_keepers_box_button_down_locked;
+	private ImageButton imagebutton_coming_element3;
+	private ImageButton imagebutton_coming_element4;
+	private ImageButton imagebutton_coming_element5;
+	private ImageButton imagebutton_coming_element6;
+	private ImageButton imagebutton_coming_element7;
+	private ImageButton imagebutton_coming_element8;
+	private ImageButton imagebutton_coming_element9;
+	private ImageButton imagebutton_coming_element10;
+	private ImageButton imagebutton_coming_element11;
+	private ImageButton imagebutton_heat_element;
+	private ImageButton imagebutton_shockwave_element;
+	private ImageButton imagebutton_colors_element;
 
 	public KeepersBoxGUIPart5Screen(KeepersBoxGUIPart5Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

@@ -74,7 +74,7 @@ public class RainSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("rain_ability_2")) {
@@ -95,7 +95,7 @@ public class RainSpecialAttackProcedure {
 							{
 								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 45;
-								_vars.syncPlayerVariables(entity);
+								_vars.markSyncDirty();
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
@@ -127,7 +127,7 @@ public class RainSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 5;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				} else {
 					if (world instanceof Level _level) {
@@ -146,7 +146,7 @@ public class RainSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 5;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				}
 			}

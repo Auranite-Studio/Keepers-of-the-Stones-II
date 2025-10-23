@@ -59,7 +59,7 @@ public class EarthSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
@@ -84,7 +84,7 @@ public class EarthSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
@@ -110,7 +110,7 @@ public class EarthSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
@@ -136,7 +136,7 @@ public class EarthSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
@@ -161,7 +161,7 @@ public class EarthSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
@@ -214,7 +214,7 @@ public class EarthSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					success = false;
 				}
@@ -234,7 +234,7 @@ public class EarthSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 70;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

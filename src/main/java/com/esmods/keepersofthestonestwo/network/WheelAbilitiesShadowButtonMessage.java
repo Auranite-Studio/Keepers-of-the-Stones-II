@@ -15,16 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.PowerRuneAbilityProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack71Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack70Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack69Procedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber

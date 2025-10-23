@@ -11,29 +11,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.CharacteristicsCardGUIMenu;
-import com.esmods.keepersofthestonestwo.procedures.SpeedInfoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.ResistanceInfoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RankSCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RankDCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RankCCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RankBCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RankACheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.NameInfoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LevelInfoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.HasteInfoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.ExpBar4Procedure;
-import com.esmods.keepersofthestonestwo.procedures.ExpBar3Procedure;
-import com.esmods.keepersofthestonestwo.procedures.ExpBar2Procedure;
-import com.esmods.keepersofthestonestwo.procedures.ExpBar1Procedure;
-import com.esmods.keepersofthestonestwo.procedures.DamageInfoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.BarExp7Procedure;
-import com.esmods.keepersofthestonestwo.procedures.BarExp6Procedure;
-import com.esmods.keepersofthestonestwo.procedures.BarExp5Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Bar9Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Bar8Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Bar12Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Bar11Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Bar10Procedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
 public class CharacteristicsCardGUIScreen extends AbstractContainerScreen<CharacteristicsCardGUIMenu> implements PowerModScreens.ScreenAccessor {

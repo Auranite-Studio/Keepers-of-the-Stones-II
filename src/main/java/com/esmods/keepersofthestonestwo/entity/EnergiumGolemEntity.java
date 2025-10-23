@@ -36,14 +36,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.WalkingAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SpintingAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.IdleAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemShootAnimSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriObnovlieniiTikaSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriGibieliSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemAttackAnimSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.DeathAnimationSyncProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 
 public class EnergiumGolemEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_attack_anim_sync = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
@@ -145,11 +138,6 @@ public class EnergiumGolemEntity extends Monster {
 
 	@Override
 	public boolean ignoreExplosion(Explosion explosion) {
-		return true;
-	}
-
-	@Override
-	public boolean fireImmune() {
 		return true;
 	}
 

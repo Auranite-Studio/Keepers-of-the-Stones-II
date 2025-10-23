@@ -13,14 +13,14 @@ public class SpinRuneUseProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.green_rune_slot = itemstack.copy();
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 			itemstack.shrink(1);
 			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.rune_ovelay_display = 100;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem() == ItemStack.EMPTY.getItem())) {
@@ -29,14 +29,14 @@ public class SpinRuneUseProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.green_rune_slot = itemstack.copy();
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 				itemstack.shrink(1);
 				if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.rune_ovelay_display = 100;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				}
 			}

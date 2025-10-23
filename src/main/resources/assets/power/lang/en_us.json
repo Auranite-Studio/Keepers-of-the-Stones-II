@@ -1089,7 +1089,7 @@
   "item.power.cursed_world.description_0": "§7World:",
   "effect.power.dash": "Dash",
   "effect.power.countdown": "Countdown",
-  "effect.power.purification": "Purification",
+  "effect.power.purification": "Clearing",
   "item.power.colors_stone": "Colors Stone",
   "item.power.colors_armor_boots": "Colors Boots",
   "item.power.colors_armor_helmet": "Colors Helmet",
@@ -1103,5 +1103,6 @@
   "item.power.colors_battery.description_1": "§9Colors",
   "item.power.colors_battery.description_0": "§aCharged with element:",
   "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
-  "item.power.spear_brush": "Spear Brush"
+  "item.power.spear_brush": "Spear Brash",
+  "item.power.energium_upgrade_smithing_template.description_1": ""
 }

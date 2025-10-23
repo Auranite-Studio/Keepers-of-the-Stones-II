@@ -8,39 +8,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
-import com.esmods.keepersofthestonestwo.client.particle.VacuumParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.TimeStopParticle;
-import com.esmods.keepersofthestonestwo.client.particle.TimeSlowParticle;
-import com.esmods.keepersofthestonestwo.client.particle.TimeFastParticle;
-import com.esmods.keepersofthestonestwo.client.particle.TeleportationParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.TechnobarrierParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.SunParticlesParticle;
-import com.esmods.keepersofthestonestwo.client.particle.StarParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.ShockWavesParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.RunesOfDestructionParticle;
-import com.esmods.keepersofthestonestwo.client.particle.RunesOfCreationParticle;
-import com.esmods.keepersofthestonestwo.client.particle.RedMagnetParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.ProtectionParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.PoisonParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.PlagueParticleTwoParticle;
-import com.esmods.keepersofthestonestwo.client.particle.PlagueParticleThreeParticle;
-import com.esmods.keepersofthestonestwo.client.particle.PlagueParticleOneParticle;
-import com.esmods.keepersofthestonestwo.client.particle.PlagueParticleFourParticle;
-import com.esmods.keepersofthestonestwo.client.particle.MushroomSporesParticle;
-import com.esmods.keepersofthestonestwo.client.particle.MoonParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.MistParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.MindReactionParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.MercuryParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.LightningParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.LightSparkleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.InsectsParticle;
-import com.esmods.keepersofthestonestwo.client.particle.FeatherParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.EnergySparkParticle;
-import com.esmods.keepersofthestonestwo.client.particle.EnergiumGolemCoreAttackParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.BlueMagnetParticleParticle;
-import com.esmods.keepersofthestonestwo.client.particle.BloodSplashParticle;
-import com.esmods.keepersofthestonestwo.client.particle.BassBoomParticle;
-import com.esmods.keepersofthestonestwo.client.particle.AmberPowerParticle;
+import com.esmods.keepersofthestonestwo.client.particle.*;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class PowerModParticles {

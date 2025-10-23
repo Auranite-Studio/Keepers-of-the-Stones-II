@@ -18,7 +18,7 @@ import com.google.gson.Gson;
 import com.esmods.keepersofthestonestwo.PowerModPlayerAnimationAPI;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record LoadPlayerAnimationMessage(String animationfile) implements CustomPacketPayload {
 	public static final Type<LoadPlayerAnimationMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "load_player_animation"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, LoadPlayerAnimationMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, LoadPlayerAnimationMessage message) -> {

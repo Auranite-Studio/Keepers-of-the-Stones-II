@@ -19,7 +19,7 @@ public class LevelUpSetProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.level_exp = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).max_level_exp;
-						_vars.syncPlayerVariables(entityiterator);
+						_vars.markSyncDirty();
 					}
 					{
 						final String _success = ("Level for " + entityiterator.getDisplayName().getString() + " has been raised to " + Math.round(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).level + 1));

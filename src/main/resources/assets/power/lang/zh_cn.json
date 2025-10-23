@@ -1090,5 +1090,6 @@
   "item.power.colors_battery.description_1": "§9颜色",
   "item.power.colors_battery.description_0": "§a带电元素:",
   "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色",
-  "item.power.spear_brush": "矛刷"
+  "item.power.spear_brush": "矛刷",
+  "item.power.energium_upgrade_smithing_template.description_1": ""
 }

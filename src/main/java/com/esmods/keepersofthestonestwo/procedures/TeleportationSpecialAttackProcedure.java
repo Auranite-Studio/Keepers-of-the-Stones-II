@@ -86,7 +86,7 @@ public class TeleportationSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 25;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("checkpoint_create")) {
@@ -94,7 +94,7 @@ public class TeleportationSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.teleporting_effect = 40;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 				{
 					Entity _ent = entity;
@@ -113,7 +113,7 @@ public class TeleportationSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("checkpoint_tp")) {
@@ -121,7 +121,7 @@ public class TeleportationSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.teleporting_effect = 40;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 				{
 					Entity _ent = entity;
@@ -158,7 +158,7 @@ public class TeleportationSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("create_portal_blue")) {
@@ -166,13 +166,10 @@ public class TeleportationSpecialAttackProcedure {
 				if (!PowerModVariables.MapVariables.get(world).blue_portal_placed) {
 					world.setBlock(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), PowerModBlocks.BLUE_PORTAL.get().defaultBlockState(), 3);
 					PowerModVariables.MapVariables.get(world).blue_portal_placed = true;
-					PowerModVariables.MapVariables.get(world).syncData(world);
 					PowerModVariables.MapVariables.get(world).bpX = entity.getX();
-					PowerModVariables.MapVariables.get(world).syncData(world);
 					PowerModVariables.MapVariables.get(world).bpY = entity.getY();
-					PowerModVariables.MapVariables.get(world).syncData(world);
 					PowerModVariables.MapVariables.get(world).bpZ = entity.getZ();
-					PowerModVariables.MapVariables.get(world).syncData(world);
+					PowerModVariables.MapVariables.get(world).markSyncDirty();
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1);
@@ -183,7 +180,7 @@ public class TeleportationSpecialAttackProcedure {
 				} else {
 					world.setBlock(BlockPos.containing(PowerModVariables.MapVariables.get(world).bpX, PowerModVariables.MapVariables.get(world).bpY, PowerModVariables.MapVariables.get(world).bpZ), Blocks.AIR.defaultBlockState(), 3);
 					PowerModVariables.MapVariables.get(world).blue_portal_placed = false;
-					PowerModVariables.MapVariables.get(world).syncData(world);
+					PowerModVariables.MapVariables.get(world).markSyncDirty();
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1);
@@ -195,7 +192,7 @@ public class TeleportationSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("create_portal_orange")) {
@@ -203,13 +200,10 @@ public class TeleportationSpecialAttackProcedure {
 				if (!PowerModVariables.MapVariables.get(world).orange_portal_placed) {
 					world.setBlock(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), PowerModBlocks.ORANGE_PORTAL.get().defaultBlockState(), 3);
 					PowerModVariables.MapVariables.get(world).orange_portal_placed = true;
-					PowerModVariables.MapVariables.get(world).syncData(world);
 					PowerModVariables.MapVariables.get(world).opX = entity.getX();
-					PowerModVariables.MapVariables.get(world).syncData(world);
 					PowerModVariables.MapVariables.get(world).opY = entity.getY();
-					PowerModVariables.MapVariables.get(world).syncData(world);
 					PowerModVariables.MapVariables.get(world).opZ = entity.getZ();
-					PowerModVariables.MapVariables.get(world).syncData(world);
+					PowerModVariables.MapVariables.get(world).markSyncDirty();
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1);
@@ -220,7 +214,7 @@ public class TeleportationSpecialAttackProcedure {
 				} else {
 					world.setBlock(BlockPos.containing(PowerModVariables.MapVariables.get(world).opX, PowerModVariables.MapVariables.get(world).opY, PowerModVariables.MapVariables.get(world).opZ), Blocks.AIR.defaultBlockState(), 3);
 					PowerModVariables.MapVariables.get(world).orange_portal_placed = false;
-					PowerModVariables.MapVariables.get(world).syncData(world);
+					PowerModVariables.MapVariables.get(world).markSyncDirty();
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1);
@@ -232,7 +226,7 @@ public class TeleportationSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

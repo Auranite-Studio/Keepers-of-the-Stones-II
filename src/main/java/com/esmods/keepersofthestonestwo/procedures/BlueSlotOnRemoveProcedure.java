@@ -22,12 +22,8 @@ public class BlueSlotOnRemoveProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.blue_rune_slot = ItemStack.EMPTY.copy();
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.max_power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power - 10;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).blue_rune_slot.getItem() == PowerModItems.EXTRA_STAR_POINTS_RUNE_2.get()) {
@@ -39,12 +35,8 @@ public class BlueSlotOnRemoveProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.blue_rune_slot = ItemStack.EMPTY.copy();
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.max_power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power - 15;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).blue_rune_slot.getItem() == PowerModItems.EXTRA_STAR_POINTS_RUNE_3.get()) {
@@ -56,12 +48,8 @@ public class BlueSlotOnRemoveProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.blue_rune_slot = ItemStack.EMPTY.copy();
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.max_power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power - 20;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 	}

@@ -12,7 +12,7 @@ public class Attack201Procedure {
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 			_vars.ability = "colors_ability_1";
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();
