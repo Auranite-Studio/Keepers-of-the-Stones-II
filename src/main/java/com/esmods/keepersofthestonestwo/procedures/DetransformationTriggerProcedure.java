@@ -36,9 +36,9 @@ public class DetransformationTriggerProcedure {
 					CompoundTag data = entity.getPersistentData();
 					data.putString("PlayerCurrentAnimation", "power:animation.player.detransformation");
 					data.putBoolean("OverrideCurrentAnimation", false);
-					data.putBoolean("FirstPersonAnimation", true);
+					data.putBoolean("FirstPersonAnimation", false);
 				} else {
-					PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new PlayPlayerAnimationMessage(entity.getId(), "power:animation.player.detransformation", false, true));
+					PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new PlayPlayerAnimationMessage(entity.getId(), "power:animation.player.detransformation", false, false));
 				}
 			}
 			{
