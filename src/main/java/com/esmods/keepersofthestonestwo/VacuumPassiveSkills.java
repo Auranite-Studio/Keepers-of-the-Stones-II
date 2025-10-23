@@ -1,4 +1,4 @@
-package your.modid.common.event;
+package com.esmods.keepersofthestonestwo;
 
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import net.minecraft.server.level.ServerPlayer;
