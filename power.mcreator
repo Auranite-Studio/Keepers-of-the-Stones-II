@@ -34505,6 +34505,19 @@
         ]
       },
       "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "colors_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ColorsPassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     }
   ],
   "variable_elements": [
