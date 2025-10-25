@@ -40873,7 +40873,9 @@
     "license": "GNU General Public License version 3 (GPLv3)",
     "serverSideOnly": false,
     "modPicture": "logo",
-    "requiredMods": [],
+    "requiredMods": [
+      "curios"
+    ],
     "dependencies": [
       "bettercombat",
       "patchouli"
@@ -40881,7 +40883,9 @@
     "dependants": [
       "cpapi"
     ],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "curios_api"
+    ],
     "currentGenerator": "neoforge-1.21.1",
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"

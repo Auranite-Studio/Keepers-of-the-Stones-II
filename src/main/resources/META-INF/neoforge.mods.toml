@@ -35,7 +35,19 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     ordering="AFTER"
     side="BOTH"
 
+[[dependencies.power]]
+    modId="curios"
+    type="required"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
+[[dependencies.power]]
+    modId="curios_api"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 [[dependencies.power]]
     modId="bettercombat"
     type="optional"
