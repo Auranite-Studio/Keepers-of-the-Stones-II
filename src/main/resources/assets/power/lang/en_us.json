@@ -1104,5 +1104,6 @@
   "item.power.colors_battery.description_0": "§aCharged with element:",
   "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
   "item.power.spear_brush": "Spear Brash",
-  "item.power.energium_upgrade_smithing_template.description_1": ""
+  "item.power.energium_upgrade_smithing_template.description_1": "",
+  "curios.identifier.rune_slot": "Rune"
 }

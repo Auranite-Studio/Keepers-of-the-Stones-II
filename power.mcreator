@@ -34518,6 +34518,21 @@
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "RuneSlot",
+      "type": "curiosslot",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rune_slot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/curios/slots/rune_slot.json",
+          "src/main/resources/data/curios/tags/item/rune_slot.json",
+          "src/main/resources/data/power/curios/entities/rune_slot.json"
+        ]
+      },
+      "path": "~/Modules/RunesSystem2"
     }
   ],
   "variable_elements": [
@@ -37707,7 +37722,8 @@
       "item.power.colors_battery.description_0": "§aЗаряжена элементом:",
       "gui.power.keepers_box_gui_part_5.tooltip_colors": "Краски",
       "item.power.spear_brush": "Кисть-копьё",
-      "item.power.energium_upgrade_smithing_template.description_1": ""
+      "item.power.energium_upgrade_smithing_template.description_1": "",
+      "curios.identifier.rune_slot": "Rune"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38815,7 +38831,8 @@
       "item.power.colors_battery.description_0": "§aCharged with element:",
       "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
       "item.power.spear_brush": "Spear Brash",
-      "item.power.energium_upgrade_smithing_template.description_1": ""
+      "item.power.energium_upgrade_smithing_template.description_1": "",
+      "curios.identifier.rune_slot": "Rune"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39910,7 +39927,8 @@
       "item.power.colors_battery.description_0": "§a带电元素:",
       "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色",
       "item.power.spear_brush": "矛刷",
-      "item.power.energium_upgrade_smithing_template.description_1": ""
+      "item.power.energium_upgrade_smithing_template.description_1": "",
+      "curios.identifier.rune_slot": "Rune"
     }
   },
   "metadata": {
@@ -40894,5 +40912,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500343402
+  "mcreatorVersion": 202500344100
 }

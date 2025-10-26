@@ -1,0 +1,9 @@
+{
+  "_fv": 79,
+  "_type": "curiosslot",
+  "definition": {
+    "texture": "rune_slot.png",
+    "name": "Rune",
+    "amount": 3
+  }
+}
