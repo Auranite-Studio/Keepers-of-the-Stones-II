@@ -34000,19 +34000,6 @@
       "path": "~/Modules/ElementalPassiveSkills"
     },
     {
-      "name": "Clearing",
-      "type": "potioneffect",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "clearing",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/potion/ClearingMobEffect.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
-    },
-    {
       "name": "FormPassiveSkills",
       "type": "code",
       "compiles": true,
@@ -34086,6 +34073,448 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/ShockwavePassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "Purification",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purification",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/PurificationMobEffect.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
+    },
+    {
+      "name": "ColorsStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/colors_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ColorsStoneItem.java",
+          "src/main/resources/assets/power/models/item/colors_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsMaster",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/ColorsMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/colors_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/colors_armor_boots.json",
+          "src/main/resources/assets/power/models/item/colors_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/colors_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ColorsArmorItem.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "WhiteBombKazhdyiTikPriPoliotieSnariada",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_bomb_kazhdyi_tik_pri_poliotie_snariada",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WhiteBombKazhdyiTikPriPoliotieSnariadaProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "WhiteBomb",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_bomb",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/WhiteBombEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/WhiteBombRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsElementGet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_element_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsElementGetProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsStoneUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_stone_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsStoneUseProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsMasterStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsMasterStartProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsMasterEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_master_end",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsMasterEndProcedure.java"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsSpecialAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_special_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsSpecialAttackProcedure.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesColors",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_colors",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesColorsScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesColorsMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesColorsButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "Attack201",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_201",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack201Procedure.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "Attack202",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_202",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack202Procedure.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "Attack203",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_203",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack203Procedure.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Colors"
+    },
+    {
+      "name": "ColorsBattery",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/colors_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ColorsBatteryItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/ColorsBattery"
+    },
+    {
+      "name": "ColorsBatteryUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_battery_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsBatteryUseProcedure.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/ColorsBattery"
+    },
+    {
+      "name": "ColorsStoneCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colors_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ColorsStoneCheckProcedure.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
+    },
+    {
+      "name": "SpearBrush",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spear_brush",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpearBrushItem.java",
+          "src/main/resources/assets/power/models/item/spear_brush.json"
+        ]
+      },
+      "path": "~/Elements/Colors"
+    },
+    {
+      "name": "ColorsPassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "colors_passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ColorsPassiveSkills.java"
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills"
@@ -34805,6 +35234,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "colors_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -35241,7 +35676,8 @@
       "CUSTOM:SpiritStone",
       "CUSTOM:GoldenDustStone",
       "CUSTOM:HeatStone",
-      "CUSTOM:ShockwaveStone"
+      "CUSTOM:ShockwaveStone",
+      "CUSTOM:ColorsStone"
     ],
     "ITEMS:mod:rune/third_level": [
       "CUSTOM:ExtraStarPointsRune3",
@@ -35476,7 +35912,11 @@
       "CUSTOM:ShockwaveArmor.helmet",
       "CUSTOM:ShockwaveArmor.body",
       "CUSTOM:ShockwaveArmor.legs",
-      "CUSTOM:ShockwaveArmor.boots"
+      "CUSTOM:ShockwaveArmor.boots",
+      "CUSTOM:ColorsArmor.helmet",
+      "CUSTOM:ColorsArmor.body",
+      "CUSTOM:ColorsArmor.legs",
+      "CUSTOM:ColorsArmor.boots"
     ],
     "BLOCKS:mod:keepers_boxes": [
       "CUSTOM:KeepersBox"
@@ -35517,6 +35957,7 @@
       "CUSTOM:BlackHole"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:ColorsArmor.helmet",
       "~CUSTOM:ShockwaveArmor.helmet",
       "~CUSTOM:HeatArmor.helmet",
       "~CUSTOM:FilthArmor.helmet",
@@ -35574,6 +36015,7 @@
       "~CUSTOM:FireArmor.helmet"
     ],
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:ColorsArmor.body",
       "~CUSTOM:ShockwaveArmor.body",
       "~CUSTOM:HeatArmor.body",
       "~CUSTOM:FilthArmor.body",
@@ -35631,6 +36073,7 @@
       "~CUSTOM:FireArmor.body"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:ColorsArmor.legs",
       "~CUSTOM:ShockwaveArmor.legs",
       "~CUSTOM:HeatArmor.legs",
       "~CUSTOM:FilthArmor.legs",
@@ -35688,6 +36131,7 @@
       "~CUSTOM:FireArmor.legs"
     ],
     "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:ColorsArmor.boots",
       "~CUSTOM:ShockwaveArmor.boots",
       "~CUSTOM:HeatArmor.boots",
       "~CUSTOM:FilthArmor.boots",
@@ -35745,6 +36189,7 @@
       "~CUSTOM:FireArmor.boots"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:SpearBrush",
       "~CUSTOM:HeatKnife",
       "~CUSTOM:DarkSword",
       "~CUSTOM:GoldenDustStaff",
@@ -35999,6 +36444,7 @@
       "MindStone",
       "HeatStone",
       "ShockwaveStone",
+      "ColorsStone",
       "GoldenDustStone",
       "DarknessStone"
     ],
@@ -36053,7 +36499,8 @@
       "HeatBattery",
       "ShockwaveBattery",
       "GoldenDustBattery",
-      "DarknessBattery"
+      "DarknessBattery",
+      "ColorsBattery"
     ],
     "CUSTOM:Items": [
       "LuckCoin",
@@ -37245,7 +37692,22 @@
       "item.power.cursed_world.description_0": "§7Мир:",
       "effect.power.dash": "Рывок",
       "effect.power.countdown": "Таймер",
-      "effect.power.clearing": "Очищение"
+      "effect.power.purification": "Очищение",
+      "item.power.colors_stone": "Камень красок",
+      "item.power.colors_armor_boots": "Ботинки мастера красок",
+      "item.power.colors_armor_helmet": "Шлем мастера красок",
+      "item.power.colors_armor_leggings": "Поножи мастера красок",
+      "item.power.colors_armor_chestplate": "Нагрудник мастера красок",
+      "effect.power.colors_master": "Мастер красок",
+      "gui.power.wheel_abilities_colors.tooltip_colored_aura_uses_70": "Аура красок, расходует 70",
+      "gui.power.wheel_abilities_colors.tooltip_white_bomb_uses_40": "Белая бомба, расходует 40",
+      "gui.power.wheel_abilities_colors.tooltip_color_ray_uses_10": "Луч красок, расходует 10",
+      "item.power.colors_battery": "Батарея",
+      "item.power.colors_battery.description_1": "§9Краски",
+      "item.power.colors_battery.description_0": "§aЗаряжена элементом:",
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Краски",
+      "item.power.spear_brush": "Кисть-копьё",
+      "item.power.energium_upgrade_smithing_template.description_1": ""
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38338,7 +38800,22 @@
       "item.power.cursed_world.description_0": "§7World:",
       "effect.power.dash": "Dash",
       "effect.power.countdown": "Countdown",
-      "effect.power.clearing": "Clearing"
+      "effect.power.purification": "Clearing",
+      "item.power.colors_stone": "Colors Stone",
+      "item.power.colors_armor_boots": "Colors Boots",
+      "item.power.colors_armor_helmet": "Colors Helmet",
+      "item.power.colors_armor_leggings": "Colors Leggings",
+      "item.power.colors_armor_chestplate": "Colors Chestplate",
+      "effect.power.colors_master": "Master of Colors",
+      "gui.power.wheel_abilities_colors.tooltip_colored_aura_uses_70": "Colored aura, uses 70",
+      "gui.power.wheel_abilities_colors.tooltip_white_bomb_uses_40": "White bomb, uses 40",
+      "gui.power.wheel_abilities_colors.tooltip_color_ray_uses_10": "Color ray, uses 10",
+      "item.power.colors_battery": "Battery",
+      "item.power.colors_battery.description_1": "§9Colors",
+      "item.power.colors_battery.description_0": "§aCharged with element:",
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
+      "item.power.spear_brush": "Spear Brash",
+      "item.power.energium_upgrade_smithing_template.description_1": ""
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39418,26 +39895,26 @@
       "item.power.cursed_world.description_0": "§7世界:",
       "effect.power.dash": "那个混蛋",
       "effect.power.countdown": "倒计时",
-      "effect.power.clearing": "结算"
+      "effect.power.purification": "净化;净化",
+      "item.power.colors_stone": "颜色石",
+      "item.power.colors_armor_boots": "颜色靴子",
+      "item.power.colors_armor_helmet": "颜色头盔",
+      "item.power.colors_armor_leggings": "颜色紧身裤",
+      "item.power.colors_armor_chestplate": "颜色胸板",
+      "effect.power.colors_master": "色彩大师",
+      "gui.power.wheel_abilities_colors.tooltip_colored_aura_uses_70": "彩色光环，使用 70",
+      "gui.power.wheel_abilities_colors.tooltip_white_bomb_uses_40": "白色炸弹，使用 40",
+      "gui.power.wheel_abilities_colors.tooltip_color_ray_uses_10": "彩色射线，使用 10",
+      "item.power.colors_battery": "电池",
+      "item.power.colors_battery.description_1": "§9颜色",
+      "item.power.colors_battery.description_0": "§a带电元素:",
+      "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色",
+      "item.power.spear_brush": "矛刷",
+      "item.power.energium_upgrade_smithing_template.description_1": ""
     }
   },
   "metadata": {
     "files": [
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
-      "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/java/com/esmods/keepersofthestonestwo/network/LoadPlayerAnimationMessage.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationMixin.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/PowerMod.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/network/PowerModVariables.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/network/PlayPlayerAnimationMessage.java",
-      "src/main/resources/power.mixins.json",
-      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/PowerModPlayerAnimationAPI.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/resources/assets/power/sounds.json",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModConfigs.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModPotions.java",
       "src/main/java/com/esmods/keepersofthestonestwo/network/MenuStateUpdateMessage.java",
@@ -39454,12 +39931,35 @@
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBlockEntities.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModItems.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntityRenderers.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntities.java"
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntities.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/LoadPlayerAnimationMessage.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/PowerMod.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/PowerModVariables.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/PlayPlayerAnimationMessage.java",
+      "src/main/resources/power.mixins.json",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/PowerModPlayerAnimationAPI.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/CameraAccessor.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/LevelRendererMixin.java",
+      "src/main/resources/assets/power/sounds.json",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java"
     ]
   },
   "foldersRoot": {
     "name": "~",
     "children": [
+      {
+        "name": "Configs",
+        "children": []
+      },
       {
         "name": "Modules",
         "children": [
@@ -39469,10 +39969,6 @@
           },
           {
             "name": "RechargeStoneModule",
-            "children": []
-          },
-          {
-            "name": "ConvertersModule",
             "children": []
           },
           {
@@ -39737,6 +40233,10 @@
                       {
                         "name": "Shockwave",
                         "children": []
+                      },
+                      {
+                        "name": "Colors",
+                        "children": []
                       }
                     ]
                   }
@@ -39756,6 +40256,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "ConvertersModule",
+            "children": []
           }
         ]
       },
@@ -39985,6 +40489,10 @@
           {
             "name": "Shockwave",
             "children": []
+          },
+          {
+            "name": "Colors",
+            "children": []
           }
         ]
       },
@@ -40205,6 +40713,10 @@
               {
                 "name": "ShockwaveBattery",
                 "children": []
+              },
+              {
+                "name": "ColorsBattery",
+                "children": []
               }
             ]
           },
@@ -40337,10 +40849,6 @@
         ]
       },
       {
-        "name": "Configs",
-        "children": []
-      },
-      {
         "name": "ProfessionsAndTrades",
         "children": []
       },
@@ -40358,8 +40866,8 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.3.0.2",
-    "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
+    "version": "1.3.0.3",
+    "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds more new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
     "license": "GNU General Public License version 3 (GPLv3)",
@@ -40378,5 +40886,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500334500
+  "mcreatorVersion": 202500344100
 }

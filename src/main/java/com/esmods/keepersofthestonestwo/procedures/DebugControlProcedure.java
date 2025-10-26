@@ -16,7 +16,7 @@ public class DebugControlProcedure {
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 			_vars.debug = BoolArgumentType.getBool(arguments, "debug_logic");
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 		{
 			final String _success = ("Debug mode set is: " + entity.getData(PowerModVariables.PLAYER_VARIABLES).debug);

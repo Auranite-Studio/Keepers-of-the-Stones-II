@@ -7,9 +7,8 @@ import net.neoforged.fml.ModList;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
-import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(modid = PowerMod.MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PowerModConfigs {
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {

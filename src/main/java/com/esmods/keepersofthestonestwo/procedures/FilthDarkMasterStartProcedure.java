@@ -32,7 +32,7 @@ public class FilthDarkMasterStartProcedure {
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 			_vars.active_power = true;
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 0) {
 			{
@@ -82,7 +82,7 @@ public class FilthDarkMasterStartProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.element_name_first = "filth";
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 1) {
 			{
@@ -110,7 +110,7 @@ public class FilthDarkMasterStartProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.element_name_second = "filth";
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 2) {
 			{
@@ -127,13 +127,13 @@ public class FilthDarkMasterStartProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.element_name_third = "filth";
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.WATER_KATANA.get()).copy();
-			_setstack.setCount(1);
-			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+			ItemStack _setstack36 = new ItemStack(PowerModItems.WATER_KATANA.get()).copy();
+			_setstack36.setCount(1);
+			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack36);
 			if (_entity instanceof Player _player)
 				_player.getInventory().setChanged();
 		}

@@ -18,6 +18,7 @@ import net.minecraft.core.BlockPos;
 import com.esmods.keepersofthestonestwo.procedures.ShockwaveElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart4Procedure;
 import com.esmods.keepersofthestonestwo.procedures.HeatElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ColorsElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber
@@ -53,13 +54,17 @@ public record KeepersBoxGUIPart5ButtonMessage(int buttonID, int x, int y, int z)
 
 			KBtoPart4Procedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 12) {
+		if (buttonID == 11) {
 
 			HeatElementGetProcedure.execute(world, entity);
 		}
-		if (buttonID == 13) {
+		if (buttonID == 12) {
 
 			ShockwaveElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 13) {
+
+			ColorsElementGetProcedure.execute(world, entity);
 		}
 	}
 

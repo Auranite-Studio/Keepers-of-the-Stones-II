@@ -4,6 +4,8 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.common.util.INBTSerializable;
 import net.neoforged.neoforge.attachment.AttachmentType;
@@ -16,7 +18,6 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -43,118 +44,140 @@ public class PowerModVariables {
 		PowerMod.addNetworkMessage(PlayerVariablesSyncMessage.TYPE, PlayerVariablesSyncMessage.STREAM_CODEC, PlayerVariablesSyncMessage::handleData);
 	}
 
-	@EventBusSubscriber
-	public static class EventBusVariableHandlers {
-		@SubscribeEvent
-		public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-			if (event.getEntity() instanceof ServerPlayer player)
-				player.getData(PLAYER_VARIABLES).syncPlayerVariables(event.getEntity());
-		}
+	@SubscribeEvent
+	public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
+		if (event.getEntity() instanceof ServerPlayer player)
+			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+	}
 
-		@SubscribeEvent
-		public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-			if (event.getEntity() instanceof ServerPlayer player)
-				player.getData(PLAYER_VARIABLES).syncPlayerVariables(event.getEntity());
-		}
+	@SubscribeEvent
+	public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
+		if (event.getEntity() instanceof ServerPlayer player)
+			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+	}
 
-		@SubscribeEvent
-		public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (event.getEntity() instanceof ServerPlayer player)
-				player.getData(PLAYER_VARIABLES).syncPlayerVariables(event.getEntity());
-		}
+	@SubscribeEvent
+	public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
+		if (event.getEntity() instanceof ServerPlayer player)
+			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+	}
 
-		@SubscribeEvent
-		public static void clonePlayer(PlayerEvent.Clone event) {
-			PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
-			PlayerVariables clone = new PlayerVariables();
-			clone.ability = original.ability;
-			clone.element_name_first = original.element_name_first;
-			clone.element_name_second = original.element_name_second;
-			clone.element_name_third = original.element_name_third;
-			clone.fake_element_name_first = original.fake_element_name_first;
-			clone.fake_element_name_second = original.fake_element_name_second;
-			clone.fake_element_name_third = original.fake_element_name_third;
-			clone.max_power = original.max_power;
-			clone.recharge_timer = original.recharge_timer;
-			clone.master_effect_duration = original.master_effect_duration;
-			clone.selected = original.selected;
-			clone.active_battery = original.active_battery;
-			clone.debug = original.debug;
-			clone.helmet = original.helmet;
-			clone.chestplate = original.chestplate;
-			clone.leggings = original.leggings;
-			clone.boots = original.boots;
-			clone.unlock_keepers_box = original.unlock_keepers_box;
-			clone.level = original.level;
-			clone.level_exp = original.level_exp;
-			clone.base_damage_by_lvl = original.base_damage_by_lvl;
-			clone.max_level_exp = original.max_level_exp;
-			clone.resistance_char = original.resistance_char;
-			clone.speed_char = original.speed_char;
-			clone.haste_char = original.haste_char;
-			clone.jump_char = original.jump_char;
-			clone.rank = original.rank;
-			clone.mind_used = original.mind_used;
-			clone.blue_rune_slot = original.blue_rune_slot;
-			clone.red_rune_slot = original.red_rune_slot;
-			clone.green_rune_slot = original.green_rune_slot;
-			if (!event.isWasDeath()) {
-				clone.teleporting_effect = original.teleporting_effect;
-				clone.abilities_timer = original.abilities_timer;
-				clone.fake_element_name_first_timer = original.fake_element_name_first_timer;
-				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
-				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
-				clone.power = original.power;
-				clone.powerTimer = original.powerTimer;
-				clone.mergers = original.mergers;
-				clone.power_recovery_multiplier = original.power_recovery_multiplier;
-				clone.active_power = original.active_power;
-				clone.ability_block = original.ability_block;
-				clone.use_ability_key_var = original.use_ability_key_var;
-				clone.detransf_key_var = original.detransf_key_var;
-				clone.wheel_open_key_var = original.wheel_open_key_var;
-				clone.second_wheel_open_var = original.second_wheel_open_var;
-				clone.third_wheel_open_var = original.third_wheel_open_var;
-				clone.first_fake_wheel_open_var = original.first_fake_wheel_open_var;
-				clone.second_fake_wheel_open_var = original.second_fake_wheel_open_var;
-				clone.third_fake_wheel_open_var = original.third_fake_wheel_open_var;
-				clone.ability_using = original.ability_using;
-				clone.power_recorded = original.power_recorded;
-				clone.detransform_anim_trigger = original.detransform_anim_trigger;
-				clone.transfered_power = original.transfered_power;
-				clone.master_effect_end = original.master_effect_end;
-				clone.master_effect_start = original.master_effect_start;
-				clone.level_up_status = original.level_up_status;
-				clone.mind_player_owner = original.mind_player_owner;
-				clone.rune_ovelay_display = original.rune_ovelay_display;
+	@SubscribeEvent
+	public static void onPlayerTickUpdateSyncPlayerVariables(PlayerTickEvent.Post event) {
+		if (event.getEntity() instanceof ServerPlayer player && player.getData(PLAYER_VARIABLES)._syncDirty) {
+			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+			player.getData(PLAYER_VARIABLES)._syncDirty = false;
+		}
+	}
+
+	@SubscribeEvent
+	public static void clonePlayer(PlayerEvent.Clone event) {
+		PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
+		PlayerVariables clone = new PlayerVariables();
+		clone.ability = original.ability;
+		clone.element_name_first = original.element_name_first;
+		clone.element_name_second = original.element_name_second;
+		clone.element_name_third = original.element_name_third;
+		clone.fake_element_name_first = original.fake_element_name_first;
+		clone.fake_element_name_second = original.fake_element_name_second;
+		clone.fake_element_name_third = original.fake_element_name_third;
+		clone.max_power = original.max_power;
+		clone.recharge_timer = original.recharge_timer;
+		clone.master_effect_duration = original.master_effect_duration;
+		clone.selected = original.selected;
+		clone.active_battery = original.active_battery;
+		clone.debug = original.debug;
+		clone.helmet = original.helmet;
+		clone.chestplate = original.chestplate;
+		clone.leggings = original.leggings;
+		clone.boots = original.boots;
+		clone.unlock_keepers_box = original.unlock_keepers_box;
+		clone.level = original.level;
+		clone.level_exp = original.level_exp;
+		clone.base_damage_by_lvl = original.base_damage_by_lvl;
+		clone.max_level_exp = original.max_level_exp;
+		clone.resistance_char = original.resistance_char;
+		clone.speed_char = original.speed_char;
+		clone.haste_char = original.haste_char;
+		clone.jump_char = original.jump_char;
+		clone.rank = original.rank;
+		clone.mind_used = original.mind_used;
+		clone.blue_rune_slot = original.blue_rune_slot;
+		clone.red_rune_slot = original.red_rune_slot;
+		clone.green_rune_slot = original.green_rune_slot;
+		if (!event.isWasDeath()) {
+			clone.teleporting_effect = original.teleporting_effect;
+			clone.abilities_timer = original.abilities_timer;
+			clone.fake_element_name_first_timer = original.fake_element_name_first_timer;
+			clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
+			clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
+			clone.power = original.power;
+			clone.powerTimer = original.powerTimer;
+			clone.mergers = original.mergers;
+			clone.power_recovery_multiplier = original.power_recovery_multiplier;
+			clone.active_power = original.active_power;
+			clone.ability_block = original.ability_block;
+			clone.use_ability_key_var = original.use_ability_key_var;
+			clone.detransf_key_var = original.detransf_key_var;
+			clone.wheel_open_key_var = original.wheel_open_key_var;
+			clone.second_wheel_open_var = original.second_wheel_open_var;
+			clone.third_wheel_open_var = original.third_wheel_open_var;
+			clone.first_fake_wheel_open_var = original.first_fake_wheel_open_var;
+			clone.second_fake_wheel_open_var = original.second_fake_wheel_open_var;
+			clone.third_fake_wheel_open_var = original.third_fake_wheel_open_var;
+			clone.ability_using = original.ability_using;
+			clone.power_recorded = original.power_recorded;
+			clone.detransform_anim_trigger = original.detransform_anim_trigger;
+			clone.transfered_power = original.transfered_power;
+			clone.master_effect_end = original.master_effect_end;
+			clone.master_effect_start = original.master_effect_start;
+			clone.level_up_status = original.level_up_status;
+			clone.mind_player_owner = original.mind_player_owner;
+			clone.rune_ovelay_display = original.rune_ovelay_display;
+		}
+		event.getEntity().setData(PLAYER_VARIABLES, clone);
+	}
+
+	@SubscribeEvent
+	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+		if (event.getEntity() instanceof ServerPlayer player) {
+			SavedData mapdata = MapVariables.get(event.getEntity().level());
+			SavedData worlddata = WorldVariables.get(event.getEntity().level());
+			if (mapdata != null)
+				PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(0, mapdata));
+			if (worlddata != null)
+				PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(1, worlddata));
+		}
+	}
+
+	@SubscribeEvent
+	public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
+		if (event.getEntity() instanceof ServerPlayer player) {
+			SavedData worlddata = WorldVariables.get(event.getEntity().level());
+			if (worlddata != null)
+				PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(1, worlddata));
+		}
+	}
+
+	@SubscribeEvent
+	public static void onWorldTick(LevelTickEvent.Post event) {
+		if (event.getLevel() instanceof ServerLevel level) {
+			WorldVariables worldVariables = WorldVariables.get(level);
+			if (worldVariables._syncDirty) {
+				PacketDistributor.sendToPlayersInDimension(level, new SavedDataSyncMessage(1, worldVariables));
+				worldVariables._syncDirty = false;
 			}
-			event.getEntity().setData(PLAYER_VARIABLES, clone);
-		}
-
-		@SubscribeEvent
-		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-			if (event.getEntity() instanceof ServerPlayer player) {
-				SavedData mapdata = MapVariables.get(event.getEntity().level());
-				SavedData worlddata = WorldVariables.get(event.getEntity().level());
-				if (mapdata != null)
-					PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(0, mapdata));
-				if (worlddata != null)
-					PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(1, worlddata));
-			}
-		}
-
-		@SubscribeEvent
-		public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (event.getEntity() instanceof ServerPlayer player) {
-				SavedData worlddata = WorldVariables.get(event.getEntity().level());
-				if (worlddata != null)
-					PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(1, worlddata));
+			MapVariables mapVariables = MapVariables.get(level);
+			if (mapVariables._syncDirty) {
+				PacketDistributor.sendToAllPlayers(new SavedDataSyncMessage(0, mapVariables));
+				mapVariables._syncDirty = false;
 			}
 		}
 	}
 
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "power_worldvars";
+		boolean _syncDirty = false;
 		public double entity_rotation = 0;
 
 		public static WorldVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
@@ -173,10 +196,9 @@ public class PowerModVariables {
 			return nbt;
 		}
 
-		public void syncData(LevelAccessor world) {
+		public void markSyncDirty() {
 			this.setDirty();
-			if (world instanceof ServerLevel level)
-				PacketDistributor.sendToPlayersInDimension(level, new SavedDataSyncMessage(1, this));
+			this._syncDirty = true;
 		}
 
 		static WorldVariables clientSide = new WorldVariables();
@@ -192,6 +214,7 @@ public class PowerModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "power_mapvars";
+		boolean _syncDirty = false;
 		public double opX = 0;
 		public double opY = 0;
 		public double opZ = 0;
@@ -251,6 +274,7 @@ public class PowerModVariables {
 		public double cpapi_ver = 21.0;
 		public boolean heat_stone = false;
 		public boolean shockwave_stone = false;
+		public boolean colors_stone = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -318,6 +342,7 @@ public class PowerModVariables {
 			cpapi_ver = nbt.getDouble("cpapi_ver");
 			heat_stone = nbt.getBoolean("heat_stone");
 			shockwave_stone = nbt.getBoolean("shockwave_stone");
+			colors_stone = nbt.getBoolean("colors_stone");
 		}
 
 		@Override
@@ -381,13 +406,13 @@ public class PowerModVariables {
 			nbt.putDouble("cpapi_ver", cpapi_ver);
 			nbt.putBoolean("heat_stone", heat_stone);
 			nbt.putBoolean("shockwave_stone", shockwave_stone);
+			nbt.putBoolean("colors_stone", colors_stone);
 			return nbt;
 		}
 
-		public void syncData(LevelAccessor world) {
+		public void markSyncDirty() {
 			this.setDirty();
-			if (world instanceof Level && !world.isClientSide())
-				PacketDistributor.sendToAllPlayers(new SavedDataSyncMessage(0, this));
+			_syncDirty = true;
 		}
 
 		static MapVariables clientSide = new MapVariables();
@@ -442,6 +467,7 @@ public class PowerModVariables {
 	}
 
 	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
+		boolean _syncDirty = false;
 		public String ability = "0";
 		public String element_name_first = "0";
 		public String element_name_second = "0";
@@ -630,9 +656,8 @@ public class PowerModVariables {
 			rune_ovelay_display = nbt.getDouble("rune_ovelay_display");
 		}
 
-		public void syncPlayerVariables(Entity entity) {
-			if (entity instanceof ServerPlayer serverPlayer)
-				PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this));
+		public void markSyncDirty() {
+			_syncDirty = true;
 		}
 	}
 

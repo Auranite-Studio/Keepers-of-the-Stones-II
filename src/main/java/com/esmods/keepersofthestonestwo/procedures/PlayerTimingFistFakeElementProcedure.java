@@ -31,13 +31,13 @@ public class PlayerTimingFistFakeElementProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.fake_element_name_first_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first_timer - 1;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				} else {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.fake_element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				}
 			}
@@ -46,12 +46,8 @@ public class PlayerTimingFistFakeElementProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.fake_element_name_first = "0";
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power_recorded = false;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

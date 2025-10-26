@@ -1,19 +1,21 @@
 **New features**
-- Added advanced passive skills for all elements
-- Each element has two passive skills: basic and additional
-- Both passive skills depend on the condition, they are individual for each element
-- Removed the basic passive skills that some elements had
 
-**Improvemnts** 
-- In the cursed world, night now reigns forever
-- The playerAnimator mod is no longer required
+* Added new element - colors
+
+**Improvemnts**
+
+* Renamed effect "Clearing" to "Purification"
 
 **API changes**
-- *N/A*
+
+* *N/A*
 
 **Bugfixes**
-- [Bugfix] Fixed the description for some achievements
-- [Bugfix] Fixed the description for energium armor in keeper's book
+
+* \[Bugfix] Fixed a bug where the passive skills of the mind master always worked for all players
+* \[Bugfix] Fixed a bug where beta users could not see a warning about the release of a new version
+* \[Bugfix] Fixed a bug related to piglings
 
 **Known issues**
-- *N/A*
+
+* *N/A*

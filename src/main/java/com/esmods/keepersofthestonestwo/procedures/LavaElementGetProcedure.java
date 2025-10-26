@@ -27,18 +27,18 @@ public class LavaElementGetProcedure {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 			PowerModVariables.MapVariables.get(world).lava_stone = true;
-			PowerModVariables.MapVariables.get(world).syncData(world);
+			PowerModVariables.MapVariables.get(world).markSyncDirty();
 			if (PowerConfigConfiguration.ONE_PLAYER_LIMIT_STONES.get()) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.selected = true;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.unlock_keepers_box = false;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 	}

@@ -13,19 +13,19 @@ public class ExtraStarPointsRune1UseProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.blue_rune_slot = itemstack.copy();
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 			itemstack.shrink(1);
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.max_power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power + 10;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.rune_ovelay_display = 100;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).blue_rune_slot.getItem() == ItemStack.EMPTY.getItem())) {
@@ -34,19 +34,19 @@ public class ExtraStarPointsRune1UseProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.blue_rune_slot = itemstack.copy();
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 				itemstack.shrink(1);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.max_power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power + 10;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 				if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.rune_ovelay_display = 100;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				}
 			}

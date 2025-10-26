@@ -115,11 +115,6 @@ public class CursedSquireEntity extends Monster {
 	}
 
 	@Override
-	public boolean fireImmune() {
-		return true;
-	}
-
-	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));

@@ -18,7 +18,7 @@ public class UnlockKeepersBoxProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.unlock_keepers_box = BoolArgumentType.getBool(arguments, "unlock_logic");
-					_vars.syncPlayerVariables(entityiterator);
+					_vars.markSyncDirty();
 				}
 				{
 					final String _success = ("The unlocking of the box is set to " + BoolArgumentType.getBool(arguments, "unlock_logic") + " for " + entityiterator.getDisplayName().getString());

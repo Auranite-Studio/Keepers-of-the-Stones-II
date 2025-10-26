@@ -15,19 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.WaterElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RainElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OceanElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MagnetElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LightningElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LavaElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.KBtoPart2Procedure;
-import com.esmods.keepersofthestonestwo.procedures.IceElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GravityElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.FireElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.ExplosionElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergyElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.BlueFlameElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber

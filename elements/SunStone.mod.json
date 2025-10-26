@@ -29,6 +29,7 @@
         ]
       }
     ],
+    "animations": [],
     "name": "Sun Stone",
     "rarity": "COMMON",
     "creativeTabs": [
@@ -46,6 +47,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": true,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

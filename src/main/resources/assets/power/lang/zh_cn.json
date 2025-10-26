@@ -1076,5 +1076,20 @@
   "item.power.cursed_world.description_0": "§7世界:",
   "effect.power.dash": "那个混蛋",
   "effect.power.countdown": "倒计时",
-  "effect.power.clearing": "结算"
+  "effect.power.purification": "净化;净化",
+  "item.power.colors_stone": "颜色石",
+  "item.power.colors_armor_boots": "颜色靴子",
+  "item.power.colors_armor_helmet": "颜色头盔",
+  "item.power.colors_armor_leggings": "颜色紧身裤",
+  "item.power.colors_armor_chestplate": "颜色胸板",
+  "effect.power.colors_master": "色彩大师",
+  "gui.power.wheel_abilities_colors.tooltip_colored_aura_uses_70": "彩色光环，使用 70",
+  "gui.power.wheel_abilities_colors.tooltip_white_bomb_uses_40": "白色炸弹，使用 40",
+  "gui.power.wheel_abilities_colors.tooltip_color_ray_uses_10": "彩色射线，使用 10",
+  "item.power.colors_battery": "电池",
+  "item.power.colors_battery.description_1": "§9颜色",
+  "item.power.colors_battery.description_0": "§a带电元素:",
+  "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色",
+  "item.power.spear_brush": "矛刷",
+  "item.power.energium_upgrade_smithing_template.description_1": ""
 }

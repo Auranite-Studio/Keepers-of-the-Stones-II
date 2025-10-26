@@ -18,7 +18,7 @@ public class PowerRecoveryMultiplierSetProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power_recovery_multiplier = DoubleArgumentType.getDouble(arguments, "multiplier");
-					_vars.syncPlayerVariables(entityiterator);
+					_vars.markSyncDirty();
 				}
 				{
 					final String _success = ("The star points recovery multiplier is set to " + Math.round(DoubleArgumentType.getDouble(arguments, "multiplier")) + " for " + entityiterator.getDisplayName().getString());

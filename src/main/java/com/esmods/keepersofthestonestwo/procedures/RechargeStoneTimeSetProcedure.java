@@ -18,7 +18,7 @@ public class RechargeStoneTimeSetProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.recharge_timer = DoubleArgumentType.getDouble(arguments, "seconds");
-					_vars.syncPlayerVariables(entityiterator);
+					_vars.markSyncDirty();
 				}
 				{
 					final String _success = ("The recharge time of the stone is set to " + Math.round(DoubleArgumentType.getDouble(arguments, "seconds")) + " for " + entityiterator.getDisplayName().getString());

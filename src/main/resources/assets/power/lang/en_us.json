@@ -1089,5 +1089,20 @@
   "item.power.cursed_world.description_0": "§7World:",
   "effect.power.dash": "Dash",
   "effect.power.countdown": "Countdown",
-  "effect.power.clearing": "Clearing"
+  "effect.power.purification": "Clearing",
+  "item.power.colors_stone": "Colors Stone",
+  "item.power.colors_armor_boots": "Colors Boots",
+  "item.power.colors_armor_helmet": "Colors Helmet",
+  "item.power.colors_armor_leggings": "Colors Leggings",
+  "item.power.colors_armor_chestplate": "Colors Chestplate",
+  "effect.power.colors_master": "Master of Colors",
+  "gui.power.wheel_abilities_colors.tooltip_colored_aura_uses_70": "Colored aura, uses 70",
+  "gui.power.wheel_abilities_colors.tooltip_white_bomb_uses_40": "White bomb, uses 40",
+  "gui.power.wheel_abilities_colors.tooltip_color_ray_uses_10": "Color ray, uses 10",
+  "item.power.colors_battery": "Battery",
+  "item.power.colors_battery.description_1": "§9Colors",
+  "item.power.colors_battery.description_0": "§aCharged with element:",
+  "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
+  "item.power.spear_brush": "Spear Brash",
+  "item.power.energium_upgrade_smithing_template.description_1": ""
 }
