@@ -34520,16 +34520,200 @@
       "path": "~/Modules/ElementalPassiveSkills"
     },
     {
-      "name": "RuneSlot",
+      "name": "BlueRune1",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_1",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "BlueRune2",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_2",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "BlueRune3",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_3",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "RedRune1",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_1",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "RedRune2",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_2",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "RedRune3",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_3",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "RedRune4",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_4",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "RedRune5",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_5",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "RedRune6",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_6",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "GreenRune1",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_1",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "GreenRune2",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_2",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "GreenRune3",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_3",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "GreenRune4",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_4",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "GreenRune5",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_5",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "BlueRune",
       "type": "curiosslot",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "rune_slot",
+      "registry_name": "blue_rune",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/curios/slots/rune_slot.json",
-          "src/main/resources/data/curios/tags/item/rune_slot.json",
-          "src/main/resources/data/power/curios/entities/rune_slot.json"
+          "src/main/resources/data/power/curios/slots/blue_rune.json",
+          "src/main/resources/data/power/curios/entities/blue_rune.json",
+          "src/main/resources/data/curios/tags/item/blue_rune.json"
+        ]
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "RedRune",
+      "type": "curiosslot",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/curios/entities/red_rune.json",
+          "src/main/resources/data/power/curios/slots/red_rune.json",
+          "src/main/resources/data/curios/tags/item/red_rune.json"
+        ]
+      },
+      "path": "~/Modules/RunesSystem2"
+    },
+    {
+      "name": "GreenRune",
+      "type": "curiosslot",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/curios/slots/green_rune.json",
+          "src/main/resources/data/curios/tags/item/green_rune.json",
+          "src/main/resources/data/power/curios/entities/green_rune.json"
         ]
       },
       "path": "~/Modules/RunesSystem2"
@@ -37723,7 +37907,9 @@
       "gui.power.keepers_box_gui_part_5.tooltip_colors": "Краски",
       "item.power.spear_brush": "Кисть-копьё",
       "item.power.energium_upgrade_smithing_template.description_1": "",
-      "curios.identifier.rune_slot": "Rune"
+      "curios.identifier.blue_rune": "Blue Rune",
+      "curios.identifier.red_rune": "Red Rune",
+      "curios.identifier.green_rune": "Green Rune"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38832,7 +39018,9 @@
       "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
       "item.power.spear_brush": "Spear Brash",
       "item.power.energium_upgrade_smithing_template.description_1": "",
-      "curios.identifier.rune_slot": "Rune"
+      "curios.identifier.blue_rune": "Blue Rune",
+      "curios.identifier.red_rune": "Red Rune",
+      "curios.identifier.green_rune": "Green Rune"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39928,12 +40116,16 @@
       "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色",
       "item.power.spear_brush": "矛刷",
       "item.power.energium_upgrade_smithing_template.description_1": "",
-      "curios.identifier.rune_slot": "Rune"
+      "curios.identifier.blue_rune": "Blue Rune",
+      "curios.identifier.red_rune": "Red Rune",
+      "curios.identifier.green_rune": "Green Rune"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModConfigs.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModCuriosCompat.java",
+      "src/main/resources/data/power/curios/entities/slots.json",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModPotions.java",
       "src/main/java/com/esmods/keepersofthestonestwo/network/MenuStateUpdateMessage.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModScreens.java",

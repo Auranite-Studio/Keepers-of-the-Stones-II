@@ -3,7 +3,5 @@
   "entities": [
     "player"
   ],
-  "slots": [
-    "rune_slot"
-  ]
+  "slots": []
 }

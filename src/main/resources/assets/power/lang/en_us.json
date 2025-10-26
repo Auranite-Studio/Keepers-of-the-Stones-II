@@ -1105,5 +1105,7 @@
   "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
   "item.power.spear_brush": "Spear Brash",
   "item.power.energium_upgrade_smithing_template.description_1": "",
-  "curios.identifier.rune_slot": "Rune"
+  "curios.identifier.blue_rune": "Blue Rune",
+  "curios.identifier.red_rune": "Red Rune",
+  "curios.identifier.green_rune": "Green Rune"
 }
