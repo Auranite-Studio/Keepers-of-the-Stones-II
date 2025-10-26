@@ -1,14 +1,21 @@
 **New features**
-- Added new element - colors
 
-**Improvemnts** 
-- Renamed effect "Clearing" to "Purification" 
+* Added new element - colors
+
+**Improvemnts**
+
+* Renamed effect "Clearing" to "Purification"
 
 **API changes**
-- *N/A*
+
+* *N/A*
 
 **Bugfixes**
-- [Bugfix] Fixed a bug where beta users could not see a warning about the release of a new version.
+
+* \[Bugfix] Fixed a bug where the passive skills of the mind master always worked for all players
+* \[Bugfix] Fixed a bug where beta users could not see a warning about the release of a new version
+* \[Bugfix] Fixed a bug related to piglings
 
 **Known issues**
-- *N/A*
+
+* *N/A*
