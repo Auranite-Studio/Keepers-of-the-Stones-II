@@ -5,7 +5,6 @@
 **Improvemnts**
 
 * Renamed effect "Clearing" to "Purification"
-* The Curios API mod is now required to run this mod
 
 **API changes**
 
@@ -13,7 +12,9 @@
 
 **Bugfixes**
 
-* \[Bugfix] Fixed a bug where beta users could not see a warning about the release of a new version.
+* \[Bugfix] Fixed a bug where the passive skills of the mind master always worked for all players
+* \[Bugfix] Fixed a bug where beta users could not see a warning about the release of a new version
+* \[Bugfix] Fixed a bug related to piglings
 
 **Known issues**
 
