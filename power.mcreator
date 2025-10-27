@@ -36519,9 +36519,9 @@
       "MindBattery",
       "HeatBattery",
       "ShockwaveBattery",
+      "ColorsBattery",
       "GoldenDustBattery",
-      "DarknessBattery",
-      "ColorsBattery"
+      "DarknessBattery"
     ],
     "CUSTOM:Items": [
       "LuckCoin",
