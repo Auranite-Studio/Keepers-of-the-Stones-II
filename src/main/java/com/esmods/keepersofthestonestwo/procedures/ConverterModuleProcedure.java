@@ -1,20 +1,17 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import org.checkerframework.checker.units.qual.s;
-
-import net.neoforged.neoforgespi.language.IModInfo;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.ModList;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
-
-import java.util.List;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
@@ -33,58 +30,6 @@ public class ConverterModuleProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (PowerModVariables.MapVariables.get(world).cpapi_ver < new Object() {
-			double convert(String s) {
-				try {
-					return Double.parseDouble(s.trim());
-				} catch (Exception e) {
-				}
-				return 0;
-			}
-		}.convert(new Object() {
-			String getModInfo(String modid, int type) {
-				String val = "";
-				List<IModInfo> mods = ModList.get().getMods();
-				for (IModInfo mod : mods) {
-					if (mod.getModId().equals(modid.toLowerCase())) {
-						if (type == 0) {
-							val = mod.getVersion().toString();
-						} else {
-							val = mod.getDisplayName();
-						}
-						break;
-					}
-				}
-				return val;
-			}
-		}.getModInfo("cpapi", 0))) {
-			PowerModVariables.MapVariables.get(world).cpapi_ver = new Object() {
-				double convert(String s) {
-					try {
-						return Double.parseDouble(s.trim());
-					} catch (Exception e) {
-					}
-					return 0;
-				}
-			}.convert(new Object() {
-				String getModInfo(String modid, int type) {
-					String val = "";
-					List<IModInfo> mods = ModList.get().getMods();
-					for (IModInfo mod : mods) {
-						if (mod.getModId().equals(modid.toLowerCase())) {
-							if (type == 0) {
-								val = mod.getVersion().toString();
-							} else {
-								val = mod.getDisplayName();
-							}
-							break;
-						}
-					}
-					return val;
-				}
-			}.getModInfo("cpapi", 0));
-			PowerModVariables.MapVariables.get(world).markSyncDirty();
-		}
 		if (PowerConfigConfiguration.ENABLE_LEVELS.get() == true) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).level == 0) {
 				{
@@ -180,6 +125,35 @@ public class ConverterModuleProcedure {
 					_vars.markSyncDirty();
 				}
 			}
+		}
+		if (PowerModVariables.MapVariables.get(world).cpapi_ver < 28) {
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = entity.getData(PowerModVariables.PLAYER_VARIABLES).blue_rune_slot.copy();
+				_setstack.setCount(1);
+				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			}
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = entity.getData(PowerModVariables.PLAYER_VARIABLES).red_rune_slot.copy();
+				_setstack.setCount(1);
+				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			}
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.copy();
+				_setstack.setCount(1);
+				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.blue_rune_slot = ItemStack.EMPTY.copy();
+				_vars.red_rune_slot = ItemStack.EMPTY.copy();
+				_vars.green_rune_slot = ItemStack.EMPTY.copy();
+				_vars.max_power = 100;
+				_vars.recharge_timer = 300;
+				_vars.master_effect_duration = 600;
+				_vars.markSyncDirty();
+			}
+			PowerModVariables.MapVariables.get(world).cpapi_ver = 28;
+			PowerModVariables.MapVariables.get(world).markSyncDirty();
 		}
 	}
 }

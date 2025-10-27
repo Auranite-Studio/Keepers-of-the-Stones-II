@@ -133,7 +133,6 @@ public class PowerModVariables {
 			clone.master_effect_start = original.master_effect_start;
 			clone.level_up_status = original.level_up_status;
 			clone.mind_player_owner = original.mind_player_owner;
-			clone.rune_ovelay_display = original.rune_ovelay_display;
 		}
 		event.getEntity().setData(PLAYER_VARIABLES, clone);
 	}
@@ -271,7 +270,7 @@ public class PowerModVariables {
 		public boolean darkness_stone = false;
 		public boolean blue_portal_placed = false;
 		public boolean orange_portal_placed = false;
-		public double cpapi_ver = 21.0;
+		public double cpapi_ver = 28.0;
 		public boolean heat_stone = false;
 		public boolean shockwave_stone = false;
 		public boolean colors_stone = false;
@@ -526,7 +525,6 @@ public class PowerModVariables {
 		public ItemStack blue_rune_slot = ItemStack.EMPTY;
 		public ItemStack red_rune_slot = ItemStack.EMPTY;
 		public ItemStack green_rune_slot = ItemStack.EMPTY;
-		public double rune_ovelay_display = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -589,7 +587,6 @@ public class PowerModVariables {
 			nbt.put("blue_rune_slot", blue_rune_slot.saveOptional(lookupProvider));
 			nbt.put("red_rune_slot", red_rune_slot.saveOptional(lookupProvider));
 			nbt.put("green_rune_slot", green_rune_slot.saveOptional(lookupProvider));
-			nbt.putDouble("rune_ovelay_display", rune_ovelay_display);
 			return nbt;
 		}
 
@@ -653,7 +650,6 @@ public class PowerModVariables {
 			blue_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("blue_rune_slot"));
 			red_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("red_rune_slot"));
 			green_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("green_rune_slot"));
-			rune_ovelay_display = nbt.getDouble("rune_ovelay_display");
 		}
 
 		public void markSyncDirty() {

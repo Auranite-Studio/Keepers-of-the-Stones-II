@@ -31948,26 +31948,6 @@
       "path": "~/ItemsAndBlocks/Runes/GreenRunes"
     },
     {
-      "name": "RuneActiveDebug",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rune_active_debug",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneActiveDebugProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/DebugModule"
-    },
-    {
       "name": "RuneAbilitiesUsing",
       "type": "procedure",
       "compiles": true,
@@ -35154,7 +35134,7 @@
       "name": "cpapi_ver",
       "type": "number",
       "scope": "map",
-      "value": "21.0"
+      "value": "28.0"
     },
     {
       "name": "master_effect_end",
@@ -35257,12 +35237,6 @@
       "type": "itemstack",
       "scope": "player_persistent",
       "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "rune_ovelay_display",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
     },
     {
       "name": "heat_stone",
@@ -37749,9 +37723,9 @@
       "gui.power.keepers_box_gui_part_5.tooltip_colors": "Краски",
       "item.power.spear_brush": "Кисть-копьё",
       "item.power.energium_upgrade_smithing_template.description_1": "",
-      "curios.identifier.blue_rune": "Blue Rune",
-      "curios.identifier.red_rune": "Red Rune",
-      "curios.identifier.green_rune": "Green Rune"
+      "curios.identifier.blue_rune": "Синяя руна",
+      "curios.identifier.red_rune": "Красная руна",
+      "curios.identifier.green_rune": "Зелёная руна"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -39958,9 +39932,9 @@
       "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色",
       "item.power.spear_brush": "矛刷",
       "item.power.energium_upgrade_smithing_template.description_1": "",
-      "curios.identifier.blue_rune": "Blue Rune",
-      "curios.identifier.red_rune": "Red Rune",
-      "curios.identifier.green_rune": "Green Rune"
+      "curios.identifier.blue_rune": "蓝色符文",
+      "curios.identifier.red_rune": "红色符文",
+      "curios.identifier.green_rune": "绿色符文"
     }
   },
   "metadata": {
