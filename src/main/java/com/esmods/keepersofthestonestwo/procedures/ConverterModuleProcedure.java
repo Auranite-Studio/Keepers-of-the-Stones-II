@@ -126,7 +126,7 @@ public class ConverterModuleProcedure {
 				}
 			}
 		}
-		if (PowerModVariables.MapVariables.get(world).cpapi_ver < 28) {
+		if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).conv_to_new_rune_system) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = entity.getData(PowerModVariables.PLAYER_VARIABLES).blue_rune_slot.copy();
 				_setstack.setCount(1);
@@ -150,10 +150,11 @@ public class ConverterModuleProcedure {
 				_vars.max_power = 100;
 				_vars.recharge_timer = 300;
 				_vars.master_effect_duration = 600;
+				_vars.conv_to_new_rune_system = true;
 				_vars.markSyncDirty();
 			}
-			PowerModVariables.MapVariables.get(world).cpapi_ver = 28;
-			PowerModVariables.MapVariables.get(world).markSyncDirty();
 		}
+		PowerModVariables.MapVariables.get(world).cpapi_ver = 28;
+		PowerModVariables.MapVariables.get(world).markSyncDirty();
 	}
 }

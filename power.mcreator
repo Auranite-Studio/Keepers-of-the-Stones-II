@@ -35255,6 +35255,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "conv_to_new_rune_system",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "true"
     }
   ],
   "sound_elements": [
