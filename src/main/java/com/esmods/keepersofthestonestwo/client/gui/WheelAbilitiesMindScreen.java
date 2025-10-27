@@ -17,14 +17,7 @@ import java.util.stream.Collectors;
 import java.util.Arrays;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMindMenu;
-import com.esmods.keepersofthestonestwo.procedures.RuneTooltipRenderProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesMindButtonMessage;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
@@ -33,18 +26,18 @@ public class WheelAbilitiesMindScreen extends AbstractContainerScreen<WheelAbili
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_wheel_button_1;
-	ImageButton imagebutton_wheel_button_2;
-	ImageButton imagebutton_wheel_button_3;
-	ImageButton imagebutton_fake_wheel_button_1;
-	ImageButton imagebutton_fake_wheel_button_2;
-	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_power_rune_ability;
-	ImageButton imagebutton_psychowaves;
-	ImageButton imagebutton_hypnosis;
-	ImageButton imagebutton_remote_control_show_coords;
-	ImageButton imagebutton_remote_controll_kill;
-	ImageButton imagebutton_remote_controll_release;
+	private ImageButton imagebutton_wheel_button_1;
+	private ImageButton imagebutton_wheel_button_2;
+	private ImageButton imagebutton_wheel_button_3;
+	private ImageButton imagebutton_fake_wheel_button_1;
+	private ImageButton imagebutton_fake_wheel_button_2;
+	private ImageButton imagebutton_fake_wheel_button_3;
+	private ImageButton imagebutton_power_rune_ability;
+	private ImageButton imagebutton_psychowaves;
+	private ImageButton imagebutton_hypnosis;
+	private ImageButton imagebutton_remote_control_show_coords;
+	private ImageButton imagebutton_remote_controll_kill;
+	private ImageButton imagebutton_remote_controll_release;
 
 	public WheelAbilitiesMindScreen(WheelAbilitiesMindMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

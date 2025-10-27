@@ -22809,20 +22809,6 @@
       "path": "~/ItemsAndBlocks/Copyrium"
     },
     {
-      "name": "AnimationsModuleSetup",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "animations_module_setup",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AnimationsModuleSetupProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "RawEnergium",
       "type": "item",
       "compiles": true,
@@ -22944,19 +22930,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/power/recipe/energium_dust_recipe.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Energium"
-    },
-    {
-      "name": "EnergiumDustToIngot",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_dust_to_ingot",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/recipe/energium_dust_to_ingot.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -24114,58 +24087,6 @@
         ]
       },
       "path": "~/Commands"
-    },
-    {
-      "name": "DepletedEnergiumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "depleted_energium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/depleted_energium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "EnergiumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/energium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "AmplifierMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amplifier_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/amplifier_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
-    },
-    {
-      "name": "CopyriumMaterial",
-      "type": "trimmaterial",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "copyrium_material",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/trim_material/copyrium_material.json"
-        ]
-      },
-      "path": "~/TrimsMaterials"
     },
     {
       "name": "SoundPassiveProtection",
@@ -26222,10 +26143,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -36108,31 +36025,13 @@
       "~CUSTOM:CreationPickaxe",
       "~CUSTOM:EnergiumPickaxe"
     ],
-    "ITEMS:power:energium_pickaxe_repair_items": [
-      "~CUSTOM:EnergiumIngot"
-    ],
-    "ITEMS:power:energium_axe_repair_items": [
-      "~CUSTOM:EnergiumIngot"
-    ],
-    "ITEMS:power:energium_sword_repair_items": [
-      "~CUSTOM:EnergiumIngot"
-    ],
     "ITEMS:minecraft:shovels": [
       "~CUSTOM:CreationShovel",
       "~CUSTOM:EnergiumShovel"
     ],
-    "ITEMS:power:energium_shovel_repair_items": [
-      "~CUSTOM:EnergiumIngot"
-    ],
     "ITEMS:minecraft:hoes": [
       "~CUSTOM:CreationHoe",
       "~CUSTOM:EnergiumHoe"
-    ],
-    "ITEMS:power:energium_hoe_repair_items": [
-      "~CUSTOM:EnergiumIngot"
-    ],
-    "ITEMS:power:energium_armor_repair_items": [
-      "~CUSTOM:EnergiumIngot"
     ],
     "ENCHANTMENTS:minecraft:tradeable": [
       "~CUSTOM:Isolation",
@@ -36191,6 +36090,24 @@
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
       "~CUSTOM:RuneCutter"
+    ],
+    "ITEMS:power:energium_pickaxe_repair_items": [
+      "~CUSTOM:EnergiumIngot"
+    ],
+    "ITEMS:power:energium_axe_repair_items": [
+      "~CUSTOM:EnergiumIngot"
+    ],
+    "ITEMS:power:energium_sword_repair_items": [
+      "~CUSTOM:EnergiumIngot"
+    ],
+    "ITEMS:power:energium_shovel_repair_items": [
+      "~CUSTOM:EnergiumIngot"
+    ],
+    "ITEMS:power:energium_hoe_repair_items": [
+      "~CUSTOM:EnergiumIngot"
+    ],
+    "ITEMS:power:energium_armor_repair_items": [
+      "~CUSTOM:EnergiumIngot"
     ],
     "ITEMS:power:energium_shield_repair_items": [
       "~CUSTOM:EnergiumIngot"
@@ -37483,10 +37400,13 @@
       "item.power.blue_flame_armor_chestplate": "Нагрудник мастера синего пламени",
       "item.power.creation_pickaxe": "Кирка созидания",
       "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15",
+      "power.modupdater.new_release": "[Keepers of the Stones II] Доступна более новая версия: ",
+      "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения",
       "item.power.depleted_energium_ore": "Depleted Energium Ore",
       "item.power.depleted_energium_block": "Block of Depleted Energium",
       "item.power.energium_block": "Block of Energium",
       "item.power.battery_charger": "Battery Charger",
+      "item.power.energium_upgrade_smithing_template.description_1": "",
       "item.power.keepers_box": "Keeper\u0027s Box",
       "item.power.moon_block": "Moon Block",
       "item.power.energium_controller": "Energium Controller",
@@ -37533,8 +37453,6 @@
       "item.power.cursed_stone_cracked_bricks_wall": "Cursed Stone Cracked Bricks Wall",
       "item.power.freaking_parsnip_block": "Freaking Parsnip Block",
       "item.power.rune_cutter": "Rune Cutter",
-      "power.modupdater.new_release": "[Keepers of the Stones II] Доступна более новая версия: ",
-      "power.modupdater.click_event": " ➜ Нажмите , чтобы просмотреть изменения",
       "entity.villager.power.runologist": "Runologist"
     },
     "en_us": {
@@ -38620,10 +38538,13 @@
       "item.power.blue_flame_armor_chestplate": "Blue Flame Chestplate",
       "item.power.creation_pickaxe": "Creation Pickaxe",
       "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15",
+      "power.modupdater.new_release": "[Keepers of the Stones II] A newer version is available: ",
+      "power.modupdater.click_event": " ➜ Click to view changes",
       "item.power.depleted_energium_ore": "Depleted Energium Ore",
       "item.power.depleted_energium_block": "Block of Depleted Energium",
       "item.power.energium_block": "Block of Energium",
       "item.power.battery_charger": "Battery Charger",
+      "item.power.energium_upgrade_smithing_template.description_1": "",
       "item.power.keepers_box": "Keeper\u0027s Box",
       "item.power.moon_block": "Moon Block",
       "item.power.energium_controller": "Energium Controller",
@@ -38670,8 +38591,6 @@
       "item.power.cursed_stone_cracked_bricks_wall": "Cursed Stone Cracked Bricks Wall",
       "item.power.freaking_parsnip_block": "Freaking Parsnip Block",
       "item.power.rune_cutter": "Rune Cutter",
-      "power.modupdater.new_release": "[Keepers of the Stones II] A newer version is available: ",
-      "power.modupdater.click_event": " ➜ Click to view changes",
       "entity.villager.power.runologist": "Runologist"
     },
     "zh_cn": {
@@ -39744,10 +39663,13 @@
       "item.power.blue_flame_armor_chestplate": "蓝色火焰胸甲",
       "item.power.creation_pickaxe": "创世镐",
       "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15",
+      "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
+      "power.modupdater.click_event": " ➜ 点击查看更改",
       "item.power.depleted_energium_ore": "Depleted Energium Ore",
       "item.power.depleted_energium_block": "Block of Depleted Energium",
       "item.power.energium_block": "Block of Energium",
       "item.power.battery_charger": "Battery Charger",
+      "item.power.energium_upgrade_smithing_template.description_1": "",
       "item.power.keepers_box": "Keeper\u0027s Box",
       "item.power.moon_block": "Moon Block",
       "item.power.energium_controller": "Energium Controller",
@@ -39794,26 +39716,12 @@
       "item.power.cursed_stone_cracked_bricks_wall": "Cursed Stone Cracked Bricks Wall",
       "item.power.freaking_parsnip_block": "Freaking Parsnip Block",
       "item.power.rune_cutter": "Rune Cutter",
-      "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
-      "power.modupdater.click_event": " ➜ 点击查看更改",
       "entity.villager.power.runologist": "Runologist"
     }
   },
   "metadata": {
     "files": [
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
-      "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/resources/power.mixins.json",
-      "src/main/java/com/esmods/keepersofthestonestwo/PowerMod.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/com/esmods/keepersofthestonestwo/network/PowerModVariables.java",
-      "src/main/resources/assets/power/sounds.json",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModConfigs.java",
-      "src/main/resources/data/minecraft/tags/item/trim_materials.json",
-      "src/main/resources/assets/minecraft/atlases/armor_trims.json",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBiomes.java",
       "src/main/java/com/esmods/keepersofthestonestwo/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModPotions.java",
@@ -39832,7 +39740,26 @@
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBlockEntities.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModItems.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntityRenderers.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntities.java"
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntities.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/LoadPlayerAnimationMessage.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/PowerMod.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/PowerModVariables.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/PlayPlayerAnimationMessage.java",
+      "src/main/resources/power.mixins.json",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/PowerModPlayerAnimationAPI.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/CameraAccessor.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/LevelRendererMixin.java",
+      "src/main/resources/assets/power/sounds.json",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java"
     ]
   },
   "foldersRoot": {
@@ -40707,10 +40634,6 @@
         ]
       },
       {
-        "name": "TrimsMaterials",
-        "children": []
-      },
-      {
         "name": "Configs",
         "children": []
       },
@@ -40727,16 +40650,14 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.2.3",
-    "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
+    "version": "1.2.5",
+    "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds more new elemental stones that can be used to improve the character skills and powers.",
     "author": "ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
     "license": "GNU General Public License version 3 (GPLv3)",
     "serverSideOnly": false,
     "modPicture": "logo",
-    "requiredMods": [
-      "playeranimator"
-    ],
+    "requiredMods": [],
     "dependencies": [
       "bettercombat",
       "patchouli"
@@ -40744,12 +40665,10 @@
     "dependants": [
       "cpapi"
     ],
-    "mcreatorDependencies": [
-      "playeranimator"
-    ],
+    "mcreatorDependencies": [],
     "currentGenerator": "neoforge-1.21.8",
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500334500
+  "mcreatorVersion": 202500344100
 }

@@ -29,7 +29,7 @@ public class RunesOverlayRenderingTickProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.rune_ovelay_display = entity.getData(PowerModVariables.PLAYER_VARIABLES).rune_ovelay_display - 1;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 	}

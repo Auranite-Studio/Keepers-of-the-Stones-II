@@ -20,56 +20,7 @@ import javax.annotation.Nullable;
 
 import io.netty.buffer.Unpooled;
 
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbiltiesGoldenDustMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilityDarknessMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesWaterMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesVacuumMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTornadoMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTimeMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTeleportationMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTechnologyMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSunMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpiritMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpeedMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpaceMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSmokeMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesShockwaveMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesShadowMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSandMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPoisonMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPlantsMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPlagueMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesOceanMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMusicMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMushroomsMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMoonMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMistMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMindMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMetalMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMercuryMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMagnetMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightningMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLavaMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesIceMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesHeatMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesGravityMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFormMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesExplosionMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEtherMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEnergyMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEarthMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesDestructionMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCreationMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesBlueFlameMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesBloodMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAmberMenu;
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAirMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.*;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
 @EventBusSubscriber
@@ -1091,7 +1042,7 @@ public class OpenWheelTwoTickProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.second_wheel_open_var = false;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 	}

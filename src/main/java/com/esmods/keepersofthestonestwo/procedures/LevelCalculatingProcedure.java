@@ -32,17 +32,9 @@ public class LevelCalculatingProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.level_exp = entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp - 100 * entity.getData(PowerModVariables.PLAYER_VARIABLES).level;
-						_vars.syncPlayerVariables(entity);
-					}
-					{
-						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.level = entity.getData(PowerModVariables.PLAYER_VARIABLES).level + 1;
-						_vars.syncPlayerVariables(entity);
-					}
-					{
-						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.level_up_status = true;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				}
 			}

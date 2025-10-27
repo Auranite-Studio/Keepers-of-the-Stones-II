@@ -5,7 +5,14 @@
   "mixins": [
     "NoiseGeneratorSettingsMixin"
   ],
-  "client": [],
+  "client": [
+    "PlayerAnimationMixin",
+    "PlayerAnimationRendererMixin",
+    "CameraAccessor",
+    "EntityRenderDispatcherMixin",
+    "ItemInHandRendererMixin",
+    "LevelRendererMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

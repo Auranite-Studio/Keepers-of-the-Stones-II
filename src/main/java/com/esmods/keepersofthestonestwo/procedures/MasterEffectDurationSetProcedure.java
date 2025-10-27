@@ -18,7 +18,7 @@ public class MasterEffectDurationSetProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.master_effect_duration = DoubleArgumentType.getDouble(arguments, "seconds");
-					_vars.syncPlayerVariables(entityiterator);
+					_vars.markSyncDirty();
 				}
 				{
 					final String _success = ("The duration of the master effect is set to " + Math.round(DoubleArgumentType.getDouble(arguments, "seconds")) + " for " + entityiterator.getDisplayName().getString());

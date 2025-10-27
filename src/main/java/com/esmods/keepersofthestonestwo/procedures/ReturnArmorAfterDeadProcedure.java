@@ -35,7 +35,7 @@ public class ReturnArmorAfterDeadProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.helmet = ItemStack.EMPTY.copy();
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 		if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate.getItem() == ItemStack.EMPTY.getItem())) {
@@ -45,7 +45,7 @@ public class ReturnArmorAfterDeadProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.chestplate = ItemStack.EMPTY.copy();
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 		if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings.getItem() == ItemStack.EMPTY.getItem())) {
@@ -55,7 +55,7 @@ public class ReturnArmorAfterDeadProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.leggings = ItemStack.EMPTY.copy();
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 		if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).boots.getItem() == ItemStack.EMPTY.getItem())) {
@@ -65,7 +65,7 @@ public class ReturnArmorAfterDeadProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.boots = ItemStack.EMPTY.copy();
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 	}

@@ -120,11 +120,6 @@ public class CursedKnightEntity extends Monster {
 	}
 
 	@Override
-	public boolean fireImmune() {
-		return true;
-	}
-
-	@Override
 	public void addAdditionalSaveData(ValueOutput valueOutput) {
 		super.addAdditionalSaveData(valueOutput);
 		valueOutput.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));

@@ -7,6 +7,6 @@ import net.minecraft.world.level.block.SlabBlock;
 
 public class CursedStoneSlabBlock extends SlabBlock {
 	public CursedStoneSlabBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.TUFF).strength(2.5f, 3f).dynamicShape().instrument(NoteBlockInstrument.BASEDRUM));
+		super(properties.sound(SoundType.TUFF).strength(2.5f, 3f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 }

@@ -12,7 +12,7 @@ public class CheckpointTPProcedure {
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 			_vars.ability = "checkpoint_tp";
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

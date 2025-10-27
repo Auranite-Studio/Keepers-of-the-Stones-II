@@ -39,14 +39,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.WalkingAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SpintingAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.IdleAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemShootAnimSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriObnovlieniiTikaSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriGibieliSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemAttackAnimSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.DeathAnimationSyncProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class EnergiumGolemEntity extends Monster {
@@ -154,11 +147,6 @@ public class EnergiumGolemEntity extends Monster {
 
 	@Override
 	public boolean ignoreExplosion(Explosion explosion) {
-		return true;
-	}
-
-	@Override
-	public boolean fireImmune() {
 		return true;
 	}
 

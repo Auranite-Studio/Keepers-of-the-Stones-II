@@ -82,7 +82,7 @@ public class MoonSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					success = false;
 					if (world instanceof Level _level) {
@@ -136,7 +136,7 @@ public class MoonSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					success = false;
 				}
@@ -170,7 +170,7 @@ public class MoonSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

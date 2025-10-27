@@ -27,19 +27,19 @@ public class ChaosDarkMasterEndProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.element_name_first = "0";
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("chaos")) {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.element_name_second = "0";
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("chaos")) {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.element_name_third = "0";
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 	}

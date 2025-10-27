@@ -14,21 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.Minecraft;
 
-import com.esmods.keepersofthestonestwo.procedures.RedRune6CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RedRune5CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RedRune4CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RedRune3CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RedRune2CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RedRune1CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GreenRune5CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GreenRune4CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GreenRune3CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GreenRune2CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GreenRune1CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetRunesProcedure;
-import com.esmods.keepersofthestonestwo.procedures.BlueRune3CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.BlueRune2CheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.BlueRune1CheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class RunesOverlayOverlay {

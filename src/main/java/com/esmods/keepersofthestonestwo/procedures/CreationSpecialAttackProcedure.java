@@ -101,7 +101,7 @@ public class CreationSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("creation_ability_2")) {
@@ -128,7 +128,7 @@ public class CreationSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				} else if (random == 2) {
 					PowerMod.queueServerWork(1, () -> {
@@ -141,7 +141,7 @@ public class CreationSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				} else if (random == 3) {
 					PowerMod.queueServerWork(1, () -> {
@@ -154,7 +154,7 @@ public class CreationSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				} else if (random == 4) {
 					PowerMod.queueServerWork(1, () -> {
@@ -167,7 +167,7 @@ public class CreationSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				} else if (random == 5) {
 					PowerMod.queueServerWork(1, () -> {
@@ -180,7 +180,7 @@ public class CreationSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				}
 				if (world instanceof Level _level) {
@@ -215,7 +215,7 @@ public class CreationSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

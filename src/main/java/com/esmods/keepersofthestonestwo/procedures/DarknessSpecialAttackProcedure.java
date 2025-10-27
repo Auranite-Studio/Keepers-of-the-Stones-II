@@ -92,7 +92,7 @@ public class DarknessSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("darkness_ability_2")) {
@@ -126,7 +126,7 @@ public class DarknessSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 45;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("darkness_ability_3")) {
@@ -144,12 +144,8 @@ public class DarknessSpecialAttackProcedure {
 									{
 										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.mergers = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
-										_vars.syncPlayerVariables(entityiterator);
-									}
-									{
-										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.transfered_power = true;
-										_vars.syncPlayerVariables(entityiterator);
+										_vars.markSyncDirty();
 									}
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
@@ -164,12 +160,8 @@ public class DarknessSpecialAttackProcedure {
 									{
 										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.mergers = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
-										_vars.syncPlayerVariables(entityiterator);
-									}
-									{
-										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.transfered_power = true;
-										_vars.syncPlayerVariables(entityiterator);
+										_vars.markSyncDirty();
 									}
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
@@ -184,12 +176,8 @@ public class DarknessSpecialAttackProcedure {
 									{
 										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.mergers = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
-										_vars.syncPlayerVariables(entityiterator);
-									}
-									{
-										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.transfered_power = true;
-										_vars.syncPlayerVariables(entityiterator);
+										_vars.markSyncDirty();
 									}
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
@@ -204,12 +192,8 @@ public class DarknessSpecialAttackProcedure {
 									{
 										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.mergers = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
-										_vars.syncPlayerVariables(entityiterator);
-									}
-									{
-										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.transfered_power = true;
-										_vars.syncPlayerVariables(entityiterator);
+										_vars.markSyncDirty();
 									}
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
@@ -226,7 +210,7 @@ public class DarknessSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

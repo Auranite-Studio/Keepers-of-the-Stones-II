@@ -12,7 +12,7 @@ public class Attack50Procedure {
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 			_vars.ability = "ocean_ability_2";
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

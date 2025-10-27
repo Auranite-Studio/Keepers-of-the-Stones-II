@@ -14,18 +14,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
-import com.esmods.keepersofthestonestwo.procedures.WaterStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RainStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OceanStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MagnetStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LightningStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LavaStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.IceStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GravityStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.FireStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.ExplosionStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergyStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.BlueFlameStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart1ButtonMessage;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
@@ -34,20 +23,20 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_keepers_box_button_down;
-	ImageButton imagebutton_keepers_box_button_up_locked;
-	ImageButton imagebutton_fire_element;
-	ImageButton imagebutton_lava_element;
-	ImageButton imagebutton_energy_element;
-	ImageButton imagebutton_rain_element;
-	ImageButton imagebutton_lightning_element;
-	ImageButton imagebutton_water_element;
-	ImageButton imagebutton_ocean_element;
-	ImageButton imagebutton_ice_element;
-	ImageButton imagebutton_explosion_element;
-	ImageButton imagebutton_magnet_element;
-	ImageButton imagebutton_blue_flame_element;
-	ImageButton imagebutton_gravity_element;
+	private ImageButton imagebutton_keepers_box_button_down;
+	private ImageButton imagebutton_keepers_box_button_up_locked;
+	private ImageButton imagebutton_fire_element;
+	private ImageButton imagebutton_lava_element;
+	private ImageButton imagebutton_energy_element;
+	private ImageButton imagebutton_rain_element;
+	private ImageButton imagebutton_lightning_element;
+	private ImageButton imagebutton_water_element;
+	private ImageButton imagebutton_ocean_element;
+	private ImageButton imagebutton_ice_element;
+	private ImageButton imagebutton_explosion_element;
+	private ImageButton imagebutton_magnet_element;
+	private ImageButton imagebutton_blue_flame_element;
+	private ImageButton imagebutton_gravity_element;
 
 	public KeepersBoxGUIPart1Screen(KeepersBoxGUIPart1Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
