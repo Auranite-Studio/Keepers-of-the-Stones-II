@@ -36,12 +36,8 @@ public class SmokeStoneUseProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 				SendClientPackageActivationStoneVFXProcedure.execute(world, x, y, z, entity);
 			}

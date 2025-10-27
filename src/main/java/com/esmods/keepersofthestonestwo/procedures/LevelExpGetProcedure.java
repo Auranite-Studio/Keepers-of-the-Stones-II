@@ -45,25 +45,25 @@ public class LevelExpGetProcedure {
 						{
 							PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 1;
-							_vars.syncPlayerVariables(sourceentity);
+							_vars.markSyncDirty();
 						}
 					} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/2")))) {
 						{
 							PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 2;
-							_vars.syncPlayerVariables(sourceentity);
+							_vars.markSyncDirty();
 						}
 					} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/3")))) {
 						{
 							PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 3;
-							_vars.syncPlayerVariables(sourceentity);
+							_vars.markSyncDirty();
 						}
 					} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/5")))) {
 						{
 							PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 5;
-							_vars.syncPlayerVariables(sourceentity);
+							_vars.markSyncDirty();
 						}
 					} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:xp/50")))) {
 						{
@@ -73,7 +73,7 @@ public class LevelExpGetProcedure {
 									{
 										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.level_exp = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + 50;
-										_vars.syncPlayerVariables(entityiterator);
+										_vars.markSyncDirty();
 									}
 								}
 							}
@@ -83,7 +83,7 @@ public class LevelExpGetProcedure {
 							{
 								PowerModVariables.PlayerVariables _vars = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES);
 								_vars.level_exp = sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp + Math.round(sourceentity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp * 0.25);
-								_vars.syncPlayerVariables(sourceentity);
+								_vars.markSyncDirty();
 							}
 						}
 					}

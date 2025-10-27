@@ -37,20 +37,7 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperWalkProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperSprintingProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperPriObnovlieniiTikaSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperPriGibieliSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperIdle2Procedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperIdle1Procedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperIdle0Procedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperFallProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAttack5Procedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAttack4Procedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAttack3Procedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAttack2Procedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAttack1Procedure;
-import com.esmods.keepersofthestonestwo.procedures.CursedKeeperAggroProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class CursedKeeperEntity extends Monster {
@@ -175,11 +162,6 @@ public class CursedKeeperEntity extends Monster {
 
 	@Override
 	public boolean ignoreExplosion(Explosion explosion) {
-		return true;
-	}
-
-	@Override
-	public boolean fireImmune() {
 		return true;
 	}
 

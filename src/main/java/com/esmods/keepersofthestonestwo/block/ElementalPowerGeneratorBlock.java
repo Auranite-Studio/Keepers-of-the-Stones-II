@@ -41,7 +41,7 @@ public class ElementalPowerGeneratorBlock extends Block implements EntityBlock {
 					return 7;
 				return 0;
 			}
-		}.getLightLevel())).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+		}.getLightLevel())).requiresCorrectToolForDrops().dynamicShape().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

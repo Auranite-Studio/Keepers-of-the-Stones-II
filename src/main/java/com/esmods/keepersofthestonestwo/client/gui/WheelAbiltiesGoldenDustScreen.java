@@ -17,14 +17,7 @@ import java.util.stream.Collectors;
 import java.util.Arrays;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbiltiesGoldenDustMenu;
-import com.esmods.keepersofthestonestwo.procedures.RuneTooltipRenderProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.network.WheelAbiltiesGoldenDustButtonMessage;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
@@ -33,16 +26,16 @@ public class WheelAbiltiesGoldenDustScreen extends AbstractContainerScreen<Wheel
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_wheel_button_1;
-	ImageButton imagebutton_wheel_button_2;
-	ImageButton imagebutton_wheel_button_3;
-	ImageButton imagebutton_fake_wheel_button_1;
-	ImageButton imagebutton_fake_wheel_button_2;
-	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_power_rune_ability;
-	ImageButton imagebutton_golden_dust_attack;
-	ImageButton imagebutton_random_power;
-	ImageButton imagebutton_golden_dust_regeneration;
+	private ImageButton imagebutton_wheel_button_1;
+	private ImageButton imagebutton_wheel_button_2;
+	private ImageButton imagebutton_wheel_button_3;
+	private ImageButton imagebutton_fake_wheel_button_1;
+	private ImageButton imagebutton_fake_wheel_button_2;
+	private ImageButton imagebutton_fake_wheel_button_3;
+	private ImageButton imagebutton_power_rune_ability;
+	private ImageButton imagebutton_golden_dust_attack;
+	private ImageButton imagebutton_random_power;
+	private ImageButton imagebutton_golden_dust_regeneration;
 
 	public WheelAbiltiesGoldenDustScreen(WheelAbiltiesGoldenDustMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

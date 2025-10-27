@@ -14,19 +14,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
-import com.esmods.keepersofthestonestwo.procedures.SandStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PoisonStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PlantsStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PlagueStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MushroomsStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MetalStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MercuryStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EtherStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EarthStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CrystalStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CreationStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.AnimalsStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.AmberStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart4ButtonMessage;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
@@ -35,20 +23,20 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_keepers_box_button_up;
-	ImageButton imagebutton_keepers_box_button_down_locked;
-	ImageButton imagebutton_animals_element;
-	ImageButton imagebutton_crystal_element;
-	ImageButton imagebutton_ether_element;
-	ImageButton imagebutton_metal_element;
-	ImageButton imagebutton_earth_element;
-	ImageButton imagebutton_plants_element;
-	ImageButton imagebutton_amber_element;
-	ImageButton imagebutton_sand_element;
-	ImageButton imagebutton_poison_element;
-	ImageButton imagebutton_mushrooms_element;
-	ImageButton imagebutton_mercury_element;
-	ImageButton imagebutton_plague_element;
+	private ImageButton imagebutton_keepers_box_button_up;
+	private ImageButton imagebutton_keepers_box_button_down_locked;
+	private ImageButton imagebutton_animals_element;
+	private ImageButton imagebutton_crystal_element;
+	private ImageButton imagebutton_ether_element;
+	private ImageButton imagebutton_metal_element;
+	private ImageButton imagebutton_earth_element;
+	private ImageButton imagebutton_plants_element;
+	private ImageButton imagebutton_amber_element;
+	private ImageButton imagebutton_sand_element;
+	private ImageButton imagebutton_poison_element;
+	private ImageButton imagebutton_mushrooms_element;
+	private ImageButton imagebutton_mercury_element;
+	private ImageButton imagebutton_plague_element;
 
 	public KeepersBoxGUIPart4Screen(KeepersBoxGUIPart4Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

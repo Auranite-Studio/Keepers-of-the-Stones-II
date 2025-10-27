@@ -14,13 +14,13 @@ public class MasterEffectEndControlProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.master_effect_end = true;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 			PowerMod.queueServerWork(1, () -> {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.master_effect_end = false;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			});
 		}

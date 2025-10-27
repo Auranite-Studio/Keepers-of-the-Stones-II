@@ -33,7 +33,7 @@ public class MistInvisibleTickProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.abilities_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).abilities_timer - 1;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		} else {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).ability_using) {
@@ -52,7 +52,7 @@ public class MistInvisibleTickProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.ability_using = false;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

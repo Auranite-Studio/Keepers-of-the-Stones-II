@@ -7,6 +7,6 @@ import net.minecraft.world.level.block.SoundType;
 
 public class CursedStoneWallBlock extends WallBlock {
 	public CursedStoneWallBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.TUFF).strength(2.5f, 3f).dynamicShape().instrument(NoteBlockInstrument.BASEDRUM).forceSolidOn());
+		super(properties.sound(SoundType.TUFF).strength(2.5f, 3f).instrument(NoteBlockInstrument.BASEDRUM).forceSolidOn());
 	}
 }

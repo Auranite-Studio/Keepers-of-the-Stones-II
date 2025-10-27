@@ -50,7 +50,7 @@ public class CursedVaultBlock extends Block implements EntityBlock {
 							return 12;
 						return 6;
 					}
-				}.getLightLevel())).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.IGNORE).isRedstoneConductor((bs, br, bp) -> false));
+				}.getLightLevel())).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.IGNORE).isRedstoneConductor((bs, br, bp) -> false).dynamicShape());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

@@ -24,6 +24,6 @@ public class ItemRotationWorldTickProcedure {
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
 		PowerModVariables.WorldVariables.get(world).entity_rotation = PowerModVariables.WorldVariables.get(world).entity_rotation < 360 ? PowerModVariables.WorldVariables.get(world).entity_rotation + 8 : 0;
-		PowerModVariables.WorldVariables.get(world).syncData(world);
+		PowerModVariables.WorldVariables.get(world).markSyncDirty();
 	}
 }

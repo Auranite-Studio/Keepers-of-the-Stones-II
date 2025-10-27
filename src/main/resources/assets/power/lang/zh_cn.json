@@ -1068,10 +1068,13 @@
   "item.power.blue_flame_armor_chestplate": "蓝色火焰胸甲",
   "item.power.creation_pickaxe": "创世镐",
   "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "音乐攻击，使用15",
+  "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
+  "power.modupdater.click_event": " ➜ 点击查看更改",
   "item.power.depleted_energium_ore": "Depleted Energium Ore",
   "item.power.depleted_energium_block": "Block of Depleted Energium",
   "item.power.energium_block": "Block of Energium",
   "item.power.battery_charger": "Battery Charger",
+  "item.power.energium_upgrade_smithing_template.description_1": "",
   "item.power.keepers_box": "Keeper\u0027s Box",
   "item.power.moon_block": "Moon Block",
   "item.power.energium_controller": "Energium Controller",
@@ -1118,7 +1121,5 @@
   "item.power.cursed_stone_cracked_bricks_wall": "Cursed Stone Cracked Bricks Wall",
   "item.power.freaking_parsnip_block": "Freaking Parsnip Block",
   "item.power.rune_cutter": "Rune Cutter",
-  "power.modupdater.new_release": "[Keepers of the Stones II] 有更新的版本: ",
-  "power.modupdater.click_event": " ➜ 点击查看更改",
   "entity.villager.power.runologist": "Runologist"
 }

@@ -40,7 +40,7 @@ public class EnergiumControllerBlock extends Block {
 					return 0;
 				return 0;
 			}
-		}.getLightLevel())).requiresCorrectToolForDrops());
+		}.getLightLevel())).requiresCorrectToolForDrops().dynamicShape());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

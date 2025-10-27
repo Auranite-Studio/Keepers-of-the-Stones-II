@@ -14,18 +14,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart3Menu;
-import com.esmods.keepersofthestonestwo.procedures.VacuumStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SunStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SpiritStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SpaceStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.ShadowStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MoonStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MindStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LightStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GoldenDustStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.FormStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.DarknessStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.BloodStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart3ButtonMessage;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
@@ -34,20 +23,20 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_keepers_box_button_up;
-	ImageButton imagebutton_keepers_box_button_down;
-	ImageButton imagebutton_light_element;
-	ImageButton imagebutton_shadow_element;
-	ImageButton imagebutton_sun_element;
-	ImageButton imagebutton_space_element;
-	ImageButton imagebutton_moon_element;
-	ImageButton imagebutton_vacuum_element;
-	ImageButton imagebutton_blood_element;
-	ImageButton imagebutton_spirit_element;
-	ImageButton imagebutton_form_element;
-	ImageButton imagebutton_mind_element;
-	ImageButton imagebutton_golden_dust_element;
-	ImageButton imagebutton_darkness_element;
+	private ImageButton imagebutton_keepers_box_button_up;
+	private ImageButton imagebutton_keepers_box_button_down;
+	private ImageButton imagebutton_light_element;
+	private ImageButton imagebutton_shadow_element;
+	private ImageButton imagebutton_sun_element;
+	private ImageButton imagebutton_space_element;
+	private ImageButton imagebutton_moon_element;
+	private ImageButton imagebutton_vacuum_element;
+	private ImageButton imagebutton_blood_element;
+	private ImageButton imagebutton_spirit_element;
+	private ImageButton imagebutton_form_element;
+	private ImageButton imagebutton_mind_element;
+	private ImageButton imagebutton_golden_dust_element;
+	private ImageButton imagebutton_darkness_element;
 
 	public KeepersBoxGUIPart3Screen(KeepersBoxGUIPart3Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

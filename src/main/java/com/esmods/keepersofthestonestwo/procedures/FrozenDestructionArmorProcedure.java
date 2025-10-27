@@ -53,7 +53,7 @@ public class FrozenDestructionArmorProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.ability_block = false;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 			entity.getPersistentData().putBoolean("iceLayer", false);
 		}

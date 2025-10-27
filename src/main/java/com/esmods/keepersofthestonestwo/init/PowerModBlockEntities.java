@@ -16,12 +16,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import com.esmods.keepersofthestonestwo.block.entity.RuneCutterBlockEntity;
-import com.esmods.keepersofthestonestwo.block.entity.KeepersBoxBlockEntity;
-import com.esmods.keepersofthestonestwo.block.entity.EnergiumVaultBlockEntity;
-import com.esmods.keepersofthestonestwo.block.entity.ElementalPowerGeneratorBlockEntity;
-import com.esmods.keepersofthestonestwo.block.entity.CursedVaultBlockEntity;
-import com.esmods.keepersofthestonestwo.block.entity.BatteryChargerBlockEntity;
+import com.esmods.keepersofthestonestwo.block.entity.*;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber

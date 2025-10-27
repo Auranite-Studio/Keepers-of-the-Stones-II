@@ -31,19 +31,15 @@ public class SunBatteryUseProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.active_battery = true;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.SUN_MASTER, (int) ((entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration / 2) * 20), 0, false, false));
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = 500;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 				SendClientPackageActivationStoneVFXProcedure.execute(world, x, y, z, entity);
 			}

@@ -34,17 +34,7 @@ import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodHandle;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModVillagerProfessions;
-import com.esmods.keepersofthestonestwo.init.PowerModTabs;
-import com.esmods.keepersofthestonestwo.init.PowerModSounds;
-import com.esmods.keepersofthestonestwo.init.PowerModPotions;
-import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
-import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
-import com.esmods.keepersofthestonestwo.init.PowerModMenus;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
-import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
-import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
+import com.esmods.keepersofthestonestwo.init.*;
 
 @Mod("power")
 public class PowerMod {
@@ -63,13 +53,11 @@ public class PowerMod {
 		PowerModEntities.REGISTRY.register(modEventBus);
 		PowerModTabs.REGISTRY.register(modEventBus);
 		PowerModVariables.ATTACHMENT_TYPES.register(modEventBus);
-
 		PowerModPotions.REGISTRY.register(modEventBus);
 		PowerModMobEffects.REGISTRY.register(modEventBus);
 		PowerModMenus.REGISTRY.register(modEventBus);
 		PowerModParticleTypes.REGISTRY.register(modEventBus);
 		PowerModVillagerProfessions.PROFESSIONS.register(modEventBus);
-
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

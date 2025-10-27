@@ -45,7 +45,7 @@ public class TeleportingVisualEffectProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.teleporting_effect = entity.getData(PowerModVariables.PLAYER_VARIABLES).teleporting_effect - 1;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 	}

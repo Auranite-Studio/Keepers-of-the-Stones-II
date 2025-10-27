@@ -13,26 +13,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
-import com.esmods.keepersofthestonestwo.procedures.StarPointsRegTimerDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.StarPointsRecoveryMultiplierDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.StarPointsDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SelectedAttackDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RuneActiveDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PowerRecordedDubugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.ModVersionDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MergersNumberDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MaxStarPointsDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LevelExpAndMaxDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LevelDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.FakeElementsTimerDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.FakeElementsActiveDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.ElementsActiveDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.DebugCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CPAPIVersionDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.BaseDamageDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.ActivePowerDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.ActiveBatteryDebugProcedure;
-import com.esmods.keepersofthestonestwo.procedures.AbilityBlockedDebugProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class DebugInfoOverlay {

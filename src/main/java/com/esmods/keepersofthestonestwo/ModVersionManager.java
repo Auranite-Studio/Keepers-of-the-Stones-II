@@ -7,10 +7,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.Event;
 import net.neoforged.fml.ModList;
-import net.neoforged.neoforgespi.language.IModInfo;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent.PlayerLoggedInEvent;
+import net.neoforged.neoforgespi.language.IModInfo;
 
 import javax.annotation.Nullable;
 import java.io.*;
@@ -98,9 +98,10 @@ public class ModVersionManager {
 	private static String getVersionChangelog(List<VersionData> allVersions, String version) {
 		return allVersions.stream()
 				.filter(v -> v.versionNumber.equals(version))
-				.map(v -> v.changelog)
+				.filter(v -> isMinecraftVersionSupported(v.gameVersions))
+				.map(v -> v.changelog != null ? v.changelog : "")
 				.findFirst()
-				.orElse("");
+				.orElse("Changelog not available for your Minecraft version.");
 	}
 
 	private static List<VersionData> fetchVersionsFromModrinth() throws IOException {
@@ -218,6 +219,8 @@ public class ModVersionManager {
 	}
 
 	private static VersionType getVersionType(String version) {
+		if (version == null || version.isEmpty()) return VersionType.UNKNOWN;
+
 		// RELEASE: x.x.x
 		if (Pattern.matches("^\\d+\\.\\d+\\.\\d+$", version)) {
 			return VersionType.RELEASE;
@@ -280,23 +283,12 @@ public class ModVersionManager {
 
 	private static void executeBetaWarning(@Nullable Event event, Entity entity) {
 		if (entity == null) return;
-		if (isInDevelopment() && isCustomVersion()) {
-			if (entity instanceof Player _player && !_player.level().isClientSide()) {
-				_player.displayClientMessage(Component.literal(Component.translatable("power.modupdater.beta_detect").getString()), false);
+		if (entity instanceof Player player) {
+			Version current = new Version(CURRENT_VERSION, getVersionType(CURRENT_VERSION));
+			// Показываем предупреждение, если это НЕ стабильный релиз
+			if (current.getVersionType() != VersionType.RELEASE) {
+				player.displayClientMessage(Component.literal(Component.translatable("power.modupdater.beta_detect").getString()), false);
 			}
 		}
-	}
-
-	public static boolean isInDevelopment() {
-		VersionType type = getVersionType(getCurrentVersion());
-		return type == VersionType.BETA ||
-				type == VersionType.PRE_RELEASE ||
-				type == VersionType.RELEASE_CANDIDATE;
-	}
-
-	public static boolean isCustomVersion() {
-		VersionType type = getVersionType(getCurrentVersion());
-		return type == VersionType.CUSTOM_SUFFIX ||
-				type == VersionType.UNKNOWN;
 	}
 }

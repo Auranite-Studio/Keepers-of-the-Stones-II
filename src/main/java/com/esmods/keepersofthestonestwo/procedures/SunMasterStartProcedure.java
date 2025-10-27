@@ -30,7 +30,7 @@ public class SunMasterStartProcedure {
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 			_vars.active_power = true;
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 		for (int index0 = 0; index0 < 40; index0++) {
 			if (world instanceof ServerLevel _level && _level.getServer() != null) {
@@ -63,7 +63,7 @@ public class SunMasterStartProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.element_name_first = "sun";
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 1) {
 			if (entity instanceof LivingEntity _living) {
@@ -79,7 +79,7 @@ public class SunMasterStartProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.element_name_second = "sun";
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers == 2) {
 			if (entity instanceof LivingEntity _living) {
@@ -90,13 +90,13 @@ public class SunMasterStartProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.element_name_third = "sun";
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.SOLAR_BLADE.get()).copy();
-			_setstack.setCount(1);
-			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+			ItemStack _setstack36 = new ItemStack(PowerModItems.SOLAR_BLADE.get()).copy();
+			_setstack36.setCount(1);
+			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack36);
 			if (_entity instanceof Player _player)
 				_player.getInventory().setChanged();
 		}
