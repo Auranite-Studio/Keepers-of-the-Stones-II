@@ -81,7 +81,7 @@
       "value": -9817013,
       "falpha": 0.0
     },
-    "spawnEggTexture": "",
+    "spawnEggTexture": "cursed_knight_spawn_egg",
     "creativeTabs": [
       {
         "value": "CUSTOM:Mobs"
