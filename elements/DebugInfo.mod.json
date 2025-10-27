@@ -344,24 +344,6 @@
           "y": 215,
           "locked": true
         }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_rune_active_debug",
-          "text": {
-            "fixedValue": "",
-            "name": "RuneActiveDebug"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "anchorPoint": "TOP_LEFT",
-          "x": 6,
-          "y": 224,
-          "locked": true
-        }
       }
     ],
     "baseTexture": "",

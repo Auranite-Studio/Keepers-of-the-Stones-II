@@ -1104,5 +1104,8 @@
   "item.power.colors_battery.description_0": "§aЗаряжена элементом:",
   "gui.power.keepers_box_gui_part_5.tooltip_colors": "Краски",
   "item.power.spear_brush": "Кисть-копьё",
-  "item.power.energium_upgrade_smithing_template.description_1": ""
+  "item.power.energium_upgrade_smithing_template.description_1": "",
+  "curios.identifier.blue_rune": "Синяя руна",
+  "curios.identifier.red_rune": "Красная руна",
+  "curios.identifier.green_rune": "Зелёная руна"
 }

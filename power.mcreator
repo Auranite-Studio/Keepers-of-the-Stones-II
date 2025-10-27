@@ -30654,29 +30654,6 @@
       "path": "~/ItemsAndBlocks/Copyrium"
     },
     {
-      "name": "ExtraStarPointsRune1Use",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "extra_star_points_rune_1_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExtraStarPointsRune1UseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/BlueRunes"
-    },
-    {
       "name": "MindOwnerImmuneSlave",
       "type": "procedure",
       "compiles": true,
@@ -30702,52 +30679,6 @@
         ]
       },
       "path": "~/Elements/Mind"
-    },
-    {
-      "name": "ExtraStarPointsRune2Use",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "extra_star_points_rune_2_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExtraStarPointsRune2UseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/BlueRunes"
-    },
-    {
-      "name": "ExtraStarPointsRune3Use",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "extra_star_points_rune_3_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExtraStarPointsRune3UseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/BlueRunes"
     },
     {
       "name": "RemoveForbiddenItem",
@@ -30809,60 +30740,6 @@
       "path": "~/Mobs/ExampleMaster"
     },
     {
-      "name": "BlueSlotOnRemove",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_slot_on_remove",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueSlotOnRemoveProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "DropRunesAfterDeath",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "drop_runes_after_death",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DropRunesAfterDeathProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
       "name": "PowerOverlay",
       "type": "overlay",
       "compiles": true,
@@ -30874,118 +30751,6 @@
         ]
       },
       "path": "~/Modules/StarPointsModule"
-    },
-    {
-      "name": "BlueRune1Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_rune_1_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune1CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "BlueRune2Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_rune_2_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune2CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "BlueRune3Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_rune_3_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune3CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "RunesOverlay",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "runes_overlay",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/screens/RunesOverlayOverlay.java"
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "GetRunes",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "get_runes",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GetRunesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "RunesOverlayRenderingTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "runes_overlay_rendering_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RunesOverlayRenderingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
     },
     {
       "name": "RedMagnet",
@@ -31281,283 +31046,6 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/item/AdditionTimeMasterEffectRune3Item.java",
           "src/main/resources/assets/power/models/item/addition_time_master_effect_rune_3.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/RedRunes"
-    },
-    {
-      "name": "RedRune1Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_rune_1_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune1CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "RedRune2Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_rune_2_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune2CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "RedRune3Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_rune_3_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune3CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "RedRune4Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_rune_4_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune4CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "RedRune5Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_rune_5_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune5CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "RedRune6Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_rune_6_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune6CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "RedSlotOnRemove",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "red_slot_on_remove",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedSlotOnRemoveProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "ReducedStoneRechargeTimeRune1Use",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reduced_stone_recharge_time_rune_1_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ReducedStoneRechargeTimeRune1UseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/RedRunes"
-    },
-    {
-      "name": "ReducedStoneRechargeTimeRune2Use",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reduced_stone_recharge_time_rune_2_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ReducedStoneRechargeTimeRune2UseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/RedRunes"
-    },
-    {
-      "name": "ReducedStoneRechargeTimeRune3Use",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reduced_stone_recharge_time_rune_3_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ReducedStoneRechargeTimeRune3UseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/RedRunes"
-    },
-    {
-      "name": "AdditionTimeMasterEffectRune1Use",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "addition_time_master_effect_rune_1_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AdditionTimeMasterEffectRune1UseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/RedRunes"
-    },
-    {
-      "name": "AdditionTimeMasterEffectRune2Use",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "addition_time_master_effect_rune_2_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AdditionTimeMasterEffectRune2UseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/RedRunes"
-    },
-    {
-      "name": "AdditionTimeMasterEffectRune3Use",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "addition_time_master_effect_rune_3_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AdditionTimeMasterEffectRune3UseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
         ]
       },
       "path": "~/ItemsAndBlocks/Runes/RedRunes"
@@ -32458,260 +31946,6 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Runes/GreenRunes"
-    },
-    {
-      "name": "ProtectionRuneUse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "protection_rune_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ProtectionRuneUseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/GreenRunes"
-    },
-    {
-      "name": "SpinRuneUse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spin_rune_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpinRuneUseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/GreenRunes"
-    },
-    {
-      "name": "DodgingRuneUse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dodging_rune_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DodgingRuneUseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/GreenRunes"
-    },
-    {
-      "name": "GreenSlotOnRemove",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "green_slot_on_remove",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenSlotOnRemoveProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "InvisibilityRuneUse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "invisibility_rune_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/InvisibilityRuneUseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/GreenRunes"
-    },
-    {
-      "name": "HealingRuneUse",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "healing_rune_use",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HealingRuneUseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/Runes/GreenRunes"
-    },
-    {
-      "name": "GreenRune1Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "green_rune_1_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune1CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "GreenRune2Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "green_rune_2_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune2CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "GreenRune3Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "green_rune_3_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune3CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "GreenRune4Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "green_rune_4_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune4CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "GreenRune5Check",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "green_rune_5_check",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune5CheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/RunesSystem"
-    },
-    {
-      "name": "RuneActiveDebug",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rune_active_debug",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RuneActiveDebugProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/DebugModule"
     },
     {
       "name": "RuneAbilitiesUsing",
@@ -34518,6 +33752,793 @@
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills"
+    },
+    {
+      "name": "BlueRune1",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_1",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "BlueRune2",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_2",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "BlueRune3",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_3",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune1",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_1",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune2",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_2",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune3",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_3",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune4",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_4",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune5",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_5",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune6",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_6",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune1",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_1",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune2",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_2",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune3",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_3",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune4",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_4",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune5",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_5",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "BlueRune",
+      "type": "curiosslot",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/curios/slots/blue_rune.json",
+          "src/main/resources/data/power/curios/entities/blue_rune.json",
+          "src/main/resources/data/curios/tags/item/blue_rune.json"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune",
+      "type": "curiosslot",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/curios/entities/red_rune.json",
+          "src/main/resources/data/power/curios/slots/red_rune.json",
+          "src/main/resources/data/curios/tags/item/red_rune.json"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune",
+      "type": "curiosslot",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/curios/slots/green_rune.json",
+          "src/main/resources/data/curios/tags/item/green_rune.json",
+          "src/main/resources/data/power/curios/entities/green_rune.json"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "BlueRune1BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_1_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune1BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "BlueRune1BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_1_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune1BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "BlueRune2BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_2_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune2BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "BlueRune2BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_2_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune2BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "BlueRune3BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_3_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune3BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "BlueRune3BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_rune_3_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueRune3BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune1BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_1_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune1BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune1BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_1_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune1BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune2BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_2_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune2BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune2BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_2_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune2BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune3BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_3_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune3BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune3BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_3_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune3BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune4BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_4_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune4BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune4BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_4_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune4BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune5BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_5_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune5BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune5BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_5_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune5BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune6BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_6_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune6BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "RedRune6BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_rune_6_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RedRune6BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune1BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_1_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune1BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune1BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_1_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune1BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune2BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_2_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune2BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune2BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_2_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune2BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune3BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_3_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune3BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune3BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_3_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune3BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune4BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_4_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune4BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune4BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_4_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune4BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune5BaubleIsEquipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_5_bauble_is_equipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune5BaubleIsEquippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
+    },
+    {
+      "name": "GreenRune5BaubleIsUnequipped",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_rune_5_bauble_is_unequipped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GreenRune5BaubleIsUnequippedProcedure.java"
+        ]
+      },
+      "path": "~/Modules/RunesSystem"
     }
   ],
   "variable_elements": [
@@ -35113,7 +35134,7 @@
       "name": "cpapi_ver",
       "type": "number",
       "scope": "map",
-      "value": "21.0"
+      "value": "28.0"
     },
     {
       "name": "master_effect_end",
@@ -35218,12 +35239,6 @@
       "value": "ItemStack.EMPTY"
     },
     {
-      "name": "rune_ovelay_display",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
       "name": "heat_stone",
       "type": "logic",
       "scope": "map",
@@ -35240,6 +35255,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "conv_to_new_rune_system",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "true"
     }
   ],
   "sound_elements": [
@@ -37707,7 +37728,10 @@
       "item.power.colors_battery.description_0": "§aЗаряжена элементом:",
       "gui.power.keepers_box_gui_part_5.tooltip_colors": "Краски",
       "item.power.spear_brush": "Кисть-копьё",
-      "item.power.energium_upgrade_smithing_template.description_1": ""
+      "item.power.energium_upgrade_smithing_template.description_1": "",
+      "curios.identifier.blue_rune": "Синяя руна",
+      "curios.identifier.red_rune": "Красная руна",
+      "curios.identifier.green_rune": "Зелёная руна"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38815,7 +38839,10 @@
       "item.power.colors_battery.description_0": "§aCharged with element:",
       "gui.power.keepers_box_gui_part_5.tooltip_colors": "Colors",
       "item.power.spear_brush": "Spear Brash",
-      "item.power.energium_upgrade_smithing_template.description_1": ""
+      "item.power.energium_upgrade_smithing_template.description_1": "",
+      "curios.identifier.blue_rune": "Blue Rune",
+      "curios.identifier.red_rune": "Red Rune",
+      "curios.identifier.green_rune": "Green Rune"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39910,12 +39937,17 @@
       "item.power.colors_battery.description_0": "§a带电元素:",
       "gui.power.keepers_box_gui_part_5.tooltip_colors": "颜色",
       "item.power.spear_brush": "矛刷",
-      "item.power.energium_upgrade_smithing_template.description_1": ""
+      "item.power.energium_upgrade_smithing_template.description_1": "",
+      "curios.identifier.blue_rune": "蓝色符文",
+      "curios.identifier.red_rune": "红色符文",
+      "curios.identifier.green_rune": "绿色符文"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModConfigs.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModCuriosCompat.java",
+      "src/main/resources/data/power/curios/entities/slots.json",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModPotions.java",
       "src/main/java/com/esmods/keepersofthestonestwo/network/MenuStateUpdateMessage.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModScreens.java",
@@ -40873,7 +40905,9 @@
     "license": "GNU General Public License version 3 (GPLv3)",
     "serverSideOnly": false,
     "modPicture": "logo",
-    "requiredMods": [],
+    "requiredMods": [
+      "curios"
+    ],
     "dependencies": [
       "bettercombat",
       "patchouli"
@@ -40881,7 +40915,9 @@
     "dependants": [
       "cpapi"
     ],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "curios_api"
+    ],
     "currentGenerator": "neoforge-1.21.1",
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
