@@ -1369,7 +1369,7 @@
     {
       "name": "WaterStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "water_stone_use",
       "metadata": {
@@ -6759,7 +6759,7 @@
     {
       "name": "LavaBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lava_battery_use",
       "metadata": {
@@ -7083,7 +7083,7 @@
     {
       "name": "MetalBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "metal_battery_use",
       "metadata": {
@@ -7770,7 +7770,7 @@
     {
       "name": "ShadowBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_battery_use",
       "metadata": {
@@ -9998,7 +9998,7 @@
     {
       "name": "MoonStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "moon_stone_use",
       "metadata": {
@@ -17192,7 +17192,7 @@
     {
       "name": "AmberStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amber_stone_use",
       "metadata": {
@@ -19837,7 +19837,7 @@
     {
       "name": "SpeedStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "speed_stone_use",
       "metadata": {
@@ -22807,20 +22807,6 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
-    },
-    {
-      "name": "AnimationsModuleSetup",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "animations_module_setup",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AnimationsModuleSetupProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Modules/BasicModule"
     },
     {
       "name": "RawEnergium",
@@ -26157,10 +26143,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
