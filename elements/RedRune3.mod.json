@@ -15,6 +15,12 @@
     "hasModel": false,
     "baubleModel": "Default",
     "baubleModelTexture": "",
+    "onEquip": {
+      "name": "RedRune3BaubleIsEquipped"
+    },
+    "onUnequip": {
+      "name": "RedRune3BaubleIsUnequipped"
+    },
     "helmetModelPart": "Empty",
     "bodyModelPart": "Empty",
     "armsModelPartL": "Empty",
