@@ -30449,20 +30449,6 @@
       "path": "~/ItemsAndBlocks/CharacteristicsCard"
     },
     {
-      "name": "ExampleMaster",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "example_master",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/ExampleMasterEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/ExampleMasterRenderer.java"
-        ]
-      },
-      "path": "~/Mobs/ExampleMaster"
-    },
-    {
       "name": "KeepersBook",
       "type": "item",
       "compiles": true,
@@ -30719,25 +30705,6 @@
         ]
       },
       "path": "~/Achievements"
-    },
-    {
-      "name": "ExampleMasterKilling",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "example_master_killing",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExampleMasterKillingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Mobs/ExampleMaster"
     },
     {
       "name": "PowerOverlay",
@@ -36660,7 +36627,6 @@
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Солнечный взрыв, расходует 45",
       "item.power.filth_armor_chestplate": "Нагрудник тёмного мастера скверны",
       "effect.power.shockwave_master": "Мастер импульса",
-      "entity.power.example_master": "Example Master",
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.time_armor_leggings": "Поножи мастера времени",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55": "Ртутное состояние, расходует 55",
@@ -37771,7 +37737,6 @@
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Sun explosion, uses 45",
       "item.power.filth_armor_chestplate": "Filth Chestplate",
       "effect.power.shockwave_master": "Master of Shockwave",
-      "entity.power.example_master": "Example Master",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.time_armor_leggings": "Time Leggings",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55": "Mercury condition, uses 55",
@@ -38881,7 +38846,6 @@
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "太阳爆炸，使用45",
       "item.power.filth_armor_chestplate": "污秽胸甲",
       "effect.power.shockwave_master": "冲击波大师",
-      "entity.power.example_master": "示例主程序",
       "item.power.gravity_stone": "重力石",
       "item.power.time_armor_leggings": "時間褲腿",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55": "汞条件，使用55",
@@ -40851,10 +40815,6 @@
           },
           {
             "name": "CursedKeeper",
-            "children": []
-          },
-          {
-            "name": "ExampleMaster",
             "children": []
           }
         ]

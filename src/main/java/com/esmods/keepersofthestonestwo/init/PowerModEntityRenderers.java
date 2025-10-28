@@ -63,7 +63,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.ENERGIUM_GOLEM.get(), EnergiumGolemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_SQUIRE.get(), CursedSquireRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_KEEPER.get(), CursedKeeperRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.EXAMPLE_MASTER.get(), ExampleMasterRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.RED_MAGNET.get(), RedMagnetRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.BLUE_MAGNET.get(), BlueMagnetRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SHOCKWAVE_GUN_PROJECTILE.get(), ShockwaveGunProjectileRenderer::new);
