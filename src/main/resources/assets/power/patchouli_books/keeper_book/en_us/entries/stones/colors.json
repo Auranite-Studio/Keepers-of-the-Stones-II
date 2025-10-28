@@ -1,8 +1,8 @@
 {
     "name": "Colors",
-    "icon": "power:textures/mob_effect/colols_master.png",
+    "icon": "power:textures/mob_effect/colors_master.png",
     "category": "power:stones",
-    "sortnum": 4,
+    "sortnum": 51,
     "pages": [
         {
             "type": "patchouli:text",

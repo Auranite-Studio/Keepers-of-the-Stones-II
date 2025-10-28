@@ -18,7 +18,7 @@
         },
         {
             "type": "patchouli:spotlight",
-            "item": "power:shockwaves_stone",
+            "item": "power:shockwave_stone",
             "text": [
                 "$(l)Passive Skills$()",
                 "$(li)",

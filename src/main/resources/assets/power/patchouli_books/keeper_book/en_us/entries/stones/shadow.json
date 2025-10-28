@@ -18,7 +18,7 @@
         },
         {
             "type": "patchouli:spotlight",
-            "item": "power:shadows_stone",
+            "item": "power:shadow_stone",
             "text": [
                 "$(l)Passive Skills$()",
                 "$(li)",
