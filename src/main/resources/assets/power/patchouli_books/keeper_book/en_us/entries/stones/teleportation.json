@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Teleportation",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:teleportation_blade\",count:1}],ArmorItems:[{id:\"power:teleportation_armor_boots\",count:1},{id:\"power:teleportation_armor_leggings\",count:1},{id:\"power:teleportation_armor_chestplate\",count:1},{id:\"power:teleportation_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:teleportation_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Clear space within 4 blocks around player.",
+                "$(li)",
+                "Spatial Rift: +10% damage; 15% chance to gain \"Dash II\" for 3 sec on attack.",
+                "$(li)",
+                "Evasion Mastery: 10% chance to teleport 4 blocks away and avoid damage."
+            ]
         }
     ]
 }

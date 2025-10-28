@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Shockwave",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:shockwave_gun\",count:1}],ArmorItems:[{id:\"power:shockwave_armor_boots\",count:1},{id:\"power:shockwave_armor_leggings\",count:1},{id:\"power:shockwave_armor_chestplate\",count:1},{id:\"power:shockwave_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:shockwaves_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Player standing on a block.",
+                "$(li)",
+                "Aftershock: In 9-sec attack combos, every 3rd hit becomes \"Impulse Push\" — +50% damage and knockback.",
+                "$(li)",
+                "Unshakable: Immune to knockback."
+            ]
         }
     ]
 }

@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Gravity",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:gravity_mace\",count:1}],ArmorItems:[{id:\"power:gravity_armor_boots\",count:1},{id:\"power:gravity_armor_leggings\",count:1},{id:\"power:gravity_armor_chestplate\",count:1},{id:\"power:gravity_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:gravity_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() On open terrain.",
+                "$(li)",
+                "Gravity Wave: 10% chance to apply \"Levitation\" for 25 sec on attack.",
+                "$(li)",
+                "Bird Feathers: Permanent \"Slow Falling\" effect."
+            ]
         }
     ]
 }

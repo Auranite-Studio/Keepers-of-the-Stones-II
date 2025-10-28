@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Mushrooms",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:mushrooms_hammer\",count:1}],ArmorItems:[{id:\"power:mushrooms_armor_boots\",count:1},{id:\"power:mushrooms_armor_leggings\",count:1},{id:\"power:mushrooms_armor_chestplate\",count:1},{id:\"power:mushrooms_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:mushrooms_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Mushrooms or mushroom blocks within 16 blocks.",
+                "$(li)",
+                "Fly Agaric Toxin: +10% damage; 15% chance to apply \"Nausea IV\" for 20 sec.",
+                "$(li)",
+                "Porcini Stem: 15% chance to restore 4 hunger points when hit."
+            ]
         }
     ]
 }

@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Lava",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:lava_hammer\",count:1}],ArmorItems:[{id:\"power:lava_armor_boots\",count:1},{id:\"power:lava_armor_leggings\",count:1},{id:\"power:lava_armor_chestplate\",count:1},{id:\"power:lava_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:lava_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Within 16 blocks of lava/magma or in the Nether.",
+                "$(li)",
+                "Volcanic Heart: 12.5% chance to deal critical damage (150% of base).",
+                "$(li)",
+                "Hot Spring: Immune to fire and lava damage."
+            ]
         }
     ]
 }

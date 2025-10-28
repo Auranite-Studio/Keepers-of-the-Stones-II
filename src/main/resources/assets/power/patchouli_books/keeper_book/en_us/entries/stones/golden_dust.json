@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of the Golden Dust",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:golden_dust_staff\",count:1}],ArmorItems:[{id:\"power:golden_dust_armor_boots\",count:1},{id:\"power:golden_dust_armor_leggings\",count:1},{id:\"power:golden_dust_armor_chestplate\",count:1},{id:\"power:golden_dust_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:golden_dust_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() At least one Element Master within 16 blocks.",
+                "$(li)",
+                "Golden Boost: +35% damage, –45% incoming damage.",
+                "$(li)",
+                "Golden Chance: 30% chance to gain one of: \"Regeneration II\", \"Star Regeneration II\", \"Strength II\", or \"Dash II\" for 10 sec when hit."
+            ]
         }
     ]
 }

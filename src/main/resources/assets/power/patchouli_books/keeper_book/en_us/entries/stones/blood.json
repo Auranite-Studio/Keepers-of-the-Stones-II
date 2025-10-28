@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Blood",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:blood_sickle\",count:1}],ArmorItems:[{id:\"power:blood_armor_boots\",count:1},{id:\"power:blood_armor_leggings\",count:1},{id:\"power:blood_armor_chestplate\",count:1},{id:\"power:blood_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:blood_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Player health <50%.",
+                "$(li)",
+                "Blood Corruption: +20% damage; 10% chance to apply \"Wither II\" for 5 sec.",
+                "$(li)",
+                "Bloodthirst: On kill, 50% chance to restore 10% max health."
+            ]
         }
     ]
 }

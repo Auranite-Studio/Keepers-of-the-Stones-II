@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of the Metal",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:right_metal_gauntlet\",count:1},{id:\"power:left_metal_gauntlet\",count:1}],ArmorItems:[{id:\"power:metal_armor_boots\",count:1},{id:\"power:metal_armor_leggings\",count:1},{id:\"power:metal_armor_chestplate\",count:1},{id:\"power:metal_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:metal_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Copper, gold, or iron ore/blocks within 16 blocks.",
+                "$(li)",
+                "Iron Man: –20% incoming damage, +10% outgoing damage.",
+                "$(li)",
+                "Counterattack: 15% chance to gain \"Dash IV\" for 15 sec (once per 60 sec)."
+            ]
         }
     ]
 }

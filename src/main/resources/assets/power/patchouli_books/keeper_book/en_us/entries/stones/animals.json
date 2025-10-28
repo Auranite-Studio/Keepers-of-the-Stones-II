@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Animals",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:animals_halberd\",count:1}],ArmorItems:[{id:\"power:animals_armor_boots\",count:1},{id:\"power:animals_armor_leggings\",count:1},{id:\"power:animals_armor_chestplate\",count:1},{id:\"power:animals_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:animals_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() At least one tamed mob within 16 blocks.",
+                "$(li)",
+                "Wolf Pack: +20% player damage, +90% tamed mob damage.",
+                "$(li)",
+                "Turtle Shell: Damage from mobs/players reduced by 25%."
+            ]
         }
     ]
 }

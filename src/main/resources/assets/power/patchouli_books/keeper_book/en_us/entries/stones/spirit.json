@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of the Spirit",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:spirit_sickle\",count:1}],ArmorItems:[{id:\"power:spirit_armor_boots\",count:1},{id:\"power:spirit_armor_leggings\",count:1},{id:\"power:spirit_armor_chestplate\",count:1},{id:\"power:spirit_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:spirit_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Player has \"Purification\" effect (granted for 1 min after killing undead).",
+                "$(li)",
+                "Spiritual Practice: +20% damage.",
+                "$(li)",
+                "Spirit Aura: 25% chance to gain one of: \"Regeneration II\", \"Star Regeneration II\", or \"Strength II\" for 8 sec when hit."
+            ]
         }
     ]
 }

@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Technologies",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:techno_pickaxe\",count:1}],ArmorItems:[{id:\"power:technology_armor_boots\",count:1},{id:\"power:technology_armor_leggings\",count:1},{id:\"power:technology_armor_chestplate\",count:1},{id:\"power:technology_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:technology_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Redstone or redstone devices within 16 blocks.",
+                "$(li)",
+                "Exoskeleton: –20% incoming damage.",
+                "$(li)",
+                "Tech Shock: 10% chance to stun target for 5 sec on attack."
+            ]
         }
     ]
 }

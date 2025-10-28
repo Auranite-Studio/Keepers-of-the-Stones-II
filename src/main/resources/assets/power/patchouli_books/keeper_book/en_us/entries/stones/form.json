@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Form",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:form_sai\",count:1},{id:\"power:form_sai\",count:1}],ArmorItems:[{id:\"power:form_armor_boots\",count:1},{id:\"power:form_armor_leggings\",count:1},{id:\"power:form_armor_chestplate\",count:1},{id:\"power:form_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:form_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Player has Miniaturization or Gigantism effect.",
+                "$(li)",
+                "Reduction: With Miniaturization — –75% incoming damage.",
+                "$(li)",
+                "Enlargement: With Gigantism — +50% damage."
+            ]
         }
     ]
 }

@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of the Air",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:air_rapier\",count:1}],ArmorItems:[{id:\"power:air_armor_boots\",count:1},{id:\"power:air_armor_leggings\",count:1},{id:\"power:air_armor_chestplate\",count:1},{id:\"power:air_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:air_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() At height ≥96 blocks.",
+                "$(li)",
+                "Blessing of the Heavens: Fall damage reduced by 75%.",
+                "$(li)",
+                "Wind Gust: 15% chance to knock back target on attack."
+            ]
         }
     ]
 }

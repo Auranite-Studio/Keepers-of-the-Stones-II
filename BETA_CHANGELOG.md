@@ -5,6 +5,7 @@
 **Improvemnts**
 
 * Redesigned rune activation mechanics
+* The descriptions of all the stones in the keeper's book have been updated
 * The Curios API mod is now required to run this mod
 
 **API changes**

@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Explosion",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:explosion_mace\",count:1}],ArmorItems:[{id:\"power:explosion_armor_boots\",count:1},{id:\"power:explosion_armor_leggings\",count:1},{id:\"power:explosion_armor_chestplate\",count:1},{id:\"power:explosion_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:explosion_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() TNT or gunpowder in inventory.",
+                "$(li)",
+                "Kamikaze: +20% damage; triggers explosion upon fatal hit",
+                "$(li)",
+                "Sapper’s Gear: Immune to all explosions."
+            ]
         }
     ]
 }
