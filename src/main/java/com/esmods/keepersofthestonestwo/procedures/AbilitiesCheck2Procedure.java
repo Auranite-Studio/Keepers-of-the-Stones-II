@@ -10,7 +10,7 @@ public class AbilitiesCheck2Procedure {
 		if (entity == null)
 			return;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("rune_ability")) {
-			RuneAbilitiesUsingProcedure.execute(world, x, y, z, entity);
+			RuneAbilitiesUsingProcedure.execute(entity);
 		}
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("heat") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("heat")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("heat") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("heat")

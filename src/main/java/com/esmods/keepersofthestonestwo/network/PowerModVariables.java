@@ -106,6 +106,7 @@ public class PowerModVariables {
 		clone.red_rune_slot = original.red_rune_slot;
 		clone.green_rune_slot = original.green_rune_slot;
 		clone.conv_to_new_rune_system = original.conv_to_new_rune_system;
+		clone.rune_ability_activate = original.rune_ability_activate;
 		if (!event.isWasDeath()) {
 			clone.teleporting_effect = original.teleporting_effect;
 			clone.abilities_timer = original.abilities_timer;
@@ -527,6 +528,7 @@ public class PowerModVariables {
 		public ItemStack red_rune_slot = ItemStack.EMPTY;
 		public ItemStack green_rune_slot = ItemStack.EMPTY;
 		public boolean conv_to_new_rune_system = true;
+		public boolean rune_ability_activate = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -590,6 +592,7 @@ public class PowerModVariables {
 			nbt.put("red_rune_slot", red_rune_slot.saveOptional(lookupProvider));
 			nbt.put("green_rune_slot", green_rune_slot.saveOptional(lookupProvider));
 			nbt.putBoolean("conv_to_new_rune_system", conv_to_new_rune_system);
+			nbt.putBoolean("rune_ability_activate", rune_ability_activate);
 			return nbt;
 		}
 
@@ -654,6 +657,7 @@ public class PowerModVariables {
 			red_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("red_rune_slot"));
 			green_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("green_rune_slot"));
 			conv_to_new_rune_system = nbt.getBoolean("conv_to_new_rune_system");
+			rune_ability_activate = nbt.getBoolean("rune_ability_activate");
 		}
 
 		public void markSyncDirty() {

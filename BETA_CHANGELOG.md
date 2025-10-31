@@ -11,6 +11,7 @@
 **API changes**
 
 * Colorful Powers API has been updated to 28.0
+* Now add-ons can add runes
 * The rune-related field has been removed from debug mode
 * The code was cleaned and the rune system was optimized
 
