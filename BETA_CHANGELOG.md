@@ -5,6 +5,7 @@
 **Improvemnts**
 
 * Redesigned rune activation mechanics
+* The particles of the portal to the Cursed World have been changed
 * The descriptions of all the stones in the keeper's book have been updated
 * The Curios API mod is now required to run this mod
 
