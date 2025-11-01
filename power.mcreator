@@ -34525,6 +34525,20 @@
         ]
       },
       "path": "~/Modules/RunesSystem/PowerRuneAbilities"
+    },
+    {
+      "name": "CursedPortalParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_portal_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/particles/cursed_portal_particle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/CursedPortalParticleParticle.java"
+        ]
+      },
+      "path": "~/Dimensions/CursedWorld"
     }
   ],
   "variable_elements": [
