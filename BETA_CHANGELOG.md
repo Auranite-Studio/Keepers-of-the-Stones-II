@@ -18,7 +18,7 @@
 
 **Bugfixes**
 
-* \[Bugfix]
+* \[Bugfix] Fixed the names of the authors in the description of the mod
 
 **Known issues**
 
