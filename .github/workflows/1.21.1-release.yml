@@ -63,6 +63,7 @@ jobs:
             embedded-dependency@0.3.0(embedded)
             conflicting-dependency(conflicting)
             incompatible-dependency(incompatible)
+            curios-api(required){modrinth:DWBpfpw1}{curseforge:309927}#(ignore:github)
             patchouli(recommended){modrinth:nU0bVIaL}{curseforge:306770}#(ignore:github)
             better-combat(recommended){modrinth:5sy6g3kz}{curseforge:639842}#(ignore:github)
           modrinth-featured: true

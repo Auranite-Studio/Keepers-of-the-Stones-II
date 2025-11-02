@@ -45,6 +45,9 @@ public class PowerMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+		if (ModList.get().isLoaded("curios")) {
+			modEventBus.addListener(PowerModCuriosCompat::registerCapabilities);
+		}
 		PowerModSounds.REGISTRY.register(modEventBus);
 		PowerModBlocks.REGISTRY.register(modEventBus);
 		PowerModBlockEntities.REGISTRY.register(modEventBus);

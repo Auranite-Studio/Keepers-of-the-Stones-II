@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Darkness",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:dark_sword\",count:1}],ArmorItems:[{id:\"power:darkness_armor_boots\",count:1},{id:\"power:darkness_armor_leggings\",count:1},{id:\"power:darkness_armor_chestplate\",count:1},{id:\"power:darkness_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:darkness_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Nighttime or light level <7.",
+                "$(li)",
+                "Cloak of Darkness: +35% damage, –45% incoming damage.",
+                "$(li)",
+                "Dark Mantle: 30% chance to apply one of: \"Weakness II\", \"Slowness II\", \"Stun\", or \"Blindness\"."
+            ]
         }
     ]
 }

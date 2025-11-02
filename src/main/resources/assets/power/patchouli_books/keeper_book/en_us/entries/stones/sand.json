@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Sand",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:sand_saber\",count:1}],ArmorItems:[{id:\"power:sand_armor_boots\",count:1},{id:\"power:sand_armor_leggings\",count:1},{id:\"power:sand_armor_chestplate\",count:1},{id:\"power:sand_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:sand_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() In desert or mesa biomes.",
+                "$(li)",
+                "Sandstorm: 10% chance to apply random debuff — \"Blindness\", \"Slowness\", or \"Stun\" for 10 sec.",
+                "$(li)",
+                "Dune: –75% fall damage, –25% damage from mobs/players."
+            ]
         }
     ]
 }

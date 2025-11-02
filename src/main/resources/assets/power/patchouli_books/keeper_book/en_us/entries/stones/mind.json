@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of the Mind",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:mind_epee\",count:1}],ArmorItems:[{id:\"power:mind_armor_boots\",count:1},{id:\"power:mind_armor_leggings\",count:1},{id:\"power:mind_armor_chestplate\",count:1},{id:\"power:mind_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:mind_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Hypnotized player within 16 blocks.",
+                "$(li)",
+                "Collective Consciousness: +20% damage; hypnotized player gains +10% damage.",
+                "$(li)",
+                "Convergence: 15% chance to gain \"Dash\" for 15 sec on attack (also shared with hypnotized player)."
+            ]
         }
     ]
 }

@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Light",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:light_sword\",count:1}],ArmorItems:[{id:\"power:light_armor_boots\",count:1},{id:\"power:light_armor_leggings\",count:1},{id:\"power:light_armor_chestplate\",count:1},{id:\"power:light_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:light_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Light level ≥12.",
+                "$(li)",
+                "Abode of Light: +20% damage; 10% chance to gain \"Dash II\" for 7 sec on attack (once per 25 sec).",
+                "$(li)",
+                "Light Shield: 5% chance to activate \"Regeneration II\" for 10 sec when hit."
+            ]
         }
     ]
 }

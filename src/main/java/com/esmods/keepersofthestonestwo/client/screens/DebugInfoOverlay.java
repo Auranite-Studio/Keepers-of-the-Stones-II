@@ -88,9 +88,6 @@ public class DebugInfoOverlay {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					BaseDamageDebugProcedure.execute(entity), 6, 215, -1, false);
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
-
-					RuneActiveDebugProcedure.execute(entity), 6, 224, -1, false);
 		}
 	}
 }

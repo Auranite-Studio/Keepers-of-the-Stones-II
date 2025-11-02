@@ -120,9 +120,9 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MIND_BATTERY.get());
 				tabData.accept(PowerModItems.HEAT_BATTERY.get());
 				tabData.accept(PowerModItems.SHOCKWAVE_BATTERY.get());
+				tabData.accept(PowerModItems.COLORS_BATTERY.get());
 				tabData.accept(PowerModItems.GOLDEN_DUST_BATTERY.get());
 				tabData.accept(PowerModItems.DARKNESS_BATTERY.get());
-				tabData.accept(PowerModItems.COLORS_BATTERY.get());
 			}).withTabsBefore(STONES.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ITEMS = REGISTRY.register("items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.items")).icon(() -> new ItemStack(PowerModItems.AMPLIFIER_RING.get())).displayItems((parameters, tabData) -> {

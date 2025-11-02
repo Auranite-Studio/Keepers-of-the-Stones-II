@@ -129,10 +129,6 @@ public class PowerModEntities {
 			EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(256).setUpdateInterval(3).fireImmune()
 
 					.sized(0.6f, 1.8f));
-	public static final DeferredHolder<EntityType<?>, EntityType<ExampleMasterEntity>> EXAMPLE_MASTER = register("example_master",
-			EntityType.Builder.<ExampleMasterEntity>of(ExampleMasterEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-					.ridingOffset(-0.6f).sized(0.6f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<RedMagnetEntity>> RED_MAGNET = register("red_magnet",
 			EntityType.Builder.<RedMagnetEntity>of(RedMagnetEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
 
@@ -163,7 +159,6 @@ public class PowerModEntities {
 		EnergiumGolemEntity.init(event);
 		CursedSquireEntity.init(event);
 		CursedKeeperEntity.init(event);
-		ExampleMasterEntity.init(event);
 		RedMagnetEntity.init(event);
 		BlueMagnetEntity.init(event);
 	}
@@ -179,7 +174,6 @@ public class PowerModEntities {
 		event.put(ENERGIUM_GOLEM.get(), EnergiumGolemEntity.createAttributes().build());
 		event.put(CURSED_SQUIRE.get(), CursedSquireEntity.createAttributes().build());
 		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
-		event.put(EXAMPLE_MASTER.get(), ExampleMasterEntity.createAttributes().build());
 		event.put(RED_MAGNET.get(), RedMagnetEntity.createAttributes().build());
 		event.put(BLUE_MAGNET.get(), BlueMagnetEntity.createAttributes().build());
 	}

@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Destruction",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:destruction_broadsword\",count:1}],ArmorItems:[{id:\"power:destruction_armor_boots\",count:1},{id:\"power:destruction_armor_leggings\",count:1},{id:\"power:destruction_armor_chestplate\",count:1},{id:\"power:destruction_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:destruction_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Within 16 blocks of lava, fire, water, or in mountains/caves.",
+                "$(li)",
+                "Fracture: +40% damage.",
+                "$(li)",
+                "Cataclysm: 10% chance to instantly kill target with <25% health."
+            ]
         }
     ]
 }

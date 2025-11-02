@@ -52,7 +52,7 @@
       "value": "Blocks.OBSIDIAN"
     },
     "portalParticles": {
-      "value": "PORTAL"
+      "value": "CUSTOM:CursedPortalParticle"
     },
     "portalLuminance": 0,
     "portalSound": {

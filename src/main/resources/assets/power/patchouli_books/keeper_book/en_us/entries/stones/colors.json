@@ -1,0 +1,33 @@
+{
+    "name": "Colors",
+    "icon": "power:textures/mob_effect/colors_master.png",
+    "category": "power:stones",
+    "sortnum": 51,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": [
+                "$(l)Abilities$()",
+                "$(li)",
+                "Colors ray - attacks with a colored ray",
+                "$(li)",
+                "White bomb - shoots a white bomb.",
+                "$(li)",
+                "Colored aura - has a positive effect on the player."
+            ]
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "power:colors_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Any dye in player’s inventory.",
+                "$(li)",
+                "Dazzling Colors: 10% chance to apply \"Blindness\" for 7 seconds on attack.",
+                "$(li)",
+                "Color Absorption: Incoming damage reduced by 25%."
+            ]
+        }
+    ]
+}

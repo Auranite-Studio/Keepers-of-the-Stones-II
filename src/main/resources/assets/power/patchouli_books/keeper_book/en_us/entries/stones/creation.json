@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Creation",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:creation_staff\",count:1}],ArmorItems:[{id:\"power:creation_armor_boots\",count:1},{id:\"power:creation_armor_leggings\",count:1},{id:\"power:creation_armor_chestplate\",count:1},{id:\"power:creation_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:creation_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Within 16 blocks of lava, fire, water, or in mountains/caves.",
+                "$(li)",
+                "Harmony of Four Elements: +20% damage, –20% incoming damage.",
+                "$(li)",
+                "Builder: Grants permanent \"Haste III\"."
+            ]
         }
     ]
 }

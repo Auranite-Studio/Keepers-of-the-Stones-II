@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Tornado",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:tornado_axe\",count:1}],ArmorItems:[{id:\"power:tornado_armor_boots\",count:1},{id:\"power:tornado_armor_leggings\",count:1},{id:\"power:tornado_armor_chestplate\",count:1},{id:\"power:tornado_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:tornado_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() On open terrain.",
+                "$(li)",
+                "Fleeting Twister: 15% chance to launch enemy into the air on attack.",
+                "$(li)",
+                "Vortex Strike: 30% chance to gain \"Dash II\" for 10 sec (once per 40 sec)."
+            ]
         }
     ]
 }

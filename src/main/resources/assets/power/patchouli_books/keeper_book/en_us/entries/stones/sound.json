@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Sound",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:sound_dagger\",count:1}],ArmorItems:[{id:\"power:sound_armor_boots\",count:1},{id:\"power:sound_armor_leggings\",count:1},{id:\"power:sound_armor_chestplate\",count:1},{id:\"power:sound_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:sound_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() In enclosed space ≤8×8×8 blocks.",
+                "$(li)",
+                "Resonance: 15% chance to stun target for 5 sec on attack (once per 20 sec).",
+                "$(li)",
+                "Heightened Perception: 25% chance to take no damage when attacked from behind."
+            ]
         }
     ]
 }

@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Vacuum",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:vacuum_dagger\",count:1}],ArmorItems:[{id:\"power:vacuum_armor_boots\",count:1},{id:\"power:vacuum_armor_leggings\",count:1},{id:\"power:vacuum_armor_chestplate\",count:1},{id:\"power:vacuum_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:vacuum_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Taking damage from mobs or players.",
+                "$(li)",
+                "Denial: –50% incoming damage.",
+                "$(li)",
+                "Void Seal: 10% chance to gain \"Invulnerability\" for 20 sec (once per 180 sec)."
+            ]
         }
     ]
 }
