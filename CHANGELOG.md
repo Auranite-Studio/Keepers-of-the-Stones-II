@@ -16,13 +16,19 @@
 * The stun effect now stops the player completely and slows down the use of weapons
 * The Curse effect no longer creates a fog effect
 * The curse effect stops working when you exit the cursed world
+* Redesigned rune activation mechanics
+* The descriptions of all the stones in the keeper's book have been updated
+* The Curios API mod is now required to run this mod
 * The playerAnimator mod is no longer required
 
 
 
 **API changes**
 
-* Colorful Powers API has been updated to 27.0
+* Colorful Powers API has been updated to 28.0
+* Now add-ons can add runes
+* The rune-related field has been removed from debug mode
+* The code was cleaned and the rune system was optimized
 * Rename 'SendClientPackageActivationStoneVFXProcedure' class to 'ActivationStoneTriggerProcedure'
 * Some add-ons designed for earlier versions of the mod (1.2.0-1.2.4) may not work on this version
 
