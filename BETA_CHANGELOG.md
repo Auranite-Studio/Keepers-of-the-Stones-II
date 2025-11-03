@@ -9,7 +9,7 @@
 * *N/A*
 
 **Bugfixes**
-* \[Bugfix] 
+* \[Bugfix] Fixed body parts sometimes desyncing
 
 **Known issues**
 * *N/A*
