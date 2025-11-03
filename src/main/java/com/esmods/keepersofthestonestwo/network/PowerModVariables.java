@@ -107,6 +107,7 @@ public class PowerModVariables {
 		clone.green_rune_slot = original.green_rune_slot;
 		clone.conv_to_new_rune_system = original.conv_to_new_rune_system;
 		clone.rune_ability_activate = original.rune_ability_activate;
+		clone.max_ethernal_curse_points = original.max_ethernal_curse_points;
 		if (!event.isWasDeath()) {
 			clone.teleporting_effect = original.teleporting_effect;
 			clone.abilities_timer = original.abilities_timer;
@@ -135,6 +136,7 @@ public class PowerModVariables {
 			clone.master_effect_start = original.master_effect_start;
 			clone.level_up_status = original.level_up_status;
 			clone.mind_player_owner = original.mind_player_owner;
+			clone.ethernal_curse_points = original.ethernal_curse_points;
 		}
 		event.getEntity().setData(PLAYER_VARIABLES, clone);
 	}
@@ -529,6 +531,8 @@ public class PowerModVariables {
 		public ItemStack green_rune_slot = ItemStack.EMPTY;
 		public boolean conv_to_new_rune_system = true;
 		public boolean rune_ability_activate = false;
+		public double ethernal_curse_points = 0.0;
+		public double max_ethernal_curse_points = 1200.0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -593,6 +597,8 @@ public class PowerModVariables {
 			nbt.put("green_rune_slot", green_rune_slot.saveOptional(lookupProvider));
 			nbt.putBoolean("conv_to_new_rune_system", conv_to_new_rune_system);
 			nbt.putBoolean("rune_ability_activate", rune_ability_activate);
+			nbt.putDouble("ethernal_curse_points", ethernal_curse_points);
+			nbt.putDouble("max_ethernal_curse_points", max_ethernal_curse_points);
 			return nbt;
 		}
 
@@ -658,6 +664,8 @@ public class PowerModVariables {
 			green_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("green_rune_slot"));
 			conv_to_new_rune_system = nbt.getBoolean("conv_to_new_rune_system");
 			rune_ability_activate = nbt.getBoolean("rune_ability_activate");
+			ethernal_curse_points = nbt.getDouble("ethernal_curse_points");
+			max_ethernal_curse_points = nbt.getDouble("max_ethernal_curse_points");
 		}
 
 		public void markSyncDirty() {

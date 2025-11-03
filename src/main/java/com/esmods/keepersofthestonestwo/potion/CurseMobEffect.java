@@ -25,7 +25,7 @@ public class CurseMobEffect extends MobEffect {
 
 	@Override
 	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		CurseTickEventProcedure.execute(entity.level(), entity);
+		CurseTickEventProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		return super.applyEffectTick(entity, amplifier);
 	}
 }

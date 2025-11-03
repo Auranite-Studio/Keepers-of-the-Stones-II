@@ -2,7 +2,9 @@
 * *N/A*
 
 **Improvemnts**
-* Increased the time between taking damage from the Curse effect from 3 to 9 sec
+* Redesigned the "Curse" effect
+* Eternal Curse damage is now dealt once every 1 min
+* Eternal Curse damage has been increased to 6 damage
 * Reduced the chance of a cursed castle appearing
 * Removed checking for new versions on unstable versions of the mod
 

@@ -21403,26 +21403,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
-      "path": "~/Biomes"
+      "path": "~/Dimensions/CursedWorld"
     },
     {
       "name": "RedMagnetPowerTick",
@@ -30530,6 +30514,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -34539,6 +34535,59 @@
         ]
       },
       "path": "~/Dimensions/CursedWorld"
+    },
+    {
+      "name": "EthernalCurseProgressGUI",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ethernal_curse_progress_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/screens/EthernalCurseProgressGUIOverlay.java"
+        ]
+      },
+      "path": "~/Dimensions/CursedWorld"
+    },
+    {
+      "name": "EthernalProgressBarInt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ethernal_progress_bar_int",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EthernalProgressBarIntProcedure.java"
+        ]
+      },
+      "path": "~/Dimensions/CursedWorld"
+    },
+    {
+      "name": "EthernalCurseProgressGUCheckEffect",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ethernal_curse_progress_gu_check_effect",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EthernalCurseProgressGUCheckEffectProcedure.java"
+        ]
+      },
+      "path": "~/Dimensions/CursedWorld"
     }
   ],
   "variable_elements": [
@@ -35267,6 +35316,18 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "ethernal_curse_points",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "max_ethernal_curse_points",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1200.0"
     }
   ],
   "sound_elements": [

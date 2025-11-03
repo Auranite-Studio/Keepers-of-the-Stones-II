@@ -154,6 +154,13 @@ public class ConverterModuleProcedure {
 				_vars.markSyncDirty();
 			}
 		}
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).max_ethernal_curse_points == 0) {
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.max_ethernal_curse_points = 1200;
+				_vars.markSyncDirty();
+			}
+		}
 		PowerModVariables.MapVariables.get(world).cpapi_ver = 28;
 		PowerModVariables.MapVariables.get(world).markSyncDirty();
 	}
