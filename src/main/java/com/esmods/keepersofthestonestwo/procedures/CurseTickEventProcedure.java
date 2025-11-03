@@ -16,10 +16,10 @@ public class CurseTickEventProcedure {
 		if (entity == null)
 			return;
 		if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("power:cursed_world"))) {
-			if (entity.getPersistentData().getDouble("curseTickDamage") == 60) {
+			if (entity.getPersistentData().getDouble("curseTickDamage") == 180) {
 				entity.getPersistentData().putDouble("curseTickDamage", 0);
 				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC)), 3);
-			} else if (entity.getPersistentData().getDouble("curseTickDamage") < 60) {
+			} else if (entity.getPersistentData().getDouble("curseTickDamage") < 180) {
 				entity.getPersistentData().putDouble("curseTickDamage", (entity.getPersistentData().getDouble("curseTickDamage") + 1));
 			}
 		} else {
