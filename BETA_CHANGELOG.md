@@ -2,6 +2,7 @@
 * *N/A*
 
 **Improvemnts**
+* Reduced the chance of a cursed castle appearing
 * Removed checking for new versions on unstable versions of the mod
 
 **API changes**
