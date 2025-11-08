@@ -47,25 +47,25 @@ public class PowerModVariables {
 	@SubscribeEvent
 	public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
 		if (event.getEntity() instanceof ServerPlayer player)
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+			PacketDistributor.sendToPlayersInDimension((ServerLevel) player.level(), new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES), player.getId()));
 	}
 
 	@SubscribeEvent
 	public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
 		if (event.getEntity() instanceof ServerPlayer player)
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+			PacketDistributor.sendToPlayersInDimension((ServerLevel) player.level(), new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES), player.getId()));
 	}
 
 	@SubscribeEvent
 	public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
 		if (event.getEntity() instanceof ServerPlayer player)
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+			PacketDistributor.sendToPlayersInDimension((ServerLevel) player.level(), new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES), player.getId()));
 	}
 
 	@SubscribeEvent
 	public static void onPlayerTickUpdateSyncPlayerVariables(PlayerTickEvent.Post event) {
 		if (event.getEntity() instanceof ServerPlayer player && player.getData(PLAYER_VARIABLES)._syncDirty) {
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+			PacketDistributor.sendToPlayersInDimension((ServerLevel) player.level(), new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES), player.getId()));
 			player.getData(PLAYER_VARIABLES)._syncDirty = false;
 		}
 	}
@@ -673,14 +673,16 @@ public class PowerModVariables {
 		}
 	}
 
-	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
+	public record PlayerVariablesSyncMessage(PlayerVariables data, int player) implements CustomPacketPayload {
 		public static final Type<PlayerVariablesSyncMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "player_variables_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec
-				.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess())), (RegistryFriendlyByteBuf buffer) -> {
-					PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables());
-					message.data.deserializeNBT(buffer.registryAccess(), buffer.readNbt());
-					return message;
-				});
+		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> {
+			buffer.writeInt(message.player());
+			buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess()));
+		}, (RegistryFriendlyByteBuf buffer) -> {
+			PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables(), buffer.readInt());
+			message.data.deserializeNBT(buffer.registryAccess(), buffer.readNbt());
+			return message;
+		});
 
 		@Override
 		public Type<PlayerVariablesSyncMessage> type() {
@@ -689,10 +691,11 @@ public class PowerModVariables {
 
 		public static void handleData(final PlayerVariablesSyncMessage message, final IPayloadContext context) {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
-				context.enqueueWork(() -> context.player().getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess()))).exceptionally(e -> {
-					context.connection().disconnect(Component.literal(e.getMessage()));
-					return null;
-				});
+				context.enqueueWork(() -> context.player().level().getEntity(message.player).getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess())))
+						.exceptionally(e -> {
+							context.connection().disconnect(Component.literal(e.getMessage()));
+							return null;
+						});
 			}
 		}
 	}

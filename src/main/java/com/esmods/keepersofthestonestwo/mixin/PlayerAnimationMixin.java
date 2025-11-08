@@ -15,6 +15,7 @@ import net.minecraft.client.model.PlayerModel;
 import java.util.Map;
 
 import com.esmods.keepersofthestonestwo.PowerModPlayerAnimationAPI;
+import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mixin(PlayerModel.class)
 public abstract class PlayerAnimationMixin<T extends LivingEntity> {
@@ -75,6 +76,10 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 		PowerModPlayerAnimationAPI.PlayerAnimation animation = PowerModPlayerAnimationAPI.active_animations.get(player);
 		if (animation == null) {
 			animation = PowerModPlayerAnimationAPI.animations.get(playingAnimation);
+			if (animation == null) {
+				PowerMod.LOGGER.info("Attepted to play null animation " + playingAnimation + ", did animations fail to load?");
+				return;
+			}
 			PowerModPlayerAnimationAPI.active_animations.put(player, animation);
 		}
 		float animationProgress;
