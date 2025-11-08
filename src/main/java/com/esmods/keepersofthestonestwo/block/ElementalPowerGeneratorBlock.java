@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.block;
 
 import org.checkerframework.checker.units.qual.s;
@@ -42,7 +41,7 @@ public class ElementalPowerGeneratorBlock extends Block implements EntityBlock {
 					return 7;
 				return 0;
 			}
-		}.getLightLevel())).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+		}.getLightLevel())).requiresCorrectToolForDrops().dynamicShape().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
@@ -118,7 +117,7 @@ public class ElementalPowerGeneratorBlock extends Block implements EntityBlock {
 	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
 	}
 
 	@Override

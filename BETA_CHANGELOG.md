@@ -1,16 +1,18 @@
-
 **New features**
-- *N/A*
+* *N/A*
 
-**Improvemnts** 
-- *N/A*
+**Improvemnts**
+* Redesigned the "Curse" effect
+* Eternal Curse damage is now dealt once every 1 min
+* Eternal Curse damage has been increased to 6 damage
+* Reduced the chance of a cursed castle appearing
+* Removed checking for new versions on unstable versions of the mod
 
 **API changes**
-- *N/A*
+* *N/A*
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that caused the heat and shockwave stone abilities to not work
-- [Bugfix] Fixed a bug that caused green rune abilities to not work
+* \[Bugfix] Fixed body parts sometimes desyncing
 
 **Known issues**
-- *N/A*
+* *N/A*

@@ -1,7 +1,4 @@
-
 package com.esmods.keepersofthestonestwo.block.entity;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -29,8 +26,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
 import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
 
 public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 
 	public BatteryChargerBlockEntity(BlockPos position, BlockState state) {
 		super(PowerModBlockEntities.BATTERY_CHARGER.get(), position, state);
@@ -129,9 +125,5 @@ public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity 
 		if (index == 1)
 			return false;
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

@@ -6,17 +6,24 @@ import org.apache.logging.log4j.LogManager;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import net.neoforged.neoforge.network.handling.IPayloadHandler;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.capabilities.EntityCapability;
 import net.neoforged.fml.util.thread.SidedThreadGroups;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.ModList;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.IEventBus;
 
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.util.Tuple;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Map;
@@ -26,17 +33,7 @@ import java.util.Collection;
 import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModVillagerProfessions;
-import com.esmods.keepersofthestonestwo.init.PowerModTabs;
-import com.esmods.keepersofthestonestwo.init.PowerModSounds;
-import com.esmods.keepersofthestonestwo.init.PowerModPotions;
-import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
-import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
-import com.esmods.keepersofthestonestwo.init.PowerModMenus;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
-import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
-import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
+import com.esmods.keepersofthestonestwo.init.*;
 
 @Mod("power")
 public class PowerMod {
@@ -48,6 +45,9 @@ public class PowerMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+		if (ModList.get().isLoaded("curios")) {
+			modEventBus.addListener(PowerModCuriosCompat::registerCapabilities);
+		}
 		PowerModSounds.REGISTRY.register(modEventBus);
 		PowerModBlocks.REGISTRY.register(modEventBus);
 		PowerModBlockEntities.REGISTRY.register(modEventBus);
@@ -104,5 +104,20 @@ public class PowerMod {
 		});
 		actions.forEach(e -> e.getA().run());
 		workQueue.removeAll(actions);
+	}
+
+	public static class CuriosApiHelper {
+		private static final EntityCapability<IItemHandler, Void> CURIOS_INVENTORY = EntityCapability.createVoid(ResourceLocation.fromNamespaceAndPath("curios", "item_handler"), IItemHandler.class);
+
+		public static IItemHandler getCuriosInventory(Player player) {
+			if (ModList.get().isLoaded("curios")) {
+				return player.getCapability(CURIOS_INVENTORY);
+			}
+			return null;
+		}
+
+		public static boolean isCurioItem(ItemStack itemstack) {
+			return BuiltInRegistries.ITEM.getTagNames().filter(tagKey -> tagKey.location().getNamespace().equals("curios")).anyMatch(itemstack::is);
+		}
 	}
 }

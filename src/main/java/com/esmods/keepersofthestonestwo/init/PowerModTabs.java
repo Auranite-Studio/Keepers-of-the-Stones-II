@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -66,6 +65,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MIND_STONE.get());
 				tabData.accept(PowerModItems.HEAT_STONE.get());
 				tabData.accept(PowerModItems.SHOCKWAVE_STONE.get());
+				tabData.accept(PowerModItems.COLORS_STONE.get());
 				tabData.accept(PowerModItems.GOLDEN_DUST_STONE.get());
 				tabData.accept(PowerModItems.DARKNESS_STONE.get());
 			}).build());
@@ -120,6 +120,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MIND_BATTERY.get());
 				tabData.accept(PowerModItems.HEAT_BATTERY.get());
 				tabData.accept(PowerModItems.SHOCKWAVE_BATTERY.get());
+				tabData.accept(PowerModItems.COLORS_BATTERY.get());
 				tabData.accept(PowerModItems.GOLDEN_DUST_BATTERY.get());
 				tabData.accept(PowerModItems.DARKNESS_BATTERY.get());
 			}).withTabsBefore(STONES.getId()).build());
@@ -216,6 +217,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.FREAKING_PARSNIP_SOUP.get());
 				tabData.accept(PowerModItems.EMPTY_CHARACTERISTICS_CARD.get());
 				tabData.accept(PowerModItems.CHARACTERISTICS_CARD.get());
+				tabData.accept(PowerModItems.CURSED_WORLD.get());
 			}).withTabsBefore(BATTERIES.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOBS = REGISTRY.register("mobs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {

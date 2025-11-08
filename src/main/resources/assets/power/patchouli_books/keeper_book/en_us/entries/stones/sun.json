@@ -13,15 +13,21 @@
                 "$(li)",
                 "Sun explosion - explodes the nearest entity.",
                 "$(li)",
-                "Sun healing - heals all allies only if the player presses SHIFT. Otherwise, it only heals the player himself. "
+                "Sun healing - Sun healing - heals the target player provided they press SHIFT otherwise themselves. "
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of the Sun",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:solar_blade\",count:1}],ArmorItems:[{id:\"power:sun_armor_boots\",count:1},{id:\"power:sun_armor_leggings\",count:1},{id:\"power:sun_armor_chestplate\",count:1},{id:\"power:sun_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:sun_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Daytime, under open sky.",
+                "$(li)",
+                "Solar Focus: 10% chance to ignite target for 3 sec.",
+                "$(li)",
+                "Solar Power: If health <75%, +20% damage and +25% health regen."
+            ]
         }
     ]
 }

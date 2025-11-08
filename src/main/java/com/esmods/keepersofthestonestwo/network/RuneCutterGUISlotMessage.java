@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -19,7 +18,7 @@ import net.minecraft.core.BlockPos;
 import com.esmods.keepersofthestonestwo.procedures.RemoveWhenRuneIsCuttedProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record RuneCutterGUISlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
 
 	public static final Type<RuneCutterGUISlotMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "rune_cutter_gui_slots"));
@@ -51,6 +50,7 @@ public record RuneCutterGUISlotMessage(int slotID, int x, int y, int z, int chan
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (slot == 2 && changeType == 1) {
+			int amount = meta;
 
 			RemoveWhenRuneIsCuttedProcedure.execute(world, x, y, z);
 		}

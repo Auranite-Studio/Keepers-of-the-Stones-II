@@ -5,7 +5,11 @@
     "recipeType": "Smelting",
     "recipeRetstackSize": 1,
     "group": "",
-    "unlockingItems": [],
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:AmplifierOre"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.7,
     "cookingTime": 200,

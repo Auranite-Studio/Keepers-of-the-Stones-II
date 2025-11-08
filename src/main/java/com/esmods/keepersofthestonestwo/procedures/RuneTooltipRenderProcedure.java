@@ -1,26 +1,19 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class RuneTooltipRenderProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
 		String active_rune = "";
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem() == PowerModItems.PROTECTION_RUNE.get()) {
-			active_rune = "gui.power.wheel_abilities.tooltip.protection_rune";
-		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem() == PowerModItems.SPIN_RUNE.get()) {
-			active_rune = "gui.power.wheel_abilities.tooltip.spin_rune";
-		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem() == PowerModItems.DODGING_RUNE.get()) {
-			active_rune = "gui.power.wheel_abilities.tooltip.dodging_rune";
-		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem() == PowerModItems.INVISIBILITY_RUNE.get()) {
-			active_rune = "gui.power.wheel_abilities.tooltip.invisibility_rune";
-		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem() == PowerModItems.HEALING_RUNE.get()) {
-			active_rune = "gui.power.wheel_abilities.tooltip.healing_rune";
+		if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem() == ItemStack.EMPTY.getItem())) {
+			active_rune = "gui.power.wheel_abilities.tooltip." + BuiltInRegistries.ITEM.getKey(entity.getData(PowerModVariables.PLAYER_VARIABLES).green_rune_slot.getItem()).toString();
 		} else {
 			active_rune = Component.translatable("gui.power.wheel_abilities.tooltip.rune_not_install").getString();
 		}

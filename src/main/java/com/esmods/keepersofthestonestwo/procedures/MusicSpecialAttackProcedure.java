@@ -92,7 +92,7 @@ public class MusicSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("music_ability_2")) {
@@ -163,11 +163,71 @@ public class MusicSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("music_ability_3")) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75 && entity.isShiftKeyDown() == true) {
+				particleAmount = 8;
+				particleRadius = 2;
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
+					}
+				}
+				for (int index1 = 0; index1 < 60; index1++) {
+					for (int index2 = 0; index2 < (int) particleAmount; index2++) {
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles(ParticleTypes.NOTE, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+									(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
+					}
+				}
+				{
+					final Vec3 _center = new Vec3(x, y, z);
+					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
+						if (!(entityiterator == entity)) {
+							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 400, 1, false, false));
+							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, false));
+							if (entityiterator instanceof LivingEntity _entity)
+								_entity.removeEffect(MobEffects.POISON);
+							if (entityiterator instanceof LivingEntity _entity)
+								_entity.removeEffect(MobEffects.DIG_SLOWDOWN);
+							if (entityiterator instanceof LivingEntity _entity)
+								_entity.removeEffect(MobEffects.BLINDNESS);
+							if (entityiterator instanceof LivingEntity _entity)
+								_entity.removeEffect(MobEffects.HUNGER);
+						}
+					}
+				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 75;
+					_vars.markSyncDirty();
+				}
+			}
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75 && entity.isShiftKeyDown() == false) {
+				particleAmount = 8;
+				particleRadius = 2;
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
+					}
+				}
+				for (int index3 = 0; index3 < 60; index3++) {
+					for (int index4 = 0; index4 < (int) particleAmount; index4++) {
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles(ParticleTypes.NOTE, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+									(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
+					}
+				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 400, 1, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -180,27 +240,10 @@ public class MusicSpecialAttackProcedure {
 					_entity.removeEffect(MobEffects.BLINDNESS);
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.HUNGER);
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
-					}
-				}
-				particleAmount = 8;
-				particleRadius = 2;
-				for (int index1 = 0; index1 < 60; index1++) {
-					for (int index2 = 0; index2 < (int) particleAmount; index2++) {
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.NOTE, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-									(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
-									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
-					}
-				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 75;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

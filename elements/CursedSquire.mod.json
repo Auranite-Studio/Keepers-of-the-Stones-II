@@ -81,6 +81,7 @@
       "value": -9817013,
       "falpha": 0.0
     },
+    "spawnEggTexture": "",
     "creativeTabs": [
       {
         "value": "CUSTOM:Mobs"
@@ -171,6 +172,37 @@
         "name": "attack_anim_sync",
         "type": "integer",
         "value": 0
+      },
+      {
+        "name": "OnBattle",
+        "type": "logic",
+        "value": false
+      },
+      {
+        "name": "State",
+        "type": "string",
+        "value": ""
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "IA",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Patience",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Look",
+        "type": "integer",
+        "value": 0
       }
     ],
     "onMobTickUpdate": {
@@ -190,11 +222,11 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
-    "doesDespawnWhenIdle": false,
-    "spawningProbability": 8,
-    "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 1,
+    "doesDespawnWhenIdle": true,
+    "spawningProbability": 10,
+    "mobSpawningType": "ambient",
+    "minNumberOfMobsPerGroup": 2,
+    "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:CursedForest"
@@ -209,6 +241,11 @@
       4,
       4,
       2
-    ]
+    ],
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    }
   }
 }

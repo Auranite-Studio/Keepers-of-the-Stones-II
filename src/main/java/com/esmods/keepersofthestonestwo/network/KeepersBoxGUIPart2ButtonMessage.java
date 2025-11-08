@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -16,23 +15,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.TornadoElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TimeElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TeleportationElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TechnologyElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SpeedElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SoundElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SmokeElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MusicElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MistElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
-import com.esmods.keepersofthestonestwo.procedures.KBtoPart1Procedure;
-import com.esmods.keepersofthestonestwo.procedures.DestructionElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CreationElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.AirElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record KeepersBoxGUIPart2ButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<KeepersBoxGUIPart2ButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "keepers_box_gui_part_2_buttons"));

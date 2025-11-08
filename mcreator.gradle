@@ -1,11 +1,13 @@
 repositories {
- maven {
-     url = 'https://maven.kosmx.dev/'
- }
+maven {
+  name = "Illusive Soulworks maven"
+  url = "https://maven.theillusivec4.top/"
+  }
 }
 
- dependencies {
-   implementation 'dev.kosmx.player-anim:player-animation-lib-forge:2.0.1+1.21.1'
- }
+dependencies {
+  runtimeOnly "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
+  compileOnly "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1:api"
+}
 
 

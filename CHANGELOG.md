@@ -1,34 +1,44 @@
-
 **New features**
-- Added new elements - heat and shockwave
-- Added runologist
-- Added runologist's house to villages
-- Added rune cutter
-- Added three types of runes - blue, red and green
-- Added unknown rune
-- Added the energium shield
-- Added achievement - Runes of the Ancients
-- Added Chinese (Simplified) language
 
-**Improvemnts** 
-- The fourth ability can be activated if the green rune is active
-- Redesigned the second and third abilities of the magnet element
-- Now Magnet Master can place two magnets of different polarities (blue - repels, red - attracts)
-- Master of Gravity no longer takes fall damage
-- Increased the chance to drop an energium upgrade smithing template from the energium vaults
-- Enchanted books will now drop less frequently in energium vaults
-- Unknown runes now drops instead of enchanted books in cursed vaults
-- The keeper's box can now hold more than 48 elements
+* Added new element - colors
+* Added new dimension - cursed world
+* Added enchanted flint
+* The cursed forest has been moved to a new dimension - cursed world
+* Added advanced passive skills for all elements
+* Each element has two passive skills: basic and additional
+* Both passive skills depend on the condition, they are individual for each element
+* Removed the basic passive skills that some elements had
+
+**Improvemnts**
+
+* Added sound when crafting a rune in rune cutter
+* Changed energium shield crafting recipe (now requires planks instead of depleted energium ingots)
+* The stun effect now stops the player completely and slows down the use of weapons
+* The Curse effect no longer creates a fog effect
+* The curse effect stops working when you exit the cursed world
+* Redesigned rune activation mechanics
+* The descriptions of all the stones in the keeper's book have been updated
+* The Curios API mod is now required to run this mod
+* The playerAnimator mod is no longer required
+
+
 
 **API changes**
-- Colorful Powers API has been updated to 26
-- Added new rune-related tags
-- Added a warning about using beta versions of the mod, and if Modrinth has a newer version
-- Compatibility of add-ons developed for earlier versions of the mod (1.1.6-1.1.8) is preserved
+
+* Colorful Powers API has been updated to 28.0
+* Now add-ons can add runes
+* The rune-related field has been removed from debug mode
+* The code was cleaned and the rune system was optimized
+* Rename 'SendClientPackageActivationStoneVFXProcedure' class to 'ActivationStoneTriggerProcedure'
+* Some add-ons designed for earlier versions of the mod (1.2.0-1.2.4) may not work on this version
 
 **Bugfixes**
-- [Bugfix] Fixed a bug that caused ores to not be mined with the silk touch enchantment
-- [Bugfix] Fixed item rendering on some blocks (1.21.5 only)
+
+* \[Bugfix] Fixed incorrect version checking
+* \[Bugfix] Fixed unlocking of some recipes
+
+
 
 **Known issues**
-- *N/A*
+
+* *N/A*

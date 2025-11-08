@@ -1,4 +1,3 @@
-
 /*
  *	MCreator note: This file will be REGENERATED on each build.
  */
@@ -9,66 +8,9 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbiltiesGoldenDustScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilityDarknessScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesWaterScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesVacuumScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesTornadoScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesTimeScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesTeleportationScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesTechnologyScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSunScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSpiritScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSpeedScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSpaceScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSoundScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSmokeScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesShockwaveScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesShadowScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSandScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesRainScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesPoisonScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesPlantsScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesPlagueScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesOceanScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMusicScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMushroomsScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMoonScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMistScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMindScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMetalScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMercuryScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMagnetScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLightningScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLightScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLavaScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesIceScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesHeatScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesGravityScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesFormScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesFireScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesExplosionScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEtherScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEnergyScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEarthScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesDestructionScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCrystalScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCreationScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesBlueFlameScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesBloodScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAnimalsScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAmberScreen;
-import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAirScreen;
-import com.esmods.keepersofthestonestwo.client.gui.RuneCutterGUIScreen;
-import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart5Screen;
-import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart4Screen;
-import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart3Screen;
-import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart2Screen;
-import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart1Screen;
-import com.esmods.keepersofthestonestwo.client.gui.CharacteristicsCardGUIScreen;
-import com.esmods.keepersofthestonestwo.client.gui.BatteryChargerGUIScreen;
+import com.esmods.keepersofthestonestwo.client.gui.*;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(Dist.CLIENT)
 public class PowerModScreens {
 	@SubscribeEvent
 	public static void clientLoad(RegisterMenuScreensEvent event) {
@@ -130,6 +72,7 @@ public class PowerModScreens {
 		event.register(PowerModMenus.WHEEL_ABILITIES_HEAT.get(), WheelAbilitiesHeatScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_SHOCKWAVE.get(), WheelAbilitiesShockwaveScreen::new);
 		event.register(PowerModMenus.RUNE_CUTTER_GUI.get(), RuneCutterGUIScreen::new);
+		event.register(PowerModMenus.WHEEL_ABILITIES_COLORS.get(), WheelAbilitiesColorsScreen::new);
 	}
 
 	public interface ScreenAccessor {

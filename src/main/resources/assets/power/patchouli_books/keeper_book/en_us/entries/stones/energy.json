@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Energy",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:energy_staff\",count:1}],ArmorItems:[{id:\"power:energy_armor_boots\",count:1},{id:\"power:energy_armor_leggings\",count:1},{id:\"power:energy_armor_chestplate\",count:1},{id:\"power:energy_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:energy_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Hunger bar ≥16.",
+                "$(li)",
+                "Charged Attack: Every 3rd hit in a 3-sec combo deals +50% damage.",
+                "$(li)",
+                "Reserve Energy: Sprinting does not consume hunger."
+            ]
         }
     ]
 }

@@ -1,6 +1,5 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
@@ -17,9 +16,12 @@ public class DebugControlProcedure {
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 			_vars.debug = BoolArgumentType.getBool(arguments, "debug_logic");
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
-		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal(("Debug mode set is: " + entity.getData(PowerModVariables.PLAYER_VARIABLES).debug)), false);
+		{
+			final String _success = ("Debug mode set is: " + entity.getData(PowerModVariables.PLAYER_VARIABLES).debug);
+			final boolean _informAdmins = true;
+			arguments.getSource().sendSuccess(() -> Component.literal(_success), _informAdmins);
+		}
 	}
 }

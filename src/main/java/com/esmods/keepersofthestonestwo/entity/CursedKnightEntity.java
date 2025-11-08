@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
@@ -23,7 +22,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -42,6 +40,11 @@ import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 public class CursedKnightEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_attack_anim_sync = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<String> DATA_State = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Boolean> DATA_OnBattle = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Integer> DATA_IA = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_Patience = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_Look = SynchedEntityData.defineId(CursedKnightEntity.class, EntityDataSerializers.INT);
 	public final AnimationState animationState0 = new AnimationState();
 	public final AnimationState animationState1 = new AnimationState();
 	public final AnimationState animationState2 = new AnimationState();
@@ -51,13 +54,17 @@ public class CursedKnightEntity extends Monster {
 		super(type, world);
 		xpReward = 50;
 		setNoAi(false);
-		setPersistenceRequired();
 	}
 
 	@Override
 	protected void defineSynchedData(SynchedEntityData.Builder builder) {
 		super.defineSynchedData(builder);
 		builder.define(DATA_attack_anim_sync, 0);
+		builder.define(DATA_State, "");
+		builder.define(DATA_OnBattle, false);
+		builder.define(DATA_IA, 0);
+		builder.define(DATA_Patience, 0);
+		builder.define(DATA_Look, 0);
 	}
 
 	@Override
@@ -73,11 +80,6 @@ public class CursedKnightEntity extends Monster {
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override
@@ -109,14 +111,14 @@ public class CursedKnightEntity extends Monster {
 	}
 
 	@Override
-	public boolean fireImmune() {
-		return true;
-	}
-
-	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
+		compound.putString("DataState", this.entityData.get(DATA_State));
+		compound.putBoolean("DataOnBattle", this.entityData.get(DATA_OnBattle));
+		compound.putInt("DataIA", this.entityData.get(DATA_IA));
+		compound.putInt("DataPatience", this.entityData.get(DATA_Patience));
+		compound.putInt("DataLook", this.entityData.get(DATA_Look));
 	}
 
 	@Override
@@ -124,6 +126,16 @@ public class CursedKnightEntity extends Monster {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Dataattack_anim_sync"))
 			this.entityData.set(DATA_attack_anim_sync, compound.getInt("Dataattack_anim_sync"));
+		if (compound.contains("DataState"))
+			this.entityData.set(DATA_State, compound.getString("DataState"));
+		if (compound.contains("DataOnBattle"))
+			this.entityData.set(DATA_OnBattle, compound.getBoolean("DataOnBattle"));
+		if (compound.contains("DataIA"))
+			this.entityData.set(DATA_IA, compound.getInt("DataIA"));
+		if (compound.contains("DataPatience"))
+			this.entityData.set(DATA_Patience, compound.getInt("DataPatience"));
+		if (compound.contains("DataLook"))
+			this.entityData.set(DATA_Look, compound.getInt("DataLook"));
 	}
 
 	@Override
@@ -144,9 +156,7 @@ public class CursedKnightEntity extends Monster {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(PowerModEntities.CURSED_KNIGHT.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
-				RegisterSpawnPlacementsEvent.Operation.REPLACE);
+		event.register(PowerModEntities.CURSED_KNIGHT.get(), SpawnPlacementTypes.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

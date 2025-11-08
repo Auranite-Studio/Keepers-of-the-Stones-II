@@ -1,0 +1,25 @@
+{
+  "_fv": 79,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.WOOL#0"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "disableGravity": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 1,
+    "entityModel": "Modellightball",
+    "customModelTexture": "white_bomb.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onFlyingTick": {
+      "name": "WhiteBombKazhdyiTikPriPoliotieSnariada"
+    }
+  }
+}

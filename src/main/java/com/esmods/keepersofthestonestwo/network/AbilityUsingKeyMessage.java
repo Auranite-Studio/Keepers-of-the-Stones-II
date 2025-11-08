@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -18,7 +17,7 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import com.esmods.keepersofthestonestwo.procedures.AbilityUsingKeyPressedProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record AbilityUsingKeyMessage(int eventType, int pressedms) implements CustomPacketPayload {
 	public static final Type<AbilityUsingKeyMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "key_ability_using_key"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, AbilityUsingKeyMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, AbilityUsingKeyMessage message) -> {

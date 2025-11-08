@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -48,4 +47,5 @@ public class PowerModParticleTypes {
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> LIGHTNING_PARTICLE = REGISTRY.register("lightning_particle", () -> new SimpleParticleType(false));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> SHOCK_WAVES_PARTICLE = REGISTRY.register("shock_waves_particle", () -> new SimpleParticleType(false));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> PROTECTION_PARTICLE = REGISTRY.register("protection_particle", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> CURSED_PORTAL_PARTICLE = REGISTRY.register("cursed_portal_particle", () -> new SimpleParticleType(false));
 }

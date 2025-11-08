@@ -27,19 +27,19 @@ public class ElementalPowerGeneratorRegenerationStarsTickProcedure {
 								{
 									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.powerTimer = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer - 0.5;
-									_vars.syncPlayerVariables(entityiterator);
+									_vars.markSyncDirty();
 								}
 							} else {
 								{
 									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.powerTimer = 50;
-									_vars.syncPlayerVariables(entityiterator);
+									_vars.markSyncDirty();
 								}
 								if (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).power < entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).max_power) {
 									{
 										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.power = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).power + 5;
-										_vars.syncPlayerVariables(entityiterator);
+										_vars.markSyncDirty();
 									}
 								}
 							}

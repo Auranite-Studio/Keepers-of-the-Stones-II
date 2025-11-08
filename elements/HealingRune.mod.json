@@ -8,6 +8,7 @@
     "guiTexture": "",
     "customProperties": {},
     "states": [],
+    "animations": [],
     "name": "Rune",
     "rarity": "RARE",
     "creativeTabs": [
@@ -25,6 +26,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
@@ -33,7 +35,7 @@
       "fixedValue": [
         "§9Healing",
         "§7Type:",
-        "§aGreen",
+        " §aGreen",
         "§7Specifications:",
         " §9Effect: Regeneration"
       ]

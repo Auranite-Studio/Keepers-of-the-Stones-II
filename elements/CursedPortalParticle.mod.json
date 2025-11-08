@@ -1,0 +1,24 @@
+{
+  "_fv": 79,
+  "_type": "particle",
+  "definition": {
+    "texture": "cursed_portal_particle",
+    "animate": true,
+    "frameDuration": 2,
+    "width": 1.0,
+    "height": 1.0,
+    "scale": {
+      "fixedValue": 1.0
+    },
+    "speedFactor": 0.1,
+    "gravity": 0.0,
+    "maxAge": 16,
+    "maxAgeDiff": 0,
+    "angularVelocity": 0.0,
+    "angularAcceleration": 0.0,
+    "canCollide": true,
+    "alwaysShow": false,
+    "emissiveRendering": true,
+    "renderType": "OPAQUE"
+  }
+}

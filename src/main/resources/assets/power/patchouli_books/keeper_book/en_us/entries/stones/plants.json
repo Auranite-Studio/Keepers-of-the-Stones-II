@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Plants",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:green_staff\",count:1}],ArmorItems:[{id:\"power:plants_armor_boots\",count:1},{id:\"power:plants_armor_leggings\",count:1},{id:\"power:plants_armor_chestplate\",count:1},{id:\"power:plants_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:plants_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() In forest, plains, taiga, swamp, or jungle biomes.",
+                "$(li)",
+                "Thorny Rose: When hit, 25% chance to reflect half the damage to attacker.",
+                "$(li)",
+                "Lotus Bloom: +5% damage, +10% health regeneration."
+            ]
         }
     ]
 }

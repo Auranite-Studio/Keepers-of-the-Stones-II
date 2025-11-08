@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.client.particle;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -26,8 +25,7 @@ public class MercuryParticleParticle extends TextureSheetParticle {
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			MercuryParticleParticle particle = new MercuryParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
-			return particle;
+			return new MercuryParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
 		}
 	}
 

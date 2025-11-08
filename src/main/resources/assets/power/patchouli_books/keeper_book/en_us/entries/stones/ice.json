@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of the Ice",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:ice_spear\",count:1}],ArmorItems:[{id:\"power:ice_armor_boots\",count:1},{id:\"power:ice_armor_leggings\",count:1},{id:\"power:ice_armor_chestplate\",count:1},{id:\"power:ice_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:ice_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() In snowy or icy biomes.",
+                "$(li)",
+                "Fracture: 20% chance on attack to apply \"Slowness III\" for 10 sec and deal +50% damage.",
+                "$(li)",
+                "Iceflow: Freezes water beneath feet."
+            ]
         }
     ]
 }

@@ -9,6 +9,8 @@ import net.minecraft.world.entity.Entity;
 
 import java.util.Comparator;
 
+import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
+
 public class CursedKeeperAttackDetectionProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -19,7 +21,7 @@ public class CursedKeeperAttackDetectionProcedure {
 		double Range = 0;
 		double Zpar = 0;
 		Range = 0.75;
-		if (entity.getPersistentData().getDouble("IA") > 25) {
+		if ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) > 25) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					Xpar = x + entity.getLookAngle().x * Range;
@@ -29,20 +31,26 @@ public class CursedKeeperAttackDetectionProcedure {
 						final Vec3 _center = new Vec3(Xpar, Ypar, Zpar);
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(0.75 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (entityiterator == (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)) {
-								if (!entity.getPersistentData().getBoolean("Phase")) {
-									entity.getPersistentData().putString("State", "Summon");
+								if (!(entity instanceof CursedKeeperEntity _datEntL7 && _datEntL7.getEntityData().get(CursedKeeperEntity.DATA_Phase))) {
+									if (entity instanceof CursedKeeperEntity _datEntSetS)
+										_datEntSetS.getEntityData().set(CursedKeeperEntity.DATA_State, "Summon");
 								} else {
 									if (Math.random() < (7) / ((float) 10)) {
-										entity.getPersistentData().putString("State", "Fire");
-									} else if (Math.random() < (4) / ((float) 10)) {
-										entity.getPersistentData().putString("State", "Air");
-									} else if (Math.random() < (5) / ((float) 10)) {
-										entity.getPersistentData().putString("State", "Earth");
+										if (entity instanceof CursedKeeperEntity _datEntSetS)
+											_datEntSetS.getEntityData().set(CursedKeeperEntity.DATA_State, "Fire");
+									} else if (Math.random() < (3) / ((float) 10)) {
+										if (entity instanceof CursedKeeperEntity _datEntSetS)
+											_datEntSetS.getEntityData().set(CursedKeeperEntity.DATA_State, "Air");
+									} else if (Math.random() < (3) / ((float) 10)) {
+										if (entity instanceof CursedKeeperEntity _datEntSetS)
+											_datEntSetS.getEntityData().set(CursedKeeperEntity.DATA_State, "Earth");
 									} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 350 ? Math.random() < (3) / ((float) 10) : Math.random() < (6) / ((float) 10)) {
-										entity.getPersistentData().putString("State", "Water");
+										if (entity instanceof CursedKeeperEntity _datEntSetS)
+											_datEntSetS.getEntityData().set(CursedKeeperEntity.DATA_State, "Water");
 									}
 								}
-								entity.getPersistentData().putDouble("IA", 0);
+								if (entity instanceof CursedKeeperEntity _datEntSetI)
+									_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_IA, 0);
 							}
 						}
 					}
@@ -50,7 +58,8 @@ public class CursedKeeperAttackDetectionProcedure {
 				}
 			}
 		} else {
-			entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
+			if (entity instanceof CursedKeeperEntity _datEntSetI)
+				_datEntSetI.getEntityData().set(CursedKeeperEntity.DATA_IA, (int) ((entity instanceof CursedKeeperEntity _datEntI ? _datEntI.getEntityData().get(CursedKeeperEntity.DATA_IA) : 0) + 1));
 		}
 	}
 }

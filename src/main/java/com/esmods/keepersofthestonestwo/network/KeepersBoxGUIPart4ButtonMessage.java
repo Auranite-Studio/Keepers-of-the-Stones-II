@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -16,23 +15,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.SandElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PoisonElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PlantsElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PlagueElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MushrooomsElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MetalElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MercuryElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.KBtoPart5Procedure;
-import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
-import com.esmods.keepersofthestonestwo.procedures.EtherElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EarthElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CrystalElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.AnimalsElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.AmberElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record KeepersBoxGUIPart4ButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<KeepersBoxGUIPart4ButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "keepers_box_gui_part_4_buttons"));

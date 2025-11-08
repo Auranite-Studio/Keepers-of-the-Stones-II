@@ -4,21 +4,27 @@ license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.2.0-rc1"
+version="1.3.0-pre1"
 displayName="Keepers of the Stones II"
 displayURL="https://modrinth.com/mod/keepers-of-the-stones-2"
 logoFile="logo.png"
 credits="Created by Auranite Studio"
-authors="ShadowMoon07, MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di, Rezolv and many others."
-description="Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers."
+authors="MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Sleep, Rezolv and many others."
+description="Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds more new elemental stones that can be used to improve the character skills and powers."
 
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
+[[mixins]]
+    config = "power.mixins.json"
+
+# Start of user code block custom mixins
+# End of user code block custom mixins
+
 [[dependencies.power]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.173,)"
+    versionRange="[21.1.190,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -30,12 +36,18 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     side="BOTH"
 
 [[dependencies.power]]
-    modId="playeranimator"
+    modId="curios"
     type="required"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
+[[dependencies.power]]
+    modId="curios_api"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 [[dependencies.power]]
     modId="bettercombat"
     type="optional"
@@ -48,12 +60,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.power]]
-    modId="playeranimator"
-    type="optional"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 
 [[dependencies.power]]
     modId="cpapi"
@@ -61,11 +67,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
-
-
-# Start of user code block custom mixins
-# End of user code block custom mixins
-
 
 # Start of user code block dependencies configuration
 # End of user code block dependencies configuration

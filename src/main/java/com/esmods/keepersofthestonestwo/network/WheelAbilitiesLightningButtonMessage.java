@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -16,19 +15,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.PowerRuneAbilityProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack27Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack26Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack25Procedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record WheelAbilitiesLightningButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<WheelAbilitiesLightningButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "wheel_abilities_lightning_buttons"));

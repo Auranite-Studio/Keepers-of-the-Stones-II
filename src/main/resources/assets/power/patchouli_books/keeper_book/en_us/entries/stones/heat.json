@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Heat",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:heat_knife\",count:1}],ArmorItems:[{id:\"power:heat_armor_boots\",count:1},{id:\"power:heat_armor_leggings\",count:1},{id:\"power:heat_armor_chestplate\",count:1},{id:\"power:heat_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:heat_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() In hot or temperate biomes.",
+                "$(li)",
+                "Climate Control: +20% damage; 10% chance to ignite target for 3 sec.",
+                "$(li)",
+                "Insulation: When ignited, 75% chance to gain \"Fire Resistance\" for 1 min and \"Regeneration II\" for 5 sec (once per 90 sec)."
+            ]
         }
     ]
 }

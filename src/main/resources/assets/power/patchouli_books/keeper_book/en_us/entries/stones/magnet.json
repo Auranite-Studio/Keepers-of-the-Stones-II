@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Magnet",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:magnet_claws\",count:1}],ArmorItems:[{id:\"power:magnet_armor_boots\",count:1},{id:\"power:magnet_armor_leggings\",count:1},{id:\"power:magnet_armor_chestplate\",count:1},{id:\"power:magnet_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:magnet_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Copper or iron blocks within 16 blocks.",
+                "$(li)",
+                "Pole Resistance: +20% damage; 20% chance to repel target on attack.",
+                "$(li)",
+                "Magnetic Field: Automatically attracts items within 16 blocks."
+            ]
         }
     ]
 }

@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -18,7 +17,7 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import com.esmods.keepersofthestonestwo.procedures.DetransformationKeyUseProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record DetransformationKeyMessage(int eventType, int pressedms) implements CustomPacketPayload {
 	public static final Type<DetransformationKeyMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "key_detransformation_key"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, DetransformationKeyMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, DetransformationKeyMessage message) -> {

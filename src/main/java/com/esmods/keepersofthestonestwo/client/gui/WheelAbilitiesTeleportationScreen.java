@@ -18,14 +18,7 @@ import java.util.Arrays;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTeleportationMenu;
-import com.esmods.keepersofthestonestwo.procedures.RuneTooltipRenderProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesTeleportationButtonMessage;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
@@ -34,18 +27,18 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_wheel_button_1;
-	ImageButton imagebutton_wheel_button_2;
-	ImageButton imagebutton_wheel_button_3;
-	ImageButton imagebutton_fake_wheel_button_1;
-	ImageButton imagebutton_fake_wheel_button_2;
-	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_power_rune_ability;
-	ImageButton imagebutton_creating_portals_blue;
-	ImageButton imagebutton_creating_portals_orange;
-	ImageButton imagebutton_checkpoint_create;
-	ImageButton imagebutton_checkpoint_tp;
-	ImageButton imagebutton_teleportation_grabs;
+	private ImageButton imagebutton_wheel_button_1;
+	private ImageButton imagebutton_wheel_button_2;
+	private ImageButton imagebutton_wheel_button_3;
+	private ImageButton imagebutton_fake_wheel_button_1;
+	private ImageButton imagebutton_fake_wheel_button_2;
+	private ImageButton imagebutton_fake_wheel_button_3;
+	private ImageButton imagebutton_power_rune_ability;
+	private ImageButton imagebutton_creating_portals_blue;
+	private ImageButton imagebutton_creating_portals_orange;
+	private ImageButton imagebutton_checkpoint_create;
+	private ImageButton imagebutton_checkpoint_tp;
+	private ImageButton imagebutton_teleportation_grabs;
 
 	public WheelAbilitiesTeleportationScreen(WheelAbilitiesTeleportationMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -92,7 +85,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -118,13 +111,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		super.init();
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/wheel_button_1_highlight.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(0, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (GetWheelTwoOrFirstFakeProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -132,13 +129,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		this.addRenderableWidget(imagebutton_wheel_button_1);
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/wheel_button_2_highlight.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (GetWheelTwoProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(1, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (GetWheelTwoProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -146,13 +147,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		this.addRenderableWidget(imagebutton_wheel_button_2);
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/wheel_button_3_highlight.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (GetWheelThreeProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(2, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (GetWheelThreeProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -160,13 +165,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		this.addRenderableWidget(imagebutton_wheel_button_3);
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (GetFakeWheelOneProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(3, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (GetFakeWheelOneProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -174,13 +183,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(4, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (GetFakeWheelTwoProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -188,13 +201,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(5, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (GetFakeWheelThirdProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -202,13 +219,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_power_rune_ability = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/power_rune_ability.png"), ResourceLocation.parse("power:textures/screens/power_rune_ability_highlight.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(6, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (PowerLockCheckProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -216,13 +237,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		this.addRenderableWidget(imagebutton_power_rune_ability);
 		imagebutton_creating_portals_blue = new ImageButton(this.leftPos + 72, this.topPos + 134, 23, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/creating_portals_blue.png"), ResourceLocation.parse("power:textures/screens/creating_portals_blue_highlight.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(7, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (PowerLockCheckProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -230,13 +255,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		this.addRenderableWidget(imagebutton_creating_portals_blue);
 		imagebutton_creating_portals_orange = new ImageButton(this.leftPos + 95, this.topPos + 134, 23, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/creating_portals_orange.png"), ResourceLocation.parse("power:textures/screens/creating_portals_orange_highlight.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(8, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (PowerLockCheckProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -244,13 +273,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		this.addRenderableWidget(imagebutton_creating_portals_orange);
 		imagebutton_checkpoint_create = new ImageButton(this.leftPos + 133, this.topPos + 73, 23, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/checkpoint_create.png"), ResourceLocation.parse("power:textures/screens/checkpoint_create_highlight.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(9, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (PowerLockCheckProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -258,13 +291,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		this.addRenderableWidget(imagebutton_checkpoint_create);
 		imagebutton_checkpoint_tp = new ImageButton(this.leftPos + 156, this.topPos + 73, 23, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/checkpoint_tp.png"), ResourceLocation.parse("power:textures/screens/checkpoint_tp_highlight.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(10, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (PowerLockCheckProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -272,13 +309,17 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		this.addRenderableWidget(imagebutton_checkpoint_tp);
 		imagebutton_teleportation_grabs = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/teleportation_grabs.png"), ResourceLocation.parse("power:textures/screens/teleportation_grabs_teleportation.png")), e -> {
+					int x = WheelAbilitiesTeleportationScreen.this.x;
+					int y = WheelAbilitiesTeleportationScreen.this.y;
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(11, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 11, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = WheelAbilitiesTeleportationScreen.this.x;
+				int y = WheelAbilitiesTeleportationScreen.this.y;
 				if (PowerLockCheckProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}

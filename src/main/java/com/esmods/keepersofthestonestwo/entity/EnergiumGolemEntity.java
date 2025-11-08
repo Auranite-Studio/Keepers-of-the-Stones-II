@@ -1,4 +1,3 @@
-
 package com.esmods.keepersofthestonestwo.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
@@ -7,7 +6,6 @@ import net.neoforged.neoforge.common.NeoForgeMod;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
@@ -29,7 +27,6 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -39,18 +36,16 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.WalkingAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SpintingAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.IdleAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemShootAnimSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriObnovlieniiTikaSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriGibieliSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemAttackAnimSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.DeathAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.procedures.*;
 
 public class EnergiumGolemEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_attack_anim_sync = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_IA = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<String> DATA_State = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> DATA_Patience = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_Look = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Boolean> DATA_OnBattle = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Integer> DATA_BreathRange = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
 	public final AnimationState animationState0 = new AnimationState();
 	public final AnimationState animationState1 = new AnimationState();
 	public final AnimationState animationState2 = new AnimationState();
@@ -70,6 +65,12 @@ public class EnergiumGolemEntity extends Monster {
 	protected void defineSynchedData(SynchedEntityData.Builder builder) {
 		super.defineSynchedData(builder);
 		builder.define(DATA_attack_anim_sync, 0);
+		builder.define(DATA_IA, 0);
+		builder.define(DATA_State, "");
+		builder.define(DATA_Patience, 0);
+		builder.define(DATA_Look, 0);
+		builder.define(DATA_OnBattle, false);
+		builder.define(DATA_BreathRange, 0);
 	}
 
 	@Override
@@ -91,11 +92,6 @@ public class EnergiumGolemEntity extends Monster {
 	@Override
 	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
-	}
-
-	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(PowerModItems.ENERGIUM_CORE.get()));
 	}
 
 	@Override
@@ -146,11 +142,6 @@ public class EnergiumGolemEntity extends Monster {
 	}
 
 	@Override
-	public boolean fireImmune() {
-		return true;
-	}
-
-	@Override
 	public void die(DamageSource source) {
 		super.die(source);
 		EnergiumGolemPriGibieliSushchnostiProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
@@ -160,6 +151,12 @@ public class EnergiumGolemEntity extends Monster {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putInt("Dataattack_anim_sync", this.entityData.get(DATA_attack_anim_sync));
+		compound.putInt("DataIA", this.entityData.get(DATA_IA));
+		compound.putString("DataState", this.entityData.get(DATA_State));
+		compound.putInt("DataPatience", this.entityData.get(DATA_Patience));
+		compound.putInt("DataLook", this.entityData.get(DATA_Look));
+		compound.putBoolean("DataOnBattle", this.entityData.get(DATA_OnBattle));
+		compound.putInt("DataBreathRange", this.entityData.get(DATA_BreathRange));
 	}
 
 	@Override
@@ -167,6 +164,18 @@ public class EnergiumGolemEntity extends Monster {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Dataattack_anim_sync"))
 			this.entityData.set(DATA_attack_anim_sync, compound.getInt("Dataattack_anim_sync"));
+		if (compound.contains("DataIA"))
+			this.entityData.set(DATA_IA, compound.getInt("DataIA"));
+		if (compound.contains("DataState"))
+			this.entityData.set(DATA_State, compound.getString("DataState"));
+		if (compound.contains("DataPatience"))
+			this.entityData.set(DATA_Patience, compound.getInt("DataPatience"));
+		if (compound.contains("DataLook"))
+			this.entityData.set(DATA_Look, compound.getInt("DataLook"));
+		if (compound.contains("DataOnBattle"))
+			this.entityData.set(DATA_OnBattle, compound.getBoolean("DataOnBattle"));
+		if (compound.contains("DataBreathRange"))
+			this.entityData.set(DATA_BreathRange, compound.getInt("DataBreathRange"));
 	}
 
 	@Override

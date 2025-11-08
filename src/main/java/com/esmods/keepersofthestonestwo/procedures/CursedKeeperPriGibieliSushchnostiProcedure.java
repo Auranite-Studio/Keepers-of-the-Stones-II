@@ -41,7 +41,7 @@ public class CursedKeeperPriGibieliSushchnostiProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.unlock_keepers_box = true;
-					_vars.syncPlayerVariables(entityiterator);
+					_vars.markSyncDirty();
 				}
 			}
 		}
