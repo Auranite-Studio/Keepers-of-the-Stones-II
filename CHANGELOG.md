@@ -14,8 +14,11 @@
 * Added sound when crafting a rune in rune cutter
 * Changed energium shield crafting recipe (now requires planks instead of depleted energium ingots)
 * The stun effect now stops the player completely and slows down the use of weapons
+* Redesigned the "Curse" effect
+* The "Curse" effect has been renamed "Eternal Curse"
+* Eternal Curse damage is now dealt once every 1 min
+* Eternal Curse damage has been increased to 6 damage
 * The Curse effect no longer creates a fog effect
-* The curse effect stops working when you exit the cursed world
 * Redesigned rune activation mechanics
 * The descriptions of all the stones in the keeper's book have been updated
 * The Curios API mod is now required to run this mod
