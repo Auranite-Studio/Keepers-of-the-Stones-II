@@ -37,6 +37,7 @@
 
 **Bugfixes**
 
+* \[Bugfix] Fixed a bug where shields couldn't block damage from cursed mobs
 * \[Bugfix] Fixed incorrect version checking
 * \[Bugfix] Fixed unlocking of some recipes
 
