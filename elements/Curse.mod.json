@@ -21,21 +21,14 @@
         "attribute": {
           "value": "ATTACK_SPEED"
         },
-        "amount": -0.7,
-        "operation": "ADD_VALUE"
-      },
-      {
-        "attribute": {
-          "value": "MOVEMENT_SPEED"
-        },
-        "amount": -0.05,
+        "amount": -0.25,
         "operation": "ADD_VALUE"
       },
       {
         "attribute": {
           "value": "ATTACK_DAMAGE"
         },
-        "amount": -0.7,
+        "amount": -0.25,
         "operation": "ADD_VALUE"
       }
     ],
