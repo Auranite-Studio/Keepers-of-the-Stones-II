@@ -11,7 +11,7 @@
 * *N/A*
 
 **Bugfixes**
-* \[Bugfix] Fixed a bug where shields couldn't block damage from cursed mobs
+* \[Bugfix] 
 
 **Known issues**
 * *N/A*
