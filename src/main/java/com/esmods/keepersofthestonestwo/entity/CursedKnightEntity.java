@@ -163,7 +163,7 @@ public class CursedKnightEntity extends Monster {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.15);
 		builder = builder.add(Attributes.MAX_HEALTH, 100);
-		builder = builder.add(Attributes.ARMOR, 25);
+		builder = builder.add(Attributes.ARMOR, 17.5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 12);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);

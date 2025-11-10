@@ -275,7 +275,7 @@ public class CursedKeeperEntity extends Monster {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.25);
 		builder = builder.add(Attributes.MAX_HEALTH, 700);
-		builder = builder.add(Attributes.ARMOR, 100);
+		builder = builder.add(Attributes.ARMOR, 35);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 22);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 128);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);

@@ -222,7 +222,7 @@ public class EnergiumGolemEntity extends Monster {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.25);
 		builder = builder.add(Attributes.MAX_HEALTH, 500);
-		builder = builder.add(Attributes.ARMOR, 100);
+		builder = builder.add(Attributes.ARMOR, 47.5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 22);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
 		builder = builder.add(Attributes.STEP_HEIGHT, 1);
