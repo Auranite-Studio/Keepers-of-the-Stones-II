@@ -2,6 +2,7 @@
 * *N/A*
 
 **Improvemnts**
+* Increased the temperature of the biome for the passive skills of the ice master to work
 * The "Curse" effect has been renamed "Eternal Curse"
 
 **API changes**
