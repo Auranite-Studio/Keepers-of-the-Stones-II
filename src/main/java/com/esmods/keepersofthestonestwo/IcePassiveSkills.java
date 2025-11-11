@@ -23,7 +23,7 @@ import java.util.Random;
 public class IcePassiveSkills {
 
     private static final Random RANDOM = new Random();
-    private static final float COLD_BIOME_THRESHOLD = 0.15f; // Порог "холодного" биома
+    private static final float COLD_BIOME_THRESHOLD = 0.25f; // Порог "холодного" биома
 
     private static boolean isInColdBiome(Player player) {
         Level level = player.level();
