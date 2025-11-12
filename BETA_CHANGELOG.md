@@ -3,7 +3,7 @@
 
 **Improvemnts**
 * The "Curse" effect has been renamed "Eternal Curse"
-* The "Eternal Curse" effect is no longer given to players in the Creative and Spectator gamemode
+* The "Eternal Curse" effect is no longer given to players in the creative and spectator gamemode
 * Increased the temperature of the biome for the passive skills of the ice master to work
 
 **API changes**
