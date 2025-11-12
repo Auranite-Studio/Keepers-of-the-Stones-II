@@ -17519,12 +17519,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/block/cursed_stone.json",
-          "src/main/resources/data/power/worldgen/configured_feature/cursed_stone.json",
           "src/main/resources/data/power/loot_table/blocks/cursed_stone.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBlock.java",
           "src/main/resources/assets/power/models/item/cursed_stone.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/cursed_stone_biome_modifier.json",
-          "src/main/resources/data/power/worldgen/placed_feature/cursed_stone.json",
           "src/main/resources/assets/power/blockstates/cursed_stone.json"
         ]
       },
@@ -34588,6 +34585,105 @@
         ]
       },
       "path": "~/Dimensions/CursedWorld"
+    },
+    {
+      "name": "EnergiumDeposit",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_deposit",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/worldgen/biome/energium_deposit.json"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "TpToCursedWorld",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tp_to_cursed_world",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TpToCursedWorldProcedure.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "EnergiumVein",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_vein",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/world/features/EnergiumVeinFeature.java",
+          "src/main/resources/data/power/neoforge/biome_modifier/energium_vein_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/configured_feature/energium_vein.json",
+          "src/main/resources/data/power/worldgen/placed_feature/energium_vein.json"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "EnergiumVeinDopolnitielnoieUsloviieGienieratsii",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_vein_dopolnitielnoie_usloviie_gienieratsii",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumVeinDopolnitielnoieUsloviieGienieratsiiProcedure.java"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "CursedStoneToStone",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_to_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/worldgen/placed_feature/cursed_stone_to_stone.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/cursed_stone_to_stone_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/configured_feature/cursed_stone_to_stone.json"
+        ]
+      },
+      "path": "~/Biomes"
     }
   ],
   "variable_elements": [
@@ -36469,6 +36565,7 @@
       "~CUSTOM:RuneCutter"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~CUSTOM:CursedStone",
       "~Blocks.STONE#0",
       "~Blocks.DIRT#0",
       "~Blocks.GRASS"
@@ -37797,7 +37894,8 @@
       "item.power.energium_upgrade_smithing_template.description_1": "",
       "curios.identifier.blue_rune": "Синяя руна",
       "curios.identifier.red_rune": "Красная руна",
-      "curios.identifier.green_rune": "Зелёная руна"
+      "curios.identifier.green_rune": "Зелёная руна",
+      "biome.power.energium_deposit": "Energium Deposit"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38907,7 +39005,8 @@
       "item.power.energium_upgrade_smithing_template.description_1": "",
       "curios.identifier.blue_rune": "Blue Rune",
       "curios.identifier.red_rune": "Red Rune",
-      "curios.identifier.green_rune": "Green Rune"
+      "curios.identifier.green_rune": "Green Rune",
+      "biome.power.energium_deposit": "Deposit of Energium"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -40004,7 +40103,8 @@
       "item.power.energium_upgrade_smithing_template.description_1": "",
       "curios.identifier.blue_rune": "蓝色符文",
       "curios.identifier.red_rune": "红色符文",
-      "curios.identifier.green_rune": "绿色符文"
+      "curios.identifier.green_rune": "绿色符文",
+      "biome.power.energium_deposit": "Energium Deposit"
     }
   },
   "metadata": {
@@ -40028,6 +40128,7 @@
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModItems.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntityRenderers.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntities.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModFeatures.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
       "src/main/resources/META-INF/accesstransformer.cfg",
@@ -40982,5 +41083,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500345603
+  "mcreatorVersion": 202500346303
 }

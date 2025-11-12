@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"entity_switch_dimension\"><field name=\"dimension\">CUSTOM:CursedWorld</field><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><next><block type=\"send_command_message\"><value name=\"message\"><block type=\"text_join\" inline=\"true\"><mutation items=\"4\"></mutation><value name=\"ADD0\"><block type=\"text\"><field name=\"TEXT\">Succesed teleport </field></block></value><value name=\"ADD1\"><block type=\"entity_name\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></value><value name=\"ADD2\"><block type=\"text\"><field name=\"TEXT\"> to dimension </field></block></value><value name=\"ADD3\"><block type=\"get_dimensionid\"><field name=\"dimension\">CUSTOM:CursedWorld</field></block></value></block></value><value name=\"inform\"><block type=\"logic_boolean\"><field name=\"BOOL\">TRUE</field></block></value></block></next></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

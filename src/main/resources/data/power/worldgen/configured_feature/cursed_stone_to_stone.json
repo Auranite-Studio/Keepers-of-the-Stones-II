@@ -1,16 +1,16 @@
 {
   "type": "minecraft:ore",
   "config": {
-    "size": 32,
+    "size": 64,
     "discard_chance_on_air_exposure": 0,
     "targets": [
       {
         "target": {
-          "predicate_type": "tag_match",
-          "tag": "stone_ore_replaceables"
+          "predicate_type": "block_match",
+          "block": "power:cursed_stone"
         },
         "state": {
-          "Name": "power:cursed_stone"
+          "Name": "minecraft:stone"
         }
       }
     ]

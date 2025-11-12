@@ -2,22 +2,22 @@
   "_fv": 79,
   "_type": "biome",
   "definition": {
-    "name": "Cursed Plains",
+    "name": "Deposit of Energium",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "Blocks.STONE#0"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "Blocks.STONE#0"
     },
     "underwaterBlock": {
-      "value": "Blocks.SAND#0"
+      "value": "Blocks.GRAVEL"
     },
     "airColor": {
-      "value": -5530695,
+      "value": -2372226,
       "falpha": 0.0
     },
     "fogColor": {
-      "value": -5530695,
+      "value": -2372226,
       "falpha": 0.0
     },
     "grassColor": {
@@ -43,29 +43,29 @@
       "value": ""
     },
     "music": {
-      "value": "CUSTOM:music.mystery_of_the_cursed_forest"
+      "value": ""
     },
     "moodSound": {
-      "value": "CUSTOM:ambient.biome.cursed_forest"
+      "value": ""
     },
-    "moodSoundDelay": 1200,
+    "moodSoundDelay": 6000,
     "spawnParticles": false,
     "particleToSpawn": {
-      "value": "FALLING_OBSIDIAN_TEAR"
+      "value": "CUSTOM:BassBoom"
     },
-    "particlesProbability": 1.0,
-    "rainingPossibility": 0.0,
-    "temperature": 2.0,
+    "particlesProbability": 0.5,
+    "rainingPossibility": 0.5,
+    "temperature": 0.5,
     "spawnBiome": false,
     "spawnInCaves": false,
     "spawnBiomeNether": false,
     "genTemperature": {
-      "min": -0.15,
+      "min": -0.45,
       "max": 0.2
     },
     "genHumidity": {
-      "min": -1.0,
-      "max": -0.35
+      "min": -0.1,
+      "max": 0.1
     },
     "genContinentalness": {
       "min": -0.11,
@@ -77,11 +77,11 @@
     },
     "genWeirdness": {
       "min": -1.0,
-      "max": -0.9333
+      "max": -0.9999
     },
     "genDepth": {
-      "min": 0.2,
-      "max": 0.9
+      "min": 0.88,
+      "max": 1.0
     },
     "treesPerChunk": 0,
     "vanillaTreeType": "Default",
@@ -102,8 +102,7 @@
     "defaultFeatures": [
       "Caves",
       "Ores",
-      "FrozenTopLayer",
-      "PlainsTallGrass"
+      "FrozenTopLayer"
     ],
     "spawnStronghold": false,
     "spawnMineshaft": false,
@@ -124,7 +123,7 @@
     "spawnNetherFossil": false,
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
-    "spawnRuinedPortal": "STANDARD",
+    "spawnRuinedPortal": "NONE",
     "spawnEntries": []
   }
 }

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "power:energium_deposit",
+  "features": "power:energium_vein",
+  "step": "surface_structures"
+}
