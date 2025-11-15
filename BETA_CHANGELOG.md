@@ -1,5 +1,6 @@
 **New features**
-* The cave biome "Deposit of Energium" has been added to the Сursed World
+* Added unique blocks of dirt and grass for biomes in the Cursed World
+* Added a flower of tears
 
 **Improvemnts**
 * The fill rate of the Eternal Curse meter now depends on the effect level
