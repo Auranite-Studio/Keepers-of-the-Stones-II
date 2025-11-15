@@ -515,6 +515,7 @@ public class PowerModItems {
 	public static final DeferredItem<Item> SPEAR_BRUSH;
 	public static final DeferredItem<Item> CURSED_GRASS_BLOCK;
 	public static final DeferredItem<Item> CURSED_DIRT;
+	public static final DeferredItem<Item> TEARS_FLOWER;
 	static {
 		FIRE_STONE = REGISTRY.register("fire_stone", FireStoneItem::new);
 		AIR_STONE = REGISTRY.register("air_stone", AirStoneItem::new);
@@ -1004,6 +1005,7 @@ public class PowerModItems {
 		SPEAR_BRUSH = REGISTRY.register("spear_brush", SpearBrushItem::new);
 		CURSED_GRASS_BLOCK = block(PowerModBlocks.CURSED_GRASS_BLOCK);
 		CURSED_DIRT = block(PowerModBlocks.CURSED_DIRT);
+		TEARS_FLOWER = block(PowerModBlocks.TEARS_FLOWER);
 	}
 
 	// Start of user code block custom items

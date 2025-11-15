@@ -66,6 +66,7 @@ public class PowerModBlocks {
 	public static final DeferredBlock<Block> CURSED_WORLD_PORTAL;
 	public static final DeferredBlock<Block> CURSED_GRASS_BLOCK;
 	public static final DeferredBlock<Block> CURSED_DIRT;
+	public static final DeferredBlock<Block> TEARS_FLOWER;
 	static {
 		DEPLETED_ENERGIUM_ORE = REGISTRY.register("depleted_energium_ore", DepletedEnergiumOreBlock::new);
 		DEPLETED_ENERGIUM_BLOCK = REGISTRY.register("depleted_energium_block", DepletedEnergiumBlockBlock::new);
@@ -120,6 +121,7 @@ public class PowerModBlocks {
 		CURSED_WORLD_PORTAL = REGISTRY.register("cursed_world_portal", CursedWorldPortalBlock::new);
 		CURSED_GRASS_BLOCK = REGISTRY.register("cursed_grass_block", CursedGrassBlockBlock::new);
 		CURSED_DIRT = REGISTRY.register("cursed_dirt", CursedDirtBlock::new);
+		TEARS_FLOWER = REGISTRY.register("tears_flower", TearsFlowerBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

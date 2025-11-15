@@ -34718,6 +34718,26 @@
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "TearsFlower",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tears_flower",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/tears_flower.json",
+          "src/main/resources/data/power/worldgen/placed_feature/tears_flower.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/TearsFlowerBlock.java",
+          "src/main/resources/data/power/worldgen/configured_feature/tears_flower.json",
+          "src/main/resources/data/power/loot_table/blocks/tears_flower.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/tears_flower_biome_modifier.json",
+          "src/main/resources/assets/power/blockstates/tears_flower.json",
+          "src/main/resources/assets/power/models/block/tears_flower.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
     }
   ],
   "variable_elements": [
@@ -36816,6 +36836,7 @@
       "CursedVault",
       "CursedKey",
       "MusicDiscAncientMood",
+      "TearsFlower",
       "FreakingParsnip",
       "FreakingParsnipSoup",
       "EmptyCharacteristicsCard",
@@ -37941,7 +37962,8 @@
       "curios.identifier.green_rune": "Зелёная руна",
       "biome.power.energium_deposit": "Energium Deposit",
       "block.power.cursed_grass_block": "Cursed Grass Block",
-      "block.power.cursed_dirt": "Cursed Dirt"
+      "block.power.cursed_dirt": "Cursed Dirt",
+      "block.power.tears_flower": "Tears Flower"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -39054,7 +39076,8 @@
       "curios.identifier.green_rune": "Green Rune",
       "biome.power.energium_deposit": "Deposit of Energium",
       "block.power.cursed_grass_block": "Cursed Grass Block",
-      "block.power.cursed_dirt": "Cursed Dirt"
+      "block.power.cursed_dirt": "Cursed Dirt",
+      "block.power.tears_flower": "Tears Flower"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -40154,7 +40177,8 @@
       "curios.identifier.green_rune": "绿色符文",
       "biome.power.energium_deposit": "Energium Deposit",
       "block.power.cursed_grass_block": "Cursed Grass Block",
-      "block.power.cursed_dirt": "Cursed Dirt"
+      "block.power.cursed_dirt": "Cursed Dirt",
+      "block.power.tears_flower": "Tears Flower"
     }
   },
   "metadata": {

@@ -10,11 +10,7 @@
         "value": "CUSTOM:CursedPlains"
       }
     ],
-    "biomesInDimensionCaves": [
-      {
-        "value": "CUSTOM:EnergiumDeposit"
-      }
-    ],
+    "biomesInDimensionCaves": [],
     "worldGenType": "Normal world gen",
     "mainFillerBlock": {
       "value": "CUSTOM:CursedStone"

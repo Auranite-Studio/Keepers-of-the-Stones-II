@@ -215,6 +215,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.CURSED_VAULT.get().asItem());
 				tabData.accept(PowerModItems.CURSED_KEY.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
+				tabData.accept(PowerModBlocks.TEARS_FLOWER.get().asItem());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP.get());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP_SOUP.get());
 				tabData.accept(PowerModItems.EMPTY_CHARACTERISTICS_CARD.get());
