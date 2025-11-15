@@ -16,19 +16,9 @@
   },
   "criteria": {
     "lets_bail_this_place_isdead_0": {
-      "trigger": "minecraft:location",
+      "trigger": "minecraft:changed_dimension",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "biomes": "power:cursed_forest"
-              }
-            }
-          }
-        ]
+        "to": "power:cursed_world"
       }
     }
   },
