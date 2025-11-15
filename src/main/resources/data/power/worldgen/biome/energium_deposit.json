@@ -3,6 +3,12 @@
   "temperature": 0.5,
   "downfall": 0.5,
   "effects": {
+    "particle": {
+      "options": {
+        "type": "power:energy_spark"
+      },
+      "probability": 0.00125
+    },
     "foliage_color": -8951420,
     "grass_color": -8951420,
     "sky_color": -2372226,

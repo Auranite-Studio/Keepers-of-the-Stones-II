@@ -49,11 +49,11 @@
       "value": ""
     },
     "moodSoundDelay": 6000,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "CUSTOM:BassBoom"
+      "value": "CUSTOM:EnergySpark"
     },
-    "particlesProbability": 0.5,
+    "particlesProbability": 0.125,
     "rainingPossibility": 0.5,
     "temperature": 0.5,
     "spawnBiome": false,
