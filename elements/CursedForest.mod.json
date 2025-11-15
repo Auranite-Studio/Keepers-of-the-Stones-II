@@ -4,10 +4,10 @@
   "definition": {
     "name": "Cursed Forest",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "CUSTOM:CursedGrassBlock"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "CUSTOM:CursedDirt"
     },
     "underwaterBlock": {
       "value": "Blocks.SAND#0"

@@ -189,6 +189,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.DODGING_RUNE.get());
 				tabData.accept(PowerModItems.INVISIBILITY_RUNE.get());
 				tabData.accept(PowerModItems.HEALING_RUNE.get());
+				tabData.accept(PowerModBlocks.CURSED_GRASS_BLOCK.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_DIRT.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS.get().asItem());

@@ -1107,5 +1107,7 @@
   "curios.identifier.blue_rune": "Синяя руна",
   "curios.identifier.red_rune": "Красная руна",
   "curios.identifier.green_rune": "Зелёная руна",
-  "biome.power.energium_deposit": "Energium Deposit"
+  "biome.power.energium_deposit": "Energium Deposit",
+  "block.power.cursed_grass_block": "Cursed Grass Block",
+  "block.power.cursed_dirt": "Cursed Dirt"
 }

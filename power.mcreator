@@ -34684,6 +34684,40 @@
         ]
       },
       "path": "~/Biomes"
+    },
+    {
+      "name": "CursedGrassBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_grass_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_table/blocks/cursed_grass_block.json",
+          "src/main/resources/assets/power/blockstates/cursed_grass_block.json",
+          "src/main/resources/assets/power/models/block/cursed_grass_block.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedGrassBlockBlock.java",
+          "src/main/resources/assets/power/models/item/cursed_grass_block.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedDirt",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_dirt",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedDirtBlock.java",
+          "src/main/resources/assets/power/blockstates/cursed_dirt.json",
+          "src/main/resources/data/power/loot_table/blocks/cursed_dirt.json",
+          "src/main/resources/assets/power/models/item/cursed_dirt.json",
+          "src/main/resources/assets/power/models/block/cursed_dirt.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
     }
   ],
   "variable_elements": [
@@ -36565,10 +36599,10 @@
       "~CUSTOM:RuneCutter"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~CUSTOM:CursedGrassBlock",
       "~CUSTOM:CursedStone",
-      "~Blocks.STONE#0",
-      "~Blocks.DIRT#0",
-      "~Blocks.GRASS"
+      "~CUSTOM:CursedDirt",
+      "~Blocks.STONE#0"
     ],
     "BIOMES:minecraft:has_structure/ruined_portal_standard": [
       "~CUSTOM:CursedPlains"
@@ -36577,6 +36611,14 @@
       "CUSTOM:MusicDiscCallOfThePast",
       "CUSTOM:MusicDiscAncientMood",
       "CUSTOM:MusicHope"
+    ],
+    "BLOCKS:minecraft:dirt": [
+      "CUSTOM:CursedGrassBlock",
+      "CUSTOM:CursedDirt"
+    ],
+    "BLOCKS:minecraft:mineable/shovel": [
+      "~CUSTOM:CursedDirt",
+      "~CUSTOM:CursedGrassBlock"
     ]
   },
   "tab_element_order": {
@@ -36748,6 +36790,8 @@
       "DodgingRune",
       "InvisibilityRune",
       "HealingRune",
+      "CursedGrassBlock",
+      "CursedDirt",
       "CursedStone",
       "CursedStoneBricks",
       "CursedStoneCrackedBricks",
@@ -37895,7 +37939,9 @@
       "curios.identifier.blue_rune": "Синяя руна",
       "curios.identifier.red_rune": "Красная руна",
       "curios.identifier.green_rune": "Зелёная руна",
-      "biome.power.energium_deposit": "Energium Deposit"
+      "biome.power.energium_deposit": "Energium Deposit",
+      "block.power.cursed_grass_block": "Cursed Grass Block",
+      "block.power.cursed_dirt": "Cursed Dirt"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -39006,7 +39052,9 @@
       "curios.identifier.blue_rune": "Blue Rune",
       "curios.identifier.red_rune": "Red Rune",
       "curios.identifier.green_rune": "Green Rune",
-      "biome.power.energium_deposit": "Deposit of Energium"
+      "biome.power.energium_deposit": "Deposit of Energium",
+      "block.power.cursed_grass_block": "Cursed Grass Block",
+      "block.power.cursed_dirt": "Cursed Dirt"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -40104,7 +40152,9 @@
       "curios.identifier.blue_rune": "蓝色符文",
       "curios.identifier.red_rune": "红色符文",
       "curios.identifier.green_rune": "绿色符文",
-      "biome.power.energium_deposit": "Energium Deposit"
+      "biome.power.energium_deposit": "Energium Deposit",
+      "block.power.cursed_grass_block": "Cursed Grass Block",
+      "block.power.cursed_dirt": "Cursed Dirt"
     }
   },
   "metadata": {

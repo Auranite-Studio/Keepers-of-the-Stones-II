@@ -489,10 +489,7 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "minecraft:grass_block",
-                              "Properties": {
-                                "snowy": "false"
-                              }
+                              "Name": "power:cursed_grass_block"
                             }
                           }
                         },
@@ -517,7 +514,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "minecraft:dirt"
+                        "Name": "power:cursed_dirt"
                       }
                     }
                   }
@@ -564,10 +561,7 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "minecraft:grass_block",
-                              "Properties": {
-                                "snowy": "false"
-                              }
+                              "Name": "power:cursed_grass_block"
                             }
                           }
                         },
@@ -592,7 +586,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "minecraft:dirt"
+                        "Name": "power:cursed_dirt"
                       }
                     }
                   }

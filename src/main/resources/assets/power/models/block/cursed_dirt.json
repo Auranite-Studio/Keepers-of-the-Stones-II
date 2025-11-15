@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "power:block/cursed_dirt",
+    "up": "power:block/cursed_dirt",
+    "north": "power:block/cursed_dirt",
+    "east": "power:block/cursed_dirt",
+    "south": "power:block/cursed_dirt",
+    "west": "power:block/cursed_dirt",
+    "particle": "power:block/cursed_dirt"
+  },
+  "render_type": "solid"
+}
