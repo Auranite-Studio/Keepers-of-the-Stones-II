@@ -33,10 +33,12 @@
 * The rune-related field has been removed from debug mode
 * The code was cleaned and the rune system was optimized
 * Rename 'SendClientPackageActivationStoneVFXProcedure' class to 'ActivationStoneTriggerProcedure'
-* Some add-ons designed for earlier versions of the mod (1.2.0-1.2.4) may not work on this version
+* Some add-ons designed for earlier versions of the mod (1.2.0-1.2.5) may not work on this version
 
 **Bugfixes**
 
+* \[Bugfix] Fixed a bug where shields couldn't block damage from cursed mobs
+* \[Bugfix] Fixed a bug that caused shields to collapse quickly when fighting cursed mobs
 * \[Bugfix] Fixed a bug where shields couldn't block damage from cursed mobs
 * \[Bugfix] Fixed a bug that caused shields to collapse quickly when fighting cursed mobs
 * \[Bugfix] Fixed incorrect version checking
