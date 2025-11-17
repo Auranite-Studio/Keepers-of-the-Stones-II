@@ -36795,6 +36795,8 @@
       "RawCopyrium",
       "CopyriumIngot",
       "MusicHope",
+      "EmptyCharacteristicsCard",
+      "CharacteristicsCard",
       "UnknownRune",
       "ExtraStarPointsRune1",
       "ExtraStarPointsRune2",
@@ -36810,6 +36812,7 @@
       "DodgingRune",
       "InvisibilityRune",
       "HealingRune",
+      "CursedWorld",
       "CursedGrassBlock",
       "CursedDirt",
       "CursedStone",
@@ -36838,10 +36841,7 @@
       "MusicDiscAncientMood",
       "TearsFlower",
       "FreakingParsnip",
-      "FreakingParsnipSoup",
-      "EmptyCharacteristicsCard",
-      "CharacteristicsCard",
-      "CursedWorld"
+      "FreakingParsnipSoup"
     ],
     "CUSTOM:Mobs": [
       "EnergiumGolem",
