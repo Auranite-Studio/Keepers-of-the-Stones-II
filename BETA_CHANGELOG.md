@@ -2,7 +2,7 @@
 * *N/A*
 
 **Improvemnts**
-* *N/A*
+* Changed the mod logo format
 
 **API changes**
 * *N/A*
