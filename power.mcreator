@@ -36621,8 +36621,7 @@
     "BLOCKS:minecraft:overworld_carver_replaceables": [
       "~CUSTOM:CursedGrassBlock",
       "~CUSTOM:CursedStone",
-      "~CUSTOM:CursedDirt",
-      "~Blocks.STONE#0"
+      "~CUSTOM:CursedDirt"
     ],
     "BIOMES:minecraft:has_structure/ruined_portal_standard": [
       "~CUSTOM:CursedPlains"

@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:stone",
     "power:cursed_dirt",
     "power:cursed_grass_block",
     "power:cursed_stone"
