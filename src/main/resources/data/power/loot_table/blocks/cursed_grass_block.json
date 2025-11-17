@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "power:cursed_grass_block"
+          "name": "power:cursed_dirt"
         }
       ]
     }

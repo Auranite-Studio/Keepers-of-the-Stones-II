@@ -58,7 +58,7 @@
     ],
     "destroyTool": "shovel",
     "customDrop": {
-      "value": "CUSTOM:CursedGrassBlock"
+      "value": "CUSTOM:CursedDirt"
     },
     "dropAmount": 1,
     "xpAmountMin": 0,
