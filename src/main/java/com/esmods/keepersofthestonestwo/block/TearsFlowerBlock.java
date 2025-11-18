@@ -14,7 +14,8 @@ import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
 public class TearsFlowerBlock extends FlowerBlock {
 	public TearsFlowerBlock() {
-		super(PowerModMobEffects.WARP, 100, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE).sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
+		super(PowerModMobEffects.WARP, 100, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE).sound(SoundType.GRASS).instabreak().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).noCollission()
+				.offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override

@@ -87,7 +87,7 @@
     "xpAmountMin": 0,
     "xpAmountMax": 0,
     "forceTicking": false,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "hasTileEntity": false,
     "isReplaceable": false,
     "colorOnMap": "LIGHT_BLUE",
