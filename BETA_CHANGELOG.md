@@ -1,25 +1,19 @@
 **New features**
-
-* *N/A*
+* Added unique blocks of dirt and grass for biomes in the Cursed World
+* Added a flower of tears
 
 **Improvemnts**
-
-* Redesigned rune activation mechanics
-* The particles of the portal to the Cursed World have been changed
-* The descriptions of all the stones in the keeper's book have been updated
-* The Curios API mod is now required to run this mod
+* The fill rate of the Eternal Curse meter now depends on the effect level
+* Starting now, each effect level increases the fill speed by 25% per level
+* The Eternal Curse effect no longer slows the player down
+* Increased protection for bosses and mobs in the cursed world
+* The cursed world now consists of a cursed stone instead of an ordinary one.
 
 **API changes**
-
-* Colorful Powers API has been updated to 28.0
-* Now add-ons can add runes
-* The rune-related field has been removed from debug mode
-* The code was cleaned and the rune system was optimized
+* Added the 'tp' argument for the 'pw' command, for teleportation to mod dimensions
 
 **Bugfixes**
-
-* \[Bugfix] Fixed the names of the authors in the description of the mod
+* \[Bugfix] 
 
 **Known issues**
-
 * *N/A*

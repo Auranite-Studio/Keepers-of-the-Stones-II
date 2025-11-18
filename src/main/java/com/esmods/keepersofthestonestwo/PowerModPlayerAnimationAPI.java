@@ -306,7 +306,6 @@ public class PowerModPlayerAnimationAPI {
 		public static void loadAnimations(PlayerEvent.PlayerLoggedInEvent event) {
 			if (PowerModPlayerAnimationAPI.initialized.get(event.getEntity().getUUID()) == null) {
 				if (event.getEntity() instanceof ServerPlayer player) {
-					PowerModPlayerAnimationAPI.initialized.put(player.getUUID(), true);
 					ServerLevel level = (ServerLevel) player.level();
 					class Output implements PackResources.ResourceOutput {
 						private List<JsonObject> jsonObjects;
@@ -344,6 +343,7 @@ public class PowerModPlayerAnimationAPI {
 						}
 					});
 					sendAnimationsInBatches(player, jsons, namespaces);
+					PowerModPlayerAnimationAPI.initialized.put(player.getUUID(), true);
 				}
 			}
 		}

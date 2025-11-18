@@ -47,25 +47,25 @@ public class PowerModVariables {
 	@SubscribeEvent
 	public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
 		if (event.getEntity() instanceof ServerPlayer player)
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+			PacketDistributor.sendToPlayersInDimension((ServerLevel) player.level(), new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES), player.getId()));
 	}
 
 	@SubscribeEvent
 	public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
 		if (event.getEntity() instanceof ServerPlayer player)
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+			PacketDistributor.sendToPlayersInDimension((ServerLevel) player.level(), new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES), player.getId()));
 	}
 
 	@SubscribeEvent
 	public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
 		if (event.getEntity() instanceof ServerPlayer player)
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+			PacketDistributor.sendToPlayersInDimension((ServerLevel) player.level(), new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES), player.getId()));
 	}
 
 	@SubscribeEvent
 	public static void onPlayerTickUpdateSyncPlayerVariables(PlayerTickEvent.Post event) {
 		if (event.getEntity() instanceof ServerPlayer player && player.getData(PLAYER_VARIABLES)._syncDirty) {
-			PacketDistributor.sendToPlayer(player, new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES)));
+			PacketDistributor.sendToPlayersInDimension((ServerLevel) player.level(), new PlayerVariablesSyncMessage(player.getData(PLAYER_VARIABLES), player.getId()));
 			player.getData(PLAYER_VARIABLES)._syncDirty = false;
 		}
 	}
@@ -107,6 +107,7 @@ public class PowerModVariables {
 		clone.green_rune_slot = original.green_rune_slot;
 		clone.conv_to_new_rune_system = original.conv_to_new_rune_system;
 		clone.rune_ability_activate = original.rune_ability_activate;
+		clone.max_ethernal_curse_points = original.max_ethernal_curse_points;
 		if (!event.isWasDeath()) {
 			clone.teleporting_effect = original.teleporting_effect;
 			clone.abilities_timer = original.abilities_timer;
@@ -135,6 +136,7 @@ public class PowerModVariables {
 			clone.master_effect_start = original.master_effect_start;
 			clone.level_up_status = original.level_up_status;
 			clone.mind_player_owner = original.mind_player_owner;
+			clone.ethernal_curse_points = original.ethernal_curse_points;
 		}
 		event.getEntity().setData(PLAYER_VARIABLES, clone);
 	}
@@ -529,6 +531,8 @@ public class PowerModVariables {
 		public ItemStack green_rune_slot = ItemStack.EMPTY;
 		public boolean conv_to_new_rune_system = true;
 		public boolean rune_ability_activate = false;
+		public double ethernal_curse_points = 0.0;
+		public double max_ethernal_curse_points = 1200.0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -593,6 +597,8 @@ public class PowerModVariables {
 			nbt.put("green_rune_slot", green_rune_slot.saveOptional(lookupProvider));
 			nbt.putBoolean("conv_to_new_rune_system", conv_to_new_rune_system);
 			nbt.putBoolean("rune_ability_activate", rune_ability_activate);
+			nbt.putDouble("ethernal_curse_points", ethernal_curse_points);
+			nbt.putDouble("max_ethernal_curse_points", max_ethernal_curse_points);
 			return nbt;
 		}
 
@@ -658,6 +664,8 @@ public class PowerModVariables {
 			green_rune_slot = ItemStack.parseOptional(lookupProvider, nbt.getCompound("green_rune_slot"));
 			conv_to_new_rune_system = nbt.getBoolean("conv_to_new_rune_system");
 			rune_ability_activate = nbt.getBoolean("rune_ability_activate");
+			ethernal_curse_points = nbt.getDouble("ethernal_curse_points");
+			max_ethernal_curse_points = nbt.getDouble("max_ethernal_curse_points");
 		}
 
 		public void markSyncDirty() {
@@ -665,14 +673,16 @@ public class PowerModVariables {
 		}
 	}
 
-	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
+	public record PlayerVariablesSyncMessage(PlayerVariables data, int player) implements CustomPacketPayload {
 		public static final Type<PlayerVariablesSyncMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "player_variables_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec
-				.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess())), (RegistryFriendlyByteBuf buffer) -> {
-					PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables());
-					message.data.deserializeNBT(buffer.registryAccess(), buffer.readNbt());
-					return message;
-				});
+		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> {
+			buffer.writeInt(message.player());
+			buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess()));
+		}, (RegistryFriendlyByteBuf buffer) -> {
+			PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables(), buffer.readInt());
+			message.data.deserializeNBT(buffer.registryAccess(), buffer.readNbt());
+			return message;
+		});
 
 		@Override
 		public Type<PlayerVariablesSyncMessage> type() {
@@ -681,10 +691,11 @@ public class PowerModVariables {
 
 		public static void handleData(final PlayerVariablesSyncMessage message, final IPayloadContext context) {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
-				context.enqueueWork(() -> context.player().getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess()))).exceptionally(e -> {
-					context.connection().disconnect(Component.literal(e.getMessage()));
-					return null;
-				});
+				context.enqueueWork(() -> context.player().level().getEntity(message.player).getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess())))
+						.exceptionally(e -> {
+							context.connection().disconnect(Component.literal(e.getMessage()));
+							return null;
+						});
 			}
 		}
 	}

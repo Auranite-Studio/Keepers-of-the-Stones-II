@@ -12,8 +12,8 @@
         "value": "Blocks.AIR"
       }
     ],
-    "spacing": 32,
-    "separation": 24,
+    "spacing": 128,
+    "separation": 64,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:CursedForest"

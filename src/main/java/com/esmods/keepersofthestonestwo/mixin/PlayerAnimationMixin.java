@@ -15,6 +15,7 @@ import net.minecraft.client.model.PlayerModel;
 import java.util.Map;
 
 import com.esmods.keepersofthestonestwo.PowerModPlayerAnimationAPI;
+import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mixin(PlayerModel.class)
 public abstract class PlayerAnimationMixin<T extends LivingEntity> {
@@ -24,7 +25,10 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 	public void setupPivot(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, CallbackInfo ci) {
 		if (master == null)
 			master = "power";
+		if (!master.equals("power"))
+			return;
 		PlayerModel<T> model = (PlayerModel<T>) (Object) this;
+		resetModelPose(model);
 		Player player = null;
 		if (entityIn instanceof Player player_)
 			player = player_;
@@ -36,7 +40,6 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 		if (animation.bones.get("left_arm") != null || animation.bones.get("torso") != null || animation.bones.get("right_arm") != null)
 			model.attackTime = 0;
 		model.crouching = false;
-		resetModelPose(model);
 	}
 
 	@Inject(method = "setupAnim", at = @At(value = "TAIL"))
@@ -58,7 +61,7 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 		boolean firstPerson = data.getBoolean("FirstPersonAnimation");
 		if (data.getBoolean("ResetPlayerAnimation")) {
 			data.remove("ResetPlayerAnimation");
-			resetModelPose(model);
+			playingAnimation = "";
 			PowerModPlayerAnimationAPI.active_animations.put(player, null);
 		}
 		if (playingAnimation.isEmpty()) {
@@ -73,6 +76,10 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 		PowerModPlayerAnimationAPI.PlayerAnimation animation = PowerModPlayerAnimationAPI.active_animations.get(player);
 		if (animation == null) {
 			animation = PowerModPlayerAnimationAPI.animations.get(playingAnimation);
+			if (animation == null) {
+				PowerMod.LOGGER.info("Attepted to play null animation " + playingAnimation + ", did animations fail to load?");
+				return;
+			}
 			PowerModPlayerAnimationAPI.active_animations.put(player, animation);
 		}
 		float animationProgress;

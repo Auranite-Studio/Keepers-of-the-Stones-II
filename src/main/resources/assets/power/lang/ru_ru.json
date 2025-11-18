@@ -72,7 +72,7 @@
   "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
   "item.power.ether_armor_boots": "Ботинки мастера эфира",
   "item.power.amplifier_ring": "Амплиферовое кольцо",
-  "effect.power.curse": "Проклятие",
+  "effect.power.curse": "Вечное Проклятие",
   "subtitles.cursed_knight.attack": "",
   "item.power.spirit_battery": "Батарея",
   "item.power.addition_time_master_effect_rune_3.description_3": "§7Спецификация:",
@@ -1106,5 +1106,9 @@
   "item.power.energium_upgrade_smithing_template.description_1": "",
   "curios.identifier.blue_rune": "Синяя руна",
   "curios.identifier.red_rune": "Красная руна",
-  "curios.identifier.green_rune": "Зелёная руна"
+  "curios.identifier.green_rune": "Зелёная руна",
+  "biome.power.energium_deposit": "Месторождение энергиума",
+  "block.power.cursed_grass_block": "Проклятый блок травы",
+  "block.power.cursed_dirt": "Проклятая земля",
+  "block.power.tears_flower": "Цветок слёз"
 }

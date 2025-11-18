@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "power:cursed_plains",
+    "power:cursed_forest"
+  ],
+  "features": "power:tears_flower",
+  "step": "vegetal_decoration"
+}

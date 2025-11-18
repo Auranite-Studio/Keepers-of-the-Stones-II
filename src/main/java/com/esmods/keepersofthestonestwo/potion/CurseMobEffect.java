@@ -13,9 +13,8 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 public class CurseMobEffect extends MobEffect {
 	public CurseMobEffect() {
 		super(MobEffectCategory.HARMFUL, -10395278);
-		this.addAttributeModifier(Attributes.ATTACK_SPEED, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.curse_0"), -0.7, AttributeModifier.Operation.ADD_VALUE);
-		this.addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.curse_1"), -0.05, AttributeModifier.Operation.ADD_VALUE);
-		this.addAttributeModifier(Attributes.ATTACK_DAMAGE, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.curse_2"), -0.7, AttributeModifier.Operation.ADD_VALUE);
+		this.addAttributeModifier(Attributes.ATTACK_SPEED, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.curse_0"), -0.25, AttributeModifier.Operation.ADD_VALUE);
+		this.addAttributeModifier(Attributes.ATTACK_DAMAGE, ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "effect.curse_1"), -0.25, AttributeModifier.Operation.ADD_VALUE);
 	}
 
 	@Override
@@ -25,7 +24,7 @@ public class CurseMobEffect extends MobEffect {
 
 	@Override
 	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		CurseTickEventProcedure.execute(entity.level(), entity);
+		CurseTickEventProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		return super.applyEffectTick(entity, amplifier);
 	}
 }

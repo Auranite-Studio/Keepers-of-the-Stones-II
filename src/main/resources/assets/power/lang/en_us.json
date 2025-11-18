@@ -72,7 +72,7 @@
   "item.power.ether_armor_boots": "Ether Boots",
   "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
   "item.power.amplifier_ring": "Amplifier Ring",
-  "effect.power.curse": "Curse",
+  "effect.power.curse": "Eternal Curse",
   "subtitles.cursed_knight.attack": "",
   "item.power.spirit_battery": "Battery",
   "item.power.addition_time_master_effect_rune_3.description_3": "§7Specifications:",
@@ -1106,5 +1106,9 @@
   "item.power.energium_upgrade_smithing_template.description_1": "",
   "curios.identifier.blue_rune": "Blue Rune",
   "curios.identifier.red_rune": "Red Rune",
-  "curios.identifier.green_rune": "Green Rune"
+  "curios.identifier.green_rune": "Green Rune",
+  "biome.power.energium_deposit": "Deposit of Energium",
+  "block.power.cursed_grass_block": "Cursed Grass Block",
+  "block.power.cursed_dirt": "Cursed Dirt",
+  "block.power.tears_flower": "Flower of Tears"
 }

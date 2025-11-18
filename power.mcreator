@@ -17519,12 +17519,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/block/cursed_stone.json",
-          "src/main/resources/data/power/worldgen/configured_feature/cursed_stone.json",
           "src/main/resources/data/power/loot_table/blocks/cursed_stone.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBlock.java",
           "src/main/resources/assets/power/models/item/cursed_stone.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/cursed_stone_biome_modifier.json",
-          "src/main/resources/data/power/worldgen/placed_feature/cursed_stone.json",
           "src/main/resources/assets/power/blockstates/cursed_stone.json"
         ]
       },
@@ -21403,26 +21400,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
-      "path": "~/Biomes"
+      "path": "~/Dimensions/CursedWorld"
     },
     {
       "name": "RedMagnetPowerTick",
@@ -30530,6 +30511,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -34539,6 +34532,212 @@
         ]
       },
       "path": "~/Dimensions/CursedWorld"
+    },
+    {
+      "name": "EthernalCurseProgressGUI",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ethernal_curse_progress_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/screens/EthernalCurseProgressGUIOverlay.java"
+        ]
+      },
+      "path": "~/Dimensions/CursedWorld"
+    },
+    {
+      "name": "EthernalProgressBarInt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ethernal_progress_bar_int",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EthernalProgressBarIntProcedure.java"
+        ]
+      },
+      "path": "~/Dimensions/CursedWorld"
+    },
+    {
+      "name": "EthernalCurseProgressGUCheckEffect",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ethernal_curse_progress_gu_check_effect",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EthernalCurseProgressGUCheckEffectProcedure.java"
+        ]
+      },
+      "path": "~/Dimensions/CursedWorld"
+    },
+    {
+      "name": "EnergiumDeposit",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_deposit",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/worldgen/biome/energium_deposit.json"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "TpToCursedWorld",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tp_to_cursed_world",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TpToCursedWorldProcedure.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "EnergiumVein",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_vein",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/world/features/EnergiumVeinFeature.java",
+          "src/main/resources/data/power/neoforge/biome_modifier/energium_vein_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/configured_feature/energium_vein.json",
+          "src/main/resources/data/power/worldgen/placed_feature/energium_vein.json"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "EnergiumVeinDopolnitielnoieUsloviieGienieratsii",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_vein_dopolnitielnoie_usloviie_gienieratsii",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumVeinDopolnitielnoieUsloviieGienieratsiiProcedure.java"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "CursedStoneToStone",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_to_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/worldgen/placed_feature/cursed_stone_to_stone.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/cursed_stone_to_stone_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/configured_feature/cursed_stone_to_stone.json"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "CursedGrassBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_grass_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_table/blocks/cursed_grass_block.json",
+          "src/main/resources/assets/power/blockstates/cursed_grass_block.json",
+          "src/main/resources/assets/power/models/block/cursed_grass_block.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedGrassBlockBlock.java",
+          "src/main/resources/assets/power/models/item/cursed_grass_block.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedDirt",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_dirt",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedDirtBlock.java",
+          "src/main/resources/assets/power/blockstates/cursed_dirt.json",
+          "src/main/resources/data/power/loot_table/blocks/cursed_dirt.json",
+          "src/main/resources/assets/power/models/item/cursed_dirt.json",
+          "src/main/resources/assets/power/models/block/cursed_dirt.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "TearsFlower",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tears_flower",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/tears_flower.json",
+          "src/main/resources/data/power/worldgen/placed_feature/tears_flower.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/TearsFlowerBlock.java",
+          "src/main/resources/data/power/worldgen/configured_feature/tears_flower.json",
+          "src/main/resources/data/power/loot_table/blocks/tears_flower.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/tears_flower_biome_modifier.json",
+          "src/main/resources/assets/power/blockstates/tears_flower.json",
+          "src/main/resources/assets/power/models/block/tears_flower.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
     }
   ],
   "variable_elements": [
@@ -35267,6 +35466,18 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "ethernal_curse_points",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "max_ethernal_curse_points",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1200.0"
     }
   ],
   "sound_elements": [
@@ -36408,9 +36619,9 @@
       "~CUSTOM:RuneCutter"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.STONE#0",
-      "~Blocks.DIRT#0",
-      "~Blocks.GRASS"
+      "~CUSTOM:CursedGrassBlock",
+      "~CUSTOM:CursedStone",
+      "~CUSTOM:CursedDirt"
     ],
     "BIOMES:minecraft:has_structure/ruined_portal_standard": [
       "~CUSTOM:CursedPlains"
@@ -36419,6 +36630,14 @@
       "CUSTOM:MusicDiscCallOfThePast",
       "CUSTOM:MusicDiscAncientMood",
       "CUSTOM:MusicHope"
+    ],
+    "BLOCKS:minecraft:dirt": [
+      "CUSTOM:CursedGrassBlock",
+      "CUSTOM:CursedDirt"
+    ],
+    "BLOCKS:minecraft:mineable/shovel": [
+      "~CUSTOM:CursedDirt",
+      "~CUSTOM:CursedGrassBlock"
     ]
   },
   "tab_element_order": {
@@ -36575,6 +36794,8 @@
       "RawCopyrium",
       "CopyriumIngot",
       "MusicHope",
+      "EmptyCharacteristicsCard",
+      "CharacteristicsCard",
       "UnknownRune",
       "ExtraStarPointsRune1",
       "ExtraStarPointsRune2",
@@ -36590,6 +36811,9 @@
       "DodgingRune",
       "InvisibilityRune",
       "HealingRune",
+      "CursedWorld",
+      "CursedGrassBlock",
+      "CursedDirt",
       "CursedStone",
       "CursedStoneBricks",
       "CursedStoneCrackedBricks",
@@ -36614,11 +36838,9 @@
       "CursedVault",
       "CursedKey",
       "MusicDiscAncientMood",
+      "TearsFlower",
       "FreakingParsnip",
-      "FreakingParsnipSoup",
-      "EmptyCharacteristicsCard",
-      "CharacteristicsCard",
-      "CursedWorld"
+      "FreakingParsnipSoup"
     ],
     "CUSTOM:Mobs": [
       "EnergiumGolem",
@@ -36702,7 +36924,7 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "item.power.amplifier_ring": "Амплиферовое кольцо",
-      "effect.power.curse": "Проклятие",
+      "effect.power.curse": "Вечное Проклятие",
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Батарея",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7Спецификация:",
@@ -37736,7 +37958,11 @@
       "item.power.energium_upgrade_smithing_template.description_1": "",
       "curios.identifier.blue_rune": "Синяя руна",
       "curios.identifier.red_rune": "Красная руна",
-      "curios.identifier.green_rune": "Зелёная руна"
+      "curios.identifier.green_rune": "Зелёная руна",
+      "biome.power.energium_deposit": "Месторождение энергиума",
+      "block.power.cursed_grass_block": "Проклятый блок травы",
+      "block.power.cursed_dirt": "Проклятая земля",
+      "block.power.tears_flower": "Цветок слёз"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -37812,7 +38038,7 @@
       "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
       "item.power.amplifier_ring": "Amplifier Ring",
-      "effect.power.curse": "Curse",
+      "effect.power.curse": "Eternal Curse",
       "subtitles.cursed_knight.attack": "",
       "item.power.spirit_battery": "Battery",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7Specifications:",
@@ -38846,7 +39072,11 @@
       "item.power.energium_upgrade_smithing_template.description_1": "",
       "curios.identifier.blue_rune": "Blue Rune",
       "curios.identifier.red_rune": "Red Rune",
-      "curios.identifier.green_rune": "Green Rune"
+      "curios.identifier.green_rune": "Green Rune",
+      "biome.power.energium_deposit": "Deposit of Energium",
+      "block.power.cursed_grass_block": "Cursed Grass Block",
+      "block.power.cursed_dirt": "Cursed Dirt",
+      "block.power.tears_flower": "Flower of Tears"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -38921,7 +39151,7 @@
       "item.power.ether_armor_boots": "以太靴",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "月亮凋谢，用80",
       "item.power.amplifier_ring": "放大器环",
-      "effect.power.curse": "诅咒",
+      "effect.power.curse": "永恒的诅咒",
       "item.power.spirit_battery": "电池",
       "item.power.addition_time_master_effect_rune_3.description_3": "§7规格：",
       "item.power.energium_axe": "能量斧",
@@ -39943,7 +40173,11 @@
       "item.power.energium_upgrade_smithing_template.description_1": "",
       "curios.identifier.blue_rune": "蓝色符文",
       "curios.identifier.red_rune": "红色符文",
-      "curios.identifier.green_rune": "绿色符文"
+      "curios.identifier.green_rune": "绿色符文",
+      "biome.power.energium_deposit": "能量的沉积",
+      "block.power.cursed_grass_block": "诅咒草块",
+      "block.power.cursed_dirt": "被诅咒的泥土",
+      "block.power.tears_flower": "花的眼泪"
     }
   },
   "metadata": {
@@ -39967,6 +40201,7 @@
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModItems.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntityRenderers.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntities.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModFeatures.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
       "src/main/resources/META-INF/accesstransformer.cfg",
@@ -40897,7 +41132,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.3.0.4",
+    "version": "1.4.0.1",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds more new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Sleep, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -40921,5 +41156,5 @@
     "credits": "Created by Auranite Studio",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202500344100
+  "mcreatorVersion": 202500346303
 }

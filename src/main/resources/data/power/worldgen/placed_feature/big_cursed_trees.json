@@ -12,7 +12,7 @@
       "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "minecraft:matching_blocks",
-        "blocks": "minecraft:grass_block",
+        "blocks": "power:cursed_grass_block",
         "offset": [
           0,
           -1,

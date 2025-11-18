@@ -174,6 +174,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.RAW_COPYRIUM.get());
 				tabData.accept(PowerModItems.COPYRIUM_INGOT.get());
 				tabData.accept(PowerModItems.MUSIC_HOPE.get());
+				tabData.accept(PowerModItems.EMPTY_CHARACTERISTICS_CARD.get());
+				tabData.accept(PowerModItems.CHARACTERISTICS_CARD.get());
 				tabData.accept(PowerModItems.UNKNOWN_RUNE.get());
 				tabData.accept(PowerModItems.EXTRA_STAR_POINTS_RUNE_1.get());
 				tabData.accept(PowerModItems.EXTRA_STAR_POINTS_RUNE_2.get());
@@ -189,6 +191,9 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.DODGING_RUNE.get());
 				tabData.accept(PowerModItems.INVISIBILITY_RUNE.get());
 				tabData.accept(PowerModItems.HEALING_RUNE.get());
+				tabData.accept(PowerModItems.CURSED_WORLD.get());
+				tabData.accept(PowerModBlocks.CURSED_GRASS_BLOCK.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_DIRT.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS.get().asItem());
@@ -213,11 +218,9 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.CURSED_VAULT.get().asItem());
 				tabData.accept(PowerModItems.CURSED_KEY.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
+				tabData.accept(PowerModBlocks.TEARS_FLOWER.get().asItem());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP.get());
 				tabData.accept(PowerModItems.FREAKING_PARSNIP_SOUP.get());
-				tabData.accept(PowerModItems.EMPTY_CHARACTERISTICS_CARD.get());
-				tabData.accept(PowerModItems.CHARACTERISTICS_CARD.get());
-				tabData.accept(PowerModItems.CURSED_WORLD.get());
 			}).withTabsBefore(BATTERIES.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOBS = REGISTRY.register("mobs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
