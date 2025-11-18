@@ -13,7 +13,7 @@
 * Added the 'tp' argument for the 'pw' command, for teleportation to mod dimensions
 
 **Bugfixes**
-* \[Bugfix] 
+* *N/A*
 
 **Known issues**
 * *N/A*
