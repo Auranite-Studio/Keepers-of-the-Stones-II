@@ -87,7 +87,7 @@
     "xpAmountMin": 0,
     "xpAmountMax": 0,
     "forceTicking": false,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "hasTileEntity": false,
     "isReplaceable": false,
     "colorOnMap": "LIGHT_BLUE",
@@ -106,7 +106,7 @@
     "speedFactor": 1.0,
     "canBePlacedOn": [],
     "isBonemealable": false,
-    "frequencyOnChunks": 5,
+    "frequencyOnChunks": 6,
     "generateFeature": true,
     "restrictionBiomes": [
       {
@@ -117,7 +117,7 @@
       }
     ],
     "generationType": "Flower",
-    "patchSize": 64,
+    "patchSize": 2,
     "generateAtAnyHeight": false
   }
 }
