@@ -1093,5 +1093,9 @@
   "item.power.energium_upgrade_smithing_template.description_1": "",
   "curios.identifier.blue_rune": "蓝色符文",
   "curios.identifier.red_rune": "红色符文",
-  "curios.identifier.green_rune": "绿色符文"
+  "curios.identifier.green_rune": "绿色符文",
+  "biome.power.energium_deposit": "能量的沉积",
+  "block.power.cursed_grass_block": "诅咒草块",
+  "block.power.cursed_dirt": "被诅咒的泥土",
+  "block.power.tears_flower": "花的眼泪"
 }

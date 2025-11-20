@@ -1,6 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
@@ -11,6 +12,7 @@ import net.minecraft.core.particles.SimpleParticleType;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
+import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
 public class CurseTickEventProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -18,7 +20,7 @@ public class CurseTickEventProcedure {
 			return;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).ethernal_curse_points == entity.getData(PowerModVariables.PLAYER_VARIABLES).max_ethernal_curse_points) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).ethernal_curse_points >= entity.getData(PowerModVariables.PLAYER_VARIABLES).max_ethernal_curse_points) {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.ethernal_curse_points = 0;
@@ -38,7 +40,8 @@ public class CurseTickEventProcedure {
 		} else if (entity.getData(PowerModVariables.PLAYER_VARIABLES).ethernal_curse_points < entity.getData(PowerModVariables.PLAYER_VARIABLES).max_ethernal_curse_points) {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.ethernal_curse_points = entity.getData(PowerModVariables.PLAYER_VARIABLES).ethernal_curse_points + 1;
+				_vars.ethernal_curse_points = entity.getData(PowerModVariables.PLAYER_VARIABLES).ethernal_curse_points
+						+ (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PowerModMobEffects.CURSE) ? _livEnt.getEffect(PowerModMobEffects.CURSE).getAmplifier() : 0) * 0.25 + 1;
 				_vars.markSyncDirty();
 			}
 		}
