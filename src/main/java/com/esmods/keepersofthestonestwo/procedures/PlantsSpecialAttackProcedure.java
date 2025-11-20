@@ -81,7 +81,7 @@ public class PlantsSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("plants_ability_2")) {
@@ -107,7 +107,7 @@ public class PlantsSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 35;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("plants_ability_3")) {
@@ -134,7 +134,7 @@ public class PlantsSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 65;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

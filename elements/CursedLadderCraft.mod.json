@@ -5,7 +5,11 @@
     "recipeType": "Crafting",
     "recipeRetstackSize": 3,
     "group": "",
-    "unlockingItems": [],
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:CursedStone"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

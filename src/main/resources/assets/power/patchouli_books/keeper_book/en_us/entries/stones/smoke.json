@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Smoke",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:smoke_musket\",count:1}],ArmorItems:[{id:\"power:smoke_armor_boots\",count:1},{id:\"power:smoke_armor_leggings\",count:1},{id:\"power:smoke_armor_chestplate\",count:1},{id:\"power:smoke_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:smoke_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Burning blocks or campfire within 16 blocks.",
+                "$(li)",
+                "Phantom Smoke: +10% damage; 15% chance to apply \"Weakness II\" and \"Slowness I\" for 10 sec.",
+                "$(li)",
+                "Dense Smoke: 15% chance to reduce incoming damage by 75%."
+            ]
         }
     ]
 }

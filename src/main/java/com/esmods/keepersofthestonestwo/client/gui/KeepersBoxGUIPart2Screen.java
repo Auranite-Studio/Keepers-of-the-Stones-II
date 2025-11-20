@@ -15,18 +15,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart2Menu;
-import com.esmods.keepersofthestonestwo.procedures.TornadoStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TimeStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TeleportationStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TechnologyStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SpeedStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SoundStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SmokeStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MusicStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MistStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.DestructionStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.CreationStoneCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.AirStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart2ButtonMessage;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
@@ -35,20 +24,20 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_keepers_box_button_up;
-	ImageButton imagebutton_keepers_box_button_down;
-	ImageButton imagebutton_creation_element;
-	ImageButton imagebutton_time_element;
-	ImageButton imagebutton_sound_element;
-	ImageButton imagebutton_air_element;
-	ImageButton imagebutton_tornado_element;
-	ImageButton imagebutton_destruction_element;
-	ImageButton imagebutton_technology_element;
-	ImageButton imagebutton_teleportation_element;
-	ImageButton imagebutton_mist_element;
-	ImageButton imagebutton_speed_element_highlighted;
-	ImageButton imagebutton_music_element;
-	ImageButton imagebutton_smoke_element;
+	private ImageButton imagebutton_keepers_box_button_up;
+	private ImageButton imagebutton_keepers_box_button_down;
+	private ImageButton imagebutton_creation_element;
+	private ImageButton imagebutton_time_element;
+	private ImageButton imagebutton_sound_element;
+	private ImageButton imagebutton_air_element;
+	private ImageButton imagebutton_tornado_element;
+	private ImageButton imagebutton_destruction_element;
+	private ImageButton imagebutton_technology_element;
+	private ImageButton imagebutton_teleportation_element;
+	private ImageButton imagebutton_mist_element;
+	private ImageButton imagebutton_speed_element_highlighted;
+	private ImageButton imagebutton_music_element;
+	private ImageButton imagebutton_smoke_element;
 
 	public KeepersBoxGUIPart2Screen(KeepersBoxGUIPart2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

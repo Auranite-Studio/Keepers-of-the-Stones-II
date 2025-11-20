@@ -5,7 +5,17 @@
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
-    "unlockingItems": [],
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:DepletedEnergiumIngot"
+      },
+      {
+        "value": "Items.QUARTZ"
+      },
+      {
+        "value": "Items.REDSTONE"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

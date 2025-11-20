@@ -8,7 +8,7 @@
   ],
   "key": {
     "a": {
-      "item": "power:depleted_energium_ingot"
+      "tag": "minecraft:planks"
     },
     "b": {
       "item": "power:energium_ingot"

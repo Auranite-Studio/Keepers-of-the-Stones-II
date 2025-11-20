@@ -101,7 +101,7 @@ public class AirSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("air_ability_2")) {
@@ -126,7 +126,7 @@ public class AirSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 35;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
@@ -154,7 +154,7 @@ public class AirSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 5;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

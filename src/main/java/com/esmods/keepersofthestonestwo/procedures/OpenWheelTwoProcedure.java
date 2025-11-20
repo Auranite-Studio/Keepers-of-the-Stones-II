@@ -11,7 +11,7 @@ public class OpenWheelTwoProcedure {
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 			_vars.second_wheel_open_var = true;
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 	}
 }

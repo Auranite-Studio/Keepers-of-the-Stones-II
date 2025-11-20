@@ -18,56 +18,107 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.*;
 import java.util.regex.Pattern;
-import java.util.Map;
 
 @EventBusSubscriber
 public class ModVersionManager {
 
-	// === UpdateChecker Fields and Methods ===
 	private static final String PROJECT_ID = "keepers-of-the-stones-2";
 	private static final String MINECRAFT_VERSION = getMinecraftVersion();
 	private static final String CURRENT_VERSION = getCurrentVersion();
 
-	private static final Map<VersionType, Integer> VERSION_PRIORITY = Map.of(
-			VersionType.RELEASE, 0,
-			VersionType.RELEASE_CANDIDATE, 1,
-			VersionType.PRE_RELEASE, 2,
-			VersionType.BETA, 3,
-			VersionType.CUSTOM_SUFFIX, 4,
-			VersionType.UNKNOWN, 5
-	);
+	static class Version implements Comparable<Version> {
+		private final String raw;
+		private final int[] parts;
+
+		public Version(String version) {
+			this.raw = version;
+			this.parts = parseVersion(version);
+		}
+
+		private static int[] parseVersion(String v) {
+			String clean = v.contains("-") ? v.substring(0, v.indexOf('-')) : v;
+			String[] split = clean.split("\\.");
+			int[] result = new int[Math.min(split.length, 3)]; // Только major.minor.patch
+			for (int i = 0; i < result.length; i++) {
+				try {
+					result[i] = Integer.parseInt(split[i]);
+				} catch (NumberFormatException e) {
+					result[i] = 0;
+				}
+			}
+			return result;
+		}
+
+		@Override
+		public int compareTo(Version o) {
+			int len = Math.max(this.parts.length, o.parts.length);
+			for (int i = 0; i < len; i++) {
+				int a = i < this.parts.length ? this.parts[i] : 0;
+				int b = i < o.parts.length ? o.parts[i] : 0;
+				if (a != b) {
+					return Integer.compare(a, b);
+				}
+			}
+			return 0;
+		}
+
+		@Override
+		public String toString() {
+			return raw;
+		}
+	}
+
+	private static VersionType getVersionType(String version) {
+		if (version == null || version.isEmpty()) return VersionType.UNKNOWN;
+		if (Pattern.matches("^\\d+\\.\\d+\\.\\d+$", version)) {
+			return VersionType.RELEASE;
+		}
+		return VersionType.OTHER;
+	}
+
+	enum VersionType {
+		RELEASE, OTHER, UNKNOWN
+	}
 
 	public static void checkForUpdates(ServerPlayer player) {
+ 		if (getVersionType(CURRENT_VERSION) != VersionType.RELEASE) {
+			return;
+		}
+
 		try {
-			List<VersionData> versions = fetchVersionsFromModrinth();
-			if (versions.isEmpty()) {
+			List<VersionData> allVersions = fetchVersionsFromModrinth();
+			if (allVersions.isEmpty()) {
 				System.out.println("Couldn't get a list of versions.");
 				return;
 			}
-			Version current = new Version(CURRENT_VERSION, getVersionType(CURRENT_VERSION));
-			Version latest = null;
-			for (VersionData data : versions) {
-				if (!isMinecraftVersionSupported(data.gameVersions)) continue;
-				VersionType type = getVersionType(data.versionNumber);
-				Version version = new Version(data.versionNumber, type);
 
-				if (current.type == VersionType.RELEASE && version.type != VersionType.RELEASE) {
+			Version current = new Version(CURRENT_VERSION);
+			Version latestRelease = null;
+
+			for (VersionData data : allVersions) {
+				if (!isMinecraftVersionSupported(data.gameVersions)) continue;
+
+				// Рассматриваем ТОЛЬКО RELEASE-версии (x.x.x)
+				if (getVersionType(data.versionNumber) != VersionType.RELEASE) {
 					continue;
 				}
 
-				if (version.compareTo(current) > 0) {
-					if (latest == null || version.compareTo(latest) > 0) {
-						latest = version;
+				Version candidate = new Version(data.versionNumber);
+				if (candidate.compareTo(current) > 0) {
+					if (latestRelease == null || candidate.compareTo(latestRelease) > 0) {
+						latestRelease = candidate;
 					}
 				}
 			}
-			if (latest == null || latest.compareTo(current) <= 0) {
-				System.out.println("There are no updates.");
+
+			if (latestRelease == null) {
+				System.out.println("No newer RELEASE version found.");
 				return;
 			}
-			String changelog = getVersionChangelog(versions, latest.toString());
-			sendUpdateMessage(player, latest, changelog);
-			System.out.println("A newer version has been found: " + latest);
+
+			String changelog = getVersionChangelog(allVersions, latestRelease.toString());
+			sendUpdateMessage(player, latestRelease, changelog);
+			System.out.println("Newer RELEASE version found: " + latestRelease);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -88,7 +139,7 @@ public class ModVersionManager {
 								.withUnderlined(true)
 								.withClickEvent(new ClickEvent(
 										ClickEvent.Action.OPEN_URL,
-										"https://modrinth.com/project/keepers-of-the-stones-2"
+										"https://modrinth.com/project/" + PROJECT_ID
 								))
 								.withHoverEvent(new HoverEvent(
 										HoverEvent.Action.SHOW_TEXT,
@@ -112,6 +163,8 @@ public class ModVersionManager {
 		URL url = new URL("https://api.modrinth.com/v2/project/" + PROJECT_ID + "/version");
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 		connection.setRequestMethod("GET");
+		connection.setRequestProperty("User-Agent", "KeepersOfTheStonesII/UpdateChecker");
+
 		StringBuilder response = new StringBuilder();
 		try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
 			String line;
@@ -141,120 +194,9 @@ public class ModVersionManager {
 
 	record VersionData(String versionNumber, String changelog, List<String> gameVersions) {}
 
-	static class Version implements Comparable<Version> {
-		private final String raw;
-		private final VersionType type;
-
-		public Version(String version, VersionType type) {
-			this.raw = version;
-			this.type = type;
-		}
-
-		@Override
-		public int compareTo(Version o) {
-			String baseThis = truncateToThreeParts(this.raw);
-			String baseOther = truncateToThreeParts(o.raw);
-
-			int versionComparison = compareVersionStrings(baseThis, baseOther);
-			if (versionComparison != 0) {
-				return versionComparison;
-			}
-
-			int priorityThis = VERSION_PRIORITY.getOrDefault(this.type, 999);
-			int priorityOther = VERSION_PRIORITY.getOrDefault(o.type, 999);
-
-			return Integer.compare(priorityOther, priorityThis);
-		}
-
-		private String truncateToThreeParts(String version) {
-			String baseVersion = version.split("-")[0];
-			String[] parts = baseVersion.split("\\.");
-			if (parts.length >= 3) {
-				return parts[0] + "." + parts[1] + "." + parts[2];
-			}
-			return baseVersion;
-		}
-
-		private int compareVersionStrings(String v1, String v2) {
-			int[] parts1 = parseVersionParts(v1);
-			int[] parts2 = parseVersionParts(v2);
-			int length = Math.max(parts1.length, parts2.length);
-			for (int i = 0; i < length; i++) {
-				int num1 = i < parts1.length ? parts1[i] : 0;
-				int num2 = i < parts2.length ? parts2[i] : 0;
-				if (num1 != num2) {
-					return Integer.compare(num1, num2);
-				}
-			}
-			return 0;
-		}
-
-		private int[] parseVersionParts(String version) {
-			String baseVersion = version.split("-")[0];
-			String[] parts = baseVersion.split("\\.");
-			int[] result = new int[parts.length];
-			for (int i = 0; i < parts.length; i++) {
-				try {
-					result[i] = Integer.parseInt(parts[i]);
-				} catch (NumberFormatException ignored) {
-					result[i] = 0;
-				}
-			}
-			return result;
-		}
-
-		public VersionType getVersionType() {
-			return type;
-		}
-
-		@Override
-		public String toString() {
-			return raw;
-		}
-	}
-
-	enum VersionType {
-		RELEASE,
-		PRE_RELEASE,
-		RELEASE_CANDIDATE,
-		BETA,
-		CUSTOM_SUFFIX,
-		UNKNOWN
-	}
-
-	private static VersionType getVersionType(String version) {
-		if (version == null || version.isEmpty()) return VersionType.UNKNOWN;
-
-		// RELEASE: x.x.x
-		if (Pattern.matches("^\\d+\\.\\d+\\.\\d+$", version)) {
-			return VersionType.RELEASE;
-		}
-		// RELEASE_CANDIDATE: x.x.x-rcN
-		else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-rc\\d+$", version)) {
-			return VersionType.RELEASE_CANDIDATE;
-		}
-		// PRE_RELEASE: x.x.x-preN
-		else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-pre\\d+$", version)) {
-			return VersionType.PRE_RELEASE;
-		}
-		// BETA: x.x.x.x
-		else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+\\.\\d+$", version)) {
-			return VersionType.BETA;
-		}
-		// CUSTOM_SUFFIX: x.x.x-suffix
-		else if (Pattern.matches("^\\d+\\.\\d+\\.\\d+-[a-zA-Z0-9]+.*$", version)) {
-			return VersionType.CUSTOM_SUFFIX;
-		}
-		// UNKNOWN
-		else {
-			return VersionType.UNKNOWN;
-		}
-	}
-
 	private static String getCurrentVersion() {
-		List<IModInfo> mods = ModList.get().getMods();
-		for (IModInfo mod : mods) {
-			if (mod.getModId().equals("power")) {
+		for (IModInfo mod : ModList.get().getMods()) {
+			if ("power".equals(mod.getModId())) {
 				return mod.getVersion().toString();
 			}
 		}
@@ -262,15 +204,13 @@ public class ModVersionManager {
 	}
 
 	private static String getMinecraftVersion() {
-		List<IModInfo> mods = ModList.get().getMods();
-		for (IModInfo mod : mods) {
-			if (mod.getModId().equals("minecraft")) {
+		for (IModInfo mod : ModList.get().getMods()) {
+			if ("minecraft".equals(mod.getModId())) {
 				return mod.getVersion().toString();
 			}
 		}
 		return "0.0.0";
 	}
-
 
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerLoggedInEvent event) {
@@ -279,19 +219,18 @@ public class ModVersionManager {
 	}
 
 	private static void executeCheckForUpdates(@Nullable Event event, Entity entity) {
-		if (entity == null) return;
-		if (entity instanceof Player) {
-			checkForUpdates((ServerPlayer) entity);
+		if (entity instanceof ServerPlayer serverPlayer) {
+			checkForUpdates(serverPlayer);
 		}
 	}
 
 	private static void executeBetaWarning(@Nullable Event event, Entity entity) {
-		if (entity == null) return;
 		if (entity instanceof Player player) {
-			Version current = new Version(CURRENT_VERSION, getVersionType(CURRENT_VERSION));
-			// Показываем предупреждение, если это НЕ стабильный релиз
-			if (current.getVersionType() != VersionType.RELEASE) {
-				player.displayClientMessage(Component.literal(Component.translatable("power.modupdater.beta_detect").getString()), false);
+			if (getVersionType(CURRENT_VERSION) != VersionType.RELEASE) {
+				player.displayClientMessage(
+						Component.translatable("power.modupdater.beta_detect"),
+						false
+				);
 			}
 		}
 	}

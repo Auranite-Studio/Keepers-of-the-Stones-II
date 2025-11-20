@@ -11,7 +11,7 @@ public class TimeStoppedPriNalozhieniiEffiektaProcedure {
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 			_vars.ability_block = true;
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 	}
 }

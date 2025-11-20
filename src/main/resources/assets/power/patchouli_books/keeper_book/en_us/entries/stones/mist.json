@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of the Mist",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:misty_fan\",count:1}],ArmorItems:[{id:\"power:mist_armor_boots\",count:1},{id:\"power:mist_armor_leggings\",count:1},{id:\"power:mist_armor_chestplate\",count:1},{id:\"power:mist_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:mist_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() In humid biome or near water.",
+                "$(li)",
+                "Condensation: 10% chance to negate 100% of incoming damage; grants \"Invisibility\" while sneaking.",
+                "$(li)",
+                "Morning Dew: At dawn, gain \"Regeneration II\" for 15 sec (once per 45 sec)."
+            ]
         }
     ]
 }

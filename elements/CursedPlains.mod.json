@@ -1,0 +1,130 @@
+{
+  "_fv": 79,
+  "_type": "biome",
+  "definition": {
+    "name": "Cursed Plains",
+    "groundBlock": {
+      "value": "Blocks.GRASS"
+    },
+    "undergroundBlock": {
+      "value": "Blocks.DIRT#0"
+    },
+    "underwaterBlock": {
+      "value": "Blocks.SAND#0"
+    },
+    "airColor": {
+      "value": -5530695,
+      "falpha": 0.0
+    },
+    "fogColor": {
+      "value": -5530695,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -8951420,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -8951420,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -11581348,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -11581348,
+      "falpha": 0.0
+    },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": "CUSTOM:music.mystery_of_the_cursed_forest"
+    },
+    "moodSound": {
+      "value": "CUSTOM:ambient.biome.cursed_forest"
+    },
+    "moodSoundDelay": 1200,
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "FALLING_OBSIDIAN_TEAR"
+    },
+    "particlesProbability": 1.0,
+    "rainingPossibility": 0.0,
+    "temperature": 2.0,
+    "spawnBiome": false,
+    "spawnInCaves": false,
+    "spawnBiomeNether": false,
+    "genTemperature": {
+      "min": -0.15,
+      "max": 0.2
+    },
+    "genHumidity": {
+      "min": -1.0,
+      "max": -0.35
+    },
+    "genContinentalness": {
+      "min": -0.11,
+      "max": 0.3
+    },
+    "genErosion": {
+      "min": -0.7799,
+      "max": -0.375
+    },
+    "genWeirdness": {
+      "min": -1.0,
+      "max": -0.9333
+    },
+    "genDepth": {
+      "min": 0.2,
+      "max": 0.9
+    },
+    "treesPerChunk": 0,
+    "vanillaTreeType": "Default",
+    "treeType": 0,
+    "minHeight": 7,
+    "treeStem": {
+      "value": ""
+    },
+    "treeBranch": {
+      "value": ""
+    },
+    "treeVines": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": ""
+    },
+    "defaultFeatures": [
+      "Caves",
+      "Ores",
+      "FrozenTopLayer",
+      "PlainsTallGrass"
+    ],
+    "spawnStronghold": false,
+    "spawnMineshaft": false,
+    "spawnMineshaftMesa": false,
+    "spawnPillagerOutpost": false,
+    "villageType": "none",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": false,
+    "spawnDesertPyramid": false,
+    "spawnSwampHut": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": false,
+    "spawnShipwreckBeached": false,
+    "spawnBuriedTreasure": false,
+    "oceanRuinType": "NONE",
+    "spawnNetherBridge": false,
+    "spawnNetherFossil": false,
+    "spawnBastionRemnant": false,
+    "spawnEndCity": false,
+    "spawnRuinedPortal": "STANDARD",
+    "spawnEntries": []
+  }
+}

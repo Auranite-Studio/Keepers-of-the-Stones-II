@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Time",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:time_khopesh\",count:1}],ArmorItems:[{id:\"power:time_armor_boots\",count:1},{id:\"power:time_armor_leggings\",count:1},{id:\"power:time_armor_chestplate\",count:1},{id:\"power:time_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:time_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Remaining duration of Time Master effect ≤50% of original.",
+                "$(li)",
+                "Accelerated Rhythm: +50% damage; 20% chance to gain \"Dash III\" for 5 sec on attack.",
+                "$(li)",
+                "Countdown: 25% chance to apply \"Timer\" for 3 sec; killing a marked target restores 100% health."
+            ]
         }
     ]
 }

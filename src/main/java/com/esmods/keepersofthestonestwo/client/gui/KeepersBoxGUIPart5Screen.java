@@ -17,6 +17,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart5Menu;
 import com.esmods.keepersofthestonestwo.procedures.ShockwaveStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.HeatStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ColorsStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart5ButtonMessage;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
@@ -25,20 +26,20 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_keepers_box_button_up;
-	ImageButton imagebutton_keepers_box_button_down_locked;
-	ImageButton imagebutton_coming_element2;
-	ImageButton imagebutton_coming_element3;
-	ImageButton imagebutton_coming_element4;
-	ImageButton imagebutton_coming_element5;
-	ImageButton imagebutton_coming_element6;
-	ImageButton imagebutton_coming_element7;
-	ImageButton imagebutton_coming_element8;
-	ImageButton imagebutton_coming_element9;
-	ImageButton imagebutton_coming_element10;
-	ImageButton imagebutton_coming_element11;
-	ImageButton imagebutton_heat_element;
-	ImageButton imagebutton_shockwave_element;
+	private ImageButton imagebutton_keepers_box_button_up;
+	private ImageButton imagebutton_keepers_box_button_down_locked;
+	private ImageButton imagebutton_coming_element3;
+	private ImageButton imagebutton_coming_element4;
+	private ImageButton imagebutton_coming_element5;
+	private ImageButton imagebutton_coming_element6;
+	private ImageButton imagebutton_coming_element7;
+	private ImageButton imagebutton_coming_element8;
+	private ImageButton imagebutton_coming_element9;
+	private ImageButton imagebutton_coming_element10;
+	private ImageButton imagebutton_coming_element11;
+	private ImageButton imagebutton_heat_element;
+	private ImageButton imagebutton_shockwave_element;
+	private ImageButton imagebutton_colors_element;
 
 	public KeepersBoxGUIPart5Screen(KeepersBoxGUIPart5Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -67,6 +68,10 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 		}
 		if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 65 && mouseY < topPos + 89) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_5.tooltip_shockwave"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 92 && mouseX < leftPos + 116 && mouseY > topPos + 65 && mouseY < topPos + 89) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_5.tooltip_colors"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -122,15 +127,6 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 			}
 		};
 		this.addRenderableWidget(imagebutton_keepers_box_button_down_locked);
-		imagebutton_coming_element2 = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		this.addRenderableWidget(imagebutton_coming_element2);
 		imagebutton_coming_element3 = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/coming_element.png"), ResourceLocation.parse("power:textures/screens/coming_element_highlight.png")), e -> {
 				}) {
@@ -217,8 +213,8 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 					int x = KeepersBoxGUIPart5Screen.this.x;
 					int y = KeepersBoxGUIPart5Screen.this.y;
 					if (HeatStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart5ButtonMessage(12, x, y, z));
-						KeepersBoxGUIPart5ButtonMessage.handleButtonAction(entity, 12, x, y, z);
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart5ButtonMessage(11, x, y, z));
+						KeepersBoxGUIPart5ButtonMessage.handleButtonAction(entity, 11, x, y, z);
 					}
 				}) {
 			@Override
@@ -235,8 +231,8 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 					int x = KeepersBoxGUIPart5Screen.this.x;
 					int y = KeepersBoxGUIPart5Screen.this.y;
 					if (ShockwaveStoneCheckProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new KeepersBoxGUIPart5ButtonMessage(13, x, y, z));
-						KeepersBoxGUIPart5ButtonMessage.handleButtonAction(entity, 13, x, y, z);
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart5ButtonMessage(12, x, y, z));
+						KeepersBoxGUIPart5ButtonMessage.handleButtonAction(entity, 12, x, y, z);
 					}
 				}) {
 			@Override
@@ -248,5 +244,23 @@ public class KeepersBoxGUIPart5Screen extends AbstractContainerScreen<KeepersBox
 			}
 		};
 		this.addRenderableWidget(imagebutton_shockwave_element);
+		imagebutton_colors_element = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/colors_element.png"), ResourceLocation.parse("power:textures/screens/colors_element_highlight.png")), e -> {
+					int x = KeepersBoxGUIPart5Screen.this.x;
+					int y = KeepersBoxGUIPart5Screen.this.y;
+					if (ColorsStoneCheckProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart5ButtonMessage(13, x, y, z));
+						KeepersBoxGUIPart5ButtonMessage.handleButtonAction(entity, 13, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = KeepersBoxGUIPart5Screen.this.x;
+				int y = KeepersBoxGUIPart5Screen.this.y;
+				if (ColorsStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_colors_element);
 	}
 }

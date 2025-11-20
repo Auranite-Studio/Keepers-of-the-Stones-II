@@ -2,10 +2,15 @@
   "required": true,
   "package": "com.esmods.keepersofthestonestwo.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "NoiseGeneratorSettingsMixin"
+  "mixins": [],
+  "client": [
+    "PlayerAnimationMixin",
+    "PlayerAnimationRendererMixin",
+    "CameraAccessor",
+    "EntityRenderDispatcherMixin",
+    "ItemInHandRendererMixin",
+    "LevelRendererMixin"
   ],
-  "client": [],
   "injectors": {
     "defaultRequire": 1
   },

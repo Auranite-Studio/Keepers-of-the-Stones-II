@@ -18,14 +18,7 @@ import java.util.Arrays;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEnergyMenu;
-import com.esmods.keepersofthestonestwo.procedures.RuneTooltipRenderProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesEnergyButtonMessage;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
@@ -34,16 +27,16 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_wheel_button_1;
-	ImageButton imagebutton_wheel_button_2;
-	ImageButton imagebutton_wheel_button_3;
-	ImageButton imagebutton_fake_wheel_button_1;
-	ImageButton imagebutton_fake_wheel_button_2;
-	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_power_rune_ability;
-	ImageButton imagebutton_energy_flux;
-	ImageButton imagebutton_energy_charge;
-	ImageButton imagebutton_energy_charged_ball;
+	private ImageButton imagebutton_wheel_button_1;
+	private ImageButton imagebutton_wheel_button_2;
+	private ImageButton imagebutton_wheel_button_3;
+	private ImageButton imagebutton_fake_wheel_button_1;
+	private ImageButton imagebutton_fake_wheel_button_2;
+	private ImageButton imagebutton_fake_wheel_button_3;
+	private ImageButton imagebutton_power_rune_ability;
+	private ImageButton imagebutton_energy_flux;
+	private ImageButton imagebutton_energy_charge;
+	private ImageButton imagebutton_energy_charged_ball;
 
 	public WheelAbilitiesEnergyScreen(WheelAbilitiesEnergyMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

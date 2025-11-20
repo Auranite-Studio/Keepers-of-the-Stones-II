@@ -123,7 +123,7 @@ public class IceSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("ice_ability_2")) {
@@ -149,7 +149,7 @@ public class IceSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("ice_ability_3")) {
@@ -172,7 +172,7 @@ public class IceSpecialAttackProcedure {
 							{
 								PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 								_vars.ability_block = true;
-								_vars.syncPlayerVariables(entityiterator);
+								_vars.markSyncDirty();
 							}
 							entityiterator.getPersistentData().putBoolean("iceLayer", true);
 							if (world instanceof Level _level) {
@@ -190,7 +190,7 @@ public class IceSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

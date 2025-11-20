@@ -6,7 +6,6 @@ import net.neoforged.neoforge.common.NeoForgeMod;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
@@ -28,7 +27,6 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -38,15 +36,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.WalkingAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SpintingAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.IdleAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemShootAnimSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriObnovlieniiTikaSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriGibieliSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemAttackAnimSyncProcedure;
-import com.esmods.keepersofthestonestwo.procedures.DeathAnimationSyncProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.procedures.*;
 
 public class EnergiumGolemEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_attack_anim_sync = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.INT);
@@ -104,11 +94,6 @@ public class EnergiumGolemEntity extends Monster {
 		return false;
 	}
 
-	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(PowerModItems.ENERGIUM_CORE.get()));
-	}
-
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
 		this.playSound(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.iron_golem.step")), 0.15f, 1);
@@ -153,11 +138,6 @@ public class EnergiumGolemEntity extends Monster {
 
 	@Override
 	public boolean ignoreExplosion(Explosion explosion) {
-		return true;
-	}
-
-	@Override
-	public boolean fireImmune() {
 		return true;
 	}
 

@@ -92,7 +92,7 @@ public class MusicSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("music_ability_2")) {
@@ -163,7 +163,7 @@ public class MusicSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("music_ability_3")) {
@@ -207,7 +207,7 @@ public class MusicSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 75;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75 && entity.isShiftKeyDown() == false) {
@@ -243,7 +243,7 @@ public class MusicSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 75;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

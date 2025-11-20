@@ -1,0 +1,31 @@
+{
+  "_fv": 79,
+  "_type": "curiosbauble",
+  "definition": {
+    "item": "ProtectionRune",
+    "slotType": "GreenRune",
+    "slotAmount": 1,
+    "addSlot": false,
+    "enderMask": false,
+    "friendlyPigs": false,
+    "snowWalk": false,
+    "equipSound": {
+      "value": ""
+    },
+    "hasModel": false,
+    "baubleModel": "Default",
+    "baubleModelTexture": "",
+    "onEquip": {
+      "name": "GreenRune1BaubleIsEquipped"
+    },
+    "onUnequip": {
+      "name": "GreenRune1BaubleIsUnequipped"
+    },
+    "helmetModelPart": "Empty",
+    "bodyModelPart": "Empty",
+    "armsModelPartL": "Empty",
+    "armsModelPartR": "Empty",
+    "leggingsModelPartL": "Empty",
+    "leggingsModelPartR": "Empty"
+  }
+}

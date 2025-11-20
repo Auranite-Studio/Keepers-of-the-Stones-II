@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of Space",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:constellation_sword\",count:1}],ArmorItems:[{id:\"power:space_armor_boots\",count:1},{id:\"power:space_armor_leggings\",count:1},{id:\"power:space_armor_chestplate\",count:1},{id:\"power:space_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:space_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Under open sky or in the End.",
+                "$(li)",
+                "Supernova: 10% chance to deal 110% damage and apply \"Blindness\" for 5 sec.",
+                "$(li)",
+                "Stellar Cycle: In 3-sec attack combos, every 3rd hit deals +25% damage and applies \"Weakness III\" for 15 sec."
+            ]
         }
     ]
 }

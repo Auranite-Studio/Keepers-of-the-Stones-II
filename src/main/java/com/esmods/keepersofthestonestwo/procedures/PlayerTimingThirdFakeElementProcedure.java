@@ -30,35 +30,23 @@ public class PlayerTimingThirdFakeElementProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.fake_element_name_third_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third_timer - 1;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			} else {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.fake_element_name_third = "0";
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 			if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("0")) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.fake_element_name_second_timer = entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third_timer - 1;
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.fake_element_name_second = entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third;
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.fake_element_name_third = "0";
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.fake_element_name_third_timer = 0;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

@@ -34,36 +34,24 @@ public class ReturnStoneAfterDeadProcedure {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.fake_element_name_first = "0";
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.fake_element_name_second = "0";
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.fake_element_name_third = "0";
-				_vars.syncPlayerVariables(entity);
-			}
-			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.transfered_power = false;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery) {
 				if (entity instanceof Player || entity instanceof ServerPlayer) {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.level_exp = entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp - Math.round(entity.getData(PowerModVariables.PLAYER_VARIABLES).level_exp * 0.25);
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("fire")) {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get()).copy();
@@ -74,7 +62,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get()).copy();
@@ -85,7 +73,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get()).copy();
@@ -97,7 +85,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get()).copy();
@@ -108,7 +96,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get()).copy();
@@ -119,7 +107,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get()).copy();
@@ -131,7 +119,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get()).copy();
@@ -142,7 +130,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get()).copy();
@@ -153,7 +141,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get()).copy();
@@ -165,7 +153,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get()).copy();
@@ -176,7 +164,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get()).copy();
@@ -187,7 +175,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get()).copy();
@@ -199,7 +187,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get()).copy();
@@ -210,7 +198,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get()).copy();
@@ -221,7 +209,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get()).copy();
@@ -233,7 +221,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get()).copy();
@@ -244,7 +232,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get()).copy();
@@ -255,7 +243,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get()).copy();
@@ -267,7 +255,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get()).copy();
@@ -278,7 +266,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get()).copy();
@@ -289,7 +277,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get()).copy();
@@ -301,7 +289,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get()).copy();
@@ -312,7 +300,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get()).copy();
@@ -323,7 +311,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get()).copy();
@@ -335,7 +323,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get()).copy();
@@ -346,7 +334,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get()).copy();
@@ -357,7 +345,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get()).copy();
@@ -369,7 +357,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get()).copy();
@@ -380,7 +368,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get()).copy();
@@ -391,7 +379,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get()).copy();
@@ -403,7 +391,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get()).copy();
@@ -414,7 +402,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get()).copy();
@@ -425,7 +413,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get()).copy();
@@ -437,7 +425,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get()).copy();
@@ -448,7 +436,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get()).copy();
@@ -459,7 +447,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get()).copy();
@@ -471,7 +459,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get()).copy();
@@ -482,7 +470,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get()).copy();
@@ -493,7 +481,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get()).copy();
@@ -505,7 +493,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get()).copy();
@@ -516,7 +504,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get()).copy();
@@ -527,7 +515,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get()).copy();
@@ -539,7 +527,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get()).copy();
@@ -550,7 +538,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get()).copy();
@@ -561,7 +549,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get()).copy();
@@ -573,7 +561,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get()).copy();
@@ -584,7 +572,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get()).copy();
@@ -595,7 +583,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get()).copy();
@@ -607,7 +595,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get()).copy();
@@ -618,7 +606,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get()).copy();
@@ -629,7 +617,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get()).copy();
@@ -641,7 +629,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get()).copy();
@@ -652,7 +640,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get()).copy();
@@ -663,7 +651,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get()).copy();
@@ -675,7 +663,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get()).copy();
@@ -686,7 +674,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get()).copy();
@@ -697,7 +685,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get()).copy();
@@ -709,7 +697,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get()).copy();
@@ -720,7 +708,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get()).copy();
@@ -731,7 +719,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get()).copy();
@@ -743,7 +731,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get()).copy();
@@ -754,7 +742,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get()).copy();
@@ -765,7 +753,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get()).copy();
@@ -777,7 +765,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get()).copy();
@@ -788,7 +776,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get()).copy();
@@ -799,7 +787,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get()).copy();
@@ -811,7 +799,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get()).copy();
@@ -822,7 +810,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get()).copy();
@@ -833,7 +821,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get()).copy();
@@ -845,7 +833,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get()).copy();
@@ -856,7 +844,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get()).copy();
@@ -867,7 +855,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get()).copy();
@@ -879,7 +867,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get()).copy();
@@ -890,7 +878,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get()).copy();
@@ -901,7 +889,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get()).copy();
@@ -913,7 +901,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get()).copy();
@@ -924,7 +912,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get()).copy();
@@ -935,7 +923,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get()).copy();
@@ -947,7 +935,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.BLOOD_STONE.get()).copy();
@@ -958,7 +946,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.BLOOD_STONE.get()).copy();
@@ -969,7 +957,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.BLOOD_STONE.get()).copy();
@@ -981,7 +969,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TECHNOLOGY_STONE.get()).copy();
@@ -992,7 +980,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TECHNOLOGY_STONE.get()).copy();
@@ -1003,7 +991,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TECHNOLOGY_STONE.get()).copy();
@@ -1015,7 +1003,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TELEPORTATION_STONE.get()).copy();
@@ -1026,7 +1014,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TELEPORTATION_STONE.get()).copy();
@@ -1037,7 +1025,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.TELEPORTATION_STONE.get()).copy();
@@ -1049,7 +1037,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.EXPLOSION_STONE.get()).copy();
@@ -1060,7 +1048,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.EXPLOSION_STONE.get()).copy();
@@ -1071,7 +1059,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.EXPLOSION_STONE.get()).copy();
@@ -1083,7 +1071,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.AMBER_STONE.get()).copy();
@@ -1094,7 +1082,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.AMBER_STONE.get()).copy();
@@ -1105,7 +1093,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.AMBER_STONE.get()).copy();
@@ -1117,7 +1105,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MIST_STONE.get()).copy();
@@ -1128,7 +1116,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MIST_STONE.get()).copy();
@@ -1139,7 +1127,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MIST_STONE.get()).copy();
@@ -1151,7 +1139,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SAND_STONE.get()).copy();
@@ -1162,7 +1150,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SAND_STONE.get()).copy();
@@ -1173,7 +1161,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SAND_STONE.get()).copy();
@@ -1185,7 +1173,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SPEED_STONE.get()).copy();
@@ -1196,7 +1184,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SPEED_STONE.get()).copy();
@@ -1207,7 +1195,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SPEED_STONE.get()).copy();
@@ -1219,7 +1207,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.POISON_STONE.get()).copy();
@@ -1230,7 +1218,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.POISON_STONE.get()).copy();
@@ -1241,7 +1229,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.POISON_STONE.get()).copy();
@@ -1253,7 +1241,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MAGNET_STONE.get()).copy();
@@ -1264,7 +1252,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MAGNET_STONE.get()).copy();
@@ -1275,7 +1263,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MAGNET_STONE.get()).copy();
@@ -1287,7 +1275,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MUSHROOMS_STONE.get()).copy();
@@ -1298,7 +1286,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MUSHROOMS_STONE.get()).copy();
@@ -1309,7 +1297,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MUSHROOMS_STONE.get()).copy();
@@ -1321,7 +1309,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MERCURY_STONE.get()).copy();
@@ -1332,7 +1320,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MERCURY_STONE.get()).copy();
@@ -1343,7 +1331,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MERCURY_STONE.get()).copy();
@@ -1355,7 +1343,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MUSIC_STONE.get()).copy();
@@ -1366,7 +1354,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MUSIC_STONE.get()).copy();
@@ -1377,7 +1365,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MUSIC_STONE.get()).copy();
@@ -1389,7 +1377,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.PLAGUE_STONE.get()).copy();
@@ -1400,7 +1388,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.PLAGUE_STONE.get()).copy();
@@ -1411,7 +1399,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.PLAGUE_STONE.get()).copy();
@@ -1423,7 +1411,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.BLUE_FLAME_STONE.get()).copy();
@@ -1434,7 +1422,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.BLUE_FLAME_STONE.get()).copy();
@@ -1445,7 +1433,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.BLUE_FLAME_STONE.get()).copy();
@@ -1457,7 +1445,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GRAVITY_STONE.get()).copy();
@@ -1468,7 +1456,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GRAVITY_STONE.get()).copy();
@@ -1479,7 +1467,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GRAVITY_STONE.get()).copy();
@@ -1491,7 +1479,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SMOKE_STONE.get()).copy();
@@ -1502,7 +1490,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SMOKE_STONE.get()).copy();
@@ -1513,7 +1501,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SMOKE_STONE.get()).copy();
@@ -1525,7 +1513,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SPIRIT_STONE.get()).copy();
@@ -1536,7 +1524,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SPIRIT_STONE.get()).copy();
@@ -1547,7 +1535,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SPIRIT_STONE.get()).copy();
@@ -1559,7 +1547,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.FORM_STONE.get()).copy();
@@ -1570,7 +1558,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.FORM_STONE.get()).copy();
@@ -1581,7 +1569,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.FORM_STONE.get()).copy();
@@ -1593,7 +1581,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MIND_STONE.get()).copy();
@@ -1604,7 +1592,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MIND_STONE.get()).copy();
@@ -1615,7 +1603,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MIND_STONE.get()).copy();
@@ -1627,7 +1615,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get()).copy();
@@ -1638,7 +1626,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get()).copy();
@@ -1649,7 +1637,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get()).copy();
@@ -1661,7 +1649,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.DARKNESS_STONE.get()).copy();
@@ -1672,7 +1660,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.DARKNESS_STONE.get()).copy();
@@ -1683,7 +1671,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.DARKNESS_STONE.get()).copy();
@@ -1695,7 +1683,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.HEAT_STONE.get()).copy();
@@ -1706,7 +1694,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.HEAT_STONE.get()).copy();
@@ -1717,7 +1705,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.HEAT_STONE.get()).copy();
@@ -1729,7 +1717,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SHOCKWAVE_STONE.get()).copy();
@@ -1740,7 +1728,7 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SHOCKWAVE_STONE.get()).copy();
@@ -1751,10 +1739,44 @@ public class ReturnStoneAfterDeadProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.SHOCKWAVE_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("colors")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.markSyncDirty();
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.COLORS_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("colors")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.markSyncDirty();
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.COLORS_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("colors")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.markSyncDirty();
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.COLORS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -1763,7 +1785,7 @@ public class ReturnStoneAfterDeadProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.active_battery = false;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

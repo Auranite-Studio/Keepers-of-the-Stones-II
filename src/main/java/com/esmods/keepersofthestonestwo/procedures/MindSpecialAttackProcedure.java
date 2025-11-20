@@ -90,7 +90,7 @@ public class MindSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("mind_ability_2")) {
@@ -103,7 +103,7 @@ public class MindSpecialAttackProcedure {
 								{
 									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.mind_player_owner = entity.getStringUUID();
-									_vars.syncPlayerVariables(entityiterator);
+									_vars.markSyncDirty();
 								}
 							}
 						}
@@ -118,12 +118,8 @@ public class MindSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.mind_used = true;
-						_vars.syncPlayerVariables(entity);
-					}
-					{
-						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 				}
 			}
@@ -132,14 +128,13 @@ public class MindSpecialAttackProcedure {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
 					if (!(entity == entityiterator) && new Object() {
 						Entity entityFromStringUUID(String uuid, Level world) {
-							Entity _uuidentity = null;
-							if (world instanceof ServerLevel _server) {
+							if (world instanceof ServerLevel _serverEntityStringUUID) {
 								try {
-									_uuidentity = _server.getEntity(UUID.fromString(uuid));
+									return _serverEntityStringUUID.getEntity(UUID.fromString(uuid));
 								} catch (Exception e) {
 								}
 							}
-							return _uuidentity;
+							return null;
 						}
 					}.entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
@@ -156,7 +151,7 @@ public class MindSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 25;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("remote_control_2")) {
@@ -164,14 +159,13 @@ public class MindSpecialAttackProcedure {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
 					if (!(entity == entityiterator) && new Object() {
 						Entity entityFromStringUUID(String uuid, Level world) {
-							Entity _uuidentity = null;
-							if (world instanceof ServerLevel _server) {
+							if (world instanceof ServerLevel _serverEntityStringUUID) {
 								try {
-									_uuidentity = _server.getEntity(UUID.fromString(uuid));
+									return _serverEntityStringUUID.getEntity(UUID.fromString(uuid));
 								} catch (Exception e) {
 								}
 							}
-							return _uuidentity;
+							return null;
 						}
 					}.entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 500);
@@ -187,7 +181,7 @@ public class MindSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 25;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("remote_control_3")) {
@@ -195,25 +189,24 @@ public class MindSpecialAttackProcedure {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
 					if (!(entity == entityiterator) && new Object() {
 						Entity entityFromStringUUID(String uuid, Level world) {
-							Entity _uuidentity = null;
-							if (world instanceof ServerLevel _server) {
+							if (world instanceof ServerLevel _serverEntityStringUUID) {
 								try {
-									_uuidentity = _server.getEntity(UUID.fromString(uuid));
+									return _serverEntityStringUUID.getEntity(UUID.fromString(uuid));
 								} catch (Exception e) {
 								}
 							}
-							return _uuidentity;
+							return null;
 						}
 					}.entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						{
 							PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.mind_player_owner = "";
-							_vars.syncPlayerVariables(entityiterator);
+							_vars.markSyncDirty();
 						}
 						{
 							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 							_vars.mind_used = false;
-							_vars.syncPlayerVariables(entity);
+							_vars.markSyncDirty();
 						}
 					}
 				}
@@ -227,7 +220,7 @@ public class MindSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 25;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

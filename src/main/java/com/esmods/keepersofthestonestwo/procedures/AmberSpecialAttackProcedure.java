@@ -83,7 +83,7 @@ public class AmberSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("amber_ability_2")) {
@@ -97,14 +97,14 @@ public class AmberSpecialAttackProcedure {
 									{
 										PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.fake_element_name_first = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first;
-										_vars.syncPlayerVariables(entity);
+										_vars.markSyncDirty();
 									}
 								} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0") && (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("0")) {
 									if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first)) {
 										{
 											PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 											_vars.fake_element_name_second = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first;
-											_vars.syncPlayerVariables(entity);
+											_vars.markSyncDirty();
 										}
 									}
 								} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0") && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("0")
@@ -114,7 +114,7 @@ public class AmberSpecialAttackProcedure {
 										{
 											PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 											_vars.fake_element_name_third = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first;
-											_vars.syncPlayerVariables(entity);
+											_vars.markSyncDirty();
 										}
 									}
 								}
@@ -124,14 +124,14 @@ public class AmberSpecialAttackProcedure {
 									{
 										PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.fake_element_name_first = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second;
-										_vars.syncPlayerVariables(entity);
+										_vars.markSyncDirty();
 									}
 								} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0") && (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("0")) {
 									if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second)) {
 										{
 											PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 											_vars.fake_element_name_second = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second;
-											_vars.syncPlayerVariables(entity);
+											_vars.markSyncDirty();
 										}
 									}
 								} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0") && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("0")
@@ -141,7 +141,7 @@ public class AmberSpecialAttackProcedure {
 										{
 											PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 											_vars.fake_element_name_third = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second;
-											_vars.syncPlayerVariables(entity);
+											_vars.markSyncDirty();
 										}
 									}
 								}
@@ -151,14 +151,14 @@ public class AmberSpecialAttackProcedure {
 									{
 										PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 										_vars.fake_element_name_first = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third;
-										_vars.syncPlayerVariables(entity);
+										_vars.markSyncDirty();
 									}
 								} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0") && (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("0")) {
 									if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third)) {
 										{
 											PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 											_vars.fake_element_name_second = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third;
-											_vars.syncPlayerVariables(entity);
+											_vars.markSyncDirty();
 										}
 									}
 								} else if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0") && !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("0")
@@ -168,7 +168,7 @@ public class AmberSpecialAttackProcedure {
 										{
 											PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 											_vars.fake_element_name_third = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third;
-											_vars.syncPlayerVariables(entity);
+											_vars.markSyncDirty();
 										}
 									}
 								}
@@ -196,7 +196,7 @@ public class AmberSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("amber_ability_3")) {
@@ -219,7 +219,7 @@ public class AmberSpecialAttackProcedure {
 							{
 								PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
 								_vars.ability_block = true;
-								_vars.syncPlayerVariables(entityiterator);
+								_vars.markSyncDirty();
 							}
 							entityiterator.getPersistentData().putBoolean("amberLayer", true);
 							if (world instanceof Level _level) {
@@ -237,7 +237,7 @@ public class AmberSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

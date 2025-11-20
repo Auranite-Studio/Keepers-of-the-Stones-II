@@ -29,8 +29,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putString("powerRecorded", entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first);
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -65,8 +66,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putString("powerRecorded", "0");
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -95,7 +97,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.fake_element_name_first = getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded");
-									_vars.syncPlayerVariables(entity);
+									_vars.markSyncDirty();
 								}
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
@@ -107,17 +109,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.fake_element_name_first_timer = (entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration / 4) * 20;
-									_vars.syncPlayerVariables(entity);
-								}
-								{
-									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.power_recorded = true;
-									_vars.syncPlayerVariables(entity);
-								}
-								{
-									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.power = 100;
-									_vars.syncPlayerVariables(entity);
+									_vars.markSyncDirty();
 								}
 							}
 						}
@@ -128,7 +122,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.fake_element_name_second = getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded");
-									_vars.syncPlayerVariables(entity);
+									_vars.markSyncDirty();
 								}
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
@@ -140,17 +134,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.fake_element_name_second_timer = (entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration / 4) * 20;
-									_vars.syncPlayerVariables(entity);
-								}
-								{
-									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.power_recorded = true;
-									_vars.syncPlayerVariables(entity);
-								}
-								{
-									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.power = 100;
-									_vars.syncPlayerVariables(entity);
+									_vars.markSyncDirty();
 								}
 							}
 						}
@@ -162,7 +148,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.fake_element_name_third = getBlockNBTString(world, BlockPos.containing(x, y, z), "powerRecorded");
-									_vars.syncPlayerVariables(entity);
+									_vars.markSyncDirty();
 								}
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
@@ -174,17 +160,9 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.fake_element_name_third_timer = (entity.getData(PowerModVariables.PLAYER_VARIABLES).master_effect_duration / 4) * 20;
-									_vars.syncPlayerVariables(entity);
-								}
-								{
-									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.power_recorded = true;
-									_vars.syncPlayerVariables(entity);
-								}
-								{
-									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.power = 100;
-									_vars.syncPlayerVariables(entity);
+									_vars.markSyncDirty();
 								}
 							}
 						}

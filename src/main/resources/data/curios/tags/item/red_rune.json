@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "power:reduced_stone_recharge_time_rune_1",
+    "power:reduced_stone_recharge_time_rune_2",
+    "power:reduced_stone_recharge_time_rune_3",
+    "power:addition_time_master_effect_rune_1",
+    "power:addition_time_master_effect_rune_2",
+    "power:addition_time_master_effect_rune_3"
+  ]
+}

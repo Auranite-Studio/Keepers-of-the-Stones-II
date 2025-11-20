@@ -5,7 +5,11 @@
     "recipeType": "Blasting",
     "recipeRetstackSize": 1,
     "group": "",
-    "unlockingItems": [],
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:RawCopyrium"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.575,
     "cookingTime": 100,

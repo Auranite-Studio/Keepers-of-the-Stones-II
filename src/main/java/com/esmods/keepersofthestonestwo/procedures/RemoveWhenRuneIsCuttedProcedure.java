@@ -9,6 +9,9 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 public class RemoveWhenRuneIsCuttedProcedure {
@@ -25,12 +28,20 @@ public class RemoveWhenRuneIsCuttedProcedure {
 			_stk.shrink(1);
 			_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 		}
+		if (world instanceof Level _level) {
+			if (!_level.isClientSide()) {
+				_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("ui.stonecutter.take_result")), SoundSource.NEUTRAL, 1, 1);
+			} else {
+				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("ui.stonecutter.take_result")), SoundSource.NEUTRAL, 1, 1, false);
+			}
+		}
 		if (!world.isClientSide()) {
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
+			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putBoolean("validRecipe", false);
+			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}

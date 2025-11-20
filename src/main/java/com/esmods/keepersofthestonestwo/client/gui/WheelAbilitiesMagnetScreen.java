@@ -18,14 +18,7 @@ import java.util.Arrays;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMagnetMenu;
-import com.esmods.keepersofthestonestwo.procedures.RuneTooltipRenderProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesMagnetButtonMessage;
 import com.esmods.keepersofthestonestwo.init.PowerModScreens;
 
@@ -34,16 +27,16 @@ public class WheelAbilitiesMagnetScreen extends AbstractContainerScreen<WheelAbi
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_wheel_button_1;
-	ImageButton imagebutton_wheel_button_2;
-	ImageButton imagebutton_wheel_button_3;
-	ImageButton imagebutton_fake_wheel_button_1;
-	ImageButton imagebutton_fake_wheel_button_2;
-	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_power_rune_ability;
-	ImageButton imagebutton_magnetic_field_wave;
-	ImageButton imagebutton_negative_charge;
-	ImageButton imagebutton_positive_charge;
+	private ImageButton imagebutton_wheel_button_1;
+	private ImageButton imagebutton_wheel_button_2;
+	private ImageButton imagebutton_wheel_button_3;
+	private ImageButton imagebutton_fake_wheel_button_1;
+	private ImageButton imagebutton_fake_wheel_button_2;
+	private ImageButton imagebutton_fake_wheel_button_3;
+	private ImageButton imagebutton_power_rune_ability;
+	private ImageButton imagebutton_magnetic_field_wave;
+	private ImageButton imagebutton_negative_charge;
+	private ImageButton imagebutton_positive_charge;
 
 	public WheelAbilitiesMagnetScreen(WheelAbilitiesMagnetMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

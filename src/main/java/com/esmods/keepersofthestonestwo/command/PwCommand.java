@@ -18,17 +18,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 
-import com.esmods.keepersofthestonestwo.procedures.UnlockKeepersBoxProcedure;
-import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTimeSetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.QuakePowerProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PwResetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PowerScaleSetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.PowerRecoveryMultiplierSetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MaxPowerScaleSetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MasterEffectDurationSetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LevelUpSetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.FakeElementSetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.DebugControlProcedure;
+import com.esmods.keepersofthestonestwo.procedures.*;
 
 @EventBusSubscriber
 public class PwCommand {

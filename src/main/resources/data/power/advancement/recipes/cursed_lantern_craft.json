@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "power:cursed_lantern_craft"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_ingredient_0": {
+      "conditions": {
+        "items": [
+          {
+            "items": "power:cursed_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ingredient_1": {
+      "conditions": {
+        "items": [
+          {
+            "items": "power:amplifier_drop"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ingredient_2": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:white_stained_glass_pane"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ingredient_0",
+      "has_ingredient_1",
+      "has_ingredient_2"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "power:cursed_lantern_craft"
+    ]
+  }
+}

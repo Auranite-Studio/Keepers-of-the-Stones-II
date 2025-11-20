@@ -1,0 +1,31 @@
+{
+  "_fv": 79,
+  "_type": "curiosbauble",
+  "definition": {
+    "item": "SpinRune",
+    "slotType": "GreenRune",
+    "slotAmount": 1,
+    "addSlot": false,
+    "enderMask": false,
+    "friendlyPigs": false,
+    "snowWalk": false,
+    "equipSound": {
+      "value": ""
+    },
+    "hasModel": false,
+    "baubleModel": "Default",
+    "baubleModelTexture": "",
+    "onEquip": {
+      "name": "GreenRune2BaubleIsEquipped"
+    },
+    "onUnequip": {
+      "name": "GreenRune2BaubleIsUnequipped"
+    },
+    "helmetModelPart": "Empty",
+    "bodyModelPart": "Empty",
+    "armsModelPartL": "Empty",
+    "armsModelPartR": "Empty",
+    "leggingsModelPartL": "Empty",
+    "leggingsModelPartR": "Empty"
+  }
+}

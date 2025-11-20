@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of the Earth",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:earth_hammer\",count:1}],ArmorItems:[{id:\"power:earth_armor_boots\",count:1},{id:\"power:earth_armor_leggings\",count:1},{id:\"power:earth_armor_chestplate\",count:1},{id:\"power:earth_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:earth_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() At height ≤64 blocks.",
+                "$(li)",
+                "Blessing of the Heavens: Damage from mobs reduced by 20%.",
+                "$(li)",
+                "Wind Gust: 12.5% chance to deal critical damage (200% of base)."
+            ]
         }
     ]
 }

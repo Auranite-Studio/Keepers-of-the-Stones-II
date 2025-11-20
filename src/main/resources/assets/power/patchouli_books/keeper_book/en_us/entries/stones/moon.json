@@ -17,11 +17,17 @@
             ]
         },
         {
-            "type": "patchouli:entity",
-            "name": "Master of the Moon",
-            "border": true,
-            "scale": 0.75,
-            "entity": "power:example_master{HandItems:[{id:\"power:moon_double_sided_spear\",count:1}],ArmorItems:[{id:\"power:moon_armor_boots\",count:1},{id:\"power:moon_armor_leggings\",count:1},{id:\"power:moon_armor_chestplate\",count:1},{id:\"power:moon_armor_helmet\",count:1}],HandDropChances:[0f],ArmorDropChances:[0f,0f,0f,0f]}"
+            "type": "patchouli:spotlight",
+            "item": "power:moon_stone",
+            "text": [
+                "$(l)Passive Skills$()",
+                "$(li)",
+                "$(o)Condition:$() Nighttime, under open sky.",
+                "$(li)",
+                "Full Moon: During full moon — +50% damage; 10% chance to apply \"Slowness III\" for 6 sec.",
+                "$(li)",
+                "New Moon: During non-full phases — +10% damage; 10% reflected damage when hit."
+            ]
         }
     ]
 }

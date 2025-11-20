@@ -62,9 +62,6 @@ public class MoonSpecialAttackProcedure {
 										(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 3));
-								if (!(world instanceof Level _lvl11 && _lvl11.isDay())) {
-									entityiterator.setTicksFrozen(100);
-								}
 								{
 									Entity _ent = entityiterator;
 									if (!_ent.level().isClientSide() && _ent.getServer() != null) {
@@ -82,7 +79,7 @@ public class MoonSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					success = false;
 					if (world instanceof Level _level) {
@@ -136,7 +133,7 @@ public class MoonSpecialAttackProcedure {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
-						_vars.syncPlayerVariables(entity);
+						_vars.markSyncDirty();
 					}
 					success = false;
 				}
@@ -170,7 +167,7 @@ public class MoonSpecialAttackProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			}
 		}

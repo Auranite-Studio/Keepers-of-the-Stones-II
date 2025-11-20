@@ -10,8 +10,8 @@ on:
 env:                                              
   MINECRAFT_VERSION: 1.21.1                      
   JAVA_VERSION: 21      
-  VERSION: 1.2.5
-  RELEASE_NAME: Keepers of the Stones II 1.2.5
+  VERSION: 1.3.0
+  RELEASE_NAME: Keepers of the Stones II 1.3.0
 
 jobs:
   build:
@@ -63,7 +63,7 @@ jobs:
             embedded-dependency@0.3.0(embedded)
             conflicting-dependency(conflicting)
             incompatible-dependency(incompatible)
-            playeranimator(required){modrinth:gedNE4y2}{curseforge:658587}#(ignore:github)
+            curios-api(required){modrinth:vvuO3ImH}{curseforge:309927}#(ignore:github)
             patchouli(recommended){modrinth:nU0bVIaL}{curseforge:306770}#(ignore:github)
             better-combat(recommended){modrinth:5sy6g3kz}{curseforge:639842}#(ignore:github)
           modrinth-featured: true

@@ -1,0 +1,9 @@
+{
+  "_fv": 79,
+  "_type": "curiosslot",
+  "definition": {
+    "texture": "red_slot.png",
+    "name": "Red Rune",
+    "amount": 1
+  }
+}

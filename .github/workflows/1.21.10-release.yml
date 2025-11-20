@@ -1,0 +1,69 @@
+# Automatically builds and publishes the mod when a new release is created on GitHub.
+# It uploads the mod to GitHub, CurseForge and Modrinth.
+
+name: RELEASE
+
+on:
+  push:
+    branches:
+      - "1.21.8-release"
+env:                                              
+  MINECRAFT_VERSION: 1.21.10                     
+  JAVA_VERSION: 21      
+  VERSION: 1.3.0
+  RELEASE_NAME: Keepers of the Stones II 1.3.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest                        
+    steps:                                        
+      - name: Check Environment Variables
+        run: env
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: "temurin"
+          java-version: 21
+
+      - name: Make Gradle Wrapper Executable
+        if: ${{ runner.os != 'Windows' }}
+        run: chmod +x ./gradlew
+
+      - name: Build
+        run: ./gradlew build
+
+      - name: Publish mod to CurseForge and Modrinth
+        id: publish
+        uses: Kir-Antipov/mc-publish@v3.3.0
+        with:
+          curseforge-id: 906406
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          modrinth-id: hKbKT6ME
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          
+          name: "${{env.RELEASE_NAME}}"                             
+          version: "${{env.VERSION}}"
+          version-type: release
+          changelog-file: CHANGELOG.md                                      
+
+          loaders: |
+            neoforge
+          game-versions: "${{env.MINECRAFT_VERSION}}"
+          java: "${{env.JAVA_VERSION}}"
+          dependencies: |
+            required-dependency
+            optional-dependency@0.1.0(optional)
+            recommended-dependency@0.2.0(recommended)
+            embedded-dependency@0.3.0(embedded)
+            conflicting-dependency(conflicting)
+            incompatible-dependency(incompatible)
+            patchouli(recommended){modrinth:nU0bVIaL}{curseforge:306770}#(ignore:github)
+            better-combat(recommended){modrinth:5sy6g3kz}{curseforge:639842}#(ignore:github)
+          modrinth-featured: true
+          fail-mode: warn

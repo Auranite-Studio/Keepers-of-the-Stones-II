@@ -1,0 +1,47 @@
+{
+  "_fv": 79,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "ethernal_curse_progress_line.png",
+          "use1Xscale": false,
+          "anchorPoint": "BOTTOM_CENTER",
+          "x": 158,
+          "y": 168,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "ethernal_curse_progress_bar.png",
+          "spritesCount": 96,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "EthernalProgressBarInt"
+          },
+          "anchorPoint": "BOTTOM_CENTER",
+          "x": 159,
+          "y": 169,
+          "locked": true
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "EthernalCurseProgressGUCheckEffect"
+    },
+    "gridSettings": {
+      "sx": 16,
+      "sy": 16,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
