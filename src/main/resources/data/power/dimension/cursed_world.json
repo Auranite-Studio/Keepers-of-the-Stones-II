@@ -69,7 +69,7 @@
       "aquifers_enabled": true,
       "ore_veins_enabled": true,
       "default_block": {
-        "Name": "power:cursed_stone"
+        "Name": "minecraft:stone"
       },
       "default_fluid": {
         "Name": "minecraft:water",
@@ -459,7 +459,10 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "power:cursed_grass_block"
+                              "Name": "minecraft:grass_block",
+                              "Properties": {
+                                "snowy": "false"
+                              }
                             }
                           }
                         },
@@ -484,7 +487,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "power:cursed_dirt"
+                        "Name": "minecraft:dirt"
                       }
                     }
                   }
@@ -531,7 +534,10 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "power:cursed_grass_block"
+                              "Name": "minecraft:grass_block",
+                              "Properties": {
+                                "snowy": "false"
+                              }
                             }
                           }
                         },
@@ -556,7 +562,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "power:cursed_dirt"
+                        "Name": "minecraft:dirt"
                       }
                     }
                   }

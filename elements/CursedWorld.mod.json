@@ -13,7 +13,7 @@
     "biomesInDimensionCaves": [],
     "worldGenType": "Normal world gen",
     "mainFillerBlock": {
-      "value": "CUSTOM:CursedStone"
+      "value": "Blocks.STONE#0"
     },
     "fluidBlock": {
       "value": "Blocks.WATER"

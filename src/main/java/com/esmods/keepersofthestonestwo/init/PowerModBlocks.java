@@ -64,8 +64,6 @@ public class PowerModBlocks {
 	public static final DeferredBlock<Block> FREAKING_PARSNIP_BLOCK;
 	public static final DeferredBlock<Block> RUNE_CUTTER;
 	public static final DeferredBlock<Block> CURSED_WORLD_PORTAL;
-	public static final DeferredBlock<Block> CURSED_GRASS_BLOCK;
-	public static final DeferredBlock<Block> CURSED_DIRT;
 	public static final DeferredBlock<Block> TEARS_FLOWER;
 	static {
 		DEPLETED_ENERGIUM_ORE = REGISTRY.register("depleted_energium_ore", DepletedEnergiumOreBlock::new);
@@ -119,8 +117,6 @@ public class PowerModBlocks {
 		FREAKING_PARSNIP_BLOCK = REGISTRY.register("freaking_parsnip_block", FreakingParsnipBlockBlock::new);
 		RUNE_CUTTER = REGISTRY.register("rune_cutter", RuneCutterBlock::new);
 		CURSED_WORLD_PORTAL = REGISTRY.register("cursed_world_portal", CursedWorldPortalBlock::new);
-		CURSED_GRASS_BLOCK = REGISTRY.register("cursed_grass_block", CursedGrassBlockBlock::new);
-		CURSED_DIRT = REGISTRY.register("cursed_dirt", CursedDirtBlock::new);
 		TEARS_FLOWER = REGISTRY.register("tears_flower", TearsFlowerBlock::new);
 	}
 	// Start of user code block custom blocks

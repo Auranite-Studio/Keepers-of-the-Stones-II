@@ -1,8 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": {
-    "type": "neoforge:any"
-  },
-  "features": "power:cursed_stone_to_stone",
-  "step": "raw_generation"
-}

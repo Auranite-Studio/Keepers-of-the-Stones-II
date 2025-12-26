@@ -55,7 +55,6 @@ public class PowerMod {
 		PowerModEntities.REGISTRY.register(modEventBus);
 		PowerModTabs.REGISTRY.register(modEventBus);
 		PowerModVariables.ATTACHMENT_TYPES.register(modEventBus);
-		PowerModFeatures.REGISTRY.register(modEventBus);
 
 		PowerModPotions.REGISTRY.register(modEventBus);
 		PowerModMobEffects.REGISTRY.register(modEventBus);

@@ -513,8 +513,6 @@ public class PowerModItems {
 	public static final DeferredItem<Item> COLORS_ARMOR_BOOTS;
 	public static final DeferredItem<Item> COLORS_BATTERY;
 	public static final DeferredItem<Item> SPEAR_BRUSH;
-	public static final DeferredItem<Item> CURSED_GRASS_BLOCK;
-	public static final DeferredItem<Item> CURSED_DIRT;
 	public static final DeferredItem<Item> TEARS_FLOWER;
 	static {
 		FIRE_STONE = REGISTRY.register("fire_stone", FireStoneItem::new);
@@ -1003,8 +1001,6 @@ public class PowerModItems {
 		COLORS_ARMOR_BOOTS = REGISTRY.register("colors_armor_boots", ColorsArmorItem.Boots::new);
 		COLORS_BATTERY = REGISTRY.register("colors_battery", ColorsBatteryItem::new);
 		SPEAR_BRUSH = REGISTRY.register("spear_brush", SpearBrushItem::new);
-		CURSED_GRASS_BLOCK = block(PowerModBlocks.CURSED_GRASS_BLOCK);
-		CURSED_DIRT = block(PowerModBlocks.CURSED_DIRT);
 		TEARS_FLOWER = block(PowerModBlocks.TEARS_FLOWER);
 	}
 
