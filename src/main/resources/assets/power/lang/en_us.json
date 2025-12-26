@@ -1106,5 +1106,6 @@
   "item.power.energium_upgrade_smithing_template.description_1": "",
   "curios.identifier.blue_rune": "Blue Rune",
   "curios.identifier.red_rune": "Red Rune",
-  "curios.identifier.green_rune": "Green Rune"
+  "curios.identifier.green_rune": "Green Rune",
+  "block.power.tears_flower": "Flower of Tears"
 }
