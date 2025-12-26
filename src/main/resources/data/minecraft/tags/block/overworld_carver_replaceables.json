@@ -3,6 +3,7 @@
   "values": [
     "minecraft:grass_block",
     "minecraft:dirt",
-    "minecraft:stone"
+    "minecraft:stone",
+    "power:cursed_stone"
   ]
 }
