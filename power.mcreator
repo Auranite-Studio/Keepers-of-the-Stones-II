@@ -32580,162 +32580,6 @@
       "path": "~/Mobs/EnergiumGolem"
     },
     {
-      "name": "FirePassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "fire_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/FirePassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "AirPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "air_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/AirPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "EarthPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "earth_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/EarthPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "WaterPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "water_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/WaterPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "EtherPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "ether_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/EtherPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "IcePassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "ice_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/IcePassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "LightningPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "lightning_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/LightningPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "SoundPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "sound_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/SoundPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "CrystalPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "crystal_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/CrystalPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "LavaPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "lava_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/LavaPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "RainPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "rain_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/RainPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "TornadoPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "tornado_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/TornadoPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
       "name": "Dash",
       "type": "potioneffect",
       "compiles": true,
@@ -32749,149 +32593,6 @@
       "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
     },
     {
-      "name": "OceanPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "ocean_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/OceanPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "PlantsPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "plants_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/PlantsPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "AnimalsPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "animals_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/AnimalsPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "MetalPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "metal_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/MetalPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "LightPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "light_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/LightPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "ShadowPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "shadow_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/ShadowPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "VacuumPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "vacuum_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/VacuumPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "EnergyPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "energy_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/EnergyPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "SunPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "sun_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/SunPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "MoonPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "moon_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/MoonPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "SpacePassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "space_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/SpacePassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
       "name": "Countdown",
       "type": "potioneffect",
       "compiles": true,
@@ -32903,357 +32604,6 @@
         ]
       },
       "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
-    },
-    {
-      "name": "TimePassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "time_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/TimePassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "CreationPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "creation_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/CreationPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "DestructionPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "destruction_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/DestructionPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "BloodPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "blood_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/BloodPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "TechnologyPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "technology_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/TechnologyPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "TeleportationPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "teleportation_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/TeleportationPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "ExplosionPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "explosion_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/ExplosionPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "AmberPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "amber_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/AmberPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "MistPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "mist_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/MistPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "SandPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "sand_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/SandPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "SpeedPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "speed_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/SpeedPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "PoisonPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "poison_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/PoisonPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "MagnetPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "magnet_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/MagnetPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "MushroomsPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "mushrooms_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/MushroomsPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "MercuryPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "mercury_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/MercuryPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "MusicPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "music_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/MusicPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "PlaguePassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "plague_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/PlaguePassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "BlueFlamePassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "blue_flame_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/BlueFlamePassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "GravityPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "gravity_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/GravityPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "SmokePassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "smoke_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/SmokePassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "SpiritPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "spirit_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/SpiritPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "FormPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "form_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/FormPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "MindPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "mind_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/MindPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "GoldenDustPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "golden_dust_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/GoldenDustPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "DarknessPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "darkness_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/DarknessPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "HeatPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "heat_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/HeatPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
-    },
-    {
-      "name": "ShockwavePassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "shockwave_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/ShockwavePassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "Purification",
@@ -33683,19 +33033,6 @@
         ]
       },
       "path": "~/Elements/Colors"
-    },
-    {
-      "name": "ColorsPassiveSkills",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "colors_passive_skills",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/ColorsPassiveSkills.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills"
     },
     {
       "name": "BlueRune1",
@@ -34628,6 +33965,19 @@
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "PassiveSkills",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "passive_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/PassiveSkills.java"
+        ]
+      },
+      "path": "~/Modules/ElementalPassiveSkills"
     }
   ],
   "variable_elements": [
@@ -40058,9 +39408,9 @@
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModCuriosCompat.java",
       "src/main/resources/data/power/curios/entities/slots.json",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModPotions.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModMenus.java",
       "src/main/java/com/esmods/keepersofthestonestwo/network/MenuStateUpdateMessage.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModScreens.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModMenus.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModKeyMappings.java",
       "src/main/resources/data/minecraft/tags/point_of_interest_type/acquirable_job_site.json",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModVillagerProfessions.java",
@@ -40071,27 +39421,27 @@
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBlocks.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModBlockEntities.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModItems.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntityRenderers.java",
       "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntities.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
-      "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/java/com/esmods/keepersofthestonestwo/network/LoadPlayerAnimationMessage.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationMixin.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/PowerMod.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModEntityRenderers.java",
       "src/main/java/com/esmods/keepersofthestonestwo/mixin/ItemInHandRendererMixin.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/network/PowerModVariables.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/network/PlayPlayerAnimationMessage.java",
       "src/main/resources/power.mixins.json",
-      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/PowerModPlayerAnimationAPI.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/com/esmods/keepersofthestonestwo/mixin/CameraAccessor.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/mixin/LevelRendererMixin.java",
       "src/main/resources/assets/power/sounds.json",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java",
-      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java"
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/PlayPlayerAnimationMessage.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/com/esmods/keepersofthestonestwo/PowerModPlayerAnimationAPI.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/LevelRendererMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModSounds.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/PowerModVariables.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/PowerMod.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModModels.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/network/LoadPlayerAnimationMessage.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/mixin/CameraAccessor.java",
+      "src/main/java/com/esmods/keepersofthestonestwo/init/PowerModTabs.java"
     ]
   },
   "foldersRoot": {
@@ -41003,7 +40353,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.3.1",
+    "version": "1.3.2",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds more new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Sleep, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
