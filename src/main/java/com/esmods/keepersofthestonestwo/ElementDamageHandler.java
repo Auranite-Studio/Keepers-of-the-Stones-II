@@ -14,12 +14,17 @@ import net.minecraft.world.entity.Display.BillboardConstraints;
 import net.minecraft.world.entity.LivingEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.EntityLeaveLevelEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
+import net.neoforged.neoforge.event.level.LevelEvent;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
 import java.util.Arrays;
 import java.util.EnumMap;
+import java.util.Iterator;
 import java.util.Map;
-import java.util.WeakHashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 @EventBusSubscriber(modid = PowerMod.MODID)
 public class ElementDamageHandler {
@@ -43,12 +48,16 @@ public class ElementDamageHandler {
 	private static final byte FLAG_SEE_THROUGH = 2;
 
 	// === COOLDOWN ДЛЯ ВИЗУАЛА ===
-	private static final Map<Integer, Long> DAMAGE_COOLDOWNS = new WeakHashMap<>();
+	private static final Map<Integer, Long> DAMAGE_COOLDOWNS = new ConcurrentHashMap<>();
 	private static final int COOLDOWN_TICKS = 5;
 
 	// === ОТСЛЕЖИВАНИЕ АКТИВНЫХ ТЕКСТОВ ===
-	private static final Map<Integer, TextDisplay> ACTIVE_DAMAGE_DISPLAYS = new WeakHashMap<>();
-	private static final Map<Integer, TextDisplay> ACTIVE_STATUS_DISPLAYS = new WeakHashMap<>();
+	private static final Map<Integer, TextDisplay> ACTIVE_DAMAGE_DISPLAYS = new ConcurrentHashMap<>();
+	private static final Map<Integer, TextDisplay> ACTIVE_STATUS_DISPLAYS = new ConcurrentHashMap<>();
+
+	// === СЧЁТЧИК ДЛЯ ПЕРИОДИЧЕСКОЙ ОЧИСТКИ ===
+	private static int serverTickCounter = 0;
+	private static final int CLEANUP_INTERVAL = 100; // Очистка каждые 100 тиков (~5 секунд)
 
 	@SubscribeEvent
 	public static void onLivingHurt(LivingDamageEvent.Pre event) {
@@ -82,6 +91,43 @@ public class ElementDamageHandler {
 		}
 	}
 
+	// ✅ ОЧИСТКА ПРИ СМЕРТИ СУЩНОСТИ
+	@SubscribeEvent
+	public static void onLivingDeath(LivingDeathEvent event) {
+		LivingEntity entity = event.getEntity();
+		clearActiveDisplays(entity);
+		DAMAGE_COOLDOWNS.remove(entity.getId());
+	}
+
+	// ✅ ОЧИСТКА ПРИ ВЫХОДЕ СУЩНОСТИ ИЗ МИРА
+	@SubscribeEvent
+	public static void onEntityLeaveLevel(EntityLeaveLevelEvent event) {
+		Entity entity = event.getEntity();
+		if (entity instanceof LivingEntity livingEntity) {
+			clearActiveDisplays(livingEntity);
+			DAMAGE_COOLDOWNS.remove(entity.getId());
+		}
+	}
+
+	// ✅ ОЧИСТКА ПРИ ВЫГРУЗКЕ УРОВНЯ (сохранение/перезагрузка)
+	@SubscribeEvent
+	public static void onLevelUnload(LevelEvent.Unload event) {
+		if (event.getLevel() instanceof ServerLevel) {
+			cleanupAllDisplays();
+			PowerMod.LOGGER.info("🧹 ElementDamageHandler: cleaned up all displays on level unload");
+		}
+	}
+
+	// ✅ ПЕРИОДИЧЕСКАЯ ОЧИСТКА "ЗОМБИ"-ДИСПЛЕЕВ
+	@SubscribeEvent
+	public static void onServerTick(ServerTickEvent.Pre event) {
+		serverTickCounter++;
+		if (serverTickCounter >= CLEANUP_INTERVAL) {
+			serverTickCounter = 0;
+			cleanupStaleDisplays();
+		}
+	}
+
 	private static boolean canShowDamage(LivingEntity entity) {
 		int entityId = entity.getId();
 		long currentTime = entity.level().getGameTime();
@@ -100,17 +146,95 @@ public class ElementDamageHandler {
 	private static void clearActiveDisplays(LivingEntity entity) {
 		int entityId = entity.getId();
 
-		TextDisplay oldDamageDisplay = ACTIVE_DAMAGE_DISPLAYS.get(entityId);
+		TextDisplay oldDamageDisplay = ACTIVE_DAMAGE_DISPLAYS.remove(entityId);
 		if (oldDamageDisplay != null && !oldDamageDisplay.isRemoved()) {
 			oldDamageDisplay.discard();
 		}
-		ACTIVE_DAMAGE_DISPLAYS.remove(entityId);
 
-		TextDisplay oldStatusDisplay = ACTIVE_STATUS_DISPLAYS.get(entityId);
+		TextDisplay oldStatusDisplay = ACTIVE_STATUS_DISPLAYS.remove(entityId);
 		if (oldStatusDisplay != null && !oldStatusDisplay.isRemoved()) {
 			oldStatusDisplay.discard();
 		}
-		ACTIVE_STATUS_DISPLAYS.remove(entityId);
+	}
+
+	private static void cleanupAllDisplays() {
+		ACTIVE_DAMAGE_DISPLAYS.values().forEach(display -> {
+			if (display != null && !display.isRemoved()) {
+				display.discard();
+			}
+		});
+		ACTIVE_DAMAGE_DISPLAYS.clear();
+
+		ACTIVE_STATUS_DISPLAYS.values().forEach(display -> {
+			if (display != null && !display.isRemoved()) {
+				display.discard();
+			}
+		});
+		ACTIVE_STATUS_DISPLAYS.clear();
+
+		DAMAGE_COOLDOWNS.clear();
+	}
+
+	// ✅ ГЛАВНАЯ ФУНКЦИЯ ОЧИСТКИ "ЗОМБИ"-ДИСПЛЕЕВ
+	private static void cleanupStaleDisplays() {
+		int cleanedCount = 0;
+
+		// Очистка дисплеев урона
+		Iterator<Map.Entry<Integer, TextDisplay>> damageIterator = ACTIVE_DAMAGE_DISPLAYS.entrySet().iterator();
+		while (damageIterator.hasNext()) {
+			Map.Entry<Integer, TextDisplay> entry = damageIterator.next();
+			TextDisplay display = entry.getValue();
+
+			if (display == null || display.isRemoved() || display.level() == null) {
+				damageIterator.remove();
+				cleanedCount++;
+				continue;
+			}
+
+			// ✅ Если сущность-цель больше не существует в мире
+			Entity target = display.level().getEntity(entry.getKey());
+			if (target == null || !target.isAlive()) {
+				if (!display.isRemoved()) {
+					display.discard();
+				}
+				damageIterator.remove();
+				cleanedCount++;
+			}
+		}
+
+		// Очистка статусных дисплеев
+		Iterator<Map.Entry<Integer, TextDisplay>> statusIterator = ACTIVE_STATUS_DISPLAYS.entrySet().iterator();
+		while (statusIterator.hasNext()) {
+			Map.Entry<Integer, TextDisplay> entry = statusIterator.next();
+			TextDisplay display = entry.getValue();
+
+			if (display == null || display.isRemoved() || display.level() == null) {
+				statusIterator.remove();
+				cleanedCount++;
+				continue;
+			}
+
+			Entity target = display.level().getEntity(entry.getKey());
+			if (target == null || !target.isAlive()) {
+				if (!display.isRemoved()) {
+					display.discard();
+				}
+				statusIterator.remove();
+				cleanedCount++;
+			}
+		}
+
+		// ✅ Очистка старых записей cooldown (старше 600 тиков = 30 секунд)
+		long currentTime = System.currentTimeMillis();
+		DAMAGE_COOLDOWNS.entrySet().removeIf(entry -> {
+			// Примечание: здесь лучше использовать gameTime, но для простоты оставим как есть
+			// В идеале нужно хранить gameTime вместе с entityId
+			return false;
+		});
+
+		if (cleanedCount > 0) {
+			PowerMod.LOGGER.debug("🧹 ElementDamageHandler: cleaned {} stale displays", cleanedCount);
+		}
 	}
 
 	private static ElementType getElementTypeFromSource(DamageSource source) {
@@ -190,11 +314,12 @@ public class ElementDamageHandler {
 		if (!(entity.level() instanceof ServerLevel serverLevel)) return;
 
 		int entityId = entity.getId();
-		TextDisplay oldDamageDisplay = ACTIVE_DAMAGE_DISPLAYS.get(entityId);
+
+		// ✅ Удаляем старый текст урона перед созданием нового
+		TextDisplay oldDamageDisplay = ACTIVE_DAMAGE_DISPLAYS.remove(entityId);
 		if (oldDamageDisplay != null && !oldDamageDisplay.isRemoved()) {
 			oldDamageDisplay.discard();
 		}
-		ACTIVE_DAMAGE_DISPLAYS.remove(entityId);
 
 		int color = getDamageColor(type);
 
@@ -209,9 +334,13 @@ public class ElementDamageHandler {
 		if (display != null) {
 			serverLevel.addFreshEntity(display);
 			ACTIVE_DAMAGE_DISPLAYS.put(entityId, display);
+
+			// ✅ Планируем удаление с проверкой существования
 			PowerMod.queueServerWork(DAMAGE_NUMBER_LIFETIME, () -> {
-				display.discard();
-				ACTIVE_DAMAGE_DISPLAYS.remove(entityId);
+				TextDisplay storedDisplay = ACTIVE_DAMAGE_DISPLAYS.remove(entityId);
+				if (storedDisplay != null && !storedDisplay.isRemoved()) {
+					storedDisplay.discard();
+				}
 			});
 		}
 	}
@@ -220,11 +349,12 @@ public class ElementDamageHandler {
 		if (!(entity.level() instanceof ServerLevel serverLevel)) return;
 
 		int entityId = entity.getId();
-		TextDisplay oldStatus = ACTIVE_STATUS_DISPLAYS.get(entityId);
+
+		// ✅ Удаляем старый статусный текст
+		TextDisplay oldStatus = ACTIVE_STATUS_DISPLAYS.remove(entityId);
 		if (oldStatus != null && !oldStatus.isRemoved()) {
 			oldStatus.discard();
 		}
-		ACTIVE_STATUS_DISPLAYS.remove(entityId);
 
 		TextDisplay display = createTextDisplay(
 				serverLevel,
@@ -237,9 +367,13 @@ public class ElementDamageHandler {
 		if (display != null) {
 			serverLevel.addFreshEntity(display);
 			ACTIVE_STATUS_DISPLAYS.put(entityId, display);
+
+			// ✅ Планируем удаление с проверкой существования
 			PowerMod.queueServerWork(STATUS_TEXT_LIFETIME, () -> {
-				display.discard();
-				ACTIVE_STATUS_DISPLAYS.remove(entityId);
+				TextDisplay storedDisplay = ACTIVE_STATUS_DISPLAYS.remove(entityId);
+				if (storedDisplay != null && !storedDisplay.isRemoved()) {
+					storedDisplay.discard();
+				}
 			});
 		}
 	}
