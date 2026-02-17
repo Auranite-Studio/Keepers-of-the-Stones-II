@@ -8,6 +8,7 @@
 
 **API changes**
 
+* Added the missing recipe for melting raw energium
 * Optimizing classes related to passive skills
 
 **Bugfixes**

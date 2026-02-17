@@ -108,6 +108,9 @@ public class PowerModVariables {
 		clone.conv_to_new_rune_system = original.conv_to_new_rune_system;
 		clone.rune_ability_activate = original.rune_ability_activate;
 		clone.max_ethernal_curse_points = original.max_ethernal_curse_points;
+		clone.stone_slot_1 = original.stone_slot_1;
+		clone.stone_slot_2 = original.stone_slot_2;
+		clone.stone_slot_3 = original.stone_slot_3;
 		if (!event.isWasDeath()) {
 			clone.teleporting_effect = original.teleporting_effect;
 			clone.abilities_timer = original.abilities_timer;
@@ -476,9 +479,9 @@ public class PowerModVariables {
 		public String element_name_second = "0";
 		public String element_name_third = "0";
 		public double teleporting_effect = 0;
-		public String fake_element_name_first = "0";
-		public String fake_element_name_second = "0";
-		public String fake_element_name_third = "0";
+		public String fake_element_name_first = "";
+		public String fake_element_name_second = "";
+		public String fake_element_name_third = "";
 		public double abilities_timer = 0;
 		public double fake_element_name_first_timer = 0;
 		public double fake_element_name_second_timer = 0;
@@ -533,6 +536,9 @@ public class PowerModVariables {
 		public boolean rune_ability_activate = false;
 		public double ethernal_curse_points = 0.0;
 		public double max_ethernal_curse_points = 1200.0;
+		public ItemStack stone_slot_1 = ItemStack.EMPTY;
+		public ItemStack stone_slot_2 = ItemStack.EMPTY;
+		public ItemStack stone_slot_3 = ItemStack.EMPTY;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -599,6 +605,9 @@ public class PowerModVariables {
 			nbt.putBoolean("rune_ability_activate", rune_ability_activate);
 			nbt.putDouble("ethernal_curse_points", ethernal_curse_points);
 			nbt.putDouble("max_ethernal_curse_points", max_ethernal_curse_points);
+			nbt.put("stone_slot_1", stone_slot_1.saveOptional(lookupProvider));
+			nbt.put("stone_slot_2", stone_slot_2.saveOptional(lookupProvider));
+			nbt.put("stone_slot_3", stone_slot_3.saveOptional(lookupProvider));
 			return nbt;
 		}
 
@@ -666,6 +675,9 @@ public class PowerModVariables {
 			rune_ability_activate = nbt.getBoolean("rune_ability_activate");
 			ethernal_curse_points = nbt.getDouble("ethernal_curse_points");
 			max_ethernal_curse_points = nbt.getDouble("max_ethernal_curse_points");
+			stone_slot_1 = ItemStack.parseOptional(lookupProvider, nbt.getCompound("stone_slot_1"));
+			stone_slot_2 = ItemStack.parseOptional(lookupProvider, nbt.getCompound("stone_slot_2"));
+			stone_slot_3 = ItemStack.parseOptional(lookupProvider, nbt.getCompound("stone_slot_3"));
 		}
 
 		public void markSyncDirty() {
