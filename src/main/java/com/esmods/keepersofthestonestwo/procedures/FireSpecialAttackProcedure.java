@@ -67,7 +67,7 @@ public class FireSpecialAttackProcedure {
 							if (!(entityiterator == entity)) {
 								if (checking_dmg == true) {
 									if (!entityiterator.level().isClientSide) {
-										ElementDamageHandler.dealElementDamage(entityiterator, ElementType.PHYSICAL, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 25);
+										ElementDamageHandler.dealElementDamage(entityiterator, ElementType.FIRE, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, 50);
 									}
 									checking_dmg = false;
 								}

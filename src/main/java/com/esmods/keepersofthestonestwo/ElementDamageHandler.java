@@ -52,19 +52,16 @@ public class ElementDamageHandler {
 
 	@SubscribeEvent
 	public static void onLivingHurt(LivingDamageEvent.Pre event) {
-		// ✅ target = получатель урона (сущность, которую бьют)
 		LivingEntity target = event.getEntity();
 		DamageSource source = event.getSource();
 
 		ElementType type = getElementTypeFromSource(source);
 		if (type == null) return;
 
-		// ✅ 1. Накопление очков на ЦЕЛИ (target)
+		// ✅ 1. Накопление очков на ЦЕЛИ
 		int pointsBefore = PowerModAttachments.getPoints(target, type);
 		PowerModAttachments.addPoints(target, type, (int) baseAccumulation);
 		int pointsAfter = PowerModAttachments.getPoints(target, type);
-
-		// ✅ 2. Проверка порога
 		boolean thresholdReached = pointsAfter >= THRESHOLD;
 
 		PowerMod.LOGGER.info("⚡ Target: {} | Element: {} | Points: {} → {} | Threshold: {} | Reached: {}",
@@ -72,17 +69,16 @@ public class ElementDamageHandler {
 
 		float finalDamage = event.getOriginalDamage();
 
-		// ✅ 3. Цифры урона отображаются ВСЕГДА (независимо от порога)
-		if (canShowDamage(target)) {
-			spawnDamageNumber(target, finalDamage, type);
-		}
-
-		// ✅ 4. Если порог достигнут — применяем эффект и показываем статусный текст
+		// ✅ 2. СНАЧАЛА применяем эффект порога (если достигнут)
 		if (thresholdReached) {
 			finalDamage = applyThresholdEffect(target, type, event, finalDamage);
-			// ✅ Сброс очков ТОЛЬКО для этого типа на ЦЕЛИ
 			PowerModAttachments.resetPoints(target, type);
 			PowerMod.LOGGER.info("✅ THRESHOLD TRIGGERED! Reset points for {} on {}", type, target.getName().getString());
+		}
+
+		// ✅ 3. ТЕПЕРЬ спавним цифры урона — уже с модифицированным значением
+		if (canShowDamage(target)) {
+			spawnDamageNumber(target, finalDamage, type);
 		}
 	}
 
@@ -136,7 +132,6 @@ public class ElementDamageHandler {
 	}
 
 	public static void setThreshold(int threshold) {
-		// Для совместимости, но теперь все типы используют одно значение
 		PowerMod.LOGGER.warn("setThreshold() deprecated - all types use THRESHOLD = 100");
 	}
 
@@ -160,14 +155,12 @@ public class ElementDamageHandler {
 		return switch (type) {
 			case FIRE -> {
 				target.igniteForSeconds(5);
-				// ✅ Статусный текст ТОЛЬКО при достижении порога
 				spawnStatusText(target, "🔥 OVERHEATING!", 0xFF5500);
 				yield currentDamage;
 			}
 			case PHYSICAL -> {
 				float newDamage = currentDamage * 5.0f;
 				event.setNewDamage(newDamage);
-				// ✅ Статусный текст ТОЛЬКО при достижении порога
 				spawnStatusText(target, "💥 CRIT DMG 500%!", 0xFFAA00);
 				yield newDamage;
 			}
@@ -196,7 +189,6 @@ public class ElementDamageHandler {
 	private static void spawnDamageNumber(LivingEntity entity, float amount, ElementType type) {
 		if (!(entity.level() instanceof ServerLevel serverLevel)) return;
 
-		// ✅ Удаляем старый текст урона перед созданием нового
 		int entityId = entity.getId();
 		TextDisplay oldDamageDisplay = ACTIVE_DAMAGE_DISPLAYS.get(entityId);
 		if (oldDamageDisplay != null && !oldDamageDisplay.isRemoved()) {
@@ -227,7 +219,6 @@ public class ElementDamageHandler {
 	private static void spawnStatusText(LivingEntity entity, String text, int color) {
 		if (!(entity.level() instanceof ServerLevel serverLevel)) return;
 
-		// ✅ Удаляем старый статусный текст
 		int entityId = entity.getId();
 		TextDisplay oldStatus = ACTIVE_STATUS_DISPLAYS.get(entityId);
 		if (oldStatus != null && !oldStatus.isRemoved()) {
@@ -285,10 +276,17 @@ public class ElementDamageHandler {
 		return baseAccumulation;
 	}
 
+	/**
+	 * Наносит элементальный урон с накоплением по умолчанию (baseAccumulation)
+	 */
 	public static void dealElementDamage(Entity target, ElementType type, float amount) {
 		dealElementDamage(target, type, amount, 0);
 	}
 
+	/**
+	 * Наносит элементальный урон с кастомным накоплением
+	 * @param accumulationPoints если > 0 — используется это значение, иначе baseAccumulation
+	 */
 	public static void dealElementDamage(Entity target, ElementType type, float amount, int accumulationPoints) {
 		if (!(target.level() instanceof ServerLevel serverLevel)) {
 			PowerMod.LOGGER.warn("dealElementDamage: not server level");
@@ -312,27 +310,31 @@ public class ElementDamageHandler {
 		DamageSource source = new DamageSource(damageTypeHolder.get());
 		float finalDamage = amount;
 
-		if (accumulationPoints > 0) {
+		// ✅ ЛОГИКА НАКОПЛЕНИЯ:
+		// Если accumulationPoints > 0 — используем его (игнорируем baseAccumulation)
+		// Если accumulationPoints <= 0 — используем baseAccumulation как дефолт
+		int pointsToAdd = (accumulationPoints > 0) ? accumulationPoints : (int) baseAccumulation;
+
+		if (pointsToAdd > 0) {
 			// ✅ Накопление на ЦЕЛИ
 			int pointsBefore = PowerModAttachments.getPoints(livingTarget, type);
-			PowerModAttachments.addPoints(livingTarget, type, accumulationPoints);
+			PowerModAttachments.addPoints(livingTarget, type, pointsToAdd);
 			int pointsAfter = PowerModAttachments.getPoints(livingTarget, type);
-
 			boolean thresholdReached = pointsAfter >= THRESHOLD;
 
 			PowerMod.LOGGER.info("⚡ [Manual] Target: {} | Element: {} | Points: {} → {} | Threshold: {} | Reached: {}",
 					livingTarget.getName().getString(), type, pointsBefore, pointsAfter, THRESHOLD, thresholdReached);
 
-			// ✅ Цифры урона ВСЕГДА
-			if (canShowDamage(livingTarget)) {
-				spawnDamageNumber(livingTarget, finalDamage, type);
-			}
-
-			// ✅ Статусный текст ТОЛЬКО при пороге
+			// ✅ СНАЧАЛА применяем эффект порога (если достигнут)
 			if (thresholdReached) {
 				finalDamage = applyThresholdEffectWithDamage(livingTarget, type, amount);
 				PowerModAttachments.resetPoints(livingTarget, type);
 				PowerMod.LOGGER.info("✅ [Manual] THRESHOLD TRIGGERED! Reset points for {} on {}", type, livingTarget.getName().getString());
+			}
+
+			// ✅ ТЕПЕРЬ спавним цифры с УЖЕ модифицированным уроном
+			if (canShowDamage(livingTarget)) {
+				spawnDamageNumber(livingTarget, finalDamage, type);
 			}
 		} else {
 			// Без накопления — только цифры
@@ -354,6 +356,12 @@ public class ElementDamageHandler {
 
 	public static void resetElementPoints(LivingEntity entity, ElementType type) {
 		PowerModAttachments.resetPoints(entity, type);
+	}
+
+	public static void resetAllElementPoints(LivingEntity entity) {
+		for (ElementType type : ElementType.values()) {
+			PowerModAttachments.resetPoints(entity, type);
+		}
 	}
 
 	public static int getAccumulationProgress(LivingEntity entity, ElementType type) {
