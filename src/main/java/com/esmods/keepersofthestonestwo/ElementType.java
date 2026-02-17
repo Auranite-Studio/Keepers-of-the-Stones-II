@@ -5,7 +5,15 @@ import java.util.Optional;
 
 public enum ElementType {
     FIRE("fire_dmg"),
-    PHYSICAL("physical_dmg");
+    PHYSICAL("physical_dmg"),
+    WIND ("wind_dmg"),
+    EARTH ("earth_dmg"),
+    WATER ("water_dmg");
+    //    ICE ("ice_dmg"),
+    //   ELECTRIC ("electric_dmg"),
+    //   SOURCE ("source_dmg"),
+    //   NATURAL ("natural_dmg"),
+    //   QUANTUM ("quantum_dmg");
 
     private final String damageTypeId;
 

@@ -34090,6 +34090,105 @@
           "src/main/java/com/esmods/keepersofthestonestwo/ElementResistanceRegistry.java"
         ]
       }
+    },
+    {
+      "name": "WindDmg",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wind_dmg",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/damage_type/wind_dmg.json"
+        ]
+      },
+      "path": "~/DamageSources/ElementalDamageTypes"
+    },
+    {
+      "name": "EarthDmg",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_dmg",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/damage_type/earth_dmg.json"
+        ]
+      },
+      "path": "~/DamageSources/ElementalDamageTypes"
+    },
+    {
+      "name": "WaterDmg",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_dmg",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/damage_type/water_dmg.json"
+        ]
+      },
+      "path": "~/DamageSources/ElementalDamageTypes"
+    },
+    {
+      "name": "ElementalWeaponRegistry",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "elemental_weapon_registry",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ElementalWeaponRegistry.java"
+        ]
+      }
+    },
+    {
+      "name": "ElementalWeaponComponent",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "elemental_weapon_component",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ElementalWeaponComponent.java"
+        ]
+      }
+    },
+    {
+      "name": "ElementalWeaponTooltipHandler",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "elemental_weapon_tooltip_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ElementalWeaponTooltipHandler.java"
+        ]
+      }
+    },
+    {
+      "name": "ElementalWeaponUtils",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "elemental_weapon_utils",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ElementalWeaponUtils.java"
+        ]
+      }
+    },
+    {
+      "name": "ElementalWeaponRegistrationHandler",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "elemental_weapon_registration_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ElementalWeaponRegistrationHandler.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -37325,7 +37424,16 @@
       "death.attack.fire_dmg.player": "%1$s died whilst trying to escape %2$s",
       "death.attack.physical_dmg.item": "%1$s was killed by %2$s using %3$s",
       "death.attack.physical_dmg": "%1$s died",
-      "death.attack.physical_dmg.player": "%1$s died whilst trying to escape %2$s"
+      "death.attack.physical_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.wind_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.wind_dmg": "%1$s died",
+      "death.attack.wind_dmg.item": "%1$s was killed by %2$s using %3$s",
+      "death.attack.earth_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.earth_dmg": "%1$s died",
+      "death.attack.earth_dmg.item": "%1$s was killed by %2$s using %3$s",
+      "death.attack.water_dmg": "%1$s died",
+      "death.attack.water_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.water_dmg.item": "%1$s was killed by %2$s using %3$s"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -38442,7 +38550,16 @@
       "death.attack.fire_dmg.player": "%1$s died whilst trying to escape %2$s",
       "death.attack.physical_dmg.item": "%1$s was killed by %2$s using %3$s",
       "death.attack.physical_dmg": "%1$s died",
-      "death.attack.physical_dmg.player": "%1$s died whilst trying to escape %2$s"
+      "death.attack.physical_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.wind_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.wind_dmg": "%1$s died",
+      "death.attack.wind_dmg.item": "%1$s was killed by %2$s using %3$s",
+      "death.attack.earth_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.earth_dmg": "%1$s died",
+      "death.attack.earth_dmg.item": "%1$s was killed by %2$s using %3$s",
+      "death.attack.water_dmg": "%1$s died",
+      "death.attack.water_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.water_dmg.item": "%1$s was killed by %2$s using %3$s"
     },
     "zh_cn": {
       "item.power.ether_battery": "电池",
@@ -39546,7 +39663,16 @@
       "death.attack.fire_dmg.player": "%1$s died whilst trying to escape %2$s",
       "death.attack.physical_dmg.item": "%1$s was killed by %2$s using %3$s",
       "death.attack.physical_dmg": "%1$s died",
-      "death.attack.physical_dmg.player": "%1$s died whilst trying to escape %2$s"
+      "death.attack.physical_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.wind_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.wind_dmg": "%1$s died",
+      "death.attack.wind_dmg.item": "%1$s was killed by %2$s using %3$s",
+      "death.attack.earth_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.earth_dmg": "%1$s died",
+      "death.attack.earth_dmg.item": "%1$s was killed by %2$s using %3$s",
+      "death.attack.water_dmg": "%1$s died",
+      "death.attack.water_dmg.player": "%1$s died whilst trying to escape %2$s",
+      "death.attack.water_dmg.item": "%1$s was killed by %2$s using %3$s"
     }
   },
   "metadata": {

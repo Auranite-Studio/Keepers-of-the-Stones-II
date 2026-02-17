@@ -15,6 +15,9 @@ public class ElementResistanceRegistry {
         PowerMod.LOGGER.info("ElementType.FIRE.getDamageTypeId() = {}", ElementType.FIRE.getDamageTypeId());
         PowerMod.LOGGER.info("ElementType.PHYSICAL.getDamageTypeId() = {}", ElementType.PHYSICAL.getDamageTypeId());
 
+        registerUniform(ElementType.FIRE, 0.0f, 0.0f, EntityType.PLAYER);
+        registerUniform(ElementType.PHYSICAL, 0.0f, 0.0f, EntityType.PLAYER);
+
         try {
             registerFireResistances();
             registerPhysicalResistances();
@@ -81,13 +84,6 @@ public class ElementResistanceRegistry {
         );
     }
 
-    @SuppressWarnings("unused")
-    private static void registerWaterResistances() {
-    }
-
-    @SuppressWarnings("unused")
-    private static void registerLightningResistances() {
-    }
 
     @SafeVarargs
     private static void registerUniform(ElementType elementType, float resistance, EntityType<?>... entityTypes) {
