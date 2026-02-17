@@ -34066,6 +34066,30 @@
         ]
       },
       "path": "~/DamageSources/ElementalDamageTypes"
+    },
+    {
+      "name": "ElementResistanceManager",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "element_resistance_manager",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ElementResistanceManager.java"
+        ]
+      }
+    },
+    {
+      "name": "ElementResistanceRegistry",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "element_resistance_registry",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/ElementResistanceRegistry.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

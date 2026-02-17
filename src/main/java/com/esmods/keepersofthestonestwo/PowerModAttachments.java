@@ -1,7 +1,6 @@
+// PowerModAttachments.java
 package com.esmods.keepersofthestonestwo;
 
-import com.esmods.keepersofthestonestwo.PowerMod;
-import com.esmods.keepersofthestonestwo.ElementType;
 import net.minecraft.world.entity.LivingEntity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.attachment.AttachmentType;
@@ -17,20 +16,14 @@ public class PowerModAttachments {
     public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES =
             DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, PowerMod.MODID);
 
-    // ==================== ATTACHMENTS ====================
-
     public static final Supplier<AttachmentType<Map<ElementType, Integer>>> ELEMENT_ACCUMULATOR =
             ATTACHMENT_TYPES.register("element_accumulator", () ->
                     AttachmentType.<Map<ElementType, Integer>>builder(() -> new EnumMap<>(ElementType.class)).build()
             );
 
-    // ==================== РЕГИСТРАЦИЯ ====================
-
     public static void register(IEventBus modEventBus) {
         ATTACHMENT_TYPES.register(modEventBus);
     }
-
-    // ==================== УТИЛИТЫ ДЛЯ ДОСТУПА ====================
 
     public static Map<ElementType, Integer> getAccumulator(LivingEntity entity) {
         return entity.getData(ELEMENT_ACCUMULATOR.get());

@@ -63,6 +63,8 @@ public class PowerMod {
 		// Start of user code block mod init
 		PowerModAttachments.ATTACHMENT_TYPES.register(modEventBus);
 		PowerModDamageTypes.DAMAGE_TYPES.register(modEventBus);
+		ElementResistanceRegistry.init();
+		ElementResistanceManager.debugPrintRegistry();
 		// End of user code block mod init
 	}
 

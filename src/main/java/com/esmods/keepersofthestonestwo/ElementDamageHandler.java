@@ -8,7 +8,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Display;
 import net.minecraft.world.entity.Display.TextDisplay;
 import net.minecraft.world.entity.Display.BillboardConstraints;
 import net.minecraft.world.entity.LivingEntity;
@@ -20,7 +19,6 @@ import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.event.level.LevelEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
-import java.util.Arrays;
 import java.util.EnumMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -30,15 +28,12 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ElementDamageHandler {
 
 	private static float baseAccumulation = 1.0f;
-
-	// === ВСЕ ПОРОГИ = 100 ===
 	private static final int THRESHOLD = 100;
 
-	// === ЦВЕТА ДЛЯ КАЖДОГО ТИПА УРОНА ===
 	private static final Map<ElementType, Integer> DAMAGE_COLORS = new EnumMap<>(ElementType.class);
 	static {
-		DAMAGE_COLORS.put(ElementType.FIRE, 0xFF0000);      // 🔴 Красный
-		DAMAGE_COLORS.put(ElementType.PHYSICAL, 0xFFFF00);  // 🟡 Жёлтый
+		DAMAGE_COLORS.put(ElementType.FIRE, 0xFF0000);
+		DAMAGE_COLORS.put(ElementType.PHYSICAL, 0xFFFF00);
 	}
 
 	private static final int DAMAGE_NUMBER_LIFETIME = 20;
@@ -47,17 +42,14 @@ public class ElementDamageHandler {
 	private static final byte FLAG_SHADOW = 1;
 	private static final byte FLAG_SEE_THROUGH = 2;
 
-	// === COOLDOWN ДЛЯ ВИЗУАЛА ===
 	private static final Map<Integer, Long> DAMAGE_COOLDOWNS = new ConcurrentHashMap<>();
 	private static final int COOLDOWN_TICKS = 5;
 
-	// === ОТСЛЕЖИВАНИЕ АКТИВНЫХ ТЕКСТОВ ===
 	private static final Map<Integer, TextDisplay> ACTIVE_DAMAGE_DISPLAYS = new ConcurrentHashMap<>();
 	private static final Map<Integer, TextDisplay> ACTIVE_STATUS_DISPLAYS = new ConcurrentHashMap<>();
 
-	// === СЧЁТЧИК ДЛЯ ПЕРИОДИЧЕСКОЙ ОЧИСТКИ ===
 	private static int serverTickCounter = 0;
-	private static final int CLEANUP_INTERVAL = 100; // Очистка каждые 100 тиков (~5 секунд)
+	private static final int CLEANUP_INTERVAL = 100;
 
 	@SubscribeEvent
 	public static void onLivingHurt(LivingDamageEvent.Pre event) {
@@ -65,33 +57,50 @@ public class ElementDamageHandler {
 		DamageSource source = event.getSource();
 
 		ElementType type = getElementTypeFromSource(source);
-		if (type == null) return;
 
-		// ✅ 1. Накопление очков на ЦЕЛИ
+		if (type == null) {
+			PowerMod.LOGGER.debug("Could not determine ElementType for damage source: {}", source.type().msgId());
+			return;
+		}
+
+		ElementResistanceManager.Resistance resistance = ElementResistanceManager.getResistance(target, type);
+		PowerMod.LOGGER.debug("Resistance check: {} vs {} → {}", target.getType().toString(), type, resistance);
+
+		if (ElementResistanceManager.isImmune(target, type)) {
+			event.setNewDamage(0f);
+			PowerMod.LOGGER.debug("{} is IMMUNE to {}! Damage set to 0", target.getName().getString(), type);
+			return;
+		}
+
+		int basePoints = (int) baseAccumulation;
+		int pointsToAdd = ElementResistanceManager.calculateAccumulationPoints(target, type, basePoints);
+
 		int pointsBefore = PowerModAttachments.getPoints(target, type);
-		PowerModAttachments.addPoints(target, type, (int) baseAccumulation);
+		PowerModAttachments.addPoints(target, type, pointsToAdd);
 		int pointsAfter = PowerModAttachments.getPoints(target, type);
 		boolean thresholdReached = pointsAfter >= THRESHOLD;
 
-		PowerMod.LOGGER.info("⚡ Target: {} | Element: {} | Points: {} → {} | Threshold: {} | Reached: {}",
-				target.getName().getString(), type, pointsBefore, pointsAfter, THRESHOLD, thresholdReached);
+		PowerMod.LOGGER.info("Target: {} | Element: {} | Points: {} +{} → {} | Threshold: {} | Reached: {}",
+				target.getName().getString(), type, pointsBefore, pointsToAdd, pointsAfter, THRESHOLD, thresholdReached);
 
 		float finalDamage = event.getOriginalDamage();
 
-		// ✅ 2. СНАЧАЛА применяем эффект порога (если достигнут)
+		float originalDamage = finalDamage;
+		finalDamage = ElementResistanceManager.calculateReducedDamage(target, type, finalDamage);
+		PowerMod.LOGGER.debug("Damage calculation: {} × (1 - {}) = {} (Resistance: {})",
+				originalDamage, resistance.damageResistance(), finalDamage, resistance);
+
 		if (thresholdReached) {
 			finalDamage = applyThresholdEffect(target, type, event, finalDamage);
 			PowerModAttachments.resetPoints(target, type);
-			PowerMod.LOGGER.info("✅ THRESHOLD TRIGGERED! Reset points for {} on {}", type, target.getName().getString());
+			PowerMod.LOGGER.info("THRESHOLD TRIGGERED! Reset points for {} on {}", type, target.getName().getString());
 		}
 
-		// ✅ 3. ТЕПЕРЬ спавним цифры урона — уже с модифицированным значением
 		if (canShowDamage(target)) {
 			spawnDamageNumber(target, finalDamage, type);
 		}
 	}
 
-	// ✅ ОЧИСТКА ПРИ СМЕРТИ СУЩНОСТИ
 	@SubscribeEvent
 	public static void onLivingDeath(LivingDeathEvent event) {
 		LivingEntity entity = event.getEntity();
@@ -99,7 +108,6 @@ public class ElementDamageHandler {
 		DAMAGE_COOLDOWNS.remove(entity.getId());
 	}
 
-	// ✅ ОЧИСТКА ПРИ ВЫХОДЕ СУЩНОСТИ ИЗ МИРА
 	@SubscribeEvent
 	public static void onEntityLeaveLevel(EntityLeaveLevelEvent event) {
 		Entity entity = event.getEntity();
@@ -109,16 +117,14 @@ public class ElementDamageHandler {
 		}
 	}
 
-	// ✅ ОЧИСТКА ПРИ ВЫГРУЗКЕ УРОВНЯ (сохранение/перезагрузка)
 	@SubscribeEvent
 	public static void onLevelUnload(LevelEvent.Unload event) {
 		if (event.getLevel() instanceof ServerLevel) {
 			cleanupAllDisplays();
-			PowerMod.LOGGER.info("🧹 ElementDamageHandler: cleaned up all displays on level unload");
+			PowerMod.LOGGER.info("ElementDamageHandler: cleaned up all displays on level unload");
 		}
 	}
 
-	// ✅ ПЕРИОДИЧЕСКАЯ ОЧИСТКА "ЗОМБИ"-ДИСПЛЕЕВ
 	@SubscribeEvent
 	public static void onServerTick(ServerTickEvent.Pre event) {
 		serverTickCounter++;
@@ -175,11 +181,9 @@ public class ElementDamageHandler {
 		DAMAGE_COOLDOWNS.clear();
 	}
 
-	// ✅ ГЛАВНАЯ ФУНКЦИЯ ОЧИСТКИ "ЗОМБИ"-ДИСПЛЕЕВ
 	private static void cleanupStaleDisplays() {
 		int cleanedCount = 0;
 
-		// Очистка дисплеев урона
 		Iterator<Map.Entry<Integer, TextDisplay>> damageIterator = ACTIVE_DAMAGE_DISPLAYS.entrySet().iterator();
 		while (damageIterator.hasNext()) {
 			Map.Entry<Integer, TextDisplay> entry = damageIterator.next();
@@ -191,7 +195,6 @@ public class ElementDamageHandler {
 				continue;
 			}
 
-			// ✅ Если сущность-цель больше не существует в мире
 			Entity target = display.level().getEntity(entry.getKey());
 			if (target == null || !target.isAlive()) {
 				if (!display.isRemoved()) {
@@ -202,7 +205,6 @@ public class ElementDamageHandler {
 			}
 		}
 
-		// Очистка статусных дисплеев
 		Iterator<Map.Entry<Integer, TextDisplay>> statusIterator = ACTIVE_STATUS_DISPLAYS.entrySet().iterator();
 		while (statusIterator.hasNext()) {
 			Map.Entry<Integer, TextDisplay> entry = statusIterator.next();
@@ -233,23 +235,22 @@ public class ElementDamageHandler {
 		});
 
 		if (cleanedCount > 0) {
-			PowerMod.LOGGER.debug("🧹 ElementDamageHandler: cleaned {} stale displays", cleanedCount);
+			PowerMod.LOGGER.debug("ElementDamageHandler: cleaned {} stale displays", cleanedCount);
 		}
 	}
 
 	private static ElementType getElementTypeFromSource(DamageSource source) {
 		String msgId = source.type().msgId();
-		return Arrays.stream(ElementType.values())
-				.filter(type -> {
-					String path = type.getDamageTypeId();
-					int colonIndex = path.indexOf(':');
-					return colonIndex >= 0 ? path.substring(colonIndex + 1).equals(msgId) : path.equals(msgId);
-				})
-				.findFirst()
-				.orElse(null);
-	}
 
-	// === Методы для работы с порогами ===
+		for (ElementType type : ElementType.values()) {
+			if (type.getDamageTypeId().equals(msgId)) {
+				return type;
+			}
+		}
+
+		PowerMod.LOGGER.debug("No matching ElementType for msgId: {}", msgId);
+		return null;
+	}
 
 	public static int getThreshold() {
 		return THRESHOLD;
@@ -258,8 +259,6 @@ public class ElementDamageHandler {
 	public static void setThreshold(int threshold) {
 		PowerMod.LOGGER.warn("setThreshold() deprecated - all types use THRESHOLD = 100");
 	}
-
-	// === Методы для работы с цветами ===
 
 	private static int getDamageColor(ElementType type) {
 		return DAMAGE_COLORS.getOrDefault(type, 0xFFFFFF);
@@ -274,7 +273,7 @@ public class ElementDamageHandler {
 	}
 
 	private static float applyThresholdEffect(LivingEntity target, ElementType type, LivingDamageEvent.Pre event, float currentDamage) {
-		PowerMod.LOGGER.info("🎯 THRESHOLD REACHED! Entity: {}, Type: {}", target.getName().getString(), type);
+		PowerMod.LOGGER.info("THRESHOLD REACHED! Entity: {}, Type: {}", target.getName().getString(), type);
 
 		return switch (type) {
 			case FIRE -> {
@@ -293,7 +292,7 @@ public class ElementDamageHandler {
 	}
 
 	private static float applyThresholdEffectWithDamage(LivingEntity target, ElementType type, float originalDamage) {
-		PowerMod.LOGGER.info("🎯 THRESHOLD REACHED! Entity: {}, Type: {}", target.getName().getString(), type);
+		PowerMod.LOGGER.info("THRESHOLD REACHED! Entity: {}, Type: {}", target.getName().getString(), type);
 
 		return switch (type) {
 			case FIRE -> {
@@ -315,7 +314,6 @@ public class ElementDamageHandler {
 
 		int entityId = entity.getId();
 
-		// ✅ Удаляем старый текст урона перед созданием нового
 		TextDisplay oldDamageDisplay = ACTIVE_DAMAGE_DISPLAYS.remove(entityId);
 		if (oldDamageDisplay != null && !oldDamageDisplay.isRemoved()) {
 			oldDamageDisplay.discard();
@@ -335,7 +333,6 @@ public class ElementDamageHandler {
 			serverLevel.addFreshEntity(display);
 			ACTIVE_DAMAGE_DISPLAYS.put(entityId, display);
 
-			// ✅ Планируем удаление с проверкой существования
 			PowerMod.queueServerWork(DAMAGE_NUMBER_LIFETIME, () -> {
 				TextDisplay storedDisplay = ACTIVE_DAMAGE_DISPLAYS.remove(entityId);
 				if (storedDisplay != null && !storedDisplay.isRemoved()) {
@@ -350,7 +347,6 @@ public class ElementDamageHandler {
 
 		int entityId = entity.getId();
 
-		// ✅ Удаляем старый статусный текст
 		TextDisplay oldStatus = ACTIVE_STATUS_DISPLAYS.remove(entityId);
 		if (oldStatus != null && !oldStatus.isRemoved()) {
 			oldStatus.discard();
@@ -368,7 +364,6 @@ public class ElementDamageHandler {
 			serverLevel.addFreshEntity(display);
 			ACTIVE_STATUS_DISPLAYS.put(entityId, display);
 
-			// ✅ Планируем удаление с проверкой существования
 			PowerMod.queueServerWork(STATUS_TEXT_LIFETIME, () -> {
 				TextDisplay storedDisplay = ACTIVE_STATUS_DISPLAYS.remove(entityId);
 				if (storedDisplay != null && !storedDisplay.isRemoved()) {
@@ -400,8 +395,6 @@ public class ElementDamageHandler {
 		return display;
 	}
 
-	// ==================== ПУБЛИЧНЫЙ API ====================
-
 	public static void setBaseAccumulation(float value) {
 		baseAccumulation = value;
 	}
@@ -410,17 +403,10 @@ public class ElementDamageHandler {
 		return baseAccumulation;
 	}
 
-	/**
-	 * Наносит элементальный урон с накоплением по умолчанию (baseAccumulation)
-	 */
 	public static void dealElementDamage(Entity target, ElementType type, float amount) {
 		dealElementDamage(target, type, amount, 0);
 	}
 
-	/**
-	 * Наносит элементальный урон с кастомным накоплением
-	 * @param accumulationPoints если > 0 — используется это значение, иначе baseAccumulation
-	 */
 	public static void dealElementDamage(Entity target, ElementType type, float amount, int accumulationPoints) {
 		if (!(target.level() instanceof ServerLevel serverLevel)) {
 			PowerMod.LOGGER.warn("dealElementDamage: not server level");
@@ -431,9 +417,15 @@ public class ElementDamageHandler {
 			return;
 		}
 
+		if (ElementResistanceManager.isImmune(target, type)) {
+			PowerMod.LOGGER.debug("{} is IMMUNE to {} (manual call)!", target.getName().getString(), type);
+			return;
+		}
+
 		var damageTypeRegistry = serverLevel.registryAccess()
 				.registryOrThrow(Registries.DAMAGE_TYPE);
-		var rl = ResourceLocation.parse(type.getDamageTypeId());
+
+		var rl = ResourceLocation.fromNamespaceAndPath("power", type.getDamageTypeId());
 		var damageTypeHolder = damageTypeRegistry.getHolder(rl);
 
 		if (damageTypeHolder.isEmpty()) {
@@ -444,34 +436,30 @@ public class ElementDamageHandler {
 		DamageSource source = new DamageSource(damageTypeHolder.get());
 		float finalDamage = amount;
 
-		// ✅ ЛОГИКА НАКОПЛЕНИЯ:
-		// Если accumulationPoints > 0 — используем его (игнорируем baseAccumulation)
-		// Если accumulationPoints <= 0 — используем baseAccumulation как дефолт
-		int pointsToAdd = (accumulationPoints > 0) ? accumulationPoints : (int) baseAccumulation;
+		finalDamage = ElementResistanceManager.calculateReducedDamage(livingTarget, type, finalDamage);
+
+		int basePoints = (accumulationPoints > 0) ? accumulationPoints : (int) baseAccumulation;
+		int pointsToAdd = ElementResistanceManager.calculateAccumulationPoints(livingTarget, type, basePoints);
 
 		if (pointsToAdd > 0) {
-			// ✅ Накопление на ЦЕЛИ
 			int pointsBefore = PowerModAttachments.getPoints(livingTarget, type);
 			PowerModAttachments.addPoints(livingTarget, type, pointsToAdd);
 			int pointsAfter = PowerModAttachments.getPoints(livingTarget, type);
 			boolean thresholdReached = pointsAfter >= THRESHOLD;
 
-			PowerMod.LOGGER.info("⚡ [Manual] Target: {} | Element: {} | Points: {} → {} | Threshold: {} | Reached: {}",
-					livingTarget.getName().getString(), type, pointsBefore, pointsAfter, THRESHOLD, thresholdReached);
+			PowerMod.LOGGER.info("[Manual] Target: {} | Element: {} | Points: {} +{} → {} | Threshold: {} | Reached: {}",
+					livingTarget.getName().getString(), type, pointsBefore, pointsToAdd, pointsAfter, THRESHOLD, thresholdReached);
 
-			// ✅ СНАЧАЛА применяем эффект порога (если достигнут)
 			if (thresholdReached) {
 				finalDamage = applyThresholdEffectWithDamage(livingTarget, type, amount);
 				PowerModAttachments.resetPoints(livingTarget, type);
-				PowerMod.LOGGER.info("✅ [Manual] THRESHOLD TRIGGERED! Reset points for {} on {}", type, livingTarget.getName().getString());
+				PowerMod.LOGGER.info("[Manual] THRESHOLD TRIGGERED! Reset points for {} on {}", type, livingTarget.getName().getString());
 			}
 
-			// ✅ ТЕПЕРЬ спавним цифры с УЖЕ модифицированным уроном
 			if (canShowDamage(livingTarget)) {
 				spawnDamageNumber(livingTarget, finalDamage, type);
 			}
 		} else {
-			// Без накопления — только цифры
 			if (canShowDamage(livingTarget)) {
 				spawnDamageNumber(livingTarget, finalDamage, type);
 			}
@@ -481,7 +469,8 @@ public class ElementDamageHandler {
 	}
 
 	public static void addElementPoints(LivingEntity entity, ElementType type, int points) {
-		PowerModAttachments.addPoints(entity, type, points);
+		int pointsToAdd = ElementResistanceManager.calculateAccumulationPoints(entity, type, points);
+		PowerModAttachments.addPoints(entity, type, pointsToAdd);
 	}
 
 	public static int getElementPoints(LivingEntity entity, ElementType type) {
@@ -501,5 +490,9 @@ public class ElementDamageHandler {
 	public static int getAccumulationProgress(LivingEntity entity, ElementType type) {
 		int points = getElementPoints(entity, type);
 		return THRESHOLD > 0 ? (points * 100) / THRESHOLD : 0;
+	}
+
+	public static ElementResistanceManager.Resistance getEntityResistance(Entity entity, ElementType type) {
+		return ElementResistanceManager.getResistance(entity, type);
 	}
 }
