@@ -55,14 +55,14 @@ public class PowerMod {
 		PowerModEntities.REGISTRY.register(modEventBus);
 		PowerModTabs.REGISTRY.register(modEventBus);
 		PowerModVariables.ATTACHMENT_TYPES.register(modEventBus);
-
 		PowerModPotions.REGISTRY.register(modEventBus);
 		PowerModMobEffects.REGISTRY.register(modEventBus);
 		PowerModMenus.REGISTRY.register(modEventBus);
 		PowerModParticleTypes.REGISTRY.register(modEventBus);
 		PowerModVillagerProfessions.PROFESSIONS.register(modEventBus);
-
 		// Start of user code block mod init
+		PowerModAttachments.ATTACHMENT_TYPES.register(modEventBus);
+		PowerModDamageTypes.DAMAGE_TYPES.register(modEventBus);
 		// End of user code block mod init
 	}
 

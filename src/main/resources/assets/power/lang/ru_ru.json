@@ -1107,5 +1107,11 @@
   "curios.identifier.blue_rune": "Синяя руна",
   "curios.identifier.red_rune": "Красная руна",
   "curios.identifier.green_rune": "Зелёная руна",
-  "block.power.tears_flower": "Цветок слёз"
+  "block.power.tears_flower": "Цветок слёз",
+  "death.attack.fire_dmg": "%1$s died",
+  "death.attack.fire_dmg.item": "%1$s was killed by %2$s using %3$s",
+  "death.attack.fire_dmg.player": "%1$s died whilst trying to escape %2$s",
+  "death.attack.physical_dmg.item": "%1$s was killed by %2$s using %3$s",
+  "death.attack.physical_dmg": "%1$s died",
+  "death.attack.physical_dmg.player": "%1$s died whilst trying to escape %2$s"
 }
