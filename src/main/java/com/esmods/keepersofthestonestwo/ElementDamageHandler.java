@@ -59,7 +59,9 @@ public class ElementDamageHandler {
 		ElementType type = getElementTypeFromSource(source);
 
 		if (type == null) {
-			PowerMod.LOGGER.debug("Could not determine ElementType for damage source: {}", source.type().msgId());
+			if (canShowDamage(target)) {
+				spawnDamageNumber(target, event.getOriginalDamage(), null);
+			}
 			return;
 		}
 
@@ -226,11 +228,8 @@ public class ElementDamageHandler {
 			}
 		}
 
-		// ✅ Очистка старых записей cooldown (старше 600 тиков = 30 секунд)
 		long currentTime = System.currentTimeMillis();
 		DAMAGE_COOLDOWNS.entrySet().removeIf(entry -> {
-			// Примечание: здесь лучше использовать gameTime, но для простоты оставим как есть
-			// В идеале нужно хранить gameTime вместе с entityId
 			return false;
 		});
 
@@ -261,6 +260,9 @@ public class ElementDamageHandler {
 	}
 
 	private static int getDamageColor(ElementType type) {
+		if (type == null) {
+			return 0xFFFFFF;
+		}
 		return DAMAGE_COLORS.getOrDefault(type, 0xFFFFFF);
 	}
 

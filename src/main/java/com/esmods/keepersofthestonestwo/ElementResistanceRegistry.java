@@ -55,12 +55,7 @@ public class ElementResistanceRegistry {
     private static void registerPhysicalResistances() {
         PowerMod.LOGGER.debug("Registering PHYSICAL resistances...");
 
-        registerUniform(ElementType.PHYSICAL, 1.0f, 1.0f,
-                EntityType.ARMOR_STAND,
-                EntityType.END_CRYSTAL,
-                EntityType.PAINTING,
-                EntityType.ITEM_FRAME,
-                EntityType.LEASH_KNOT
+        registerUniform(ElementType.PHYSICAL, 1.0f, 1.0f
         );
 
         registerUniform(ElementType.PHYSICAL, 0.5f, 0.5f,
