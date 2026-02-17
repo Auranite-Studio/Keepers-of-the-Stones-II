@@ -8,13 +8,10 @@ import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-/**
- * Класс для регистрации и работы с Data Attachments мода.
- */
 public class PowerModAttachments {
 
     public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES =
@@ -22,13 +19,9 @@ public class PowerModAttachments {
 
     // ==================== ATTACHMENTS ====================
 
-    /**
-     * Хранилище накопленных очков элементального урона для LivingEntity.
-     * ИСПРАВЛЕНО: Явное указание типов в builder()
-     */
     public static final Supplier<AttachmentType<Map<ElementType, Integer>>> ELEMENT_ACCUMULATOR =
             ATTACHMENT_TYPES.register("element_accumulator", () ->
-                    AttachmentType.<Map<ElementType, Integer>>builder(() -> new HashMap<ElementType, Integer>()).build()
+                    AttachmentType.<Map<ElementType, Integer>>builder(() -> new EnumMap<>(ElementType.class)).build()
             );
 
     // ==================== РЕГИСТРАЦИЯ ====================
