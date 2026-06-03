@@ -1107,5 +1107,11 @@
   "curios.identifier.blue_rune": "Синяя руна",
   "curios.identifier.red_rune": "Красная руна",
   "curios.identifier.green_rune": "Зелёная руна",
-  "block.power.tears_flower": "Цветок слёз"
+  "block.power.tears_flower": "Цветок слёз",
+  "power.configuration.additional_features": "additional_features",
+  "power.configuration.limit_number_stones": "limit_number_stones",
+  "power.configuration.first_join_stones_distribution": "first_join_stones_distribution",
+  "power.configuration.one_player_limit_stones": "one_player_limit_stones",
+  "power.configuration.stone_distribution_settings": "stone_distribution_settings",
+  "power.configuration.enable_levels": "enable_levels"
 }

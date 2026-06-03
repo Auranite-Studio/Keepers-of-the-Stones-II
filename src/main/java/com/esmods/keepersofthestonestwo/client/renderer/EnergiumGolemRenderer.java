@@ -11,13 +11,15 @@ import com.esmods.keepersofthestonestwo.client.model.animations.energium_golemAn
 import com.esmods.keepersofthestonestwo.client.model.Modelenergium_golem;
 
 public class EnergiumGolemRenderer extends MobRenderer<EnergiumGolemEntity, Modelenergium_golem<EnergiumGolemEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("power:textures/entities/energium_golem.png");
+
 	public EnergiumGolemRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modelenergium_golem.LAYER_LOCATION)), 1.125f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(EnergiumGolemEntity entity) {
-		return ResourceLocation.parse("power:textures/entities/energium_golem.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends Modelenergium_golem<EnergiumGolemEntity> {

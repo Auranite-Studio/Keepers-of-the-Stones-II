@@ -1,9 +1,12 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "curiosslot",
   "definition": {
     "texture": "green_slot.png",
     "name": "Green Rune",
-    "amount": 1
+    "amount": 1,
+    "modelToggling": false,
+    "changeOrder": false,
+    "slotOrder": 0
   }
 }

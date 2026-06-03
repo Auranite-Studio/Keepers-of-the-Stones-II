@@ -8,11 +8,23 @@ import org.spongepowered.asm.mixin.Mixin;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.nbt.Tag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.FloatTag;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.client.resources.sounds.EntityBoundSoundInstance;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.PlayerModel;
+import net.minecraft.client.gui.screens.ChatScreen;
+import net.minecraft.client.Minecraft;
 
+import java.util.Set;
 import java.util.Map;
+import java.util.HashSet;
 
 import com.esmods.keepersofthestonestwo.PowerModPlayerAnimationAPI;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -20,6 +32,7 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 @Mixin(PlayerModel.class)
 public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 	private String master = null;
+	private Minecraft mc = Minecraft.getInstance();
 
 	@Inject(method = "setupAnim", at = @At(value = "HEAD"))
 	public void setupPivot(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, CallbackInfo ci) {
@@ -44,6 +57,8 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 
 	@Inject(method = "setupAnim", at = @At(value = "TAIL"))
 	public void setupAnim(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, CallbackInfo ci) {
+		if (ageInTicks <= 0)
+			return;
 		if (!master.equals("power")) {
 			if (!PowerModPlayerAnimationAPI.animations.isEmpty())
 				PowerModPlayerAnimationAPI.animations.clear();
@@ -58,10 +73,12 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 		CompoundTag data = player.getPersistentData();
 		String playingAnimation = data.getString("PlayerCurrentAnimation");
 		boolean overrideAnimation = data.getBoolean("OverrideCurrentAnimation");
-		boolean firstPerson = data.getBoolean("FirstPersonAnimation");
+		boolean firstPerson = data.getBoolean("FirstPersonAnimation") && mc.options.getCameraType().isFirstPerson() && player == mc.player && (mc.screen == null || mc.screen instanceof ChatScreen);
+		player.noCulling = player != mc.player;
 		if (data.getBoolean("ResetPlayerAnimation")) {
 			data.remove("ResetPlayerAnimation");
-			playingAnimation = "";
+			data.remove("LastAnimationProgress");
+			data.remove("PlayedSoundTimes");
 			PowerModPlayerAnimationAPI.active_animations.put(player, null);
 		}
 		if (playingAnimation.isEmpty()) {
@@ -70,7 +87,9 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 		if (overrideAnimation) {
 			data.putBoolean("OverrideCurrentAnimation", false);
 			data.remove("PlayerAnimationProgress");
-			firstPerson = data.getBoolean("FirstPersonAnimation");
+			data.remove("LastAnimationProgress");
+			data.remove("PlayedSoundTimes");
+			firstPerson = data.getBoolean("FirstPersonAnimation") && mc.options.getCameraType().isFirstPerson() && player == mc.player && (mc.screen == null || mc.screen instanceof ChatScreen);
 			PowerModPlayerAnimationAPI.active_animations.put(player, null);
 		}
 		PowerModPlayerAnimationAPI.PlayerAnimation animation = PowerModPlayerAnimationAPI.active_animations.get(player);
@@ -83,10 +102,13 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 			PowerModPlayerAnimationAPI.active_animations.put(player, animation);
 		}
 		float animationProgress;
+		float lastAnimationProgress = data.getFloat("LastAnimationProgress");
+		ListTag playedSoundsTag = data.getList("PlayedSoundTimes", Tag.TAG_FLOAT);
 		if (!data.contains("PlayerAnimationProgress")) {
 			animationProgress = 0f;
 			data.putFloat("PlayerAnimationProgress", animationProgress);
 			data.putFloat("LastTickTime", ageInTicks);
+			data.putFloat("LastAnimationProgress", 0f);
 		} else {
 			animationProgress = data.getFloat("PlayerAnimationProgress");
 			float lastTickTime = data.getFloat("LastTickTime");
@@ -98,17 +120,57 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 				if (!animation.hold_on_last_frame && !animation.loop) {
 					data.remove("PlayerCurrentAnimation");
 					data.remove("PlayerAnimationProgress");
+					data.remove("LastAnimationProgress");
+					data.remove("PlayedSoundTimes");
 					data.putBoolean("ResetPlayerAnimation", true);
 					data.putBoolean("FirstPersonAnimation", false);
 					PowerModPlayerAnimationAPI.active_animations.put(player, null);
 					animationProgress = animation.length;
+					player.noCulling = false;
 				} else if (animation.hold_on_last_frame) {
 					data.putFloat("PlayerAnimationProgress", animation.length);
 				} else if (animation.loop) {
 					data.remove("PlayerAnimationProgress");
+					data.remove("LastAnimationProgress");
+					data.remove("PlayedSoundTimes");
+					lastAnimationProgress = animationProgress;
+					playedSoundsTag = new ListTag();
 				}
 			}
 		}
+		if (!animation.soundEffects.isEmpty()) {
+			Set<Float> playedSoundTimes = new HashSet<>();
+			for (int i = 0; i < playedSoundsTag.size(); i++) {
+				playedSoundTimes.add(playedSoundsTag.getFloat(i));
+			}
+			// Play any sound keyframes
+			for (Map.Entry<Float, String> soundEntry : animation.soundEffects.entrySet()) {
+				float soundTime = soundEntry.getKey();
+				String soundId = soundEntry.getValue();
+				if (playedSoundTimes.contains(soundTime)) {
+					continue;
+				}
+				boolean shouldPlay = false;
+				if (lastAnimationProgress <= animationProgress) {
+					shouldPlay = lastAnimationProgress <= soundTime && animationProgress >= soundTime;
+				} else {
+					shouldPlay = lastAnimationProgress <= soundTime || animationProgress >= soundTime;
+				}
+				if (shouldPlay && player.level() instanceof ClientLevel clientLevel) {
+					mc.getSoundManager().play(new EntityBoundSoundInstance(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse(soundId)), SoundSource.NEUTRAL, 1.0F, 1.0F, player, player.level().random.nextLong()) {
+						@Override
+						public boolean isLooping() {
+							return false;
+						}
+					});
+					playedSoundsTag.add(FloatTag.valueOf(soundTime));
+				}
+			}
+			data.put("PlayedSoundTimes", playedSoundsTag);
+			data.putFloat("LastAnimationProgress", animationProgress);
+		}
+		if (!data.getBoolean("FirstPersonAnimation") && mc.options.getCameraType().isFirstPerson() && player == mc.player && (mc.screen == null || mc.screen instanceof ChatScreen))
+			return;
 		// Apply each bone's transformations
 		for (Map.Entry<String, PowerModPlayerAnimationAPI.PlayerBone> entry : animation.bones.entrySet()) {
 			String boneName = entry.getKey();
@@ -117,14 +179,14 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 			if (modelPart == null)
 				continue;
 			// Apply rotation
-			Vec3 rotation = PowerModPlayerAnimationAPI.PlayerBone.interpolate(bone.rotations, animationProgress);
+			Vec3 rotation = PowerModPlayerAnimationAPI.PlayerBone.interpolate(bone.rotations, animationProgress, player);
 			if (rotation != null) {
 				modelPart.xRot = (float) Math.toRadians(rotation.x);
 				modelPart.yRot = (float) Math.toRadians(rotation.y);
 				modelPart.zRot = (float) Math.toRadians(rotation.z);
 			}
 			// Apply position (don't apply if null - keep default position)
-			Vec3 position = PowerModPlayerAnimationAPI.PlayerBone.interpolate(bone.positions, animationProgress);
+			Vec3 position = PowerModPlayerAnimationAPI.PlayerBone.interpolate(bone.positions, animationProgress, player);
 			if (position != null) {
 				// Position offsets are relative, not absolute
 				modelPart.x += (float) position.x;
@@ -132,7 +194,7 @@ public abstract class PlayerAnimationMixin<T extends LivingEntity> {
 				modelPart.z += (float) position.z;
 			}
 			// Apply scale
-			Vec3 scale = PowerModPlayerAnimationAPI.PlayerBone.interpolate(bone.scales, animationProgress);
+			Vec3 scale = PowerModPlayerAnimationAPI.PlayerBone.interpolate(bone.scales, animationProgress, player);
 			if (scale != null) {
 				modelPart.xScale = (float) scale.x;
 				modelPart.yScale = (float) scale.y;

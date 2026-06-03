@@ -20,15 +20,34 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import com.google.common.collect.ImmutableMap;
+
 import com.esmods.keepersofthestonestwo.procedures.CursedLadderRotationProcedure;
 
 public class CursedLadderBlock extends Block implements SimpleWaterloggedBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public CursedLadderBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.TUFF).strength(2.5f, 3f).requiresCorrectToolForDrops().noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
+		super(BlockBehaviour.Properties.of().sound(SoundType.TUFF).strength(2.5f, 3f).requiresCorrectToolForDrops().noCollission().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+	}
+
+	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
+		return this.getShapeForEachState(state -> {
+			return switch (state.getValue(FACING)) {
+				default -> box(0, 0, 0.2, 16, 16, 0.6);
+				case NORTH -> box(0, 0, 15.4, 16, 16, 15.8);
+				case EAST -> box(0.2, 0, 0, 0.6, 16, 16);
+				case WEST -> box(15.4, 0, 0, 15.8, 16, 16);
+			};
+		});
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return shapes.get(state);
 	}
 
 	@Override
@@ -38,22 +57,12 @@ public class CursedLadderBlock extends Block implements SimpleWaterloggedBlock {
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
+		return propagatesSkylightDown(state, worldIn, pos) ? 0 : 1;
 	}
 
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return switch (state.getValue(FACING)) {
-			default -> box(0, 0, 0.2, 16, 16, 0.6);
-			case NORTH -> box(0, 0, 15.4, 16, 16, 15.8);
-			case EAST -> box(0.2, 0, 0, 0.6, 16, 16);
-			case WEST -> box(15.4, 0, 0, 15.8, 16, 16);
-		};
 	}
 
 	@Override

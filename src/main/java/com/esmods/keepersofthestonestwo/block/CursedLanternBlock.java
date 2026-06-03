@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.block;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -25,22 +23,33 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import com.google.common.collect.ImmutableMap;
+
 import com.esmods.keepersofthestonestwo.procedures.CursedLanternTopProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CursedLanternAfterAddedProcedure;
 
 public class CursedLanternBlock extends Block implements SimpleWaterloggedBlock {
-	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
+	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public CursedLanternBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.TUFF).strength(2.5f, 3f).lightLevel(s -> (new Object() {
-			public int getLightLevel() {
-				if (s.getValue(BLOCKSTATE) == 1)
-					return 13;
-				return 13;
+		super(BlockBehaviour.Properties.of().sound(SoundType.TUFF).strength(2.5f, 3f).lightLevel(blockstate -> 13).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		this.registerDefaultState(this.stateDefinition.any().setValue(BLOCKSTATE, 0).setValue(WATERLOGGED, false));
+	}
+
+	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
+		return this.getShapeForEachState(state -> {
+			if (state.getValue(BLOCKSTATE) == 1) {
+				return box(5.5, 0, 5.5, 10.5, 9, 10.5);
 			}
-		}.getLightLevel())).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape());
-		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
+			return box(5.5, 1, 5.5, 10.5, 10, 10.5);
+		});
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return shapes.get(state);
 	}
 
 	@Override
@@ -50,7 +59,7 @@ public class CursedLanternBlock extends Block implements SimpleWaterloggedBlock 
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
+		return propagatesSkylightDown(state, worldIn, pos) ? 0 : 1;
 	}
 
 	@Override
@@ -59,23 +68,15 @@ public class CursedLanternBlock extends Block implements SimpleWaterloggedBlock 
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		if (state.getValue(BLOCKSTATE) == 1) {
-			return box(5.5, 0, 5.5, 10.5, 9, 10.5);
-		}
-		return box(5.5, 1, 5.5, 10.5, 10, 10.5);
-	}
-
-	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
-		builder.add(WATERLOGGED, BLOCKSTATE);
+		builder.add(BLOCKSTATE, WATERLOGGED);
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
 		boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
-		return super.getStateForPlacement(context).setValue(WATERLOGGED, flag);
+		return super.getStateForPlacement(context).setValue(BLOCKSTATE, 0).setValue(WATERLOGGED, flag);
 	}
 
 	@Override

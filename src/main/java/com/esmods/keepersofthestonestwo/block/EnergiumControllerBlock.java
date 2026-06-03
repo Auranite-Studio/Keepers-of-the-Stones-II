@@ -1,9 +1,5 @@
 package com.esmods.keepersofthestonestwo.block;
 
-import org.checkerframework.checker.units.qual.s;
-
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -27,33 +23,12 @@ import com.esmods.keepersofthestonestwo.procedures.EnergiumControllerRiedstounVk
 import com.esmods.keepersofthestonestwo.procedures.EnergiumControllerObnovlieniieTikaProcedure;
 
 public class EnergiumControllerBlock extends Block {
-	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 
 	public EnergiumControllerBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(6.75f, 5f).lightLevel(s -> (new Object() {
-			public int getLightLevel() {
-				if (s.getValue(BLOCKSTATE) == 1)
-					return 0;
-				return 0;
-			}
-		}.getLightLevel())).requiresCorrectToolForDrops().dynamicShape());
-		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return switch (state.getValue(FACING)) {
-			default -> box(0, 0, 0, 16, 16, 16);
-			case NORTH -> box(0, 0, 0, 16, 16, 16);
-			case EAST -> box(0, 0, 0, 16, 16, 16);
-			case WEST -> box(0, 0, 0, 16, 16, 16);
-		};
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(6.75f, 5f).requiresCorrectToolForDrops());
+		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(BLOCKSTATE, 0));
 	}
 
 	@Override
@@ -64,7 +39,7 @@ public class EnergiumControllerBlock extends Block {
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite());
+		return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(BLOCKSTATE, 0);
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {

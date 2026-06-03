@@ -1,10 +1,10 @@
 {
   "variants": {
+    "blockstate=1": {
+      "model": "power:block/cursed_lantern_0"
+    },
     "blockstate=0": {
       "model": "power:block/cursed_lantern"
-    },
-    "blockstate=1": {
-      "model": "power:block/cursed_lantern_blockstates_blockstate_0"
     }
   }
 }

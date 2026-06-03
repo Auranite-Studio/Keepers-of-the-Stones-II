@@ -1094,5 +1094,11 @@
   "curios.identifier.blue_rune": "蓝色符文",
   "curios.identifier.red_rune": "红色符文",
   "curios.identifier.green_rune": "绿色符文",
-  "block.power.tears_flower": "花的眼泪"
+  "block.power.tears_flower": "花的眼泪",
+  "power.configuration.additional_features": "additional_features",
+  "power.configuration.limit_number_stones": "limit_number_stones",
+  "power.configuration.first_join_stones_distribution": "first_join_stones_distribution",
+  "power.configuration.one_player_limit_stones": "one_player_limit_stones",
+  "power.configuration.stone_distribution_settings": "stone_distribution_settings",
+  "power.configuration.enable_levels": "enable_levels"
 }

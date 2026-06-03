@@ -37,10 +37,16 @@ import com.esmods.keepersofthestonestwo.block.entity.KeepersBoxBlockEntity;
 
 public class KeepersBoxBlock extends Block implements SimpleWaterloggedBlock, EntityBlock {
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+	private static final VoxelShape SHAPE = box(2, 0, 2, 14, 12, 14);
 
 	public KeepersBoxBlock() {
 		super(BlockBehaviour.Properties.of().strength(2.5f, 5000f).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return SHAPE;
 	}
 
 	@Override
@@ -50,17 +56,12 @@ public class KeepersBoxBlock extends Block implements SimpleWaterloggedBlock, En
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
+		return propagatesSkylightDown(state, worldIn, pos) ? 0 : 1;
 	}
 
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return box(2, 0, 2, 14, 12, 14);
 	}
 
 	@Override

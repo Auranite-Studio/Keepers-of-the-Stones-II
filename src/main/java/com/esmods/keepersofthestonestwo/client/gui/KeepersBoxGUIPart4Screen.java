@@ -38,6 +38,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 	private ImageButton imagebutton_mushrooms_element;
 	private ImageButton imagebutton_mercury_element;
 	private ImageButton imagebutton_plague_element;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("power:textures/screens/keepers_box_gui_part_4.png");
 
 	public KeepersBoxGUIPart4Screen(KeepersBoxGUIPart4Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -129,7 +130,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/keepers_box_gui_part_4.png"), this.leftPos + 5, this.topPos + -34, 0, 0, 240, 260, 240, 260);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 5, this.topPos + -34, 0, 0, 240, 260, 240, 260);
 		RenderSystem.disableBlend();
 	}
 

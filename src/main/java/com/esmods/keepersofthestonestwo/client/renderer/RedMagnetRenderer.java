@@ -8,12 +8,14 @@ import com.esmods.keepersofthestonestwo.entity.RedMagnetEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelmagnet;
 
 public class RedMagnetRenderer extends MobRenderer<RedMagnetEntity, Modelmagnet<RedMagnetEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("power:textures/entities/magnet_red.png");
+
 	public RedMagnetRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelmagnet<RedMagnetEntity>(context.bakeLayer(Modelmagnet.LAYER_LOCATION)), 0.2f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(RedMagnetEntity entity) {
-		return ResourceLocation.parse("power:textures/entities/magnet_red.png");
+		return entityTexture;
 	}
 }

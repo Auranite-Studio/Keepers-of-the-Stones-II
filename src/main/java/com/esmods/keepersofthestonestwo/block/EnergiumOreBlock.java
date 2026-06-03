@@ -6,7 +6,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.BlockPos;
 
@@ -15,11 +14,6 @@ import com.esmods.keepersofthestonestwo.procedures.EnergiumOreClickProcedure;
 public class EnergiumOreBlock extends Block {
 	public EnergiumOreBlock() {
 		super(BlockBehaviour.Properties.of().strength(6.25f, 225f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
 	}
 
 	@Override

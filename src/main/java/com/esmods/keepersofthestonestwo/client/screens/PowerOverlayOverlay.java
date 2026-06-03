@@ -22,6 +22,8 @@ import com.esmods.keepersofthestonestwo.procedures.GetActiveProcedure;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class PowerOverlayOverlay {
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("power:textures/screens/star_points_overlay.png");
+
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
 		int w = event.getGuiGraphics().guiWidth();
@@ -44,7 +46,7 @@ public class PowerOverlayOverlay {
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (GetActiveProcedure.execute(entity)) {
-			event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_points_overlay.png"), 2, 28, 0, 0, 59, 20, 59, 20);
+			event.getGuiGraphics().blit(IMAGE_0, 2, 28, 0, 0, 59, 20, 59, 20);
 
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 

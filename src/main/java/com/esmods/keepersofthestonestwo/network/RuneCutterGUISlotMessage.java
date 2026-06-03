@@ -13,7 +13,7 @@ import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.core.BlockPos;
+import net.minecraft.core.SectionPos;
 
 import com.esmods.keepersofthestonestwo.procedures.RemoveWhenRuneIsCuttedProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -47,7 +47,7 @@ public record RuneCutterGUISlotMessage(int slotID, int x, int y, int z, int chan
 	public static void handleSlotAction(Player entity, int slot, int changeType, int meta, int x, int y, int z) {
 		Level world = entity.level();
 		// security measure to prevent arbitrary chunk generation
-		if (!world.hasChunkAt(new BlockPos(x, y, z)))
+		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
 		if (slot == 2 && changeType == 1) {
 			int amount = meta;

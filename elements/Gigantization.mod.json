@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Gigantization",
@@ -18,6 +18,7 @@
     "isCuredbyHoney": false,
     "modifiers": [
       {
+        "equipmentSlot": "any",
         "attribute": {
           "value": "SCALE"
         },
@@ -25,6 +26,7 @@
         "operation": "ADD_VALUE"
       },
       {
+        "equipmentSlot": "any",
         "attribute": {
           "value": "MOVEMENT_SPEED"
         },
@@ -32,6 +34,7 @@
         "operation": "ADD_VALUE"
       },
       {
+        "equipmentSlot": "any",
         "attribute": {
           "value": "STEP_HEIGHT"
         },
@@ -39,6 +42,7 @@
         "operation": "ADD_VALUE"
       },
       {
+        "equipmentSlot": "any",
         "attribute": {
           "value": "ENTITY_REACH"
         },
@@ -46,6 +50,7 @@
         "operation": "ADD_VALUE"
       },
       {
+        "equipmentSlot": "any",
         "attribute": {
           "value": "BLOCK_REACH"
         },
@@ -53,6 +58,7 @@
         "operation": "ADD_VALUE"
       },
       {
+        "equipmentSlot": "any",
         "attribute": {
           "value": "JUMP_STRENGTH"
         },

@@ -6,7 +6,6 @@ import net.neoforged.neoforge.event.EventHooks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -195,7 +194,7 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob {
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return Ingredient.of().test(stack);
+		return false;
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {

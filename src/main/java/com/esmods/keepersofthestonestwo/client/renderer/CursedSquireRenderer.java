@@ -11,13 +11,15 @@ import com.esmods.keepersofthestonestwo.client.model.animations.cursed_squireAni
 import com.esmods.keepersofthestonestwo.client.model.Modelcursed_squire;
 
 public class CursedSquireRenderer extends MobRenderer<CursedSquireEntity, Modelcursed_squire<CursedSquireEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("power:textures/entities/cursed_squire.png");
+
 	public CursedSquireRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modelcursed_squire.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(CursedSquireEntity entity) {
-		return ResourceLocation.parse("power:textures/entities/cursed_squire.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends Modelcursed_squire<CursedSquireEntity> {

@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.block;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -25,17 +23,36 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import com.google.common.collect.ImmutableMap;
+
 import com.esmods.keepersofthestonestwo.procedures.OrangePortalTeleportingProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OrangePortalDestroyedProcedure;
 
 public class OrangePortalBlock extends Block implements SimpleWaterloggedBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public OrangePortalBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GLASS).strength(3.25f, 10000f).lightLevel(s -> 10).requiresCorrectToolForDrops().noCollission().noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
+		super(BlockBehaviour.Properties.of().sound(SoundType.GLASS).strength(3.25f, 10000f).lightLevel(blockstate -> 10).requiresCorrectToolForDrops().noCollission().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
 				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+	}
+
+	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
+		return this.getShapeForEachState(state -> {
+			return switch (state.getValue(FACING)) {
+				default -> box(0, 0, 1, 16, 32, 2);
+				case NORTH -> box(0, 0, 14, 16, 32, 15);
+				case EAST -> box(1, 0, 0, 2, 32, 16);
+				case WEST -> box(14, 0, 0, 15, 32, 16);
+			};
+		});
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return shapes.get(state);
 	}
 
 	@Override
@@ -45,22 +62,12 @@ public class OrangePortalBlock extends Block implements SimpleWaterloggedBlock {
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
+		return propagatesSkylightDown(state, worldIn, pos) ? 0 : 1;
 	}
 
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return switch (state.getValue(FACING)) {
-			default -> box(0, 0, 1, 16, 32, 2);
-			case NORTH -> box(0, 0, 14, 16, 32, 15);
-			case EAST -> box(1, 0, 0, 2, 32, 16);
-			case WEST -> box(14, 0, 0, 15, 32, 16);
-		};
 	}
 
 	@Override

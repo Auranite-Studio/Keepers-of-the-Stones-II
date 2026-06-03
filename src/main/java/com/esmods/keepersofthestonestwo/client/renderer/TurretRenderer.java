@@ -13,6 +13,8 @@ import com.esmods.keepersofthestonestwo.client.model.animations.turretAnimation;
 import com.esmods.keepersofthestonestwo.client.model.Modelturret;
 
 public class TurretRenderer extends MobRenderer<TurretEntity, Modelturret<TurretEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("power:textures/entities/turret.png");
+
 	public TurretRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modelturret.LAYER_LOCATION)), 0.5f);
 	}
@@ -24,7 +26,7 @@ public class TurretRenderer extends MobRenderer<TurretEntity, Modelturret<Turret
 
 	@Override
 	public ResourceLocation getTextureLocation(TurretEntity entity) {
-		return ResourceLocation.parse("power:textures/entities/turret.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends Modelturret<TurretEntity> {

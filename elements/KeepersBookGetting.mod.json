@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "function",
   "definition": {
     "code": "give @s patchouli:guide_book[patchouli:book=\"power:keeper_book\"]",

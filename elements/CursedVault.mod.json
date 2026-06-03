@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "block",
   "definition": {
     "texture": "cursed_vault_front_off",
@@ -14,10 +14,61 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "states": [
+      {
+        "texture": "cursed_vault_front_on",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "vault:activated",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 2,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 1
+          }
+        ]
+      },
+      {
+        "texture": "cursed_vault_front_ejecting",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "vault:ejected",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 2,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 2
+          }
+        ]
+      }
+    ],
     "animations": [],
     "itemTexture": "",
     "particleTexture": "",
     "blockSetType": "OAK",
+    "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -35,7 +86,15 @@
         "subtract": false
       }
     ],
-    "customProperties": [],
+    "customProperties": [
+      {
+        "min": 0,
+        "max": 2,
+        "name": "CUSTOM:blockstate",
+        "type": "integer",
+        "value": 0
+      }
+    ],
     "name": "Cursed Vault",
     "specialInformation": {
       "fixedValue": []
@@ -65,6 +124,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
+    "hasCustomOpacity": true,
     "lightOpacity": 0,
     "tickRate": 1,
     "tickRandomly": false,
@@ -108,7 +168,9 @@
     "stepSound": {
       "value": "block.vault.step"
     },
-    "luminance": 6,
+    "luminance": {
+      "fixedValue": 6.0
+    },
     "unbreakable": false,
     "vanillaToolTier": "DIAMOND",
     "isBonemealable": false,

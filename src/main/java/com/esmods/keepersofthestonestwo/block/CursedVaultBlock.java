@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.block;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.common.util.DeferredSoundType;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -36,24 +34,16 @@ import com.esmods.keepersofthestonestwo.procedures.CursedVaultTickUpdateProcedur
 import com.esmods.keepersofthestonestwo.block.entity.CursedVaultBlockEntity;
 
 public class CursedVaultBlock extends Block implements EntityBlock {
-	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 2);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 2);
 
 	public CursedVaultBlock() {
 		super(BlockBehaviour.Properties.of()
 				.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.break")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.step")),
 						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.place")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.hit")),
 						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.fall"))))
-				.strength(50f).lightLevel(s -> (new Object() {
-					public int getLightLevel() {
-						if (s.getValue(BLOCKSTATE) == 1)
-							return 12;
-						if (s.getValue(BLOCKSTATE) == 2)
-							return 12;
-						return 6;
-					}
-				}.getLightLevel())).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.IGNORE).isRedstoneConductor((bs, br, bp) -> false).dynamicShape());
-		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+				.strength(50f).lightLevel(blockstate -> 6).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.IGNORE).isRedstoneConductor((bs, br, bp) -> false));
+		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(BLOCKSTATE, 0));
 	}
 
 	@Override
@@ -72,16 +62,6 @@ public class CursedVaultBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return switch (state.getValue(FACING)) {
-			default -> box(0, 0, 0, 16, 16, 16);
-			case NORTH -> box(0, 0, 0, 16, 16, 16);
-			case EAST -> box(0, 0, 0, 16, 16, 16);
-			case WEST -> box(0, 0, 0, 16, 16, 16);
-		};
-	}
-
-	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
 		builder.add(FACING, BLOCKSTATE);
@@ -89,7 +69,7 @@ public class CursedVaultBlock extends Block implements EntityBlock {
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite());
+		return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(BLOCKSTATE, 0);
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {

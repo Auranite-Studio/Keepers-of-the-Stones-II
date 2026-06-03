@@ -12,6 +12,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.chunk.LevelChunk;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -269,7 +270,7 @@ public class RenderItemInEnergiumVaultsProcedure {
 							positiony = _blockEntityEntry.getKey().getY();
 							positionz = _blockEntityEntry.getKey().getZ();
 							if ((world.getBlockState(new BlockPos(positionx, positiony, positionz))).getBlock() == PowerModBlocks.ENERGIUM_VAULT.get()) {
-								if (((world.getBlockState(new BlockPos(positionx, positiony, positionz))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip9
+								if ((getPropertyByName((world.getBlockState(new BlockPos(positionx, positiony, positionz))), "blockstate") instanceof IntegerProperty _getip9
 										? (world.getBlockState(new BlockPos(positionx, positiony, positionz))).getValue(_getip9)
 										: -1) == 1) {
 									renderItem(new ItemStack(PowerModItems.ENERGIUM_UPGRADE_SMITHING_TEMPLATE.get()), (positionx + 0.5), (positiony + 0.5), (positionz + 0.5), (float) PowerModVariables.WorldVariables.get(world).entity_rotation, -30,
@@ -281,5 +282,14 @@ public class RenderItemInEnergiumVaultsProcedure {
 				}
 			}
 		}
+	}
+
+	private static Property<?> getPropertyByName(BlockState state, String name) {
+		for (Property<?> property : state.getProperties()) {
+			if (property.getName().equals(name)) {
+				return property;
+			}
+		}
+		return null;
 	}
 }

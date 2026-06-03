@@ -37,6 +37,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 	private ImageButton imagebutton_electrical_discharges;
 	private ImageButton imagebutton_lightning_strike;
 	private ImageButton imagebutton_ball_lightning;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png");
 
 	public WheelAbilitiesLightningScreen(WheelAbilitiesLightningMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -87,7 +88,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 		RenderSystem.disableBlend();
 	}
 

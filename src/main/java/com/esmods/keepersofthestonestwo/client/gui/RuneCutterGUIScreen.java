@@ -19,6 +19,8 @@ public class RuneCutterGUIScreen extends AbstractContainerScreen<RuneCutterGUIMe
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("power:textures/screens/rune_cutter_gui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("power:textures/screens/rune_cutter_gui_arrow.png");
 
 	public RuneCutterGUIScreen(RuneCutterGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,9 +50,9 @@ public class RuneCutterGUIScreen extends AbstractContainerScreen<RuneCutterGUIMe
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rune_cutter_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 		if (RuneCutterValidRecipeProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("power:textures/screens/rune_cutter_gui_arrow.png"), this.leftPos + 77, this.topPos + 29, 0, 0, 20, 23, 20, 23);
+			guiGraphics.blit(IMAGE_1, this.leftPos + 77, this.topPos + 29, 0, 0, 20, 23, 20, 23);
 		}
 		RenderSystem.disableBlend();
 	}

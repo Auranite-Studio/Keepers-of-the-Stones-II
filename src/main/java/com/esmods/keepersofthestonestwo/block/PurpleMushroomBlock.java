@@ -31,7 +31,7 @@ public class PurpleMushroomBlock extends Block implements SimpleWaterloggedBlock
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public PurpleMushroomBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.FUNGUS).strength(1f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).replaceable());
+		super(BlockBehaviour.Properties.of().sound(SoundType.FUNGUS).strength(1f).noCollission().isRedstoneConductor((bs, br, bp) -> false).replaceable());
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
@@ -42,7 +42,7 @@ public class PurpleMushroomBlock extends Block implements SimpleWaterloggedBlock
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
+		return propagatesSkylightDown(state, worldIn, pos) ? 0 : 1;
 	}
 
 	@Override

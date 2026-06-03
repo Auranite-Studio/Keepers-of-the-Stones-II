@@ -5,7 +5,6 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 public class PowerConfigConfiguration {
 	public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 	public static final ModConfigSpec SPEC;
-
 	public static final ModConfigSpec.ConfigValue<Boolean> FIRST_JOIN_STONES_DISTRIBUTION;
 	public static final ModConfigSpec.ConfigValue<Boolean> ONE_PLAYER_LIMIT_STONES;
 	public static final ModConfigSpec.ConfigValue<Boolean> LIMIT_NUMBER_STONES;

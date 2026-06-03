@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "tool",
   "definition": {
     "toolType": "Shield",
@@ -9,6 +9,7 @@
     "customModelName": "power_shield:default",
     "blockingModelName": "blocking_power_shield:default",
     "name": "Energium Shield",
+    "rarity": "COMMON",
     "specialInformation": {
       "fixedValue": []
     },
@@ -33,6 +34,7 @@
     "immuneToFire": false,
     "blockDropsTier": "WOOD",
     "blocksAffected": [],
+    "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onItemInInventoryTick": {

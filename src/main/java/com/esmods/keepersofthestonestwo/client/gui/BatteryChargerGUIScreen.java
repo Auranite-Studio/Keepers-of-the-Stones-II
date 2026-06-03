@@ -20,6 +20,8 @@ public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChar
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("power:textures/screens/battery_charger_gui.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("power:textures/screens/battery_charger_progress.png");
 
 	public BatteryChargerGUIScreen(BatteryChargerGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -49,8 +51,8 @@ public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChar
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/battery_charger_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/battery_charger_progress.png"), this.leftPos + 38, this.topPos + 15, 0, Mth.clamp((int) BatteryChargerProgressv2Procedure.execute(world, x, y, z) * 8, 0, 800), 100, 8, 100, 808);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(SPRITE_0, this.leftPos + 38, this.topPos + 15, 0, Mth.clamp((int) BatteryChargerProgressv2Procedure.execute(world, x, y, z) * 8, 0, 800), 100, 8, 100, 808);
 		RenderSystem.disableBlend();
 	}
 

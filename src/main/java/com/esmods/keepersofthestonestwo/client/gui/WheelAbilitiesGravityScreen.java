@@ -37,6 +37,7 @@ public class WheelAbilitiesGravityScreen extends AbstractContainerScreen<WheelAb
 	private ImageButton imagebutton_gravity_wave;
 	private ImageButton imagebutton_telekinesis;
 	private ImageButton imagebutton_gravity_denial;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png");
 
 	public WheelAbilitiesGravityScreen(WheelAbilitiesGravityMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -87,7 +88,7 @@ public class WheelAbilitiesGravityScreen extends AbstractContainerScreen<WheelAb
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 		RenderSystem.disableBlend();
 	}
 

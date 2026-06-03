@@ -232,6 +232,27 @@ public class SpiritEntity extends TamableAnimal {
 	}
 
 	@Override
+	public void travel(Vec3 dir) {
+		this.travelFlying(dir);
+	}
+
+	private void travelFlying(Vec3 dir) {
+		if (this.isInWater()) {
+			this.moveRelative(0.02F, dir);
+			this.move(MoverType.SELF, this.getDeltaMovement());
+			this.setDeltaMovement(this.getDeltaMovement().scale(0.8));
+		} else if (this.isInLava()) {
+			this.moveRelative(0.02F, dir);
+			this.move(MoverType.SELF, this.getDeltaMovement());
+			this.setDeltaMovement(this.getDeltaMovement().scale(0.5));
+		} else {
+			this.moveRelative((float) this.getAttributeValue(Attributes.FLYING_SPEED), dir);
+			this.move(MoverType.SELF, this.getDeltaMovement());
+			this.setDeltaMovement(this.getDeltaMovement().scale(0.91));
+		}
+	}
+
+	@Override
 	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
 	}
 

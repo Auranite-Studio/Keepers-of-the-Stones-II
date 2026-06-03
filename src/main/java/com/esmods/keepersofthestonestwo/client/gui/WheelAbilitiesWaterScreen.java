@@ -37,6 +37,7 @@ public class WheelAbilitiesWaterScreen extends AbstractContainerScreen<WheelAbil
 	private ImageButton imagebutton_water_stream;
 	private ImageButton imagebutton_water_shock;
 	private ImageButton imagebutton_healing_water;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png");
 
 	public WheelAbilitiesWaterScreen(WheelAbilitiesWaterMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -87,7 +88,7 @@ public class WheelAbilitiesWaterScreen extends AbstractContainerScreen<WheelAbil
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 		RenderSystem.disableBlend();
 	}
 

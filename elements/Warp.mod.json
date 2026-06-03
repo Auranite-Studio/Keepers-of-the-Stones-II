@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Warp",
@@ -15,6 +15,7 @@
     "isCuredbyHoney": false,
     "modifiers": [
       {
+        "equipmentSlot": "any",
         "attribute": {
           "value": "SCALE"
         },

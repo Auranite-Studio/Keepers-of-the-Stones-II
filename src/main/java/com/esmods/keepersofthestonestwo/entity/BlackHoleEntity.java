@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo.entity;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
@@ -152,6 +153,27 @@ public class BlackHoleEntity extends PathfinderMob {
 
 	@Override
 	protected void pushEntities() {
+	}
+
+	@Override
+	public void travel(Vec3 dir) {
+		this.travelFlying(dir);
+	}
+
+	private void travelFlying(Vec3 dir) {
+		if (this.isInWater()) {
+			this.moveRelative(0.02F, dir);
+			this.move(MoverType.SELF, this.getDeltaMovement());
+			this.setDeltaMovement(this.getDeltaMovement().scale(0.8));
+		} else if (this.isInLava()) {
+			this.moveRelative(0.02F, dir);
+			this.move(MoverType.SELF, this.getDeltaMovement());
+			this.setDeltaMovement(this.getDeltaMovement().scale(0.5));
+		} else {
+			this.moveRelative((float) this.getAttributeValue(Attributes.FLYING_SPEED), dir);
+			this.move(MoverType.SELF, this.getDeltaMovement());
+			this.setDeltaMovement(this.getDeltaMovement().scale(0.91));
+		}
 	}
 
 	@Override

@@ -36,7 +36,7 @@ public class PoisonBowItem extends Item {
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = InteractionResultHolder.fail(entity.getItemInHand(hand));
 		if (entity.getAbilities().instabuild || findAmmo(entity) != ItemStack.EMPTY) {
-			ar = InteractionResultHolder.success(entity.getItemInHand(hand));
+			ar = InteractionResultHolder.consume(entity.getItemInHand(hand));
 			entity.startUsingItem(hand);
 		}
 		return ar;

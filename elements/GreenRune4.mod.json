@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "curiosbauble",
   "definition": {
     "item": "InvisibilityRune",
@@ -26,6 +26,7 @@
     "armsModelPartL": "Empty",
     "armsModelPartR": "Empty",
     "leggingsModelPartL": "Empty",
-    "leggingsModelPartR": "Empty"
+    "leggingsModelPartR": "Empty",
+    "disabledToggles": []
   }
 }

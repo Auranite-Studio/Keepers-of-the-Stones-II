@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Miniaturization",
@@ -15,6 +15,7 @@
     "isCuredbyHoney": false,
     "modifiers": [
       {
+        "equipmentSlot": "any",
         "attribute": {
           "value": "SCALE"
         },
@@ -22,6 +23,7 @@
         "operation": "ADD_VALUE"
       },
       {
+        "equipmentSlot": "any",
         "attribute": {
           "value": "BLOCK_REACH"
         },
@@ -29,6 +31,7 @@
         "operation": "ADD_VALUE"
       },
       {
+        "equipmentSlot": "any",
         "attribute": {
           "value": "ENTITY_REACH"
         },

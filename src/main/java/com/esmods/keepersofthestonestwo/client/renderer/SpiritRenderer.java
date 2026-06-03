@@ -13,6 +13,8 @@ import com.esmods.keepersofthestonestwo.client.model.animations.spiritAnimation;
 import com.esmods.keepersofthestonestwo.client.model.Modelspirit;
 
 public class SpiritRenderer extends MobRenderer<SpiritEntity, Modelspirit<SpiritEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("power:textures/entities/spirit.png");
+
 	public SpiritRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modelspirit.LAYER_LOCATION)), 0.5f);
 	}
@@ -24,7 +26,7 @@ public class SpiritRenderer extends MobRenderer<SpiritEntity, Modelspirit<Spirit
 
 	@Override
 	public ResourceLocation getTextureLocation(SpiritEntity entity) {
-		return ResourceLocation.parse("power:textures/entities/spirit.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends Modelspirit<SpiritEntity> {

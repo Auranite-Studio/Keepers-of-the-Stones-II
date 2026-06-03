@@ -6,19 +6,48 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.Mixin;
 
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.client.renderer.entity.player.PlayerRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.client.player.AbstractClientPlayer;
+import net.minecraft.client.model.PlayerModel;
+import net.minecraft.client.gui.screens.ChatScreen;
 import net.minecraft.client.Minecraft;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
+import com.esmods.keepersofthestonestwo.PowerModPlayerAnimationAPI;
+
 @Mixin(ItemInHandRenderer.class)
 public abstract class ItemInHandRendererMixin {
+	private String master = null;
+	private Minecraft mc = Minecraft.getInstance();
+	private EntityRenderDispatcher dispatcher = null;
+
 	@Inject(method = "renderHandsWithItems", at = @At("HEAD"), cancellable = true)
 	private void renderHandsWithItems(float f, PoseStack poseStack, MultiBufferSource.BufferSource bufferSource, LocalPlayer localPlayer, int i, CallbackInfo ci) {
-		if (localPlayer instanceof Player player && player.getPersistentData().getBoolean("FirstPersonAnimation") && Minecraft.getInstance().player == player) {
-			ci.cancel();
+		if (master == null) {
+			if (!PowerModPlayerAnimationAPI.animations.isEmpty())
+				master = "power";
+			else
+				return;
+		}
+		if (!master.equals("power"))
+			return;
+		if (localPlayer instanceof Player player && mc.player == player && (mc.screen == null || mc.screen instanceof ChatScreen)) {
+			if (dispatcher == null)
+				dispatcher = mc.getEntityRenderDispatcher();
+			CompoundTag playerData = player.getPersistentData();
+			// Hack to make animations progress when in first person without first person mode enabled
+			if (!playerData.getString("PlayerCurrentAnimation").isEmpty() && (!playerData.getBoolean("FirstPersonAnimation") || playerData.getBoolean("ResetPlayerAnimation"))) {
+				PlayerModel model = ((PlayerRenderer) dispatcher.getRenderer((AbstractClientPlayer) player)).getModel();
+				model.setupAnim((AbstractClientPlayer) player, 0, 0, player.tickCount + f, 0, 0);
+			}
+			if (playerData.getBoolean("FirstPersonAnimation"))
+				ci.cancel();
 		}
 	}
 }

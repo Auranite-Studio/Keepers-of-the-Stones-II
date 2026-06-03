@@ -23,6 +23,9 @@ import com.esmods.keepersofthestonestwo.procedures.EthernalCurseProgressGUCheckE
 
 @EventBusSubscriber(Dist.CLIENT)
 public class EthernalCurseProgressGUIOverlay {
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("power:textures/screens/ethernal_curse_progress_line.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("power:textures/screens/ethernal_curse_progress_bar.png");
+
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
 		int w = event.getGuiGraphics().guiWidth();
@@ -45,9 +48,9 @@ public class EthernalCurseProgressGUIOverlay {
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (EthernalCurseProgressGUCheckEffectProcedure.execute(entity)) {
-			event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/ethernal_curse_progress_line.png"), w / 2 + -55, h - 72, 0, 0, 102, 10, 102, 10);
+			event.getGuiGraphics().blit(IMAGE_0, w / 2 + -55, h - 72, 0, 0, 102, 10, 102, 10);
 
-			event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/ethernal_curse_progress_bar.png"), w / 2 + -54, h - 71, 0, Mth.clamp((int) EthernalProgressBarIntProcedure.execute(entity) * 8, 0, 800), 100, 8, 100, 808);
+			event.getGuiGraphics().blit(SPRITE_0, w / 2 + -54, h - 71, 0, Mth.clamp((int) EthernalProgressBarIntProcedure.execute(entity) * 8, 0, 800), 100, 8, 100, 808);
 
 		}
 		RenderSystem.depthMask(true);

@@ -13,6 +13,7 @@ import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.core.SectionPos;
 
 import com.esmods.keepersofthestonestwo.procedures.AbilityUsingKeyPressedProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -47,7 +48,7 @@ public record AbilityUsingKeyMessage(int eventType, int pressedms) implements Cu
 		double y = entity.getY();
 		double z = entity.getZ();
 		// security measure to prevent arbitrary chunk generation
-		if (!world.hasChunkAt(entity.blockPosition()))
+		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
 		if (type == 0) {
 

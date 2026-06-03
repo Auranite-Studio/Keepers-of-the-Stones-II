@@ -20,9 +20,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "power:amplifier_ring"
-            ],
+            "items": "power:amplifier_ring",
             "count": {
               "min": 1,
               "max": 1

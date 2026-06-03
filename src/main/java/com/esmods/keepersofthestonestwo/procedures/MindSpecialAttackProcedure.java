@@ -128,13 +128,14 @@ public class MindSpecialAttackProcedure {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
 					if (!(entity == entityiterator) && new Object() {
 						Entity entityFromStringUUID(String uuid, Level world) {
-							if (world instanceof ServerLevel _serverEntityStringUUID) {
+							Entity _uuidentity = null;
+							if (world instanceof ServerLevel _server) {
 								try {
-									return _serverEntityStringUUID.getEntity(UUID.fromString(uuid));
+									_uuidentity = _server.getEntity(UUID.fromString(uuid));
 								} catch (Exception e) {
 								}
 							}
-							return null;
+							return _uuidentity;
 						}
 					}.entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
@@ -159,13 +160,14 @@ public class MindSpecialAttackProcedure {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
 					if (!(entity == entityiterator) && new Object() {
 						Entity entityFromStringUUID(String uuid, Level world) {
-							if (world instanceof ServerLevel _serverEntityStringUUID) {
+							Entity _uuidentity = null;
+							if (world instanceof ServerLevel _server) {
 								try {
-									return _serverEntityStringUUID.getEntity(UUID.fromString(uuid));
+									_uuidentity = _server.getEntity(UUID.fromString(uuid));
 								} catch (Exception e) {
 								}
 							}
-							return null;
+							return _uuidentity;
 						}
 					}.entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 500);
@@ -189,13 +191,14 @@ public class MindSpecialAttackProcedure {
 				for (Entity entityiterator : new ArrayList<>(world.players())) {
 					if (!(entity == entityiterator) && new Object() {
 						Entity entityFromStringUUID(String uuid, Level world) {
-							if (world instanceof ServerLevel _serverEntityStringUUID) {
+							Entity _uuidentity = null;
+							if (world instanceof ServerLevel _server) {
 								try {
-									return _serverEntityStringUUID.getEntity(UUID.fromString(uuid));
+									_uuidentity = _server.getEntity(UUID.fromString(uuid));
 								} catch (Exception e) {
 								}
 							}
-							return null;
+							return _uuidentity;
 						}
 					}.entityFromStringUUID(entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mind_player_owner, (Level) world) == entity) {
 						{

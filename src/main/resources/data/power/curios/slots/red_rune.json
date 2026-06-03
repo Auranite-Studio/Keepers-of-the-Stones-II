@@ -2,5 +2,6 @@
   "replace": false,
   "size": 1,
   "operation": "SET",
+  "render_toggle": true,
   "icon": "curios:slot/red_slot"
 }

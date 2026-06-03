@@ -11,13 +11,15 @@ import com.esmods.keepersofthestonestwo.client.model.animations.black_holeAnimat
 import com.esmods.keepersofthestonestwo.client.model.Modelblack_hole;
 
 public class BlackHoleRenderer extends MobRenderer<BlackHoleEntity, Modelblack_hole<BlackHoleEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("power:textures/entities/black_hole.png");
+
 	public BlackHoleRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modelblack_hole.LAYER_LOCATION)), 0.2f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(BlackHoleEntity entity) {
-		return ResourceLocation.parse("power:textures/entities/black_hole.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends Modelblack_hole<BlackHoleEntity> {

@@ -11,13 +11,15 @@ import com.esmods.keepersofthestonestwo.client.model.animations.cursed_keeperAni
 import com.esmods.keepersofthestonestwo.client.model.Modelcursed_keeper;
 
 public class CursedKeeperRenderer extends MobRenderer<CursedKeeperEntity, Modelcursed_keeper<CursedKeeperEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("power:textures/entities/cursed_keeper.png");
+
 	public CursedKeeperRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modelcursed_keeper.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(CursedKeeperEntity entity) {
-		return ResourceLocation.parse("power:textures/entities/cursed_keeper.png");
+		return entityTexture;
 	}
 
 	private static final class AnimatedModel extends Modelcursed_keeper<CursedKeeperEntity> {

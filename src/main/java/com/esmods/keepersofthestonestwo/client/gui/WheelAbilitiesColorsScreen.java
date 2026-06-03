@@ -37,6 +37,7 @@ public class WheelAbilitiesColorsScreen extends AbstractContainerScreen<WheelAbi
 	private ImageButton imagebutton_color_ray;
 	private ImageButton imagebutton_white_bomb;
 	private ImageButton imagebutton_colored_aura;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png");
 
 	public WheelAbilitiesColorsScreen(WheelAbilitiesColorsMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -87,7 +88,7 @@ public class WheelAbilitiesColorsScreen extends AbstractContainerScreen<WheelAbi
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 		RenderSystem.disableBlend();
 	}
 
