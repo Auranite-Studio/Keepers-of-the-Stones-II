@@ -1,4 +1,15 @@
 repositories {
+ maven {
+     url = 'https://api.modrinth.com/maven'
+ }
+}
+
+ dependencies {
+    implementation 'maven.modrinth:abloom-api:zqpMSTt4'
+ }
+
+
+repositories {
 maven {
   name = "Illusive Soulworks maven"
   url = "https://maven.theillusivec4.top/"

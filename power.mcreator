@@ -34566,6 +34566,18 @@
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "PowerModElementalProjectiles",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "power_mod_elemental_projectiles",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/PowerModElementalProjectiles.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -40357,6 +40369,10 @@
           {
             "name": "ConvertersModule",
             "children": []
+          },
+          {
+            "name": "AbloomModule",
+            "children": []
           }
         ]
       },
@@ -40977,6 +40993,7 @@
       "cpapi"
     ],
     "mcreatorDependencies": [
+      "abloom_api",
       "curios_api"
     ],
     "currentGenerator": "neoforge-1.21.1",
