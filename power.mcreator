@@ -34578,6 +34578,18 @@
           "src/main/java/com/esmods/keepersofthestonestwo/PowerModElementalProjectiles.java"
         ]
       }
+    },
+    {
+      "name": "PowerModElementalWeapons",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "power_mod_elemental_weapons",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/PowerModElementalWeapons.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -40983,7 +40995,8 @@
     "serverSideOnly": false,
     "modPicture": "logo",
     "requiredMods": [
-      "curios"
+      "curios",
+      "abloom"
     ],
     "dependencies": [
       "bettercombat",
