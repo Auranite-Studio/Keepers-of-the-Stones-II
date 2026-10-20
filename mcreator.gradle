@@ -5,7 +5,7 @@ repositories {
 }
 
  dependencies {
-    implementation 'maven.modrinth:2Aw7aACS:tRY2vLA4'
+    implementation 'maven.modrinth:2Aw7aACS:7ctBrIyk'
  }
 
 

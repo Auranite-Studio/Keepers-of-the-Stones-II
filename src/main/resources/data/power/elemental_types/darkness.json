@@ -1,0 +1,17 @@
+{
+  "element_id": "power:darkness",
+  "override_damage_types": ["power:darkness_dmg"],
+  "color": "0x022027",
+  "element_translation_key": "element.power.darkness",
+  "resonance_translation_key": "resonance.power.darkness",
+  "can_resonance_accumulation": true,
+  "resonance_dmg_multiplier": 3.5,
+  "dispersion_bonus": 0.05,
+  "resonance_effect": {
+    "effect": "abloom:taunt",
+    "config": {
+      "duration": 400,
+      "amplifier": 0
+    }
+  }
+}
