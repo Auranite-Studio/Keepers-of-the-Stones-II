@@ -93,9 +93,6 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> CURSE = REGISTRY.register("curse", () -> new CurseMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> HEAT_MASTER = REGISTRY.register("heat_master", () -> new HeatMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SHOCKWAVE_MASTER = REGISTRY.register("shockwave_master", () -> new ShockwaveMasterMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> PROTECTION = REGISTRY.register("protection", () -> new ProtectionMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> SPIN = REGISTRY.register("spin", () -> new SpinMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> DODGING = REGISTRY.register("dodging", () -> new DodgingMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> DASH = REGISTRY.register("dash", () -> new DashMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> COUNTDOWN = REGISTRY.register("countdown", () -> new CountdownMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> PURIFICATION = REGISTRY.register("purification", () -> new PurificationMobEffect());

@@ -46,7 +46,6 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.MIND_REACTION_PARTICLE.get(), MindReactionParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.LIGHTNING_PARTICLE.get(), LightningParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.SHOCK_WAVES_PARTICLE.get(), ShockWavesParticleParticle::provider);
-		event.registerSpriteSet(PowerModParticleTypes.PROTECTION_PARTICLE.get(), ProtectionParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.CURSED_PORTAL_PARTICLE.get(), CursedPortalParticleParticle::provider);
 	}
 }

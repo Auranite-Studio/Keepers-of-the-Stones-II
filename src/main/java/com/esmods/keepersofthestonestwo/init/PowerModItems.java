@@ -499,11 +499,6 @@ public class PowerModItems {
 	public static final DeferredItem<Item> SHOCKWAVE_ARMOR_BOOTS;
 	public static final DeferredItem<Item> SHOCKWAVE_GUN;
 	public static final DeferredItem<Item> SHOCKWAVE_BATTERY;
-	public static final DeferredItem<Item> PROTECTION_RUNE;
-	public static final DeferredItem<Item> SPIN_RUNE;
-	public static final DeferredItem<Item> DODGING_RUNE;
-	public static final DeferredItem<Item> INVISIBILITY_RUNE;
-	public static final DeferredItem<Item> HEALING_RUNE;
 	public static final DeferredItem<Item> UNKNOWN_RUNE;
 	public static final DeferredItem<Item> CURSED_WORLD;
 	public static final DeferredItem<Item> COLORS_STONE;
@@ -987,11 +982,6 @@ public class PowerModItems {
 		SHOCKWAVE_ARMOR_BOOTS = REGISTRY.register("shockwave_armor_boots", ShockwaveArmorItem.Boots::new);
 		SHOCKWAVE_GUN = REGISTRY.register("shockwave_gun", ShockwaveGunItem::new);
 		SHOCKWAVE_BATTERY = REGISTRY.register("shockwave_battery", ShockwaveBatteryItem::new);
-		PROTECTION_RUNE = REGISTRY.register("protection_rune", ProtectionRuneItem::new);
-		SPIN_RUNE = REGISTRY.register("spin_rune", SpinRuneItem::new);
-		DODGING_RUNE = REGISTRY.register("dodging_rune", DodgingRuneItem::new);
-		INVISIBILITY_RUNE = REGISTRY.register("invisibility_rune", InvisibilityRuneItem::new);
-		HEALING_RUNE = REGISTRY.register("healing_rune", HealingRuneItem::new);
 		UNKNOWN_RUNE = REGISTRY.register("unknown_rune", UnknownRuneItem::new);
 		CURSED_WORLD = REGISTRY.register("cursed_world", CursedWorldItem::new);
 		COLORS_STONE = REGISTRY.register("colors_stone", ColorsStoneItem::new);
