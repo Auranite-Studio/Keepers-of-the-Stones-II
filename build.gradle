@@ -3,8 +3,8 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.107'
 }
 
-version = '1.0.0-beta.38+1.21.1-neoforge'
-base.archivesName = "Abloom-API"
+version = '1.0.0-beta.1+1.21.1-neoforge'
+base.archivesName = "Keepers-of-the-Stones-III"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
@@ -26,13 +26,25 @@ neoForge {
         }
     }
 
-    mods {
-        mcreator {
-            sourceSet sourceSets.main
-        }
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
     }
 }
 
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+repositories {
+    maven {
+        url = 'https://api.modrinth.com/maven'
+    }
+
+    maven {
+        name = "Illusive Soulworks maven"
+        url = "https://maven.theillusivec4.top/"
+    }
 }
+
+dependencies {
+    implementation 'maven.modrinth:2Aw7aACS:JQqGS0vl'
+    runtimeOnly "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1"
+    compileOnly "top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1:api"
+}
+
