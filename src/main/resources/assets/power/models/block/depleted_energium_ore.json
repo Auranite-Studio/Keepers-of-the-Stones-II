@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "power:block/depleted_energium_ore",
-    "particle": "power:block/depleted_energium_ore"
-  },
-  "render_type": "solid"
-}

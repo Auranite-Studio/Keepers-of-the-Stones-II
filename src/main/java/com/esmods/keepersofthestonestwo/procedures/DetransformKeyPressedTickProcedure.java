@@ -128,14 +128,6 @@ public class DetransformKeyPressedTickProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.DARKNESS_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.THIRST_DARK_MASTER);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.CHAOS_DARK_MASTER);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.HORROR_DARK_MASTER);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.FILTH_DARK_MASTER);
-				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.HEAT_MASTER);
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.SHOCKWAVE_MASTER);
@@ -144,22 +136,11 @@ public class DetransformKeyPressedTickProcedure {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.active_power = false;
-					_vars.mergers = 0;
-					_vars.detransform_anim_trigger = true;
-					_vars.transfered_power = false;
 					_vars.markSyncDirty();
 				}
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.power = 0;
-				_vars.fake_element_name_first_timer = 0;
-				_vars.fake_element_name_second_timer = 0;
-				_vars.fake_element_name_third_timer = 0;
-				_vars.fake_element_name_first = "0";
-				_vars.fake_element_name_second = "0";
-				_vars.fake_element_name_third = "0";
-				_vars.ability = "0";
 				_vars.detransf_key_var = false;
 				_vars.markSyncDirty();
 			}

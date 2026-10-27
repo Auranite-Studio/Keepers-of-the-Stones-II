@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/oceanic_trident",
-  "textures": {
-    "1": "power:block/oceanic_trident",
-    "particle": "power:item/oceanic_trident"
-  }
-}

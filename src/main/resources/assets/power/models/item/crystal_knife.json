@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/crystal_knife",
-  "textures": {
-    "0": "power:block/crystal_knife",
-    "particle": "power:item/crystal_knife"
-  }
-}

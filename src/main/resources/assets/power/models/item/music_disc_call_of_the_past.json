@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "power:item/call_of_the_past_music_disc"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "power:custom/blood_sickle",
-  "textures": {
-    "0": "power:block/blood_sickle",
-    "missing": "power:block/blood_sickle",
-    "particle": "power:item/blood_sickle"
-  }
-}

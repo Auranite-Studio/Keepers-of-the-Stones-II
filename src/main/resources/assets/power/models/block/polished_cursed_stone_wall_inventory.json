@@ -1,8 +1,0 @@
-{
-  "parent": "block/wall_inventory",
-  "textures": {
-    "wall": "power:block/polished_cursed_stone",
-    "particle": "power:block/polished_cursed_stone"
-  },
-  "render_type": "solid"
-}

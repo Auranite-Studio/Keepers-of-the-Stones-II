@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/rain_bow",
-  "textures": {
-    "0": "power:block/rain_bow",
-    "particle": "power:item/rain_bow"
-  }
-}

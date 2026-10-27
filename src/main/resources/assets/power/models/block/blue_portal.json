@@ -1,9 +1,0 @@
-{
-  "parent": "power:custom/portal",
-  "textures": {
-    "all": "power:block/blue_portal",
-    "particle": "power:block/blue_portal",
-    "1": "power:block/blue_portal"
-  },
-  "render_type": "cutout_mipped"
-}

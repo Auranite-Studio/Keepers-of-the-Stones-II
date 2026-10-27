@@ -1,8 +1,0 @@
-{
-  "parent": "block/template_wall_side_tall",
-  "textures": {
-    "wall": "power:block/cursed_stone_cracked_bricks",
-    "particle": "power:block/cursed_stone_cracked_bricks"
-  },
-  "render_type": "solid"
-}

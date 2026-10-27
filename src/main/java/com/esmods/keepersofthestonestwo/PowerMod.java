@@ -36,7 +36,10 @@ import it.unimi.dsi.fastutil.ints.IntObjectPair;
 import it.unimi.dsi.fastutil.ints.IntObjectImmutablePair;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.*;
+import com.esmods.keepersofthestonestwo.init.PowerModTabs;
+import com.esmods.keepersofthestonestwo.init.PowerModSounds;
+import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
+import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 @Mod("power")
 public class PowerMod {
@@ -48,21 +51,11 @@ public class PowerMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
-		if (ModList.get().isLoaded("curios")) {
-			modEventBus.addListener(PowerModCuriosCompat::registerCapabilities);
-		}
 		PowerModSounds.REGISTRY.register(modEventBus);
-		PowerModBlocks.REGISTRY.register(modEventBus);
-		PowerModBlockEntities.REGISTRY.register(modEventBus);
 		PowerModItems.REGISTRY.register(modEventBus);
-		PowerModEntities.REGISTRY.register(modEventBus);
 		PowerModTabs.REGISTRY.register(modEventBus);
 		PowerModVariables.ATTACHMENT_TYPES.register(modEventBus);
-		PowerModPotions.REGISTRY.register(modEventBus);
 		PowerModMobEffects.REGISTRY.register(modEventBus);
-		PowerModMenus.REGISTRY.register(modEventBus);
-		PowerModParticleTypes.REGISTRY.register(modEventBus);
-		PowerModVillagerProfessions.PROFESSIONS.register(modEventBus);
 		// Start of user code block mod init
 		modEventBus.addListener(PowerModElementalProjectiles::onCommonSetup);
 		// End of user code block mod init

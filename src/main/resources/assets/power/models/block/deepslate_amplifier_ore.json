@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "power:block/deepslate_amplifier_ore",
-    "particle": "power:block/deepslate_amplifier_ore"
-  },
-  "render_type": "solid"
-}

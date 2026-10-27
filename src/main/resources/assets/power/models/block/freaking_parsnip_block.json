@@ -1,9 +1,0 @@
-{
-  "parent": "power:custom/freaking_parsnip_block",
-  "textures": {
-    "all": "power:block/freaking_parsnip_block",
-    "particle": "power:block/freaking_parsnip_block",
-    "0": "power:block/freaking_parsnip_block"
-  },
-  "render_type": "cutout"
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "power:custom/cursed_lantern_on_block",
-  "textures": {
-    "all": "power:block/cursed_lantern_on_block",
-    "particle": "power:block/cursed_lantern_on_weighs",
-    "0": "power:block/cursed_lantern_on_block"
-  },
-  "render_type": "cutout_mipped"
-}

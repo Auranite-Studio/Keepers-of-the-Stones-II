@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/time_khopesh",
-  "textures": {
-    "0": "power:block/time_khopesh",
-    "particle": "power:item/time_khopesh"
-  }
-}

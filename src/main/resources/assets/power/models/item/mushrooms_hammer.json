@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/mushrooms_hammer",
-  "textures": {
-    "0": "power:block/mushrooms_hammer",
-    "particle": "power:item/mushrooms_hammer"
-  }
-}

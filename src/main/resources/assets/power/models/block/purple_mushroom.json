@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "power:block/purple_mushroom",
-    "particle": "power:block/purple_mushroom"
-  },
-  "render_type": "cutout"
-}

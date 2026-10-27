@@ -1,9 +1,0 @@
-{
-  "parent": "power:custom/keepers_box",
-  "textures": {
-    "all": "power:block/keepers_box",
-    "particle": "power:block/keepers_box",
-    "4": "power:block/keepers_box"
-  },
-  "render_type": "cutout_mipped"
-}

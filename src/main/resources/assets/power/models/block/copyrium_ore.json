@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "power:block/copyrium_ore",
-    "particle": "power:block/copyrium_ore"
-  },
-  "render_type": "solid"
-}

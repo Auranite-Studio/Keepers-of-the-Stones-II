@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "power:block/tears_flower",
-    "particle": "power:block/tears_flower"
-  },
-  "render_type": "cutout"
-}

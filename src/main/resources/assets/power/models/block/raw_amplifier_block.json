@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "power:block/raw_amplifier_block",
-    "particle": "power:block/raw_amplifier_block"
-  },
-  "render_type": "solid"
-}

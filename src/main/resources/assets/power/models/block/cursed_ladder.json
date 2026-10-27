@@ -1,9 +1,0 @@
-{
-  "parent": "power:custom/vine",
-  "textures": {
-    "all": "power:block/cursed_ladder",
-    "particle": "power:block/cursed_ladder",
-    "missing": "power:block/cursed_ladder"
-  },
-  "render_type": "cutout"
-}

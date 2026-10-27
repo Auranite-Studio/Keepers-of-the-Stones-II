@@ -1,10 +1,10 @@
 plugins {
     id 'eclipse'
-    id 'net.neoforged.moddev' version '2.0.141'
+    id 'net.neoforged.moddev' version '2.0.107'
 }
 
-version = '1.0'
-base.archivesName = "modid"
+version = '1.0.0-beta.38+1.21.1-neoforge'
+base.archivesName = "Abloom-API"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
@@ -15,12 +15,6 @@ neoForge {
         client {
             client()
 
-            def mcreatorJvmOptions = System.getenv('MCREATOR_JVM_OPTIONS')
-            if (mcreatorJvmOptions) {
-                mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.each { arg ->
-                    jvmArgument(arg)
-                }
-            }
         }
         server {
             server()
@@ -42,5 +36,3 @@ neoForge {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
-
-apply from: 'mcreator.gradle'

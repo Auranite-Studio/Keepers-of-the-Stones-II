@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/poison_bow",
-  "textures": {
-    "0": "power:block/poison_bow",
-    "particle": "power:item/poison_bow"
-  }
-}
