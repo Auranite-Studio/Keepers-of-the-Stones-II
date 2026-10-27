@@ -57,7 +57,6 @@ public class PowerMod {
 		PowerModVariables.ATTACHMENT_TYPES.register(modEventBus);
 		PowerModMobEffects.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
-		modEventBus.addListener(PowerModElementalProjectiles::onCommonSetup);
 		// End of user code block mod init
 	}
 
