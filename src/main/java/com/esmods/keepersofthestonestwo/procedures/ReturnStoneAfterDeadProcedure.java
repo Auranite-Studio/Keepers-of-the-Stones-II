@@ -10,8 +10,6 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
-
 import java.util.Map;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
@@ -29,70 +27,16 @@ public class ReturnStoneAfterDeadProcedure {
 	private static final Map<String, Supplier<net.neoforged.neoforge.registries.DeferredItem<? extends net.minecraft.world.item.Item>>> ELEMENT_STONES;
 	static {
 		Map<String, Supplier<net.neoforged.neoforge.registries.DeferredItem<? extends net.minecraft.world.item.Item>>> m = new java.util.HashMap<>();
-		m.put("fire", () -> PowerModItems.FIRE_STONE.get());
-		m.put("air", () -> PowerModItems.AIR_STONE.get());
-		m.put("earth", () -> PowerModItems.EARTH_STONE.get());
-		m.put("water", () -> PowerModItems.WATER_STONE.get());
-		m.put("ether", () -> PowerModItems.ETHER_STONE.get());
-		m.put("ice", () -> PowerModItems.ICE_STONE.get());
-		m.put("lightning", () -> PowerModItems.LIGHTNING_STONE.get());
-		m.put("sound", () -> PowerModItems.SOUND_STONE.get());
-		m.put("crystal", () -> PowerModItems.CRYSTAL_STONE.get());
-		m.put("lava", () -> PowerModItems.LAVA_STONE.get());
-		m.put("rain", () -> PowerModItems.RAIN_STONE.get());
-		m.put("tornado", () -> PowerModItems.TORNADO_STONE.get());
-		m.put("ocean", () -> PowerModItems.OCEAN_STONE.get());
-		m.put("plants", () -> PowerModItems.PLANTS_STONE.get());
-		m.put("animals", () -> PowerModItems.ANIMALS_STONE.get());
-		m.put("metal", () -> PowerModItems.METAL_STONE.get());
-		m.put("light", () -> PowerModItems.LIGHT_STONE.get());
-		m.put("shadow", () -> PowerModItems.SHADOW_STONE.get());
-		m.put("vacuum", () -> PowerModItems.VACUUM_STONE.get());
-		m.put("energy", () -> PowerModItems.ENERGY_STONE.get());
-		m.put("sun", () -> PowerModItems.SUN_STONE.get());
-		m.put("moon", () -> PowerModItems.MOON_STONE.get());
-		m.put("space", () -> PowerModItems.SPACE_STONE.get());
-		m.put("time", () -> PowerModItems.TIME_STONE.get());
-		m.put("blood", () -> PowerModItems.BLOOD_STONE.get());
-		m.put("technology", () -> PowerModItems.TECHNOLOGY_STONE.get());
-		m.put("teleportation", () -> PowerModItems.TELEPORTATION_STONE.get());
-		m.put("explosion", () -> PowerModItems.EXPLOSION_STONE.get());
-		m.put("amber", () -> PowerModItems.AMBER_STONE.get());
-		m.put("creation", () -> PowerModItems.CREATION_STONE.get());
-		m.put("destruction", () -> PowerModItems.DESTRUCTION_STONE.get());
-		m.put("mist", () -> PowerModItems.MIST_STONE.get());
-		m.put("sand", () -> PowerModItems.SAND_STONE.get());
-		m.put("speed", () -> PowerModItems.SPEED_STONE.get());
-		m.put("poison", () -> PowerModItems.POISON_STONE.get());
-		m.put("magnet", () -> PowerModItems.MAGNET_STONE.get());
-		m.put("mushrooms", () -> PowerModItems.MUSHROOMS_STONE.get());
-		m.put("mercury", () -> PowerModItems.MERCURY_STONE.get());
-		m.put("music", () -> PowerModItems.MUSIC_STONE.get());
-		m.put("plague", () -> PowerModItems.PLAGUE_STONE.get());
-		m.put("blue_flame", () -> PowerModItems.BLUE_FLAME_STONE.get());
-		m.put("gravity", () -> PowerModItems.GRAVITY_STONE.get());
-		m.put("smoke", () -> PowerModItems.SMOKE_STONE.get());
-		m.put("spirit", () -> PowerModItems.SPIRIT_STONE.get());
-		m.put("form", () -> PowerModItems.FORM_STONE.get());
-		m.put("mind", () -> PowerModItems.MIND_STONE.get());
-		m.put("golden_dust", () -> PowerModItems.GOLDEN_DUST_STONE.get());
-		m.put("darkness", () -> PowerModItems.DARKNESS_STONE.get());
-		m.put("heat", () -> PowerModItems.HEAT_STONE.get());
-		m.put("shockwave", () -> PowerModItems.SHOCKWAVE_STONE.get());
-		m.put("colors", () -> PowerModItems.COLORS_STONE.get());
+		m.put("fire", () -> PowerModItems.FIRE_STONE);
 		ELEMENT_STONES = Map.copyOf(m);
 	}
 
 	@SubscribeEvent
 	public static void onPlayerRespawned(PlayerEvent.PlayerRespawnEvent event) {
-		execute(event, event.getEntity());
+		execute(event.getEntity());
 	}
 
 	public static void execute(Entity entity) {
-		execute(null, entity);
-	}
-
-	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
 		if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
